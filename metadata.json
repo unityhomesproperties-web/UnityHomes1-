@@ -1,0 +1,8 @@
+{
+  "name": "Remix Unity Homes and Properties",
+  "description": "A transparent Nigerian property operating system for managing rentals, shortlets, and professional connections with secure verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

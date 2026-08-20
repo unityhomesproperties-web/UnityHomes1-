@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-primary-green: #0E2F1F;
+  --color-secondary-green: #2F8D46;
+  --color-accent-gold: #C9A84C;
+  --color-white: #FFFFFF;
+  --color-primary-text: #132A1D;
+  --color-secondary-text: #6B7280;
+  --color-background: #F4F8F4;
+  --color-border: rgba(14, 47, 31, 0.08);
+
+  --radius-card: 24px;
+  --radius-button: 18px;
+  --radius-input: 18px;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  :root {
+    --theme-bg: var(--color-background);
+    --theme-text: var(--color-primary-text);
+  }
+
+  body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Animations (Maximum duration 300ms as per guidelines) */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 300ms ease-out forwards;
+}

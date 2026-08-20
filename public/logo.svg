@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#63B32E" />
+      <stop offset="100%" stop-color="#145A32" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sun Rays -->
+  <circle cx="250" cy="180" r="100" fill="url(#sunGrad)" opacity="0.9" />
+  
+  <!-- Rays (White Cutouts) -->
+  <path d="M250 80 L250 120 M210 90 L220 125 M290 90 L280 125 M170 115 L190 140 M330 115 L310 140 M140 155 L170 170 M360 155 L330 170" stroke="white" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Hands -->
+  <path d="M120 220 C100 280 150 320 230 320 C240 320 250 310 250 310 C250 310 260 320 270 320 C350 320 400 280 380 220 C370 250 330 280 270 270 C260 265 250 250 250 250 C250 250 240 265 230 270 C170 280 130 250 120 220 Z" fill="#0E2F1F" />
+  <path d="M130 230 C130 230 180 280 240 260" stroke="white" stroke-width="4" fill="none" />
+  <path d="M370 230 C370 230 320 280 260 260" stroke="white" stroke-width="4" fill="none" />
+
+  <!-- Houses -->
+  <!-- Left House -->
+  <path d="M160 210 L195 180 L230 210 L230 250 L160 250 Z" fill="white" />
+  <path d="M150 210 L195 170 L240 210" stroke="#145A32" stroke-width="8" fill="none" stroke-linejoin="round" />
+  <rect x="180" y="220" width="30" height="30" fill="#63B32E" />
+  <path d="M195 220 L195 250 M180 235 L210 235" stroke="white" stroke-width="3" />
+
+  <!-- Right House -->
+  <path d="M270 210 L305 180 L340 210 L340 250 L270 250 Z" fill="white" />
+  <path d="M260 210 L305 170 L350 210" stroke="#145A32" stroke-width="8" fill="none" stroke-linejoin="round" />
+  <rect x="290" y="220" width="30" height="30" fill="#63B32E" />
+  <path d="M305 220 L305 250 M290 235 L320 235" stroke="white" stroke-width="3" />
+
+  <!-- Center House -->
+  <path d="M210 180 L250 145 L290 180 L290 260 L210 260 Z" fill="white" />
+  <rect x="270" y="140" width="15" height="30" fill="#145A32" />
+  <path d="M200 180 L250 135 L300 180" stroke="#145A32" stroke-width="10" fill="none" stroke-linejoin="round" />
+  <rect x="230" y="195" width="40" height="40" fill="#63B32E" />
+  <path d="M250 195 L250 235 M230 215 L270 215" stroke="white" stroke-width="4" />
+
+  <!-- Base Line -->
+  <path d="M180 325 Q250 315 320 325" stroke="#0E2F1F" stroke-width="6" fill="none" />
+
+  <!-- Text -->
+  <text x="250" y="380" font-family="'Playfair Display', serif" font-weight="900" font-size="48" fill="#0E2F1F" text-anchor="middle" letter-spacing="1">UNITY HOMES</text>
+  <text x="250" y="430" font-family="'Playfair Display', serif" font-weight="900" font-size="44" fill="#0E2F1F" text-anchor="middle" letter-spacing="1">&amp; PROPERTIES</text>
+  
+  <line x1="130" y1="460" x2="200" y2="460" stroke="#0E2F1F" stroke-width="2" />
+  <text x="250" y="470" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#0E2F1F" text-anchor="middle" letter-spacing="6">LIMITED</text>
+  <line x1="300" y1="460" x2="370" y2="460" stroke="#0E2F1F" stroke-width="2" />
+
+</svg>

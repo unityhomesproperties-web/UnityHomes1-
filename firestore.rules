@@ -1,0 +1,201 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: Check if requesting user is Admin
+    function isAdmin() {
+      return request.auth != null && (
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin'
+        || request.auth.token.email == 'damijosh12@gmail.com'
+      );
+    }
+
+    // Helper: Check if requesting user is PMC
+    function isPMC() {
+      return request.auth != null && (
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'property_management_company'
+        || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'PMC'
+      );
+    }
+
+    // =======================================================
+    // BUILDINGS COLLECTION
+    // Landlord can read/write buildings where landlord_id == uid
+    // PMC can read buildings where management_company_id == uid
+    // Admin can read/write all
+    // =======================================================
+    match /buildings/{buildingId} {
+      allow read: if request.auth != null && (
+        resource.data.landlord_id == request.auth.uid
+        || resource.data.management_company_id == request.auth.uid
+        || isAdmin()
+      );
+      allow create, update, delete: if request.auth != null && (
+        request.resource.data.landlord_id == request.auth.uid
+        || resource.data.landlord_id == request.auth.uid
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // UNITS COLLECTION
+    // Landlord can read/write units where landlord_id == uid
+    // PMC can read units where management_company_id == uid
+    // Tenant can read ONLY the specific unit record their current_tenancy_id points to
+    // Admin can read/write all
+    // =======================================================
+    match /units/{unitId} {
+      allow read: if request.auth != null && (
+        resource.data.landlord_id == request.auth.uid
+        || resource.data.management_company_id == request.auth.uid
+        || (
+          exists(/databases/$(database)/documents/tenant_profiles/$(request.auth.uid))
+          && get(/databases/$(database)/documents/tenant_profiles/$(request.auth.uid)).data.current_tenancy_id != null
+          && get(/databases/$(database)/documents/tenancies/$(get(/databases/$(database)/documents/tenant_profiles/$(request.auth.uid)).data.current_tenancy_id)).data.unit_id == unitId
+        )
+        || isAdmin()
+      );
+      allow create, update, delete: if request.auth != null && (
+        request.resource.data.landlord_id == request.auth.uid
+        || (resource != null && resource.data.landlord_id == request.auth.uid)
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // TENANT_PROFILES COLLECTION
+    // Tenant can read and write their own document only
+    // Admin can read and write all
+    // =======================================================
+    match /tenant_profiles/{userId} {
+      allow read, write: if request.auth != null && (
+        request.auth.uid == userId
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // TENANCIES COLLECTION
+    // Tenant can read their own tenancy
+    // Landlord can read/write tenancy for their property
+    // PMC can read tenancy for managed properties
+    // Admin can read/write all
+    // =======================================================
+    match /tenancies/{tenancyId} {
+      allow read: if request.auth != null && (
+        resource.data.tenant_id == request.auth.uid
+        || resource.data.tenantId == request.auth.uid
+        || resource.data.landlord_id == request.auth.uid
+        || resource.data.landlordId == request.auth.uid
+        || resource.data.management_company_id == request.auth.uid
+        || resource.data.managementCompanyId == request.auth.uid
+        || isAdmin()
+      );
+      allow create, update, delete: if request.auth != null && (
+        request.resource.data.landlord_id == request.auth.uid
+        || (resource != null && resource.data.landlord_id == request.auth.uid)
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // TENANT_INVITATIONS COLLECTION
+    // Landlord can create invitations for units they own, and read/write their own invitations
+    // Unauthenticated visitors CANNOT query the collection broadly. Direct read by invitation_code is restricted
+    // Admin can read/write all
+    // =======================================================
+    match /tenant_invitations/{invitationId} {
+      allow read: if request.auth != null && (
+        resource.data.landlord_id == request.auth.uid
+        || resource.data.tenant_user_id == request.auth.uid
+        || isAdmin()
+      );
+      allow create: if request.auth != null && (
+        request.resource.data.landlord_id == request.auth.uid
+        || isAdmin()
+      );
+      allow update, delete: if request.auth != null && (
+        resource.data.landlord_id == request.auth.uid
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // USERS COLLECTION
+    // =======================================================
+    match /users/{userId} {
+      allow read: if request.auth != null && (
+        request.auth.uid == userId
+        || isAdmin()
+        || isPMC()
+      );
+      allow write: if request.auth != null && (
+        request.auth.uid == userId
+        || isAdmin()
+      );
+    }
+
+    // =======================================================
+    // RENT PAYMENTS, PROMISES TO PAY, COMPLAINTS
+    // =======================================================
+    match /rentPayments/{paymentId} {
+      allow read, write: if request.auth != null;
+    }
+
+    match /promisesToPay/{promiseId} {
+      allow read, write: if request.auth != null;
+    }
+
+    match /complaints/{complaintId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // =======================================================
+    // ACTIVITY LOG COLLECTION (IMMUTABLE)
+    // =======================================================
+    match /activityLog/{logId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false; // Only server-side/Admin SDK bypasses
+    }
+
+    // =======================================================
+    // WAITLIST COLLECTIONS (Backend Production Environment)
+    // =======================================================
+    match /waitlist_entries/{entryId} {
+      // Cloud functions handle write/read operations directly.
+      // Admin dashboard users can read entries.
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false; 
+    }
+
+    match /activity_logs/{logId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    match /broadcast_logs/{broadcastId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    match /analytics_snapshots/{snapshotId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    match /admins/{adminId} {
+      allow read: if request.auth != null && isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    match /system_settings/{settingId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null && isAdmin();
+    }
+
+    match /email_queue/{emailId} {
+      allow read, create, update, delete: if false; // Cloud Functions strictly
+    }
+  }
+}

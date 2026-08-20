@@ -1,0 +1,47 @@
+#!/bin/bash
+awk '
+/          \{\/\* ACTIVE PROMISES TO PAY \*\/\}/ {
+    print "          {/* PAYMENT HISTORY */}"
+    print "          <div className=\"bg-white border border-stone-200 p-6 rounded-3xl space-y-6 animate-fade-in\">"
+    print "            <div className=\"flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 pb-3\">"
+    print "              <div className=\"flex items-center space-x-2.5\">"
+    print "                <Activity className=\"text-[#1B4332] w-5 h-5\" />"
+    print "                <h3 className=\"font-display font-black text-[#1B4332] uppercase text-sm\">Payment History</h3>"
+    print "              </div>"
+    print "              <div className=\"flex flex-wrap items-center gap-2\">"
+    print "                {savedFilters.map((f, i) => ("
+    print "                  <span key={i} className=\"px-2 py-1 bg-stone-100 border border-stone-200 text-stone-600 rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-200\">{f.name}</span>"
+    print "                ))}"
+    print "                <button onClick={() => setShowFilterNamePrompt({tab: \"Payments\", filterData: {}})} className=\"px-2 py-1 bg-stone-200 text-stone-700 rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-300\">+ Save Filter</button>"
+    print "                <button onClick={() => triggerSuccess(\"Exporting Payment History as CSV...\")} className=\"px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-stone-600 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1\">"
+    print "                  <Download className=\"w-3 h-3\" /><span>CSV</span>"
+    print "                </button>"
+    print "                <button onClick={() => triggerSuccess(\"Exporting Payment History as PDF...\")} className=\"px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-stone-600 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1\">"
+    print "                  <Download className=\"w-3 h-3\" /><span>PDF</span>"
+    print "                </button>"
+    print "              </div>"
+    print "            </div>"
+    print "            <div className=\"space-y-3 font-mono text-[10px]\">"
+    print "              <div className=\"p-3 bg-stone-50 border-l-2 border-[#2D6A4F] rounded-r-xl\">"
+    print "                <div className=\"flex justify-between items-center mb-1\">"
+    print "                  <strong className=\"text-stone-800\">RENT_PAYMENT_VERIFIED</strong>"
+    print "                  <span className=\"text-stone-400\">2026-04-13 16:45:00 UTC</span>"
+    print "                </div>"
+    print "                <div className=\"flex items-center space-x-3 mt-2\">"
+    print "                  <span className=\"text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider\">Receipt Uploaded</span>"
+    print "                  <span className=\"text-stone-400\">➔</span>"
+    print "                  <span className=\"text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider\">Verification Started</span>"
+    print "                  <span className=\"text-stone-400\">➔</span>"
+    print "                  <span className=\"text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider\">Verification Completed</span>"
+    print "                  <span className=\"text-stone-400\">➔</span>"
+    print "                  <span className=\"text-[9px] px-2 py-0.5 rounded bg-emerald-700 text-white uppercase font-bold tracking-wider\">Confirmed</span>"
+    print "                </div>"
+    print "              </div>"
+    print "            </div>"
+    print "          </div>"
+    print "          "
+    print
+    next
+}
+{ print }
+' src/components/dashboards/TenantDashboard.tsx > temp.tsx && mv temp.tsx src/components/dashboards/TenantDashboard.tsx
