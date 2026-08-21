@@ -67,7 +67,19 @@ export default function WaitlistPage() {
     const saved = localStorage.getItem('unity_waitlist_autosave');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        
+        // Data Migration for Surveyor
+        if (parsed.role === 'licensed_surveyor' && parsed.role_specific_data) {
+          if (parsed.role_specific_data.niesv_membership_number && !parsed.role_specific_data.registration_number) {
+            // Do not automatically treat an old NIESV number as a SURCON registration number.
+            // Mark the existing surveyor record as requiring update.
+            parsed.role_specific_data.verification_status = 'requires_update';
+            // We clear out the old niesv field from being used as the primary number, but the user is forced to re-enter a valid SURCON number because registration_number will be empty.
+          }
+        }
+        
+        return parsed;
       } catch (e) {
         return INITIAL_DATA;
       }
@@ -154,7 +166,16 @@ export default function WaitlistPage() {
       else if (parseInt(rsd.properties_count) < 1) errors.properties_count = 'Number of properties must be at least 1.';
     } else if (['property_lawyer', 'licensed_surveyor', 'structural_engineer'].includes(data.role)) {
       if (!rsd.firm_name) errors.firm_name = 'Please enter your firm or practice name.';
-      if (!rsd.registration_number) errors.registration_number = 'Please enter your registration number.';
+      
+      const trimmedRegistration = (rsd.registration_number || '').trim();
+      if (!trimmedRegistration) {
+        if (data.role === 'licensed_surveyor') {
+          errors.registration_number = 'Please enter your SURCON registration or license number.';
+        } else {
+          errors.registration_number = 'Please enter your registration number.';
+        }
+      }
+
       if (!rsd.years_of_experience) errors.years_of_experience = 'Please enter your years of experience.';
       else if (parseInt(rsd.years_of_experience) < 0) errors.years_of_experience = 'Please enter a valid number of years.';
       if (!rsd.consent) errors.consent = 'You must consent to the verification process to continue.';
@@ -216,6 +237,25 @@ export default function WaitlistPage() {
       if (testEmail.includes('service@down')) {
         throw new Error('Our registration service is temporarily unavailable. We are working to fix this. Please try again later.');
       }
+
+      // Simulate backend payload construction
+      const payload: any = {
+        full_name: data.full_name,
+        email: data.email,
+        phone: data.phone,
+        state: data.state,
+        role: data.role,
+        role_specific_data: { ...data.role_specific_data },
+      };
+
+      if (data.role === 'licensed_surveyor') {
+        payload.role_specific_data.professional_type = "surveyor";
+        payload.role_specific_data.professional_registration_body = "SURCON";
+        payload.role_specific_data.professional_registration_number = data.role_specific_data.registration_number;
+        payload.role_specific_data.verification_status = "pending";
+      }
+
+      console.log("Submitting payload to backend:", payload);
 
       // Success
       clearAutosave();
@@ -534,18 +574,28 @@ export default function WaitlistPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">
+                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">
                         {data.role === 'property_lawyer' ? 'NBA Registration Number' : 
-                         data.role === 'licensed_surveyor' ? 'NIESV or Surveying Registration Number' : 
+                         data.role === 'licensed_surveyor' ? 'SURCON Registration / License Number' : 
                          'COREN Registration Number'}
                       </label>
                       <input 
                         type="text" 
                         value={data.role_specific_data.registration_number || ''}
-                        onChange={(e) => updateData('role_specific_data.registration_number', e.target.value)}
+                        onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                         onBlur={() => handleBlur('registration_number')}
                         className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
                       />
+                      {data.role === 'licensed_surveyor' && (
+                        <>
+                          <p className="text-sm text-[var(--color-secondary-text)] mt-2">
+                            Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
+                          </p>
+                          <p className="text-sm font-semibold text-[var(--color-secondary-green)] mt-2">
+                            Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
+                          </p>
+                        </>
+                      )}
                       {renderError('registration_number', roleErrors)}
                     </div>
                     <div>
@@ -639,7 +689,7 @@ export default function WaitlistPage() {
                         <div key={key} className={Array.isArray(val) || key === 'description' ? 'col-span-2' : ''}>
                           <span className="block text-sm text-[var(--color-secondary-text)] capitalize">{key.replace(/_/g, ' ')}</span>
                           <span className="block font-medium text-[var(--color-primary-text)]">
-                            {Array.isArray(val) ? val.join(', ') : String(val)}
+                            {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? `${val} (SURCON, Verification Pending)` : Array.isArray(val) ? val.join(', ') : String(val)}
                           </span>
                         </div>
                       );

@@ -10,6 +10,8 @@ import ProfessionalsPage from './pages/ProfessionalsPage';
 import AreaIntelligencePage from './pages/AreaIntelligencePage';
 import WaitlistPage from './pages/WaitlistPage';
 import WaitlistSuccessPage from './pages/WaitlistSuccessPage';
+import ContactPage from './pages/ContactPage';
+import DemoMode from './components/DemoMode';
 
 // Placeholder components for basic routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -35,9 +37,10 @@ export default function App() {
           <Route path="/waitlist/success" element={<WaitlistSuccessPage />} />
           <Route path="/privacy" element={<Placeholder title="Privacy Policy" />} />
           <Route path="/terms" element={<Placeholder title="Terms of Service" />} />
-          <Route path="/contact" element={<Placeholder title="Contact Us" />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>
+      <DemoMode />
     </BrowserRouter>
   );
 }

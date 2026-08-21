@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building, ShieldCheck, Users, Briefcase, Wrench, Map } from 'lucide-react';
+import FAQSection from '../components/FAQSection';
 
 const SERVICES_PREVIEW = [
   {
@@ -44,24 +45,6 @@ const SERVICES_PREVIEW = [
     description: 'Collect community information to help people understand neighbourhoods better.',
     linkText: 'Contribute Area Insights',
     linkTo: '/area-intelligence'
-  }
-];
-
-const FAQS = [
-  {
-    question: 'How do you verify properties and professionals?',
-    answer: 'We use a multi-step verification process checking credentials, structural reports, and legal documentation.',
-    status: 'In Development'
-  },
-  {
-    question: 'Can I list a property without an agent?',
-    answer: 'Yes, direct landlord listings are supported subject to our standard verification requirements.',
-    status: 'Coming Soon'
-  },
-  {
-    question: 'How does Area Intelligence work?',
-    answer: 'Community members can submit factual insights about neighborhoods, which are aggregated to help others make informed decisions.',
-    status: 'Available Now'
   }
 ];
 
@@ -134,31 +117,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ Preview */}
+      {/* FAQ Full Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-white)] border-t border-[var(--color-border)]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[var(--color-primary-green)] mb-4">Frequently Asked Questions</h2>
             <p className="text-[var(--color-secondary-text)] text-lg">
-              Common questions about our platform and roadmap.
+              Everything you need to know about the platform and our roadmap.
             </p>
           </div>
           
-          <div className="space-y-6">
-            {FAQS.map((faq, idx) => (
-              <div key={idx} className="bg-[var(--color-background)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)]">
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
-                  <h3 className="text-lg font-bold text-[var(--color-primary-text)] pr-4">{faq.question}</h3>
-                  <span className="shrink-0 inline-flex items-center px-3 py-1 rounded-[var(--radius-pill)] bg-[var(--color-white)] border border-[var(--color-border)] text-xs font-semibold text-[var(--color-secondary-green)]">
-                    {faq.status}
-                  </span>
-                </div>
-                <p className="text-[var(--color-secondary-text)] leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
+          <FAQSection />
         </div>
       </section>
     </div>
