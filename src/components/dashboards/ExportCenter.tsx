@@ -225,7 +225,7 @@ Applied Filters: ${activeFiltersDesc}
 
   return (
     <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in text-xs">
-      <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200 shadow-2xl relative p-6 space-y-5 animate-scale-up">
+      <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200 shadow-sm relative p-6 space-y-5 animate-scale-up">
         
         {/* Header */}
         <div className="flex justify-between items-start border-b border-stone-200 pb-3">

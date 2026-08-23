@@ -303,7 +303,7 @@ export default function SupportCenter({
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-stone-200/80 shadow-xl overflow-hidden max-w-5xl w-full mx-auto font-sans">
+    <div className="bg-white rounded-[var(--radius-large)] border border-stone-200/80 shadow-sm overflow-hidden max-w-5xl w-full mx-auto font-sans">
       {/* HEADER BAR */}
       <div className="bg-[#18452E] text-white p-6 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center space-x-3">
@@ -391,7 +391,7 @@ export default function SupportCenter({
 
                 {/* Ticket List */}
                 {myTickets.length === 0 ? (
-                  <div className="text-center py-12 bg-stone-50/50 rounded-3xl border border-dashed border-stone-200 p-8 space-y-3">
+                  <div className="text-center py-12 bg-stone-50/50 rounded-[var(--radius-large)] border border-dashed border-stone-200 p-8 space-y-3">
                     <HelpCircle className="w-12 h-12 text-stone-300 mx-auto" />
                     <h3 className="font-display font-bold text-#132A1D text-sm">No Support Tickets Found</h3>
                     <p className="text-#6B7280 text-xs max-w-md mx-auto">
@@ -619,7 +619,7 @@ export default function SupportCenter({
           <div>
             {submittedRef ? (
               /* CONFIRMATION SCREEN */
-              <div className="bg-emerald-50/80 border border-emerald-200 rounded-3xl p-8 text-center space-y-4 max-w-xl mx-auto my-4 animate-fade-in">
+              <div className="bg-emerald-50/80 border border-emerald-200 rounded-[var(--radius-large)] p-8 text-center space-y-4 max-w-xl mx-auto my-4 animate-fade-in">
                 <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle className="w-10 h-10" />
                 </div>

@@ -26,13 +26,13 @@ export default function MissionPage() {
   return (
     <div className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto min-h-screen animate-fade-in">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-[var(--color-primary-green)] mb-8">
+        <h1 className="text-4xl font-bold text-[var(--color-brand-deep)] mb-8">
           Our Mission
         </h1>
-        <p className="text-2xl text-[var(--color-primary-text)] font-medium leading-relaxed mb-6">
+        <p className="text-2xl text-[var(--color-text-primary)] font-medium leading-relaxed mb-6">
           "To make real estate in Nigeria more transparent, trustworthy and easier to navigate by combining technology, verified information, trusted professionals and practical services."
         </p>
-        <p className="text-lg text-[var(--color-secondary-text)] leading-relaxed">
+        <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed">
           We believe buying, renting and managing property should not require people to depend on guesswork, hidden information or unnecessary stress.
         </p>
       </div>
@@ -44,17 +44,17 @@ export default function MissionPage() {
             <button
               key={idx}
               onClick={() => toggleExpand(idx)}
-              className="w-full text-left bg-[var(--color-white)] p-6 md:p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow focus:outline-none"
+              className="w-full text-left bg-white p-6 md:p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow focus:outline-none"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-[var(--color-primary-text)]">{pillar.title}</h3>
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-[var(--color-background)] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-                  <ChevronDown className="w-6 h-6 text-[var(--color-secondary-green)]" />
+                <h3 className="text-xl font-bold text-[var(--color-text-primary)]">{pillar.title}</h3>
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-[var(--color-surface-light)] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
+                  <ChevronDown className="w-6 h-6 text-[var(--color-brand-medium)]" />
                 </div>
               </div>
               
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                <p className="text-[var(--color-secondary-text)] leading-relaxed">
+                <p className="text-[var(--color-text-secondary)] leading-relaxed">
                   {pillar.explanation}
                 </p>
               </div>

@@ -46,20 +46,8 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
     >
-      {/* Subtle blueprint grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, #C9A84C 1px, transparent 1px),
-            linear-gradient(to bottom, #C9A84C 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px'
-        }}
-      />
-      
-      {/* Soft gradient background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#0f261c] via-transparent to-[#0E2F1F]/80 pointer-events-none" />
+      {/* Soft overlay */}
+      <div className="absolute inset-0 bg-[#0E2F1F]/40 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center">
         {/* SVG House Animation */}

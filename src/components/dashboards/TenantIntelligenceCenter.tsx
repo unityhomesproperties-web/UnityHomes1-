@@ -170,7 +170,7 @@ export default function TenantIntelligenceCenter({
         </button>
         
         {/* Detail view with History Tabs */}
-        <div className="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm space-y-6">
+        <div className="bg-white rounded-[var(--radius-large)] p-8 border border-stone-200 shadow-sm space-y-6">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="w-24 h-24 rounded-full bg-stone-50 overflow-hidden shrink-0 border-4 border-white shadow-md">
               <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${selectedTenant.tenantName}`} alt={selectedTenant.tenantName} className="w-full h-full object-cover" />
@@ -233,7 +233,7 @@ export default function TenantIntelligenceCenter({
       )}
 
       {/* HEADER & KPIs */}
-      <div className="bg-teal-950 rounded-3xl p-6 shadow-xl text-white relative overflow-hidden">
+      <div className="bg-teal-950 rounded-[var(--radius-large)] p-6 shadow-sm text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-10">
           <Users className="w-48 h-48 text-[#C9A84C]" />
         </div>
@@ -269,7 +269,7 @@ export default function TenantIntelligenceCenter({
       </div>
 
       {/* FILTERS CONTAINER */}
-      <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm space-y-4">
+      <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
         {/* Search row */}
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <div className="flex-1 relative w-full">
@@ -362,7 +362,7 @@ export default function TenantIntelligenceCenter({
       {/* TENANT GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredUnits.length === 0 ? (
-          <div className="col-span-full bg-white border border-stone-200 rounded-3xl p-12 text-center text-stone-400">
+          <div className="col-span-full bg-white border border-stone-200 rounded-[var(--radius-large)] p-12 text-center text-stone-400">
             <Inbox className="w-12 h-12 text-stone-300 mx-auto mb-3" />
             <strong className="block font-bold">No Records Match Current Filter Selection</strong>
             <span className="text-xs block mt-1">Try resetting your active filters or query.</span>
@@ -384,7 +384,7 @@ export default function TenantIntelligenceCenter({
                     setSelectedTenant(unit);
                   }
                 }}
-                className={`bg-white border rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col relative ${
+                className={`bg-white border rounded-[var(--radius-large)] overflow-hidden hover:shadow-sm transition-all duration-300 cursor-pointer group flex flex-col relative ${
                   isSelected ? 'border-amber-400 ring-2 ring-amber-400/20' : 'border-stone-200'
                 }`}
               >

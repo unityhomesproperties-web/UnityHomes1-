@@ -295,7 +295,7 @@ function AdminComplaintOversightSection({
   };
 
   return (
-    <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in shadow-xs">
+    <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in shadow-xs">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-stone-200 pb-4">
         <div>
@@ -317,7 +317,7 @@ function AdminComplaintOversightSection({
         if (escalatedList.length === 0) return null;
 
         return (
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-400 rounded-3xl p-5 space-y-4 shadow-xs">
+          <div className=" border-2 border-amber-400 rounded-[var(--radius-large)] p-5 space-y-4 shadow-xs">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-amber-200 pb-3">
               <div className="flex items-center gap-2.5">
                 <div className="p-2 bg-amber-500 text-stone-950 font-black rounded-xl text-xs shrink-0 flex items-center justify-center">
@@ -666,7 +666,7 @@ function AdminComplaintOversightSection({
       {/* REASSIGNMENT MODAL */}
       {reassigningComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
-          <form onSubmit={handleReassignSubmit} className="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border border-stone-200 shadow-2xl text-xs">
+          <form onSubmit={handleReassignSubmit} className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
             <h4 className="font-display font-black text-[#18452E] text-sm uppercase">
               Reassign Complaint Routing Path
             </h4>
@@ -725,7 +725,7 @@ function AdminComplaintOversightSection({
       {/* ADMIN RESPONSE MODAL */}
       {respondingComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
-          <form onSubmit={handleAdminResponseSubmit} className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-2xl text-xs">
+          <form onSubmit={handleAdminResponseSubmit} className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
             <h4 className="font-display font-black text-[#18452E] text-sm uppercase">
               Submit Direct Admin Response / Binding Ruling
             </h4>
@@ -796,7 +796,7 @@ function AdminComplaintOversightSection({
       {/* ESCALATION ACTION MODAL */}
       {escalatingActionComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
-          <form onSubmit={handleEscalationActionSubmit} className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-2xl text-xs">
+          <form onSubmit={handleEscalationActionSubmit} className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
             <div className="flex items-center gap-2 text-amber-700">
               <ShieldAlert className="w-5 h-5" />
               <h4 className="font-display font-black text-#132A1D text-sm uppercase">
@@ -925,9 +925,9 @@ function AdminLevel2VerificationQueue() {
   if (pendingRequests.length === 0) return null;
 
   return (
-    <div className="bg-amber-50/80 border-2 border-amber-300 rounded-3xl p-6 space-y-4 shadow-sm animate-fade-in mb-6">
+    <div className="bg-amber-50/80 border-2 border-amber-300 rounded-[var(--radius-large)] p-6 space-y-4 shadow-sm animate-fade-in mb-6">
       {toastMessage && (
-        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-lg">
+        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-sm">
           {toastMessage}
         </div>
       )}
@@ -2211,7 +2211,7 @@ export default function AdminDashboard({
       <div className="flex-1 w-full space-y-6">
 
         {/* SYSTEM HEALTH BANNER & CONNECTIVITY STATUS CONTROLS */}
-        <section className="bg-white border border-stone-200 rounded-3xl p-4 shadow-xs">
+        <section className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-4 shadow-xs">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             
             {/* Left: Health and Live Feeds Status */}
@@ -2431,7 +2431,7 @@ export default function AdminDashboard({
         {/* TAB 0: GLOBAL SEARCH */}
         {activeTab === 'Platform Announcements' && (
           <div className="space-y-6 animate-fade-in pb-20 md:pb-8">
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
                   <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Platform Announcements Manager</h3>
@@ -2630,7 +2630,7 @@ export default function AdminDashboard({
 
         {activeTab === 'Broadcast Center' && (
           <div className="space-y-6 animate-fade-in pb-20 md:pb-8">
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
                   <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Active Broadcast Command</h3>
@@ -2847,7 +2847,7 @@ export default function AdminDashboard({
             {/* PREVIEW MODAL */}
             {bcastPreviewRecipient && (
               <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in text-sm">
-                <div className="bg-white rounded-3xl max-w-md w-full overflow-hidden flex flex-col shadow-2xl animate-scale-up border border-stone-200 text-left">
+                <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full overflow-hidden flex flex-col shadow-sm animate-scale-up border border-stone-200 text-left">
                   <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-[#18452E] text-white">
                     <div className="flex items-center space-x-2">
                       <Megaphone className="w-5 h-5" />
@@ -2920,7 +2920,7 @@ export default function AdminDashboard({
 
         {activeTab === 'Audit Log' && (
           <div className="space-y-6 animate-fade-in pb-20 md:pb-8">
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
                   <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Compliance Audit Trail</h3>
@@ -3091,7 +3091,7 @@ export default function AdminDashboard({
 
         {/* TAB 0: GLOBAL SEARCH */}
         {activeTab === 'Global Search' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Global Master Search</h3>
             <p className="text-xs text-#6B7280">Search Landlord, Tenant, PMC, Property, Unit, Booking, Document, Phone Number.</p>
             
@@ -3182,7 +3182,7 @@ export default function AdminDashboard({
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* PORTFOLIO INSIGHTS */}
-              <section className="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+              <section className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm">
                 <h3 className="font-display font-black text-[#18452E] text-sm uppercase mb-5 tracking-wider flex items-center">
                   <Activity className="w-4 h-4 mr-2" />
                   Platform Insights
@@ -3204,7 +3204,7 @@ export default function AdminDashboard({
               </section>
 
               {/* PRIORITY ALERTS */}
-              <section className="bg-white border border-rose-200 rounded-3xl p-6 shadow-sm">
+              <section className="bg-white border border-rose-200 rounded-[var(--radius-large)] p-6 shadow-sm">
                 <h3 className="font-display font-black text-rose-700 text-sm uppercase mb-5 tracking-wider flex items-center">
                   <ShieldAlert className="w-4 h-4 mr-2" />
                   Priority Alerts
@@ -3231,7 +3231,7 @@ export default function AdminDashboard({
 
         {/* TAB 4: TENANTS */}
                 {activeTab === 'Landlords' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
             
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
@@ -3457,7 +3457,7 @@ export default function AdminDashboard({
 
             {/* STICKY FLOATING BULK ACTIONS BAR */}
             {bulkMode['Landlords'] && (selectedIds['Landlords'] || []).length > 0 && (
-              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-6 z-50 animate-bounce-short">
+              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
                   <span className="text-xs font-mono font-bold text-stone-300 uppercase">
@@ -3507,7 +3507,7 @@ export default function AdminDashboard({
           </div>
         )}
 {activeTab === 'Tenants' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
             
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
@@ -3686,7 +3686,7 @@ export default function AdminDashboard({
 
             {/* STICKY FLOATING BULK ACTIONS BAR */}
             {bulkMode['Tenants'] && (selectedIds['Tenants'] || []).length > 0 && (
-              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-6 z-50 animate-bounce-short">
+              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
                   <span className="text-xs font-mono font-bold text-stone-300 uppercase">
@@ -3740,7 +3740,7 @@ export default function AdminDashboard({
         {activeTab === 'Rent Payments' && (
           <div className="space-y-6 animate-fade-in">
             {/* 1. SMTP GATEWAY & FLOW SIMULATION */}
-            <div className="bg-gradient-to-br from-stone-50 to-stone-100/50 border border-stone-200 rounded-3xl p-6 space-y-4">
+            <div className=" border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div>
                   <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider flex items-center space-x-1.5">
@@ -3794,7 +3794,7 @@ export default function AdminDashboard({
             </div>
 
             {/* 2. PENDING CLEARANCE QUEUE */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div>
                 <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider">
                   Pending Receipt Verification Queue
@@ -3848,7 +3848,7 @@ export default function AdminDashboard({
             </div>
 
             {/* 3. ORIGINAL RENT SETTLEMENTS LIST CARD */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-150 pb-3 gap-4">
                 <div>
                   <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Ledger Rental Payments</h3>
@@ -3968,7 +3968,7 @@ export default function AdminDashboard({
             </div>
 
             {/* 4. AUTOMATED EMAIL DISPATCH LOGS */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div>
                 <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Automated Receipt Email Logs (SMTP Dispatch)</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">A complete, scannable history of automated payment receipt emails generated by the server side Cloud Function.</p>
@@ -4031,7 +4031,7 @@ export default function AdminDashboard({
 
         {/* TAB 6: PROFESSIONALS */}
         {activeTab === 'Professionals' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Professional Directory</h3>
             <p className="text-xs text-#6B7280">6 accredited legal and engineering experts currently in active founding roles:</p>
             
@@ -4083,7 +4083,7 @@ export default function AdminDashboard({
           const completeCount = allConnections.filter(c => c.packageType === 'COMPLETE_BUNDLE').length;
 
           return (
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-stone-200">
                 <div>
                   <h3 className="font-display font-black text-[#18452E] text-lg uppercase tracking-tight">
@@ -4329,7 +4329,7 @@ export default function AdminDashboard({
 
         {/* TAB 8: PROPERTY MANAGEMENT COMPANIES */}
         {activeTab === 'Property Management Companies' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
             
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
@@ -4494,7 +4494,7 @@ export default function AdminDashboard({
 
             {/* STICKY FLOATING BULK ACTIONS BAR */}
             {bulkMode['Property Management Companies'] && (selectedIds['Property Management Companies'] || []).length > 0 && (
-              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-6 z-50 animate-bounce-short">
+              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
                   <span className="text-xs font-mono font-bold text-stone-300 uppercase">
@@ -4546,7 +4546,7 @@ export default function AdminDashboard({
 
         {/* TAB 9: COMPANY APPLICATIONS */}
         {activeTab === 'Company Applications' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Validate PM Corporate Filings</h3>
             <p className="text-xs text-#6B7280">Review, vet legal CAC declarations, and approve pending PM Company access:</p>
             
@@ -4588,7 +4588,7 @@ export default function AdminDashboard({
         {/* TAB 10: SHORTLET MANAGEMENT */}
         {/* TAB 10: SHORTLET MANAGEMENT */}
         {activeTab === 'Shortlet Management' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
             
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
@@ -4757,7 +4757,7 @@ export default function AdminDashboard({
 
             {/* STICKY FLOATING BULK ACTIONS BAR */}
             {bulkMode['Shortlet Management'] && (selectedIds['Shortlet Management'] || []).length > 0 && (
-              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-6 z-50 animate-bounce-short">
+              <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
                   <span className="text-xs font-mono font-bold text-stone-300 uppercase">
@@ -4809,8 +4809,8 @@ export default function AdminDashboard({
 
         {/* TAB: CAUTION DEPOSIT MEDIATION */}
         {activeTab === 'Caution Deposit Mediation' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 animate-fade-in">
-            <div className="bg-[#18452E] rounded-2xl p-6 text-white shadow-xl relative overflow-hidden">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
+            <div className="bg-[#18452E] rounded-2xl p-6 text-white shadow-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 p-8 opacity-10">
                 <Award className="w-48 h-48 text-emerald-200" />
               </div>
@@ -4979,7 +4979,7 @@ export default function AdminDashboard({
             {/* ADMIN ADJUDICATION MODAL */}
             {adjudicatingRes && (
               <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-                <div className="bg-white rounded-3xl max-w-xl w-full p-6 space-y-5 shadow-2xl border border-stone-200">
+                <div className="bg-white rounded-[var(--radius-large)] max-w-xl w-full p-6 space-y-5 shadow-sm border border-stone-200">
                   <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                     <div>
                       <span className="text-[9px] font-mono text-purple-700 font-bold uppercase block">Unity Homes Dispute Adjudication Board</span>
@@ -5101,7 +5101,7 @@ export default function AdminDashboard({
 
         {/* TAB 11: SUBSCRIPTION INQUIRIES */}
         {activeTab === 'Subscription Inquiries' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Incoming Verification Callbacks</h3>
             <p className="text-xs text-#6B7280">Validate the active pipeline of client profile subscriptions via telephone/WhatsApp checks:</p>
             
@@ -5149,7 +5149,7 @@ export default function AdminDashboard({
         {/* TAB 12: SUBSCRIPTION MANAGEMENT */}
         {activeTab === 'Subscription Management' && (
           <div className="space-y-6">
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4 shadow-sm animate-fade-in">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-sm animate-fade-in">
               <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Configure Subscription Tiers</h3>
               <p className="text-xs text-#6B7280">Edit billing tiers securely. Note: Larger accounts are dynamically priced to ensure legal equity.</p>
               
@@ -5175,7 +5175,7 @@ export default function AdminDashboard({
             </div>
 
             {/* ADMIN SUBSCRIPTION OVERRIDES & SYSTEM ALLOCATIONS */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6 shadow-sm animate-fade-in">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 shadow-sm animate-fade-in">
               <div>
                 <h3 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-1.5">
                   <ShieldAlert className="w-5 h-5 text-[#C9A84C]" />
@@ -5387,7 +5387,7 @@ export default function AdminDashboard({
 
         {/* TAB 13: PARTNER NETWORK */}
         {activeTab === 'Partner Network' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Affiliate Referral Payouts</h3>
             <p className="text-xs text-#6B7280">Approve referrals for landlords, tenants, or legal connection matches securely:</p>
             
@@ -5428,7 +5428,7 @@ export default function AdminDashboard({
 
         {/* TAB 15: DAMAGE REPORTS */}
         {activeTab === 'Damage Reports' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Damage Claims &amp; Estimates</h3>
             <p className="text-xs text-#6B7280">Security caution deposit claims logged by landlords:</p>
             
@@ -5453,7 +5453,7 @@ export default function AdminDashboard({
 
         {/* TAB 16: DOCUMENT VAULT */}
         {activeTab === 'Document Vault' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <div className="flex items-center space-x-3 text-[#18452E] mb-4 border-b border-stone-200 pb-4">
               <FolderOpen className="w-6 h-6" />
               <div>
@@ -5512,7 +5512,7 @@ export default function AdminDashboard({
 
         {/* TAB 17: BIRTHDAY ALERTS */}
         {activeTab === 'Birthday Alerts' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="flex justify-between items-center">
               <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Birthdays System</h3>
               <Gift className="w-5 h-5 text-[#C9A84C]" />
@@ -5539,7 +5539,7 @@ export default function AdminDashboard({
 
         {/* TAB 18: PLATFORM STATS */}
         {activeTab === 'Platform Stats' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Platform Metrics &amp; Health</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -5573,7 +5573,7 @@ export default function AdminDashboard({
 
         {/* TAB: COMPLIANCE CONTROL CENTER */}
         {activeTab === 'Compliance' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <div>
               <h3 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-2">
                 <span>COMPLIANCE &amp; PMC AGREEMENT CONTROL CENTER</span>
@@ -5945,7 +5945,7 @@ export default function AdminDashboard({
 
         {/* TAB 19: TRANSPARENCY LEDGER */}
         {activeTab === 'Transparency Ledger' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Global Transparency Ledger</h3>
             <p className="text-xs text-#6B7280">Every transaction, edit, upload, and approval on the platform is permanently logged here. Nothing hidden.</p>
             
@@ -5997,7 +5997,7 @@ export default function AdminDashboard({
 
         {/* TAB 20: SETTINGS */}
         {activeTab === 'Settings' && (
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <div>
               <h3 className="font-display font-black text-[#18452E] text-sm uppercase">System Settings &amp; Ledger API</h3>
               <p className="text-xs text-#6B7280">Configure global admin parameters securely. All connections operate on zero-trust token models.</p>
@@ -6106,7 +6106,7 @@ export default function AdminDashboard({
       {/* LANDLORD MODAL */}
       {selectedLandlordModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div className="flex items-center space-x-4">
                 <img src={selectedLandlordModal.photo} alt={selectedLandlordModal.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
@@ -6229,7 +6229,7 @@ export default function AdminDashboard({
       {/* TENANT MODAL */}
       {selectedTenantModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div className="flex items-center space-x-4">
                 <img src={selectedTenantModal.photo} alt={selectedTenantModal.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
@@ -6244,7 +6244,7 @@ export default function AdminDashboard({
             </div>
             <div className="p-6 max-h-[70vh] overflow-y-auto space-y-6">
               {/* TENANCY RECORD SUMMARY */}
-              <div className="bg-gradient-to-r from-emerald-800 to-[#0E2F1F] text-white p-5 rounded-2xl space-y-3.5 shadow-sm">
+              <div className=" text-white p-5 rounded-2xl space-y-3.5 shadow-sm">
                 <div className="flex justify-between items-center border-b border-white/10 pb-2">
                   <h4 className="font-display font-black text-xs uppercase tracking-wide text-emerald-300">Tenancy Lifetime Summary</h4>
                   <span className="text-[9px] font-mono font-bold bg-white/15 px-2 py-0.5 rounded uppercase tracking-wider text-white">System Audited</span>
@@ -6370,7 +6370,7 @@ export default function AdminDashboard({
       {/* PMC MODAL */}
       {selectedPMCModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div>
                 <h3 className="font-display font-black text-xl">{selectedPMCModal.name}</h3>
@@ -6483,7 +6483,7 @@ export default function AdminDashboard({
       {/* SHORTLET MANAGER MODAL */}
       {selectedShortletModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div>
                 <h3 className="font-display font-black text-xl">{selectedShortletModal.name}</h3>
@@ -6590,7 +6590,7 @@ export default function AdminDashboard({
       {/* EMAIL PREVIEW MODAL */}
       {selectedEmailPreview && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
-          <div className="bg-white border border-stone-200 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col max-h-[90vh]">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm animate-fade-in flex flex-col max-h-[90vh]">
             <div className="p-5 border-b border-stone-150 flex justify-between items-center bg-[#18452E] text-white">
               <div>
                 <h4 className="font-display font-black text-xs uppercase tracking-wider">Receipt Email Inspector</h4>

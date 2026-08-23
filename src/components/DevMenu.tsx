@@ -13,7 +13,7 @@ export function DevMenu({ navigate }: { navigate: (path: string) => void }) {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            className="absolute bottom-14 right-0 bg-white shadow-2xl border border-stone-200 rounded-2xl p-2 w-48 flex flex-col gap-1 overflow-hidden"
+            className="absolute bottom-14 right-0 bg-white shadow-sm border border-stone-200 rounded-2xl p-2 w-48 flex flex-col gap-1 overflow-hidden"
           >
             <div className="px-3 py-2 text-[10px] font-bold text-stone-400 uppercase tracking-widest border-b border-stone-100 mb-1">
               Dev Navigation
@@ -44,7 +44,7 @@ export function DevMenu({ navigate }: { navigate: (path: string) => void }) {
       </AnimatePresence>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+        className="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition-transform"
       >
         {isOpen ? <X className="w-5 h-5" /> : <Settings className="w-5 h-5" />}
       </button>

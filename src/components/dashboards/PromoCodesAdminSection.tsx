@@ -325,7 +325,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
     <div className="space-y-6">
       
       {/* SECTION HEADER */}
-      <div className="bg-[#18452E] text-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#18452E]/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+      <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-6 md:p-8 shadow-sm border border-[#18452E]/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
         <div className="relative z-10 space-y-2">
           <div className="flex items-center space-x-2 text-[#C9A84C]">
             <Tag className="w-5 h-5" />
@@ -343,7 +343,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
         <button
           onClick={handleOpenAddModal}
-          className="relative z-10 px-6 py-3.5 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-black text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
+          className="relative z-10 px-6 py-3.5 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-black text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Add New Promo Code</span>
@@ -751,7 +751,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
       {/* MODAL: ADD NEW PROMO CODE */}
       {showAddModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white border border-stone-200 rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl space-y-6 my-8">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] max-w-2xl w-full p-6 md:p-8 shadow-sm space-y-6 my-8">
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div className="flex items-center space-x-2.5">
@@ -1001,7 +1001,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
       {/* MODAL: EDIT PROMO CODE */}
       {editingCode && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white border border-stone-200 rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl space-y-6 my-8">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] max-w-2xl w-full p-6 md:p-8 shadow-sm space-y-6 my-8">
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
@@ -1229,7 +1229,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
       {/* PANEL: VIEW REDEMPTIONS */}
       {viewRedemptionsCode && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white border border-stone-200 rounded-3xl max-w-4xl w-full p-6 md:p-8 shadow-2xl space-y-6 my-8">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] max-w-4xl w-full p-6 md:p-8 shadow-sm space-y-6 my-8">
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
@@ -1332,7 +1332,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
       {/* MODAL: SUCCESS CREATED CODE NOTIFICATION WITH COPY BUTTON */}
       {createdCodeNotification && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white border border-stone-200 rounded-3xl max-w-md w-full p-6 text-center space-y-5 shadow-2xl">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] max-w-md w-full p-6 text-center space-y-5 shadow-sm">
             <div className="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto border-4 border-emerald-50">
               <CheckCircle2 className="w-8 h-8" />
             </div>

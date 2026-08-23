@@ -49,7 +49,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             alt="Premium Aerial Real Estate Nigeria" 
             className="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-[10s] ease-out hover:scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#0E2F1F]/95 via-[#0E2F1F]/75 to-[#0F172A]/80"></div>
+          <div className="absolute inset-0 bg-[#0E2F1F]/90"></div>
           {/* Ambient Golden light overlay */}
           <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
         </div>
@@ -84,7 +84,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <div className="flex flex-wrap gap-4 pt-3">
               <button 
                 onClick={() => navigate('/properties')}
-                className="px-7 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg flex items-center space-x-2.5 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                className="px-7 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold text-xs uppercase tracking-wider shadow-sm flex items-center space-x-2.5 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
               >
                 <span>Browse Verified Properties</span>
                 <ArrowRight className="w-4 h-4" />
@@ -111,7 +111,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#E2E8E4]/60 overflow-hidden p-6 md:p-7 text-slate-800 relative"
+              className="bg-white/95 backdrop-blur-md rounded-2xl shadow-sm border border-[#E2E8E4]/60 overflow-hidden p-6 md:p-7 text-slate-800 relative"
             >
               {/* Premium golden tag accent */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#C9A84C]"></div>
@@ -260,7 +260,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {/* 1. Verified Rentals (Live) */}
-          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-xl hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-sm hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
@@ -286,7 +286,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           </div>
 
           {/* 2. Meet Professionals (Live) */}
-          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-xl hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-sm hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
@@ -312,7 +312,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           </div>
 
           {/* 3. Property Management (Live) */}
-          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-xl hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white rounded-2xl border border-stone-200/60 p-7 hover:shadow-sm hover:border-stone-200 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
@@ -340,7 +340,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 4. Payment Plan Houses (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-lg transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
@@ -364,7 +364,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 5. Mortgage Ready Properties (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-lg transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
@@ -388,7 +388,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 6. Buy & Build Land (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-lg transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
@@ -538,7 +538,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             return (
               <div 
                 key={prop.id} 
-                className="bg-white rounded-2xl border border-stone-200/60 overflow-hidden shadow-xs hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group"
+                className="bg-white rounded-2xl border border-stone-200/60 overflow-hidden shadow-xs hover:shadow-sm hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group"
                 id={`property-card-${prop.id}`}
               >
                 <div className="relative h-56 w-full overflow-hidden bg-stone-50 shrink-0">
@@ -557,7 +557,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                     </span>
                   </div>
                   {/* Subtle vignette shade */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
                 </div>
 
                 <div className="p-6 flex flex-col justify-between flex-grow">
@@ -788,7 +788,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           </p>
           <button 
             onClick={() => navigate('/connect-with-a-professional')}
-            className="px-8 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold font-sans tracking-wide shadow-xl flex items-center space-x-2 transition cursor-pointer"
+            className="px-8 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold font-sans tracking-wide shadow-sm flex items-center space-x-2 transition cursor-pointer"
           >
             <span>Get Connected Now</span>
             <ArrowRight className="w-4 h-4 text-[#C9A84C]" />

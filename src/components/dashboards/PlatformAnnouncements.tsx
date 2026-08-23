@@ -244,7 +244,7 @@ export default function PlatformAnnouncements({ userRole = 'All', userId = 'anon
   }
 
   return (
-    <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm space-y-4 animate-fade-in text-xs">
+    <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4 animate-fade-in text-xs">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-200 pb-3 gap-2">
         <div className="flex items-center space-x-2">
           <Megaphone className="w-4 h-4 text-[#18452E]" />

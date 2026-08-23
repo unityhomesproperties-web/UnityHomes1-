@@ -704,7 +704,7 @@ export default function PmcDashboard({
     <div className="space-y-8 pb-16 text-xs sm:text-sm font-sans theme-teal tracking-wide">
       
       {/* HIGH VISIBILITY SUBSCRIPTION LIMIT BANNER */}
-      <div className="bg-teal-950 text-white rounded-3xl p-5 flex flex-col sm:flex-row justify-between items-center gap-3 border border-teal-900 shadow-lg">
+      <div className="bg-teal-950 text-white rounded-[var(--radius-large)] p-5 flex flex-col sm:flex-row justify-between items-center gap-3 border border-teal-900 shadow-sm">
         <div className="flex items-center space-x-2">
           <ShieldCheck className="w-5 h-5 text-teal-400 shrink-0" />
           <span>PMC Corporate License Verified: <strong className="text-teal-200">{activePmcName}</strong></span>
@@ -942,7 +942,7 @@ export default function PmcDashboard({
       </div>
 
       {/* NEW PMC INTEGRATIONS GLOBAL BAR */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start bg-stone-50/50 p-4 rounded-3xl border border-stone-150">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start bg-stone-50/50 p-4 rounded-[var(--radius-large)] border border-stone-150">
         <div className="lg:col-span-5">
           <ConnectivityIndicator triggerSuccess={triggerSuccess} />
         </div>
@@ -964,7 +964,7 @@ export default function PmcDashboard({
         <div className="space-y-6 animate-fade-in">
           
           {/* PMC PORTFOLIO OVERVIEW CARD IN TEAL (Fix Six) */}
-          <div className="bg-teal-950 text-white p-6 md:p-8 rounded-3xl space-y-4 shadow-xl border border-teal-900 relative overflow-hidden">
+          <div className="bg-teal-950 text-white p-6 md:p-8 rounded-[var(--radius-large)] space-y-4 shadow-sm border border-teal-900 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A84C]/5 rounded-bl-full"></div>
             <div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
@@ -1023,7 +1023,7 @@ export default function PmcDashboard({
           </div>
 
           {/* PMC SUBSCRIPTION CAPACITY PROGRESS BAR */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-3 shadow-sm animate-fade-in">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-3 shadow-sm animate-fade-in">
             <div className="flex justify-between items-center text-xs">
               <span className="font-display font-bold text-teal-950 uppercase tracking-wider">PMC Managed Properties Capacity Tracker</span>
               <span className="font-mono font-bold text-#6B7280">
@@ -1066,7 +1066,7 @@ export default function PmcDashboard({
           {/* PMC SUBSCRIPTION LIMIT REACHED FULL-SCREEN MODAL */}
           {showLimitModal && (
             <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-              <div className="bg-white border border-stone-200 rounded-3xl p-8 max-w-md w-full shadow-2xl space-y-6 text-center animate-scale-up">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-8 max-w-md w-full shadow-sm space-y-6 text-center animate-scale-up">
                 <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mx-auto border border-rose-100">
                   <ShieldAlert className="w-8 h-8" />
                 </div>
@@ -1086,7 +1086,7 @@ export default function PmcDashboard({
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-lg shadow-amber-950/10"
+                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
@@ -1102,7 +1102,7 @@ export default function PmcDashboard({
           )}
 
           {/* MONEY AWAITING REMITTANCE CARD (Fix Two) */}
-          <div className="bg-white border border-stone-200 p-6 md:p-8 rounded-3xl space-y-4 shadow-sm relative overflow-hidden">
+          <div className="bg-white border border-stone-200 p-6 md:p-8 rounded-[var(--radius-large)] space-y-4 shadow-sm relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#18452E] font-semibold">
@@ -1200,7 +1200,7 @@ export default function PmcDashboard({
             {/* TOP PERFORMING PROPERTIES (Fix Eight) */}
             <div className="space-y-6">
               {sortedPerformers.length > 0 && (
-                <div className="bg-amber-50/60 border border-amber-200 rounded-3xl p-6 space-y-4 shadow-xs relative overflow-hidden">
+                <div className="bg-amber-50/60 border border-amber-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs relative overflow-hidden">
                   <div className="flex justify-between items-start">
                     <div className="space-y-1">
                       <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-bold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
@@ -1253,7 +1253,7 @@ export default function PmcDashboard({
 
             {/* TENANT COMPLAINTS WIDGET (Fix Seven) */}
             <div className="space-y-6">
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-3.5 shadow-xs">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-3.5 shadow-xs">
                 <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                   <div className="flex items-center space-x-2">
                     <AlertCircle className="w-4.5 h-4.5 text-rose-600" />
@@ -1312,7 +1312,7 @@ export default function PmcDashboard({
               </div>
 
               {showAddPmcProperty && (
-                <div className="bg-white border border-stone-200 p-6 rounded-3xl max-w-xl space-y-4 animate-scale-up">
+                <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] max-w-xl space-y-4 animate-scale-up">
                   <h4 className="font-display font-black text-xs text-teal-900 uppercase border-b pb-2">
                     Register New Property Under Management License
                   </h4>
@@ -1365,7 +1365,7 @@ export default function PmcDashboard({
                     <div 
                       key={bld.id}
                       onClick={() => setSelectedBuildingId(bld.id)}
-                      className="bg-white border border-teal-100 rounded-3xl overflow-hidden shadow-xs hover:shadow-md hover:border-teal-700 transition duration-300 cursor-pointer flex flex-col group"
+                      className="bg-white border border-teal-100 rounded-[var(--radius-large)] overflow-hidden shadow-xs hover:shadow-md hover:border-teal-700 transition duration-300 cursor-pointer flex flex-col group"
                     >
                       <div className="h-40 w-full overflow-hidden relative">
                         <img 
@@ -1435,7 +1435,7 @@ export default function PmcDashboard({
                     <div 
                       key={u.id}
                       onClick={() => setSelectedUnit(u)} // LEVEL 3: Modal opens on card click
-                      className="bg-white border border-teal-100 rounded-3xl overflow-hidden shadow-xs hover:shadow-md hover:border-teal-700 transition duration-200 cursor-pointer flex flex-col group"
+                      className="bg-white border border-teal-100 rounded-[var(--radius-large)] overflow-hidden shadow-xs hover:shadow-md hover:border-teal-700 transition duration-200 cursor-pointer flex flex-col group"
                     >
                       <div className="h-40 w-full overflow-hidden relative">
                         <img 
@@ -1483,7 +1483,7 @@ export default function PmcDashboard({
 
       {/* TAB 2: LANDLORD CLIENTS */}
       {activeTab === 'Clients' && (
-        <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-6 animate-fade-in">
+        <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
           <div>
             <h3 className="font-display font-black text-teal-950 uppercase text-sm">Landlord Client Parameters</h3>
             {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
@@ -1812,7 +1812,7 @@ export default function PmcDashboard({
         <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
           
           {/* SEARCH & FILTERS CONTROLS */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-5 space-y-4">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-5 space-y-4">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
                 {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
@@ -1943,7 +1943,7 @@ export default function PmcDashboard({
 
           {/* BULK ACTIONS BAR */}
           {paymentsBulkMode && (
-            <div className="bg-amber-50 border border-amber-300 rounded-3xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
+            <div className="bg-amber-50 border border-amber-300 rounded-[var(--radius-large)] p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
               <div>
                 <strong className="text-amber-950 font-bold block text-xs uppercase font-mono">BULK PAYMENT OPERATIONS ACTIVE</strong>
                 <span className="text-[10px] text-amber-800">Selected <strong className="font-mono">{selectedPaymentIds.length}</strong> items.</span>
@@ -1983,7 +1983,7 @@ export default function PmcDashboard({
           )}
 
           {!showInstallmentOnly ? (
-            <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-4">
+            <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4">
               <div className="space-y-3">
                 {pmcManagedUnits
                   .filter(u => u.paymentStatus === 'Paid' && !u.hasInstallmentSchedule)
@@ -2055,7 +2055,7 @@ export default function PmcDashboard({
                   .map((u) => {
                   const pctPaid = u.rentAmount > 0 ? Math.round(((u.rentPaid || 0) / u.rentAmount) * 100) : 0;
                   return (
-                    <div key={u.id} className="bg-white border border-teal-100 rounded-3xl p-6 shadow-sm space-y-4">
+                    <div key={u.id} className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
                       
                       {/* HEADER */}
                       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 pb-3 border-b border-stone-200">
@@ -2177,7 +2177,7 @@ export default function PmcDashboard({
         <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
           
           {/* SEARCH & FILTERS CONTROLS */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-5 space-y-4 animate-fade-in">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-5 space-y-4 animate-fade-in">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
                 <h3 className="font-display font-black text-teal-950 uppercase text-sm">Maintenance &amp; Repair Work orders</h3>
@@ -2259,7 +2259,7 @@ export default function PmcDashboard({
 
           {/* BULK ACTIONS BAR */}
           {maintBulkMode && (
-            <div className="bg-amber-50 border border-amber-300 rounded-3xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
+            <div className="bg-amber-50 border border-amber-300 rounded-[var(--radius-large)] p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
               <div>
                 <strong className="text-amber-950 font-bold block text-xs uppercase font-mono">BULK MAINTENANCE ACTIONS ACTIVE</strong>
                 <span className="text-[10px] text-amber-800">Selected <strong className="font-mono">{selectedMaintIds.length}</strong> items.</span>
@@ -2303,7 +2303,7 @@ export default function PmcDashboard({
           )}
 
           {/* JOBS LIST CONTAINER */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-4">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="space-y-3">
               {(() => {
                 const filteredJobs = maintenanceJobs.filter(job => {
@@ -2368,7 +2368,7 @@ export default function PmcDashboard({
           </div>
 
           {/* INTEGRATED AUDIT HISTORY FOR MAINTENANCE */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-3">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-3">
             <div>
               <h4 className="font-display font-black text-teal-950 uppercase text-xs">System Activity &amp; Maintenance Audit</h4>
               <p className="text-stone-400 text-[10px] font-light">Authenticated audit log record of operations executed under the maintenance module.</p>
@@ -2391,7 +2391,7 @@ export default function PmcDashboard({
         <div className="space-y-6 animate-fade-in">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 text-sm">
             {/* GENERATE CARD */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs flex flex-col justify-center space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-3 text-[#18452E]">
                 <FileText className="w-6 h-6 text-teal-800" />
                 <h4 className="font-display font-black text-sm text-teal-950 uppercase">Generate New Payout Summary</h4>
@@ -2409,7 +2409,7 @@ export default function PmcDashboard({
             </div>
 
             {/* TRACKING LOG */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
               <h4 className="font-display font-black text-xs text-teal-950 uppercase mb-4">Report Delivery Tracking</h4>
               <div className="space-y-3">
                 {reports.length === 0 ? (
@@ -2505,7 +2505,7 @@ export default function PmcDashboard({
             <h4 className="font-display font-black text-teal-950 uppercase text-xs">Active Field Operators List</h4>
             <div className="space-y-3">
               {staffList.map((st) => (
-                <div key={st.id} className="p-4 bg-white border border-stone-200 rounded-3xl flex justify-between items-center text-xs">
+                <div key={st.id} className="p-4 bg-white border border-stone-200 rounded-[var(--radius-large)] flex justify-between items-center text-xs">
                   <div>
                     <strong className="block text-teal-955 font-display text-sm">{st.name}</strong>
                     <span className="text-stone-400 block font-light">Role: {st.role} &bull; Hotline: {st.phone}</span>
@@ -2521,7 +2521,7 @@ export default function PmcDashboard({
 
       {/* TAB 7: SUBSCRIPTION SUMMARY */}
       {activeTab === 'Subscription' && (
-        <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-4 animate-fade-in">
+        <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 animate-fade-in">
           <h3 className="font-display font-black text-teal-950 uppercase text-sm">PMC License Subscriptions</h3>
           <p className="text-#6B7280 font-light">Your current membership is on the <strong>PMC Professional Suite</strong>, giving you up to 100 concurrently managed property units:</p>
 
@@ -2550,7 +2550,7 @@ export default function PmcDashboard({
       {/* REVOLUTIONARY DETAIL VIEW MODAL (Fix Four / Fix Seven) */}
       {selectedUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full max-h-[90vh] overflow-y-auto border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
             
             {/* CLOSE BUTTON */}
             <button 
@@ -2819,7 +2819,7 @@ export default function PmcDashboard({
         <div className="space-y-6 animate-fade-in">
           
           {/* TITLE & METADATA */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <h2 className="text-xl font-display font-black text-teal-950 uppercase">Lease Renewal Center</h2>
               <p className="text-#6B7280 font-light text-xs mt-1">Portfolio-wide operations dashboard for tracking multi-property tenancies, notice timelines, and upcoming move-outs.</p>
@@ -2879,7 +2879,7 @@ export default function PmcDashboard({
           </div>
 
           {/* MAIN SORTABLE LEASE EXPIRY TABLE */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
               <div>
                 <h3 className="font-display font-black text-teal-950 uppercase text-sm">Approaching Expiries &amp; Decision Logs</h3>
@@ -3025,7 +3025,7 @@ export default function PmcDashboard({
           </div>
 
           {/* READ-ONLY QUIT NOTICES REGISTER (PMC SOURCING PIPELINE PLANNING) */}
-          <div className="bg-white border border-teal-100 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
             <div>
               <h3 className="font-display font-black text-teal-950 uppercase text-sm">Quit Notices Register (Read-Only)</h3>
               <p className="text-#6B7280 font-light text-xs mt-0.5">
@@ -3092,7 +3092,7 @@ export default function PmcDashboard({
       {/* CONFIRM INSTALLMENT RECEIPT MODAL */}
       {showConfirmInstallmentModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             
             <button 
               onClick={() => setShowConfirmInstallmentModal(null)}
@@ -3168,7 +3168,7 @@ export default function PmcDashboard({
       {/* PROMISE TO PAY MODAL */}
       {showPromiseModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             
             <button 
               onClick={() => setShowPromiseModal(null)}
@@ -3243,7 +3243,7 @@ export default function PmcDashboard({
       {/* NOTIFY LEASE EXPIRY MODAL */}
       {showNotifyModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             
             <button 
               onClick={() => setShowNotifyModal(null)}
@@ -3325,7 +3325,7 @@ export default function PmcDashboard({
       {/* VIEW TENANCY MODAL */}
       {showTenancyModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             
             <button 
               onClick={() => setShowTenancyModal(null)}
@@ -3461,7 +3461,7 @@ export default function PmcDashboard({
       {/* REPORT PREVIEW MODAL */}
       {selectedReport && (
         <div id="report-modal" className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in text-sm">
-          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl animate-scale-up">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-sm animate-scale-up">
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-stone-50">
               <div className="flex items-center space-x-2">
                 <FileText className="w-5 h-5 text-[#18452E]" />
@@ -3620,7 +3620,7 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
 
   return (
     <div className="space-y-6 animate-fade-in text-xs">
-      <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-4 shadow-xs">
+      <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h3 className="font-display font-black text-teal-950 uppercase text-sm flex items-center gap-2">

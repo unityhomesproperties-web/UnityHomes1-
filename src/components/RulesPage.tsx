@@ -113,7 +113,7 @@ export default function RulesPage({ navigate }: RulesPageProps) {
             <div 
               key={sec.id} 
               id={sec.id}
-              className="spatial-glass border border-stone-200/50 p-6 sm:p-8 rounded-3xl space-y-3 shadow-xs hover:border-[#C9A84C]/40 transition duration-200"
+              className="spatial-glass border border-stone-200/50 p-6 sm:p-8 rounded-[var(--radius-large)] space-y-3 shadow-xs hover:border-[#C9A84C]/40 transition duration-200"
             >
               <h3 className="font-display font-extrabold text-sm sm:text-base text-[#18452E] border-b border-stone-200 pb-2.5 flex items-center justify-between">
                 <span>{sec.title}</span>
@@ -128,7 +128,7 @@ export default function RulesPage({ navigate }: RulesPageProps) {
       </div>
 
       {/* FINAL WARNING BOX */}
-      <div className="p-6 bg-amber-50 border border-amber-200 rounded-3xl flex items-start space-x-3 text-xs text-amber-800 font-sans leading-relaxed">
+      <div className="p-6 bg-amber-50 border border-amber-200 rounded-[var(--radius-large)] flex items-start space-x-3 text-xs text-amber-800 font-sans leading-relaxed">
         <ShieldAlert className="w-5 h-5 shrink-0 text-amber-700 mt-0.5" />
         <div className="space-y-1">
           <h4 className="font-bold uppercase tracking-wider text-[11px] text-amber-950 font-display">

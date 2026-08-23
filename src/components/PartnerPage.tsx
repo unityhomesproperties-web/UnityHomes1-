@@ -43,7 +43,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
         <h2 className="text-xl font-display font-bold text-[#18452E] text-center">Referral Tracks &amp; Rewards</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 space-y-4">
+          <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="w-10 h-10 rounded-xl bg-[#18452E]/10 flex items-center justify-center text-[#18452E]">
               <Users className="w-5 h-5" />
             </div>
@@ -56,7 +56,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
             </p>
           </div>
 
-          <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 space-y-4">
+          <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-800">
               <Award className="w-5 h-5" />
             </div>
@@ -69,7 +69,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
             </p>
           </div>
 
-          <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 space-y-4">
+          <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="w-10 h-10 rounded-xl bg-[#C9A84C]/15 flex items-center justify-center text-[#C9A84C]">
               <Gift className="w-5 h-5" />
             </div>
@@ -90,7 +90,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
         <h2 className="text-xl font-display font-bold text-[#18452E] text-center">Partner Network Tiers</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-3 shadow-xs">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-3 shadow-xs">
             <span className="text-[10px] font-mono bg-stone-50 text-#6B7280 px-2.5 py-0.5 rounded font-bold uppercase">
               TIER 1 &bull; STARTER
             </span>
@@ -100,7 +100,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-2 border-stone-200 rounded-3xl p-6 space-y-3 shadow-xs relative">
+          <div className="bg-white border-2 border-stone-200 rounded-[var(--radius-large)] p-6 space-y-3 shadow-xs relative">
             <div className="absolute top-3 right-3 bg-[#18452E]/10 text-[#18452E] text-[8px] font-mono font-black uppercase px-1.5 py-0.5 rounded">
               POPULAR
             </div>
@@ -113,7 +113,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-2 border-[#C9A84C]/25 rounded-3xl p-6 space-y-3 shadow-sm relative">
+          <div className="bg-white border-2 border-[#C9A84C]/25 rounded-[var(--radius-large)] p-6 space-y-3 shadow-sm relative">
             <span className="text-[10px] font-mono bg-[#C9A84C]/15 text-[#C9A84C] px-2.5 py-0.5 rounded font-bold uppercase">
               TIER 3 &bull; INSTITUTIONAL
             </span>
@@ -130,7 +130,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
         
         {/* PARTNER REGISTRATION FORM */}
-        <div className="md:col-span-5 spatial-glass border border-stone-200/60 rounded-3xl p-6 shadow-sm space-y-6">
+        <div className="md:col-span-5 spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 shadow-sm space-y-6">
           <div className="border-b border-stone-200 pb-3">
             <h3 className="font-display font-extrabold text-base text-[#18452E]">Network Registration Form</h3>
             <p className="text-[10px] text-stone-400">Join other verified partners in Nigeria today</p>
@@ -208,7 +208,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
 
               <button
                 type="submit"
-                className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition cursor-pointer text-xs"
+                className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl font-bold uppercase tracking-wider shadow-md hover:shadow-sm transition cursor-pointer text-xs"
               >
                 Submit Application
               </button>

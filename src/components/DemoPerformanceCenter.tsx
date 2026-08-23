@@ -109,7 +109,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
       <div className="max-w-7xl mx-auto">
         
         {/* HEADER SECTION */}
-        <div className="bg-[#18452E] text-white rounded-3xl p-8 md:p-12 mb-8 shadow-xl relative overflow-hidden">
+        <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 mb-8 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 opacity-10">
             <Activity className="w-64 h-64 text-[#C9A84C]" />
           </div>
@@ -137,7 +137,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
         </div>
 
         {/* HEALTH SCORE HERO CARD */}
-        <div className="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm mb-8">
+        <div className="bg-white rounded-[var(--radius-large)] p-8 border border-stone-200 shadow-sm mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-1 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-stone-200 pb-8 lg:pb-0 lg:pr-8">
               <h2 className="text-sm font-mono font-bold tracking-widest uppercase text-stone-400 mb-2">Proprietary Metric</h2>
@@ -187,7 +187,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
         </div>
 
         {/* ROLE-BASED DASHBOARD PREVIEWS */}
-        <div className="bg-white rounded-3xl border border-stone-200 shadow-sm overflow-hidden mb-12">
+        <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm overflow-hidden mb-12">
           
           <div className="flex overflow-x-auto bg-[#F0F8F4] border-b border-stone-200 p-2 hide-scrollbar">
             {tabs.map(tab => (
@@ -465,7 +465,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   <p className="text-#6B7280 text-sm mt-1">Total platform oversight, zero-trust dispute resolution, and transparency.</p>
                 </div>
                 
-                <div className="bg-[#18452E] text-white p-8 rounded-3xl relative overflow-hidden">
+                <div className="bg-[#18452E] text-white p-8 rounded-[var(--radius-large)] relative overflow-hidden">
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                      <div>
                        <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-2">Global Search</span>

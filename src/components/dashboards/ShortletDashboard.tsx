@@ -992,7 +992,7 @@ export default function ShortletDashboard({
     <div className="space-y-6 pb-16 font-sans text-xs sm:text-sm">
       
       {/* TOP SYSTEM HEADER BAR WITH CONNECTIVITY & ANNOUNCEMENTS */}
-      <div className="bg-#132A1D text-white rounded-3xl p-5 shadow-lg space-y-4">
+      <div className="bg-#132A1D text-white rounded-[var(--radius-large)] p-5 shadow-sm space-y-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <div>
             <div className="flex items-center space-x-2">
@@ -1283,7 +1283,7 @@ export default function ShortletDashboard({
 
       {/* TAB 2: LOG BOOKING FORM */}
       {activeTab === 'LogBooking' && (
-        <div className="bg-white border rounded-3xl p-6 space-y-4 max-w-xl mx-auto">
+        <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4 max-w-xl mx-auto">
           <h3 className="font-display font-black text-sm text-[#18452E] uppercase border-b pb-2">Log a Shortlet Booking</h3>
           
           <form onSubmit={handleBookingSubmit} className="space-y-4">
@@ -1411,7 +1411,7 @@ export default function ShortletDashboard({
 
       {/* TAB 3: LOG REMITTANCE */}
       {activeTab === 'LogRemittance' && (
-        <div className="bg-white border rounded-3xl p-6 space-y-6 max-w-xl mx-auto shadow-sm">
+        <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-6 max-w-xl mx-auto shadow-sm">
           <h3 className="font-display font-black text-sm text-[#18452E] uppercase border-b pb-2">Record Landlord Remittance</h3>
           
           <div className="space-y-5">
@@ -1593,7 +1593,7 @@ export default function ShortletDashboard({
       {/* BOOKING CONFIRMATION OVERLAY */}
       {bookingConfirmData && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-stone-200 animate-fade-in text-#132A1D">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 shadow-sm relative border border-stone-200 animate-fade-in text-#132A1D">
             <h4 className="font-display font-black text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
               Confirm Booking Parameters
             </h4>
@@ -1679,7 +1679,7 @@ export default function ShortletDashboard({
       {/* REMITTANCE CONFIRMATION OVERLAY */}
       {remitConfirmData && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-stone-200 animate-fade-in text-#132A1D">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 shadow-sm relative border border-stone-200 animate-fade-in text-#132A1D">
             <h4 className="font-display font-black text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
               Verify Remittance & Bank Logs
             </h4>
@@ -1796,7 +1796,7 @@ export default function ShortletDashboard({
 
       {/* TAB 4: HISTORY & STATEMENTS (BOOKINGS LOG & REMITTANCE CENTER) */}
       {activeTab === 'History' && (
-        <div className="bg-white border rounded-3xl p-6 space-y-6">
+        <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4">
             <div>
               <h3 className="font-display font-black text-base text-[#18452E] uppercase">
@@ -2238,7 +2238,7 @@ export default function ShortletDashboard({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             {/* SUBMIT REPORT FORM */}
-            <div className="bg-white border rounded-3xl p-6 space-y-4">
+            <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4">
               <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-amber-600" />
                 Report Property Damage
@@ -2382,7 +2382,7 @@ export default function ShortletDashboard({
             </div>
 
             {/* MANAGER REPAIR STATUS TRACKER */}
-            <div className="bg-white border rounded-3xl p-6 space-y-4">
+            <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4">
               <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Damage Tracking Status</h3>
               
               <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
@@ -2541,7 +2541,7 @@ export default function ShortletDashboard({
                     }
 
                     return (
-                      <div key={p.agreement.propertyId} className="bg-white border border-stone-200 rounded-3xl p-5 hover:shadow-lg transition duration-250 flex flex-col justify-between space-y-4">
+                      <div key={p.agreement.propertyId} className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 hover:shadow-sm transition duration-250 flex flex-col justify-between space-y-4">
                         <div className="space-y-1">
                           <h4 className="font-display font-black text-sm text-[#18452E] line-clamp-1">
                             {p.agreement.propertyName}
@@ -2606,7 +2606,7 @@ export default function ShortletDashboard({
                 });
 
                 return (
-                  <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-white rounded-3xl p-6 space-y-4 shadow-lg border border-amber-700/50">
+                  <div className=" text-white rounded-[var(--radius-large)] p-6 space-y-4 shadow-sm border border-amber-700/50">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-amber-700/60 pb-3">
                       <div>
                         <div className="flex items-center space-x-2">
@@ -2663,7 +2663,7 @@ export default function ShortletDashboard({
               })()}
 
               {/* STEP 5: MONTHLY BAR CHART OF LAST 6 MONTHS */}
-              <div className="bg-white border rounded-3xl p-6 space-y-4">
+              <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4">
                 <div className="flex justify-between items-center border-b pb-3">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="w-4 h-4 text-[#18452E]" />
@@ -2694,7 +2694,7 @@ export default function ShortletDashboard({
             </div>
           ) : (
             /* STEP 5: PROPERTY PERFORMANCE RANKING SPECIFIC TO THE MANAGER */
-            <div className="bg-white border rounded-3xl p-6 space-y-5">
+            <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-5">
               <div className="flex justify-between items-center border-b pb-3">
                 <div className="flex items-center space-x-2">
                   <Award className="w-5 h-5 text-[#C9A84C]" />
@@ -2773,7 +2773,7 @@ export default function ShortletDashboard({
       {/* TAB 7: PROFILE & VERIFICATION (Addition Eight) */}
       {activeTab === 'Profile' && (
         <div className="space-y-6 max-w-2xl mx-auto">
-          <div className="bg-white border rounded-3xl p-6 space-y-5 shadow-sm">
+          <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center space-x-2">
                 <User className="w-5 h-5 text-[#18452E]" />
@@ -2884,7 +2884,7 @@ export default function ShortletDashboard({
       {/* MODAL 1: SELECTED BOOKING DETAIL */}
       {selectedDetailBooking && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl p-6 max-w-lg w-full space-y-5 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-lg w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
                 <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Booking Record Detail</h3>
@@ -2944,7 +2944,7 @@ export default function ShortletDashboard({
       {/* MODAL 2: SELECTED REMITTANCE DETAIL WITH TRANSPARENCY TIMELINE (Addition Seven) */}
       {selectedDetailRemittance && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl p-6 max-w-xl w-full space-y-5 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-xl w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
                 <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Remittance Disbursement Record</h3>
@@ -3074,7 +3074,7 @@ export default function ShortletDashboard({
       {/* DISPUTE REASON MODAL */}
       {showDisputeModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-55">
-          <div className="bg-white rounded-3xl p-6 max-w-md w-full space-y-4 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-md w-full space-y-4 shadow-sm">
             <h3 className="font-display font-black text-sm text-rose-800 uppercase">Dispute Remittance Statement</h3>
             <p className="text-xs text-#6B7280">
               Please specify the reason for disputing this remittance statement. This will trigger an immediate audit alert to management.
@@ -3117,7 +3117,7 @@ export default function ShortletDashboard({
       {/* MODAL 3: SELECTED PROPERTY DETAIL WITH AUDIT HISTORY TAB (Addition Four) */}
       {selectedDetailProperty && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl p-6 max-w-2xl w-full space-y-5 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-2xl w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
                 <h3 className="font-display font-black text-base text-[#18452E] uppercase">{selectedDetailProperty.propertyName}</h3>
@@ -3232,7 +3232,7 @@ export default function ShortletDashboard({
       {/* MODAL 4: DAMAGE DETAIL MODAL */}
       {selectedDetailDamage && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl p-6 max-w-lg w-full space-y-4 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-lg w-full space-y-4 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
                 <h3 className="font-display font-black text-sm text-amber-800 uppercase">Damage Report Detail</h3>
@@ -3450,7 +3450,7 @@ function DepositResolutionModal({
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in overflow-y-auto">
-      <div className="bg-white border rounded-3xl max-w-2xl w-full p-6 space-y-6 shadow-2xl my-8">
+      <div className="bg-white border rounded-[var(--radius-large)] max-w-2xl w-full p-6 space-y-6 shadow-sm my-8">
         <div className="flex justify-between items-start border-b pb-4">
           <div>
             <div className="flex items-center space-x-2">
@@ -3699,7 +3699,7 @@ const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
-      <div className="bg-white border border-stone-200 p-4 rounded-2xl shadow-xl space-y-2 max-w-xs text-xs">
+      <div className="bg-white border border-stone-200 p-4 rounded-2xl shadow-sm space-y-2 max-w-xs text-xs">
         <p className="font-bold text-#6B7280 uppercase tracking-wider text-[10px] font-mono">
           {data.month} Breakdown
         </p>

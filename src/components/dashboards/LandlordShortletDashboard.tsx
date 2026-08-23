@@ -596,7 +596,7 @@ export default function LandlordShortletDashboard({
   return (
     <div className="space-y-6 animate-fade-in">
       {/* --- ADDITION FIVE: CONNECTIVITY INDICATOR & HEADER --- */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-stone-50 p-4 rounded-3xl border border-stone-200">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-stone-50 p-4 rounded-[var(--radius-large)] border border-stone-200">
         <div>
           <span className="text-[10px] font-mono text-#6B7280 uppercase tracking-widest font-black">Unity Homes Shortlet</span>
           <h2 className="text-xl font-display font-bold text-#132A1D">{session?.name || 'Babatunde Osei'}'s Landlord Panel</h2>
@@ -819,7 +819,7 @@ export default function LandlordShortletDashboard({
           <OperationsBriefingCard role="Landlord" userName={session.name} />
           {/* --- ADDITION ONE: RECENTLY VIEWED --- */}
           {recentlyViewed.length > 0 && (
-            <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm space-y-3">
+            <div className="bg-white p-5 rounded-[var(--radius-large)] border border-stone-200 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-#6B7280" />
@@ -880,7 +880,7 @@ export default function LandlordShortletDashboard({
             </div>
           )}
 
-          <div className="bg-#132A1D rounded-3xl p-6 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xl relative overflow-hidden">
+          <div className="bg-#132A1D rounded-[var(--radius-large)] p-6 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-sm relative overflow-hidden">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                <TrendingUp className="w-48 h-48" />
              </div>
@@ -924,7 +924,7 @@ export default function LandlordShortletDashboard({
           </div>
 
           {/* --- ADDITION NINE: PLATFORM ANNOUNCEMENTS --- */}
-          <div className="bg-amber-50/40 border border-amber-200 rounded-3xl p-5 space-y-4 shadow-xs">
+          <div className="bg-amber-50/40 border border-amber-200 rounded-[var(--radius-large)] p-5 space-y-4 shadow-xs">
             <div className="flex items-center gap-2">
               <ShieldAlert className="w-5 h-5 text-amber-700" />
               <h4 className="font-display font-black text-#132A1D text-sm uppercase tracking-wide">Platform Announcements</h4>
@@ -944,7 +944,7 @@ export default function LandlordShortletDashboard({
           </div>
 
           {/* --- ADDITION SIX: NOTIFICATIONS WITH PIN, ARCHIVE, FILTER --- */}
-          <div className="bg-white border border-stone-200 rounded-3xl p-5 space-y-4 shadow-sm">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 space-y-4 shadow-sm">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
               <div className="flex items-center gap-2">
                 <Bell className="w-4 h-4 text-#6B7280" />
@@ -1096,7 +1096,7 @@ export default function LandlordShortletDashboard({
                 const sectionId = `manager-${manager.managerName}`;
                 const isExpanded = !collapsedSections[sectionId];
                 return (
-                  <div key={sectionId} className="border border-stone-200 rounded-3xl overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
+                  <div key={sectionId} className="border border-stone-200 rounded-[var(--radius-large)] overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
                     {/* Collapsible Header */}
                     <div 
                       onClick={() => toggleSection(sectionId)}
@@ -1148,7 +1148,7 @@ export default function LandlordShortletDashboard({
                             >
                               <div className="h-32 bg-stone-50 relative overflow-hidden">
                                 <img src={agreement.managerPhoto || "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80"} alt="prop" className="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-#132A1D/90 to-transparent"></div>
+                                <div className="absolute inset-0 bg-black/40"></div>
                                 <h4 className="absolute bottom-3 left-4 font-display font-black text-white text-sm uppercase">{agreement.propertyName}</h4>
                               </div>
                               <div className="p-4 space-y-3">
@@ -1184,7 +1184,7 @@ export default function LandlordShortletDashboard({
 
               {/* Managed by Me Section */}
               {managedByMe.length > 0 && (
-                <div className="border border-stone-200 rounded-3xl overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
+                <div className="border border-stone-200 rounded-[var(--radius-large)] overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
                   <div 
                     onClick={() => toggleSection('managed-by-me')}
                     className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer hover:bg-stone-50 p-2 rounded-2xl transition duration-150"
@@ -1226,7 +1226,7 @@ export default function LandlordShortletDashboard({
                           >
                             <div className="h-32 bg-stone-50 relative overflow-hidden">
                               <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80" alt="prop" className="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-#132A1D/90 to-transparent"></div>
+                              <div className="absolute inset-0 bg-black/40"></div>
                               <h4 className="absolute bottom-3 left-4 font-display font-black text-white text-sm uppercase">{agreement.propertyName}</h4>
                             </div>
                             <div className="p-4 space-y-3">
@@ -1261,7 +1261,7 @@ export default function LandlordShortletDashboard({
 
               {/* Awaiting Manager Assignment Section */}
               {awaitingAssignment.length > 0 && (
-                <div className="border border-stone-200 rounded-3xl overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
+                <div className="border border-stone-200 rounded-[var(--radius-large)] overflow-hidden bg-stone-50/40 p-4 sm:p-5 space-y-4 shadow-sm">
                   <div 
                     onClick={() => toggleSection('awaiting-assignment')}
                     className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer hover:bg-stone-50 p-2 rounded-2xl transition duration-150"
@@ -1301,7 +1301,7 @@ export default function LandlordShortletDashboard({
                           >
                             <div className="h-32 bg-stone-50 relative overflow-hidden">
                               <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=400&q=80" alt="prop" className="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-#132A1D/90 to-transparent"></div>
+                              <div className="absolute inset-0 bg-black/40"></div>
                               <h4 className="absolute bottom-3 left-4 font-display font-black text-white text-sm uppercase">{agreement.propertyName}</h4>
                               <span className="absolute top-3 right-3 text-[10px] uppercase font-bold bg-amber-500 text-white px-2.5 py-0.5 rounded-full font-mono">Pending Partner</span>
                             </div>
@@ -1920,7 +1920,7 @@ export default function LandlordShortletDashboard({
             </div>
           </div>
 
-          <div className="bg-white border border-stone-200 rounded-3xl p-6">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6">
             <div className="space-y-3 font-mono text-[10px]">
               <div className="p-3 bg-stone-50 border-l-2 border-[#0E2F1F] rounded-r-xl">
                 <div className="flex justify-between items-center mb-1">
@@ -1961,7 +1961,7 @@ export default function LandlordShortletDashboard({
       {activeTab === 'DamageCenter' && (
         <div className="space-y-6">
           
-          <div className="bg-#132A1D rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
+          <div className="bg-#132A1D rounded-[var(--radius-large)] p-6 text-white shadow-sm relative overflow-hidden">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                <AlertTriangle className="w-48 h-48 text-amber-500" />
              </div>
@@ -2003,7 +2003,7 @@ export default function LandlordShortletDashboard({
                     <div 
                       key={apt.propertyId}
                       onClick={() => setSelectedDamageProperty(apt.propertyId)}
-                      className={`p-4 rounded-2xl border cursor-pointer transition ${selectedDamageProperty === apt.propertyId ? 'bg-[#18452E] border-[#0E2F1F] text-white shadow-lg' : 'bg-white border-stone-200 hover:border-[#0E2F1F]'}`}
+                      className={`p-4 rounded-2xl border cursor-pointer transition ${selectedDamageProperty === apt.propertyId ? 'bg-[#18452E] border-[#0E2F1F] text-white shadow-sm' : 'bg-white border-stone-200 hover:border-[#0E2F1F]'}`}
                     >
                       <h5 className={`font-bold text-sm ${selectedDamageProperty === apt.propertyId ? 'text-white' : 'text-[#18452E]'}`}>{apt.propertyName}</h5>
                       <div className="grid grid-cols-2 gap-2 mt-3">
@@ -2029,13 +2029,13 @@ export default function LandlordShortletDashboard({
                   <h4 className="font-display font-black text-[#18452E] text-sm uppercase">Incident Ledger &amp; Approvals</h4>
                   <div className="space-y-4">
                     {damageReports.filter(r => r.propertyId === selectedDamageProperty).length === 0 ? (
-                      <div className="p-8 text-center bg-stone-50 rounded-3xl border border-stone-200">
+                      <div className="p-8 text-center bg-stone-50 rounded-[var(--radius-large)] border border-stone-200">
                         <CheckCircle2 className="w-12 h-12 text-emerald-300 mx-auto mb-3" />
                         <p className="text-#6B7280 font-medium">No damage reports for this apartment.</p>
                       </div>
                     ) : (
                       damageReports.filter(r => r.propertyId === selectedDamageProperty).map(report => (
-                        <div key={report.id} className="bg-white border border-stone-200 rounded-3xl p-5 shadow-sm space-y-4">
+                        <div key={report.id} className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-sm space-y-4">
                           <div className="flex justify-between items-start">
                             <div>
                               <div className="flex items-center gap-2 mb-1">
@@ -2117,7 +2117,7 @@ export default function LandlordShortletDashboard({
                   </div>
                 </>
               ) : (
-                <div className="h-full flex flex-col items-center justify-center p-12 bg-stone-50 rounded-3xl border border-stone-200 text-center">
+                <div className="h-full flex flex-col items-center justify-center p-12 bg-stone-50 rounded-[var(--radius-large)] border border-stone-200 text-center">
                   <Building className="w-16 h-16 text-stone-300 mb-4" />
                   <h4 className="font-display font-black text-stone-400 text-lg">Select an Apartment</h4>
                   <p className="text-stone-400 text-sm mt-2 max-w-sm">Click on any apartment from the directory to view its full damage history, active repairs, and financial approvals.</p>
@@ -2133,7 +2133,7 @@ export default function LandlordShortletDashboard({
       {/* --- CAUTION DEPOSIT RESOLUTIONS TAB --- */}
       {activeTab === 'DepositResolutions' && (
         <div className="space-y-6">
-          <div className="bg-[#18452E] rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
+          <div className="bg-[#18452E] rounded-[var(--radius-large)] p-6 text-white shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-10">
               <ShieldAlert className="w-48 h-48 text-emerald-200" />
             </div>
@@ -2177,7 +2177,7 @@ export default function LandlordShortletDashboard({
           </div>
 
           {/* Resolutions list */}
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
             <div className="flex justify-between items-center border-b border-stone-200 pb-3">
               <h4 className="font-display font-black text-[#18452E] text-sm uppercase">Checkout Deposit Resolutions Log</h4>
               <span className="text-xs font-mono text-stone-400">{depositResolutions.length} Cases Recorded</span>
@@ -2322,7 +2322,7 @@ export default function LandlordShortletDashboard({
           {/* LANDLORD DISPUTE MODAL */}
           {selectedResForDisputeModal && (
             <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-              <div className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-stone-200">
+              <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-4 shadow-sm border border-stone-200">
                 <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                   <div>
                     <span className="text-[9px] font-mono text-rose-600 font-bold uppercase block">Unity Homes Dispute Escalation</span>
@@ -2379,7 +2379,7 @@ export default function LandlordShortletDashboard({
 
       {activeTab === 'Profile' && (
         <div className="space-y-6">
-          <div className="bg-#132A1D rounded-3xl p-6 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-xl relative overflow-hidden">
+          <div className="bg-#132A1D rounded-[var(--radius-large)] p-6 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-sm relative overflow-hidden">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                <UserCheck className="w-48 h-48" />
              </div>
@@ -2391,7 +2391,7 @@ export default function LandlordShortletDashboard({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Left: General info */}
-            <div className="md:col-span-1 bg-white border border-stone-200 rounded-3xl p-5 space-y-4 shadow-sm h-fit">
+            <div className="md:col-span-1 bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 space-y-4 shadow-sm h-fit">
               <div className="flex flex-col items-center text-center pb-4 border-b border-stone-200">
                 <div className="w-20 h-20 bg-stone-50 rounded-full flex items-center justify-center text-[#18452E] font-display font-bold text-2xl border-2 border-stone-200 relative">
                   {session.name.substring(0, 2).toUpperCase()}
@@ -2430,7 +2430,7 @@ export default function LandlordShortletDashboard({
             {/* Right: Checklist & progress */}
             <div className="md:col-span-2 space-y-6">
               {/* Profile Completion Card (Addition Eight) */}
-              <div className="bg-white border border-stone-200 rounded-3xl p-5 space-y-4 shadow-sm">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 space-y-4 shadow-sm">
                 <div className="flex justify-between items-center">
                   <h4 className="font-display font-bold text-#132A1D text-sm">Remittance Suitability Checklist</h4>
                   <span className="text-sm font-display font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">{profilePercentage}% Completed</span>
@@ -2514,7 +2514,7 @@ export default function LandlordShortletDashboard({
       {/* --- APARTMENT DETAIL MODAL (ADDITION FOUR: AUDIT HISTORY) --- */}
       {selectedApartment && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-stone-200 relative overflow-hidden">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full max-h-[85vh] flex flex-col shadow-sm border border-stone-200 relative overflow-hidden">
             {/* Header */}
             <div className="bg-#132A1D p-5 text-white flex justify-between items-center">
               <div>
@@ -2647,7 +2647,7 @@ export default function LandlordShortletDashboard({
       {/* --- TRANSPARENCY TIMELINE MODAL (ADDITION SEVEN) --- */}
       {selectedRemittanceBooking && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-xl w-full flex flex-col shadow-2xl border border-stone-200 overflow-hidden">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-xl w-full flex flex-col shadow-sm border border-stone-200 overflow-hidden">
             {/* Header */}
             <div className="bg-[#18452E] p-5 text-white flex justify-between items-center">
               <div>
@@ -2843,7 +2843,7 @@ export default function LandlordShortletDashboard({
       {/* --- EXPORT CONFIRMATION MODAL (ADDITION THREE: EXPANDED EXPORT) --- */}
       {showExportModal && showExportModal.isOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-stone-200 overflow-hidden space-y-4 p-6">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full shadow-sm border border-stone-200 overflow-hidden space-y-4 p-6">
             <div className="flex justify-between items-center pb-3 border-b border-stone-150">
               <div>
                 <h4 className="font-display font-black text-#132A1D text-sm uppercase tracking-wide">Export Document Builder</h4>

@@ -130,7 +130,7 @@ export default function ProfileCompletionIndicator({
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="bg-white border border-teal-100 rounded-3xl p-6 shadow-xs space-y-5 animate-fade-in text-xs sm:text-sm">
+    <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-xs space-y-5 animate-fade-in text-xs sm:text-sm">
       {/* Header and Ring Row */}
       <div className="flex items-center justify-between pb-3.5 border-b border-stone-200">
         <div>

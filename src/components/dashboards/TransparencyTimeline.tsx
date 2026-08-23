@@ -28,7 +28,7 @@ export default function TransparencyTimeline({
   onClose
 }: TransparencyTimelineProps) {
   return (
-    <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-5 shadow-sm animate-fade-in text-xs sm:text-sm">
+    <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-5 shadow-sm animate-fade-in text-xs sm:text-sm">
       {/* Header */}
       <div className="flex justify-between items-start pb-3 border-b border-stone-200">
         <div>

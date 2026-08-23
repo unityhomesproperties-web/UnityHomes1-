@@ -123,7 +123,7 @@ export default function GlobalSearch({
       </div>
 
       {isOpen && results && (
-        <div className="absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden max-h-[70vh] overflow-y-auto">
+        <div className="absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden max-h-[70vh] overflow-y-auto">
           {Object.values(results).every((arr: any) => arr.length === 0) ? (
             <div className="p-8 text-center text-#6B7280 text-sm">
               No results found for "{query}". Try a different keyword or command.

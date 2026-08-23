@@ -211,7 +211,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
     <div className="min-h-screen py-10 px-4 md:px-8 max-w-7xl mx-auto w-full">
       
       {/* PAGE HEADER SECTION (STEP FIVE) */}
-      <div className="bg-[#18452E] text-white rounded-3xl p-8 md:p-12 text-center mb-12 shadow-lg relative overflow-hidden">
+      <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 text-center mb-12 shadow-sm relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
           <Building2 className="w-64 h-64 text-white" />
         </div>
@@ -272,9 +272,9 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
             return (
               <div
                 key={tier.id}
-                className={`bg-white rounded-3xl border-2 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                className={`bg-white rounded-[var(--radius-large)] border-2 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   tier.popular
-                    ? 'border-[#18452E] shadow-xl ring-2 ring-[#18452E]/20 scale-[1.01]'
+                    ? 'border-[#18452E] shadow-sm ring-2 ring-[#18452E]/20 scale-[1.01]'
                     : 'border-stone-200 hover:border-stone-300 shadow-xs'
                 }`}
               >
@@ -353,9 +353,9 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
             return (
               <div
                 key={tier.id}
-                className={`bg-white rounded-3xl border-2 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                className={`bg-white rounded-[var(--radius-large)] border-2 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   tier.popular
-                    ? 'border-[#C9A84C] shadow-xl ring-2 ring-[#C9A84C]/20'
+                    ? 'border-[#C9A84C] shadow-sm ring-2 ring-[#C9A84C]/20'
                     : 'border-stone-200 hover:border-stone-300 shadow-xs'
                 }`}
               >
@@ -441,7 +441,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
           </p>
         </div>
 
-        <div className="bg-[#FDFBF7] rounded-3xl border border-stone-200 p-8 md:p-12 relative shadow-xs">
+        <div className="bg-[#FDFBF7] rounded-[var(--radius-large)] border border-stone-200 p-8 md:p-12 relative shadow-xs">
           <span className="absolute top-6 right-6 border border-[#C9A84C] text-[#C9A84C] font-mono text-[10px] font-extrabold uppercase px-3.5 py-1 rounded-full tracking-wider bg-amber-50/50">
             Coming Soon
           </span>
@@ -532,7 +532,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
       {/* WHATSAPP PRE-INQUIRY MODAL */}
       {selectedTier && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 space-y-6 shadow-2xl relative border border-stone-200 animate-fade-in">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 md:p-8 space-y-6 shadow-sm relative border border-stone-200 animate-fade-in">
             
             <button
               onClick={() => setSelectedTier(null)}

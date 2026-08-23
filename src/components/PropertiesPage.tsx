@@ -422,7 +422,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
         {/* Selected Property Detail Pane - STEP 9 */}
         {selectedProperty && (
-          <div className="md:col-span-6 lg:col-span-7 bg-white rounded-2xl border border-stone-200/80 shadow-xl p-6 md:p-8 sticky top-24 max-h-[88vh] overflow-y-auto relative">
+          <div className="md:col-span-6 lg:col-span-7 bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 md:p-8 sticky top-24 max-h-[88vh] overflow-y-auto relative">
             {/* Elegant luxury top accent */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#C9A84C]"></div>
 
@@ -745,7 +745,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                       <button
                         type="submit"
-                        className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center space-x-2 cursor-pointer shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01]"
+                        className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center space-x-2 cursor-pointer shadow-md hover:shadow-sm transition-all duration-300 hover:scale-[1.01]"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Log Site Viewing Request</span>

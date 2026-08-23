@@ -16,8 +16,8 @@ import DemoMode from './components/DemoMode';
 // Placeholder components for basic routes
 const Placeholder = ({ title }: { title: string }) => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-    <h1 className="text-3xl font-bold text-[var(--color-primary-green)]">{title}</h1>
-    <p className="mt-4 text-[var(--color-secondary-text)]">Content for this page is being generated...</p>
+    <h1 className="text-3xl font-bold text-[var(--color-brand-deep)]">{title}</h1>
+    <p className="mt-4 text-[var(--color-text-secondary)]">Content for this page is being generated...</p>
   </div>
 );
 

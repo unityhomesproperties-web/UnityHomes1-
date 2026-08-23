@@ -83,7 +83,7 @@ export default function QuickSupportButton({
             onClick={() => setIsOpen(false)}
           />
 
-          <div className="absolute right-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-stone-200 z-50 p-3 space-y-2 animate-fade-in text-xs">
+          <div className="absolute right-0 mt-2 w-72 bg-white rounded-2xl shadow-sm border border-stone-200 z-50 p-3 space-y-2 animate-fade-in text-xs">
             <div className="flex items-center justify-between pb-2 border-b border-stone-200 px-1">
               <span className="font-display font-extrabold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-1">
                 <HelpCircle className="w-3.5 h-3.5 text-[#18452E]" />
@@ -141,7 +141,7 @@ export default function QuickSupportButton({
       {/* FAQ MODAL */}
       {showFaqModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-2xl w-full p-6 space-y-5 border border-stone-200 shadow-2xl max-h-[85vh] overflow-y-auto">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full p-6 space-y-5 border border-stone-200 shadow-sm max-h-[85vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div className="flex items-center space-x-3">
                 <div className="p-2 bg-emerald-100 text-[#18452E] rounded-2xl">

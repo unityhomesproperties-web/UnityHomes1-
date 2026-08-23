@@ -26,7 +26,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="bg-teal-950 text-teal-50 p-6 rounded-2xl shadow-xl border border-teal-800 text-center flex flex-col items-center justify-center space-y-4">
+        <div className="bg-teal-950 text-teal-50 p-6 rounded-2xl shadow-sm border border-teal-800 text-center flex flex-col items-center justify-center space-y-4">
           <h2 className="text-lg font-black font-display uppercase tracking-widest text-teal-400">Something went wrong loading this section</h2>
           <p className="text-sm font-light">An error occurred while rendering the data.</p>
           <button

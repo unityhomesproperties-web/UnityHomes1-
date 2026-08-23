@@ -27,30 +27,30 @@ export default function ProfessionalsPage() {
   return (
     <div className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex flex-col animate-fade-in">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h1 className="text-4xl font-bold text-[var(--color-primary-green)] mb-6">
+        <h1 className="text-4xl font-bold text-[var(--color-brand-deep)] mb-6">
           For Real Estate Professionals
         </h1>
-        <p className="text-xl text-[var(--color-secondary-text)] leading-relaxed">
+        <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed">
           Unity Homes is building a trusted professional network for people who need qualified help with property decisions.
         </p>
       </div>
       
       <div className="grid md:grid-cols-3 gap-8">
         {PROFESSIONALS.map((prof) => (
-          <div key={prof.roleId} className="bg-[var(--color-white)] p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 bg-[var(--color-background)] rounded-full flex items-center justify-center text-[var(--color-secondary-green)] mb-6">
+          <div key={prof.roleId} className="bg-white p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+            <div className="w-16 h-16 bg-[var(--color-surface-soft)] rounded-full flex items-center justify-center text-[var(--color-brand-fresh)] mb-6">
               <prof.icon className="w-8 h-8" />
             </div>
             
-            <h3 className="text-2xl font-bold text-[var(--color-primary-text)] mb-4">{prof.title}</h3>
+            <h3 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">{prof.title}</h3>
             
-            <p className="text-[var(--color-secondary-text)] flex-1 mb-8 leading-relaxed">
+            <p className="text-[var(--color-text-secondary)] flex-1 mb-8 leading-relaxed">
               {prof.description}
             </p>
             
             <Link
               to={`/waitlist?role=${prof.roleId}`}
-              className="w-full text-center bg-[var(--color-background)] text-[var(--color-primary-green)] border border-[var(--color-border)] px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-primary-green)] hover:text-[var(--color-white)] transition-colors min-h-[48px] flex items-center justify-center"
+              className="w-full text-center bg-[var(--color-surface-light)] text-[var(--color-brand-deep)] border border-[var(--color-border)] px-6 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand-deep)] hover:text-white transition-colors min-h-[48px] flex items-center justify-center"
             >
               Join The Waitlist
             </Link>

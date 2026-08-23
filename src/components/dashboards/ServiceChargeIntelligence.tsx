@@ -187,7 +187,7 @@ export default function ServiceChargeIntelligence({
       )}
 
       {/* KPI GRID */}
-      <div className="bg-teal-950 border rounded-3xl p-6 shadow-sm relative overflow-hidden text-white">
+      <div className="bg-teal-950 border rounded-[var(--radius-large)] p-6 shadow-sm relative overflow-hidden text-white">
         <div className="absolute top-0 right-0 p-8 opacity-10">
           <DollarSign className="w-32 h-32 text-[#C9A84C]" />
         </div>
@@ -232,7 +232,7 @@ export default function ServiceChargeIntelligence({
       )}
 
       {/* FILTER CONTROLS */}
-      <div className="bg-white border rounded-3xl p-6 shadow-sm space-y-4">
+      <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
         <div className="flex flex-col md:flex-row gap-4">
           <input 
             type="text" 
@@ -333,7 +333,7 @@ export default function ServiceChargeIntelligence({
       )}
 
       {/* BILLS TABLE VIEW */}
-      <div className="bg-white border rounded-3xl p-6 shadow-sm">
+      <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse whitespace-nowrap">
             <thead>

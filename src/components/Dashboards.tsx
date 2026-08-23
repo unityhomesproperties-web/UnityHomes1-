@@ -302,7 +302,7 @@ export default function Dashboards({ session, navigate, onLogout }: DashboardsPr
   return (
     <div className="w-full flex flex-col relative">
       {successMsg && (
-        <div className="fixed top-4 right-4 z-[100] p-4 bg-emerald-50 border border-emerald-300 rounded-2xl flex items-center shadow-xl">
+        <div className="fixed top-4 right-4 z-[100] p-4 bg-emerald-50 border border-emerald-300 rounded-2xl flex items-center shadow-sm">
           <span className="text-sm font-bold text-emerald-800">{successMsg}</span>
         </div>
       )}

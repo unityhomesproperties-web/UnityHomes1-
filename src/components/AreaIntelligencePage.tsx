@@ -179,7 +179,7 @@ export default function AreaIntelligencePage() {
   };
 
   const renderStep1 = () => (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[24px] shadow-sm border border-[rgba(0,108,37,.08)]">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[var(--radius-large)] shadow-sm border border-[rgba(0,108,37,.08)]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className={labelClass}>State</label>
@@ -259,7 +259,7 @@ export default function AreaIntelligencePage() {
     ];
 
     return (
-      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-3xl mx-auto bg-white p-8 rounded-[24px] shadow-sm border border-[rgba(0,108,37,.08)]">
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-3xl mx-auto bg-white p-8 rounded-[var(--radius-large)] shadow-sm border border-[rgba(0,108,37,.08)]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {ratingFields.map(field => (
             <div key={field.id} className="flex flex-col gap-2">
@@ -293,7 +293,7 @@ export default function AreaIntelligencePage() {
   };
 
   const renderStep3 = () => (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[24px] shadow-sm border border-[rgba(0,108,37,.08)]">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[var(--radius-large)] shadow-sm border border-[rgba(0,108,37,.08)]">
       <div className="space-y-6">
         <div>
           <label className={labelClass}>Typical monthly rent</label>
@@ -363,7 +363,7 @@ export default function AreaIntelligencePage() {
   );
 
   const renderStep4 = () => (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[24px] shadow-sm border border-[rgba(0,108,37,.08)]">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 max-w-2xl mx-auto bg-white p-8 rounded-[var(--radius-large)] shadow-sm border border-[rgba(0,108,37,.08)]">
       <div className="space-y-6">
         <div>
           <label className={labelClass}>Would you recommend this area?</label>
@@ -420,7 +420,7 @@ export default function AreaIntelligencePage() {
   );
 
   const renderStep5 = () => (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-6 max-w-2xl mx-auto bg-white p-8 rounded-[24px] shadow-sm border border-[rgba(0,108,37,.08)]">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-6 max-w-2xl mx-auto bg-white p-8 rounded-[var(--radius-large)] shadow-sm border border-[rgba(0,108,37,.08)]">
       <div className="space-y-6">
         <div className="space-y-3">
           <div className="flex justify-between items-center pb-2 border-b border-[rgba(0,108,37,.08)]">

@@ -149,7 +149,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
 
   return (
     <div className="min-h-screen bg-[#F0F8F4] flex flex-col justify-center items-center p-4 sm:p-6 font-sans">
-      <div className="max-w-md w-full bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden my-8">
+      <div className="max-w-md w-full bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm overflow-hidden my-8">
         
         {/* Header */}
         <div className="bg-[#18452E] text-white p-6 text-center space-y-2 relative overflow-hidden">

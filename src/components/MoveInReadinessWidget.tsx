@@ -106,11 +106,11 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
   ];
 
   return (
-    <div className="bg-white rounded-3xl border border-stone-200 p-6 shadow-sm space-y-6">
+    <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 p-6 shadow-sm space-y-6">
       
       {/* Toast Alert */}
       {toastMessage && (
-        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-lg flex items-center justify-between animate-fade-in">
+        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-sm flex items-center justify-between animate-fade-in">
           <span>{toastMessage}</span>
         </div>
       )}
@@ -264,7 +264,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
       {/* TENANT MODAL: Submit Level 2 Verification */}
       {showVerificationModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200 shadow-2xl p-6 space-y-5">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200 shadow-sm p-6 space-y-5">
             <div className="flex justify-between items-center border-b border-stone-200 pb-3">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-amber-600" />

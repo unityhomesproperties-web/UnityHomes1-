@@ -10,7 +10,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
     <div className="min-h-screen py-16 px-4 md:px-8 max-w-5xl mx-auto w-full space-y-16">
       
       {/* HEADER SECTION - SPATIAL GLASS PANEL */}
-      <div className="spatial-dark-glass text-white rounded-3xl p-8 md:p-14 text-center shadow-lg relative overflow-hidden glow-border">
+      <div className="spatial-dark-glass text-white rounded-[var(--radius-large)] p-8 md:p-14 text-center shadow-sm relative overflow-hidden glow-border">
         {/* Glow orb effect */}
         <div className="absolute -top-24 -left-20 w-72 h-72 rounded-full bg-[#18452E]/20 blur-3xl pointer-events-none"></div>
         <div className="absolute -bottom-24 -right-20 w-72 h-72 rounded-full bg-[#C9A84C]/10 blur-3xl pointer-events-none"></div>
@@ -56,7 +56,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
         </div>
 
         {/* MISSION STATEMENT DISPLAY */}
-        <div className="spatial-glass border border-stone-200/60 rounded-3xl p-8 space-y-6 shadow-sm">
+        <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-8 space-y-6 shadow-sm">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-xl bg-[#18452E]/10 flex items-center justify-center text-[#18452E]">
               <Compass className="w-5 h-5" />

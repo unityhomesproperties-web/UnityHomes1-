@@ -898,7 +898,7 @@ export default function TenantDashboard({
       </div>
 
       {/* COMPLIANCE & AUDIT SANDBOX CONTROL PANEL */}
-      <div className="bg-#132A1D text-stone-100 p-5 rounded-3xl border border-#132A1D space-y-4 shadow-xl mb-2">
+      <div className="bg-#132A1D text-stone-100 p-5 rounded-[var(--radius-large)] border border-#132A1D space-y-4 shadow-sm mb-2">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-#132A1D pb-3 gap-2">
           <div className="flex items-center space-x-2">
             <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
@@ -1111,7 +1111,7 @@ export default function TenantDashboard({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             {/* VERIFIED PROPERTY SECTION */}
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Building className="text-[#18452E] w-5 h-5" />
                 <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Verified Property</h3>
@@ -1151,7 +1151,7 @@ export default function TenantDashboard({
             </div>
 
             {/* LANDLORD VERIFICATION SECTION */}
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <User className="text-[#18452E] w-5 h-5" />
                 <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Landlord Verification</h3>
@@ -1182,7 +1182,7 @@ export default function TenantDashboard({
 
             {/* PROPERTY MANAGEMENT COMPANY SECTION */}
             {pmcDetails.active && (
-              <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4">
+              <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
                 <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                   <Building className="text-teal-700 w-5 h-5" />
                   <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Property Management Company</h3>
@@ -1213,7 +1213,7 @@ export default function TenantDashboard({
             )}
 
             {/* PAYMENT DESTINATION CENTER */}
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4 relative overflow-hidden">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-16 h-16 bg-[#18452E]/5 rounded-bl-full"></div>
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3 relative z-10">
                 <Landmark className="text-[#18452E] w-5 h-5" />
@@ -1308,7 +1308,7 @@ export default function TenantDashboard({
       {activeTab === 'Payments' && (
         <div className="space-y-6">
           {/* TENANT RENT STATUS */}
-          <div className="bg-stone-50 border border-stone-200 rounded-3xl p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-center text-xs">
+          <div className="bg-stone-50 border border-stone-200 rounded-[var(--radius-large)] p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-center text-xs">
             <div className="lg:col-span-2">
               <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Tenant Rent Status</span>
               <h3 className="font-display font-extrabold text-[#18452E] text-sm md:text-base mt-1">
@@ -1375,7 +1375,7 @@ export default function TenantDashboard({
 
           {/* RESPECTFUL OUTSTANDING RENT CARD */}
           {collectionTenant && (collectionTenant.rentAmount - collectionTenant.rentPaid) > 0 && (
-            <div className="bg-rose-50/50 border border-rose-200 p-6 rounded-3xl space-y-4 animate-fade-in">
+            <div className="bg-rose-50/50 border border-rose-200 p-6 rounded-[var(--radius-large)] space-y-4 animate-fade-in">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="space-y-1 text-center md:text-left">
                   <span className="font-display font-extrabold text-rose-700 uppercase text-xs tracking-wider block">
@@ -1450,13 +1450,13 @@ export default function TenantDashboard({
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* PAYMENT TIMELINE */}
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Clock className="text-[#18452E] w-5 h-5" />
                 <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Payment Timeline</h3>
               </div>
               
-              <div className="relative pl-6 space-y-6 before:absolute before:inset-0 before:ml-2.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-emerald-500 before:via-stone-200 before:to-stone-200">
+              <div className="relative pl-6 space-y-6 before:absolute before:inset-0 before:ml-2.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before: before:from-emerald-500 before:via-stone-200 before:to-stone-200">
                 {/* STAGE 1: RECEIPT UPLOADED */}
                 <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                   <div className="flex items-center justify-center w-6 h-6 rounded-full border border-white bg-emerald-500 text-stone-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute -left-6 md:left-1/2">
@@ -1549,7 +1549,7 @@ export default function TenantDashboard({
             </div>
 
             {/* RENT SAVINGS TRACKER */}
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div className="flex items-center space-x-2.5">
                   <BarChart2 className="text-[#18452E] w-5 h-5" />
@@ -1614,7 +1614,7 @@ export default function TenantDashboard({
           </div>
 
           {/* PAYMENT HISTORY */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6 animate-fade-in">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6 animate-fade-in">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-3">
               <div className="flex items-center space-x-2.5">
                 <Activity className="text-[#18452E] w-5 h-5" />
@@ -1654,7 +1654,7 @@ export default function TenantDashboard({
           
           {/* ACTIVE PROMISES TO PAY */}
           {promises.length > 0 && (
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4 animate-fade-in">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4 animate-fade-in">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Clock className="text-amber-500 w-5 h-5" />
                 <h3 className="font-display font-black text-[#18452E] uppercase text-sm">My Payment Commitments</h3>
@@ -1724,7 +1724,7 @@ export default function TenantDashboard({
 
           <div className="space-y-4">
             {serviceCharges.map((sc, idx) => (
-              <div key={idx} className={`bg-white border p-5 rounded-3xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 ${
+              <div key={idx} className={`bg-white border p-5 rounded-[var(--radius-large)] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 ${
                 sc.status === "Unpaid" ? "border-l-4 border-l-red-500 border-stone-200" : 
                 sc.status === "Pending Verification" ? "border-l-4 border-l-amber-500 border-stone-200" :
                 "border-l-4 border-l-emerald-500 border-stone-200"
@@ -1788,7 +1788,7 @@ export default function TenantDashboard({
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* MAINTENANCE REQUEST CENTER */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <Wrench className="text-[#18452E] w-5 h-5" />
               <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Maintenance Request Center</h3>
@@ -1845,7 +1845,7 @@ export default function TenantDashboard({
       {activeTab === 'Vault' && (
         <div className="space-y-6">
           {/* DOCUMENT VAULT */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <FileLock className="text-[#18452E] w-5 h-5" />
               <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Tenant Document Vault</h3>
@@ -1888,7 +1888,7 @@ export default function TenantDashboard({
           </div>
 
           {/* TRANSPARENCY LEDGER */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <Activity className="text-[#18452E] w-5 h-5" />
               <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Transparency Ledger</h3>
@@ -1933,7 +1933,7 @@ export default function TenantDashboard({
       {activeTab === 'Profile' && (
         <div className="space-y-6">
           {/* Tenancy Record Summary */}
-          <div className="bg-[#18452E] text-white p-6 rounded-3xl space-y-4 shadow-lg border border-stone-200 relative overflow-hidden">
+          <div className="bg-[#18452E] text-white p-6 rounded-[var(--radius-large)] space-y-4 shadow-sm border border-stone-200 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl" />
             
             <div className="flex justify-between items-start">
@@ -2008,7 +2008,7 @@ export default function TenantDashboard({
           </div>
 
           {profileTab === 'info' ? (
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div className="flex items-center space-x-2.5">
                   <User className="text-[#18452E] w-5 h-5" />
@@ -2050,7 +2050,7 @@ export default function TenantDashboard({
               </div>
             </div>
           ) : (
-            <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-4">
+            <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
               <ImmutableHistory recordId={session.userId || "T1"} recordType="Tenant" />
             </div>
           )}
@@ -2060,7 +2060,7 @@ export default function TenantDashboard({
       {/* PROMISE TO PAY CREATION FORM MODAL */}
       {isPromiseModalOpen && collectionTenant && (
         <div className="fixed inset-0 bg-#132A1D/70 backdrop-blur-md flex items-center justify-center p-4 z-50 animate-fade-in overflow-y-auto">
-          <div className="bg-white rounded-3xl border border-stone-200 shadow-2xl max-w-xl w-full overflow-hidden flex flex-col my-8">
+          <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm max-w-xl w-full overflow-hidden flex flex-col my-8">
             <div className="p-6 border-b border-stone-200 bg-stone-50 flex justify-between items-center">
               <div>
                 <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-bold block">Unity Homes Trust &amp; Ledger</span>
@@ -2247,7 +2247,7 @@ export default function TenantDashboard({
       {/* MOVE OUT TWO-STEP CONFIRMATION MODAL */}
       {isMoveOutFlowOpen && collectionTenant && (
         <div className="fixed inset-0 bg-#132A1D/70 backdrop-blur-md flex items-center justify-center p-4 z-50 animate-fade-in overflow-y-auto">
-          <div className="bg-white rounded-3xl border border-stone-200 shadow-2xl max-w-lg w-full overflow-hidden flex flex-col my-8 animate-fade-in">
+          <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm max-w-lg w-full overflow-hidden flex flex-col my-8 animate-fade-in">
             <div className="p-6 border-b border-stone-200 bg-stone-50 flex justify-between items-center">
               <div>
                 <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-bold block">Tenancy Termination System</span>
@@ -2361,14 +2361,14 @@ export default function TenantDashboard({
       {/* AUTOMATIC PAYMENT RECEIPT MODAL */}
       {showTenantReceipt && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl border-2 border-[#0E2F1F] shadow-2xl max-w-md w-full overflow-hidden flex flex-col relative">
+          <div className="bg-white rounded-[var(--radius-large)] border-2 border-[#0E2F1F] shadow-sm max-w-md w-full overflow-hidden flex flex-col relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 pointer-events-none opacity-[0.08]">
-              <div className="border-4 border-[#18452E] text-[#18452E] font-display font-black text-4xl p-4 uppercase tracking-widest rounded-3xl">
+              <div className="border-4 border-[#18452E] text-[#18452E] font-display font-black text-4xl p-4 uppercase tracking-widest rounded-[var(--radius-large)]">
                 CLEARED
               </div>
             </div>
 
-            <div className="p-6 bg-gradient-to-br from-[#0E2F1F] to-[#18452E] text-white text-center">
+            <div className="p-6  text-white text-center">
               <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-extrabold block mb-1">Unity Homes Ledger System</span>
               <h3 className="font-display font-black text-sm uppercase tracking-wider">Clearance Certificate</h3>
               <p className="text-[9px] text-stone-200 font-mono mt-1">Ref: {showTenantReceipt.ref}</p>
@@ -2566,7 +2566,7 @@ function TenantComplaintCenterSection({
   );
 
   return (
-    <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-6">
+    <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
       <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
         <MessageCircle className="text-emerald-800 w-5 h-5" />
         <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Tenant Complaint Center</h3>
@@ -2840,7 +2840,7 @@ function TenantComplaintCenterSection({
       {/* Escalation Confirmation Dialog Modal */}
       {confirmingEscalationComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-4 border border-stone-200 shadow-2xl">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-4 border border-stone-200 shadow-sm">
             <div className="flex items-center gap-3 text-amber-600">
               <div className="p-2.5 bg-amber-100 rounded-2xl">
                 <ShieldAlert className="w-6 h-6 text-amber-700" />

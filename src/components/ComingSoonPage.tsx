@@ -44,7 +44,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         {/* CARD 1: PAYMENT PLAN HOUSES */}
-        <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
+        <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-[#18452E]/5 rounded-bl-full pointer-events-none"></div>
           
           <div className="space-y-4">
@@ -95,7 +95,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
         </div>
 
         {/* CARD 2: MORTGAGE READY PROPERTIES */}
-        <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
+        <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
 
           <div className="space-y-4">
@@ -146,7 +146,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
         </div>
 
         {/* CARD 3: BUY AND BUILD LAND */}
-        <div className="spatial-glass border border-stone-200/60 rounded-3xl p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
+        <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 flex flex-col justify-between space-y-6 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-20 h-20 bg-teal-500/5 rounded-bl-full pointer-events-none"></div>
 
           <div className="space-y-4">
@@ -199,7 +199,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
       </div>
 
       {/* FRAUD DISCLAIMER BOX REPEATED IN FULL HERE */}
-      <div className="bg-rose-50 border-2 border-rose-200 p-6 sm:p-8 rounded-3xl space-y-3.5 shadow-sm max-w-4xl mx-auto">
+      <div className="bg-rose-50 border-2 border-rose-200 p-6 sm:p-8 rounded-[var(--radius-large)] space-y-3.5 shadow-sm max-w-4xl mx-auto">
         <div className="flex items-center space-x-3 text-rose-800">
           <ShieldAlert className="w-6 h-6 shrink-0" />
           <h4 className="font-display font-black text-xs sm:text-sm uppercase tracking-wider">

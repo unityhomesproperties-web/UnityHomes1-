@@ -230,7 +230,7 @@ export default function BroadcastCenter({
   return (
     <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
       {/* Overview stats panel to establish design context */}
-      <div className="bg-teal-50 border border-teal-100 p-4 rounded-3xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="bg-teal-50 border border-teal-100 p-4 rounded-[var(--radius-large)] flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h4 className="font-display font-black text-teal-950 uppercase text-xs">PMC Scoped Portfolios</h4>
           <p className="text-[11px] text-teal-800 font-light">
@@ -246,7 +246,7 @@ export default function BroadcastCenter({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
         {/* COMPOSE VIEW */}
-        <div className="lg:col-span-7 bg-white border border-teal-100 rounded-3xl p-6 space-y-5 shadow-xs">
+        <div className="lg:col-span-7 bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-5 shadow-xs">
           <div className="flex items-center space-x-2 border-b border-stone-200 pb-3">
             <Megaphone className="w-5 h-5 text-teal-800" />
             <h3 className="font-display font-black text-teal-950 uppercase text-sm">PMC Active Broadcast Portal</h3>
@@ -410,7 +410,7 @@ export default function BroadcastCenter({
         </div>
 
         {/* COMPLIANCE CHECKLIST BAR */}
-        <div className="lg:col-span-5 bg-stone-50 border border-stone-200 rounded-3xl p-6 space-y-4 shadow-inner">
+        <div className="lg:col-span-5 bg-stone-50 border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-inner">
           <div className="flex items-center space-x-1.5 text-#6B7280 border-b border-stone-200 pb-3">
             <AlertTriangle className="w-4 h-4 text-amber-500" />
             <h4 className="font-display font-black text-#132A1D uppercase text-xs">Compliance Routing Rules</h4>
@@ -444,7 +444,7 @@ export default function BroadcastCenter({
       </div>
 
       {/* Broadcast Sent History Logs */}
-      <div className="bg-white border border-teal-100 rounded-3xl p-6 space-y-4 shadow-xs">
+      <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs">
         <div className="flex items-center space-x-1.5 text-teal-950 border-b border-stone-200 pb-3">
           <History className="w-4 h-4 text-teal-850" />
           <h4 className="font-display font-black text-teal-950 uppercase text-xs">Recent Scoped Broadcast Dispatches</h4>
@@ -501,7 +501,7 @@ export default function BroadcastCenter({
       {/* PREVIEW MODAL */}
       {showPreviewModal && (
         <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in text-sm">
-          <div className="bg-white rounded-3xl max-w-md w-full overflow-hidden flex flex-col shadow-2xl animate-scale-up border border-stone-200">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full overflow-hidden flex flex-col shadow-sm animate-scale-up border border-stone-200">
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-teal-800 text-white">
               <div className="flex items-center space-x-2">
                 <Megaphone className="w-5 h-5" />

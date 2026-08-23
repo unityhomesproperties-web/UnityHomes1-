@@ -53,7 +53,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
     <div className="min-h-screen py-10 px-4 md:px-8 max-w-6xl mx-auto w-full">
       
       {/* HEADER GREEN BOX */}
-      <div className="bg-[#18452E] text-white rounded-3xl p-8 md:p-12 text-center mb-10 shadow-sm">
+      <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 text-center mb-10 shadow-sm">
         <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C] bg-[#18452E]/30 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/20">
           SYSTEM PREVIEWS
         </span>
@@ -92,7 +92,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
         
         {/* Left Column: Recording placeholder */}
         <div className="lg:col-span-8 space-y-4">
-          <div className="relative aspect-video rounded-3xl overflow-hidden border border-stone-200 shadow-md bg-[#18452E]/5 flex items-center justify-center">
+          <div className="relative aspect-video rounded-[var(--radius-large)] overflow-hidden border border-stone-200 shadow-md bg-[#18452E]/5 flex items-center justify-center">
             {/* Embedded 16:9 frame container */}
             <iframe
               className="absolute inset-0 w-full h-full"
@@ -216,7 +216,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
         </div>
         <button
           onClick={handleDemoWhatsApp}
-          className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] text-xs font-bold rounded-xl shadow-lg shrink-0 flex items-center space-x-1.5 cursor-pointer"
+          className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] text-xs font-bold rounded-xl shadow-sm shrink-0 flex items-center space-x-1.5 cursor-pointer"
         >
           <span>Request Corporate Demo Introduce</span>
           <ArrowRight className="w-4 h-4" />

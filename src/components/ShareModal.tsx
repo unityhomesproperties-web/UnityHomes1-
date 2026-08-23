@@ -36,23 +36,23 @@ export default function ShareModal({ url, title, text, isOpen, onClose }: ShareM
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-primary-green)]/80 animate-fade-in">
-      <div className="bg-[var(--color-white)] w-full max-w-sm rounded-[var(--radius-card)] p-6 shadow-xl animate-slide-up relative">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-brand-fresh)]/80 animate-fade-in">
+      <div className="bg-white w-full max-w-sm rounded-[var(--radius-card)] p-6 shadow-sm animate-slide-up relative">
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-[var(--color-secondary-text)] hover:text-[var(--color-primary-text)]"
+          className="absolute top-4 right-4 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
         >
           ✕
         </button>
         
-        <h3 className="text-xl font-bold text-[var(--color-primary-text)] mb-6 text-center">
+        <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-6 text-center">
           Share Area Intelligence
         </h3>
 
         {navigator.share && (
           <button
             onClick={handleNativeShare}
-            className="w-full flex items-center justify-center space-x-2 bg-[var(--color-primary-green)] text-[var(--color-white)] px-4 py-3 rounded-[var(--radius-button)] font-semibold mb-4 hover:opacity-90 transition-opacity min-h-[48px]"
+            className="w-full flex items-center justify-center space-x-2 bg-[var(--color-brand-fresh)] text-white px-4 py-3 rounded-[var(--radius-button)] font-semibold mb-4 hover:opacity-90 transition-opacity min-h-[48px]"
           >
             <Share2 className="w-5 h-5" />
             <span>Share via Device</span>
@@ -89,7 +89,7 @@ export default function ShareModal({ url, title, text, isOpen, onClose }: ShareM
           </a>
           <a
             href={`mailto:?subject=${encodedTitle}&body=${encodedText}%0A%0A${encodedUrl}`}
-            className="flex flex-col items-center justify-center p-3 border border-[var(--color-border)] rounded-[var(--radius-button)] hover:bg-[var(--color-secondary-green)]/10 hover:border-[var(--color-secondary-green)] transition-colors text-[var(--color-secondary-green)]"
+            className="flex flex-col items-center justify-center p-3 border border-[var(--color-border)] rounded-[var(--radius-button)] hover:bg-[var(--color-brand-medium)]/10 hover:border-[var(--color-brand-fresh)] transition-colors text-[var(--color-brand-medium)]"
           >
             <Mail className="w-6 h-6 mb-2" />
             <span className="text-xs font-semibold">Email</span>
@@ -98,9 +98,9 @@ export default function ShareModal({ url, title, text, isOpen, onClose }: ShareM
 
         <button
           onClick={handleCopy}
-          className="w-full flex items-center justify-center space-x-2 bg-[var(--color-background)] border border-[var(--color-border)] text-[var(--color-primary-text)] px-4 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-border)] transition-colors min-h-[48px]"
+          className="w-full flex items-center justify-center space-x-2 bg-[var(--color-surface-light)] border border-[var(--color-border)] text-[var(--color-text-primary)] px-4 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-border)] transition-colors min-h-[48px]"
         >
-          {copied ? <Check className="w-5 h-5 text-[var(--color-secondary-green)]" /> : <Copy className="w-5 h-5" />}
+          {copied ? <Check className="w-5 h-5 text-[var(--color-brand-medium)]" /> : <Copy className="w-5 h-5" />}
           <span>{copied ? 'Link Copied!' : 'Copy Link'}</span>
         </button>
       </div>

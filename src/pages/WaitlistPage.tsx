@@ -279,7 +279,7 @@ export default function WaitlistPage() {
 
   const renderError = (field: string, errors: Record<string, string>) => {
     if (touched[field] && errors[field]) {
-      return <p className="text-[var(--color-error)] text-sm mt-1">{errors[field]}</p>;
+      return <p className="text-red-500 text-sm mt-1">{errors[field]}</p>;
     }
     return null;
   };
@@ -292,39 +292,39 @@ export default function WaitlistPage() {
       
       {/* Wizard Header */}
       <div className="mb-10 text-center animate-fade-in">
-        <h1 className="text-3xl font-bold text-[var(--color-primary-green)] mb-4">Join the Waitlist</h1>
-        <p className="text-[var(--color-secondary-text)]">Complete your registration to get early access.</p>
+        <h1 className="text-3xl font-bold text-[var(--color-brand-deep)] mb-4">Join the Waitlist</h1>
+        <p className="text-[var(--color-text-secondary)]">Complete your registration to get early access.</p>
         
         {/* Progress Bar */}
         <div className="mt-8 max-w-md mx-auto">
-          <div className="flex justify-between text-sm font-semibold text-[var(--color-secondary-text)] mb-2">
+          <div className="flex justify-between text-sm font-semibold text-[var(--color-text-secondary)] mb-2">
             <span>Step {currentStep} of {totalSteps}</span>
             <span>{Math.round((currentStep / totalSteps) * 100)}%</span>
           </div>
-          <div className="w-full bg-[var(--color-border)] h-2 rounded-full overflow-hidden">
+          <div className="w-full bg-[var(--color-surface-soft)] h-2 rounded-full overflow-hidden">
             <div 
-              className="bg-[var(--color-secondary-green)] h-full rounded-full transition-all duration-500 ease-out"
+              className="bg-[var(--color-brand-fresh)] h-full rounded-full transition-all duration-500 ease-out"
               style={{ width: `${(currentStep / totalSteps) * 100}%` }}
             />
           </div>
         </div>
       </div>
 
-      <div className="bg-[var(--color-white)] p-6 md:p-10 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm animate-slide-up">
+      <div className="bg-white p-6 md:p-10 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm animate-slide-up">
         <form onSubmit={handleSubmit}>
           
           {/* STEP 1: BASIC INFO */}
           {currentStep === 1 && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="text-xl font-bold text-[var(--color-primary-text)] mb-6 pb-4 border-b border-[var(--color-border)]">Basic Information</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] mb-6 pb-4 border-b border-[var(--color-border)]">Basic Information</h2>
               
               <div>
-                <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">I am joining as a:</label>
+                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">I am joining as a:</label>
                 <select 
                   value={data.role}
                   onChange={(e) => updateData('role', e.target.value)}
                   onBlur={() => handleBlur('role')}
-                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)] text-[var(--color-primary-text)]"
+                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)] text-[var(--color-text-primary)]"
                 >
                   <option value="" disabled>Select your role...</option>
                   {ROLES.map(r => <option key={r.id} value={r.id}>{r.label}</option>)}
@@ -333,53 +333,53 @@ export default function WaitlistPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Full Name</label>
+                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Full Name</label>
                 <input 
                   type="text" 
                   value={data.full_name}
                   onChange={(e) => updateData('full_name', e.target.value)}
                   onBlur={() => handleBlur('full_name')}
                   placeholder="e.g. Jane Doe"
-                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)] text-[var(--color-primary-text)]"
+                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)] text-[var(--color-text-primary)]"
                 />
                 {renderError('full_name', basicErrors)}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Email Address</label>
+                  <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Email Address</label>
                   <input 
                     type="email" 
                     value={data.email}
                     onChange={(e) => updateData('email', e.target.value)}
                     onBlur={() => handleBlur('email')}
                     placeholder="e.g. jane@example.com"
-                    className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)] text-[var(--color-primary-text)]"
+                    className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)] text-[var(--color-text-primary)]"
                   />
                   {renderError('email', basicErrors)}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Phone Number</label>
+                  <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Phone Number</label>
                   <input 
                     type="tel" 
                     value={data.phone}
                     onChange={(e) => updateData('phone', e.target.value)}
                     onBlur={() => handleBlur('phone')}
                     placeholder="e.g. 0800 000 0000"
-                    className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)] text-[var(--color-primary-text)]"
+                    className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)] text-[var(--color-text-primary)]"
                   />
                   {renderError('phone', basicErrors)}
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">State (Nigeria)</label>
+                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">State (Nigeria)</label>
                 <select 
                   value={data.state}
                   onChange={(e) => updateData('state', e.target.value)}
                   onBlur={() => handleBlur('state')}
-                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)] text-[var(--color-primary-text)]"
+                  className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)] text-[var(--color-text-primary)]"
                 >
                   <option value="" disabled>Select a state...</option>
                   {NIGERIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -392,19 +392,19 @@ export default function WaitlistPage() {
           {/* STEP 2: ROLE SPECIFIC */}
           {currentStep === 2 && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="text-xl font-bold text-[var(--color-primary-text)] mb-6 pb-4 border-b border-[var(--color-border)]">
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] mb-6 pb-4 border-b border-[var(--color-border)]">
                 Additional Details
               </h2>
               
               {/* PROPERTY SEEKER */}
               {data.role === 'property_seeker' && (
                 <div>
-                  <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-4">What are you interested in? (Select all that apply)</label>
+                  <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4">What are you interested in? (Select all that apply)</label>
                   <div className="space-y-3">
                     {['Buy Property', 'Rent Property', 'Find a Professional', 'Property Verification', 'Area Intelligence'].map(interest => {
                       const selected = data.role_specific_data.interests?.includes(interest);
                       return (
-                        <label key={interest} className="flex items-center space-x-3 p-4 border border-[var(--color-border)] rounded-[var(--radius-button)] cursor-pointer hover:bg-[var(--color-background)] transition-colors">
+                        <label key={interest} className={`flex items-center space-x-3 p-4 border rounded-[var(--radius-button)] cursor-pointer transition-colors ${selected ? 'border-[var(--color-brand-fresh)] bg-[var(--color-surface-soft)]' : 'border-[var(--color-border)] hover:bg-[var(--color-surface-light)]'}`}>
                           <input 
                             type="checkbox" 
                             checked={selected || false}
@@ -414,9 +414,9 @@ export default function WaitlistPage() {
                               else updateData('role_specific_data.interests', curr.filter((i: string) => i !== interest));
                             }}
                             onBlur={() => handleBlur('interests')}
-                            className="w-5 h-5 text-[var(--color-secondary-green)] border-gray-300 rounded focus:ring-[var(--color-secondary-green)]"
+                            className="w-5 h-5 text-[var(--color-brand-fresh)] border-gray-300 rounded focus:ring-[var(--color-brand-fresh)]"
                           />
-                          <span className="text-[var(--color-primary-text)] font-medium">{interest}</span>
+                          <span className="text-[var(--color-text-primary)] font-medium">{interest}</span>
                         </label>
                       )
                     })}
@@ -429,25 +429,25 @@ export default function WaitlistPage() {
               {(data.role === 'long_term_landlord' || data.role === 'shortlet_landlord') && (
                 <>
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-4">What would you like Unity Homes to help you with?</label>
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4">What would you like Unity Homes to help you with?</label>
                     <div className="space-y-4">
                       {[
                         { id: 'list_only', title: 'List My Property Only', desc: 'I want to list my vacant property for visibility and tenant enquiries.' },
                         { id: 'list_and_manage', title: 'List Plus Unity Homes Manager', desc: 'I want to list my property and use Unity Homes Manager to manage tenants, rent and property operations.' },
                         { id: 'both', title: 'Both Services', desc: 'I want to list my property and use Unity Homes Manager for ongoing management.' },
                       ].map(pref => (
-                        <label key={pref.id} className={`flex items-start p-4 border rounded-[var(--radius-button)] cursor-pointer transition-colors ${data.role_specific_data.service_preference === pref.title ? 'border-[var(--color-secondary-green)] bg-[#F4F8F4]' : 'border-[var(--color-border)] hover:bg-[var(--color-background)]'}`}>
+                        <label key={pref.id} className={`flex items-start p-4 border rounded-[var(--radius-button)] cursor-pointer transition-colors ${data.role_specific_data.service_preference === pref.title ? 'border-[var(--color-brand-fresh)] bg-[var(--color-surface-soft)]' : 'border-[var(--color-border)] hover:bg-[var(--color-surface-light)]'}`}>
                           <input 
                             type="radio" 
                             name="service_preference"
                             checked={data.role_specific_data.service_preference === pref.title}
                             onChange={() => updateData('role_specific_data.service_preference', pref.title)}
                             onBlur={() => handleBlur('service_preference')}
-                            className="mt-1 w-5 h-5 text-[var(--color-secondary-green)] border-gray-300 focus:ring-[var(--color-secondary-green)]"
+                            className="mt-1 w-5 h-5 text-[var(--color-brand-fresh)] border-gray-300 focus:ring-[var(--color-brand-fresh)]"
                           />
                           <div className="ml-3">
-                            <span className="block text-[var(--color-primary-text)] font-bold">{pref.title}</span>
-                            <span className="block text-sm text-[var(--color-secondary-text)] mt-1">{pref.desc}</span>
+                            <span className="block text-[var(--color-text-primary)] font-bold">{pref.title}</span>
+                            <span className="block text-sm text-[var(--color-text-secondary)] mt-1">{pref.desc}</span>
                           </div>
                         </label>
                       ))}
@@ -457,38 +457,38 @@ export default function WaitlistPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Number of Properties or Units</label>
+                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Number of Properties or Units</label>
                       <input 
                         type="number" 
                         min="1"
                         value={data.role_specific_data.properties_count || ''}
                         onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                         onBlur={() => handleBlur('properties_count')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {renderError('properties_count', roleErrors)}
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Property Type</label>
+                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Property Type</label>
                       <input 
                         type="text" 
                         placeholder="e.g. Residential, Commercial"
                         value={data.role_specific_data.property_type || ''}
                         onChange={(e) => updateData('role_specific_data.property_type', e.target.value)}
                         onBlur={() => handleBlur('property_type')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {renderError('property_type', roleErrors)}
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Short Description (Optional)</label>
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Short Description (Optional)</label>
                     <textarea 
                       rows={3}
                       value={data.role_specific_data.description || ''}
                       onChange={(e) => updateData('role_specific_data.description', e.target.value)}
-                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                     />
                   </div>
                 </>
@@ -499,43 +499,43 @@ export default function WaitlistPage() {
                 <>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Company Name</label>
+                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Company Name</label>
                       <input 
                         type="text" 
                         value={data.role_specific_data.company_name || ''}
                         onChange={(e) => updateData('role_specific_data.company_name', e.target.value)}
                         onBlur={() => handleBlur('company_name')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {renderError('company_name', roleErrors)}
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Contact Person</label>
+                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Contact Person</label>
                       <input 
                         type="text" 
                         value={data.role_specific_data.contact_person || ''}
                         onChange={(e) => updateData('role_specific_data.contact_person', e.target.value)}
                         onBlur={() => handleBlur('contact_person')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {renderError('contact_person', roleErrors)}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-4">Service Preference</label>
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4">Service Preference</label>
                     <div className="space-y-4">
                       {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => (
-                        <label key={pref} className={`flex items-center p-4 border rounded-[var(--radius-button)] cursor-pointer transition-colors ${data.role_specific_data.service_preference === pref ? 'border-[var(--color-secondary-green)] bg-[#F4F8F4]' : 'border-[var(--color-border)] hover:bg-[var(--color-background)]'}`}>
+                        <label key={pref} className={`flex items-center p-4 border rounded-[var(--radius-button)] cursor-pointer transition-colors ${data.role_specific_data.service_preference === pref ? 'border-[var(--color-brand-fresh)] bg-[var(--color-surface-soft)]' : 'border-[var(--color-border)] hover:bg-[var(--color-surface-light)]'}`}>
                           <input 
                             type="radio" 
                             name="pmc_service_preference"
                             checked={data.role_specific_data.service_preference === pref}
                             onChange={() => updateData('role_specific_data.service_preference', pref)}
                             onBlur={() => handleBlur('service_preference')}
-                            className="w-5 h-5 text-[var(--color-secondary-green)] border-gray-300 focus:ring-[var(--color-secondary-green)]"
+                            className="w-5 h-5 text-[var(--color-brand-fresh)] border-gray-300 focus:ring-[var(--color-brand-fresh)]"
                           />
-                          <span className="ml-3 block text-[var(--color-primary-text)] font-bold">{pref}</span>
+                          <span className="ml-3 block text-[var(--color-text-primary)] font-bold">{pref}</span>
                         </label>
                       ))}
                     </div>
@@ -543,14 +543,14 @@ export default function WaitlistPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Number of Properties Managed</label>
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Number of Properties Managed</label>
                     <input 
                       type="number" 
                       min="1"
                       value={data.role_specific_data.properties_count || ''}
                       onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                       onBlur={() => handleBlur('properties_count')}
-                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                     />
                     {renderError('properties_count', roleErrors)}
                   </div>
@@ -561,20 +561,20 @@ export default function WaitlistPage() {
               {['property_lawyer', 'licensed_surveyor', 'structural_engineer'].includes(data.role) && (
                 <>
                   <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Firm or Practice Name</label>
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Firm or Practice Name</label>
                     <input 
                       type="text" 
                       value={data.role_specific_data.firm_name || ''}
                       onChange={(e) => updateData('role_specific_data.firm_name', e.target.value)}
                       onBlur={() => handleBlur('firm_name')}
-                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                      className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                     />
                     {renderError('firm_name', roleErrors)}
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                    <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">
+                    <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">
                         {data.role === 'property_lawyer' ? 'NBA Registration Number' : 
                          data.role === 'licensed_surveyor' ? 'SURCON Registration / License Number' : 
                          'COREN Registration Number'}
@@ -584,14 +584,14 @@ export default function WaitlistPage() {
                         value={data.role_specific_data.registration_number || ''}
                         onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                         onBlur={() => handleBlur('registration_number')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {data.role === 'licensed_surveyor' && (
                         <>
-                          <p className="text-sm text-[var(--color-secondary-text)] mt-2">
+                          <p className="text-sm text-[var(--color-text-secondary)] mt-2">
                             Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                           </p>
-                          <p className="text-sm font-semibold text-[var(--color-secondary-green)] mt-2">
+                          <p className="text-sm font-semibold text-[var(--color-brand-medium)] mt-2">
                             Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
                           </p>
                         </>
@@ -599,33 +599,33 @@ export default function WaitlistPage() {
                       {renderError('registration_number', roleErrors)}
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[var(--color-primary-text)] mb-2">Years of Experience</label>
+                      <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2">Years of Experience</label>
                       <input 
                         type="number" 
                         min="0"
                         value={data.role_specific_data.years_of_experience || ''}
                         onChange={(e) => updateData('role_specific_data.years_of_experience', e.target.value)}
                         onBlur={() => handleBlur('years_of_experience')}
-                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-background)] focus:outline-none focus:border-[var(--color-secondary-green)]"
+                        className="w-full px-4 py-4 rounded-[var(--radius-input)] border border-[var(--color-border)] bg-[var(--color-surface-light)] focus:outline-none focus:border-[var(--color-brand-fresh)]"
                       />
                       {renderError('years_of_experience', roleErrors)}
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-[var(--color-background)] border border-[var(--color-border)] rounded-[var(--radius-card)]">
+                  <div className="mt-8 p-6 bg-[var(--color-surface-light)] border border-[var(--color-border)] rounded-[var(--radius-card)]">
                     <label className="flex items-start cursor-pointer">
                       <input 
                         type="checkbox" 
                         checked={data.role_specific_data.consent || false}
                         onChange={(e) => updateData('role_specific_data.consent', e.target.checked)}
                         onBlur={() => handleBlur('consent')}
-                        className="mt-1 w-5 h-5 text-[var(--color-secondary-green)] border-gray-300 rounded focus:ring-[var(--color-secondary-green)]"
+                        className="mt-1 w-5 h-5 text-[var(--color-brand-fresh)] border-gray-300 rounded focus:ring-[var(--color-brand-fresh)]"
                       />
                       <div className="ml-4">
-                        <span className="block text-[var(--color-primary-text)] font-semibold mb-2">
+                        <span className="block text-[var(--color-text-primary)] font-semibold mb-2">
                           I consent to Unity Homes verifying my eligibility, professional registration, and active membership status with the appropriate professional regulatory body before considering me for the Unity Homes Professional Directory.
                         </span>
-                        <span className="block text-sm text-[var(--color-secondary-text)]">
+                        <span className="block text-sm text-[var(--color-text-secondary)]">
                           Verification does not guarantee directory listing. Final inclusion will only happen after review and agreement.
                         </span>
                       </div>
@@ -640,62 +640,62 @@ export default function WaitlistPage() {
           {/* STEP 3: REVIEW */}
           {currentStep === 3 && (
             <div className="space-y-8 animate-fade-in">
-              <h2 className="text-xl font-bold text-[var(--color-primary-text)] pb-4 border-b border-[var(--color-border)]">
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] pb-4 border-b border-[var(--color-border)]">
                 Review Your Information
               </h2>
               
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-sm font-bold text-[var(--color-secondary-text)] uppercase tracking-wider mb-2">Role Selection</h3>
-                    <p className="text-lg font-medium text-[var(--color-primary-text)]">{ROLES.find(r => r.id === data.role)?.label}</p>
+                    <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">Role Selection</h3>
+                    <p className="text-lg font-medium text-[var(--color-text-primary)]">{ROLES.find(r => r.id === data.role)?.label}</p>
                   </div>
-                  <button type="button" onClick={() => setCurrentStep(1)} className="text-[var(--color-secondary-green)] text-sm font-semibold hover:underline">Edit</button>
+                  <button type="button" onClick={() => setCurrentStep(1)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline">Edit</button>
                 </div>
 
                 <div className="flex justify-between items-start">
                   <div className="grid grid-cols-2 gap-x-12 gap-y-4">
                     <div className="col-span-2">
-                      <h3 className="text-sm font-bold text-[var(--color-secondary-text)] uppercase tracking-wider mb-2">Basic Information</h3>
+                      <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">Basic Information</h3>
                     </div>
                     <div>
-                      <span className="block text-sm text-[var(--color-secondary-text)]">Name</span>
-                      <span className="block font-medium text-[var(--color-primary-text)]">{data.full_name}</span>
+                      <span className="block text-sm text-[var(--color-text-secondary)]">Name</span>
+                      <span className="block font-medium text-[var(--color-text-primary)]">{data.full_name}</span>
                     </div>
                     <div>
-                      <span className="block text-sm text-[var(--color-secondary-text)]">Email</span>
-                      <span className="block font-medium text-[var(--color-primary-text)]">{data.email}</span>
+                      <span className="block text-sm text-[var(--color-text-secondary)]">Email</span>
+                      <span className="block font-medium text-[var(--color-text-primary)]">{data.email}</span>
                     </div>
                     <div>
-                      <span className="block text-sm text-[var(--color-secondary-text)]">Phone</span>
-                      <span className="block font-medium text-[var(--color-primary-text)]">{data.phone}</span>
+                      <span className="block text-sm text-[var(--color-text-secondary)]">Phone</span>
+                      <span className="block font-medium text-[var(--color-text-primary)]">{data.phone}</span>
                     </div>
                     <div>
-                      <span className="block text-sm text-[var(--color-secondary-text)]">State</span>
-                      <span className="block font-medium text-[var(--color-primary-text)]">{data.state}</span>
+                      <span className="block text-sm text-[var(--color-text-secondary)]">State</span>
+                      <span className="block font-medium text-[var(--color-text-primary)]">{data.state}</span>
                     </div>
                   </div>
-                  <button type="button" onClick={() => setCurrentStep(1)} className="text-[var(--color-secondary-green)] text-sm font-semibold hover:underline">Edit</button>
+                  <button type="button" onClick={() => setCurrentStep(1)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline">Edit</button>
                 </div>
 
                 <div className="flex justify-between items-start pt-4 border-t border-[var(--color-border)]">
                   <div className="grid grid-cols-2 gap-x-12 gap-y-4 w-full">
                     <div className="col-span-2">
-                      <h3 className="text-sm font-bold text-[var(--color-secondary-text)] uppercase tracking-wider mb-2">Additional Details</h3>
+                      <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">Additional Details</h3>
                     </div>
                     {Object.entries(data.role_specific_data).map(([key, val]) => {
                       if (key === 'consent' || val === '' || val === null || val === undefined) return null;
                       return (
                         <div key={key} className={Array.isArray(val) || key === 'description' ? 'col-span-2' : ''}>
-                          <span className="block text-sm text-[var(--color-secondary-text)] capitalize">{key.replace(/_/g, ' ')}</span>
-                          <span className="block font-medium text-[var(--color-primary-text)]">
+                          <span className="block text-sm text-[var(--color-text-secondary)] capitalize">{key.replace(/_/g, ' ')}</span>
+                          <span className="block font-medium text-[var(--color-text-primary)]">
                             {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? `${val} (SURCON, Verification Pending)` : Array.isArray(val) ? val.join(', ') : String(val)}
                           </span>
                         </div>
                       );
                     })}
                   </div>
-                  <button type="button" onClick={() => setCurrentStep(2)} className="text-[var(--color-secondary-green)] text-sm font-semibold hover:underline">Edit</button>
+                  <button type="button" onClick={() => setCurrentStep(2)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline">Edit</button>
                 </div>
               </div>
 
@@ -711,9 +711,9 @@ export default function WaitlistPage() {
                     type="checkbox" 
                     checked={data.information_confirmed}
                     onChange={(e) => updateData('information_confirmed', e.target.checked)}
-                    className="w-5 h-5 text-[var(--color-secondary-green)] border-gray-300 rounded focus:ring-[var(--color-secondary-green)]"
+                    className="w-5 h-5 text-[var(--color-brand-fresh)] border-gray-300 rounded focus:ring-[var(--color-brand-fresh)]"
                   />
-                  <span className="ml-3 font-semibold text-[var(--color-primary-text)]">
+                  <span className="ml-3 font-semibold text-[var(--color-text-primary)]">
                     I confirm that the information I provided is accurate.
                   </span>
                 </label>
@@ -721,7 +721,7 @@ export default function WaitlistPage() {
                 <button
                   type="submit"
                   disabled={!data.information_confirmed || isSubmitting}
-                  className="w-full bg-[var(--color-accent-gold)] text-[var(--color-primary-green)] px-6 py-4 rounded-[var(--radius-button)] font-bold text-lg hover:opacity-90 transition-opacity min-h-[48px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[var(--color-brand-fresh)] text-white px-6 py-4 rounded-[var(--radius-button)] font-bold text-lg hover:bg-[var(--color-brand-medium)] transition-colors min-h-[48px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                 >
                   {isSubmitting ? (
                     <>
@@ -743,7 +743,7 @@ export default function WaitlistPage() {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="flex items-center text-[var(--color-secondary-text)] hover:text-[var(--color-primary-text)] font-semibold transition-colors px-4 py-2 min-h-[48px]"
+                  className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-semibold transition-colors px-4 py-2 min-h-[48px]"
                 >
                   <ChevronLeft className="w-5 h-5 mr-1" />
                   Back
@@ -755,7 +755,7 @@ export default function WaitlistPage() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center bg-[var(--color-primary-green)] text-[var(--color-white)] px-8 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-secondary-green)] transition-colors min-h-[48px]"
+                className="flex items-center bg-[var(--color-brand-deep)] text-white px-8 py-3 rounded-[var(--radius-button)] font-semibold hover:bg-[#1f4330] transition-colors min-h-[48px] shadow-sm"
               >
                 Next
                 <ChevronRight className="w-5 h-5 ml-1" />

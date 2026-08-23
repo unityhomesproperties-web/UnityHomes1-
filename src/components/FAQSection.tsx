@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Plus, X } from 'lucide-react';
 
 const FULL_FAQ = [
   {
@@ -39,41 +39,57 @@ const FULL_FAQ = [
   }
 ];
 
-export default function FAQSection() {
+export default function FAQSection({ limit }: { limit?: number }) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
+  const displayedFaq = limit ? FULL_FAQ.slice(0, limit) : FULL_FAQ;
+
   return (
-    <div className="max-w-3xl mx-auto space-y-4">
-      {FULL_FAQ.map((faq, idx) => {
-        const isExpanded = expandedIndex === idx;
-        return (
-          <button
-            key={idx}
-            onClick={() => setExpandedIndex(isExpanded ? null : idx)}
-            className="w-full text-left bg-[var(--color-white)] p-6 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow focus:outline-none"
-          >
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-              <h3 className="text-lg font-bold text-[var(--color-primary-text)] pr-4 flex-1">
-                {faq.question}
-              </h3>
-              <div className="flex items-center space-x-4">
-                <span className="shrink-0 inline-flex items-center px-3 py-1 rounded-[var(--radius-pill)] bg-[var(--color-background)] border border-[var(--color-border)] text-xs font-semibold text-[var(--color-secondary-text)]">
-                  {faq.status}
-                </span>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-[var(--color-background)] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-                  <ChevronDown className="w-5 h-5 text-[var(--color-secondary-green)]" />
+    <div className="w-full">
+      <div className="border-t border-[var(--color-border)]">
+        {displayedFaq.map((faq, idx) => {
+          const isExpanded = expandedIndex === idx;
+          return (
+            <div key={idx} className="border-b border-[var(--color-border)]">
+              <button
+                onClick={() => setExpandedIndex(isExpanded ? null : idx)}
+                className="w-full text-left py-6 focus:outline-none group flex items-start justify-between gap-6"
+              >
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
+                      {faq.status}
+                    </span>
+                  </div>
+                  <h3 className={`text-xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[var(--color-brand-deep)]' : 'text-[var(--color-text-primary)] group-hover:text-[var(--color-brand-medium)]'}`}>
+                    {faq.question}
+                  </h3>
                 </div>
+                
+                <div className="shrink-0 mt-1">
+                  <div className={`w-8 h-8 rounded-full border border-[var(--color-border)] flex items-center justify-center transition-all duration-300 ${isExpanded ? 'bg-[var(--color-brand-deep)] text-white border-[var(--color-brand-deep)] rotate-180' : 'bg-transparent text-[var(--color-brand-deep)] group-hover:border-[var(--color-brand-medium)]'}`}>
+                    {isExpanded ? (
+                      <X className="w-4 h-4" strokeWidth={2} />
+                    ) : (
+                      <Plus className="w-4 h-4" strokeWidth={2} />
+                    )}
+                  </div>
+                </div>
+              </button>
+              
+              <div 
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isExpanded ? 'max-h-96 opacity-100 pb-8' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed pr-14">
+                  {faq.answer}
+                </p>
               </div>
             </div>
-            
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-              <p className="text-[var(--color-secondary-text)] leading-relaxed">
-                {faq.answer}
-              </p>
-            </div>
-          </button>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -729,7 +729,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
   };
 
   return (
-    <div className="bg-[#FAF9F6] border border-stone-200 rounded-3xl p-6 shadow-sm space-y-6 text-#132A1D font-sans tracking-wide">
+    <div className="bg-[#FAF9F6] border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm space-y-6 text-#132A1D font-sans tracking-wide">
       
       {/* HEADER SECTION */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-stone-200 pb-5 gap-4">
@@ -871,7 +871,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           </div>
 
           {/* AUTOMATED ACTIONABLE INSIGHTS PANEL */}
-          <div className="bg-amber-50/50 border border-amber-200 rounded-3xl p-5 space-y-3 shadow-xs">
+          <div className="bg-amber-50/50 border border-amber-200 rounded-[var(--radius-large)] p-5 space-y-3 shadow-xs">
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-amber-600 shrink-0" />
               <h3 className="font-display font-black text-xs uppercase text-[#18452E] tracking-wider">Automated Collection Insights &amp; Audit Recommendations</h3>
@@ -909,7 +909,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             {/* Collection Performance Charts (Simple Elegant Pure SVG) */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
               <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Real-Time Portfolio Collection Status</h4>
               
               <div className="space-y-4 pt-2">
@@ -950,7 +950,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             </div>
 
             {/* Highest Outstandings Leaderboard */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
               <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Outstandings Leaderboard Rankings</h4>
               
               <div className="space-y-3 text-xs">
@@ -1095,7 +1095,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             </button>
           </div>
 
-          <div className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -1160,7 +1160,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
         <div className="space-y-6">
           
           {/* SEARCH & FILTERS CONTROLS */}
-          <div className="bg-white border border-stone-200 p-4 rounded-3xl space-y-3">
+          <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-3">
             <div className="flex flex-col md:flex-row gap-3">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-3 w-4.5 h-4.5 text-stone-400" />
@@ -1241,7 +1241,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           />
 
           {/* TENANTS LIST VIEW */}
-          <div className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="p-4 bg-stone-50/50 border-b border-stone-150 flex justify-between items-center">
               <span className="font-mono text-[9px] text-stone-400 uppercase font-black tracking-widest">
                 ACTIVE TENANT LEDGER RECORDS ({filteredTenants.length} FOUND)
@@ -1369,7 +1369,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           ==================================================== */}
       {activeSubTab === 'History' && (
         <div className="space-y-6">
-          <div className="flex justify-between items-center bg-white border border-stone-200 p-4 rounded-3xl">
+          <div className="flex justify-between items-center bg-white border border-stone-200 p-4 rounded-[var(--radius-large)]">
             <div>
               <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Reminder Dispatch History</h4>
               <p className="text-stone-400 text-[10px] font-light">Comprehensive real-time tracking of all alert payloads sent across the network.</p>
@@ -1404,7 +1404,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             }}
           />
 
-          <div className="p-4 bg-white border border-stone-200 rounded-3xl space-y-2">
+          <div className="p-4 bg-white border border-stone-200 rounded-[var(--radius-large)] space-y-2">
             <span className="text-xs font-mono text-stone-400 uppercase tracking-widest font-black block">Log Delivery Channel Summary</span>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
               <div className="bg-stone-50 border p-3 rounded-2xl">
@@ -1426,7 +1426,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             </div>
           </div>
 
-          <div className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -1512,22 +1512,22 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           <div className="space-y-6 animate-fade-in text-xs">
             {/* PROMISE SUMMARY METRICS */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white border border-stone-200 p-4 rounded-3xl space-y-1">
+              <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
                 <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Total Value Promised</span>
                 <span className="text-xl font-display font-black text-[#18452E] block">₦{totalValuePromised.toLocaleString()}</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Accumulated tenant commitments</span>
               </div>
-              <div className="bg-white border border-stone-200 p-4 rounded-3xl space-y-1">
+              <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
                 <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Active Promises</span>
                 <span className="text-xl font-display font-black text-amber-600 block">{activePromises} Accounts</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Automatic alerts suspended</span>
               </div>
-              <div className="bg-white border border-stone-200 p-4 rounded-3xl space-y-1">
+              <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
                 <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Broken Promises</span>
                 <span className="text-xl font-display font-black text-rose-600 block">{brokenPromises} Defaults</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Resumed overdue schedules</span>
               </div>
-              <div className="bg-white border border-stone-200 p-4 rounded-3xl space-y-1">
+              <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
                 <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Promise Broken Rate</span>
                 <span className="text-xl font-display font-black text-#132A1D block">{brokenPromisesRate}%</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Weighted tenant performance</span>
@@ -1536,7 +1536,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             {/* PROPERTIES & TENANTS WITH MOST BROKEN PROMISES RANKINGS */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white border border-stone-200 p-5 rounded-3xl space-y-3">
+              <div className="bg-white border border-stone-200 p-5 rounded-[var(--radius-large)] space-y-3">
                 <div className="border-b pb-2 flex justify-between items-center">
                   <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Properties With Most Broken Promises</h4>
                   <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase">Defaults count</span>
@@ -1562,7 +1562,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                 )}
               </div>
 
-              <div className="bg-white border border-stone-200 p-5 rounded-3xl space-y-3">
+              <div className="bg-white border border-stone-200 p-5 rounded-[var(--radius-large)] space-y-3">
                 <div className="border-b pb-2 flex justify-between items-center">
                   <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Tenants With Most Broken Promises</h4>
                   <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase">Defaults count</span>
@@ -1590,7 +1590,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             </div>
 
             {/* ALL PROMISES DATABASE LEDGER */}
-            <div className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
               <div className="p-4 bg-stone-50 border-b border-stone-150 flex justify-between items-center">
                 <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Active & Historical Promises Ledger</h4>
                 <span className="text-[10px] text-stone-400 font-mono">Logged role: <strong>{role}</strong></span>
@@ -1741,7 +1741,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           ==================================================== */}
       {showBulkConfirmModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl max-w-lg w-full border border-stone-200 shadow-2xl p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full border border-stone-200 shadow-sm p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
             <div className="flex items-center space-x-2.5 text-[#18452E] border-b pb-3">
               <Bot className="w-6 h-6" />
               <h3 className="font-display font-black text-sm uppercase">Confirm Bulk Collection Reminders Dispatch</h3>
@@ -1818,7 +1818,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           ==================================================== */}
       {showSingleReminderModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl max-w-2xl w-full border border-stone-200 shadow-2xl p-6 space-y-4 animate-scale-up text-xs sm:text-sm max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full border border-stone-200 shadow-sm p-6 space-y-4 animate-scale-up text-xs sm:text-sm max-h-[90vh] overflow-y-auto">
             <div className="flex items-center space-x-2 text-[#18452E] border-b pb-3 justify-between">
               <div className="flex items-center space-x-2">
                 <Bot className="w-5.5 h-5.5" />
@@ -1923,7 +1923,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           ==================================================== */}
       {showReceiptModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl max-w-lg w-full border border-stone-200 shadow-2xl p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full border border-stone-200 shadow-sm p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             <div className="flex flex-col items-center justify-center space-y-2 border-b pb-3">
               <div className="bg-emerald-100 p-2.5 rounded-full text-emerald-800">
                 <Receipt className="w-7 h-7" />
@@ -1978,7 +1978,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           ==================================================== */}
       {showAddRuleModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl max-w-md w-full border border-stone-200 shadow-2xl p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200 shadow-sm p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
             <h3 className="font-display font-black text-sm uppercase text-[#18452E] border-b pb-2">Add Automated Reminder Rule</h3>
             
             <div className="space-y-4">

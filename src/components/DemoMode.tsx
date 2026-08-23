@@ -76,7 +76,7 @@ export default function DemoMode() {
       {/* Floating Trigger */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-[90] bg-[var(--color-primary-text)] text-[var(--color-white)] p-4 rounded-full shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all"
+        className="fixed bottom-6 right-6 z-[90] bg-[var(--color-text-primary)] text-white p-4 rounded-full shadow-sm hover:-translate-y-1 hover:shadow-sm transition-all"
         aria-label="Open Demo Tools"
       >
         <Beaker className="w-6 h-6" />
@@ -84,20 +84,20 @@ export default function DemoMode() {
 
       {/* Panel */}
       {isOpen && (
-        <div className="fixed inset-0 z-[100] bg-[var(--color-primary-green)]/80 flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-[var(--color-white)] w-full max-w-md rounded-[var(--radius-card)] p-6 shadow-xl animate-slide-up relative max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-[100] bg-[var(--color-brand-fresh)]/80 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white w-full max-w-md rounded-[var(--radius-card)] p-6 shadow-sm animate-slide-up relative max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-[var(--color-secondary-text)] hover:text-[var(--color-primary-text)]"
+              className="absolute top-4 right-4 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
             >
               <X className="w-6 h-6" />
             </button>
             
-            <h3 className="text-xl font-bold text-[var(--color-primary-text)] mb-2 flex items-center">
-              <Settings className="w-5 h-5 mr-2 text-[var(--color-secondary-green)]" />
+            <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-2 flex items-center">
+              <Settings className="w-5 h-5 mr-2 text-[var(--color-brand-medium)]" />
               Demo Testing Tools
             </h3>
-            <p className="text-sm text-[var(--color-secondary-text)] mb-6">
+            <p className="text-sm text-[var(--color-text-secondary)] mb-6">
               Select a scenario to pre-fill local state and navigate directly to the form.
             </p>
 
@@ -106,9 +106,9 @@ export default function DemoMode() {
                 <button
                   key={idx}
                   onClick={scen.action}
-                  className="flex items-center text-left text-sm font-semibold p-3 border border-[var(--color-border)] rounded-[var(--radius-button)] hover:border-[var(--color-secondary-green)] hover:bg-[var(--color-background)] transition-colors text-[var(--color-primary-text)]"
+                  className="flex items-center text-left text-sm font-semibold p-3 border border-[var(--color-border)] rounded-[var(--radius-button)] hover:border-[var(--color-brand-fresh)] hover:bg-[var(--color-surface-light)] transition-colors text-[var(--color-text-primary)]"
                 >
-                  <CheckSquare className="w-4 h-4 mr-2 text-[var(--color-secondary-text)]" />
+                  <CheckSquare className="w-4 h-4 mr-2 text-[var(--color-text-secondary)]" />
                   {scen.label}
                 </button>
               ))}

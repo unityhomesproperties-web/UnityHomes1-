@@ -36,12 +36,12 @@ export default function PricingPage({ navigate }: PricingPageProps) {
     <div className="min-h-screen py-12 px-4 md:px-8 max-w-6xl mx-auto w-full">
       
       {/* HEADER GREEN BOX */}
-      <div className="bg-[#18452E] text-white rounded-3xl p-8 md:p-12 text-center mb-12 shadow-sm relative overflow-hidden">
+      <div className="bg-[var(--color-brand-deep)] text-white rounded-[var(--radius-large)] p-8 md:p-12 text-center mb-12 shadow-sm relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-15 text-[150px] leading-none font-serif select-none pointer-events-none translate-y-20 translate-x-12">
           ₦
         </div>
         <div className="relative z-10 space-y-3">
-          <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C] bg-[#18452E]/35 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/25">
+          <span className="text-xs uppercase font-mono font-bold tracking-widest text-[var(--color-accent-gold)] bg-black/20 px-3.5 py-1.5 rounded-[var(--radius-pill)] border border-[var(--color-accent-gold)]/25">
             TRANSPARENT VALUE
           </span>
           <h1 className="text-3xl md:text-5xl font-display font-black text-white leading-tight">
@@ -62,35 +62,35 @@ export default function PricingPage({ navigate }: PricingPageProps) {
       </div>
 
       {/* THREE STEP PROCESS DIAGRAM */}
-      <div className="bg-white rounded-xl border border-stone-200 p-8 mb-12">
-        <h3 className="font-display font-black text-[#18452E] text-lg text-center mb-6">
+      <div className="bg-white rounded-[var(--radius-card)] border border-[var(--color-border)] p-8 mb-12">
+        <h3 className="font-display font-black text-[var(--color-brand-deep)] text-lg text-center mb-6">
           What Happens Instantly After Payment
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div className="p-4 flex flex-col items-center">
-            <div className="w-10 h-10 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center font-bold font-mono mb-3">
+            <div className="w-10 h-10 bg-[var(--color-surface-soft)] text-[var(--color-brand-deep)] rounded-full flex items-center justify-center font-bold font-mono mb-3">
               1
             </div>
-            <h4 className="font-display font-bold text-xs text-[#18452E]">Pay securely via Paystack</h4>
-            <p className="text-[11px] text-stone-500 mt-1.5 leading-relaxed max-w-xs">
+            <h4 className="font-display font-bold text-xs text-[var(--color-brand-deep)]">Pay securely via Paystack</h4>
+            <p className="text-[11px] text-[var(--color-text-secondary)] mt-1.5 leading-relaxed max-w-xs">
               The ₦55,000 connection fee is processed securely. You instantly receive an email containing receipt credentials.
             </p>
           </div>
-          <div className="p-4 flex flex-col items-center border-t md:border-t-0 md:border-x border-stone-200">
-            <div className="w-10 h-10 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center font-bold font-mono mb-3">
+          <div className="p-4 flex flex-col items-center border-t md:border-t-0 md:border-x border-[var(--color-border)]">
+            <div className="w-10 h-10 bg-[var(--color-surface-soft)] text-[var(--color-brand-deep)] rounded-full flex items-center justify-center font-bold font-mono mb-3">
               2
             </div>
-            <h4 className="font-display font-bold text-xs text-[#18452E]">Personal Introduction Arranged</h4>
-            <p className="text-[11px] text-stone-500 mt-1.5 leading-relaxed max-w-xs">
+            <h4 className="font-display font-bold text-xs text-[var(--color-brand-deep)]">Personal Introduction Arranged</h4>
+            <p className="text-[11px] text-[var(--color-text-secondary)] mt-1.5 leading-relaxed max-w-xs">
               Our system notifies our team. The founder reviews your ticket and personally arranges your introduction within 24 to 48 hours.
             </p>
           </div>
           <div className="p-4 flex flex-col items-center">
-            <div className="w-10 h-10 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center font-bold font-mono mb-3">
+            <div className="w-10 h-10 bg-[var(--color-surface-soft)] text-[var(--color-brand-deep)] rounded-full flex items-center justify-center font-bold font-mono mb-3">
               3
             </div>
-            <h4 className="font-display font-bold text-xs text-[#18452E]">Continuous Quality Monitoring</h4>
-            <p className="text-[11px] text-stone-500 mt-1.5 leading-relaxed max-w-xs">
+            <h4 className="font-display font-bold text-xs text-[var(--color-brand-deep)]">Continuous Quality Monitoring</h4>
+            <p className="text-[11px] text-[var(--color-text-secondary)] mt-1.5 leading-relaxed max-w-xs">
               Dialogue flows safely. We monitor exchange speed to guarantee your requirements are solved transparently.
             </p>
           </div>
@@ -98,17 +98,17 @@ export default function PricingPage({ navigate }: PricingPageProps) {
       </div>
 
       {/* REFUND CONDITIONS TABLE IN A CREAM BOX - STEP 11 SPEC */}
-      <div className="bg-amber-50/50 border-l-[6px] border-[#C9A84C] rounded-r-xl p-6 mb-12">
+      <div className="bg-[var(--color-surface-soft)]/50 border-l-[6px] border-[var(--color-accent-gold)] rounded-r-[var(--radius-card)] p-6 mb-12">
         <div className="flex items-center space-x-2 mb-4">
-          <ShieldCheck className="w-5 h-5 text-[#18452E]" />
-          <h3 className="font-mono font-bold text-xs uppercase tracking-wide text-[#18452E]">
+          <ShieldCheck className="w-5 h-5 text-[var(--color-brand-deep)]" />
+          <h3 className="font-mono font-bold text-xs uppercase tracking-wide text-[var(--color-brand-deep)]">
             OFFICIAL REFUND CHARTER POLICY
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[#18452E] leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-[var(--color-brand-deep)] leading-relaxed">
           <div className="bg-emerald-100/30 p-4 rounded-lg border border-emerald-200/50">
-            <span className="block font-bold text-[#16A34A] uppercase tracking-wider text-[9px] font-mono mb-1.5">
+            <span className="block font-bold text-[var(--color-brand-medium)] uppercase tracking-wider text-[9px] font-mono mb-1.5">
               ✓ QUALIFIES FOR 100% REFUND
             </span>
             <ul className="list-disc list-inside space-y-1 text-[11px]">
@@ -140,26 +140,26 @@ export default function PricingPage({ navigate }: PricingPageProps) {
 
       {/* FAQS ACCORDION */}
       <div>
-        <h3 className="font-display font-black text-[#18452E] text-xl text-center mb-6">
+        <h3 className="font-display font-black text-[var(--color-brand-deep)] text-xl text-center mb-6">
           Frequently Answered Questions
         </h3>
         <div className="max-w-3xl mx-auto space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openFaq === idx;
             return (
-              <div key={idx} className="bg-white rounded-xl border border-stone-200 overflow-hidden">
+              <div key={idx} className="bg-white rounded-[var(--radius-card)] border border-[var(--color-border)] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-4 flex justify-between items-center text-left text-xs sm:text-sm font-bold text-[#18452E] cursor-pointer hover:bg-stone-50"
+                  className="w-full p-4 flex justify-between items-center text-left text-xs sm:text-sm font-bold text-[var(--color-brand-deep)] cursor-pointer hover:bg-[var(--color-surface-light)]"
                 >
                   <span className="flex items-center space-x-2">
-                    <HelpCircle className="w-4.5 h-4.5 text-[#C9A84C]" />
+                    <HelpCircle className="w-4.5 h-4.5 text-[var(--color-accent-gold)]" />
                     <span>{faq.q}</span>
                   </span>
                   {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                 </button>
                 {isOpen && (
-                  <div className="p-4 pt-1 border-t border-stone-200 text-xs text-stone-500 leading-relaxed">
+                  <div className="p-4 pt-1 border-t border-[var(--color-border)] text-xs text-[var(--color-text-secondary)] leading-relaxed">
                     {faq.a}
                   </div>
                 )}

@@ -282,7 +282,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
             {/* INDIVIDUAL CHOICE PROMPT MODAL (FRONTEND STEP THREE) */}
             {choicePromptProf && (
               <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-                <div className="bg-white rounded-3xl max-w-md w-full p-6 md:p-8 space-y-6 shadow-2xl relative border border-stone-200 animate-fade-in">
+                <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 md:p-8 space-y-6 shadow-sm relative border border-stone-200 animate-fade-in">
                   <button
                     onClick={() => setChoicePromptProf(null)}
                     className="absolute top-5 right-5 p-2 text-stone-400 hover:text-#132A1D rounded-full hover:bg-stone-50 cursor-pointer"

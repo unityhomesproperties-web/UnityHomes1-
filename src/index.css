@@ -1,28 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
   
-  --color-primary-green: #0E2F1F;
-  --color-secondary-green: #2F8D46;
-  --color-accent-gold: #C9A84C;
+  /* New Color System */
+  --color-brand-fresh: #6FBE45;
+  --color-brand-medium: #2F8D46;
+  --color-brand-deep: #0E2F1F;
+  --color-surface-light: #F5FAF2;
+  --color-surface-soft: #EAF5E3;
   --color-white: #FFFFFF;
+  --color-text-primary: #132A1D;
+  --color-text-secondary: #6B7280;
+  --color-accent-gold: #C9A84C;
+  --color-error: #ef4444;
+  
+  /* Legacy mappings to prevent immediate breakage */
+  --color-primary-green: #6FBE45;
+  --color-secondary-green: #2F8D46;
+  --color-background: #F5FAF2;
+  --color-border: rgba(19, 42, 29, 0.1);
   --color-primary-text: #132A1D;
   --color-secondary-text: #6B7280;
-  --color-background: #F4F8F4;
-  --color-border: rgba(14, 47, 31, 0.08);
 
-  --radius-card: 24px;
-  --radius-button: 18px;
-  --radius-input: 18px;
+  /* Radius System */
+  --radius-large: 20px;
+  --radius-card: 16px;
+  --radius-input: 14px;
+  --radius-button: 14px;
+  --radius-small: 10px;
   --radius-pill: 999px;
 }
 
 @layer base {
   :root {
-    --theme-bg: var(--color-background);
-    --theme-text: var(--color-primary-text);
+    --theme-bg: var(--color-surface-light);
+    --theme-text: var(--color-text-primary);
   }
 
   body {
@@ -34,7 +48,7 @@
   }
 }
 
-/* Animations (Maximum duration 300ms as per guidelines) */
+/* Animations (Maximum duration 250ms as per guidelines) */
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -45,10 +59,19 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .animate-fade-in {
-  animation: fade-in 300ms ease-out forwards;
+  animation: fade-in 250ms ease-out forwards;
 }
 
 .animate-slide-up {
-  animation: slide-up 300ms ease-out forwards;
+  animation: slide-up 250ms ease-out forwards;
+}
+
+.animate-reveal-up {
+  animation: reveal-up 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

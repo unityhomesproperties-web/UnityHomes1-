@@ -131,7 +131,7 @@ export default function GlobalAICommandCenter() {
     return (
       <button 
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-[#18452E] text-[#C9A84C] rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-all z-50 cursor-pointer border-2 border-[#C9A84C]"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#18452E] text-[#C9A84C] rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-all z-50 cursor-pointer border-2 border-[#C9A84C]"
         title="Open AI Command Center (Cmd+K)"
       >
         <Sparkles className="w-6 h-6 animate-pulse" />
@@ -145,7 +145,7 @@ export default function GlobalAICommandCenter() {
       {/* Click outside to close */}
       <div className="absolute inset-0" onClick={() => setIsOpen(false)}></div>
       
-      <div className="relative w-full max-w-3xl bg-[#FAF9F6] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border border-stone-200">
+      <div className="relative w-full max-w-3xl bg-[#FAF9F6] rounded-[var(--radius-large)] shadow-sm overflow-hidden flex flex-col max-h-[85vh] border border-stone-200">
         
         {/* Header / Input */}
         <div className="p-4 border-b border-stone-200 flex items-center gap-3 bg-white">
@@ -252,7 +252,7 @@ export default function GlobalAICommandCenter() {
             <div className="space-y-4">
               
               {/* Daily Briefing Card */}
-              <div className="p-5 bg-[#18452E] text-white rounded-3xl relative overflow-hidden border border-[#18452E]">
+              <div className="p-5 bg-[#18452E] text-white rounded-[var(--radius-large)] relative overflow-hidden border border-[#18452E]">
                 <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
                   <Bot className="w-32 h-32" />
                 </div>

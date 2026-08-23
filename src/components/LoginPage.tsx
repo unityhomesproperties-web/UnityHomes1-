@@ -84,7 +84,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
 
   return (
     <div className="min-h-screen py-12 px-4 md:px-8 bg-[#F0F8F4] flex items-center justify-center">
-      <div className="bg-white rounded-3xl border border-stone-200 shadow-xl p-6 sm:p-10 max-w-xl w-full">
+      <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm p-6 sm:p-10 max-w-xl w-full">
         
         {/* LOGO */}
         <div className="flex flex-col items-center mb-6">

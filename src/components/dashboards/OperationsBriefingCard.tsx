@@ -138,7 +138,7 @@ export default function OperationsBriefingCard({
   };
 
   return (
-    <div className="bg-gradient-to-br from-[#0E2F1F] via-[#18452E] to-[#112A1F] text-white rounded-3xl p-6 shadow-md relative overflow-hidden space-y-4">
+    <div className=" text-white rounded-[var(--radius-large)] p-6 shadow-md relative overflow-hidden space-y-4">
       {/* Subtle Background Glow */}
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl pointer-events-none" />
 

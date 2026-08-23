@@ -170,7 +170,7 @@ function LandlordTenantComplaintsSection({
   };
 
   return (
-    <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs space-y-4">
+    <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
       <div className="flex justify-between items-center border-b border-stone-200 pb-3">
         <div>
           <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Tenant Complaints Queue</h4>
@@ -1255,7 +1255,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           <OperationsBriefingCard role="Landlord" userName={session.name} units={myUnits} properties={properties} />
 
           {/* DOMINANT PORTFOLIO BALANCE CARD */}
-          <div className="bg-[#18452E] text-white p-6 md:p-8 rounded-3xl space-y-4 shadow-xl border border-white/10 relative overflow-hidden">
+          <div className="bg-[#18452E] text-white p-6 md:p-8 rounded-[var(--radius-large)] space-y-4 shadow-sm border border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A84C]/5 rounded-bl-full"></div>
             <div>
               {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
@@ -1297,7 +1297,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           </div>
 
           {/* SUBSCRIPTION CAPACITY PROGRESS BAR */}
-          <div className="bg-white border border-stone-200 p-6 rounded-3xl space-y-3 shadow-sm animate-fade-in">
+          <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-3 shadow-sm animate-fade-in">
             <div className="flex justify-between items-center text-xs">
               <span className="font-display font-bold text-[#18452E] uppercase tracking-wider">Properties Capacity Tracker</span>
               <span className="font-mono font-bold text-#6B7280">
@@ -1340,7 +1340,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* SUBSCRIPTION LIMIT REACHED FULL-SCREEN MODAL */}
           {showLimitModal && (
             <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-              <div className="bg-white border border-stone-200 rounded-3xl p-8 max-w-md w-full shadow-2xl space-y-6 text-center animate-scale-up">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-8 max-w-md w-full shadow-sm space-y-6 text-center animate-scale-up">
                 <div className="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mx-auto border border-rose-100">
                   <ShieldAlert className="w-8 h-8" />
                 </div>
@@ -1360,7 +1360,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-lg shadow-amber-950/10"
+                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
@@ -1405,7 +1405,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             {/* NEEDS ATTENTION SCANNABLE LIST (Step 4) */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs flex flex-col min-w-0">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col min-w-0">
               <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Needs Attention</h3>
               <div className="space-y-2 flex-1">
                 {myUnits.filter(u => u.paymentStatus === 'Overdue').map(u => (
@@ -1447,7 +1447,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </div>
 
             {/* CASH FLOW FORECAST (Step 5) */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs flex flex-col min-w-0">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col min-w-0">
               <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Cash Flow Forecast</h3>
               <div className="flex-1 space-y-4">
                 <div className="p-4 bg-stone-50 border border-stone-200 rounded-xl space-y-3">
@@ -1484,7 +1484,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* Payment Receiving Account */}
             <div 
               onClick={handleOpenBankAccountWithHistory}
-              className="bg-white border border-stone-200 rounded-3xl p-5 shadow-xs cursor-pointer hover:shadow-md hover:border-emerald-700 transition"
+              className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs cursor-pointer hover:shadow-md hover:border-emerald-700 transition"
             >
               <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Payment Receiving Account</span>
               <strong className="block font-display font-black text-[#18452E] text-lg">Zenith Bank</strong>
@@ -1494,7 +1494,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </div>
 
             {/* Managed By (Simulated for company managed) */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-5 shadow-xs">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
               <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Managed By</span>
               <strong className="block font-display font-black text-[#18452E] text-sm">Prime Property Solutions</strong>
               <span className="block font-mono text-#6B7280 text-[10px] mt-1">Reported: 24 Jun 2026</span>
@@ -1505,7 +1505,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </div>
 
             {/* Profitability */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-5 shadow-xs bg-gradient-to-br from-emerald-50 to-white">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
               <span className="text-[10px] uppercase font-bold text-emerald-800 block tracking-widest mb-2 border-b border-emerald-100 pb-2">Profitability YTD</span>
               <strong className="block font-display font-black text-[#18452E] text-lg">₦{Math.round(totalBalance * 0.85).toLocaleString()}</strong>
               <div className="mt-2 text-[9px] font-mono text-#6B7280 space-y-1">
@@ -1515,7 +1515,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </div>
 
             {/* Portfolio Growth */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-5 shadow-xs">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
               <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Portfolio Growth</span>
               <div className="flex items-end gap-2 mt-2">
                 <strong className="block font-display font-black text-emerald-600 text-3xl">+14.2%</strong>
@@ -1526,7 +1526,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           </div>
 
           {/* LEASE EXPIRY CENTER (Step 6) */}
-          <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs">
+          <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
             <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Lease Expiry Center</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[600px]">
@@ -1582,7 +1582,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* COLUMN 1: TOP PERFORMER & NOTIFICATION (Section 7) */}
             <div className="space-y-6 min-w-0">
               {sortedPerformers.length > 0 && (
-                <div className="bg-amber-50/60 border border-amber-200 rounded-3xl p-6 space-y-4 shadow-xs relative overflow-hidden">
+                <div className="bg-amber-50/60 border border-amber-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs relative overflow-hidden">
                   <div className="flex justify-between items-start">
                     <div className="space-y-1">
                       <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-bold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
@@ -1625,7 +1625,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               )}
 
               {mockNotification && (
-                <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-3.5 shadow-xs">
+                <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-3.5 shadow-xs">
                   <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                     <div className="flex items-center space-x-2">
                       <Bell className="w-4.5 h-4.5 text-[#18452E]" />
@@ -1643,7 +1643,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               )}
 
               {/* TENANT COMPLAINTS WIDGET (Fix Seven) */}
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-3.5 shadow-xs">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-3.5 shadow-xs">
                 <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                   <div className="flex items-center space-x-2">
                     <AlertCircle className="w-4.5 h-4.5 text-rose-600" />
@@ -1667,7 +1667,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* COLUMN 2: ACTIVE SUBSCRIPTION CARD (Section 8) */}
             <div className="space-y-6 min-w-0">
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4 shadow-xs">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs">
                 <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                   <div className="flex items-center space-x-2">
                     <CreditCard className="w-5 h-5 text-[#18452E]" />
@@ -1715,7 +1715,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           </div>
 
           {activeSequenceUnit && (
-            <div className="bg-amber-50/80 border-2 border-amber-200 p-6 rounded-3xl space-y-4 shadow-sm">
+            <div className="bg-amber-50/80 border-2 border-amber-200 p-6 rounded-[var(--radius-large)] space-y-4 shadow-sm">
               <div className="flex items-center space-x-2 text-amber-900">
                 <ShieldAlert className="w-5 h-5 shrink-0" />
                 <h4 className="font-display font-black text-xs sm:text-sm uppercase tracking-wider">
@@ -1823,7 +1823,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
       {/* PLATFORM ANNOUNCEMENTS */}
       {activeTab === 'Overview' && announcements.length > 0 && (
-        <div className="bg-[#18452E] border border-[#0E2F1F]/80 rounded-3xl p-6 shadow-xl relative overflow-hidden animate-fade-in mb-8">
+        <div className="bg-[#18452E] border border-[#0E2F1F]/80 rounded-[var(--radius-large)] p-6 shadow-sm relative overflow-hidden animate-fade-in mb-8">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/10 rounded-bl-full"></div>
           <h3 className="font-display font-black text-sm text-[#C9A84C] uppercase mb-4 tracking-widest flex items-center">
             <Bell className="w-4 h-4 mr-2" /> Platform Announcements
@@ -1905,7 +1905,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       return (
                         <div 
                           key={bld.id}
-                          className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs hover:shadow-md hover:border-emerald-700 transition duration-300 flex flex-col group relative"
+                          className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs hover:shadow-md hover:border-emerald-700 transition duration-300 flex flex-col group relative"
                         >
                           <div className="h-44 w-full overflow-hidden relative">
                             <img 
@@ -2012,14 +2012,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         </div>
 
                         {/* Building Banner */}
-                        <div className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-sm relative">
+                        <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-sm relative">
                           <div className="h-52 w-full relative overflow-hidden">
                             <img 
                               src={currentBld?.coverPhoto || 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80'} 
                               alt={currentBld?.name}
                               className="w-full h-full object-cover" 
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+                            <div className="absolute inset-0 bg-black/40"></div>
                             
                             <div className="absolute bottom-4 left-6 right-6 text-white flex justify-between items-end flex-wrap gap-4">
                               <div>
@@ -2073,7 +2073,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                               return (
                                 <div 
                                   key={u.id}
-                                  className="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col justify-between group"
+                                  className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs hover:shadow-md transition duration-200 flex flex-col justify-between group"
                                 >
                                   <div className="p-5 space-y-4 flex-1 flex flex-col justify-between">
                                     <div className="flex justify-between items-start gap-2">
@@ -2235,7 +2235,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
           </div>
 
-          <div className="spatial-glass border border-stone-200/50 rounded-3xl overflow-hidden shadow-xs">
+          <div className="spatial-glass border border-stone-200/50 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="p-5 bg-stone-50/50 border-b border-stone-150 flex justify-between items-center">
               <span className="font-mono text-[10px] text-stone-400 uppercase font-black tracking-widest">ACTIVE TRANSFERS AUDIT LIST</span>
               <span className="font-mono text-[9px] text-[#18452E] bg-[#18452E]/5 py-0.5 px-2 rounded uppercase font-bold">100% Vetted Receipts</span>
@@ -2335,7 +2335,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Maintenance Cost Analytics (Step 8) */}
             <div className="lg:col-span-1 space-y-6 min-w-0">
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
                 <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-4">Cost Analytics</h4>
                 <div className="space-y-4">
                   {/* Mock Analytics */}
@@ -2365,7 +2365,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* Maintenance Cost Tracker (Step 8) */}
             <div className="lg:col-span-2 min-w-0">
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs">
+              <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
                 <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-4">Maintenance Tracker</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
@@ -2435,7 +2435,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* GENERATE REPORT CARD */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs flex flex-col justify-center space-y-4">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-3 text-[#18452E]">
                 <FileText className="w-6 h-6" />
                 <h4 className="font-display font-black text-sm uppercase">Generate New Report</h4>
@@ -2452,7 +2452,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </div>
 
             {/* DELIVERY TRACKING LOG */}
-            <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-xs">
+            <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
               <h4 className="font-display font-black text-xs text-[#18452E] uppercase mb-4">Report Delivery Tracking</h4>
               <div className="space-y-3">
                 {/* Dynamic reports */}
@@ -2537,7 +2537,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* REVOLUTIONARY DETAIL VIEW MODAL */}
       {selectedUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-stone-200/80 shadow-2xl relative flex flex-col p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full max-h-[90vh] overflow-y-auto border border-stone-200/80 shadow-sm relative flex flex-col p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
             
             {/* CLOSE BUTTON */}
             <button 
@@ -2778,7 +2778,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* REPORT PREVIEW MODAL */}
       {selectedReport && (
         <div id="report-modal" className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl animate-scale-up">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-sm animate-scale-up">
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-stone-50">
               <div className="flex items-center space-x-2">
                 <FileText className="w-5 h-5 text-[#18452E]" />
@@ -2883,7 +2883,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
       {selectedBankAccount && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-sm w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setSelectedBankAccount(null)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -2913,7 +2913,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
       {selectedPaymentRecord && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setSelectedPaymentRecord(null)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -2994,7 +2994,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* ADD BUILDING MODAL */}
       {showAddBuildingModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setShowAddBuildingModal(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3117,7 +3117,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* ADD UNIT MODAL */}
       {showAddUnitModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setShowAddUnitModal(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3216,7 +3216,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* EDIT UNIT MODAL */}
       {editingUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setEditingUnit(null)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3297,7 +3297,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* 48-HOUR SECURITY HOLD NOTICE MODAL */}
       {show48HourHoldNotice && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative border-2 border-amber-500">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative border-2 border-amber-500">
             <button 
               onClick={() => setShow48HourHoldNotice(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3339,7 +3339,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* TENANT INVITATION GENERATOR FORM MODAL */}
       {showInviteModal && inviteTargetUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-5 animate-scale-up relative max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-5 animate-scale-up relative max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setShowInviteModal(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3496,7 +3496,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* GENERATED INVITATION CODE MODAL */}
       {generatedInvitation && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setGeneratedInvitation(null)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3587,7 +3587,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* MOVE-IN READINESS MODAL */}
       {showReadinessModalProfile && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-2xl w-full border border-stone-200 shadow-2xl p-6 max-h-[90vh] overflow-y-auto space-y-4">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full border border-stone-200 shadow-sm p-6 max-h-[90vh] overflow-y-auto space-y-4">
             <div className="flex justify-between items-center border-b border-stone-200 pb-3">
               <h3 className="font-display font-bold text-#132A1D text-base">
                 Move-In Readiness &bull; {showReadinessModalProfile.full_name}
@@ -3616,7 +3616,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* REASSIGNMENT MODAL (Prompt Five) */}
       {showReassignModal && selectedUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setShowReassignModal(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"
@@ -3760,7 +3760,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* MOVE-OUT / END TENANCY MODAL (Prompt Five) */}
       {showMoveOutModal && selectedUnit && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 animate-scale-up relative">
+          <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-5 animate-scale-up relative">
             <button 
               onClick={() => setShowMoveOutModal(false)}
               className="absolute top-4 right-4 p-2 text-stone-400 hover:text-#6B7280 rounded-full hover:bg-stone-50 transition cursor-pointer"

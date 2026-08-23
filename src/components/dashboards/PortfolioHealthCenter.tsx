@@ -81,7 +81,7 @@ export default function PortfolioHealthCenter({
     <div className="space-y-6 animate-fade-in">
       
       {/* SCORE HERO */}
-      <div className="bg-white border border-stone-200 rounded-3xl p-8 shadow-sm flex flex-col lg:flex-row items-center gap-8">
+      <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-8 shadow-sm flex flex-col lg:flex-row items-center gap-8">
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-sm font-mono font-bold uppercase tracking-widest text-stone-400 mb-2">Proprietary Metric</h2>
           <h3 className="text-3xl font-display font-black text-[#18452E] mb-4">Portfolio Health Score</h3>
@@ -114,7 +114,7 @@ export default function PortfolioHealthCenter({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
         {/* TENANT DEFAULT RISK DETECTOR */}
-        <div className="bg-white border rounded-3xl p-6 shadow-sm min-w-0">
+        <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm min-w-0">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="w-6 h-6 text-rose-500" />
             <h3 className="font-display font-black text-[#18452E] uppercase">Tenant Default Risk Detector</h3>
@@ -147,7 +147,7 @@ export default function PortfolioHealthCenter({
         </div>
 
         {/* UNDERPERFORMING PROPERTY DETECTOR */}
-        <div className="bg-white border rounded-3xl p-6 shadow-sm min-w-0">
+        <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm min-w-0">
           <div className="flex items-center gap-3 mb-6">
             <TrendingDown className="w-6 h-6 text-amber-500" />
             <h3 className="font-display font-black text-[#18452E] uppercase">Underperforming Property Detector</h3>
@@ -184,7 +184,7 @@ export default function PortfolioHealthCenter({
       </div>
 
       {/* LEASE EXPIRY CENTER */}
-      <div className="bg-white border rounded-3xl p-6 shadow-sm">
+      <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Calendar className="w-6 h-6 text-blue-500" />
           <h3 className="font-display font-black text-[#18452E] uppercase">Lease Expiry & Renewals Center</h3>
@@ -233,7 +233,7 @@ export default function PortfolioHealthCenter({
       </div>
 
       {/* LATE REMITTANCE DETECTOR */}
-      <div className="bg-white border rounded-3xl p-6 shadow-sm">
+      <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Clock className="w-6 h-6 text-[#C9A84C]" />
           <h3 className="font-display font-black text-[#18452E] uppercase">Late Remittance Detector (Shortlets)</h3>
