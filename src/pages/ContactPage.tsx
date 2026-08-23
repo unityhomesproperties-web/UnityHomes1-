@@ -17,17 +17,39 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-[var(--color-brand-deep)] mb-6">Contact Us</h1>
-        <p className="text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-          Have questions about Unity Homes or want to learn more about our upcoming features? We are here to help.
-        </p>
-      </div>
+    <div className="min-h-screen flex flex-col animate-reveal-up bg-white">
+      {/* Immersive Hero Banner */}
+      <section className="relative text-white pt-40 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[var(--color-brand-deep)]">
+        {/* Animated Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <img 
+            src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&q=80" 
+            alt="Contact Us" 
+            className="w-full h-full object-cover animate-slow-pan opacity-60"
+            aria-hidden="true"
+          />
+          {/* Solid color overlay, no gradient */}
+          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-12 mb-24">
-        {/* Contact Information */}
-        <div className="space-y-8">
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <div className="w-16 h-1 bg-[var(--color-brand-fresh)] mx-auto mb-8 rounded-full"></div>
+          <h4 className="text-sm font-bold tracking-widest uppercase text-white/80 mb-4">
+            GET IN TOUCH
+          </h4>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8">
+            Contact Us
+          </h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Have questions about Unity Homes or want to learn more about our upcoming features? We are here to help.
+          </p>
+        </div>
+      </section>
+
+      <div className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="grid md:grid-cols-2 gap-12 mb-24">
+          {/* Contact Information */}
+          <div className="space-y-8">
           <div className="bg-white p-8 rounded-[var(--radius-card)] border border-[var(--color-border)] shadow-sm">
             <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-8">Get in Touch</h2>
             
@@ -147,6 +169,7 @@ export default function ContactPage() {
           </p>
         </div>
         <FAQSection />
+      </div>
       </div>
     </div>
   );

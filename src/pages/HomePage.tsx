@@ -368,13 +368,25 @@ export default function HomePage() {
       </section>
 
       {/* Final Waitlist CTA */}
-      <section className="bg-[#2F8D46] py-32 px-4 sm:px-6 lg:px-8 text-center mt-12 mb-12 max-w-7xl mx-auto rounded-[32px]">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section className="relative py-32 px-4 sm:px-6 lg:px-8 text-center mt-12 mb-12 max-w-7xl mx-auto rounded-[32px] overflow-hidden bg-[var(--color-brand-deep)]">
+        {/* Animated Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <img 
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80" 
+            alt="Real Estate Building" 
+            className="w-full h-full object-cover animate-slow-pan opacity-60"
+            aria-hidden="true"
+          />
+          {/* Solid color overlay, no gradient */}
+          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
           <div className="w-16 h-1 bg-[var(--color-accent-gold)] mx-auto mb-8 rounded-full"></div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
             Be part of what's next in Nigerian real estate.
           </h2>
-          <p className="text-xl text-emerald-100 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Join the waitlist to get early access to a platform built for safer, more transparent property experiences.
           </p>
           <div className="pt-8">
