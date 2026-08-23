@@ -49,7 +49,6 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             alt="Premium Aerial Real Estate Nigeria" 
             className="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-[10s] ease-out hover:scale-100"
           />
-          <div className="absolute inset-0 bg-[#0E2F1F]/90"></div>
           {/* Ambient Golden light overlay */}
           <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
         </div>

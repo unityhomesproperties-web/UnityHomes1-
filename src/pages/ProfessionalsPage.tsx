@@ -146,7 +146,6 @@ export default function ProfessionalsPage() {
             aria-hidden="true"
           />
           {/* Solid color overlay, no gradient */}
-          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
         </div>
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
@@ -268,7 +267,6 @@ export default function ProfessionalsPage() {
             aria-hidden="true"
           />
           {/* Solid color overlay, no gradient */}
-          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
         </div>
 
         <div className="absolute inset-0 opacity-20 pointer-events-none z-0">

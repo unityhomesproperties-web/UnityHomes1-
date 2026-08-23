@@ -40,7 +40,6 @@ export default function MissionPage() {
             aria-hidden="true"
           />
           {/* Solid color overlay, no gradient */}
-          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -116,7 +115,6 @@ export default function MissionPage() {
               aria-hidden="true"
             />
             {/* Solid color overlay, no gradient */}
-            <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8 relative z-10">

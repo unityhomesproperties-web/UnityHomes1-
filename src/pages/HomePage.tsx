@@ -378,7 +378,6 @@ export default function HomePage() {
             aria-hidden="true"
           />
           {/* Solid color overlay, no gradient */}
-          <div className="absolute inset-0 bg-[#0E2F1F]/80"></div>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8 relative z-10">
