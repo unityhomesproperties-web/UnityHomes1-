@@ -1,4 +1,6 @@
-import React from 'react';
+const fs = require('fs');
+
+const content = `import React from 'react';
 import { Link } from 'react-router-dom';
 import { Map } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -71,3 +73,7 @@ export default function WaitlistSuccessPage() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/pages/WaitlistSuccessPage.tsx', content);
+console.log('Successfully wrote WaitlistSuccessPage.tsx');

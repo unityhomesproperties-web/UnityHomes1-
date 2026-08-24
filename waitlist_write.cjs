@@ -1,4 +1,6 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+const fs = require('fs');
+
+const content = `import React, { useState, useEffect, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -50,8 +52,8 @@ const NIGERIAN_STATES = [
   "Taraba", "Yobe", "Zamfara"
 ];
 
-const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-const isValidPhone = (phone: string) => phone.length >= 10 && /^[\d\s\+\-\(\)]+$/.test(phone);
+const isValidEmail = (email: string) => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+const isValidPhone = (phone: string) => phone.length >= 10 && /^[\\d\\s\\+\\-\\(\\)]+$/.test(phone);
 
 const BannerAnimation = () => (
   <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none flex justify-center items-center">
@@ -344,7 +346,7 @@ export default function WaitlistPage() {
               <div className="w-full bg-gray-200 h-1.5 rounded-full mb-4">
                 <div 
                   className="bg-[#6FBE45] h-1.5 rounded-full transition-all duration-300"
-                  style={{ width: `${(currentStep / steps.length) * 100}%` }}
+                  style={{ width: \`\${(currentStep / steps.length) * 100}%\` }}
                 />
               </div>
               <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
@@ -365,25 +367,25 @@ export default function WaitlistPage() {
 
                   return (
                     <div key={step.num} className="relative flex items-start">
-                      <div className={`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
+                      <div className={\`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors \${
                         isCompleted ? 'bg-[#6FBE45]' : 
                         isCurrent ? 'bg-white border-2 border-[#6FBE45]' : 
                         'bg-white border-2 border-gray-300'
-                      }`}>
+                      }\`}>
                         {isCompleted && <Check className="w-3.5 h-3.5 text-white" />}
                         {isCurrent && <div className="w-2 h-2 rounded-full bg-[#6FBE45]" />}
                       </div>
                       <div className="ml-4">
-                        <span className={`block text-xs font-bold mb-1 ${
+                        <span className={\`block text-xs font-bold mb-1 \${
                           isCompleted || isCurrent ? 'text-[#6FBE45]' : 'text-gray-400'
-                        }`}>
+                        }\`}>
                           0{step.num}
                         </span>
-                        <span className={`block font-bold ${
+                        <span className={\`block font-bold \${
                           isCurrent ? 'text-[var(--color-text-primary)]' : 
                           isCompleted ? 'text-[var(--color-text-secondary)]' : 
                           'text-gray-400'
-                        }`}>
+                        }\`}>
                           {step.title}
                         </span>
                         <span className="block text-xs text-gray-500 mt-0.5">
@@ -443,15 +445,15 @@ export default function WaitlistPage() {
                         {ROLES_DISPLAY.map(r => (
                           <label 
                             key={r.id} 
-                            className={`flex items-start p-5 border rounded-[18px] cursor-pointer transition-all duration-200 ${
+                            className={\`flex items-start p-5 border rounded-[18px] cursor-pointer transition-all duration-200 \${
                               data.role === r.id 
                                 ? 'border-[#6FBE45] bg-[#EAF5E3]' 
                                 : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
-                            }`}
+                            }\`}
                           >
-                            <div className={`mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${
+                            <div className={\`mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${
                               data.role === r.id ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
-                            }`}>
+                            }\`}>
                               {data.role === r.id && <Check className="w-3 h-3 text-white" />}
                             </div>
                             <div className="ml-4">
@@ -547,16 +549,16 @@ export default function WaitlistPage() {
                                 return (
                                   <label 
                                     key={interest} 
-                                    className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 ${
+                                    className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 \${
                                       selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
-                                    }`}
+                                    }\`}
                                   >
-                                    <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 ${
+                                    <div className={\`w-5 h-5 rounded border flex items-center justify-center shrink-0 \${
                                       selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
-                                    }`}>
+                                    }\`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
-                                    <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
+                                    <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{interest}</span>
                                     <input 
                                       type="checkbox"
                                       className="sr-only"
@@ -585,11 +587,11 @@ export default function WaitlistPage() {
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all \${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}\`}>
+                                      <div className={\`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}\`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{pref}</span>
                                       <input 
                                         type="radio"
                                         name="landlord_pref"
@@ -673,11 +675,11 @@ export default function WaitlistPage() {
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all \${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}\`}>
+                                      <div className={\`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}\`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{pref}</span>
                                       <input 
                                         type="radio" name="pmc_pref" className="sr-only"
                                         checked={selected}
@@ -767,11 +769,11 @@ export default function WaitlistPage() {
                                     onChange={(e) => updateData('role_specific_data.consent', e.target.checked)}
                                     onBlur={() => handleBlur('consent')}
                                   />
-                                  <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
+                                  <div className={\`w-6 h-6 rounded border flex items-center justify-center transition-colors \${
                                     data.role_specific_data.consent 
                                       ? 'border-[#6FBE45] bg-[#6FBE45]' 
                                       : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
-                                  }`}>
+                                  }\`}>
                                     {data.role_specific_data.consent && <Check className="w-4 h-4 text-white" />}
                                   </div>
                                 </div>
@@ -841,7 +843,7 @@ export default function WaitlistPage() {
                                 <div key={key} className={Array.isArray(val) || key === 'description' ? 'col-span-1 sm:col-span-2' : ''}>
                                   <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</span>
                                   <span className="block font-bold text-[var(--color-text-primary)] text-base">
-                                    {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? `${val} (SURCON, Verification Pending)` : Array.isArray(val) ? val.join(', ') : String(val)}
+                                    {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? \`\${val} (SURCON, Verification Pending)\` : Array.isArray(val) ? val.join(', ') : String(val)}
                                   </span>
                                 </div>
                               );
@@ -864,11 +866,11 @@ export default function WaitlistPage() {
                                 checked={data.information_confirmed}
                                 onChange={(e) => updateData('information_confirmed', e.target.checked)}
                               />
-                              <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
+                              <div className={\`w-6 h-6 rounded border flex items-center justify-center transition-colors \${
                                 data.information_confirmed 
                                   ? 'border-[#6FBE45] bg-[#6FBE45]' 
                                   : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
-                              }`}>
+                              }\`}>
                                 {data.information_confirmed && <Check className="w-4 h-4 text-white" />}
                               </div>
                             </div>
@@ -933,3 +935,7 @@ export default function WaitlistPage() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/pages/WaitlistPage.tsx', content);
+console.log('Successfully wrote WaitlistPage.tsx');

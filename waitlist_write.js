@@ -1,4 +1,6 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+const fs = require('fs');
+
+const content = `import React, { useState, useEffect, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -50,8 +52,8 @@ const NIGERIAN_STATES = [
   "Taraba", "Yobe", "Zamfara"
 ];
 
-const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-const isValidPhone = (phone: string) => phone.length >= 10 && /^[\d\s\+\-\(\)]+$/.test(phone);
+const isValidEmail = (email: string) => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+const isValidPhone = (phone: string) => phone.length >= 10 && /^[\\d\\s\\+\\-\\(\\)]+$/.test(phone);
 
 const BannerAnimation = () => (
   <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none flex justify-center items-center">
@@ -332,7 +334,7 @@ export default function WaitlistPage() {
 
       {/* Application Workspace */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 pb-24 relative z-20">
-        <div className="bg-white rounded-[24px] shadow-sm border border-[var(--color-border)] flex flex-col md:flex-row overflow-hidden min-h-[600px]">
+        <div className="bg-white rounded-2xl shadow-sm border border-[var(--color-border)] flex flex-col md:flex-row overflow-hidden min-h-[600px]">
           
           {/* Progress Panel (Desktop) & Top Bar (Mobile) */}
           <div className="md:w-80 bg-stone-50 border-b md:border-b-0 md:border-r border-[var(--color-border)] p-6 md:p-10 flex-shrink-0">
@@ -341,10 +343,10 @@ export default function WaitlistPage() {
               <div className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">
                 Step {currentStep} of {steps.length}
               </div>
-              <div className="w-full bg-gray-200 h-1.5 rounded-full mb-4">
+              <div className="w-full bg-gray-200 h-1 rounded-full mb-4">
                 <div 
-                  className="bg-[#6FBE45] h-1.5 rounded-full transition-all duration-300"
-                  style={{ width: `${(currentStep / steps.length) * 100}%` }}
+                  className="bg-[#6FBE45] h-1 rounded-full transition-all duration-300"
+                  style={{ width: \`\${(currentStep / steps.length) * 100}%\` }}
                 />
               </div>
               <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
@@ -359,31 +361,32 @@ export default function WaitlistPage() {
               </h3>
               <div className="space-y-8 relative">
                 <div className="absolute left-[11px] top-2 bottom-4 w-0.5 bg-gray-200" />
-                {steps.map((step) => {
+                {steps.map((step, index) => {
                   const isCompleted = currentStep > step.num;
                   const isCurrent = currentStep === step.num;
+                  const isUpcoming = currentStep < step.num;
 
                   return (
                     <div key={step.num} className="relative flex items-start">
-                      <div className={`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
+                      <div className={\`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 \${
                         isCompleted ? 'bg-[#6FBE45]' : 
                         isCurrent ? 'bg-white border-2 border-[#6FBE45]' : 
                         'bg-white border-2 border-gray-300'
-                      }`}>
+                      }\`}>
                         {isCompleted && <Check className="w-3.5 h-3.5 text-white" />}
                         {isCurrent && <div className="w-2 h-2 rounded-full bg-[#6FBE45]" />}
                       </div>
                       <div className="ml-4">
-                        <span className={`block text-xs font-bold mb-1 ${
+                        <span className={\`block text-xs font-bold mb-1 \${
                           isCompleted || isCurrent ? 'text-[#6FBE45]' : 'text-gray-400'
-                        }`}>
+                        }\`}>
                           0{step.num}
                         </span>
-                        <span className={`block font-bold ${
+                        <span className={\`block font-bold \${
                           isCurrent ? 'text-[var(--color-text-primary)]' : 
                           isCompleted ? 'text-[var(--color-text-secondary)]' : 
                           'text-gray-400'
-                        }`}>
+                        }\`}>
                           {step.title}
                         </span>
                         <span className="block text-xs text-gray-500 mt-0.5">
@@ -399,14 +402,14 @@ export default function WaitlistPage() {
 
           {/* Form Content */}
           <div className="flex-1 p-6 md:p-12 lg:p-16 relative">
-            <div className="absolute top-6 right-6 md:top-8 md:right-8 h-6 flex items-center z-50">
+            <div className="absolute top-6 right-6 md:top-8 md:right-8 h-6 flex items-center">
               <AnimatePresence>
                 {autosaveVisible && (
                   <motion.div 
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="flex items-center text-xs font-bold text-[#6FBE45] bg-[#EAF5E3] px-3 py-1 rounded-full shadow-sm"
+                    className="flex items-center text-xs font-bold text-[#6FBE45]"
                   >
                     <Check className="w-3.5 h-3.5 mr-1" />
                     Saved
@@ -417,7 +420,7 @@ export default function WaitlistPage() {
 
             <form onSubmit={handleSubmit} className="h-full flex flex-col">
               <div className="mb-8 hidden md:block">
-                <span className="text-xs font-bold text-[#6FBE45] uppercase tracking-wider mb-2 block">
+                <span className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2 block">
                   Step 0{currentStep}
                 </span>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)]">
@@ -425,7 +428,7 @@ export default function WaitlistPage() {
                 </h2>
               </div>
 
-              <div className="flex-1 overflow-hidden">
+              <div className="flex-1">
                 <AnimatePresence custom={direction} mode="wait">
                   <motion.div
                     key={currentStep}
@@ -443,15 +446,15 @@ export default function WaitlistPage() {
                         {ROLES_DISPLAY.map(r => (
                           <label 
                             key={r.id} 
-                            className={`flex items-start p-5 border rounded-[18px] cursor-pointer transition-all duration-200 ${
+                            className={\`flex items-start p-5 border rounded-[18px] cursor-pointer transition-all duration-200 \${
                               data.role === r.id 
                                 ? 'border-[#6FBE45] bg-[#EAF5E3]' 
                                 : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
-                            }`}
+                            }\`}
                           >
-                            <div className={`mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${
+                            <div className={\`mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${
                               data.role === r.id ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
-                            }`}>
+                            }\`}>
                               {data.role === r.id && <Check className="w-3 h-3 text-white" />}
                             </div>
                             <div className="ml-4">
@@ -475,47 +478,47 @@ export default function WaitlistPage() {
                     {currentStep === 2 && (
                       <div className="space-y-6">
                         <div>
-                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Full Name</label>
+                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">FULL NAME</label>
                           <input 
                             type="text" 
                             value={data.full_name}
                             onChange={(e) => updateData('full_name', e.target.value)}
                             onBlur={() => handleBlur('full_name')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                            className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)]"
                           />
                           {renderError('full_name', currentErrors)}
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Email Address</label>
+                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">EMAIL ADDRESS</label>
                             <input 
                               type="email" 
                               value={data.email}
                               onChange={(e) => updateData('email', e.target.value)}
                               onBlur={() => handleBlur('email')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)]"
                             />
                             {renderError('email', currentErrors)}
                           </div>
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Phone Number</label>
+                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">PHONE NUMBER</label>
                             <input 
                               type="tel" 
                               value={data.phone}
                               onChange={(e) => updateData('phone', e.target.value)}
                               onBlur={() => handleBlur('phone')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)]"
                             />
                             {renderError('phone', currentErrors)}
                           </div>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">State (Nigeria)</label>
+                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">STATE</label>
                           <select 
                             value={data.state}
                             onChange={(e) => updateData('state', e.target.value)}
                             onBlur={() => handleBlur('state')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
+                            className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] appearance-none"
                           >
                             <option value="" disabled>Select a state...</option>
                             {NIGERIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -523,12 +526,12 @@ export default function WaitlistPage() {
                           {renderError('state', currentErrors)}
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-400 mb-2 uppercase">Country</label>
+                          <label className="block text-sm font-bold text-gray-400 mb-2">COUNTRY</label>
                           <input 
                             type="text" 
                             value="Nigeria"
                             disabled
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-stone-50 text-gray-500 font-medium cursor-not-allowed"
+                            className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-stone-50 text-gray-500 cursor-not-allowed"
                           />
                         </div>
                       </div>
@@ -540,23 +543,23 @@ export default function WaitlistPage() {
                         {/* PROPERTY SEEKER */}
                         {data.role === 'property_seeker' && (
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">What are you interested in?</label>
+                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4">WHAT ARE YOU INTERESTED IN?</label>
                             <div className="space-y-3">
                               {['Buy Property', 'Rent Property', 'Find a Professional', 'Property Verification', 'Area Intelligence'].map(interest => {
                                 const selected = (data.role_specific_data.interests || []).includes(interest);
                                 return (
                                   <label 
                                     key={interest} 
-                                    className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 ${
-                                      selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
-                                    }`}
+                                    className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 \${
+                                      selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50'
+                                    }\`}
                                   >
-                                    <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 ${
+                                    <div className={\`w-5 h-5 rounded border flex items-center justify-center shrink-0 \${
                                       selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
-                                    }`}>
+                                    }\`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
-                                    <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
+                                    <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{interest}</span>
                                     <input 
                                       type="checkbox"
                                       className="sr-only"
@@ -580,16 +583,16 @@ export default function WaitlistPage() {
                         {['long_term_landlord', 'shortlet_landlord'].includes(data.role) && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
+                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4">SERVICE PREFERENCE</label>
                               <div className="space-y-3">
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all \${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50'}\`}>
+                                      <div className={\`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}\`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{pref}</span>
                                       <input 
                                         type="radio"
                                         name="landlord_pref"
@@ -606,35 +609,35 @@ export default function WaitlistPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties or Units</label>
+                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">NUMBER OF PROPERTIES OR UNITS</label>
                                 <input 
                                   type="number" min="1"
                                   value={data.role_specific_data.properties_count || ''}
                                   onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                   onBlur={() => handleBlur('properties_count')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {renderError('properties_count', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Property Type</label>
+                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">PROPERTY TYPE</label>
                                 <input 
                                   type="text" placeholder="e.g. Residential, Commercial"
                                   value={data.role_specific_data.property_type || ''}
                                   onChange={(e) => updateData('role_specific_data.property_type', e.target.value)}
                                   onBlur={() => handleBlur('property_type')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {renderError('property_type', currentErrors)}
                               </div>
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Short Description (Optional)</label>
+                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">SHORT DESCRIPTION (OPTIONAL)</label>
                               <textarea 
                                 rows={3}
                                 value={data.role_specific_data.description || ''}
                                 onChange={(e) => updateData('role_specific_data.description', e.target.value)}
-                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] resize-none font-medium"
+                                className="w-full p-4 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] resize-none"
                               />
                             </div>
                           </div>
@@ -645,39 +648,39 @@ export default function WaitlistPage() {
                           <div className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Company Name</label>
+                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">COMPANY NAME</label>
                                 <input 
                                   type="text" 
                                   value={data.role_specific_data.company_name || ''}
                                   onChange={(e) => updateData('role_specific_data.company_name', e.target.value)}
                                   onBlur={() => handleBlur('company_name')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {renderError('company_name', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Contact Person</label>
+                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">CONTACT PERSON</label>
                                 <input 
                                   type="text" 
                                   value={data.role_specific_data.contact_person || ''}
                                   onChange={(e) => updateData('role_specific_data.contact_person', e.target.value)}
                                   onBlur={() => handleBlur('contact_person')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {renderError('contact_person', currentErrors)}
                               </div>
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
+                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4">SERVICE PREFERENCE</label>
                               <div className="space-y-3">
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={\`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all \${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50'}\`}>
+                                      <div className={\`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 \${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}\`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={\`ml-4 font-bold \${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}\`}>{pref}</span>
                                       <input 
                                         type="radio" name="pmc_pref" className="sr-only"
                                         checked={selected}
@@ -691,13 +694,13 @@ export default function WaitlistPage() {
                               {renderError('service_preference', currentErrors)}
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties Managed</label>
+                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">NUMBER OF PROPERTIES MANAGED</label>
                               <input 
                                 type="number" min="1"
                                 value={data.role_specific_data.properties_count || ''}
                                 onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                 onBlur={() => handleBlur('properties_count')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                               />
                               {renderError('properties_count', currentErrors)}
                             </div>
@@ -708,13 +711,13 @@ export default function WaitlistPage() {
                         {['property_lawyer', 'licensed_surveyor', 'structural_engineer'].includes(data.role) && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Firm or Practice Name</label>
+                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">FIRM OR PRACTICE NAME</label>
                               <input 
                                 type="text" 
                                 value={data.role_specific_data.firm_name || ''}
                                 onChange={(e) => updateData('role_specific_data.firm_name', e.target.value)}
                                 onBlur={() => handleBlur('firm_name')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                               />
                               {renderError('firm_name', currentErrors)}
                             </div>
@@ -730,11 +733,11 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.registration_number || ''}
                                   onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                                   onBlur={() => handleBlur('registration_number')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {data.role === 'licensed_surveyor' && (
                                   <div className="mt-3 space-y-2">
-                                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                    <p className="text-sm text-[var(--color-text-secondary)]">
                                       Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                                     </p>
                                     <p className="text-sm font-bold text-[#2F8D46]">
@@ -745,13 +748,13 @@ export default function WaitlistPage() {
                                 {renderError('registration_number', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Years of Experience</label>
+                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2">YEARS OF EXPERIENCE</label>
                                 <input 
                                   type="number" min="0"
                                   value={data.role_specific_data.years_of_experience || ''}
                                   onChange={(e) => updateData('role_specific_data.years_of_experience', e.target.value)}
                                   onBlur={() => handleBlur('years_of_experience')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-4 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45]"
                                 />
                                 {renderError('years_of_experience', currentErrors)}
                               </div>
@@ -759,7 +762,7 @@ export default function WaitlistPage() {
                             
                             <div className="pt-4">
                               <label className="flex items-start cursor-pointer group">
-                                <div className="mt-1 relative flex items-center justify-center min-w-[48px] min-h-[48px] shrink-0">
+                                <div className="mt-1 relative flex items-center justify-center min-w-[48px] min-h-[48px]">
                                   <input 
                                     type="checkbox"
                                     className="sr-only"
@@ -767,19 +770,19 @@ export default function WaitlistPage() {
                                     onChange={(e) => updateData('role_specific_data.consent', e.target.checked)}
                                     onBlur={() => handleBlur('consent')}
                                   />
-                                  <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
+                                  <div className={\`w-6 h-6 rounded border flex items-center justify-center transition-colors \${
                                     data.role_specific_data.consent 
                                       ? 'border-[#6FBE45] bg-[#6FBE45]' 
                                       : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
-                                  }`}>
+                                  }\`}>
                                     {data.role_specific_data.consent && <Check className="w-4 h-4 text-white" />}
                                   </div>
                                 </div>
-                                <div className="ml-2 mt-3">
+                                <div className="ml-1 mt-3">
                                   <span className="block text-[var(--color-text-primary)] font-bold mb-1 leading-relaxed">
                                     I consent to Unity Homes verifying my eligibility, professional registration, and active membership status with the appropriate professional regulatory body before considering me for the Unity Homes Professional Directory.
                                   </span>
-                                  <span className="block text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                  <span className="block text-sm text-[var(--color-text-secondary)]">
                                     Verification does not guarantee directory listing. Final inclusion will only happen after review and agreement.
                                   </span>
                                 </div>
@@ -793,10 +796,10 @@ export default function WaitlistPage() {
 
                     {/* STEP 4: REVIEW */}
                     {currentStep === 4 && (
-                      <div className="space-y-6">
-                        <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
+                      <div className="space-y-8">
+                        <div className="bg-stone-50 rounded-2xl p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
+                            <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
                             <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
                           </div>
                           <p className="text-lg font-bold text-[var(--color-text-primary)]">
@@ -804,34 +807,34 @@ export default function WaitlistPage() {
                           </p>
                         </div>
 
-                        <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
+                        <div className="bg-stone-50 rounded-2xl p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
+                            <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
                             <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Name</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.full_name}</span>
+                              <span className="block text-xs font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Name</span>
+                              <span className="block font-bold text-[var(--color-text-primary)]">{data.full_name}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Email</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.email}</span>
+                              <span className="block text-xs font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Email</span>
+                              <span className="block font-bold text-[var(--color-text-primary)]">{data.email}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Phone</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.phone}</span>
+                              <span className="block text-xs font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Phone</span>
+                              <span className="block font-bold text-[var(--color-text-primary)]">{data.phone}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">State</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.state}, Nigeria</span>
+                              <span className="block text-xs font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">State</span>
+                              <span className="block font-bold text-[var(--color-text-primary)]">{data.state}, Nigeria</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
+                        <div className="bg-stone-50 rounded-2xl p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
+                            <h3 className="text-sm font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
                             <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -839,9 +842,9 @@ export default function WaitlistPage() {
                               if (key === 'consent' || val === '' || val === null || val === undefined) return null;
                               return (
                                 <div key={key} className={Array.isArray(val) || key === 'description' ? 'col-span-1 sm:col-span-2' : ''}>
-                                  <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</span>
-                                  <span className="block font-bold text-[var(--color-text-primary)] text-base">
-                                    {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? `${val} (SURCON, Verification Pending)` : Array.isArray(val) ? val.join(', ') : String(val)}
+                                  <span className="block text-xs font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</span>
+                                  <span className="block font-bold text-[var(--color-text-primary)]">
+                                    {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? \`\${val} (SURCON, Verification Pending)\` : Array.isArray(val) ? val.join(', ') : String(val)}
                                   </span>
                                 </div>
                               );
@@ -850,29 +853,29 @@ export default function WaitlistPage() {
                         </div>
 
                         {submitError && (
-                          <div className="p-5 bg-[#FDEDED] border border-[#F5C2C7] rounded-[18px] text-[#842029] font-medium text-sm">
+                          <div className="p-5 bg-[#FDEDED] border border-[#F5C2C7] rounded-xl text-[#842029] font-medium text-sm">
                             {submitError}
                           </div>
                         )}
 
-                        <div className="pt-2">
+                        <div className="pt-4">
                           <label className="flex items-start cursor-pointer group">
-                            <div className="relative flex items-center justify-center min-w-[48px] min-h-[48px] shrink-0">
+                            <div className="mt-0.5 relative flex items-center justify-center min-w-[48px] min-h-[48px]">
                               <input 
                                 type="checkbox"
                                 className="sr-only"
                                 checked={data.information_confirmed}
                                 onChange={(e) => updateData('information_confirmed', e.target.checked)}
                               />
-                              <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
+                              <div className={\`w-6 h-6 rounded border flex items-center justify-center transition-colors \${
                                 data.information_confirmed 
                                   ? 'border-[#6FBE45] bg-[#6FBE45]' 
                                   : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
-                              }`}>
+                              }\`}>
                                 {data.information_confirmed && <Check className="w-4 h-4 text-white" />}
                               </div>
                             </div>
-                            <div className="ml-2 mt-[14px]">
+                            <div className="ml-1 mt-3">
                               <span className="block font-bold text-[var(--color-text-primary)] leading-relaxed">
                                 I confirm that the information I provided is accurate.
                               </span>
@@ -933,3 +936,7 @@ export default function WaitlistPage() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/pages/WaitlistPage.tsx', content);
+console.log('Successfully wrote WaitlistPage.tsx');
