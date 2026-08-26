@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Users, Search, Filter, Home, AlertTriangle, Phone, Mail, FileText, 

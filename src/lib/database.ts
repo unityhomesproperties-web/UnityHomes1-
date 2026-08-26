@@ -49,7 +49,7 @@ if (typeof window !== 'undefined') {
             afterArr.forEach((afterDoc: any) => {
               const beforeDoc = beforeArr.find((b: any) => b.id === afterDoc.id);
               if (beforeDoc && beforeDoc.status !== afterDoc.status) {
-                updateCallback(collection, beforeDoc, afterDoc);
+                if (updateCallback) updateCallback(collection, beforeDoc, afterDoc);
               }
             });
           }

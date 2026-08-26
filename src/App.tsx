@@ -11,15 +11,9 @@ import AreaIntelligencePage from './pages/AreaIntelligencePage';
 import WaitlistPage from './pages/WaitlistPage';
 import WaitlistSuccessPage from './pages/WaitlistSuccessPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 import DemoMode from './components/DemoMode';
-
-// Placeholder components for basic routes
-const Placeholder = ({ title }: { title: string }) => (
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-    <h1 className="text-3xl font-bold text-[var(--color-brand-deep)]">{title}</h1>
-    <p className="mt-4 text-[var(--color-text-secondary)]">Content for this page is being generated...</p>
-  </div>
-);
 
 export default function App() {
   return (
@@ -35,8 +29,8 @@ export default function App() {
           <Route path="/area-intelligence" element={<AreaIntelligencePage />} />
           <Route path="/waitlist" element={<WaitlistPage />} />
           <Route path="/waitlist/success" element={<WaitlistSuccessPage />} />
-          <Route path="/privacy" element={<Placeholder title="Privacy Policy" />} />
-          <Route path="/terms" element={<Placeholder title="Terms of Service" />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>

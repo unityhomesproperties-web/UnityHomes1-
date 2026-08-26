@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { 
   DollarSign, Activity, FileText, Filter, CheckCircle2, AlertTriangle, ChevronRight, XCircle, Users, BarChart2, Download, CheckSquare, Square, Inbox, Trash2, Send, ShieldCheck

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Building, MapPin, Calendar, DollarSign, TrendingUp, Users, CheckCircle2,

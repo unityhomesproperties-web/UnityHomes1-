@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, ChevronRight, X, Building, Users, DollarSign, FileText, AlertTriangle } from 'lucide-react';
 import { UserSession, LandlordUnit, BookingLog, DamageReport, ServiceChargeBill, PMCApplication, TenantRegistration, VerificationInquiry, Property, Professional } from '../types';

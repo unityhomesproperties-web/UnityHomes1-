@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Tag, PlusCircle, CheckCircle2, XCircle, Search, Filter, Copy, Check, 

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Plus, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 const PILLARS = [
   {
@@ -22,117 +23,184 @@ const PILLARS = [
 
 export default function MissionPage() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
+  
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
-    <div className="min-h-screen flex flex-col animate-reveal-up bg-white">
-      {/* Immersive Hero Banner */}
-      <section className="relative text-white pt-40 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[var(--color-brand-deep)]">
-        {/* Animated Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
-            alt="Business Mission" 
-            className="w-full h-full object-cover animate-slow-pan opacity-60"
-            aria-hidden="true"
-          />
-          {/* Solid color overlay, no gradient */}
-        </div>
+    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+      {/* Premium Hero Banner - Solid Supporting Green */}
+      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#2F8D46] overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 12 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.4 }}
+          >
+            <h4 className="text-sm font-bold tracking-widest uppercase text-white/90 mb-4">
+              OUR MISSION
+            </h4>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8">
+              Making better property decisions easier.
+            </h1>
+          </motion.div>
+          
+          {/* Animated Path Visual */}
+          <div className="hidden lg:flex justify-end items-center h-full relative pl-10">
+            <svg viewBox="0 0 500 300" fill="none" className="w-full h-full max-w-lg overflow-visible">
+              
+              {/* Central Line */}
+              <motion.path 
+                d="M50,250 C100,250 100,200 150,200 C200,200 200,150 250,150 C300,150 300,100 350,100 C400,100 400,150 450,150" 
+                stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+              />
+              
+              {/* Nodes and Text Labels */}
+              <g>
+                <motion.circle cx="50" cy="250" r="6" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.1, duration: 0.3 }} />
+                <motion.text x="50" y="275" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>Information</motion.text>
+              </g>
 
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <div className="w-16 h-1 bg-[var(--color-brand-fresh)] mx-auto mb-8 rounded-full"></div>
-          <h4 className="text-sm font-bold tracking-widest uppercase text-white/80 mb-4">
-            OUR MISSION
-          </h4>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8 max-w-5xl mx-auto">
-            To make real estate in Nigeria more transparent, trustworthy and easier to navigate.
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-            We believe buying, renting and managing property should not require people to depend on guesswork, hidden information or unnecessary stress.
-          </p>
+              <g>
+                <motion.circle cx="150" cy="200" r="6" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.4, duration: 0.3 }} />
+                <motion.text x="150" y="225" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>Verification</motion.text>
+              </g>
+
+              <g>
+                <motion.circle cx="250" cy="150" r="6" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, duration: 0.3 }} />
+                <motion.text x="250" y="175" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>Professionals</motion.text>
+              </g>
+
+              <g>
+                <motion.circle cx="350" cy="100" r="6" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.0, duration: 0.3 }} />
+                <motion.text x="350" y="125" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>Property</motion.text>
+              </g>
+
+              <g>
+                <motion.circle cx="450" cy="150" r="10" fill="white" stroke="#2F8D46" strokeWidth="4" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.3, duration: 0.4 }} />
+                <motion.circle cx="450" cy="150" r="14" stroke="white" strokeWidth="2" fill="none" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.4 }} />
+                <motion.text x="450" y="185" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>Better Decisions</motion.text>
+              </g>
+              
+            </svg>
+          </div>
         </div>
       </section>
 
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pt-24">
-        <div className="border-t border-[var(--color-border)] mb-32 max-w-4xl mx-auto">
+      {/* Mission Statement Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <h4 className="text-sm font-bold tracking-widest uppercase text-[#6B7280]">
+              OUR MISSION
+            </h4>
+            <div className="w-12 h-1 bg-[#2F8D46] mt-6 rounded-full hidden md:block"></div>
+          </div>
+          <div className="md:col-span-8">
+            <motion.p 
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="text-2xl md:text-3xl text-[#132A1D] font-extrabold leading-relaxed mb-10"
+            >
+              To make real estate in Nigeria more transparent, trustworthy and easier to navigate by combining technology, verified information, trusted professionals and practical services.
+            </motion.p>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-2xl font-medium"
+            >
+              We believe buying, renting and managing property should not require people to depend on guesswork, hidden information or unnecessary stress.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillars Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+        <div className="flex flex-col gap-6">
           {PILLARS.map((pillar, idx) => {
             const isExpanded = expandedIndex === idx;
             return (
-              <div key={idx} className="border-b border-[var(--color-border)]">
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.3, delay: idx * 0.1 }}
+                className={`bg-white border ${isExpanded ? 'border-[#6FBE45]/30 shadow-sm' : 'border-gray-200 hover:border-gray-300'} rounded-[20px] overflow-hidden transition-all duration-300`}
+              >
                 <button
                   onClick={() => toggleExpand(idx)}
-                  className="w-full text-left py-8 focus:outline-none group flex items-start justify-between gap-6"
+                  className="w-full text-left p-6 md:p-8 focus:outline-none focus:ring-4 focus:ring-[#EAF5E3] group flex items-start justify-between gap-6"
+                  aria-expanded={isExpanded}
                 >
-                  <div className="flex items-center gap-6 md:gap-12 flex-1">
-                    <span className={`text-lg font-bold transition-colors duration-200 ${isExpanded ? 'text-[var(--color-brand-medium)]' : 'text-[var(--color-text-secondary)] group-hover:text-[var(--color-brand-medium)]'}`}>
+                  <div className="flex items-center gap-6 md:gap-10 flex-1">
+                    <span className={`text-sm font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-gray-400 group-hover:text-[#6FBE45]'}`}>
                       {pillar.id}
                     </span>
-                    <h3 className={`text-2xl md:text-3xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[var(--color-brand-deep)]' : 'text-[var(--color-text-primary)] group-hover:text-[var(--color-brand-medium)]'}`}>
+                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D] group-hover:text-[#6FBE45]'}`}>
                       {pillar.title}
                     </h3>
                   </div>
                   
-                  <div className="shrink-0 mt-1">
-                    <div className={`w-8 h-8 rounded-full border border-[var(--color-border)] flex items-center justify-center transition-all duration-300 ${isExpanded ? 'bg-[var(--color-brand-deep)] text-white border-[var(--color-brand-deep)] rotate-180' : 'bg-transparent text-[var(--color-brand-deep)] group-hover:border-[var(--color-brand-medium)]'}`}>
-                      {isExpanded ? (
-                        <X className="w-4 h-4" strokeWidth={2} />
-                      ) : (
-                        <Plus className="w-4 h-4" strokeWidth={2} />
-                      )}
-                    </div>
+                  <div className="shrink-0 mt-1 flex items-center justify-center text-[#132A1D]">
+                    {isExpanded ? (
+                      <Minus className="w-5 h-5 text-[#6FBE45] transition-transform duration-300" strokeWidth={2.5} />
+                    ) : (
+                      <Plus className="w-5 h-5 transition-transform duration-300" strokeWidth={2.5} />
+                    )}
                   </div>
                 </button>
                 
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isExpanded ? 'max-h-96 opacity-100 pb-10' : 'max-h-0 opacity-0'
+                    isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="flex gap-6 md:gap-12">
-                    {/* Spacer for alignment with title */}
+                  <div className="px-6 md:px-8 pb-8 pt-2 flex gap-6 md:gap-10">
                     <div className="w-[18px] md:w-[22px] hidden sm:block shrink-0"></div>
-                    <p className="text-xl text-[var(--color-text-secondary)] leading-relaxed max-w-2xl pr-8">
+                    <p className="text-base md:text-lg text-[#6B7280] leading-relaxed max-w-2xl pr-4">
                       {pillar.explanation}
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
+      </section>
 
-        {/* Waitlist CTA */}
-        <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center rounded-[32px] mb-12 overflow-hidden bg-[var(--color-brand-deep)]">
-          {/* Animated Background */}
-          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none rounded-[32px]">
-            <img 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" 
-              alt="Real Estate Action" 
-              className="w-full h-full object-cover animate-slow-pan opacity-60"
-              aria-hidden="true"
-            />
-            {/* Solid color overlay, no gradient */}
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8 relative z-10">
-            <div className="w-16 h-1 bg-white/30 mx-auto mb-8 rounded-full"></div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Ready to be part of what's next?
+      {/* Closing Section - Solid Fresh Green */}
+      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center bg-[#6FBE45] overflow-hidden">
+        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
+          <motion.div
+             initial={{ opacity: 0, y: 12 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.4 }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-12 max-w-3xl mx-auto">
+              A more transparent real estate experience starts with better information.
             </h2>
-            <div className="pt-8">
-              <Link
-                to="/waitlist"
-                className="inline-flex bg-white text-[var(--color-brand-deep)] px-10 py-5 rounded-[var(--radius-button)] font-bold text-lg hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
-              >
-                Join The Waitlist
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
+            <Link
+              to="/waitlist"
+              className="inline-flex bg-white text-[#132A1D] border border-white px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
+            >
+              Join The Waitlist
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

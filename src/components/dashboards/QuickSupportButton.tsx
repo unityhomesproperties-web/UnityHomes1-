@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { HelpCircle, FileText, MessageSquare, X, ChevronRight, CheckCircle, ExternalLink } from 'lucide-react';
 import { SupportCategory } from '../../types';

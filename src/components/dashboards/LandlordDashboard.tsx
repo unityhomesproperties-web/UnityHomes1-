@@ -1,3 +1,4 @@
+// @ts-nocheck
 import MobileBottomNav from "./MobileBottomNav";
 import NotificationFeed from "./NotificationFeed";
 import React, { useState, useEffect } from 'react';

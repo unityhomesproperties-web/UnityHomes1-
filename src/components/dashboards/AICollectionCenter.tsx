@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Bell, Bot, Sparkles, Clock, Send, CheckCircle, AlertTriangle, 

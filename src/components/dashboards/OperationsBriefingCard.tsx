@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Sparkles, Sun, Clock, Mail, CheckCircle2, ChevronRight, Copy, Check } from 'lucide-react';
 

@@ -20,16 +20,16 @@
   --color-primary-green: #6FBE45;
   --color-secondary-green: #2F8D46;
   --color-background: #F5FAF2;
-  --color-border: rgba(19, 42, 29, 0.1);
+  --color-border: rgba(14, 47, 31, 0.08);
   --color-primary-text: #132A1D;
   --color-secondary-text: #6B7280;
 
   /* Radius System */
-  --radius-large: 20px;
-  --radius-card: 16px;
-  --radius-input: 14px;
-  --radius-button: 14px;
-  --radius-small: 10px;
+  --radius-large: 24px;
+  --radius-card: 24px;
+  --radius-input: 18px;
+  --radius-button: 18px;
+  --radius-small: 12px;
   --radius-pill: 999px;
 }
 

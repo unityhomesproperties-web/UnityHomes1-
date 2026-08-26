@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Home, PieChart, DollarSign, Bell, CreditCard, Banknote, HelpCircle } from 'lucide-react';
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
+import Footer from './Footer';
+
 const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Mission', href: '/mission' },
@@ -32,12 +34,12 @@ export default function Layout() {
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-white border-b border-[var(--color-border)] py-2 shadow-sm' 
-            : 'bg-white/95 backdrop-blur-sm border-b border-transparent py-4'
+            : 'bg-white border-b border-transparent py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-[var(--color-brand-deep)] hover:text-[var(--color-brand-fresh)] transition-colors">
-            Unity Homes
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/logo.jpg" alt="Unity Homes Logo" className="h-10 w-auto object-contain" />
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
@@ -72,8 +74,8 @@ export default function Layout() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[60] bg-white flex flex-col animate-fade-in">
           <div className="flex items-center justify-between p-4 sm:px-6 h-20 border-b border-[var(--color-border)]">
-            <Link to="/" className="text-xl font-bold text-[var(--color-brand-deep)]" onClick={closeMenu}>
-              Unity Homes
+            <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
+              <img src="/logo.jpg" alt="Unity Homes Logo" className="h-8 w-auto object-contain" />
             </Link>
             <button
               className="p-2 text-[var(--color-brand-deep)] min-h-[48px] min-w-[48px] flex items-center justify-center hover:bg-[var(--color-surface-soft)] rounded-full transition-colors"
@@ -113,46 +115,7 @@ export default function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[var(--color-brand-deep)] py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="text-lg font-bold text-white mb-4 block">
-                Unity Homes and Properties Ltd
-              </Link>
-              <p className="text-sm text-white/70 leading-relaxed">
-                Building a safer, more transparent real estate experience for Nigeria.
-              </p>
-            </div>
-            
-            <div className="flex flex-col space-y-4">
-              <span className="font-semibold text-white/50 mb-2 text-xs uppercase tracking-wider">Company</span>
-              <Link to="/about" className="text-sm text-white/80 hover:text-white transition-colors">About</Link>
-              <Link to="/mission" className="text-sm text-white/80 hover:text-white transition-colors">Mission</Link>
-              <Link to="/vision" className="text-sm text-white/80 hover:text-white transition-colors">Vision</Link>
-            </div>
-
-            <div className="flex flex-col space-y-4">
-              <span className="font-semibold text-white/50 mb-2 text-xs uppercase tracking-wider">Platform</span>
-              <Link to="/services" className="text-sm text-white/80 hover:text-white transition-colors">Services</Link>
-              <Link to="/professionals" className="text-sm text-white/80 hover:text-white transition-colors">Professionals</Link>
-              <Link to="/area-intelligence" className="text-sm text-white/80 hover:text-white transition-colors">Area Intelligence</Link>
-              <Link to="/waitlist" className="text-sm text-white/80 hover:text-white transition-colors">Join The Waitlist</Link>
-            </div>
-
-            <div className="flex flex-col space-y-4">
-              <span className="font-semibold text-white/50 mb-2 text-xs uppercase tracking-wider">Legal</span>
-              <Link to="/privacy" className="text-sm text-white/80 hover:text-white transition-colors">Privacy</Link>
-              <Link to="/terms" className="text-sm text-white/80 hover:text-white transition-colors">Terms</Link>
-              <Link to="/contact" className="text-sm text-white/80 hover:text-white transition-colors">Contact</Link>
-            </div>
-          </div>
-          
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
-            <p>&copy; 2026 Unity Homes and Properties Ltd. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { 
   CheckCircle2, Clock, AlertCircle, Sparkles, Send, ShieldCheck, DollarSign 

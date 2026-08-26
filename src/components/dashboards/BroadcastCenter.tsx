@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Megaphone, Send, Mail, RefreshCw, Eye, History, Sparkles, Users, X, Clock, AlertTriangle

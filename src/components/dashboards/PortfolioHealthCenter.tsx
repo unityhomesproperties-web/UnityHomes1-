@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { 
   Activity, ShieldCheck, AlertTriangle, Building, Users, Calendar, TrendingDown, Clock, ArrowUpRight

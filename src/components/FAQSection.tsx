@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, X } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 
 const FULL_FAQ = [
   {
@@ -41,55 +41,64 @@ const FULL_FAQ = [
 
 export default function FAQSection({ limit }: { limit?: number }) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
+  
   const displayedFaq = limit ? FULL_FAQ.slice(0, limit) : FULL_FAQ;
-
+  
   return (
-    <div className="w-full">
-      <div className="border-t border-[var(--color-border)]">
-        {displayedFaq.map((faq, idx) => {
-          const isExpanded = expandedIndex === idx;
-          return (
-            <div key={idx} className="border-b border-[var(--color-border)]">
-              <button
-                onClick={() => setExpandedIndex(isExpanded ? null : idx)}
-                className="w-full text-left py-6 focus:outline-none group flex items-start justify-between gap-6"
-              >
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-secondary)]">
-                      {faq.status}
-                    </span>
-                  </div>
-                  <h3 className={`text-xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[var(--color-brand-deep)]' : 'text-[var(--color-text-primary)] group-hover:text-[var(--color-brand-medium)]'}`}>
-                    {faq.question}
-                  </h3>
+    <div className="w-full flex flex-col gap-4">
+      {displayedFaq.map((faq, idx) => {
+        const isExpanded = expandedIndex === idx;
+        const statusColor = faq.status === 'Available Now' ? 'text-[#6FBE45]' : 'text-[#C9A84C]';
+        
+        return (
+          <div 
+            key={idx} 
+            className={`bg-white border ${isExpanded ? 'border-[#6FBE45]/30 shadow-sm' : 'border-gray-200 hover:border-gray-300'} rounded-[20px] overflow-hidden transition-all duration-300`}
+          >
+            <button
+              onClick={() => setExpandedIndex(isExpanded ? null : idx)}
+              className="w-full text-left p-6 md:p-8 focus:outline-none focus:ring-4 focus:ring-[#EAF5E3] flex items-start justify-between gap-6"
+              aria-expanded={isExpanded}
+              aria-controls={`faq-answer-${idx}`}
+              id={`faq-question-${idx}`}
+            >
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className={`text-[11px] font-bold uppercase tracking-widest ${statusColor}`}>
+                    {faq.status}
+                  </span>
                 </div>
-                
-                <div className="shrink-0 mt-1">
-                  <div className={`w-8 h-8 rounded-full border border-[var(--color-border)] flex items-center justify-center transition-all duration-300 ${isExpanded ? 'bg-[var(--color-brand-deep)] text-white border-[var(--color-brand-deep)] rotate-180' : 'bg-transparent text-[var(--color-brand-deep)] group-hover:border-[var(--color-brand-medium)]'}`}>
-                    {isExpanded ? (
-                      <X className="w-4 h-4" strokeWidth={2} />
-                    ) : (
-                      <Plus className="w-4 h-4" strokeWidth={2} />
-                    )}
-                  </div>
-                </div>
-              </button>
+                <h3 className={`text-lg md:text-xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D]'}`}>
+                  {faq.question}
+                </h3>
+              </div>
               
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isExpanded ? 'max-h-96 opacity-100 pb-8' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed pr-14">
+              <div className="shrink-0 mt-1 flex items-center justify-center text-[#132A1D]">
+                {isExpanded ? (
+                  <Minus className="w-5 h-5 text-[#6FBE45] transition-transform duration-300" strokeWidth={2.5} />
+                ) : (
+                  <Plus className="w-5 h-5 transition-transform duration-300" strokeWidth={2.5} />
+                )}
+              </div>
+            </button>
+            
+            <div 
+              id={`faq-answer-${idx}`}
+              role="region"
+              aria-labelledby={`faq-question-${idx}`}
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="px-6 md:px-8 pb-8 pt-2">
+                <p className="text-base md:text-lg text-[#6B7280] leading-relaxed max-w-3xl">
                   {faq.answer}
                 </p>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

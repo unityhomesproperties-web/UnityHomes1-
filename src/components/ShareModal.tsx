@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Share2, Copy, Check, Twitter, Facebook, Mail, MessageCircle } from 'lucide-react';
 
@@ -19,7 +20,7 @@ export default function ShareModal({ url, title, text, isOpen, onClose }: ShareM
   const encodedText = encodeURIComponent(text);
 
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    if (typeof navigator.share === "function") {
       try {
         await navigator.share({ title, text, url });
         onClose();

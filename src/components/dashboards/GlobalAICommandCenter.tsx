@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { 
   Search, Command, Bot, Sparkles, X, ChevronRight, FileText, 

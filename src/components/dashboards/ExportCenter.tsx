@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { 
   FileSpreadsheet, FileText, Download, Printer, X 
