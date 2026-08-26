@@ -74,7 +74,7 @@ export default function CollapsiblePromoCodeSection({
         <button
           type="button"
           onClick={() => setIsExpanded(true)}
-          className={`min-h-[44px] py-2 px-3 flex items-center justify-center space-x-1.5 text-xs font-mono font-bold cursor-pointer transition rounded-xl ${
+          className={`min-h-[44px] py-2 px-3 flex items-center justify-center space-x-1.5 text-xs font-mono font-semibold cursor-pointer transition rounded-xl ${
             darkTheme
               ? 'text-[#C9A84C] hover:text-amber-300 bg-emerald-950/40 hover:bg-emerald-900/50 border border-[#C9A84C]/30'
               : 'text-[#18452E] hover:text-[#18452E] bg-stone-50/80 hover:bg-stone-200/80 border border-stone-200'
@@ -91,7 +91,7 @@ export default function CollapsiblePromoCodeSection({
             : 'bg-stone-50 border-stone-200 text-[#18452E]'
         }`}>
           <div className="flex items-center justify-between mb-2">
-            <span className={`text-[10px] font-mono font-extrabold uppercase tracking-wider flex items-center space-x-1 ${
+            <span className={`text-[10px] font-mono font-semibold uppercase tracking-wider flex items-center space-x-1 ${
               darkTheme ? 'text-[#C9A84C]' : 'text-[#18452E]'
             }`}>
               <Tag className="w-3 h-3" />
@@ -114,7 +114,7 @@ export default function CollapsiblePromoCodeSection({
                 <div className="flex items-center space-x-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-mono font-black text-xs text-emerald-900 tracking-wider uppercase block">
+                    <span className="font-mono font-semibold text-xs text-emerald-900 tracking-wider uppercase block">
                       {appliedResult.code || promoCodeInput.toUpperCase()}
                     </span>
                     <span className="text-[11px] font-medium text-emerald-800 block">
@@ -130,7 +130,7 @@ export default function CollapsiblePromoCodeSection({
                 <button
                   type="button"
                   onClick={handleRemove}
-                  className="min-h-[44px] min-w-[44px] px-2 py-1 text-xs font-bold text-red-600 hover:text-red-800 hover:underline cursor-pointer shrink-0 flex items-center justify-center"
+                  className="min-h-[44px] min-w-[44px] px-2 py-1 text-xs font-semibold text-red-600 hover:text-red-800 hover:underline cursor-pointer shrink-0 flex items-center justify-center"
                 >
                   Remove
                 </button>
@@ -141,14 +141,14 @@ export default function CollapsiblePromoCodeSection({
                   <span className="text-[10px] text-#6B7280 line-through mr-2">
                     ₦{baseAmount.toLocaleString()}
                   </span>
-                  <span className="text-[10px] text-emerald-700 font-bold">
+                  <span className="text-[10px] text-emerald-700 font-semibold">
                     -₦{appliedResult.discount_amount?.toLocaleString()}
                   </span>
                 </div>
 
                 <div className="text-right">
                   <span className="text-[10px] text-stone-400 block font-sans">FINAL PRICE</span>
-                  <span className="font-display font-black text-base text-emerald-700">
+                  <span className="font-display font-semibold text-base text-emerald-700">
                     ₦{(appliedResult.final_amount ?? appliedResult.discounted_amount ?? (baseAmount - (appliedResult.discount_amount || 0))).toLocaleString()}
                   </span>
                 </div>
@@ -175,7 +175,7 @@ export default function CollapsiblePromoCodeSection({
                   type="button"
                   onClick={handleApply}
                   disabled={isValidating || !promoCodeInput.trim()}
-                  className="h-11 min-w-[80px] px-4 bg-[#18452E] hover:bg-[#18452E] disabled:bg-stone-300 disabled:text-#6B7280 text-white font-extrabold text-xs uppercase rounded-xl transition cursor-pointer shrink-0 flex items-center justify-center shadow-xs"
+                  className="h-11 min-w-[80px] px-4 bg-[#18452E] hover:bg-[#18452E] disabled:bg-stone-300 disabled:text-#6B7280 text-white font-semibold text-xs uppercase rounded-xl transition cursor-pointer shrink-0 flex items-center justify-center shadow-xs"
                 >
                   {isValidating ? (
                     <Loader2 className="w-4 h-4 animate-spin text-white" />

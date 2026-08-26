@@ -156,10 +156,10 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
           <div className="absolute top-0 right-0 p-8 opacity-10">
             <QrCode className="w-32 h-32 text-emerald-400" />
           </div>
-          <span className="text-[9px] uppercase font-mono font-black text-[#C9A84C] bg-white/10 px-3 py-1 rounded-full tracking-widest inline-block border border-[#C9A84C]/30">
+          <span className="text-[9px] uppercase font-mono font-semibold text-[#C9A84C] bg-white/10 px-3 py-1 rounded-full tracking-widest inline-block border border-[#C9A84C]/30">
             UNITY HOMES TENANT ONBOARDING
           </span>
-          <h1 className="font-display font-black text-2xl tracking-tight text-white">
+          <h1 className="font-display font-semibold text-2xl tracking-tight text-white">
             Activate Your Tenancy
           </h1>
           <p className="text-emerald-200 text-xs max-w-xs mx-auto">
@@ -173,7 +173,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
           {!activeInvitation ? (
             <div className="space-y-4">
               <div className="text-center space-y-1">
-                <h2 className="font-display font-bold text-#132A1D text-base">Enter Invitation Code</h2>
+                <h2 className="font-display font-semibold text-#132A1D text-base">Enter Invitation Code</h2>
                 <p className="text-#6B7280 text-xs">
                   Enter the 8-character invitation code provided by your landlord to activate your account.
                 </p>
@@ -183,14 +183,14 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                 <div className="p-3 bg-rose-50 border border-rose-200 rounded-2xl text-rose-800 text-xs flex items-start gap-2">
                   <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block font-bold">Invitation Error</strong>
+                    <strong className="block font-semibold">Invitation Error</strong>
                     <span>{validationError}</span>
                   </div>
                 </div>
               )}
 
               <div className="space-y-3">
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase">
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase">
                   INVITATION CODE (e.g. K8M4-ZP91)
                 </label>
                 <div className="relative">
@@ -200,14 +200,14 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                     onChange={(e) => setInvitationCodeInput(e.target.value.toUpperCase())}
                     placeholder="XXXX-XXXX"
                     maxLength={10}
-                    className="w-full p-3.5 bg-stone-50 border border-stone-200 rounded-2xl text-center font-mono font-black text-xl tracking-widest text-#132A1D outline-none focus:border-emerald-700 uppercase"
+                    className="w-full p-3.5 bg-stone-50 border border-stone-200 rounded-2xl text-center font-mono font-semibold text-xl tracking-widest text-#132A1D outline-none focus:border-emerald-700 uppercase"
                   />
                 </div>
 
                 <button
                   onClick={() => handleValidateCode()}
                   disabled={isValidating || !invitationCodeInput}
-                  className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-2xl transition cursor-pointer shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-2xl transition cursor-pointer shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {isValidating ? (
                     <>
@@ -230,9 +230,9 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
               <div className="bg-emerald-50/80 border border-emerald-200 p-4 rounded-2xl space-y-2 mb-6">
                 <div className="flex items-center gap-2 text-emerald-900">
                   <ShieldCheck className="w-5 h-5 text-emerald-700" />
-                  <span className="font-bold text-xs font-mono uppercase">Verified Invitation Found</span>
+                  <span className="font-semibold text-xs font-mono uppercase">Verified Invitation Found</span>
                 </div>
-                <h3 className="font-display font-black text-#132A1D text-base">
+                <h3 className="font-display font-semibold text-#132A1D text-base">
                   Welcome to {activeInvitation.pre_filled_data.tenantFullName || 'Unity Homes'}
                 </h3>
                 <p className="text-#6B7280 text-xs leading-relaxed">
@@ -244,8 +244,8 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
               {step === 1 && (
                 <div className="space-y-4 animate-fade-in">
                   <div className="space-y-2">
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase">PRE-FILLED PHONE NUMBER</label>
-                    <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 text-#132A1D font-mono text-sm font-bold flex items-center gap-2">
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase">PRE-FILLED PHONE NUMBER</label>
+                    <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 text-#132A1D font-mono text-sm font-semibold flex items-center gap-2">
                       <Phone className="w-4 h-4 text-emerald-700" />
                       <span>{activeInvitation.pre_filled_data.phone}</span>
                     </div>
@@ -257,7 +257,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
 
                   <button
                     onClick={() => setStep(2)}
-                    className="w-full py-3 bg-[#18452E] text-white text-xs font-bold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-[#18452E] text-white text-xs font-semibold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
                   >
                     <span>Send Phone Verification Code</span>
                     <ArrowRight className="w-4 h-4" />
@@ -269,10 +269,10 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
               {step === 2 && (
                 <form onSubmit={handleVerifyPhoneOtp} className="space-y-4 animate-fade-in">
                   <div className="text-center space-y-1">
-                    <span className="text-[9px] font-mono font-bold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+                    <span className="text-[9px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
                       STEP 1 OF 3 &bull; PHONE VERIFICATION
                     </span>
-                    <h3 className="font-display font-bold text-#132A1D text-base">Enter Phone OTP Code</h3>
+                    <h3 className="font-display font-semibold text-#132A1D text-base">Enter Phone OTP Code</h3>
                     <p className="text-#6B7280 text-xs">
                       Enter the 6-digit verification code sent to <strong>{activeInvitation.pre_filled_data.phone}</strong>.
                     </p>
@@ -285,13 +285,13 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                       onChange={(e) => setPhoneOtp(e.target.value)}
                       placeholder="123456"
                       maxLength={6}
-                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-center font-mono font-bold text-xl tracking-widest outline-none focus:border-emerald-700"
+                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-center font-mono font-semibold text-xl tracking-widest outline-none focus:border-emerald-700"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-[#18452E] text-white text-xs font-bold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                    className="w-full py-3 bg-[#18452E] text-white text-xs font-semibold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                   >
                     Verify Phone & Proceed
                   </button>
@@ -302,10 +302,10 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
               {step === 3 && (
                 <form onSubmit={handleVerifyEmailOtp} className="space-y-4 animate-fade-in">
                   <div className="text-center space-y-1">
-                    <span className="text-[9px] font-mono font-bold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+                    <span className="text-[9px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
                       STEP 2 OF 3 &bull; EMAIL VERIFICATION
                     </span>
-                    <h3 className="font-display font-bold text-#132A1D text-base">Verify Email Address</h3>
+                    <h3 className="font-display font-semibold text-#132A1D text-base">Verify Email Address</h3>
                     <p className="text-#6B7280 text-xs">
                       Enter the 6-digit verification code sent to <strong>{activeInvitation.pre_filled_data.email}</strong>.
                     </p>
@@ -318,13 +318,13 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                       onChange={(e) => setEmailOtp(e.target.value)}
                       placeholder="654321"
                       maxLength={6}
-                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-center font-mono font-bold text-xl tracking-widest outline-none focus:border-emerald-700"
+                      className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-center font-mono font-semibold text-xl tracking-widest outline-none focus:border-emerald-700"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 bg-[#18452E] text-white text-xs font-bold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                    className="w-full py-3 bg-[#18452E] text-white text-xs font-semibold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                   >
                     Verify Email & Proceed
                   </button>
@@ -335,17 +335,17 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
               {step === 4 && (
                 <form onSubmit={handleActivateAccount} className="space-y-4 animate-fade-in">
                   <div className="text-center space-y-1">
-                    <span className="text-[9px] font-mono font-bold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
+                    <span className="text-[9px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">
                       STEP 3 OF 3 &bull; SECURITY SETUP
                     </span>
-                    <h3 className="font-display font-bold text-#132A1D text-base">Create Account Password</h3>
+                    <h3 className="font-display font-semibold text-#132A1D text-base">Create Account Password</h3>
                     <p className="text-#6B7280 text-xs">
                       Set up your secure password to complete activation and access your dashboard.
                     </p>
                   </div>
 
                   {passwordError && (
-                    <p className="text-rose-600 text-xs font-bold bg-rose-50 p-2.5 rounded-xl border border-rose-200 text-center">
+                    <p className="text-rose-600 text-xs font-semibold bg-rose-50 p-2.5 rounded-xl border border-rose-200 text-center">
                       {passwordError}
                     </p>
                   )}
@@ -353,9 +353,9 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                   <div className="space-y-3">
                     <div>
                       <div className="flex justify-between items-center mb-1">
-                        <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase">PASSWORD</label>
+                        <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase">PASSWORD</label>
                         {pwdStrength.label && (
-                          <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded-md ${pwdStrength.color}`}>
+                          <span className={`text-[9px] font-mono font-semibold px-2 py-0.5 rounded-md ${pwdStrength.color}`}>
                             {pwdStrength.label}
                           </span>
                         )}
@@ -371,7 +371,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                     </div>
 
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">CONFIRM PASSWORD</label>
+                      <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">CONFIRM PASSWORD</label>
                       <input 
                         type="password" 
                         required
@@ -386,7 +386,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                   <button
                     type="submit"
                     disabled={isActivating}
-                    className="w-full py-3.5 bg-[#18452E] text-white text-xs font-bold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
+                    className="w-full py-3.5 bg-[#18452E] text-white text-xs font-semibold rounded-2xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
                   >
                     {isActivating ? (
                       <>
@@ -410,7 +410,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
                   <div>
-                    <h3 className="font-display font-black text-#132A1D text-lg">Account Activated!</h3>
+                    <h3 className="font-display font-semibold text-#132A1D text-lg">Account Activated!</h3>
                     <p className="text-#6B7280 text-xs mt-1">
                       Your tenancy is linked and active. Redirecting you to your tenant dashboard...
                     </p>

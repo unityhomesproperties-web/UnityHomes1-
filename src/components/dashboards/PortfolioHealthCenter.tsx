@@ -84,8 +84,8 @@ export default function PortfolioHealthCenter({
       {/* SCORE HERO */}
       <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-8 shadow-sm flex flex-col lg:flex-row items-center gap-8">
         <div className="flex-1 text-center lg:text-left">
-          <h2 className="text-sm font-mono font-bold uppercase tracking-widest text-stone-400 mb-2">Proprietary Metric</h2>
-          <h3 className="text-3xl font-display font-black text-[#18452E] mb-4">Portfolio Health Score</h3>
+          <h2 className="text-sm font-mono font-semibold uppercase tracking-widest text-stone-400 mb-2">Proprietary Metric</h2>
+          <h3 className="text-3xl font-display font-semibold text-[#18452E] mb-4">Portfolio Health Score</h3>
           <p className="text-#6B7280 text-sm max-w-md">Calculated dynamically based on occupancy, rent collection, service charge compliance, and maintenance overhead.</p>
         </div>
         
@@ -99,15 +99,15 @@ export default function PortfolioHealthCenter({
             />
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-5xl font-display font-black text-[#18452E]">{healthScore}</span>
-            <span className="text-xs font-mono font-bold text-stone-400">/ 100</span>
+            <span className="text-5xl font-display font-semibold text-[#18452E]">{healthScore}</span>
+            <span className="text-xs font-mono font-semibold text-stone-400">/ 100</span>
           </div>
         </div>
 
         <div className="flex-1">
           <div className={`p-6 rounded-2xl border ${status.bg} ${status.border} text-center`}>
-            <span className="block text-xs font-mono font-bold uppercase tracking-wider mb-2">Portfolio Status</span>
-            <span className={`text-2xl font-display font-black ${status.color}`}>{status.label}</span>
+            <span className="block text-xs font-mono font-semibold uppercase tracking-wider mb-2">Portfolio Status</span>
+            <span className={`text-2xl font-display font-semibold ${status.color}`}>{status.label}</span>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function PortfolioHealthCenter({
         <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm min-w-0">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="w-6 h-6 text-rose-500" />
-            <h3 className="font-display font-black text-[#18452E] uppercase">Tenant Default Risk Detector</h3>
+            <h3 className="font-display font-semibold text-[#18452E] uppercase">Tenant Default Risk Detector</h3>
           </div>
           
           <div className="space-y-4">
@@ -128,18 +128,18 @@ export default function PortfolioHealthCenter({
               riskyTenants.map((rt, idx) => (
                 <div key={idx} className="p-4 bg-stone-50 border border-stone-200 rounded-2xl flex justify-between items-center">
                   <div>
-                    <h4 className="font-bold text-[#18452E]">{rt.tenantName}</h4>
+                    <h4 className="font-semibold text-[#18452E]">{rt.tenantName}</h4>
                     <p className="text-[10px] font-mono text-#6B7280">{rt.unit} - {rt.property}</p>
                   </div>
                   <div className="text-right">
-                    <span className={`px-2 py-1 text-[10px] font-bold uppercase rounded ${
+                    <span className={`px-2 py-1 text-[10px] font-semibold uppercase rounded ${
                       rt.riskScore === 'Critical Risk' ? 'bg-rose-100 text-rose-800' :
                       rt.riskScore === 'High Risk' ? 'bg-amber-100 text-amber-800' :
                       'bg-stone-200 text-#132A1D'
                     }`}>
                       {rt.riskScore}
                     </span>
-                    <p className="text-xs font-bold mt-1 text-#132A1D">Owes ₦{rt.amount.toLocaleString()}</p>
+                    <p className="text-xs font-semibold mt-1 text-#132A1D">Owes ₦{rt.amount.toLocaleString()}</p>
                   </div>
                 </div>
               ))
@@ -151,7 +151,7 @@ export default function PortfolioHealthCenter({
         <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm min-w-0">
           <div className="flex items-center gap-3 mb-6">
             <TrendingDown className="w-6 h-6 text-amber-500" />
-            <h3 className="font-display font-black text-[#18452E] uppercase">Underperforming Property Detector</h3>
+            <h3 className="font-display font-semibold text-[#18452E] uppercase">Underperforming Property Detector</h3>
           </div>
           
           <div className="space-y-4">
@@ -165,14 +165,14 @@ export default function PortfolioHealthCenter({
               return (
                 <div key={p.id} className="p-4 bg-stone-50 border border-stone-200 rounded-2xl">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-[#18452E]">{p.title}</h4>
-                    <span className="px-2 py-1 bg-rose-100 text-rose-800 text-[10px] font-bold uppercase rounded">Attention Required</span>
+                    <h4 className="font-semibold text-[#18452E]">{p.title}</h4>
+                    <span className="px-2 py-1 bg-rose-100 text-rose-800 text-[10px] font-semibold uppercase rounded">Attention Required</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div><span className="text-#6B7280 font-mono">Occupancy:</span> <strong className={pRate < 50 ? 'text-rose-600' : 'text-amber-600'}>{pRate}%</strong></div>
                     <div><span className="text-#6B7280 font-mono">Issues:</span> <strong>High Vacancy</strong></div>
                   </div>
-                  <button className="mt-3 text-[10px] font-bold uppercase text-[#18452E] flex items-center gap-1 hover:underline">
+                  <button className="mt-3 text-[10px] font-semibold uppercase text-[#18452E] flex items-center gap-1 hover:underline">
                     View Diagnostics <ArrowUpRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -188,7 +188,7 @@ export default function PortfolioHealthCenter({
       <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Calendar className="w-6 h-6 text-blue-500" />
-          <h3 className="font-display font-black text-[#18452E] uppercase">Lease Expiry & Renewals Center</h3>
+          <h3 className="font-display font-semibold text-[#18452E] uppercase">Lease Expiry & Renewals Center</h3>
         </div>
         
         <div className="overflow-x-auto">
@@ -208,11 +208,11 @@ export default function PortfolioHealthCenter({
                 const property = properties.find(p => p.title === u.propertyName || u.propertyName.includes(p.title));
                 return (
                   <tr key={u.id} className="border-b border-stone-200">
-                    <td className="p-3 font-bold text-sm text-[#18452E]">Tenant #{i+1}</td>
+                    <td className="p-3 font-semibold text-sm text-[#18452E]">Tenant #{i+1}</td>
                     <td className="p-3 text-xs text-#6B7280">{property?.title} <br/> {u.unitNumber}</td>
                     <td className="p-3 text-xs font-mono text-#6B7280">2026-12-01</td>
                     <td className="p-3">
-                      <span className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${
+                      <span className={`px-2 py-1 text-[10px] uppercase font-semibold rounded ${
                         daysLeft <= 14 ? 'bg-rose-100 text-rose-800' :
                         daysLeft <= 60 ? 'bg-amber-100 text-amber-800' :
                         'bg-emerald-100 text-emerald-800'
@@ -221,7 +221,7 @@ export default function PortfolioHealthCenter({
                       </span>
                     </td>
                     <td className="p-3">
-                      <button className="px-3 py-1.5 bg-stone-50 text-#6B7280 hover:bg-stone-200 rounded text-xs font-bold">
+                      <button className="px-3 py-1.5 bg-stone-50 text-#6B7280 hover:bg-stone-200 rounded text-xs font-semibold">
                         Trigger Renewal
                       </button>
                     </td>
@@ -237,7 +237,7 @@ export default function PortfolioHealthCenter({
       <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Clock className="w-6 h-6 text-[#C9A84C]" />
-          <h3 className="font-display font-black text-[#18452E] uppercase">Late Remittance Detector (Shortlets)</h3>
+          <h3 className="font-display font-semibold text-[#18452E] uppercase">Late Remittance Detector (Shortlets)</h3>
         </div>
         
         <div className="overflow-x-auto">
@@ -257,19 +257,19 @@ export default function PortfolioHealthCenter({
                 const isLate = i === 0;
                 return (
                   <tr key={b.id} className="border-b border-stone-200">
-                    <td className="p-3 font-bold text-sm text-[#18452E]">{b.guestName} (Manager Proxy)</td>
+                    <td className="p-3 font-semibold text-sm text-[#18452E]">{b.guestName} (Manager Proxy)</td>
                     <td className="p-3 text-xs font-mono text-#6B7280">₦{b.totalPaid.toLocaleString()}</td>
                     <td className="p-3">
-                      <span className={`px-2 py-1 text-[10px] uppercase font-bold rounded ${
+                      <span className={`px-2 py-1 text-[10px] uppercase font-semibold rounded ${
                         isLate ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'
                       }`}>
                         {isLate ? 'Critical Delay' : 'On Time'}
                       </span>
                     </td>
-                    <td className="p-3 text-xs font-mono font-bold text-#132A1D">{isLate ? '12 Days' : '0'}</td>
+                    <td className="p-3 text-xs font-mono font-semibold text-#132A1D">{isLate ? '12 Days' : '0'}</td>
                     <td className="p-3 text-xs text-#6B7280">{isLate ? '65%' : '98%'}</td>
                     <td className="p-3">
-                      <button className="px-3 py-1.5 bg-stone-50 text-#6B7280 hover:bg-stone-200 rounded text-xs font-bold">
+                      <button className="px-3 py-1.5 bg-stone-50 text-#6B7280 hover:bg-stone-200 rounded text-xs font-semibold">
                         {isLate ? 'Flag Manager' : 'View Ledger'}
                       </button>
                     </td>

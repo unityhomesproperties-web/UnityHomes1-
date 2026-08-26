@@ -289,7 +289,7 @@ export default function Dashboards({ session, navigate, onLogout }: DashboardsPr
         );
       default:
         return (
-          <div className="p-8 text-center text-red-500 font-bold">
+          <div className="p-8 text-center text-red-500 font-semibold">
             Unknown user role: {session.role}
             <div className="mt-4">
               <button onClick={onLogout} className="px-4 py-2 bg-stone-200 text-#132A1D rounded">Logout</button>
@@ -303,7 +303,7 @@ export default function Dashboards({ session, navigate, onLogout }: DashboardsPr
     <div className="w-full flex flex-col relative">
       {successMsg && (
         <div className="fixed top-4 right-4 z-[100] p-4 bg-emerald-50 border border-emerald-300 rounded-2xl flex items-center shadow-sm">
-          <span className="text-sm font-bold text-emerald-800">{successMsg}</span>
+          <span className="text-sm font-semibold text-emerald-800">{successMsg}</span>
         </div>
       )}
       <GlobalSearch 

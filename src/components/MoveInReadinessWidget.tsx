@@ -110,7 +110,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
       
       {/* Toast Alert */}
       {toastMessage && (
-        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-sm flex items-center justify-between animate-fade-in">
+        <div className="p-3 bg-emerald-800 text-white text-xs font-semibold rounded-2xl shadow-sm flex items-center justify-between animate-fade-in">
           <span>{toastMessage}</span>
         </div>
       )}
@@ -119,17 +119,17 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-[9px] font-mono font-black uppercase text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
+            <span className="text-[9px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full">
               MOVE-IN READINESS CHECKLIST
             </span>
             {currentProfile.verified_badge && (
-              <span className="text-[9px] font-mono font-black uppercase text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <span className="text-[9px] font-mono font-semibold uppercase text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-amber-600" />
                 VERIFIED TENANT
               </span>
             )}
           </div>
-          <h3 className="font-display font-bold text-#132A1D text-lg mt-1">
+          <h3 className="font-display font-semibold text-#132A1D text-lg mt-1">
             Readiness Completion Tracking
           </h3>
           <p className="text-#6B7280 text-xs">
@@ -140,14 +140,14 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
         {/* Progress Pill */}
         <div className="flex items-center gap-3 bg-stone-50 p-3 rounded-2xl border border-stone-200 shrink-0">
           <div className="text-right">
-            <span className="text-[9px] font-mono font-bold uppercase text-stone-400 block">Checklist Progress</span>
-            <strong className="text-#132A1D font-mono font-black text-lg">
+            <span className="text-[9px] font-mono font-semibold uppercase text-stone-400 block">Checklist Progress</span>
+            <strong className="text-#132A1D font-mono font-semibold text-lg">
               {readiness.completion_percentage}%
             </strong>
           </div>
           <div className="w-12 h-12 rounded-full border-4 border-stone-200 flex items-center justify-center relative">
             <div 
-              className={`w-full h-full rounded-full flex items-center justify-center font-mono text-[10px] font-bold ${
+              className={`w-full h-full rounded-full flex items-center justify-center font-mono text-[10px] font-semibold ${
                 readiness.completion_percentage === 100 ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'
               }`}
             >
@@ -169,7 +169,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
 
       {/* Mandatory Items Checklist Grid */}
       <div className="space-y-3">
-        <h4 className="text-xs font-mono font-black uppercase text-stone-400 tracking-wider">
+        <h4 className="text-xs font-mono font-semibold uppercase text-stone-400 tracking-wider">
           Mandatory Move-In Requirements (6 Core Controls)
         </h4>
 
@@ -190,7 +190,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
                     <Circle className="w-5 h-5 text-stone-300 shrink-0" />
                   )}
                   <div>
-                    <span className="text-xs font-bold block">{item.label}</span>
+                    <span className="text-xs font-semibold block">{item.label}</span>
                     <span className="text-[9px] font-mono text-stone-400">
                       {item.isDone ? 'Completed & Verified' : 'Action Required'}
                     </span>
@@ -203,14 +203,14 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
                     {item.canOverride && item.fieldName && (
                       <button
                         onClick={() => handleToggleLandlordItem(item.fieldName!)}
-                        className="px-2.5 py-1 bg-stone-200 hover:bg-stone-300 text-#132A1D text-[10px] font-bold rounded-xl transition cursor-pointer"
+                        className="px-2.5 py-1 bg-stone-200 hover:bg-stone-300 text-#132A1D text-[10px] font-semibold rounded-xl transition cursor-pointer"
                       >
                         Mark Completed
                       </button>
                     )}
                     <button
                       onClick={() => handleRemindTenant(item.label)}
-                      className="px-2.5 py-1 bg-emerald-800 text-white text-[10px] font-bold rounded-xl hover:bg-emerald-900 transition cursor-pointer flex items-center gap-1"
+                      className="px-2.5 py-1 bg-emerald-800 text-white text-[10px] font-semibold rounded-xl hover:bg-emerald-900 transition cursor-pointer flex items-center gap-1"
                     >
                       <Send className="w-3 h-3" />
                       <span>Remind</span>
@@ -229,7 +229,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-amber-700" />
             <div>
-              <strong className="text-xs font-bold text-amber-950 block">Level 2 Identity Verification (Verified Badge)</strong>
+              <strong className="text-xs font-semibold text-amber-950 block">Level 2 Identity Verification (Verified Badge)</strong>
               <span className="text-[10px] text-amber-800">Optional identity verification for high-trust tenancy standing.</span>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
           {mode === 'tenant' && !currentProfile.verified_badge && (
             <button
               onClick={() => setShowVerificationModal(true)}
-              className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#B8973B] text-#132A1D text-xs font-bold rounded-xl transition cursor-pointer flex items-center gap-1 shadow-xs"
+              className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#B8973B] text-#132A1D text-xs font-semibold rounded-xl transition cursor-pointer flex items-center gap-1 shadow-xs"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>Submit Verification</span>
@@ -253,7 +253,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
               ) : (
                 <Circle className="w-4 h-4 text-amber-300 shrink-0" />
               )}
-              <span className={item.isDone ? 'font-bold text-#132A1D' : 'text-#6B7280'}>
+              <span className={item.isDone ? 'font-semibold text-#132A1D' : 'text-#6B7280'}>
                 {item.label}
               </span>
             </div>
@@ -268,11 +268,11 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
             <div className="flex justify-between items-center border-b border-stone-200 pb-3">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-amber-600" />
-                <h3 className="font-display font-bold text-#132A1D text-base">Level 2 Identity Verification</h3>
+                <h3 className="font-display font-semibold text-#132A1D text-base">Level 2 Identity Verification</h3>
               </div>
               <button 
                 onClick={() => setShowVerificationModal(false)}
-                className="text-stone-400 hover:text-#6B7280 font-bold text-sm"
+                className="text-stone-400 hover:text-#6B7280 font-semibold text-sm"
               >
                 ✕
               </button>
@@ -280,7 +280,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
 
             <form onSubmit={handleSubmitLevel2Request} className="space-y-4 text-xs">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   National Identification Number (NIN)
                 </label>
                 <input 
@@ -297,7 +297,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   ID Type
                 </label>
                 <select
@@ -313,7 +313,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   Upload Government ID Photo URL / File
                 </label>
                 <input 
@@ -327,7 +327,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   Upload Verification Selfie Photo URL / File
                 </label>
                 <input 
@@ -344,14 +344,14 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
                 <button
                   type="button"
                   onClick={() => setShowVerificationModal(false)}
-                  className="flex-1 py-2.5 bg-stone-50 text-#132A1D font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                  className="flex-1 py-2.5 bg-stone-50 text-#132A1D font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmittingVerif}
-                  className="flex-1 py-2.5 bg-[#18452E] text-white font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                  className="flex-1 py-2.5 bg-[#18452E] text-white font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                 >
                   {isSubmittingVerif ? 'Transmitting...' : 'Submit to Admin'}
                 </button>

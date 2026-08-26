@@ -174,12 +174,12 @@ function LandlordTenantComplaintsSection({
     <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
       <div className="flex justify-between items-center border-b border-stone-200 pb-3">
         <div>
-          <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Tenant Complaints Queue</h4>
-          <p className="text-[10px] text-#6B7280 font-light mt-0.5">
+          <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Tenant Complaints Queue</h4>
+          <p className="text-[10px] text-#6B7280 font-normal mt-0.5">
             Complaints routed to your landlord dashboard. Direct responses are sent instantly to the tenant.
           </p>
         </div>
-        <span className="font-mono text-[10px] bg-[#18452E]/10 text-[#18452E] px-2.5 py-1 rounded-full font-bold">
+        <span className="font-mono text-[10px] bg-[#18452E]/10 text-[#18452E] px-2.5 py-1 rounded-full font-semibold">
           {visibleComplaints.length} Actionable
         </span>
       </div>
@@ -199,9 +199,9 @@ function LandlordTenantComplaintsSection({
                 <div className="flex justify-between items-start">
                   <div>
                     <div className="flex items-center gap-2">
-                      <strong className="text-#132A1D text-xs font-black">{c.complaint_category || c.category}</strong>
+                      <strong className="text-#132A1D text-xs font-semibold">{c.complaint_category || c.category}</strong>
                       {c.urgency && (
-                        <span className={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase ${c.urgency === 'Urgent' ? 'bg-red-600 text-white' : c.urgency === 'High' ? 'bg-amber-500 text-white' : 'bg-blue-600 text-white'}`}>
+                        <span className={`px-1.5 py-0.5 rounded text-[8px] font-semibold uppercase ${c.urgency === 'Urgent' ? 'bg-red-600 text-white' : c.urgency === 'High' ? 'bg-amber-500 text-white' : 'bg-blue-600 text-white'}`}>
                           {c.urgency}
                         </span>
                       )}
@@ -210,7 +210,7 @@ function LandlordTenantComplaintsSection({
                       Tenant: <strong>{c.tenant}</strong> &bull; {c.propertyName} ({c.unit})
                     </p>
                   </div>
-                  <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase border ${statusBadgeClass}`}>
+                  <span className={`px-2 py-0.5 rounded text-[9px] font-semibold uppercase border ${statusBadgeClass}`}>
                     {c.status}
                   </span>
                 </div>
@@ -260,7 +260,7 @@ function LandlordTenantComplaintsSection({
                         onChange={(e) => setMarkResolved(e.target.checked)}
                         className="w-3.5 h-3.5 text-emerald-700 border-stone-300 rounded"
                       />
-                      <label htmlFor={`resolve-${c.id}`} className="text-[10px] text-#132A1D font-bold uppercase">
+                      <label htmlFor={`resolve-${c.id}`} className="text-[10px] text-#132A1D font-semibold uppercase">
                         Mark complaint as completely RESOLVED
                       </label>
                     </div>
@@ -268,14 +268,14 @@ function LandlordTenantComplaintsSection({
                       <button
                         type="button"
                         onClick={() => handleResponseSubmit(c)}
-                        className="px-3 py-1.5 bg-emerald-800 text-white rounded-lg text-xs font-bold cursor-pointer hover:bg-emerald-900"
+                        className="px-3 py-1.5 bg-emerald-800 text-white rounded-lg text-xs font-semibold cursor-pointer hover:bg-emerald-900"
                       >
                         Submit Response
                       </button>
                       <button
                         type="button"
                         onClick={() => { setRespondingId(null); setResponseText(''); setActionTakenText(''); }}
-                        className="px-3 py-1.5 bg-stone-50 text-#6B7280 rounded-lg text-xs font-bold cursor-pointer hover:bg-stone-200"
+                        className="px-3 py-1.5 bg-stone-50 text-#6B7280 rounded-lg text-xs font-semibold cursor-pointer hover:bg-stone-200"
                       >
                         Cancel
                       </button>
@@ -287,7 +287,7 @@ function LandlordTenantComplaintsSection({
                     <button
                       type="button"
                       onClick={() => { setRespondingId(c.id); setResponseText(c.landlordResponse || ''); setActionTakenText(c.landlordActionTaken || ''); }}
-                      className="px-3 py-1 bg-amber-600 text-white rounded-lg font-bold text-[10px] uppercase hover:bg-amber-700 transition"
+                      className="px-3 py-1 bg-amber-600 text-white rounded-lg font-semibold text-[10px] uppercase hover:bg-amber-700 transition"
                     >
                       {c.landlordResponse ? 'Update Response' : 'Respond'}
                     </button>
@@ -1043,7 +1043,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           />
           <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-full shadow-xs border border-stone-200">
             {isOffline ? <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></div> : (isSyncing ? <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div> : <div className="w-2 h-2 rounded-full bg-emerald-500"></div>)}
-            <span className="text-[10px] font-mono uppercase font-bold text-#6B7280">{isOffline ? 'Offline' : (isSyncing ? 'Syncing' : 'Online')}</span>
+            <span className="text-[10px] font-mono uppercase font-semibold text-#6B7280">{isOffline ? 'Offline' : (isSyncing ? 'Syncing' : 'Online')}</span>
           </div>
           <button onClick={() => setShowNotifications(true)} className="p-2 border border-stone-200 bg-white rounded-full hover:bg-stone-50 transition relative shadow-xs">
             <Bell className="w-4 h-4 text-#6B7280" />
@@ -1066,7 +1066,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* AREA 1: HOME */}
           <button
             onClick={() => setActiveTab('Overview')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Overview', 'PortfolioHealth'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1078,7 +1078,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* AREA 2: PROPERTIES */}
           <button
             onClick={() => setActiveTab('Properties')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Properties', 'TenantIntelligence'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1090,7 +1090,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* AREA 3: MONEY */}
           <button
             onClick={() => setActiveTab('Payments')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Payments', 'ServiceCharges', 'AICollection'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1102,7 +1102,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* AREA 4: OPERATIONS */}
           <button
             onClick={() => setActiveTab('Maintenance')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Maintenance'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1114,7 +1114,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* AREA 5: MORE */}
           <button
             onClick={() => setActiveTab('Documents')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
               ['Documents'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1130,7 +1130,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <>
               <button 
                 onClick={() => setActiveTab('Overview')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Overview' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1138,7 +1138,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </button>
               <button 
                 onClick={() => setActiveTab('PortfolioHealth')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'PortfolioHealth' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1151,7 +1151,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <>
               <button 
                 onClick={() => setActiveTab('Properties')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Properties' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1159,7 +1159,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </button>
               <button 
                 onClick={() => setActiveTab('TenantIntelligence')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'TenantIntelligence' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1172,7 +1172,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <>
               <button 
                 onClick={() => setActiveTab('Payments')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Payments' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1180,7 +1180,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </button>
               <button 
                 onClick={() => setActiveTab('ServiceCharges')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'ServiceCharges' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1188,7 +1188,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </button>
               <button 
                 onClick={() => setActiveTab('AICollection')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'AICollection' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1200,7 +1200,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {['Maintenance'].includes(activeTab) && (
             <button 
               onClick={() => setActiveTab('Maintenance')} 
-              className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer"
+              className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer"
             >
               &bull; Maintenance Center
             </button>
@@ -1210,7 +1210,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <>
               <button 
                 onClick={() => setActiveTab('Documents')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Documents' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1218,7 +1218,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </button>
               <button 
                 onClick={() => setActiveTab('Support')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Support' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1230,7 +1230,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   triggerSuccess('Demo portfolio loaded! Mrs. Adunola Fashola 2 buildings, 7 units, and tenant histories active.');
                   window.location.reload();
                 }}
-                className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#b8973b] text-white font-mono text-[11px] font-bold rounded-xl cursor-pointer transition shadow-xs flex items-center gap-1"
+                className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#b8973b] text-white font-mono text-[11px] font-semibold rounded-xl cursor-pointer transition shadow-xs flex items-center gap-1"
                 title="Reload demo portfolio with 2 buildings and 7 units"
               >
                 <Star className="w-3.5 h-3.5" />
@@ -1263,11 +1263,11 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
                 PORTFOLIO BALANCE
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-black text-white mt-1">
+              <h2 className="text-3xl md:text-5xl font-display font-semibold text-white mt-1">
                 ₦{totalBalance.toLocaleString()}
               </h2>
               {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-              <span className="text-[10px] text-stone-300/80 font-light block mt-1 tracking-normal">
+              <span className="text-[10px] text-stone-300/80 font-normal block mt-1 tracking-normal">
                 100% Verified naira receipts confirmed inside direct verified routing bank details.
               </span>
             </div>
@@ -1275,8 +1275,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* METRICS GRID */}
             <div className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto pb-2 pt-4 border-t border-white/10 scrollbar-thin">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
-                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-bold">Occupancy Rate</span>
-                <span className="text-xl font-display font-bold mt-1 block">{occupancyRate}% Occupied</span>
+                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-semibold">Occupancy Rate</span>
+                <span className="text-xl font-display font-semibold mt-1 block">{occupancyRate}% Occupied</span>
                 <div className="w-full bg-white/10 h-1.5 mt-2 rounded-full overflow-hidden">
                   <div className="bg-[#C9A84C] h-full" style={{ width: `${occupancyRate}%` }}></div>
                 </div>
@@ -1284,14 +1284,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
                 <span className="text-[9px] uppercase font-mono text-stone-300 block">Total Payments Received</span>
-                <span className="text-xl font-display font-bold mt-1 block">₦{totalBalance.toLocaleString()}</span>
+                <span className="text-xl font-display font-semibold mt-1 block">₦{totalBalance.toLocaleString()}</span>
                 {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
                 <span className="text-[9px] text-[#C9A84C] font-mono leading-none">&bull; Verified and Confirmed</span>
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
                 <span className="text-[9px] uppercase font-mono text-rose-300 block">Outstanding Balance</span>
-                <span className="text-xl font-display font-bold mt-1 block text-rose-300">₦{outstandingRent.toLocaleString()}</span>
+                <span className="text-xl font-display font-semibold mt-1 block text-rose-300">₦{outstandingRent.toLocaleString()}</span>
                 <span className="text-[9px] text-red-300 font-mono italic leading-none">&bull; Due soon/Overdue</span>
               </div>
             </div>
@@ -1300,8 +1300,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* SUBSCRIPTION CAPACITY PROGRESS BAR */}
           <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-3 shadow-sm animate-fade-in">
             <div className="flex justify-between items-center text-xs">
-              <span className="font-display font-bold text-[#18452E] uppercase tracking-wider">Properties Capacity Tracker</span>
-              <span className="font-mono font-bold text-#6B7280">
+              <span className="font-display font-semibold text-[#18452E] uppercase tracking-wider">Properties Capacity Tracker</span>
+              <span className="font-mono font-semibold text-#6B7280">
                 {myBuildings.length} of {((subscriptions || []).find(s => s.entityId === landlordCode)?.property_limit || 30)} properties ({Math.round((myBuildings.length / ((subscriptions || []).find(s => s.entityId === landlordCode)?.property_limit || 30)) * 100)}%)
               </span>
             </div>
@@ -1322,9 +1322,9 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {Math.round((myBuildings.length / ((subscriptions || []).find(s => s.entityId === landlordCode)?.property_limit || 30)) * 100) >= 70 && (
               <p className={`text-xs mt-1 animate-pulse ${
                 Math.round((myBuildings.length / ((subscriptions || []).find(s => s.entityId === landlordCode)?.property_limit || 30)) * 100) >= 100
-                  ? "text-rose-600 font-black uppercase"
+                  ? "text-rose-600 font-semibold uppercase"
                   : Math.round((myBuildings.length / ((subscriptions || []).find(s => s.entityId === landlordCode)?.property_limit || 30)) * 100) >= 90
-                  ? "text-rose-600 font-bold"
+                  ? "text-rose-600 font-semibold"
                   : "text-amber-600 font-medium"
               }`}>
                 &bull; {
@@ -1347,7 +1347,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="font-display font-black text-xl text-#132A1D uppercase tracking-tight">
+                  <h3 className="font-display font-semibold text-xl text-#132A1D uppercase tracking-tight">
                     Subscription Limit Reached
                   </h3>
                   <p className="text-xs text-#6B7280 leading-relaxed">
@@ -1361,13 +1361,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
+                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
                   <button
                     onClick={() => setShowLimitModal(false)}
-                    className="w-full py-3 bg-white hover:bg-stone-50 text-#6B7280 border border-stone-200 text-xs font-extrabold rounded-xl transition cursor-pointer"
+                    className="w-full py-3 bg-white hover:bg-stone-50 text-#6B7280 border border-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Cancel
                   </button>
@@ -1379,7 +1379,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           {/* RECENTLY VIEWED ROW */}
           {recentlyViewed.length > 0 && (
             <div className="space-y-3">
-              <h3 className="font-display font-black text-xs text-#6B7280 uppercase tracking-widest px-1">Recently Viewed</h3>
+              <h3 className="font-display font-semibold text-xs text-#6B7280 uppercase tracking-widest px-1">Recently Viewed</h3>
               <div className="flex overflow-x-auto gap-4 pb-4 scrollbar-hide">
                 {recentlyViewed.map((item, i) => (
                   <button 
@@ -1407,17 +1407,17 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             
             {/* NEEDS ATTENTION SCANNABLE LIST (Step 4) */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col min-w-0">
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Needs Attention</h3>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase mb-4">Needs Attention</h3>
               <div className="space-y-2 flex-1">
                 {myUnits.filter(u => u.paymentStatus === 'Overdue').map(u => (
                   <div key={`owes-${u.id}`} className="flex items-center space-x-3 p-3 bg-red-50 border-l-4 border-red-500 rounded-r-lg text-xs">
-                    <span className="font-bold text-red-800 uppercase text-[10px] bg-red-100 px-2 py-0.5 rounded shrink-0">Rent Overdue</span>
+                    <span className="font-semibold text-red-800 uppercase text-[10px] bg-red-100 px-2 py-0.5 rounded shrink-0">Rent Overdue</span>
                     <span className="text-#132A1D"><strong>{u.tenantName}</strong> owes ₦{u.rentAmount.toLocaleString()} at {u.propertyName} ({u.unitNumber}).</span>
                   </div>
                 ))}
                 {myUnits.filter(u => u.paymentStatus === 'Lease Expiring Soon').map(u => (
                   <div key={`exp-${u.id}`} className="flex items-center space-x-3 p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-xs">
-                    <span className="font-bold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Lease Expiring</span>
+                    <span className="font-semibold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Lease Expiring</span>
                     <span className="text-#132A1D"><strong>{u.tenantName}</strong> at {u.propertyName} ({u.unitNumber}) lease expires in 14 days.</span>
                   </div>
                 ))}
@@ -1427,21 +1427,21 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   return (
                     <div key={`vac-${u.id}`} className="flex items-center space-x-3 p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-xs justify-between">
                       <div className="flex items-center space-x-3">
-                        <span className="font-bold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Vacant Unit</span>
+                        <span className="font-semibold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Vacant Unit</span>
                         <span className="text-#132A1D"><strong>{u.propertyName} ({u.unitNumber})</strong> vacant for {daysVacant} days. Potential lost income: <strong>₦{lostIncome.toLocaleString()}</strong>.</span>
                       </div>
-                      <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-bold cursor-pointer transition shadow-xs whitespace-nowrap">
+                      <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-semibold cursor-pointer transition shadow-xs whitespace-nowrap">
                         Dispute Vacancy
                       </button>
                     </div>
                   );
                 })}
                 <div className="flex items-center space-x-3 p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-xs">
-                  <span className="font-bold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Pending Maintenance</span>
+                  <span className="font-semibold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Pending Maintenance</span>
                   <span className="text-#132A1D">2 requests await your approval.</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-xs">
-                  <span className="font-bold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Payments to Confirm</span>
+                  <span className="font-semibold text-amber-800 uppercase text-[10px] bg-amber-100 px-2 py-0.5 rounded shrink-0">Payments to Confirm</span>
                   <span className="text-#132A1D">1 Service Charge payment pending verification.</span>
                 </div>
               </div>
@@ -1449,26 +1449,26 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* CASH FLOW FORECAST (Step 5) */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col min-w-0">
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Cash Flow Forecast</h3>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase mb-4">Cash Flow Forecast</h3>
               <div className="flex-1 space-y-4">
                 <div className="p-4 bg-stone-50 border border-stone-200 rounded-xl space-y-3">
                   <div className="flex justify-between items-center border-b border-stone-200 pb-2">
-                    <span className="text-[10px] font-bold text-#6B7280 uppercase">This Month's Expected Rent</span>
-                    <span className="font-mono font-bold text-#132A1D text-sm">₦{(totalBalance + outstandingRent).toLocaleString()}</span>
+                    <span className="text-[10px] font-semibold text-#6B7280 uppercase">This Month's Expected Rent</span>
+                    <span className="font-mono font-semibold text-#132A1D text-sm">₦{(totalBalance + outstandingRent).toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-stone-200 pb-2">
-                    <span className="text-[10px] font-bold text-#6B7280 uppercase">Actually Received</span>
-                    <span className="font-mono font-bold text-emerald-700 text-sm">₦{totalBalance.toLocaleString()}</span>
+                    <span className="text-[10px] font-semibold text-#6B7280 uppercase">Actually Received</span>
+                    <span className="font-mono font-semibold text-emerald-700 text-sm">₦{totalBalance.toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-stone-200 pb-2">
-                    <span className="text-[10px] font-bold text-#6B7280 uppercase">Remains Outstanding</span>
-                    <span className="font-mono font-bold text-rose-700 text-sm">₦{outstandingRent.toLocaleString()}</span>
+                    <span className="text-[10px] font-semibold text-#6B7280 uppercase">Remains Outstanding</span>
+                    <span className="font-mono font-semibold text-rose-700 text-sm">₦{outstandingRent.toLocaleString()}</span>
                   </div>
                 </div>
                 
                 <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl">
-                  <span className="block text-[10px] uppercase font-bold text-emerald-800 mb-1">Expected Next 30 Days</span>
-                  <span className="block font-display font-black text-xl text-emerald-900">
+                  <span className="block text-[10px] uppercase font-semibold text-emerald-800 mb-1">Expected Next 30 Days</span>
+                  <span className="block font-display font-semibold text-xl text-emerald-900">
                     {/* Simulated next 30 days expected, a bit more than just outstanding */}
                     ₦{(outstandingRent + 4500000).toLocaleString()}
                   </span>
@@ -1487,28 +1487,28 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               onClick={handleOpenBankAccountWithHistory}
               className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs cursor-pointer hover:shadow-md hover:border-emerald-700 transition"
             >
-              <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Payment Receiving Account</span>
-              <strong className="block font-display font-black text-[#18452E] text-lg">Zenith Bank</strong>
+              <span className="text-[10px] uppercase font-semibold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Payment Receiving Account</span>
+              <strong className="block font-display font-semibold text-[#18452E] text-lg">Zenith Bank</strong>
               <span className="block font-mono text-#6B7280 mt-1">***4859</span>
-              <span className="block text-xs font-bold text-#6B7280 uppercase mt-2">Babatunde Osei</span>
+              <span className="block text-xs font-semibold text-#6B7280 uppercase mt-2">Babatunde Osei</span>
               <p className="text-[9px] text-stone-400 mt-1 italic">Rent routed direct to your real name.</p>
             </div>
 
             {/* Managed By (Simulated for company managed) */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Managed By</span>
-              <strong className="block font-display font-black text-[#18452E] text-sm">Prime Property Solutions</strong>
+              <span className="text-[10px] uppercase font-semibold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Managed By</span>
+              <strong className="block font-display font-semibold text-[#18452E] text-sm">Prime Property Solutions</strong>
               <span className="block font-mono text-#6B7280 text-[10px] mt-1">Reported: 24 Jun 2026</span>
               <div className="flex justify-between mt-3 text-xs">
-                <span className="text-#6B7280 font-bold">Occ: 85%</span>
-                <span className="text-rose-700 font-bold font-mono">Owes: ₦450k</span>
+                <span className="text-#6B7280 font-semibold">Occ: 85%</span>
+                <span className="text-rose-700 font-semibold font-mono">Owes: ₦450k</span>
               </div>
             </div>
 
             {/* Profitability */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-emerald-800 block tracking-widest mb-2 border-b border-emerald-100 pb-2">Profitability YTD</span>
-              <strong className="block font-display font-black text-[#18452E] text-lg">₦{Math.round(totalBalance * 0.85).toLocaleString()}</strong>
+              <span className="text-[10px] uppercase font-semibold text-emerald-800 block tracking-widest mb-2 border-b border-emerald-100 pb-2">Profitability YTD</span>
+              <strong className="block font-display font-semibold text-[#18452E] text-lg">₦{Math.round(totalBalance * 0.85).toLocaleString()}</strong>
               <div className="mt-2 text-[9px] font-mono text-#6B7280 space-y-1">
                 <div className="flex justify-between"><span>Gross:</span> <span>₦{totalBalance.toLocaleString()}</span></div>
                 <div className="flex justify-between text-rose-600"><span>Maint/Fees:</span> <span>-₦{Math.round(totalBalance * 0.15).toLocaleString()}</span></div>
@@ -1517,9 +1517,9 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* Portfolio Growth */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Portfolio Growth</span>
+              <span className="text-[10px] uppercase font-semibold text-stone-400 block tracking-widest mb-2 border-b border-stone-200 pb-2">Portfolio Growth</span>
               <div className="flex items-end gap-2 mt-2">
-                <strong className="block font-display font-black text-emerald-600 text-3xl">+14.2%</strong>
+                <strong className="block font-display font-semibold text-emerald-600 text-3xl">+14.2%</strong>
               </div>
               <span className="block text-[10px] text-#6B7280 font-mono mt-1">Confirmed income vs LY</span>
             </div>
@@ -1528,15 +1528,15 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
           {/* LEASE EXPIRY CENTER (Step 6) */}
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
-            <h3 className="font-display font-black text-sm text-[#18452E] uppercase mb-4">Lease Expiry Center</h3>
+            <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase mb-4">Lease Expiry Center</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[600px]">
                 <thead>
                   <tr className="border-b border-stone-200">
-                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-bold">Tenant</th>
-                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-bold">Property & Unit</th>
-                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-bold">Days Remaining</th>
-                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-bold">Action</th>
+                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-semibold">Tenant</th>
+                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-semibold">Property & Unit</th>
+                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-semibold">Days Remaining</th>
+                    <th className="pb-2 text-[10px] uppercase text-stone-400 font-mono font-semibold">Action</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-stone-100">
@@ -1551,12 +1551,12 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         <td className="py-3 pr-4">
                           <strong className="text-xs text-#132A1D">{u.tenantName}</strong>
                           {needsDiscussion && (
-                            <span className="block text-[9px] text-amber-600 font-bold uppercase mt-1">Renewal discussion required</span>
+                            <span className="block text-[9px] text-amber-600 font-semibold uppercase mt-1">Renewal discussion required</span>
                           )}
                         </td>
                         <td className="py-3 pr-4 text-xs text-#6B7280">{u.propertyName} <span className="font-mono text-[10px]">({u.unitNumber})</span></td>
                         <td className="py-3 pr-4">
-                          <span className={`text-xs font-bold px-2 py-0.5 rounded ${
+                          <span className={`text-xs font-semibold px-2 py-0.5 rounded ${
                             daysRemaining <= 14 ? 'bg-red-100 text-red-800' :
                             daysRemaining <= 30 ? 'bg-amber-100 text-amber-800' :
                             'bg-stone-50 text-#132A1D'
@@ -1565,7 +1565,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                           </span>
                         </td>
                         <td className="py-3">
-                          <button className="text-[10px] font-bold text-white bg-[#18452E] hover:bg-[#18452E] px-3 py-1.5 rounded transition uppercase tracking-wide cursor-pointer">
+                          <button className="text-[10px] font-semibold text-white bg-[#18452E] hover:bg-[#18452E] px-3 py-1.5 rounded transition uppercase tracking-wide cursor-pointer">
                             Renew Lease
                           </button>
                         </td>
@@ -1586,7 +1586,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="bg-amber-50/60 border border-amber-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs relative overflow-hidden">
                   <div className="flex justify-between items-start">
                     <div className="space-y-1">
-                      <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-bold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
+                      <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-semibold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
                     </div>
                     <select 
                       value={perfSortCriteria} 
@@ -1603,7 +1603,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     {sortedPerformers.slice(0, 3).map((perf, idx) => (
                       <div key={perf.b.id} className="flex gap-4 items-center bg-white p-3 rounded-xl border border-amber-100 shadow-sm relative">
                         {idx === 0 && (
-                           <div className="absolute -top-2 -right-2 bg-amber-400 text-#132A1D font-bold px-2 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm">
+                           <div className="absolute -top-2 -right-2 bg-amber-400 text-#132A1D font-semibold px-2 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm">
                              #1
                            </div>
                         )}
@@ -1613,7 +1613,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                           className="w-12 h-12 rounded-lg object-cover border border-amber-200"
                         />
                         <div className="text-xs flex-1">
-                          <h4 className="font-display font-black text-#132A1D text-xs uppercase leading-tight">{perf.b.name}</h4>
+                          <h4 className="font-display font-semibold text-#132A1D text-xs uppercase leading-tight">{perf.b.name}</h4>
                           <div className="grid grid-cols-2 gap-2 mt-1 text-[9px] text-#6B7280 font-mono">
                             <div>Occ: <strong className="text-#132A1D">{Math.round(perf.occ)}%</strong></div>
                             <div>Pay: <strong className="text-#132A1D">{Math.round(perf.pay)}%</strong></div>
@@ -1630,11 +1630,11 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                     <div className="flex items-center space-x-2">
                       <Bell className="w-4.5 h-4.5 text-[#18452E]" />
-                      <h4 className="font-display font-extrabold text-xs text-#132A1D uppercase">Monthly Performance Alert</h4>
+                      <h4 className="font-display font-semibold text-xs text-#132A1D uppercase">Monthly Performance Alert</h4>
                     </div>
-                    <span className="text-[9px] font-mono text-stone-400 font-bold">{mockNotification.date}</span>
+                    <span className="text-[9px] font-mono text-stone-400 font-semibold">{mockNotification.date}</span>
                   </div>
-                  <p className="text-xs text-#6B7280 leading-relaxed font-light">
+                  <p className="text-xs text-#6B7280 leading-relaxed font-normal">
                     {mockNotification.content}
                   </p>
                   <div className="text-[9px] font-mono text-[#C9A84C] font-semibold bg-stone-50 p-2 rounded-xl border border-stone-200 uppercase">
@@ -1648,16 +1648,16 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                   <div className="flex items-center space-x-2">
                     <AlertCircle className="w-4.5 h-4.5 text-rose-600" />
-                    <h4 className="font-display font-extrabold text-xs text-#132A1D uppercase">Tenant Complaints</h4>
+                    <h4 className="font-display font-semibold text-xs text-#132A1D uppercase">Tenant Complaints</h4>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs flex justify-between items-center">
                     <div>
                       <strong className="text-[#18452E] block">Plumbing / Water</strong>
-                      <span className="text-#6B7280 font-light block mt-0.5">Reported by: Kola Abiodun</span>
+                      <span className="text-#6B7280 font-normal block mt-0.5">Reported by: Kola Abiodun</span>
                     </div>
-                    <span className="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-bold text-[9px] uppercase tracking-wider">Under Review</span>
+                    <span className="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-semibold text-[9px] uppercase tracking-wider">Under Review</span>
                   </div>
                   <div className="text-[9px] font-mono text-stone-400">
                     Complaints are mediated exclusively by Unity Homes admin. Direct messaging is disabled to maintain zero-wahala guarantees.
@@ -1672,26 +1672,26 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                   <div className="flex items-center space-x-2">
                     <CreditCard className="w-5 h-5 text-[#18452E]" />
-                    <h4 className="font-display font-extrabold text-xs text-#132A1D uppercase">My Active Subscription</h4>
+                    <h4 className="font-display font-semibold text-xs text-#132A1D uppercase">My Active Subscription</h4>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold uppercase bg-emerald-50 text-[#18452E] border border-emerald-100">
+                  <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold uppercase bg-emerald-50 text-[#18452E] border border-emerald-100">
                     Active
                   </span>
                 </div>
 
                 <div className="space-y-4">
                   <div className="space-y-1">
-                    <span className="text-[9px] uppercase font-mono text-stone-400 font-bold">CURRENT MEMBERSHIP PLAN</span>
-                    <strong className="block text-#132A1D text-sm font-bold">Unity Homes Landlord Growth Premium</strong>
+                    <span className="text-[9px] uppercase font-mono text-stone-400 font-semibold">CURRENT MEMBERSHIP PLAN</span>
+                    <strong className="block text-#132A1D text-sm font-semibold">Unity Homes Landlord Growth Premium</strong>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200">
-                      <span className="text-[9px] font-mono text-stone-400 font-bold uppercase block">Unit Allocation Limit</span>
+                      <span className="text-[9px] font-mono text-stone-400 font-semibold uppercase block">Unit Allocation Limit</span>
                       <strong className="block text-#132A1D text-xs mt-0.5">15 Units Limit</strong>
                     </div>
                     <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200">
-                      <span className="text-[9px] font-mono text-stone-400 font-bold uppercase block">Units Registered</span>
+                      <span className="text-[9px] font-mono text-stone-400 font-semibold uppercase block">Units Registered</span>
                       <strong className="block text-#132A1D text-xs mt-0.5">{myUnits.length} / 15 Used</strong>
                     </div>
                   </div>
@@ -1707,8 +1707,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="p-4 bg-teal-50/20 border border-teal-100 rounded-2xl flex items-start space-x-3 text-xs text-#6B7280">
                 <ShieldCheck className="w-5 h-5 text-[#18452E] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="font-bold text-[#18452E] block">Certified Non-Litigation Guarantee</strong>
-                  <span className="font-light">Every asset listed here uses verified bank routing to protect landlords. Rents are deposited instantly to your personal bank details without intermediary holds. Don&apos;t Buy Wahala!</span>
+                  <strong className="font-semibold text-[#18452E] block">Certified Non-Litigation Guarantee</strong>
+                  <span className="font-normal">Every asset listed here uses verified bank routing to protect landlords. Rents are deposited instantly to your personal bank details without intermediary holds. Don&apos;t Buy Wahala!</span>
                 </div>
               </div>
             </div>
@@ -1719,19 +1719,19 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <div className="bg-amber-50/80 border-2 border-amber-200 p-6 rounded-[var(--radius-large)] space-y-4 shadow-sm">
               <div className="flex items-center space-x-2 text-amber-900">
                 <ShieldAlert className="w-5 h-5 shrink-0" />
-                <h4 className="font-display font-black text-xs sm:text-sm uppercase tracking-wider">
+                <h4 className="font-display font-semibold text-xs sm:text-sm uppercase tracking-wider">
                   Tapered Rent Warning System (10-Touch sequence)
                 </h4>
               </div>
-              <p className="text-xs text-#6B7280 leading-normal font-light">
+              <p className="text-xs text-#6B7280 leading-normal font-normal">
                 Unity Homes strictly utilizes legal, non-intrusive automated warning sequences to recover dues.
                 Unit: <strong>{myUnits.find(u => u.id === activeSequenceUnit)?.propertyName}</strong>
               </p>
               
               <div className="p-3 bg-white border border-amber-100 rounded-xl space-y-2">
                 <div className="flex justify-between items-center text-xs">
-                  <span className="font-bold text-amber-950">Active Progress Step:</span>
-                  <span className="font-mono text-amber-800 font-bold">{currentSeqStep} / 10 Touchpoints</span>
+                  <span className="font-semibold text-amber-950">Active Progress Step:</span>
+                  <span className="font-mono text-amber-800 font-semibold">{currentSeqStep} / 10 Touchpoints</span>
                 </div>
                 <div className="p-2.5 bg-amber-50 rounded text-xs font-mono font-medium text-amber-900">
                   {currentSeqLabel(currentSeqStep)}
@@ -1741,7 +1741,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="flex space-x-2">
                 <button 
                   onClick={handleProgressSequence}
-                  className="px-3.5 py-1.5 bg-amber-700 text-white rounded-lg text-xs font-bold hover:bg-amber-800 cursor-pointer transition"
+                  className="px-3.5 py-1.5 bg-amber-700 text-white rounded-lg text-xs font-semibold hover:bg-amber-800 cursor-pointer transition"
                 >
                   {currentSeqStep < 10 ? 'Execute Next Touchpoint' : 'Finalize Audit Check'}
                 </button>
@@ -1757,8 +1757,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
           {/* ATTENTION REQUIRED SCROLLS */}
           <div className="space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase tracking-wider flex items-center space-x-2">
-              <span className="w-5 h-5 bg-red-650 text-#132A1D font-mono text-[10px] font-bold flex items-center justify-center rounded-full bg-amber-400">
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase tracking-wider flex items-center space-x-2">
+              <span className="w-5 h-5 bg-red-650 text-#132A1D font-mono text-[10px] font-semibold flex items-center justify-center rounded-full bg-amber-400">
                 {attentionUnits.length}
               </span>
               <span>Needs Attention Worklist</span>
@@ -1777,19 +1777,19 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     <div className="text-xs space-y-1">
                       <div className="flex items-center space-x-2">
                         <strong className="text-xs text-[#18452E]">{u.tenantName} ({u.tenantCode})</strong>
-                        <span className={`inline-block px-2 text-[9px] font-bold rounded-full ${
+                        <span className={`inline-block px-2 text-[9px] font-semibold rounded-full ${
                           u.paymentStatus === 'Overdue' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-900'
                         }`}>{u.paymentStatus}</span>
                       </div>
                       <span className="block text-#6B7280">{u.propertyName} ({u.unitNumber})</span>
-                      <span className="text-stone-400 block font-light">Target Due Date: {u.dueDate}</span>
+                      <span className="text-stone-400 block font-normal">Target Due Date: {u.dueDate}</span>
                     </div>
 
                     <div className="flex space-x-2 shrink-0" onClick={(e) => e.stopPropagation()}>
                       {u.paymentStatus === 'Overdue' && (
                         <button 
                           onClick={() => handleLaunchSequence(u.id)}
-                          className="px-3.5 py-1.5 bg-red-650 hover:bg-red-700 text-white rounded-lg text-xs font-bold cursor-pointer transition"
+                          className="px-3.5 py-1.5 bg-red-650 hover:bg-red-700 text-white rounded-lg text-xs font-semibold cursor-pointer transition"
                         >
                           Launch 10-Touch Sequence
                         </button>
@@ -1798,7 +1798,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       {u.paymentStatus === 'Due Soon' && (
                         <button 
                           onClick={() => triggerSuccess('Pre-cleared automatic WhatsApp reminder notice queued.')}
-                          className="px-3.5 py-1.5 bg-[#18452E] text-white rounded-lg text-xs font-bold hover:bg-[#18452E] cursor-pointer transition"
+                          className="px-3.5 py-1.5 bg-[#18452E] text-white rounded-lg text-xs font-semibold hover:bg-[#18452E] cursor-pointer transition"
                         >
                           WhatsApp Gentle Notice
                         </button>
@@ -1807,7 +1807,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       {u.paymentStatus === 'Lease Expiring Soon' && (
                         <button 
                           onClick={() => triggerSuccess('Tenant checkout checklist docket and contract renewal links fully prepared.')}
-                          className="px-3.5 py-1.5 bg-teal-600 text-white rounded-lg text-xs font-bold hover:bg-teal-700 cursor-pointer transition"
+                          className="px-3.5 py-1.5 bg-teal-600 text-white rounded-lg text-xs font-semibold hover:bg-teal-700 cursor-pointer transition"
                         >
                           Checkout Protocol Check
                         </button>
@@ -1826,7 +1826,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {activeTab === 'Overview' && announcements.length > 0 && (
         <div className="bg-[#18452E] border border-[#0E2F1F]/80 rounded-[var(--radius-large)] p-6 shadow-sm relative overflow-hidden animate-fade-in mb-8">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/10 rounded-bl-full"></div>
-          <h3 className="font-display font-black text-sm text-[#C9A84C] uppercase mb-4 tracking-widest flex items-center">
+          <h3 className="font-display font-semibold text-sm text-[#C9A84C] uppercase mb-4 tracking-widest flex items-center">
             <Bell className="w-4 h-4 mr-2" /> Platform Announcements
           </h3>
           <div className="space-y-4 relative z-10">
@@ -1838,8 +1838,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 >
                   <X className="w-3 h-3" />
                 </button>
-                <h4 className="text-white font-bold text-sm mb-1">{ann.title}</h4>
-                <p className="text-stone-300 text-xs font-light leading-relaxed pr-8">{ann.body}</p>
+                <h4 className="text-white font-semibold text-sm mb-1">{ann.title}</h4>
+                <p className="text-stone-300 text-xs font-normal leading-relaxed pr-8">{ann.body}</p>
                 <span className="text-[10px] text-[#C9A84C] font-mono mt-3 block">{ann.date}</span>
               </div>
             ))}
@@ -1855,7 +1855,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
           <div className="flex space-x-2 border-b border-stone-200/50 pb-2">
             <button 
               onClick={() => { setPortfolioType('Standard'); setSelectedBuildingId(null); }}
-              className={`px-4 py-2 font-display text-xs font-bold rounded-xl transition cursor-pointer ${
+              className={`px-4 py-2 font-display text-xs font-semibold rounded-xl transition cursor-pointer ${
                 portfolioType === 'Standard' ? 'bg-#132A1D text-white' : 'text-#6B7280 hover:bg-stone-50'
               }`}
             >
@@ -1863,7 +1863,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
             <button 
               onClick={() => setPortfolioType('Shortlet')}
-              className={`px-4 py-2 font-display text-xs font-bold rounded-xl transition cursor-pointer ${
+              className={`px-4 py-2 font-display text-xs font-semibold rounded-xl transition cursor-pointer ${
                 portfolioType === 'Shortlet' ? 'bg-#132A1D text-white' : 'text-#6B7280 hover:bg-stone-50'
               }`}
             >
@@ -1878,17 +1878,17 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="space-y-6">
                   <div className="flex justify-between items-center flex-wrap gap-4">
                     <div>
-                      <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center gap-2">
+                      <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase flex items-center gap-2">
                         <BuildingIcon className="w-4 h-4 text-[#C9A84C]" /> My Registered Buildings
                       </h3>
-                      <p className="text-xs text-#6B7280 font-light mt-0.5">
+                      <p className="text-xs text-#6B7280 font-normal mt-0.5">
                         Manage multi-unit property assets, track title verification, and launch tenant onboarding invitations.
                       </p>
                     </div>
                     <div className="flex gap-2">
                       <button 
                         onClick={() => setShowAddBuildingModal(true)}
-                        className="px-4 py-2 bg-[#18452E] text-white text-xs font-extrabold rounded-xl hover:bg-[#18452E] flex items-center space-x-1.5 cursor-pointer transition shadow-xs"
+                        className="px-4 py-2 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] flex items-center space-x-1.5 cursor-pointer transition shadow-xs"
                       >
                         <PlusCircle className="w-4 h-4" />
                         <span>Add New Building</span>
@@ -1914,13 +1914,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                               alt={bld.name} 
                               className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                             />
-                            <div className="absolute top-3 left-3 bg-#132A1D/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase text-white tracking-widest flex items-center gap-1">
+                            <div className="absolute top-3 left-3 bg-#132A1D/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold uppercase text-white tracking-widest flex items-center gap-1">
                               <BuildingIcon className="w-3 h-3 text-[#C9A84C]" />
                               {bld.blockLabel || 'Block A'}
                             </div>
 
                             {/* Verification Badge */}
-                            <div className="absolute top-3 right-3 bg-amber-500/90 text-stone-950 font-bold px-2.5 py-1 rounded-full text-[9px] font-mono uppercase tracking-wider flex items-center gap-1 shadow-xs backdrop-blur-xs">
+                            <div className="absolute top-3 right-3 bg-amber-500/90 text-stone-950 font-semibold px-2.5 py-1 rounded-full text-[9px] font-mono uppercase tracking-wider flex items-center gap-1 shadow-xs backdrop-blur-xs">
                               <Clock className="w-3 h-3 text-#132A1D" />
                               <span>Pending Title Review</span>
                             </div>
@@ -1928,17 +1928,17 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                           
                           <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                             <div>
-                              <h4 className="font-display font-black text-[#18452E] text-base group-hover:text-emerald-800 transition">
+                              <h4 className="font-display font-semibold text-[#18452E] text-base group-hover:text-emerald-800 transition">
                                 {bld.name}
                               </h4>
-                              <p className="text-[11px] text-#6B7280 mt-1 leading-normal font-light">
+                              <p className="text-[11px] text-#6B7280 mt-1 leading-normal font-normal">
                                 {bld.address}
                               </p>
                             </div>
 
                             {/* Verification Notice Bar */}
                             <div className="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-3 text-[10px] space-y-1">
-                              <div className="flex items-center gap-1.5 text-amber-900 font-bold uppercase font-mono">
+                              <div className="flex items-center gap-1.5 text-amber-900 font-semibold uppercase font-mono">
                                 <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
                                 <span>Verification Status Notice</span>
                               </div>
@@ -1950,18 +1950,18 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                             {/* Badges & Stats Row */}
                             <div className="grid grid-cols-3 gap-2 border-t border-stone-200 pt-3 text-center text-xs">
                               <div className="bg-stone-50 p-2 rounded-xl">
-                                <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Total Units</span>
-                                <strong className="text-#132A1D font-black block text-sm">{totalUnitsCount}</strong>
+                                <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Total Units</span>
+                                <strong className="text-#132A1D font-semibold block text-sm">{totalUnitsCount}</strong>
                               </div>
                               <div className="bg-emerald-50 p-2 rounded-xl border border-emerald-100">
-                                <span className="text-[9px] uppercase font-mono text-emerald-700 block font-bold">Occupied</span>
-                                <span className="inline-block px-1.5 py-0.5 bg-emerald-700 text-white font-black text-[10px] rounded-md mt-0.5">
+                                <span className="text-[9px] uppercase font-mono text-emerald-700 block font-semibold">Occupied</span>
+                                <span className="inline-block px-1.5 py-0.5 bg-emerald-700 text-white font-semibold text-[10px] rounded-md mt-0.5">
                                   {occupiedCount} Occupied
                                 </span>
                               </div>
                               <div className="bg-rose-50 p-2 rounded-xl border border-rose-100">
-                                <span className="text-[9px] uppercase font-mono text-rose-700 block font-bold">Vacant</span>
-                                <span className="inline-block px-1.5 py-0.5 bg-rose-600 text-white font-black text-[10px] rounded-md mt-0.5">
+                                <span className="text-[9px] uppercase font-mono text-rose-700 block font-semibold">Vacant</span>
+                                <span className="inline-block px-1.5 py-0.5 bg-rose-600 text-white font-semibold text-[10px] rounded-md mt-0.5">
                                   {vacantCount} Vacant
                                 </span>
                               </div>
@@ -1970,7 +1970,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                             {/* Manage Action */}
                             <button
                               onClick={() => setSelectedBuildingId(bld.id)}
-                              className="w-full py-2.5 bg-#132A1D text-white rounded-xl text-xs font-bold hover:bg-[#18452E] transition flex items-center justify-center gap-2 cursor-pointer"
+                              className="w-full py-2.5 bg-#132A1D text-white rounded-xl text-xs font-semibold hover:bg-[#18452E] transition flex items-center justify-center gap-2 cursor-pointer"
                             >
                               <span>Manage Building & Units</span>
                               <ChevronRight className="w-4 h-4" />
@@ -1997,7 +1997,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         <div className="flex justify-between items-center flex-wrap gap-4">
                           <button 
                             onClick={() => setSelectedBuildingId(null)}
-                            className="px-4 py-2 border border-stone-200 rounded-xl hover:bg-stone-50 cursor-pointer transition text-#132A1D text-xs font-bold flex items-center space-x-2 bg-white"
+                            className="px-4 py-2 border border-stone-200 rounded-xl hover:bg-stone-50 cursor-pointer transition text-#132A1D text-xs font-semibold flex items-center space-x-2 bg-white"
                           >
                             <ArrowLeft className="w-4 h-4" />
                             <span>Back to All Buildings</span>
@@ -2005,7 +2005,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
                           <button 
                             onClick={() => setShowAddUnitModal(true)}
-                            className="px-4 py-2.5 bg-[#18452E] text-white text-xs font-extrabold rounded-xl hover:bg-[#18452E] flex items-center space-x-2 cursor-pointer transition shadow-md"
+                            className="px-4 py-2.5 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] flex items-center space-x-2 cursor-pointer transition shadow-md"
                           >
                             <Plus className="w-4 h-4" />
                             <span>Add New Unit</span>
@@ -2025,30 +2025,30 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                             <div className="absolute bottom-4 left-6 right-6 text-white flex justify-between items-end flex-wrap gap-4">
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="bg-[#C9A84C] text-stone-950 text-[9px] font-mono font-black uppercase px-2 py-0.5 rounded-md tracking-wider">
+                                  <span className="bg-[#C9A84C] text-stone-950 text-[9px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md tracking-wider">
                                     {currentBld?.blockLabel || 'Block A'}
                                   </span>
-                                  <span className="bg-amber-500/90 text-stone-950 text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md tracking-wider flex items-center gap-1">
+                                  <span className="bg-amber-500/90 text-stone-950 text-[9px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md tracking-wider flex items-center gap-1">
                                     <Clock className="w-3 h-3" />
                                     Pending Title Docs Review
                                   </span>
                                 </div>
-                                <h2 className="font-display font-black text-xl md:text-2xl">{currentBld?.name}</h2>
-                                <p className="text-stone-300 text-xs font-light">{currentBld?.address}</p>
+                                <h2 className="font-display font-semibold text-xl md:text-2xl">{currentBld?.name}</h2>
+                                <p className="text-stone-300 text-xs font-normal">{currentBld?.address}</p>
                               </div>
 
                               <div className="flex gap-2">
                                 <div className="bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-xl text-center border border-white/20">
                                   <span className="text-[9px] uppercase font-mono text-stone-300 block">Total Units</span>
-                                  <strong className="text-white font-bold text-sm">{bldUnits.length || 4}</strong>
+                                  <strong className="text-white font-semibold text-sm">{bldUnits.length || 4}</strong>
                                 </div>
                                 <div className="bg-emerald-500/20 backdrop-blur-md px-3 py-1.5 rounded-xl text-center border border-emerald-400/30">
                                   <span className="text-[9px] uppercase font-mono text-emerald-300 block">Occupied</span>
-                                  <strong className="text-white font-bold text-sm">{occupiedUnits.length || 3}</strong>
+                                  <strong className="text-white font-semibold text-sm">{occupiedUnits.length || 3}</strong>
                                 </div>
                                 <div className="bg-rose-500/20 backdrop-blur-md px-3 py-1.5 rounded-xl text-center border border-rose-400/30">
                                   <span className="text-[9px] uppercase font-mono text-rose-300 block">Vacant</span>
-                                  <strong className="text-white font-bold text-sm">{vacantUnits.length || 1}</strong>
+                                  <strong className="text-white font-semibold text-sm">{vacantUnits.length || 1}</strong>
                                 </div>
                               </div>
                             </div>
@@ -2058,7 +2058,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         {/* Units Grid */}
                         <div className="space-y-4">
                           <div className="flex justify-between items-center">
-                            <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center gap-2">
+                            <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase flex items-center gap-2">
                               Building Units Roster ({bldUnits.length})
                             </h3>
                             <span className="text-[10px] text-#6B7280 font-mono">
@@ -2080,10 +2080,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                     <div className="flex justify-between items-start gap-2">
                                       <div>
                                         <div className="flex items-center gap-2">
-                                          <h4 className="font-display font-black text-[#18452E] text-base">
+                                          <h4 className="font-display font-semibold text-[#18452E] text-base">
                                             {u.unitNumber}
                                           </h4>
-                                          <span className="px-2 py-0.5 bg-stone-50 text-#132A1D text-[9px] font-mono font-bold rounded-md uppercase">
+                                          <span className="px-2 py-0.5 bg-stone-50 text-#132A1D text-[9px] font-mono font-semibold rounded-md uppercase">
                                             2 Bedroom
                                           </span>
                                         </div>
@@ -2092,7 +2092,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                         </p>
                                       </div>
 
-                                      <span className={`px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase tracking-wider ${
+                                      <span className={`px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold uppercase tracking-wider ${
                                         isVacant ? 'bg-rose-100 text-rose-800 border border-rose-200' : 'bg-emerald-100 text-emerald-800 border border-emerald-200'
                                       }`}>
                                         {isVacant ? 'Vacant' : 'Occupied'}
@@ -2101,11 +2101,11 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
                                     <div className="grid grid-cols-2 gap-2 bg-stone-50 p-3 rounded-2xl text-xs border border-stone-150">
                                       <div>
-                                        <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Annual Rent</span>
-                                        <strong className="text-[#18452E] font-mono font-black text-sm">₦{u.rentAmount.toLocaleString()}</strong>
+                                        <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Annual Rent</span>
+                                        <strong className="text-[#18452E] font-mono font-semibold text-sm">₦{u.rentAmount.toLocaleString()}</strong>
                                       </div>
                                       <div>
-                                        <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Collection Account</span>
+                                        <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Collection Account</span>
                                         <span className="text-#132A1D font-medium text-[10px] block font-mono">
                                           GTB AC: ***8485
                                         </span>
@@ -2120,8 +2120,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                           className="w-10 h-10 rounded-full object-cover border border-stone-200"
                                         />
                                         <div>
-                                          <span className="text-[9px] font-mono uppercase text-stone-400 block font-bold">Current Occupant</span>
-                                          <strong className="text-#132A1D text-xs font-bold block">{u.tenantName}</strong>
+                                          <span className="text-[9px] font-mono uppercase text-stone-400 block font-semibold">Current Occupant</span>
+                                          <strong className="text-#132A1D text-xs font-semibold block">{u.tenantName}</strong>
                                           <span className="text-[9px] text-emerald-700 font-mono">Status: {u.paymentStatus}</span>
                                           <button
                                             type="button"
@@ -2138,7 +2138,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                               };
                                               setShowReadinessModalProfile(tenantProf as FirestoreTenantProfile);
                                             }}
-                                            className="mt-1 flex items-center gap-1 text-[9px] font-mono font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-lg hover:bg-emerald-100 transition cursor-pointer"
+                                            className="mt-1 flex items-center gap-1 text-[9px] font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-lg hover:bg-emerald-100 transition cursor-pointer"
                                           >
                                             <ShieldCheck className="w-3 h-3 text-emerald-600" />
                                             <span>Move-In Readiness</span>
@@ -2148,7 +2148,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                     ) : (
                                       <div className="bg-rose-50/60 border border-rose-200/60 p-3 rounded-2xl flex items-center justify-between">
                                         <div>
-                                          <span className="text-[10px] font-bold text-rose-900 uppercase font-mono block">Unit Currently Vacant</span>
+                                          <span className="text-[10px] font-semibold text-rose-900 uppercase font-mono block">Unit Currently Vacant</span>
                                           <span className="text-[10px] text-rose-700">Ready for prospective tenant onboarding.</span>
                                         </div>
                                         <button
@@ -2160,7 +2160,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                             }));
                                             setShowInviteModal(true);
                                           }}
-                                          className="px-3 py-1.5 bg-[#18452E] text-white text-[10px] font-extrabold rounded-xl hover:bg-[#18452E] cursor-pointer transition shadow-xs flex items-center gap-1"
+                                          className="px-3 py-1.5 bg-[#18452E] text-white text-[10px] font-semibold rounded-xl hover:bg-[#18452E] cursor-pointer transition shadow-xs flex items-center gap-1"
                                         >
                                           <Send className="w-3 h-3" />
                                           <span>Invite Tenant</span>
@@ -2171,7 +2171,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                                     <div className="flex gap-2 pt-2 border-t border-stone-200">
                                       <button
                                         onClick={() => handleOpenUnitWithHistory(u)}
-                                        className="flex-1 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D text-xs font-bold rounded-xl transition cursor-pointer"
+                                        className="flex-1 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D text-xs font-semibold rounded-xl transition cursor-pointer"
                                       >
                                         View Case File
                                       </button>
@@ -2223,13 +2223,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
         <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Financial Ledger Statement</h3>
-              <p className="text-#6B7280 font-light mt-0.5">Maintain immediate self-service check list of verified routing payouts.</p>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Financial Ledger Statement</h3>
+              <p className="text-#6B7280 font-normal mt-0.5">Maintain immediate self-service check list of verified routing payouts.</p>
             </div>
             
             <button 
               onClick={handleDownloadLedger}
-              className="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold flex items-center space-x-2 shadow-md cursor-pointer transition"
+              className="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-semibold flex items-center space-x-2 shadow-md cursor-pointer transition"
             >
               <FileText className="w-4 h-4" />
               <span>Download Full Ledger</span>
@@ -2238,8 +2238,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
           <div className="spatial-glass border border-stone-200/50 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="p-5 bg-stone-50/50 border-b border-stone-150 flex justify-between items-center">
-              <span className="font-mono text-[10px] text-stone-400 uppercase font-black tracking-widest">ACTIVE TRANSFERS AUDIT LIST</span>
-              <span className="font-mono text-[9px] text-[#18452E] bg-[#18452E]/5 py-0.5 px-2 rounded uppercase font-bold">100% Vetted Receipts</span>
+              <span className="font-mono text-[10px] text-stone-400 uppercase font-semibold tracking-widest">ACTIVE TRANSFERS AUDIT LIST</span>
+              <span className="font-mono text-[9px] text-[#18452E] bg-[#18452E]/5 py-0.5 px-2 rounded uppercase font-semibold">100% Vetted Receipts</span>
             </div>
             
             {/* Desktop Table View */}
@@ -2263,14 +2263,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         <span className="text-[10px] text-stone-400 font-mono uppercase">{u.unitNumber}</span>
                       </td>
                       <td className="p-4 font-medium text-#132A1D">{u.tenantName}</td>
-                      <td className="p-4 font-mono font-black text-emerald-800">₦{u.rentAmount.toLocaleString()}</td>
-                      <td className="p-4 font-light text-#6B7280">June 12, 2025</td>
+                      <td className="p-4 font-mono font-semibold text-emerald-800">₦{u.rentAmount.toLocaleString()}</td>
+                      <td className="p-4 font-normal text-#6B7280">June 12, 2025</td>
                       <td className="p-4 font-mono text-[10px] text-teal-850">
                         {getCollectionAccountName(u.propertyName)}
                       </td>
                       <td className="p-4">
-                        <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-mono font-bold bg-emerald-100 text-emerald-800 uppercase mr-2">Settled</span>
-                        <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-bold cursor-pointer transition shadow-xs">
+                        <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-mono font-semibold bg-emerald-100 text-emerald-800 uppercase mr-2">Settled</span>
+                        <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-semibold cursor-pointer transition shadow-xs">
                           Dispute Payment
                         </button>
                       </td>
@@ -2294,7 +2294,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       <strong className="text-#132A1D block text-xs font-medium">{u.propertyName}</strong>
                       <span className="text-[10px] text-stone-400 font-mono uppercase">{u.unitNumber}</span>
                     </div>
-                    <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-mono font-bold bg-emerald-100 text-emerald-800 uppercase">Settled</span>
+                    <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-mono font-semibold bg-emerald-100 text-emerald-800 uppercase">Settled</span>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-2 text-xs">
@@ -2304,7 +2304,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     </div>
                     <div>
                       <span className="text-[9px] uppercase font-mono text-stone-400 block">Settled Amount</span>
-                      <span className="font-mono font-black text-emerald-800">₦{u.rentAmount.toLocaleString()}</span>
+                      <span className="font-mono font-semibold text-emerald-800">₦{u.rentAmount.toLocaleString()}</span>
                     </div>
                     <div className="col-span-2 pt-1">
                       <span className="text-[9px] uppercase font-mono text-stone-400 block">Collection Routing</span>
@@ -2328,8 +2328,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
         <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Maintenance Cost Center</h3>
-              <p className="text-#6B7280 font-light mt-0.5">Track every repair job and analyze expenditure by property.</p>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Maintenance Cost Center</h3>
+              <p className="text-#6B7280 font-normal mt-0.5">Track every repair job and analyze expenditure by property.</p>
             </div>
           </div>
 
@@ -2337,13 +2337,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* Maintenance Cost Analytics (Step 8) */}
             <div className="lg:col-span-1 space-y-6 min-w-0">
               <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-4">Cost Analytics</h4>
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase mb-4">Cost Analytics</h4>
                 <div className="space-y-4">
                   {/* Mock Analytics */}
                   <div>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-[10px] font-bold text-#6B7280 uppercase">Adebayo Lekki Heights</span>
-                      <span className="font-mono text-xs font-bold text-rose-700">₦150k</span>
+                      <span className="text-[10px] font-semibold text-#6B7280 uppercase">Adebayo Lekki Heights</span>
+                      <span className="font-mono text-xs font-semibold text-rose-700">₦150k</span>
                     </div>
                     <div className="w-full bg-stone-50 h-2 rounded-full overflow-hidden">
                       <div className="bg-rose-500 h-full" style={{ width: '70%' }}></div>
@@ -2352,8 +2352,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   </div>
                   <div>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-[10px] font-bold text-#6B7280 uppercase">The Oasis Towers</span>
-                      <span className="font-mono text-xs font-bold text-rose-700">₦45k</span>
+                      <span className="text-[10px] font-semibold text-#6B7280 uppercase">The Oasis Towers</span>
+                      <span className="font-mono text-xs font-semibold text-rose-700">₦45k</span>
                     </div>
                     <div className="w-full bg-stone-50 h-2 rounded-full overflow-hidden">
                       <div className="bg-amber-500 h-full" style={{ width: '20%' }}></div>
@@ -2367,7 +2367,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* Maintenance Cost Tracker (Step 8) */}
             <div className="lg:col-span-2 min-w-0">
               <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-4">Maintenance Tracker</h4>
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase mb-4">Maintenance Tracker</h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
@@ -2384,11 +2384,11 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       <tr className="hover:bg-stone-50/50 transition text-xs">
                         <td className="p-3 font-medium text-#132A1D">Plumbing: Pipe Burst</td>
                         <td className="p-3 text-#6B7280">Adebayo Lekki (A1)</td>
-                        <td className="p-3 font-mono font-black text-rose-700">₦85,000</td>
+                        <td className="p-3 font-mono font-semibold text-rose-700">₦85,000</td>
                         <td className="p-3 text-#6B7280">14 Jun 2026</td>
                         <td className="p-3 text-#132A1D">Kola Abiodun</td>
                         <td className="p-3">
-                          <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-bold cursor-pointer transition shadow-xs">
+                          <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-semibold cursor-pointer transition shadow-xs">
                             Dispute Cost
                           </button>
                         </td>
@@ -2396,11 +2396,11 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       <tr className="hover:bg-stone-50/50 transition text-xs">
                         <td className="p-3 font-medium text-#132A1D">Electrical: AC Wiring</td>
                         <td className="p-3 text-#6B7280">The Oasis Towers (B2)</td>
-                        <td className="p-3 font-mono font-black text-rose-700">₦45,000</td>
+                        <td className="p-3 font-mono font-semibold text-rose-700">₦45,000</td>
                         <td className="p-3 text-#6B7280">10 Jun 2026</td>
                         <td className="p-3 text-#132A1D">Babatunde Osei</td>
                         <td className="p-3">
-                          <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-bold cursor-pointer transition shadow-xs">
+                          <button className="px-2 py-0.5 bg-stone-50 hover:bg-stone-200 text-#6B7280 border border-stone-300 rounded text-[9px] font-semibold cursor-pointer transition shadow-xs">
                             Dispute Cost
                           </button>
                         </td>
@@ -2429,8 +2429,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
         <div className="space-y-6 animate-fade-in text-xs sm:text-sm">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Document Center</h3>
-              <p className="text-#6B7280 font-light mt-0.5">Generate portfolio reports and track their delivery status.</p>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Document Center</h3>
+              <p className="text-#6B7280 font-normal mt-0.5">Generate portfolio reports and track their delivery status.</p>
             </div>
           </div>
 
@@ -2439,14 +2439,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-3 text-[#18452E]">
                 <FileText className="w-6 h-6" />
-                <h4 className="font-display font-black text-sm uppercase">Generate New Report</h4>
+                <h4 className="font-display font-semibold text-sm uppercase">Generate New Report</h4>
               </div>
-              <p className="text-#6B7280 font-light text-xs">
+              <p className="text-#6B7280 font-normal text-xs">
                 Create a comprehensive PDF report detailing occupancy rates, payment statuses, and maintenance expenditure across your portfolio.
               </p>
               <button 
                 onClick={() => triggerSuccess('Generating Report. Document will be available in your delivery log shortly.')}
-                className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs uppercase transition tracking-wide cursor-pointer"
+                className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs uppercase transition tracking-wide cursor-pointer"
               >
                 Compile Financial Report
               </button>
@@ -2454,17 +2454,17 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* DELIVERY TRACKING LOG */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
-              <h4 className="font-display font-black text-xs text-[#18452E] uppercase mb-4">Report Delivery Tracking</h4>
+              <h4 className="font-display font-semibold text-xs text-[#18452E] uppercase mb-4">Report Delivery Tracking</h4>
               <div className="space-y-3">
                 {/* Dynamic reports */}
                 {reports.map((report) => (
                   <div key={report.id} className="p-3 bg-amber-500/5 border border-amber-200/50 hover:border-amber-400 rounded-xl transition-all duration-200">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <span className="block font-bold text-[#18452E] text-xs">Monthly Portfolio Summary &bull; {report.monthCovered}</span>
+                        <span className="block font-semibold text-[#18452E] text-xs">Monthly Portfolio Summary &bull; {report.monthCovered}</span>
                         <span className="block text-[9px] font-mono text-stone-400 mt-0.5">Ref: {report.id} &bull; Sent: {new Date(report.sentAt).toLocaleString()}</span>
                       </div>
-                      <span className={`px-2 py-0.5 text-[9px] font-bold uppercase rounded ${report.downloaded ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800 animate-pulse'}`}>
+                      <span className={`px-2 py-0.5 text-[9px] font-semibold uppercase rounded ${report.downloaded ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800 animate-pulse'}`}>
                         {report.downloaded ? 'Downloaded' : 'Pending Download'}
                       </span>
                     </div>
@@ -2476,7 +2476,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       </div>
                       <button
                         onClick={() => handleOpenReport(report)}
-                        className="text-[10px] text-amber-700 font-bold uppercase hover:underline flex items-center space-x-1 cursor-pointer"
+                        className="text-[10px] text-amber-700 font-semibold uppercase hover:underline flex items-center space-x-1 cursor-pointer"
                       >
                         <Download className="w-3 h-3" />
                         <span>Open &amp; Download</span>
@@ -2489,10 +2489,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="p-3 bg-stone-50 border border-stone-150 rounded-xl">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <span className="block font-bold text-#132A1D text-xs">Q1 2026 Financial Summary</span>
+                      <span className="block font-semibold text-#132A1D text-xs">Q1 2026 Financial Summary</span>
                       <span className="block text-[9px] font-mono text-stone-400 mt-0.5">Generated: 01 Apr 2026, 09:14 AM</span>
                     </div>
-                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-bold uppercase rounded">Downloaded</span>
+                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase rounded">Downloaded</span>
                   </div>
                   <div className="text-[10px] text-#6B7280 flex items-center justify-between border-t border-stone-200 pt-2 mt-2">
                     <div className="flex items-center space-x-1.5">
@@ -2501,7 +2501,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     </div>
                     <button
                       onClick={() => handleOpenReport({ title: 'Q1 2026 Financial Summary', id: 'DOC-LEGACY-001' })}
-                      className="text-[10px] text-#6B7280 font-bold uppercase hover:underline cursor-pointer"
+                      className="text-[10px] text-#6B7280 font-semibold uppercase hover:underline cursor-pointer"
                     >
                       View Report
                     </button>
@@ -2511,10 +2511,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="p-3 bg-stone-50 border border-stone-150 rounded-xl">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <span className="block font-bold text-#132A1D text-xs">Annual Tax Ledger 2025</span>
+                      <span className="block font-semibold text-#132A1D text-xs">Annual Tax Ledger 2025</span>
                       <span className="block text-[9px] font-mono text-stone-400 mt-0.5">Generated: 15 Jan 2026, 14:30 PM</span>
                     </div>
-                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-bold uppercase rounded">Downloaded</span>
+                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase rounded">Downloaded</span>
                   </div>
                   <div className="text-[10px] text-#6B7280 flex items-center justify-between border-t border-stone-200 pt-2 mt-2">
                     <div className="flex items-center space-x-1.5">
@@ -2523,7 +2523,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     </div>
                     <button
                       onClick={() => handleOpenReport({ title: 'Annual Tax Ledger 2025', id: 'DOC-LEGACY-002' })}
-                      className="text-[10px] text-#6B7280 font-bold uppercase hover:underline cursor-pointer"
+                      className="text-[10px] text-#6B7280 font-semibold uppercase hover:underline cursor-pointer"
                     >
                       View Report
                     </button>
@@ -2550,7 +2550,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* HEADER DESIGN WITH PHOTO AND BACKGROUND GLOSS */}
             <div className="border-b border-stone-200 pb-4 space-y-4">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 VERIFIED PROFILE DOCKET
               </span>
               
@@ -2562,18 +2562,18 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     className="w-16 h-16 rounded-full object-cover border-2 border-emerald-505 shadow-sm"
                   />
                 ) : (
-                  <div className="w-16 h-16 rounded-full bg-stone-50 border-2 border-dashed border-stone-300 flex items-center justify-center text-stone-400 text-xs shrink-0 font-mono font-bold uppercase">
+                  <div className="w-16 h-16 rounded-full bg-stone-50 border-2 border-dashed border-stone-300 flex items-center justify-center text-stone-400 text-xs shrink-0 font-mono font-semibold uppercase">
                     VAC
                   </div>
                 )}
                 <div>
-                  <h3 className="font-display font-black text-stone-905 text-lg leading-tight uppercase tracking-wider">
+                  <h3 className="font-display font-semibold text-stone-905 text-lg leading-tight uppercase tracking-wider">
                     {selectedUnit.paymentStatus !== 'Vacant' ? selectedUnit.tenantName : 'VACANT UNIT'}
                   </h3>
-                  <span className="text-[10px] font-mono text-[#18452E] uppercase tracking-wider font-bold">
+                  <span className="text-[10px] font-mono text-[#18452E] uppercase tracking-wider font-semibold">
                     {selectedUnit.paymentStatus !== 'Vacant' ? selectedUnit.tenantCode : `Unit: ${selectedUnit.unitNumber}`}
                   </span>
-                  <span className="block text-stone-400 font-light mt-0.5">{selectedUnit.propertyName}</span>
+                  <span className="block text-stone-400 font-normal mt-0.5">{selectedUnit.propertyName}</span>
                 </div>
               </div>
             </div>
@@ -2601,7 +2601,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               >
                 <Lock className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
                 <span>History</span>
-                <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
+                <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
               </button>
             </div>
 
@@ -2611,13 +2611,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                   <div className="bg-stone-50/50 p-3 rounded-2xl border border-stone-200">
-                    <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">PHONE NUMBER</span>
+                    <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">PHONE NUMBER</span>
                     <strong className="block text-stone-850 mt-0.5">
                       {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).phone}
                     </strong>
                   </div>
                   <div className="bg-stone-50/50 p-3 rounded-2xl border border-stone-200">
-                    <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">OCCUPATION</span>
+                    <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">OCCUPATION</span>
                     <strong className="block text-stone-850 mt-0.5 truncate">
                       {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).occupation}
                     </strong>
@@ -2626,7 +2626,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
                 {/* TENANT HISTORY (Step 7) - Real Numbers Only */}
                 <div className="p-4 bg-stone-50/80 border border-stone-200 rounded-2xl">
-                  <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-3">Tenant History</h4>
+                  <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase mb-3">Tenant History</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <div>
                       <span className="text-[9px] font-mono text-#6B7280 block uppercase">Years in Property</span>
@@ -2649,7 +2649,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
                 {/* GUARANTOR SEGMENTATION */}
                 <div className="p-4 bg-teal-50/30 border border-teal-100 rounded-2xl space-y-2">
-                  <span className="text-[9px] font-mono text-teal-800 uppercase font-black block tracking-widest">GUARANTOR INFORMATION</span>
+                  <span className="text-[9px] font-mono text-teal-800 uppercase font-semibold block tracking-widest">GUARANTOR INFORMATION</span>
                   
                   <div className="space-y-1">
                     <div className="flex justify-between items-center text-xs">
@@ -2666,7 +2666,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     </div>
                     <div className="flex justify-between items-center text-xs">
                       <span className="text-stone-400">Guarantor Relationship:</span>
-                      <span className="text-[10px] uppercase font-mono bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">
+                      <span className="text-[10px] uppercase font-mono bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold">
                         {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).relationship}
                       </span>
                     </div>
@@ -2675,35 +2675,35 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
                 {/* SMART RENT REMINDER (Step 15) */}
                 <div className="p-4 bg-stone-50/80 border border-stone-200 rounded-2xl space-y-3">
-                  <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-1">Smart Rent Reminder Schedule</h4>
+                  <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase mb-1">Smart Rent Reminder Schedule</h4>
                   <div className="flex flex-wrap gap-2 text-[10px] font-mono mb-2">
-                    <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase">Channels: SMS, Email, WhatsApp</span>
-                    <span className="bg-stone-200 text-#132A1D px-2 py-0.5 rounded font-bold uppercase">Schedule: 90, 60, 30 days prior</span>
+                    <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold uppercase">Channels: SMS, Email, WhatsApp</span>
+                    <span className="bg-stone-200 text-#132A1D px-2 py-0.5 rounded font-semibold uppercase">Schedule: 90, 60, 30 days prior</span>
                   </div>
                   <div className="text-xs bg-white p-3 rounded-xl border border-stone-150">
-                    <span className="text-[9px] uppercase font-mono text-stone-400 font-bold block mb-1">Latest Dispatch Log</span>
+                    <span className="text-[9px] uppercase font-mono text-stone-400 font-semibold block mb-1">Latest Dispatch Log</span>
                     <div className="flex justify-between items-center">
-                      <span className="text-#132A1D font-light">Sent: <strong>14 Mar 2027</strong></span>
-                      <span className="text-#132A1D font-light">Status: <strong>Paid</strong></span>
+                      <span className="text-#132A1D font-normal">Sent: <strong>14 Mar 2027</strong></span>
+                      <span className="text-#132A1D font-normal">Status: <strong>Paid</strong></span>
                     </div>
                   </div>
                 </div>
 
                 {/* HISTORIC LEDGER RECORD */}
                 <div className="space-y-2">
-                  <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">BILLING & PAYMENT HISTORY</span>
+                  <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">BILLING & PAYMENT HISTORY</span>
                   
                   <div className="space-y-2 max-h-[140px] overflow-y-auto border border-stone-200 rounded-xl divide-y">
                     
                     {/* CURRENT YEAR CYCLE */}
                     <div className="p-2.5 flex justify-between items-center bg-stone-50/30 text-xs">
                       <div>
-                        <span className="font-bold text-#132A1D block">Cycle: 2026 - 2027</span>
+                        <span className="font-semibold text-#132A1D block">Cycle: 2026 - 2027</span>
                         <span className="text-[10px] text-stone-400 block font-mono">Reference: NGN_CYC_0012_UH</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-bold text-#132A1D block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
-                        <span className={`inline-block px-1 rounded text-[8px] font-mono font-bold uppercase ${
+                        <span className="font-semibold text-#132A1D block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
+                        <span className={`inline-block px-1 rounded text-[8px] font-mono font-semibold uppercase ${
                           selectedUnit.paymentStatus === 'Paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'
                         }`}>{selectedUnit.paymentStatus}</span>
                       </div>
@@ -2712,12 +2712,12 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     {/* PREVIOUS YEAR CYCLE */}
                     <div className="p-2.5 flex justify-between items-center text-xs">
                       <div>
-                        <span className="font-bold text-#6B7280 block">Cycle: 2025 - 2026</span>
+                        <span className="font-semibold text-#6B7280 block">Cycle: 2025 - 2026</span>
                         <span className="text-[10px] text-stone-400 block font-mono">Reference: NGN_CYC_9981_UH</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-bold text-#6B7280 block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
-                        <span className="inline-block px-1 rounded text-[8px] font-mono font-bold uppercase bg-stone-50 text-#6B7280">PAID</span>
+                        <span className="font-semibold text-#6B7280 block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
+                        <span className="inline-block px-1 rounded text-[8px] font-mono font-semibold uppercase bg-stone-50 text-#6B7280">PAID</span>
                       </div>
                     </div>
 
@@ -2744,7 +2744,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setReassignConfirmation(false);
                       setShowReassignModal(true);
                     }}
-                    className="px-3 py-2 border-2 border-[#C9A84C] text-[#8C6D21] hover:bg-amber-50 font-bold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
+                    className="px-3 py-2 border-2 border-[#C9A84C] text-[#8C6D21] hover:bg-amber-50 font-semibold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
                   >
                     <ArrowLeft className="w-3.5 h-3.5 rotate-180 text-[#C9A84C]" />
                     <span>Reassign to Different Unit</span>
@@ -2756,7 +2756,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setMoveOutCheckboxes({ vacated: false, keysReturned: false, conditionAssessed: false, depositDocumented: false });
                       setShowMoveOutModal(true);
                     }}
-                    className="px-3 py-2 border-2 border-rose-300 text-rose-700 hover:bg-rose-50 font-bold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
+                    className="px-3 py-2 border-2 border-rose-300 text-rose-700 hover:bg-rose-50 font-semibold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
                   >
                     <Archive className="w-3.5 h-3.5 text-rose-600" />
                     <span>End Tenancy (Move-Out)</span>
@@ -2783,7 +2783,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-stone-50">
               <div className="flex items-center space-x-2">
                 <FileText className="w-5 h-5 text-[#18452E]" />
-                <span className="font-display font-bold text-#132A1D text-sm">Monthly Summary Report Preview</span>
+                <span className="font-display font-semibold text-#132A1D text-sm">Monthly Summary Report Preview</span>
               </div>
               <button 
                 onClick={() => setSelectedReport(null)}
@@ -2800,7 +2800,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 />
               ) : (
                 <div className="bg-white rounded-2xl shadow-sm border border-stone-150 p-8 text-center space-y-4">
-                  <h3 className="font-display font-bold text-lg text-#132A1D">{selectedReport.name || selectedReport.title}</h3>
+                  <h3 className="font-display font-semibold text-lg text-#132A1D">{selectedReport.name || selectedReport.title}</h3>
                   <p className="text-xs text-#6B7280">Legacy PDF Document reference securely catalogued in Unity Homes Ledger.</p>
                   <div className="p-4 bg-stone-50 border border-stone-150 rounded-xl inline-block text-[11px] font-mono text-#6B7280">
                     Document Ref: {selectedReport.id || 'DOC-LEGACY-001'}
@@ -2814,13 +2814,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   triggerSuccess('Document downloaded to local storage registers successfully!');
                   setSelectedReport(null);
                 }}
-                className="px-4 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Download PDF File
               </button>
               <button
                 onClick={() => setSelectedReport(null)}
-                className="px-4 py-2.5 border border-stone-300 hover:bg-stone-50 text-#132A1D font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2.5 border border-stone-300 hover:bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Close Preview
               </button>
@@ -2877,7 +2877,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
       {/* MANDATORY FOOTER CREED */}
       <div className="text-center pt-8 border-t border-stone-200/50">
-        <span className="text-[10px] text-[#C9A84C] font-mono tracking-widest uppercase font-bold">
+        <span className="text-[10px] text-[#C9A84C] font-mono tracking-widest uppercase font-semibold">
           OUR OPERATING CREED REQUIRED ON ALL ASSETS &bull; DON&apos;T BUY WAHALA
         </span>
       </div>
@@ -2892,10 +2892,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-4">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 VERIFIED BANK ROUTING
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-3">{selectedBankAccount.bankName}</h3>
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-3">{selectedBankAccount.bankName}</h3>
               <p className="text-#6B7280 font-mono text-sm">{selectedBankAccount.accNo}</p>
             </div>
             <div className="space-y-3 text-xs text-#6B7280">
@@ -2905,7 +2905,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
               <div className="flex justify-between items-center">
                 <span>Status:</span>
-                <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase text-[9px]">Verified Active</span>
+                <span className="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold uppercase text-[9px]">Verified Active</span>
               </div>
             </div>
           </div>
@@ -2922,10 +2922,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-4">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 PAYMENT RECORD
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-3">{selectedPaymentRecord.tenantName}</h3>
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-3">{selectedPaymentRecord.tenantName}</h3>
               <p className="text-#6B7280 font-mono text-sm">{selectedPaymentRecord.propertyName}</p>
             </div>
 
@@ -2952,7 +2952,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               >
                 <Lock className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
                 <span>History</span>
-                <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
+                <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
               </button>
             </div>
 
@@ -2964,7 +2964,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 </div>
                 <div className="flex justify-between items-center border-b border-stone-200 pb-2">
                   <span>Status:</span>
-                  <span className={`px-2 py-0.5 rounded font-bold uppercase text-[9px] ${
+                  <span className={`px-2 py-0.5 rounded font-semibold uppercase text-[9px] ${
                     selectedPaymentRecord.paymentStatus === 'Paid' ? 'bg-emerald-100 text-emerald-800' :
                     selectedPaymentRecord.paymentStatus === 'Overdue' ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800'
                   }`}>{selectedPaymentRecord.paymentStatus}</span>
@@ -2977,7 +2977,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <div className="bg-[#18452E]/5 p-3 rounded-xl border border-[#0E2F1F]/10 mt-4">
                     <div className="flex items-center space-x-2 text-[#18452E]">
                       <ShieldCheck className="w-4 h-4" />
-                      <span className="font-bold text-xs">Direct Routing Verified</span>
+                      <span className="font-semibold text-xs">Direct Routing Verified</span>
                     </div>
                     <p className="text-[10px] text-#6B7280 mt-1">Funds cleared to {selectedBankAccount?.bankName || 'Zenith Bank'}. No intermediary holding.</p>
                   </div>
@@ -3003,10 +3003,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 PROPERTY REGISTRATION
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2 flex items-center gap-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2 flex items-center gap-2">
                 <BuildingIcon className="w-5 h-5 text-[#C9A84C]" /> Register New Building
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3017,7 +3017,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             <form onSubmit={handleSaveBuilding} className="space-y-4 text-xs">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">BUILDING NAME *</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">BUILDING NAME *</label>
                   <input 
                     type="text" 
                     required
@@ -3028,7 +3028,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">BUILDING / BLOCK NUMBER</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">BUILDING / BLOCK NUMBER</label>
                   <input 
                     type="text" 
                     value={buildingForm.buildingNumber}
@@ -3040,7 +3040,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">STREET ADDRESS *</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">STREET ADDRESS *</label>
                 <input 
                   type="text" 
                   required
@@ -3053,7 +3053,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">AREA / DISTRICT</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">AREA / DISTRICT</label>
                   <input 
                     type="text" 
                     value={buildingForm.area}
@@ -3063,7 +3063,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">STATE</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">STATE</label>
                   <input 
                     type="text" 
                     value={buildingForm.state}
@@ -3075,7 +3075,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">COVER PHOTO URL (OPTIONAL)</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">COVER PHOTO URL (OPTIONAL)</label>
                 <input 
                   type="url" 
                   value={buildingForm.coverPhoto}
@@ -3086,7 +3086,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div className="bg-amber-50 p-3 rounded-2xl border border-amber-200/80 text-[10px] space-y-1">
-                <div className="flex items-center gap-1.5 text-amber-900 font-bold uppercase font-mono">
+                <div className="flex items-center gap-1.5 text-amber-900 font-semibold uppercase font-mono">
                   <Info className="w-3.5 h-3.5 text-amber-700" />
                   <span>Title Verification Process</span>
                 </div>
@@ -3098,14 +3098,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="flex space-x-3 pt-2">
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                 >
                   Register Building
                 </button>
                 <button 
                   type="button" 
                   onClick={() => setShowAddBuildingModal(false)}
-                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -3126,10 +3126,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 UNIT ALLOCATION
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2 flex items-center gap-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2 flex items-center gap-2">
                 <Plus className="w-5 h-5 text-[#18452E]" /> Add Unit to Building
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3139,7 +3139,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             <form onSubmit={handleSaveUnit} className="space-y-4 text-xs">
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">UNIT / FLAT NAME *</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">UNIT / FLAT NAME *</label>
                 <input 
                   type="text" 
                   required
@@ -3152,7 +3152,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">UNIT TYPE</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">UNIT TYPE</label>
                   <select 
                     value={unitForm.unitType}
                     onChange={(e) => setUnitForm({ ...unitForm, unitType: e.target.value })}
@@ -3169,7 +3169,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 </div>
 
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">ANNUAL RENT (NGN) *</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">ANNUAL RENT (NGN) *</label>
                   <input 
                     type="number" 
                     required
@@ -3182,7 +3182,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">RENT COLLECTION ACCOUNT</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">RENT COLLECTION ACCOUNT</label>
                 <select 
                   value={unitForm.collectionAccountId}
                   onChange={(e) => setUnitForm({ ...unitForm, collectionAccountId: e.target.value })}
@@ -3197,14 +3197,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="flex space-x-3 pt-2">
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                 >
                   Save Unit
                 </button>
                 <button 
                   type="button" 
                   onClick={() => setShowAddUnitModal(false)}
-                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -3225,10 +3225,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 UNIT SETTINGS
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2 flex items-center gap-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2 flex items-center gap-2">
                 <Edit2 className="w-5 h-5 text-[#18452E]" /> Edit Unit Details
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3238,7 +3238,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             <form onSubmit={handleSaveEditUnit} className="space-y-4 text-xs">
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">UNIT NAME / LABEL</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">UNIT NAME / LABEL</label>
                 <input 
                   type="text" 
                   required
@@ -3249,7 +3249,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">ANNUAL RENT AMOUNT (NGN)</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">ANNUAL RENT AMOUNT (NGN)</label>
                 <input 
                   type="number" 
                   required
@@ -3260,7 +3260,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">RENT COLLECTION ACCOUNT</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">RENT COLLECTION ACCOUNT</label>
                 <select 
                   value={editUnitForm.collectionAccountId}
                   onChange={(e) => setEditUnitForm({ ...editUnitForm, collectionAccountId: e.target.value })}
@@ -3278,14 +3278,14 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="flex space-x-3 pt-2">
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
                 >
                   Update Unit Details
                 </button>
                 <button 
                   type="button" 
                   onClick={() => setEditingUnit(null)}
-                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -3311,10 +3311,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <Clock className="w-6 h-6 text-amber-800" />
               </div>
               <div>
-                <span className="text-[9px] uppercase font-mono font-black text-amber-800 tracking-widest block">
+                <span className="text-[9px] uppercase font-mono font-semibold text-amber-800 tracking-widest block">
                   SECURITY GUARDRAIL
                 </span>
-                <h3 className="font-display font-black text-#132A1D text-lg">48-Hour Security Hold Applied</h3>
+                <h3 className="font-display font-semibold text-#132A1D text-lg">48-Hour Security Hold Applied</h3>
               </div>
             </div>
 
@@ -3329,7 +3329,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             <button 
               onClick={() => setShow48HourHoldNotice(false)}
-              className="w-full py-3 bg-#132A1D text-white text-xs font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
+              className="w-full py-3 bg-#132A1D text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md"
             >
               I Understand & Acknowledge
             </button>
@@ -3348,10 +3348,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <X className="w-5 h-5" />
             </button>
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#18452E] bg-emerald-50 px-2 py-0.5 rounded-md tracking-widest">
                 TENANT ONBOARDING INVITATION
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2 flex items-center gap-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2 flex items-center gap-2">
                 <Send className="w-5 h-5 text-[#18452E]" /> Issue Tenant Invitation Code
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3361,12 +3361,12 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             <form onSubmit={handleGenerateInvitation} className="space-y-4 text-xs">
               <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200 text-#132A1D text-[11px] space-y-1">
-                <span className="font-bold text-[#18452E] block font-mono uppercase text-[9px]">Pre-filled Agreement Specs</span>
+                <span className="font-semibold text-[#18452E] block font-mono uppercase text-[9px]">Pre-filled Agreement Specs</span>
                 <p>Pre-populating tenant data streamlines their onboarding form, requiring them to only review and confirm their details.</p>
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">TENANT FULL NAME *</label>
+                <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">TENANT FULL NAME *</label>
                 <input 
                   type="text" 
                   required
@@ -3379,7 +3379,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">PHONE NUMBER *</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">PHONE NUMBER *</label>
                   <input 
                     type="tel" 
                     required
@@ -3390,7 +3390,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">EMAIL ADDRESS *</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">EMAIL ADDRESS *</label>
                   <input 
                     type="email" 
                     required
@@ -3404,7 +3404,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">OCCUPATION</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">OCCUPATION</label>
                   <input 
                     type="text" 
                     value={inviteForm.occupation}
@@ -3414,7 +3414,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">EMPLOYER</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">EMPLOYER</label>
                   <input 
                     type="text" 
                     value={inviteForm.employer}
@@ -3426,10 +3426,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               </div>
 
               <div className="border-t border-stone-200 pt-3 space-y-3">
-                <span className="block text-[9px] font-mono font-bold text-[#18452E] uppercase">GUARANTOR DETAILS</span>
+                <span className="block text-[9px] font-mono font-semibold text-[#18452E] uppercase">GUARANTOR DETAILS</span>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">GUARANTOR NAME</label>
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">GUARANTOR NAME</label>
                     <input 
                       type="text" 
                       value={inviteForm.guarantorName}
@@ -3439,7 +3439,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     />
                   </div>
                   <div>
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">GUARANTOR PHONE</label>
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">GUARANTOR PHONE</label>
                     <input 
                       type="tel" 
                       value={inviteForm.guarantorPhone}
@@ -3453,7 +3453,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <div className="border-t border-stone-200 pt-3 grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">AGREED ANNUAL RENT (NGN)</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">AGREED ANNUAL RENT (NGN)</label>
                   <input 
                     type="number" 
                     required
@@ -3463,7 +3463,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">CAUTION DEPOSIT (NGN)</label>
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">CAUTION DEPOSIT (NGN)</label>
                   <input 
                     type="number" 
                     value={inviteForm.cautionDeposit}
@@ -3476,7 +3476,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
               <div className="flex space-x-3 pt-2">
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-bold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-[#18452E] text-white text-xs font-semibold rounded-xl hover:bg-[#18452E] transition cursor-pointer shadow-md flex items-center justify-center gap-2"
                 >
                   <QrCode className="w-4 h-4" />
                   <span>Generate Invitation Code</span>
@@ -3484,7 +3484,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <button 
                   type="button" 
                   onClick={() => setShowInviteModal(false)}
-                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                  className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -3506,10 +3506,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
 
             <div className="text-center space-y-2 border-b border-stone-200 pb-4">
-              <span className="text-[9px] uppercase font-mono font-black text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full tracking-widest inline-block">
+              <span className="text-[9px] uppercase font-mono font-semibold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full tracking-widest inline-block">
                 INVITATION READY
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl">Tenant Onboarding Code</h3>
+              <h3 className="font-display font-semibold text-#132A1D text-xl">Tenant Onboarding Code</h3>
               <p className="text-#6B7280 text-xs">
                 Share this unique code or direct link with <strong>{generatedInvitation.pre_filled_data.tenantFullName}</strong>.
               </p>
@@ -3518,7 +3518,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* Unique Code Box */}
             <div className="bg-#132A1D p-4 rounded-2xl text-center space-y-1 relative">
               <span className="text-[9px] uppercase font-mono text-stone-400 block tracking-widest">UNIQUE 8-CHAR INVITATION CODE</span>
-              <strong className="text-[#C9A84C] font-mono text-2xl tracking-widest block font-black">
+              <strong className="text-[#C9A84C] font-mono text-2xl tracking-widest block font-semibold">
                 {generatedInvitation.invitation_code}
               </strong>
               <p className="text-[10px] text-stone-400 font-mono pt-1">
@@ -3528,7 +3528,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
             {/* Link Box */}
             <div className="space-y-2 text-xs">
-              <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase">DIRECT REGISTRATION LINK</label>
+              <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase">DIRECT REGISTRATION LINK</label>
               <div className="flex items-center gap-2 bg-stone-50 p-2.5 rounded-xl border border-stone-200">
                 <input 
                   type="text" 
@@ -3542,7 +3542,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                     setCopiedLink(true);
                     setTimeout(() => setCopiedLink(false), 2000);
                   }}
-                  className="px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-xs font-bold hover:bg-[#18452E] transition flex items-center gap-1 cursor-pointer shrink-0"
+                  className="px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-xs font-semibold hover:bg-[#18452E] transition flex items-center gap-1 cursor-pointer shrink-0"
                 >
                   {copiedLink ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedLink ? 'Copied!' : 'Copy'}</span>
@@ -3556,7 +3556,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <QrCode className="w-16 h-16 text-[#C9A84C]" />
               </div>
               <div className="text-left text-xs space-y-1">
-                <span className="font-bold text-#132A1D block font-mono text-[11px]">QR CODE SCAN</span>
+                <span className="font-semibold text-#132A1D block font-mono text-[11px]">QR CODE SCAN</span>
                 <p className="text-#6B7280 text-[10px] leading-tight">
                   Tenant can scan this QR code directly to launch pre-filled registration.
                 </p>
@@ -3568,7 +3568,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 href={`https://wa.me/?text=${encodeURIComponent(`Hello ${generatedInvitation.pre_filled_data.tenantFullName}, your tenancy invitation code for Unity Homes is: ${generatedInvitation.invitation_code}. Complete your registration here: ${generatedInvitation.invitation_link}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-bold rounded-xl transition cursor-pointer flex items-center justify-center gap-2 shadow-md"
+                className="w-full py-3 bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-semibold rounded-xl transition cursor-pointer flex items-center justify-center gap-2 shadow-md"
               >
                 <Share2 className="w-4 h-4" />
                 <span>Share via WhatsApp</span>
@@ -3576,7 +3576,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
               <button 
                 onClick={() => setGeneratedInvitation(null)}
-                className="w-full py-2.5 bg-stone-50 text-#132A1D text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                className="w-full py-2.5 bg-stone-50 text-#132A1D text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
               >
                 Close Window
               </button>
@@ -3590,12 +3590,12 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-[var(--radius-large)] max-w-2xl w-full border border-stone-200 shadow-sm p-6 max-h-[90vh] overflow-y-auto space-y-4">
             <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-              <h3 className="font-display font-bold text-#132A1D text-base">
+              <h3 className="font-display font-semibold text-#132A1D text-base">
                 Move-In Readiness &bull; {showReadinessModalProfile.full_name}
               </h3>
               <button
                 onClick={() => setShowReadinessModalProfile(null)}
-                className="text-stone-400 hover:text-#6B7280 font-bold text-sm"
+                className="text-stone-400 hover:text-#6B7280 font-semibold text-sm"
               >
                 ✕
               </button>
@@ -3626,10 +3626,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
 
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-[#C9A84C] bg-amber-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#C9A84C] bg-amber-50 px-2 py-0.5 rounded-md tracking-widest">
                 UNIT REASSIGNMENT FLOW
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2">
                 Reassign {selectedUnit.tenantName}
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3640,7 +3640,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {!reassignConfirmation ? (
               <div className="space-y-4 text-xs">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                  <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                     SELECT TARGET VACANT UNIT *
                   </label>
                   <select
@@ -3685,13 +3685,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <button
                     disabled={!reassignTargetUnitId}
                     onClick={() => setReassignConfirmation(true)}
-                    className="flex-1 py-3 bg-[#C9A84C] hover:bg-[#b8973b] disabled:opacity-50 text-white text-xs font-bold rounded-xl transition cursor-pointer shadow-md"
+                    className="flex-1 py-3 bg-[#C9A84C] hover:bg-[#b8973b] disabled:opacity-50 text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
                   >
                     Proceed to Confirmation
                   </button>
                   <button
                     onClick={() => setShowReassignModal(false)}
-                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                   >
                     Cancel
                   </button>
@@ -3700,24 +3700,24 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             ) : (
               <div className="space-y-4 text-xs animate-fade-in">
                 <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl space-y-2">
-                  <span className="text-[9px] font-mono font-bold text-#6B7280 uppercase block">REASSIGNMENT SUMMARY</span>
+                  <span className="text-[9px] font-mono font-semibold text-#6B7280 uppercase block">REASSIGNMENT SUMMARY</span>
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-#6B7280">Tenant:</span>
                     <strong className="text-#132A1D">{selectedUnit.tenantName}</strong>
                   </div>
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-#6B7280">From Unit:</span>
-                    <span className="font-mono font-bold text-#132A1D">{selectedUnit.unitNumber} ({selectedUnit.propertyName})</span>
+                    <span className="font-mono font-semibold text-#132A1D">{selectedUnit.unitNumber} ({selectedUnit.propertyName})</span>
                   </div>
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-#6B7280">To Unit:</span>
-                    <span className="font-mono font-bold text-emerald-700">
+                    <span className="font-mono font-semibold text-emerald-700">
                       {getStoredUnits().find(u => u.id === reassignTargetUnitId)?.unit_name}
                     </span>
                   </div>
                   <div className="flex justify-between items-center text-xs border-t border-stone-200 pt-2 mt-1">
                     <span className="text-#6B7280">Rent Adjustment:</span>
-                    <span className="font-mono font-bold text-#132A1D">
+                    <span className="font-mono font-semibold text-#132A1D">
                       ₦{selectedUnit.rentAmount.toLocaleString()} → ₦{(getStoredUnits().find(u => u.id === reassignTargetUnitId)?.annual_rent || 0).toLocaleString()}
                     </span>
                   </div>
@@ -3741,13 +3741,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         alert(err.message || 'Failed to reassign unit.');
                       }
                     }}
-                    className="flex-1 py-3 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-xl transition cursor-pointer shadow-md"
+                    className="flex-1 py-3 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
                   >
                     Confirm Reassignment
                   </button>
                   <button
                     onClick={() => setReassignConfirmation(false)}
-                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                   >
                     Back
                   </button>
@@ -3770,10 +3770,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
 
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-black text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md tracking-widest">
                 MOVE-OUT & TENANCY TERMINATION
               </span>
-              <h3 className="font-display font-black text-#132A1D text-xl mt-2">
+              <h3 className="font-display font-semibold text-#132A1D text-xl mt-2">
                 End Tenancy for {selectedUnit.tenantName}
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
@@ -3784,7 +3784,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {moveOutStep === 1 ? (
               <div className="space-y-4 text-xs">
                 <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl space-y-2">
-                  <span className="text-[9px] font-mono font-bold text-#6B7280 uppercase block">LEASE STATUS & AUDIT</span>
+                  <span className="text-[9px] font-mono font-semibold text-#6B7280 uppercase block">LEASE STATUS & AUDIT</span>
                   <div className="flex justify-between items-center">
                     <span className="text-#6B7280">Lease End Date:</span>
                     <strong className="font-mono text-#132A1D">2026-07-31</strong>
@@ -3806,13 +3806,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <div className="flex space-x-3 pt-2">
                   <button
                     onClick={() => setMoveOutStep(2)}
-                    className="flex-1 py-3 bg-rose-800 hover:bg-rose-900 text-white text-xs font-bold rounded-xl transition cursor-pointer shadow-md"
+                    className="flex-1 py-3 bg-rose-800 hover:bg-rose-900 text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
                   >
                     Proceed to Move-Out Checklist
                   </button>
                   <button
                     onClick={() => setShowMoveOutModal(false)}
-                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                   >
                     Cancel
                   </button>
@@ -3894,13 +3894,13 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                         alert(err.message || 'Failed to complete move-out.');
                       }
                     }}
-                    className="flex-1 py-3 bg-rose-800 hover:bg-rose-900 disabled:opacity-50 text-white text-xs font-bold rounded-xl transition cursor-pointer shadow-md"
+                    className="flex-1 py-3 bg-rose-800 hover:bg-rose-900 disabled:opacity-50 text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
                   >
                     Confirm Move-Out & Vacate Unit
                   </button>
                   <button
                     onClick={() => setMoveOutStep(1)}
-                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-bold rounded-xl hover:bg-stone-200 transition cursor-pointer"
+                    className="px-4 py-3 bg-stone-50 text-#6B7280 text-xs font-semibold rounded-xl hover:bg-stone-200 transition cursor-pointer"
                   >
                     Back
                   </button>

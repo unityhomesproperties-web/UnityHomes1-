@@ -222,13 +222,13 @@ export default function BundleConnectionSection({
       
       {/* SECTION HEADER */}
       <div className="text-center space-y-1.5 mb-6">
-        <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[var(--color-accent-gold)] bg-[var(--color-brand-deep)]/10 border border-[var(--color-accent-gold)]/30 px-3 py-1 rounded-full">
+        <span className="text-[10px] font-mono font-semibold uppercase tracking-widest text-[var(--color-accent-gold)] bg-[var(--color-brand-deep)]/10 border border-[var(--color-accent-gold)]/30 px-3 py-1 rounded-full">
           Connection Options
         </span>
-        <h2 className="text-2xl md:text-3xl font-display font-black text-[var(--color-brand-deep)]">
+        <h2 className="text-2xl md:text-3xl font-display font-semibold text-[var(--color-brand-deep)]">
           How Would You Like to Connect
         </h2>
-        <p className="text-xs text-[var(--color-text-secondary)] max-w-xl mx-auto font-light">
+        <p className="text-xs text-[var(--color-text-secondary)] max-w-xl mx-auto font-normal">
           Choose between an individual verified expert or multi-professional protected bundles with direct founder oversight.
         </p>
       </div>
@@ -240,19 +240,19 @@ export default function BundleConnectionSection({
         <div className="bg-white rounded-2xl border-2 border-[var(--color-brand-deep)] p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[10px] font-mono font-bold text-[var(--color-brand-deep)] uppercase tracking-wider">
+              <span className="text-[10px] font-mono font-semibold text-[var(--color-brand-deep)] uppercase tracking-wider">
                 STARTER OPTION
               </span>
             </div>
-            <h3 className="font-display font-extrabold text-[var(--color-brand-deep)] text-xl">
+            <h3 className="font-display font-semibold text-[var(--color-brand-deep)] text-xl">
               One Professional
             </h3>
             <div className="my-4">
-              <span className="font-display font-black text-[var(--color-brand-deep)] text-3.5xl">
+              <span className="font-display font-semibold text-[var(--color-brand-deep)] text-3.5xl">
                 NGN 55,000
               </span>
             </div>
-            <p className="text-xs text-[var(--color-text-secondary)] mb-5 font-light leading-relaxed">
+            <p className="text-xs text-[var(--color-text-secondary)] mb-5 font-normal leading-relaxed">
               Connect with one verified real estate professional of your choice.
             </p>
 
@@ -274,7 +274,7 @@ export default function BundleConnectionSection({
 
           <button
             onClick={handleOpenSingleCheckout}
-            className="mt-6 w-full py-3 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] text-white font-bold text-xs rounded-xl shadow transition cursor-pointer"
+            className="mt-6 w-full py-3 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] text-white font-semibold text-xs rounded-xl shadow transition cursor-pointer"
           >
             Get Connected
           </button>
@@ -294,22 +294,22 @@ export default function BundleConnectionSection({
 
         {/* CARD TWO: DUAL PROFESSIONAL BUNDLE */}
         <div className="bg-white rounded-2xl border-2 border-[var(--color-accent-gold)] p-6 shadow-sm flex flex-col justify-between relative hover:shadow-md transition">
-          <div className="absolute top-4 right-4 bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)] font-mono font-extrabold text-[10px] px-2.5 py-1 rounded-md shadow-xs">
+          <div className="absolute top-4 right-4 bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)] font-mono font-semibold text-[10px] px-2.5 py-1 rounded-md shadow-xs">
             Save NGN 15,000
           </div>
 
           <div>
             <div className="mb-2">
-              <span className="text-[10px] font-mono font-bold text-[var(--color-accent-gold)] uppercase tracking-wider">
+              <span className="text-[10px] font-mono font-semibold text-[var(--color-accent-gold)] uppercase tracking-wider">
                 POPULAR BUNDLE
               </span>
             </div>
-            <h3 className="font-display font-extrabold text-[var(--color-brand-deep)] text-xl">
+            <h3 className="font-display font-semibold text-[var(--color-brand-deep)] text-xl">
               Any Two Professionals
             </h3>
             
             <div className="my-4">
-              <span className="font-display font-black text-[var(--color-brand-deep)] text-3.5xl block">
+              <span className="font-display font-semibold text-[var(--color-brand-deep)] text-3.5xl block">
                 NGN 95,000
               </span>
               <span className="line-through text-stone-400 text-xs font-mono block mt-0.5">
@@ -317,7 +317,7 @@ export default function BundleConnectionSection({
               </span>
             </div>
 
-            <p className="text-xs text-[var(--color-text-secondary)] mb-5 font-light leading-relaxed">
+            <p className="text-xs text-[var(--color-text-secondary)] mb-5 font-normal leading-relaxed">
               Connect with any two professionals from our verified catalogue. You choose the combination.
             </p>
 
@@ -343,7 +343,7 @@ export default function BundleConnectionSection({
 
           <button
             onClick={handleOpenDualModal}
-            className="mt-6 w-full py-3 bg-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)/80] text-[var(--color-brand-deep)] font-extrabold text-xs rounded-xl shadow transition cursor-pointer"
+            className="mt-6 w-full py-3 bg-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)/80] text-[var(--color-brand-deep)] font-semibold text-xs rounded-xl shadow transition cursor-pointer"
           >
             Get Connected
           </button>
@@ -363,22 +363,22 @@ export default function BundleConnectionSection({
 
         {/* CARD THREE: COMPLETE BUNDLE */}
         <div className="bg-[var(--color-brand-deep)] text-white rounded-2xl p-6 shadow-md flex flex-col justify-between relative overflow-hidden ring-4 ring-[var(--color-accent-gold)]/25">
-          <div className="absolute top-4 right-4 bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)] font-mono font-black text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider">
+          <div className="absolute top-4 right-4 bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)] font-mono font-semibold text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider">
             Best Value
           </div>
 
           <div>
             <div className="mb-2">
-              <span className="text-[10px] font-mono font-bold text-[var(--color-accent-gold)] uppercase tracking-wider">
+              <span className="text-[10px] font-mono font-semibold text-[var(--color-accent-gold)] uppercase tracking-wider">
                 TOTAL PROPERTY SHIELD
               </span>
             </div>
-            <h3 className="font-display font-extrabold text-[var(--color-brand-deep)] text-xl text-white">
+            <h3 className="font-display font-semibold text-[var(--color-brand-deep)] text-xl text-white">
               All Three Professionals
             </h3>
 
             <div className="my-4">
-              <span className="font-display font-black text-[var(--color-accent-gold)] text-3.5xl block">
+              <span className="font-display font-semibold text-[var(--color-accent-gold)] text-3.5xl block">
                 NGN 120,000
               </span>
               <span className="line-through text-stone-300 text-xs font-mono block mt-0.5">
@@ -386,7 +386,7 @@ export default function BundleConnectionSection({
               </span>
             </div>
 
-            <p className="text-xs text-stone-200 mb-5 font-light leading-relaxed">
+            <p className="text-xs text-stone-200 mb-5 font-normal leading-relaxed">
               Connect with a lawyer, surveyor, and structural engineer together for the most comprehensive property protection.
             </p>
 
@@ -416,7 +416,7 @@ export default function BundleConnectionSection({
 
           <button
             onClick={handleOpenCompleteBundleCheckout}
-            className="mt-6 w-full py-3 bg-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)/80] text-[var(--color-brand-deep)] font-black text-xs rounded-xl shadow transition cursor-pointer"
+            className="mt-6 w-full py-3 bg-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)/80] text-[var(--color-brand-deep)] font-semibold text-xs rounded-xl shadow transition cursor-pointer"
           >
             Get Complete Bundle
           </button>
@@ -454,10 +454,10 @@ export default function BundleConnectionSection({
             </button>
 
             <div>
-              <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[var(--color-accent-gold)] block mb-1">
+              <span className="text-[10px] font-mono font-semibold uppercase tracking-widest text-[var(--color-accent-gold)] block mb-1">
                 DUAL BUNDLE PAIRING
               </span>
-              <h3 className="font-display font-black text-2xl text-[var(--color-brand-deep)]">
+              <h3 className="font-display font-semibold text-2xl text-[var(--color-brand-deep)]">
                 Choose Your Two Professionals
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] mt-1">
@@ -479,24 +479,24 @@ export default function BundleConnectionSection({
               >
                 <div className="space-y-1.5 flex-1">
                   <div className="flex items-center space-x-2">
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-brand-deep)] text-white">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-brand-deep)] text-white">
                       Lawyer
                     </span>
                     <span className="text-stone-400 text-xs">+</span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-brand-deep)] text-white">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-brand-deep)] text-white">
                       Surveyor
                     </span>
                   </div>
-                  <h4 className="font-display font-bold text-base text-[var(--color-brand-deep)]">
+                  <h4 className="font-display font-semibold text-base text-[var(--color-brand-deep)]">
                     Lawyer and Surveyor
                   </h4>
-                  <p className="text-xs text-[var(--color-text-secondary)] font-light">
+                  <p className="text-xs text-[var(--color-text-secondary)] font-normal">
                     Verify title ownership and confirm physical boundaries.
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between md:justify-end space-x-3">
-                  <span className="font-mono font-bold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
+                  <span className="font-mono font-semibold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     selectedDualOption === 'lawyer_surveyor'
                       ? 'border-[var(--color-accent-gold)] bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]'
@@ -518,24 +518,24 @@ export default function BundleConnectionSection({
               >
                 <div className="space-y-1.5 flex-1">
                   <div className="flex items-center space-x-2">
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-brand-deep)] text-white">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-brand-deep)] text-white">
                       Lawyer
                     </span>
                     <span className="text-stone-400 text-xs">+</span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]">
                       Structural Engineer
                     </span>
                   </div>
-                  <h4 className="font-display font-bold text-base text-[var(--color-brand-deep)]">
+                  <h4 className="font-display font-semibold text-base text-[var(--color-brand-deep)]">
                     Lawyer and Structural Engineer
                   </h4>
-                  <p className="text-xs text-[var(--color-text-secondary)] font-light">
+                  <p className="text-xs text-[var(--color-text-secondary)] font-normal">
                     Verify legal standing and inspect building safety.
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between md:justify-end space-x-3">
-                  <span className="font-mono font-bold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
+                  <span className="font-mono font-semibold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     selectedDualOption === 'lawyer_engineer'
                       ? 'border-[var(--color-accent-gold)] bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]'
@@ -557,24 +557,24 @@ export default function BundleConnectionSection({
               >
                 <div className="space-y-1.5 flex-1">
                   <div className="flex items-center space-x-2">
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-brand-deep)] text-white">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-brand-deep)] text-white">
                       Surveyor
                     </span>
                     <span className="text-stone-400 text-xs">+</span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]">
+                    <span className="px-2.5 py-0.5 rounded-full text-[9px] font-mono font-semibold bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]">
                       Structural Engineer
                     </span>
                   </div>
-                  <h4 className="font-display font-bold text-base text-[var(--color-brand-deep)]">
+                  <h4 className="font-display font-semibold text-base text-[var(--color-brand-deep)]">
                     Surveyor and Structural Engineer
                   </h4>
-                  <p className="text-xs text-[var(--color-text-secondary)] font-light">
+                  <p className="text-xs text-[var(--color-text-secondary)] font-normal">
                     Confirm boundaries and inspect structural integrity.
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between md:justify-end space-x-3">
-                  <span className="font-mono font-bold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
+                  <span className="font-mono font-semibold text-sm text-[var(--color-brand-deep)]">NGN 95,000</span>
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                     selectedDualOption === 'surveyor_engineer'
                       ? 'border-[var(--color-accent-gold)] bg-[var(--color-accent-gold)] text-[var(--color-brand-deep)]'
@@ -592,7 +592,7 @@ export default function BundleConnectionSection({
               <div className="pt-2">
                 <button
                   onClick={handleProceedDualToCheckout}
-                  className="w-full py-3.5 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] text-white font-extrabold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-2 cursor-pointer"
+                  className="w-full py-3.5 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] text-white font-semibold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <span>
                     Proceed to Payment for {
@@ -621,10 +621,10 @@ export default function BundleConnectionSection({
             </button>
 
             <div>
-              <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[var(--color-brand-deep)]">
+              <span className="text-[10px] font-mono font-semibold uppercase tracking-widest text-[var(--color-brand-deep)]">
                 SECURE PAYSTACK CHECKOUT
               </span>
-              <h3 className="font-display font-black text-2xl text-[var(--color-brand-deep)]">
+              <h3 className="font-display font-semibold text-2xl text-[var(--color-brand-deep)]">
                 {activeCheckoutPackage.title}
               </h3>
               <p className="text-xs text-[var(--color-text-secondary)] mt-1">
@@ -636,9 +636,9 @@ export default function BundleConnectionSection({
             <div className="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-4 space-y-2">
               <div className="flex justify-between items-center">
                 <div>
-                  <span className="block text-[10px] font-mono text-emerald-800 uppercase font-bold">TOTAL PAYABLE TODAY</span>
+                  <span className="block text-[10px] font-mono text-emerald-800 uppercase font-semibold">TOTAL PAYABLE TODAY</span>
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-2xl font-display font-black text-[var(--color-brand-deep)]">
+                    <span className="text-2xl font-display font-semibold text-[var(--color-brand-deep)]">
                       NGN {finalPayableAmount.toLocaleString()}
                     </span>
                     {appliedPromoResult && appliedPromoResult.valid && (
@@ -648,18 +648,18 @@ export default function BundleConnectionSection({
                     )}
                   </div>
                 </div>
-                <span className="text-[10px] bg-[var(--color-brand-deep)] text-white px-2.5 py-1 rounded-full font-mono font-bold">
+                <span className="text-[10px] bg-[var(--color-brand-deep)] text-white px-2.5 py-1 rounded-full font-mono font-semibold">
                   100% Vetted Guarantee
                 </span>
               </div>
 
               {appliedPromoResult && appliedPromoResult.valid && (
                 <div className="pt-2 border-t border-emerald-200/60 flex items-center justify-between text-xs font-mono">
-                  <span className="text-emerald-800 font-bold flex items-center space-x-1">
+                  <span className="text-emerald-800 font-semibold flex items-center space-x-1">
                     <Tag className="w-3.5 h-3.5 text-emerald-600" />
                     <span>Promo Applied ({appliedPromoResult.discount_value}% off)</span>
                   </span>
-                  <span className="text-emerald-800 font-black">
+                  <span className="text-emerald-800 font-semibold">
                     -NGN {appliedPromoResult.discount_amount?.toLocaleString()}
                   </span>
                 </div>
@@ -669,7 +669,7 @@ export default function BundleConnectionSection({
             {paymentSuccess ? (
               <div className="bg-emerald-50 border border-emerald-300 text-emerald-900 p-6 rounded-2xl text-center flex flex-col items-center space-y-3">
                 <CheckCircle2 className="w-12 h-12 text-emerald-600" />
-                <h4 className="font-extrabold text-base uppercase font-mono">Payment Successful!</h4>
+                <h4 className="font-semibold text-base uppercase font-mono">Payment Successful!</h4>
                 <p className="text-xs text-emerald-800">
                   Thank you. Your connection fee of <strong>NGN {finalPayableAmount.toLocaleString()}</strong> has been processed via Paystack. Arranging your personal introduction now.
                 </p>
@@ -682,7 +682,7 @@ export default function BundleConnectionSection({
                 
                 {/* PROMO CODE INPUT SECTION */}
                 <div className="bg-stone-50 border border-stone-200 p-3 rounded-2xl space-y-2">
-                  <label className="block text-[10px] font-mono font-bold text-[var(--color-text-secondary)] uppercase flex items-center space-x-1">
+                  <label className="block text-[10px] font-mono font-semibold text-[var(--color-text-secondary)] uppercase flex items-center space-x-1">
                     <Tag className="w-3 h-3 text-[var(--color-brand-deep)]" />
                     <span>Have a Promo Code?</span>
                   </label>
@@ -692,10 +692,10 @@ export default function BundleConnectionSection({
                       <div className="flex items-center space-x-2">
                         <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                         <div>
-                          <span className="font-mono font-bold text-xs text-emerald-900 uppercase">
+                          <span className="font-mono font-semibold text-xs text-emerald-900 uppercase">
                             {promoCodeInput.toUpperCase()}
                           </span>
-                          <span className="text-[10px] text-emerald-700 block font-light">
+                          <span className="text-[10px] text-emerald-700 block font-normal">
                             {appliedPromoResult.message}
                           </span>
                         </div>
@@ -703,7 +703,7 @@ export default function BundleConnectionSection({
                       <button
                         type="button"
                         onClick={handleRemovePromoCode}
-                        className="text-[10px] font-bold text-red-600 hover:underline cursor-pointer"
+                        className="text-[10px] font-semibold text-red-600 hover:underline cursor-pointer"
                       >
                         Remove
                       </button>
@@ -721,7 +721,7 @@ export default function BundleConnectionSection({
                         type="button"
                         onClick={handleApplyPromoCode}
                         disabled={isValidatingPromo || !promoCodeInput.trim()}
-                        className="px-4 py-2 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] disabled:bg-stone-300 text-white font-bold text-xs uppercase rounded-xl transition cursor-pointer shrink-0"
+                        className="px-4 py-2 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] disabled:bg-stone-300 text-white font-semibold text-xs uppercase rounded-xl transition cursor-pointer shrink-0"
                       >
                         {isValidatingPromo ? 'Checking...' : 'Apply'}
                       </button>
@@ -740,7 +740,7 @@ export default function BundleConnectionSection({
                   <p className="text-[11px] text-[var(--color-brand-deep)] leading-relaxed">
                     Fees cover Unity Homes verified introductions and monitored group access. Professional service fees are agreed separately with the experts.
                   </p>
-                  <label className="flex items-start space-x-2 text-[11px] font-bold text-[var(--color-brand-deep)] cursor-pointer">
+                  <label className="flex items-start space-x-2 text-[11px] font-semibold text-[var(--color-brand-deep)] cursor-pointer">
                     <input
                       type="checkbox"
                       checked={termsAgreed}
@@ -753,7 +753,7 @@ export default function BundleConnectionSection({
 
                 <div className="space-y-3">
                   <div>
-                    <label className="block text-[10px] font-bold text-[var(--color-brand-deep)] uppercase">Full Legal Name</label>
+                    <label className="block text-[10px] font-semibold text-[var(--color-brand-deep)] uppercase">Full Legal Name</label>
                     <input
                       type="text"
                       required
@@ -765,7 +765,7 @@ export default function BundleConnectionSection({
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[10px] font-bold text-[var(--color-brand-deep)] uppercase">Active Phone Number</label>
+                      <label className="block text-[10px] font-semibold text-[var(--color-brand-deep)] uppercase">Active Phone Number</label>
                       <input
                         type="text"
                         required
@@ -776,7 +776,7 @@ export default function BundleConnectionSection({
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-bold text-[var(--color-brand-deep)] uppercase">Email Address</label>
+                      <label className="block text-[10px] font-semibold text-[var(--color-brand-deep)] uppercase">Email Address</label>
                       <input
                         type="email"
                         required
@@ -790,7 +790,7 @@ export default function BundleConnectionSection({
 
                   {/* Card fields */}
                   <div className="bg-stone-50 rounded-xl border border-stone-200 p-3 space-y-2">
-                    <span className="block text-[9px] font-mono font-bold text-[var(--color-text-secondary)] uppercase">
+                    <span className="block text-[9px] font-mono font-semibold text-[var(--color-text-secondary)] uppercase">
                       Paystack Card Information
                     </span>
                     <div className="grid grid-cols-3 gap-2">
@@ -819,7 +819,7 @@ export default function BundleConnectionSection({
                 <button
                   type="submit"
                   disabled={!termsAgreed || isPaying}
-                  className="w-full py-3.5 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] disabled:bg-stone-200 disabled:text-stone-400 text-white font-extrabold rounded-xl text-xs flex items-center justify-center space-x-2 cursor-pointer shadow-md transition"
+                  className="w-full py-3.5 bg-[var(--color-brand-deep)] hover:bg-[var(--color-brand-deep)] disabled:bg-stone-200 disabled:text-stone-400 text-white font-semibold rounded-xl text-xs flex items-center justify-center space-x-2 cursor-pointer shadow-md transition"
                 >
                   {isPaying ? (
                     <>

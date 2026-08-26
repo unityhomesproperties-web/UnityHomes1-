@@ -231,7 +231,7 @@ Applied Filters: ${activeFiltersDesc}
         {/* Header */}
         <div className="flex justify-between items-start border-b border-stone-200 pb-3">
           <div>
-            <h3 className="font-display font-black text-teal-950 text-sm uppercase">PMC Export Docket Center</h3>
+            <h3 className="font-display font-semibold text-teal-950 text-sm uppercase">PMC Export Docket Center</h3>
             <span className="text-[10px] text-stone-400 font-mono mt-1 block">Certified Report Source Ledger Extraction</span>
           </div>
           <button 
@@ -244,19 +244,19 @@ Applied Filters: ${activeFiltersDesc}
 
         {/* Info */}
         <div className="bg-teal-50/50 border border-teal-100 rounded-2xl p-4 space-y-2">
-          <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-teal-850">REPORT PARAMETERS</span>
+          <span className="block text-[9px] font-mono font-semibold uppercase tracking-wider text-teal-850">REPORT PARAMETERS</span>
           <div className="space-y-1.5">
             <div className="flex justify-between">
               <span className="text-#6B7280">Report Segment:</span>
-              <strong className="text-teal-950 font-bold">{title}</strong>
+              <strong className="text-teal-950 font-semibold">{title}</strong>
             </div>
             <div className="flex justify-between">
               <span className="text-#6B7280">Records Count:</span>
-              <strong className="text-teal-950 font-bold font-mono">{data.length} records</strong>
+              <strong className="text-teal-950 font-semibold font-mono">{data.length} records</strong>
             </div>
             <div className="flex justify-between">
               <span className="text-#6B7280">Filter Conditions:</span>
-              <strong className="text-teal-950 font-bold max-w-[200px] text-right truncate" title={activeFiltersDesc}>{activeFiltersDesc}</strong>
+              <strong className="text-teal-950 font-semibold max-w-[200px] text-right truncate" title={activeFiltersDesc}>{activeFiltersDesc}</strong>
             </div>
           </div>
         </div>
@@ -266,39 +266,39 @@ Applied Filters: ${activeFiltersDesc}
           
           <button
             onClick={handleExportCSV}
-            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-bold text-teal-950 uppercase text-[10px]"
+            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-semibold text-teal-950 uppercase text-[10px]"
           >
             <div className="p-2 bg-emerald-50 text-emerald-800 rounded-xl">
               <Download className="w-4.5 h-4.5" />
             </div>
             <div>
-              <span className="block font-black">Export Filtered CSV Ledger</span>
+              <span className="block font-semibold">Export Filtered CSV Ledger</span>
               <span className="block text-[9px] font-mono font-medium text-stone-400 lowercase">Plain-text comma-separated database format</span>
             </div>
           </button>
 
           <button
             onClick={handleExportExcel}
-            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-bold text-teal-950 uppercase text-[10px]"
+            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-semibold text-teal-950 uppercase text-[10px]"
           >
             <div className="p-2 bg-teal-50 text-teal-800 rounded-xl">
               <FileSpreadsheet className="w-4.5 h-4.5" />
             </div>
             <div>
-              <span className="block font-black">Export Filtered Excel Sheet</span>
+              <span className="block font-semibold">Export Filtered Excel Sheet</span>
               <span className="block text-[9px] font-mono font-medium text-stone-400 lowercase">Formatted spreadsheet XML grid file</span>
             </div>
           </button>
 
           <button
             onClick={handleExportPDF}
-            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-bold text-teal-950 uppercase text-[10px]"
+            className="p-3.5 border border-stone-200 hover:border-teal-300 hover:bg-teal-50/20 rounded-2xl flex items-center space-x-3 transition cursor-pointer text-left font-semibold text-teal-950 uppercase text-[10px]"
           >
             <div className="p-2 bg-purple-50 text-purple-800 rounded-xl">
               <Printer className="w-4.5 h-4.5" />
             </div>
             <div>
-              <span className="block font-black">Generate Branded PDF Report</span>
+              <span className="block font-semibold">Generate Branded PDF Report</span>
               <span className="block text-[9px] font-mono font-medium text-stone-400 lowercase">Corporate layout with Unity Homes Properties digital watermark signatures</span>
             </div>
           </button>

@@ -39,10 +39,10 @@ export default function MissionPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               OUR MISSION
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               Making better property decisions easier.
             </h1>
           </motion.div>
@@ -96,7 +96,7 @@ export default function MissionPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[#6B7280]">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280]">
               OUR MISSION
             </h4>
             <div className="w-12 h-1 bg-[#2F8D46] mt-6 rounded-full hidden md:block"></div>
@@ -107,7 +107,7 @@ export default function MissionPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="text-2xl md:text-3xl text-[#132A1D] font-extrabold leading-relaxed mb-10"
+              className="text-2xl md:text-3xl text-[#132A1D] font-semibold leading-relaxed mb-10"
             >
               To make real estate in Nigeria more transparent, trustworthy and easier to navigate by combining technology, verified information, trusted professionals and practical services.
             </motion.p>
@@ -145,10 +145,10 @@ export default function MissionPage() {
                   aria-expanded={isExpanded}
                 >
                   <div className="flex items-center gap-6 md:gap-10 flex-1">
-                    <span className={`text-sm font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-gray-400 group-hover:text-[#6FBE45]'}`}>
+                    <span className={`text-sm font-semibold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-gray-400 group-hover:text-[#6FBE45]'}`}>
                       {pillar.id}
                     </span>
-                    <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D] group-hover:text-[#6FBE45]'}`}>
+                    <h3 className={`text-xl md:text-2xl font-semibold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D] group-hover:text-[#6FBE45]'}`}>
                       {pillar.title}
                     </h3>
                   </div>
@@ -189,12 +189,12 @@ export default function MissionPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-12 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-12 max-w-3xl mx-auto">
               A more transparent real estate experience starts with better information.
             </h2>
             <Link
               to="/waitlist"
-              className="inline-flex bg-white text-[#132A1D] border border-white px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
+              className="inline-flex bg-white text-[#132A1D] border border-white px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
             >
               Join The Waitlist
             </Link>

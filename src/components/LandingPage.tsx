@@ -60,13 +60,13 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             {/* Pill Badge */}
             <div className="self-start flex items-center space-x-2 bg-[#18452E]/20 border border-[#18452E]/40 px-4 py-2 rounded-full backdrop-blur-md shadow-xs">
               <span className="w-2 h-2 bg-[#16A34A] rounded-full animate-ping"></span>
-              <span className="text-[11px] font-mono tracking-widest font-black text-[#C9A84C] uppercase">
+              <span className="text-[11px] font-mono tracking-widest font-semibold text-[#C9A84C] uppercase">
                 Nigeria&apos;s Premium Property Operating System
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-display text-4xl sm:text-5.5xl md:text-7xl font-black tracking-tight leading-[1.05] text-white">
+            <h1 className="font-display text-4xl sm:text-5.5xl md:text-7xl font-semibold tracking-tight leading-[1.05] text-white">
               <span className="block">Acquire &amp; Lease Vetted Property</span>
               <span className="block text-[#C9A84C] mt-2 relative inline-block">
                 Without Fear of Fraud.
@@ -75,7 +75,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </h1>
 
             {/* Subheadline */}
-            <p className="text-stone-300 text-sm md:text-base font-light leading-relaxed max-w-xl">
+            <p className="text-stone-300 text-sm md:text-base font-normal leading-relaxed max-w-xl">
               We coordinate real-estate transactions with absolute zero-trust verification. Secure your high-end rentals, certified legal advisors, and structural engineers on Nigeria&apos;s most rigorous protected routing network.
             </p>
 
@@ -83,20 +83,20 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <div className="flex flex-wrap gap-4 pt-3">
               <button 
                 onClick={() => navigate('/properties')}
-                className="px-7 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold text-xs uppercase tracking-wider shadow-sm flex items-center space-x-2.5 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                className="px-7 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-semibold text-xs uppercase tracking-wider shadow-sm flex items-center space-x-2.5 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
               >
                 <span>Browse Verified Properties</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button 
                 onClick={() => navigate('/connect-with-a-professional')}
-                className="px-7 py-4 bg-white text-[#18452E] hover:bg-stone-50 rounded-xl font-bold text-xs uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer border border-[#E2E8E4]"
+                className="px-7 py-4 bg-white text-[#18452E] hover:bg-stone-50 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer border border-[#E2E8E4]"
               >
                 Hire a Professional
               </button>
               <button 
                 onClick={() => navigate('/pricing-and-services')}
-                className="px-7 py-4 bg-white text-[#18452E] hover:bg-stone-50 rounded-xl font-bold text-xs uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer border border-[#E2E8E4]"
+                className="px-7 py-4 bg-white text-[#18452E] hover:bg-stone-50 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer border border-[#E2E8E4]"
               >
                 Pricing and Services
               </button>
@@ -121,7 +121,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`py-2 px-3 flex-1 text-xs font-extrabold text-center rounded-lg cursor-pointer transition-all duration-300 uppercase tracking-wider shrink-0 ${
+                    className={`py-2 px-3 flex-1 text-xs font-semibold text-center rounded-lg cursor-pointer transition-all duration-300 uppercase tracking-wider shrink-0 ${
                       activeTab === tab 
                         ? 'bg-[#18452E] text-white shadow-md' 
                         : 'text-stone-500 hover:bg-[#F0F8F4]/80 hover:text-[#18452E]'
@@ -132,11 +132,11 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 ))}
                 {/* Mortgage Tab (Coming Soon) */}
                 <button
-                  className="py-2 px-3 flex-1 text-xs font-extrabold text-center rounded-lg cursor-not-allowed transition-all duration-300 uppercase tracking-wider shrink-0 bg-[#F8FAFC] text-stone-400 border border-stone-200 relative group"
+                  className="py-2 px-3 flex-1 text-xs font-semibold text-center rounded-lg cursor-not-allowed transition-all duration-300 uppercase tracking-wider shrink-0 bg-[#F8FAFC] text-stone-400 border border-stone-200 relative group"
                   onClick={(e) => e.preventDefault()}
                 >
                   Mortgage
-                  <span className="absolute -top-2 -right-2 bg-[#C9A84C] text-[8px] text-white px-1.5 py-0.5 rounded font-bold shadow-sm whitespace-nowrap">
+                  <span className="absolute -top-2 -right-2 bg-[#C9A84C] text-[8px] text-white px-1.5 py-0.5 rounded font-semibold shadow-sm whitespace-nowrap">
                     Soon
                   </span>
                 </button>
@@ -144,7 +144,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
 
               <form onSubmit={handleSearchSubmit} className="space-y-4">
                 <div className="space-y-1.5">
-                  <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-widest ml-1">Location</label>
+                  <label className="block text-[10px] font-semibold text-stone-500 uppercase tracking-widest ml-1">Location</label>
                   <div className="relative">
                     <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
                     <input 
@@ -159,7 +159,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="space-y-1.5">
-                    <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-widest ml-1">Property Type</label>
+                    <label className="block text-[10px] font-semibold text-stone-500 uppercase tracking-widest ml-1">Property Type</label>
                     <select 
                       className="w-full px-4 py-3.5 bg-stone-50/50 border border-stone-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#18452E]/20 focus:border-[#18452E] transition-all appearance-none cursor-pointer text-slate-700"
                       value={filters.propertyType}
@@ -173,7 +173,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                     </select>
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-widest ml-1">Max Price</label>
+                    <label className="block text-[10px] font-semibold text-stone-500 uppercase tracking-widest ml-1">Max Price</label>
                     <select 
                       className="w-full px-4 py-3.5 bg-stone-50/50 border border-stone-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#18452E]/20 focus:border-[#18452E] transition-all appearance-none cursor-pointer text-slate-700"
                       value={filters.priceRange}
@@ -190,7 +190,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
 
                 <button 
                   type="submit"
-                  className="w-full mt-2 py-4 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl font-bold text-sm shadow-[0_8px_20px_rgba(24,69,46,0.25)] transition-all flex items-center justify-center space-x-2 cursor-pointer group"
+                  className="w-full mt-2 py-4 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl font-semibold text-sm shadow-[0_8px_20px_rgba(24,69,46,0.25)] transition-all flex items-center justify-center space-x-2 cursor-pointer group"
                 >
                   <Search className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>Search {activeTab} Properties</span>
@@ -207,34 +207,34 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <div className="bg-white border-y border-stone-200 py-8 px-4 md:px-8 shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           <div>
-            <span className="block text-3xl sm:text-4xl font-display font-extrabold text-[#18452E]">
+            <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               18,200+
             </span>
-            <span className="block text-xs font-mono font-bold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
               Nigerians Protected
             </span>
           </div>
           <div className="border-l border-stone-200 lg:border-l lg:border-stone-200">
-            <span className="block text-3xl sm:text-4xl font-display font-extrabold text-[#18452E]">
+            <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               150+
             </span>
-            <span className="block text-xs font-mono font-bold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
               Verified Professionals
             </span>
           </div>
           <div className="border-l border-stone-200 lg:border-l lg:border-stone-200">
-            <span className="block text-3xl sm:text-4xl font-display font-extrabold text-[#18452E]">
+            <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               1,240+
             </span>
-            <span className="block text-xs font-mono font-bold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
               Properties Managed
             </span>
           </div>
           <div className="border-l border-stone-200 lg:border-l lg:border-stone-200">
-            <span className="block text-3xl sm:text-4xl font-display font-extrabold text-[#18452E]">
+            <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               8+
             </span>
-            <span className="block text-xs font-mono font-bold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
               States Active
             </span>
           </div>
@@ -244,13 +244,13 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       {/* SERVICES GRID */}
       <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[10px] uppercase font-mono font-black tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full">
+          <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full">
             UNITY PLATFORM UTILITIES
           </span>
-          <h2 className="text-3xl md:text-4.5xl font-display font-black text-[#18452E] mt-4">
+          <h2 className="text-3xl md:text-4.5xl font-display font-semibold text-[#18452E] mt-4">
             Fully Verified Property Services
           </h2>
-          <p className="text-#6B7280 text-sm mt-3 font-sans font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-#6B7280 text-sm mt-3 font-sans font-normal max-w-xl mx-auto leading-relaxed">
             We operate strict structural checks, trust structures, and professional introduced channels with absolute transaction integrity.
           </p>
         </div>
@@ -265,19 +265,19 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
                   <Shield className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-black tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
+                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
                   <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
                   <span>LIVE</span>
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Verified Rentals</h3>
-              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Verified Rentals</h3>
+              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-normal">
                 Skip agent fraud. Real-time listings connected directly to verified titleholders with structured caution deposit protection and clear mediation.
               </p>
             </div>
             <button 
               onClick={() => navigate('/rent')}
-              className="mt-6 flex items-center space-x-1.5 text-xs font-bold text-[#18452E] group/btn cursor-pointer"
+              className="mt-6 flex items-center space-x-1.5 text-xs font-semibold text-[#18452E] group/btn cursor-pointer"
             >
               <span className="uppercase tracking-wider">Explore Rentals</span>
               <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
@@ -291,19 +291,19 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
                   <Star className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-black tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
+                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
                   <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
                   <span>LIVE</span>
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Meet Verified Professionals</h3>
-              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Meet Verified Professionals</h3>
+              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-normal">
                 Connect directly with Supreme Court Lawyers, SURCON-registered surveyors, and COREN-licensed structural engineers scrutinized by our founder.
               </p>
             </div>
             <button 
               onClick={() => navigate('/professionals')}
-              className="mt-6 flex items-center space-x-1.5 text-xs font-bold text-[#18452E] group/btn cursor-pointer"
+              className="mt-6 flex items-center space-x-1.5 text-xs font-semibold text-[#18452E] group/btn cursor-pointer"
             >
               <span className="uppercase tracking-wider">Find Professionals</span>
               <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
@@ -317,19 +317,19 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-[#F0F8F4] text-[#18452E] rounded-xl transition-transform duration-300 group-hover:scale-105">
                   <Award className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-black tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
+                <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-emerald-100 text-emerald-800 uppercase border border-emerald-200/50">
                   <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
                   <span>LIVE</span>
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Property and Shortlet Management Plans</h3>
-              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors duration-300">Property and Shortlet Management Plans</h3>
+              <p className="text-xs text-stone-500 mt-3 leading-relaxed font-normal">
                 Transparent subscription plans for landlords managing long-term rentals or serviced apartments.
               </p>
             </div>
             <button 
               onClick={() => navigate('/pricing-and-services')}
-              className="mt-6 flex items-center space-x-1.5 text-xs font-bold text-[#18452E] group/btn cursor-pointer"
+              className="mt-6 flex items-center space-x-1.5 text-xs font-semibold text-[#18452E] group/btn cursor-pointer"
             >
               <span className="uppercase tracking-wider">View Plans</span>
               <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5" />
@@ -346,16 +346,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
                   <Shield className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-extrabold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
                   Coming Soon
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Payment Plan Houses</h3>
-              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Payment Plan Houses</h3>
+              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-normal">
                 Structured legal contracts for buying property increment-by-increment directly from vetted developers with no mid-way price changes.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-bold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -370,16 +370,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
                   <Star className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-extrabold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
                   Coming Soon
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Mortgage Ready Properties</h3>
-              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Mortgage Ready Properties</h3>
+              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-normal">
                 Inspected, fully perfected governor-consent assets with verified ownership guarantees waiting to slot seamlessly into primary lending banks.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-bold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -394,16 +394,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
                   <Award className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-extrabold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
                   Coming Soon
                 </span>
               </div>
-              <h3 className="font-display font-bold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Buy &amp; Build Land</h3>
-              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-light">
+              <h3 className="font-display font-semibold text-[#18452E] text-lg group-hover:text-[#18452E] transition-colors">Buy &amp; Build Land</h3>
+              <p className="text-xs text-#6B7280 mt-3 leading-relaxed font-normal">
                 Red-line free land coordinates mapped by registered surveyors, backed by absolute security of title, and ready for swift transfer.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-bold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
               </svg>
             </div>
             <div>
-              <span className="block font-mono font-bold text-xs uppercase tracking-wider text-red-700">
+              <span className="block font-mono font-semibold text-xs uppercase tracking-wider text-red-700">
                 OFFICIAL CONSUMER DISCLOSURE
               </span>
               <p className="text-xs text-[#18452E] mt-1 leading-relaxed">
@@ -435,10 +435,10 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
         <div className="max-w-7xl mx-auto">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C]">
+            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
               HOW IT OPERATES
             </span>
-            <h2 className="text-2xl sm:text-3.5xl font-display font-extrabold text-[#18452E] mt-1">
+            <h2 className="text-2xl sm:text-3.5xl font-display font-semibold text-[#18452E] mt-1">
               Four Steps to Clean Real Estate
             </h2>
           </div>
@@ -446,7 +446,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-extrabold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 1
               </div>
               <div>
@@ -458,7 +458,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-extrabold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 2
               </div>
               <div>
@@ -470,7 +470,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-extrabold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 3
               </div>
               <div>
@@ -482,7 +482,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-extrabold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 4
               </div>
               <div>
@@ -502,16 +502,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
           <div>
-            <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C]">
+            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
               VERIFIED PORTFOLIO
             </span>
-            <h2 className="text-3xl font-display font-black text-[#18452E] mt-1">
+            <h2 className="text-3xl font-display font-semibold text-[#18452E] mt-1">
               Active Verified Properties
             </h2>
           </div>
           <button 
             onClick={() => navigate('/properties')}
-            className="text-xs font-bold text-[#18452E] h-10 mt-2 md:mt-0 flex items-center space-x-1 hover:underline cursor-pointer"
+            className="text-xs font-semibold text-[#18452E] h-10 mt-2 md:mt-0 flex items-center space-x-1 hover:underline cursor-pointer"
           >
             <span>View All Listings ({initialProperties.length})</span>
             <ArrowRight className="w-4 h-4" />
@@ -548,10 +548,10 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-3 left-3 flex space-x-1.5 z-10">
-                    <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-extrabold uppercase tracking-widest bg-[#16A34A] text-white shadow-xs">
+                    <span className="px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold uppercase tracking-widest bg-[#16A34A] text-white shadow-xs">
                       Verified Check
                     </span>
-                    <span className={`px-2.5 py-1 rounded-md text-[9px] font-mono font-extrabold uppercase tracking-widest ${statusColor} shadow-xs`}>
+                    <span className={`px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold uppercase tracking-widest ${statusColor} shadow-xs`}>
                       {iconText}
                     </span>
                   </div>
@@ -562,16 +562,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 <div className="p-6 flex flex-col justify-between flex-grow">
                   <div>
                     <div className="flex justify-between items-baseline">
-                      <span className="text-xl md:text-2xl font-display font-black text-[#18452E]">
+                      <span className="text-xl md:text-2xl font-display font-semibold text-[#18452E]">
                         {prop.type === 'Shortlet' ? `₦${prop.price.toLocaleString()}/night` : `₦${prop.price.toLocaleString()}/yr`}
                       </span>
                     </div>
-                    <h3 className="text-base font-bold text-[#18452E] mt-2 line-clamp-1 group-hover:text-[#18452E] transition-colors duration-300">{prop.title}</h3>
+                    <h3 className="text-base font-semibold text-[#18452E] mt-2 line-clamp-1 group-hover:text-[#18452E] transition-colors duration-300">{prop.title}</h3>
                     <div className="flex items-center text-xs text-stone-500 mt-1.5">
                       <MapPin className="w-3.5 h-3.5 text-[#C9A84C] mr-1 shrink-0" />
                       <span className="line-clamp-1 font-semibold">{prop.location}</span>
                     </div>
-                    <p className="text-xs text-#6B7280 mt-3 line-clamp-2 leading-relaxed font-light">
+                    <p className="text-xs text-#6B7280 mt-3 line-clamp-2 leading-relaxed font-normal">
                       {prop.description}
                     </p>
                   </div>
@@ -588,7 +588,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                     </div>
                     <button
                       onClick={() => navigate('/properties', { selectId: prop.id })}
-                      className="px-4 py-2 border border-[#18452E]/60 text-[#18452E] hover:bg-[#18452E] hover:text-white hover:border-[#18452E] text-xs font-bold uppercase tracking-wider rounded-xl transition-all duration-300 cursor-pointer"
+                      className="px-4 py-2 border border-[#18452E]/60 text-[#18452E] hover:bg-[#18452E] hover:text-white hover:border-[#18452E] text-xs font-semibold uppercase tracking-wider rounded-xl transition-all duration-300 cursor-pointer"
                     >
                       View Details
                     </button>
@@ -606,16 +606,16 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
             <div>
-              <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C]">
+              <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
                 HIRE SECURELY
               </span>
-              <h2 className="text-2xl sm:text-3.5xl font-display font-extrabold text-[#18452E] mt-1">
+              <h2 className="text-2xl sm:text-3.5xl font-display font-semibold text-[#18452E] mt-1">
                 Verified Professional Networks
               </h2>
             </div>
             <button 
               onClick={() => navigate('/professionals')}
-              className="mt-2 md:mt-0 px-4 py-2 border border-[#18452E] text-[#18452E] font-bold text-xs rounded-lg hover:bg-[#18452E]/5"
+              className="mt-2 md:mt-0 px-4 py-2 border border-[#18452E] text-[#18452E] font-semibold text-xs rounded-lg hover:bg-[#18452E]/5"
             >
               Browse Directory
             </button>
@@ -634,8 +634,8 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-base text-[#18452E]">Real Estate Lawyers</h4>
-                  <span className="font-mono text-[9px] font-bold text-[#C9A84C] uppercase tracking-wider">Supreme Court Registry</span>
+                  <h4 className="font-display font-semibold text-base text-[#18452E]">Real Estate Lawyers</h4>
+                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">Supreme Court Registry</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -657,8 +657,8 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-base text-[#18452E]">Licensed Surveyors</h4>
-                  <span className="font-mono text-[9px] font-bold text-[#C9A84C] uppercase tracking-wider">SURCON Accredited Only</span>
+                  <h4 className="font-display font-semibold text-base text-[#18452E]">Licensed Surveyors</h4>
+                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">SURCON Accredited Only</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -681,8 +681,8 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-base text-[#18452E]">Structural Engineers</h4>
-                  <span className="font-mono text-[9px] font-bold text-[#C9A84C] uppercase tracking-wider">COREN Registered &amp; Insured</span>
+                  <h4 className="font-display font-semibold text-base text-[#18452E]">Structural Engineers</h4>
+                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">COREN Registered &amp; Insured</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -701,14 +701,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       {/* FOUNDER STORY STRIP */}
       <section className="py-16 bg-[#18452E] text-white px-4 md:px-8 w-full">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center space-y-6">
-          <span className="font-serif text-5xl md:text-6xl text-[#C9A84C] font-extrabold select-none leading-none h-6 block">
+          <span className="font-serif text-5xl md:text-6xl text-[#C9A84C] font-semibold select-none leading-none h-6 block">
             “
           </span>
-          <p className="font-serif text-base sm:text-lg md:text-xl italic font-light leading-relaxed text-stone-100 max-w-3xl">
+          <p className="font-serif text-base sm:text-lg md:text-xl italic font-normal leading-relaxed text-stone-100 max-w-3xl">
             Years ago, as a diasporan trying to navigate the complex real estate market in Epe, I was taken to an &apos;Eleran Igbe&apos; land location where weeds were high, and several false claims were made. I lost hard-earned savings. That agonizing moment became the seed of Unity Homes. We founded this platform to ensure that no Nigerian, at home or abroad, ever buys &apos;wahala&apos; or falls prey to fraudulent agents again.
           </p>
           <div className="pt-2">
-            <span className="block font-display font-bold text-base text-[#C9A84C]">
+            <span className="block font-display font-semibold text-base text-[#C9A84C]">
               Olayinka Ayodele
             </span>
             <span className="block text-[11px] font-mono uppercase tracking-widest text-[#E2E8E4]/60 mt-0.5">
@@ -722,27 +722,27 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="py-16 bg-[#18452E] text-white px-4 md:px-8 w-full border-t border-stone-200/20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <span className="text-xs font-mono font-bold tracking-widest text-[#C9A84C] uppercase">
+            <span className="text-xs font-mono font-semibold tracking-widest text-[#C9A84C] uppercase">
               ANTI-FRAUD AWARENESS SERIES
             </span>
-            <h2 className="text-5xl md:text-6xl font-display font-extrabold text-[#C9A84C] mt-1 leading-none">
+            <h2 className="text-5xl md:text-6xl font-display font-semibold text-[#C9A84C] mt-1 leading-none">
               Don&apos;t Buy Wahala
             </h2>
-            <p className="text-sm text-stone-100 mt-4 leading-relaxed font-light">
+            <p className="text-sm text-stone-100 mt-4 leading-relaxed font-normal">
               Nigeria&apos;s leading consumer advocacy documentary and resource center. Our team goes deep into real estate scams, double sales, and mapping tricks, providing actionable guidelines for diasporan and domestic buyers.
             </p>
           </div>
           <div className="flex flex-col gap-4">
             <button 
               onClick={() => navigate('/performance-demo')}
-              className="px-6 py-4 bg-[#C9A84C] text-[#18452E] hover:bg-[#B39340] rounded-xl font-bold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
+              className="px-6 py-4 bg-[#C9A84C] text-[#18452E] hover:bg-[#B39340] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
             >
               <BarChart2 className="w-5 h-5 shrink-0" />
               <span>Enter Demo Performance Center</span>
             </button>
             <button 
               onClick={() => navigate('/demo')}
-              className="px-6 py-4 border-2 border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#18452E] rounded-xl font-bold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
+              className="px-6 py-4 border-2 border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#18452E] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
             >
               <Play className="w-4 h-4 text-rose-500 fill-rose-500 shrink-0" />
               <span>Watch the Awareness Series (Free)</span>
@@ -755,10 +755,10 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="py-16 bg-white px-4 md:px-8 w-full">
         <div className="max-w-6xl mx-auto bg-[#F0F8F4] rounded-2xl border-l-[6px] border-[#C9A84C] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="max-w-xl">
-            <span className="text-[10px] font-mono tracking-widest font-extrabold text-[#18452E] uppercase">
+            <span className="text-[10px] font-mono tracking-widest font-semibold text-[#18452E] uppercase">
               UNITY PARTNER REFERRALS
             </span>
-            <h3 className="text-2xl font-display font-extrabold text-[#18452E] mt-1">
+            <h3 className="text-2xl font-display font-semibold text-[#18452E] mt-1">
               Join the Unity Homes Referrals Program
             </h3>
             <p className="text-xs text-stone-500 mt-2 leading-relaxed">
@@ -769,7 +769,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             href="https://wa.me/2348145550012?text=Hello%20Unity%20Homes%20Team,%20I%20am%20interested%20in%20joining%20the%20Partner%20Network"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold text-sm shrink-0 shadow-sm cursor-pointer text-center"
+            className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-semibold text-sm shrink-0 shadow-sm cursor-pointer text-center"
           >
             Join Partner Network
           </a>
@@ -779,15 +779,15 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       {/* CLOSING CALL TO ACTION BANNER */}
       <section className="py-16 bg-[#C9A84C] text-[#18452E] px-4 md:px-8 w-full border-t border-stone-200">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center space-y-6">
-          <h2 className="text-3xl md:text-4.5xl font-display font-black tracking-tight leading-none max-w-2xl text-[#18452E]">
+          <h2 className="text-3xl md:text-4.5xl font-display font-semibold tracking-tight leading-none max-w-2xl text-[#18452E]">
             Ready to Navigate the Nigeria Real Estate Market Safely?
           </h2>
-          <p className="text-sm text-[#18452E] max-w-lg leading-relaxed font-light">
+          <p className="text-sm text-[#18452E] max-w-lg leading-relaxed font-normal">
             Contact us to connect with Supreme Court Land Attorneys, request verified site inspections, or configure land verification surveys.
           </p>
           <button 
             onClick={() => navigate('/connect-with-a-professional')}
-            className="px-8 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-bold font-sans tracking-wide shadow-sm flex items-center space-x-2 transition cursor-pointer"
+            className="px-8 py-4 bg-[#18452E] text-white hover:bg-[#18452E] rounded-xl font-semibold font-sans tracking-wide shadow-sm flex items-center space-x-2 transition cursor-pointer"
           >
             <span>Get Connected Now</span>
             <ArrowRight className="w-4 h-4 text-[#C9A84C]" />

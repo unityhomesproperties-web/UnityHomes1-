@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   
   /* New Color System */
-  --color-brand-fresh: #6FBE45;
-  --color-brand-medium: #2F8D46;
-  --color-brand-deep: #0E2F1F;
+  --color-brand-fresh: #48B400;
+  --color-brand-medium: #0B8E2A;
+  --color-brand-deep: #006C25;
+  --color-brand-light: #73C81C;
   --color-surface-light: #F5FAF2;
   --color-surface-soft: #EAF5E3;
   --color-white: #FFFFFF;
-  --color-text-primary: #132A1D;
-  --color-text-secondary: #6B7280;
+  --color-text-primary: #006C25;
+  --color-text-secondary: #0B8E2A;
   --color-accent-gold: #C9A84C;
   --color-error: #ef4444;
   
   /* Legacy mappings to prevent immediate breakage */
-  --color-primary-green: #6FBE45;
-  --color-secondary-green: #2F8D46;
+  --color-primary-green: #006C25;
+  --color-secondary-green: #0B8E2A;
   --color-background: #F5FAF2;
-  --color-border: rgba(14, 47, 31, 0.08);
-  --color-primary-text: #132A1D;
-  --color-secondary-text: #6B7280;
+  --color-border: rgba(0, 108, 37, 0.1);
+  --color-primary-text: #006C25;
+  --color-secondary-text: #0B8E2A;
 
   /* Radius System */
   --radius-large: 24px;

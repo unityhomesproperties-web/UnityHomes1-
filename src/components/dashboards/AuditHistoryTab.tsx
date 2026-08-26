@@ -95,7 +95,7 @@ export default function AuditHistoryTab({ recordType, recordId }: AuditHistoryTa
     <div className="space-y-4 animate-fade-in text-xs sm:text-sm">
       <div className="flex items-center space-x-1.5 border-b border-stone-200 pb-2.5">
         <History className="w-4.5 h-4.5 text-teal-800" />
-        <h4 className="font-display font-black text-teal-950 uppercase text-xs">
+        <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">
           Registry Audit Trail &amp; Ledger Logs
         </h4>
       </div>
@@ -106,20 +106,20 @@ export default function AuditHistoryTab({ recordType, recordId }: AuditHistoryTa
             {/* Header info */}
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-[9px] font-mono font-black text-teal-900 bg-teal-50 px-2 py-0.5 rounded uppercase">
+                <span className="text-[9px] font-mono font-semibold text-teal-900 bg-teal-50 px-2 py-0.5 rounded uppercase">
                   {log.eventType}
                 </span>
                 <span className="block text-[10px] text-stone-400 mt-1 font-mono">
                   Timestamp: {log.dateSent} &bull; Auditor: {log.operatorName || log.sender}
                 </span>
               </div>
-              <span className="text-[10px] font-mono text-stone-400 font-bold uppercase">
+              <span className="text-[10px] font-mono text-stone-400 font-semibold uppercase">
                 ID: {log.id.slice(0, 8)}
               </span>
             </div>
 
             {/* details */}
-            <p className="text-#132A1D leading-relaxed font-light">
+            <p className="text-#132A1D leading-relaxed font-normal">
               &quot;{log.details}&quot;
             </p>
 
@@ -127,12 +127,12 @@ export default function AuditHistoryTab({ recordType, recordId }: AuditHistoryTa
             {(log.previousValue || log.newValue) && (
               <div className="grid grid-cols-2 gap-4 pt-2.5 border-t border-stone-200 text-[10px]">
                 <div className="bg-white p-2 rounded-xl border border-stone-200">
-                  <span className="block text-[8px] font-mono text-stone-400 uppercase tracking-widest font-black">PREVIOUS VALUE</span>
+                  <span className="block text-[8px] font-mono text-stone-400 uppercase tracking-widest font-semibold">PREVIOUS VALUE</span>
                   <span className="block font-medium text-#6B7280 truncate mt-0.5">{log.previousValue || 'N/A'}</span>
                 </div>
                 <div className="bg-white p-2 rounded-xl border border-stone-200">
-                  <span className="block text-[8px] font-mono text-teal-800 uppercase tracking-widest font-black">AUDITED NEW VALUE</span>
-                  <span className="block font-bold text-teal-950 truncate mt-0.5">{log.newValue || 'N/A'}</span>
+                  <span className="block text-[8px] font-mono text-teal-800 uppercase tracking-widest font-semibold">AUDITED NEW VALUE</span>
+                  <span className="block font-semibold text-teal-950 truncate mt-0.5">{log.newValue || 'N/A'}</span>
                 </div>
               </div>
             )}

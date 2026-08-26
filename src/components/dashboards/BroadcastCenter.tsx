@@ -233,12 +233,12 @@ export default function BroadcastCenter({
       {/* Overview stats panel to establish design context */}
       <div className="bg-teal-50 border border-teal-100 p-4 rounded-[var(--radius-large)] flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h4 className="font-display font-black text-teal-950 uppercase text-xs">PMC Scoped Portfolios</h4>
-          <p className="text-[11px] text-teal-800 font-light">
+          <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">PMC Scoped Portfolios</h4>
+          <p className="text-[11px] text-teal-800 font-normal">
             Broadcasting as **Prime Property Solutions**. Your broadcasts are strictly scoped to your **{pmcProperties.length} managed buildings** and **{pmcUnits.length} active rental units**.
           </p>
         </div>
-        <div className="bg-white px-3 py-1.5 rounded-full border border-teal-100 text-[10px] font-mono font-bold text-teal-900 flex items-center space-x-1">
+        <div className="bg-white px-3 py-1.5 rounded-full border border-teal-100 text-[10px] font-mono font-semibold text-teal-900 flex items-center space-x-1">
           <Clock className="w-3.5 h-3.5 text-teal-800 animate-spin" style={{ animationDuration: '6s' }} />
           <span>Real-time Sync Active</span>
         </div>
@@ -250,13 +250,13 @@ export default function BroadcastCenter({
         <div className="lg:col-span-7 bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-5 shadow-xs">
           <div className="flex items-center space-x-2 border-b border-stone-200 pb-3">
             <Megaphone className="w-5 h-5 text-teal-800" />
-            <h3 className="font-display font-black text-teal-950 uppercase text-sm">PMC Active Broadcast Portal</h3>
+            <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">PMC Active Broadcast Portal</h3>
           </div>
 
           <form onSubmit={(e) => { e.preventDefault(); setShowPreviewModal(true); }} className="space-y-4">
             {/* TITLE HEADER */}
             <div className="space-y-1.5">
-              <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase">Broadcast Title (100 Chars Limit)</label>
+              <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase">Broadcast Title (100 Chars Limit)</label>
               <input
                 type="text"
                 required
@@ -264,7 +264,7 @@ export default function BroadcastCenter({
                 value={bcastTitle}
                 onChange={(e) => setBcastTitle(e.target.value)}
                 placeholder="e.g. Schedule for water treatment service"
-                className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none focus:border-teal-700 text-teal-950 font-bold"
+                className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none focus:border-teal-700 text-teal-950 font-semibold"
               />
               <span className="text-[9px] text-stone-400 font-mono block text-right">
                 {100 - bcastTitle.length} characters remaining
@@ -274,11 +274,11 @@ export default function BroadcastCenter({
             {/* SEGMENT & URGENCY SELECTION */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Target Recipient Group</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Target Recipient Group</label>
                 <select
                   value={segment}
                   onChange={(e: any) => setSegment(e.target.value)}
-                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold outline-none text-teal-950"
+                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-semibold outline-none text-teal-950"
                 >
                   <option value="All Tenants">All Managed Tenants</option>
                   <option value="All Tenants in Building">All Tenants in Building</option>
@@ -288,11 +288,11 @@ export default function BroadcastCenter({
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Urgency Level</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Urgency Level</label>
                 <select
                   value={urgency}
                   onChange={(e: any) => setUrgency(e.target.value)}
-                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold outline-none text-teal-950"
+                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-semibold outline-none text-teal-950"
                 >
                   <option value="Low">Low Priority</option>
                   <option value="Medium">Medium Priority</option>
@@ -305,12 +305,12 @@ export default function BroadcastCenter({
             {/* CONDITIONAL BUILDING SPECIFICATION */}
             {segment === 'All Tenants in Building' && (
               <div className="animate-fade-in">
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Specify Target Building</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Specify Target Building</label>
                 <select
                   required
                   value={selectedBuilding}
                   onChange={(e) => setSelectedBuilding(e.target.value)}
-                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none font-bold"
+                  className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none font-semibold"
                 >
                   <option value="">-- Choose Managed Building --</option>
                   {buildings.map(b => (
@@ -323,11 +323,11 @@ export default function BroadcastCenter({
             {/* MESSAGE COMPOSER */}
             <div className="space-y-2">
               <div className="flex justify-between items-center">
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase">Message Body (500 Chars Limit)</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase">Message Body (500 Chars Limit)</label>
                 
                 {/* MERGE TAGS SELECTOR */}
                 <div className="flex items-center space-x-1">
-                  <span className="text-[8px] font-mono font-black text-teal-900 bg-teal-50 px-1.5 py-0.5 rounded uppercase">Merge Tags:</span>
+                  <span className="text-[8px] font-mono font-semibold text-teal-900 bg-teal-50 px-1.5 py-0.5 rounded uppercase">Merge Tags:</span>
                   {['{tenantName}', '{propertyName}', '{amountDue}', '{landlordName}'].map(tag => (
                     <button
                       key={tag}
@@ -359,8 +359,8 @@ export default function BroadcastCenter({
             <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl space-y-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <strong className="block text-teal-950 text-xs font-bold">Schedule Delivery</strong>
-                  <span className="text-[10px] text-stone-400 block font-light">Delay dispatch to a targeted date and time</span>
+                  <strong className="block text-teal-950 text-xs font-semibold">Schedule Delivery</strong>
+                  <span className="text-[10px] text-stone-400 block font-normal">Delay dispatch to a targeted date and time</span>
                 </div>
                 <input
                   type="checkbox"
@@ -372,7 +372,7 @@ export default function BroadcastCenter({
 
               {scheduleLater && (
                 <div className="space-y-1.5 animate-fade-in">
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase">Target Dispatch Date &amp; Time</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase">Target Dispatch Date &amp; Time</label>
                   <input
                     type="datetime-local"
                     required
@@ -393,14 +393,14 @@ export default function BroadcastCenter({
                 <button
                   type="button"
                   onClick={() => setShowPreviewModal(true)}
-                  className="px-4 py-2.5 border border-stone-200 bg-stone-50 hover:bg-stone-50 text-#132A1D font-bold rounded-xl flex items-center space-x-1 transition cursor-pointer uppercase tracking-wider text-[10px]"
+                  className="px-4 py-2.5 border border-stone-200 bg-stone-50 hover:bg-stone-50 text-#132A1D font-semibold rounded-xl flex items-center space-x-1 transition cursor-pointer uppercase tracking-wider text-[10px]"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>Preview Broadcast</span>
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl flex items-center space-x-1.5 transition cursor-pointer shadow-sm uppercase tracking-wider text-[10px]"
+                  className="px-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl flex items-center space-x-1.5 transition cursor-pointer shadow-sm uppercase tracking-wider text-[10px]"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Launch Broadcast</span>
@@ -414,10 +414,10 @@ export default function BroadcastCenter({
         <div className="lg:col-span-5 bg-stone-50 border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-inner">
           <div className="flex items-center space-x-1.5 text-#6B7280 border-b border-stone-200 pb-3">
             <AlertTriangle className="w-4 h-4 text-amber-500" />
-            <h4 className="font-display font-black text-#132A1D uppercase text-xs">Compliance Routing Rules</h4>
+            <h4 className="font-display font-semibold text-#132A1D uppercase text-xs">Compliance Routing Rules</h4>
           </div>
 
-          <div className="space-y-3 text-xs text-#6B7280 font-light leading-relaxed">
+          <div className="space-y-3 text-xs text-#6B7280 font-normal leading-relaxed">
             <p>
               Under platform guideline mandates, general broadcasts are restricted to **In-App Portal Notification** and **HTML Email** channels only.
             </p>
@@ -448,7 +448,7 @@ export default function BroadcastCenter({
       <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs">
         <div className="flex items-center space-x-1.5 text-teal-950 border-b border-stone-200 pb-3">
           <History className="w-4 h-4 text-teal-850" />
-          <h4 className="font-display font-black text-teal-950 uppercase text-xs">Recent Scoped Broadcast Dispatches</h4>
+          <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">Recent Scoped Broadcast Dispatches</h4>
         </div>
 
         <div className="overflow-x-auto">
@@ -468,10 +468,10 @@ export default function BroadcastCenter({
               {sentBroadcasts.map((bc) => (
                 <tr key={bc.id} className="border-b border-stone-50 hover:bg-stone-50/50">
                   <td className="py-3 font-mono text-#6B7280">{bc.date}</td>
-                  <td className="py-3 font-bold text-teal-950">{bc.title}</td>
-                  <td className="py-3 text-#6B7280 font-bold">{bc.segment}</td>
+                  <td className="py-3 font-semibold text-teal-950">{bc.title}</td>
+                  <td className="py-3 text-#6B7280 font-semibold">{bc.segment}</td>
                   <td className="py-3 text-center">
-                    <span className={`px-2 py-0.5 rounded font-mono text-[9px] font-bold uppercase ${
+                    <span className={`px-2 py-0.5 rounded font-mono text-[9px] font-semibold uppercase ${
                       bc.urgency === 'Urgent' ? 'bg-rose-50 text-rose-800 border border-rose-100' :
                       bc.urgency === 'High' ? 'bg-amber-50 text-amber-800 border border-amber-100' :
                       'bg-stone-50 text-#6B7280 border border-stone-200'
@@ -479,10 +479,10 @@ export default function BroadcastCenter({
                       {bc.urgency}
                     </span>
                   </td>
-                  <td className="py-3 text-#6B7280 font-light max-w-[200px] truncate" title={bc.message}>
+                  <td className="py-3 text-#6B7280 font-normal max-w-[200px] truncate" title={bc.message}>
                     {bc.message}
                   </td>
-                  <td className="py-3 text-center font-bold font-mono text-teal-950">{bc.recipientsCount} recs</td>
+                  <td className="py-3 text-center font-semibold font-mono text-teal-950">{bc.recipientsCount} recs</td>
                   <td className="py-3 text-center">
                     <div className="flex justify-center gap-1">
                       {bc.channels.map(ch => (
@@ -506,7 +506,7 @@ export default function BroadcastCenter({
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-teal-800 text-white">
               <div className="flex items-center space-x-2">
                 <Megaphone className="w-5 h-5" />
-                <span className="font-display font-bold uppercase">Broadcast Gateway Preview</span>
+                <span className="font-display font-semibold uppercase">Broadcast Gateway Preview</span>
               </div>
               <button onClick={() => setShowPreviewModal(false)} className="p-1 rounded-full hover:bg-white/20 transition-all text-white">
                 <X className="w-5 h-5" />
@@ -516,19 +516,19 @@ export default function BroadcastCenter({
             <div className="p-6 space-y-4 bg-stone-50">
               <div className="bg-white rounded-2xl border border-stone-200 p-4 space-y-3 shadow-xs">
                 <div className="flex justify-between items-center text-[10px]">
-                  <span className={`px-2 py-0.5 rounded-full font-extrabold uppercase ${
+                  <span className={`px-2 py-0.5 rounded-full font-semibold uppercase ${
                     urgency === 'Urgent' ? 'bg-rose-100 text-rose-800' :
                     urgency === 'High' ? 'bg-amber-100 text-amber-800' :
                     'bg-stone-50 text-#6B7280'
                   }`}>
                     Urgency: {urgency}
                   </span>
-                  <span className="text-stone-400 font-mono font-bold uppercase">
+                  <span className="text-stone-400 font-mono font-semibold uppercase">
                     Target: {segment}
                   </span>
                 </div>
                 
-                <h4 className="font-bold text-teal-950 text-sm border-b border-stone-200 pb-2">{bcastTitle || '(No title entered)'}</h4>
+                <h4 className="font-semibold text-teal-950 text-sm border-b border-stone-200 pb-2">{bcastTitle || '(No title entered)'}</h4>
                 
                 <div className="text-xs text-#132A1D leading-relaxed space-y-2">
                   <p className="font-mono bg-stone-50 p-2.5 rounded-xl border border-stone-150">
@@ -540,7 +540,7 @@ export default function BroadcastCenter({
                   <span>Routing Channels:</span>
                   <span className="px-1.5 bg-stone-50 text-#6B7280 rounded border border-stone-250">In-App</span>
                   <span className="px-1.5 bg-stone-50 text-#6B7280 rounded border border-stone-250">Email</span>
-                  <span className="text-rose-500 line-through px-1 font-bold">WhatsApp/SMS Restricted</span>
+                  <span className="text-rose-500 line-through px-1 font-semibold">WhatsApp/SMS Restricted</span>
                 </div>
               </div>
 
@@ -555,13 +555,13 @@ export default function BroadcastCenter({
             <div className="px-6 py-4 bg-stone-50 border-t border-stone-200 flex justify-end space-x-2">
               <button
                 onClick={() => setShowPreviewModal(false)}
-                className="px-4 py-2 border border-stone-300 hover:bg-stone-50 text-#132A1D font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2 border border-stone-300 hover:bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Back to Edit
               </button>
               <button
                 onClick={() => handleSendBroadcast()}
-                className="px-4 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Confirm &amp; Launch
               </button>

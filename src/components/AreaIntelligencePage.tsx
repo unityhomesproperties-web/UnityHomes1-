@@ -486,7 +486,7 @@ export default function AreaIntelligencePage() {
       <div className="w-24 h-24 bg-[#E8F3EA] rounded-full flex items-center justify-center mb-8 border border-[#0E2F1F]/10">
         <CheckCircle2 className="w-12 h-12 text-[#2F8D46]" />
       </div>
-      <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0E2F1F] mb-4">Thank You</h2>
+      <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#0E2F1F] mb-4">Thank You</h2>
       <p className="text-lg text-[#5F6F63] leading-relaxed mb-10">
         Your contribution will help us build better neighbourhood intelligence for Nigeria.
         Your contribution will help future buyers, renters and landlords make better decisions.
@@ -506,7 +506,7 @@ export default function AreaIntelligencePage() {
     <div className="min-h-screen bg-[#F4F8F4]">
       {!isSuccess && (
         <header className="pt-16 pb-12 px-6 text-center max-w-4xl mx-auto">
-          <h1 className="font-serif font-bold text-4xl md:text-5xl text-[#0E2F1F] tracking-tight mb-4">
+          <h1 className="font-serif font-semibold text-4xl md:text-5xl text-[#0E2F1F] tracking-tight mb-4">
             Help Build Better Area Intelligence
           </h1>
           <p className="text-lg text-[#5F6F63] leading-relaxed max-w-2xl mx-auto">

@@ -432,7 +432,7 @@ export default function ImmutableHistory({ recordId, recordType }: ImmutableHist
         <div className="flex items-center space-x-2">
           <Shield className="w-5 h-5 text-emerald-700" />
           <div>
-            <h4 className="font-display font-black text-#132A1D uppercase tracking-wide text-xs flex items-center space-x-1.5">
+            <h4 className="font-display font-semibold text-#132A1D uppercase tracking-wide text-xs flex items-center space-x-1.5">
               <span>Permanent Record &amp; Audit Trail</span>
               <span className="flex items-center text-teal-800 bg-teal-50 px-2 py-0.5 rounded text-[10px] uppercase font-mono border border-teal-100">
                 <Lock className="w-3 h-3 mr-1" />
@@ -456,18 +456,18 @@ export default function ImmutableHistory({ recordId, recordType }: ImmutableHist
               {/* Header */}
               <div className="flex justify-between items-start gap-2">
                 <div>
-                  <span className="text-[10px] font-mono font-bold text-#132A1D bg-stone-50 px-2.5 py-0.5 rounded-md uppercase border border-stone-200">
+                  <span className="text-[10px] font-mono font-semibold text-#132A1D bg-stone-50 px-2.5 py-0.5 rounded-md uppercase border border-stone-200">
                     {log.actionType.replace(/_/g, ' ')}
                   </span>
                   <div className="flex items-center space-x-2 mt-2">
-                    <span className="font-bold text-#132A1D">{log.actorName}</span>
-                    <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded uppercase ${getActorBadgeClass(log.actorRole)}`}>
+                    <span className="font-semibold text-#132A1D">{log.actorName}</span>
+                    <span className={`text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded uppercase ${getActorBadgeClass(log.actorRole)}`}>
                       {log.actorRole}
                     </span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] font-mono text-stone-400 block font-bold">
+                  <span className="text-[10px] font-mono text-stone-400 block font-semibold">
                     Ref: {log.id}
                   </span>
                   <span className="text-[10px] text-stone-400 font-mono mt-0.5 block flex items-center justify-end">
@@ -486,7 +486,7 @@ export default function ImmutableHistory({ recordId, recordType }: ImmutableHist
               {hasChanges && (
                 <div className="grid grid-cols-2 gap-3 pt-2.5 border-t border-stone-200 text-[10px] font-mono">
                   <div className="bg-stone-50 p-2 rounded-xl border border-stone-200">
-                    <span className="block text-[8px] font-bold text-stone-400 uppercase tracking-wider">Previous State</span>
+                    <span className="block text-[8px] font-semibold text-stone-400 uppercase tracking-wider">Previous State</span>
                     <span className="block font-semibold text-#6B7280 truncate mt-0.5">
                       {isFin ? formatNaira(log.previousValue) : (
                         <span className={`inline-block px-1.5 py-0.5 rounded text-[9px] ${getStatusBadgeClass(String(log.previousValue))}`}>
@@ -496,8 +496,8 @@ export default function ImmutableHistory({ recordId, recordType }: ImmutableHist
                     </span>
                   </div>
                   <div className="bg-emerald-50/35 p-2 rounded-xl border border-emerald-100/50">
-                    <span className="block text-[8px] font-bold text-emerald-800 uppercase tracking-wider">Audited State</span>
-                    <span className="block font-bold text-emerald-950 truncate mt-0.5">
+                    <span className="block text-[8px] font-semibold text-emerald-800 uppercase tracking-wider">Audited State</span>
+                    <span className="block font-semibold text-emerald-950 truncate mt-0.5">
                       {isFin ? formatNaira(log.newValue) : (
                         <span className={`inline-block px-1.5 py-0.5 rounded text-[9px] ${getStatusBadgeClass(String(log.newValue))}`}>
                           {String(log.newValue)}

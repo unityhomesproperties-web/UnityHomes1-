@@ -368,10 +368,10 @@ export default function AreaIntelligencePage() {
           <AbstractIllustration type="hero" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
-          <h4 className="text-xs md:text-sm font-bold tracking-widest uppercase text-white/90 mb-3">
+          <h4 className="text-xs md:text-sm font-semibold tracking-widest uppercase text-white/90 mb-3">
             AREA INTELLIGENCE
           </h4>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4 max-w-2xl">
+          <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-4 max-w-2xl">
             Help people understand what living in your area is really like.
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-xl mb-6 leading-relaxed">
@@ -388,7 +388,7 @@ export default function AreaIntelligencePage() {
         
         {/* MOBILE PROGRESS */}
         <div className="md:hidden mb-8">
-          <div className="flex justify-between text-xs font-bold text-[var(--color-text-secondary)] mb-3 uppercase tracking-wider">
+          <div className="flex justify-between text-xs font-semibold text-[var(--color-text-secondary)] mb-3 uppercase tracking-wider">
             <span>Step {currentStep} of {totalSteps}</span>
             <span className="text-[var(--color-brand-fresh)]">{STEPS[currentStep-1].short}</span>
           </div>
@@ -405,7 +405,7 @@ export default function AreaIntelligencePage() {
           {/* DESKTOP PROGRESS SIDEBAR */}
           <div className="hidden md:block w-64 flex-shrink-0">
             <div className="sticky top-32">
-              <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest mb-8">Your Journey</h3>
+              <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest mb-8">Your Journey</h3>
               <div className="space-y-6">
                 {STEPS.map((step, idx) => {
                   const isCompleted = idx + 1 < currentStep;
@@ -424,7 +424,7 @@ export default function AreaIntelligencePage() {
                         {isCurrent && <div className="w-2 h-2 rounded-full bg-[var(--color-brand-fresh)]" />}
                       </div>
                       <div className="ml-4">
-                        <div className="text-xs font-bold text-[var(--color-text-secondary)] mb-0.5">0{idx + 1}</div>
+                        <div className="text-xs font-semibold text-[var(--color-text-secondary)] mb-0.5">0{idx + 1}</div>
                         <div className={`text-sm font-semibold transition-colors duration-300 ${
                           isCompleted || isCurrent ? 'text-[var(--color-brand-deep)]' : 'text-stone-400'
                         }`}>
@@ -468,8 +468,8 @@ export default function AreaIntelligencePage() {
                     <div className="space-y-8">
                       <div className="flex justify-between items-start mb-8">
                         <div>
-                          <div className="text-xs font-bold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 01</div>
-                          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)] mb-2">Where is the area you're sharing about?</h2>
+                          <div className="text-xs font-semibold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 01</div>
+                          <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">Where is the area you're sharing about?</h2>
                           <p className="text-[var(--color-text-secondary)]">Please provide the specific location details so others can find this intelligence.</p>
                         </div>
                         <div className="hidden sm:block w-24 h-24 shrink-0 -mt-2 -mr-2">
@@ -532,14 +532,14 @@ export default function AreaIntelligencePage() {
                   {currentStep === 2 && (
                     <div className="space-y-10">
                       <div className="mb-6">
-                        <div className="text-xs font-bold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 02</div>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)] mb-2">How would you describe everyday life in this area?</h2>
+                        <div className="text-xs font-semibold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 02</div>
+                        <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">How would you describe everyday life in this area?</h2>
                         <p className="text-[var(--color-text-secondary)]">Rate each aspect based on your own experience. 5 is Excellent, 1 is Poor.</p>
                         {renderError('ratings', errors)}
                       </div>
 
                       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-2">
-                        <h3 className="text-xs font-bold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Safety</h3>
+                        <h3 className="text-xs font-semibold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Safety</h3>
                         <div className="px-2">
                           <StarRating label="Security" value={data.ratings.security} onChange={v => updateSection('ratings', 'security', v)} />
                           <StarRating label="Night Safety" value={data.ratings.night_safety} onChange={v => updateSection('ratings', 'night_safety', v)} />
@@ -548,7 +548,7 @@ export default function AreaIntelligencePage() {
                       </motion.div>
 
                       <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="space-y-2">
-                        <h3 className="text-xs font-bold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Essential Services</h3>
+                        <h3 className="text-xs font-semibold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Essential Services</h3>
                         <div className="px-2">
                           <StarRating label="Electricity" value={data.ratings.electricity} onChange={v => updateSection('ratings', 'electricity', v)} />
                           <StarRating label="Water" value={data.ratings.water} onChange={v => updateSection('ratings', 'water', v)} />
@@ -557,7 +557,7 @@ export default function AreaIntelligencePage() {
                       </motion.div>
 
                       <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="space-y-2">
-                        <h3 className="text-xs font-bold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Roads & Environment</h3>
+                        <h3 className="text-xs font-semibold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Roads & Environment</h3>
                         <div className="px-2">
                           <StarRating label="Roads" value={data.ratings.roads} onChange={v => updateSection('ratings', 'roads', v)} />
                           <StarRating label="Drainage" value={data.ratings.drainage} onChange={v => updateSection('ratings', 'drainage', v)} />
@@ -566,7 +566,7 @@ export default function AreaIntelligencePage() {
                       </motion.div>
 
                       <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="space-y-2">
-                        <h3 className="text-xs font-bold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Community Amenities</h3>
+                        <h3 className="text-xs font-semibold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Community Amenities</h3>
                         <div className="px-2">
                           <StarRating label="Schools" value={data.ratings.schools} onChange={v => updateSection('ratings', 'schools', v)} />
                           <StarRating label="Hospitals" value={data.ratings.hospitals} onChange={v => updateSection('ratings', 'hospitals', v)} />
@@ -576,7 +576,7 @@ export default function AreaIntelligencePage() {
                       </motion.div>
 
                       <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="space-y-2">
-                        <h3 className="text-xs font-bold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Transport</h3>
+                        <h3 className="text-xs font-semibold tracking-widest text-[var(--color-text-secondary)] uppercase bg-stone-50 py-2 px-4 rounded-md mb-2">Transport</h3>
                         <div className="px-2">
                           <StarRating label="Public Transport" value={data.ratings.public_transport} onChange={v => updateSection('ratings', 'public_transport', v)} />
                         </div>
@@ -589,8 +589,8 @@ export default function AreaIntelligencePage() {
                     <div className="space-y-8">
                       <div className="flex justify-between items-start mb-8">
                         <div>
-                          <div className="text-xs font-bold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 03</div>
-                          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)] mb-2">What is the housing experience like?</h2>
+                          <div className="text-xs font-semibold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 03</div>
+                          <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">What is the housing experience like?</h2>
                           <p className="text-[var(--color-text-secondary)]">Share what you have observed about housing availability, cost and access in the area.</p>
                         </div>
                         <div className="hidden sm:block w-24 h-24 shrink-0 -mt-2 -mr-2">
@@ -662,8 +662,8 @@ export default function AreaIntelligencePage() {
                     <div className="space-y-8">
                       <div className="flex justify-between items-start mb-8">
                         <div>
-                          <div className="text-xs font-bold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 04</div>
-                          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)] mb-2">What should people know about this area?</h2>
+                          <div className="text-xs font-semibold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 04</div>
+                          <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">What should people know about this area?</h2>
                           <p className="text-[var(--color-text-secondary)]">Your personal insights can be incredibly valuable to someone moving here.</p>
                         </div>
                         <div className="hidden sm:block w-24 h-24 shrink-0 -mt-2 -mr-2">
@@ -693,8 +693,8 @@ export default function AreaIntelligencePage() {
                   {currentStep === 5 && (
                     <div className="space-y-8">
                       <div className="mb-8">
-                        <div className="text-xs font-bold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 05</div>
-                        <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)] mb-2">Review your area insights.</h2>
+                        <div className="text-xs font-semibold text-[var(--color-brand-fresh)] uppercase tracking-wider mb-2">Step 05</div>
+                        <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">Review your area insights.</h2>
                         <p className="text-[var(--color-text-secondary)]">Take a moment to make sure your information is accurate before submitting.</p>
                       </div>
 
@@ -702,8 +702,8 @@ export default function AreaIntelligencePage() {
                         {/* Location Review */}
                         <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200">
                           <div className="flex justify-between items-center mb-4 pb-4 border-b border-stone-200">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">Location</h3>
-                            <button type="button" onClick={() => handleEdit(1)} className="text-[var(--color-brand-fresh)] text-sm font-bold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Location</h3>
+                            <button type="button" onClick={() => handleEdit(1)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
                           </div>
                           <div className="grid grid-cols-2 gap-4">
                             {Object.entries(data.location).map(([k, v]) => v && (
@@ -718,8 +718,8 @@ export default function AreaIntelligencePage() {
                         {/* Area Experience Review */}
                         <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200">
                           <div className="flex justify-between items-center mb-4 pb-4 border-b border-stone-200">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">Area Experience</h3>
-                            <button type="button" onClick={() => handleEdit(2)} className="text-[var(--color-brand-fresh)] text-sm font-bold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Area Experience</h3>
+                            <button type="button" onClick={() => handleEdit(2)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
                           </div>
                           <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4">
                             {Object.entries(data.ratings).map(([k, v]) => v > 0 && (
@@ -738,8 +738,8 @@ export default function AreaIntelligencePage() {
                         {/* Housing Info Review */}
                         <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200">
                           <div className="flex justify-between items-center mb-4 pb-4 border-b border-stone-200">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">Housing Information</h3>
-                            <button type="button" onClick={() => handleEdit(3)} className="text-[var(--color-brand-fresh)] text-sm font-bold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Housing Information</h3>
+                            <button type="button" onClick={() => handleEdit(3)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {Object.entries(data.housing).map(([k, v]) => v && (
@@ -754,8 +754,8 @@ export default function AreaIntelligencePage() {
                         {/* Community Review */}
                         <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200">
                           <div className="flex justify-between items-center mb-4 pb-4 border-b border-stone-200">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">Community Experience</h3>
-                            <button type="button" onClick={() => handleEdit(4)} className="text-[var(--color-brand-fresh)] text-sm font-bold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider">Community Experience</h3>
+                            <button type="button" onClick={() => handleEdit(4)} className="text-[var(--color-brand-fresh)] text-sm font-semibold hover:underline flex items-center gap-1">Edit <ChevronRight className="w-3 h-3"/></button>
                           </div>
                           <div className="space-y-4">
                             <div>
@@ -778,7 +778,7 @@ export default function AreaIntelligencePage() {
 
                       {/* Consent & Submit */}
                       <div className="mt-10 pt-8 border-t border-[var(--color-border)]">
-                        <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-6">Consent</h3>
+                        <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider mb-6">Consent</h3>
                         
                         <div className="space-y-4 mb-8">
                           <label className="flex items-start group cursor-pointer p-4 border border-[var(--color-border)] rounded-[18px] bg-white hover:border-[var(--color-brand-fresh)] transition-colors">
@@ -825,7 +825,7 @@ export default function AreaIntelligencePage() {
                         <button
                           onClick={handleSubmit}
                           disabled={!data.consent.accurate || !data.consent.use_anonymously || isSubmitting}
-                          className="w-full bg-[var(--color-brand-fresh)] text-white px-6 py-4 rounded-[18px] font-bold text-lg hover:bg-[var(--color-brand-medium)] transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+                          className="w-full bg-[var(--color-brand-fresh)] text-white px-6 py-4 rounded-[18px] font-semibold text-lg hover:bg-[var(--color-brand-medium)] transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:-translate-y-0.5 active:translate-y-0"
                         >
                           {isSubmitting ? (
                             <>
@@ -850,7 +850,7 @@ export default function AreaIntelligencePage() {
                     <button
                       type="button"
                       onClick={handleBack}
-                      className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-bold transition-colors px-4 py-2 min-h-[48px]"
+                      className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-semibold transition-colors px-4 py-2 min-h-[48px]"
                     >
                       <ChevronLeft className="w-5 h-5 mr-1" />
                       Back
@@ -861,7 +861,7 @@ export default function AreaIntelligencePage() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="flex items-center bg-[var(--color-brand-fresh)] text-white px-8 py-3 rounded-[18px] font-bold hover:bg-[var(--color-brand-medium)] transition-all duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+                    className="flex items-center bg-[var(--color-brand-fresh)] text-white px-8 py-3 rounded-[18px] font-semibold hover:bg-[var(--color-brand-medium)] transition-all duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Next
                     <ChevronRight className="w-5 h-5 ml-1" />

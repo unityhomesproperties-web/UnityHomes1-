@@ -40,10 +40,10 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               ABOUT UNITY HOMES
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               Making real estate easier to understand.
             </h1>
           </motion.div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[#6B7280]">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280]">
               WHO WE ARE
             </h4>
             <div className="w-12 h-1 bg-[#6FBE45] mt-6 rounded-full hidden md:block"></div>
@@ -144,13 +144,13 @@ export default function AboutPage() {
               className="group bg-white p-10 border border-gray-200 hover:border-[#6FBE45]/40 hover:bg-[#EAF5E3] transition-all duration-200 cursor-default rounded-[24px] hover:-translate-y-1 relative overflow-hidden"
             >
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-sm font-bold text-[#132A1D] opacity-40 group-hover:opacity-100 group-hover:text-[#6FBE45] transition-colors duration-200">
+                <span className="text-sm font-semibold text-[#132A1D] opacity-40 group-hover:opacity-100 group-hover:text-[#6FBE45] transition-colors duration-200">
                   {value.id}
                 </span>
                 <div className="h-px bg-gray-200 flex-1 group-hover:bg-[#6FBE45]/30 transition-colors duration-200"></div>
               </div>
               
-              <h3 className="text-2xl font-extrabold text-[#132A1D] mb-4">
+              <h3 className="text-2xl font-semibold text-[#132A1D] mb-4">
                 {value.title}
               </h3>
               
@@ -172,7 +172,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-[#132A1D] mb-20"
+            className="text-2xl md:text-3xl font-semibold text-[#132A1D] mb-20"
           >
             A clearer way forward.
           </motion.h2>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ delay: idx * 0.2, duration: 0.5, ease: "easeOut" }}
                 >
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#6FBE45] tracking-tight">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#6FBE45] tracking-tight">
                     {word}
                   </h3>
                 </motion.div>
@@ -247,12 +247,12 @@ export default function AboutPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-12">
               Be part of what Unity Homes is building.
             </h2>
             <Link
               to="/waitlist"
-              className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
+              className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
             >
               Join The Waitlist
             </Link>

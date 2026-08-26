@@ -133,7 +133,7 @@ export default function GlobalSearch({
             <div className="py-2">
               {results.tenants.length > 0 && (
                 <div className="px-4 py-2">
-                  <h4 className="text-xs font-bold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><Users className="w-3 h-3 mr-1" /> Tenants</h4>
+                  <h4 className="text-xs font-semibold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><Users className="w-3 h-3 mr-1" /> Tenants</h4>
                   {results.tenants.map(t => (
                     <button key={t.id} onClick={() => { setIsOpen(false); onNavigate('tenant', t.id); }} className="w-full text-left p-3 hover:bg-stone-50 rounded-xl flex items-center justify-between mb-1">
                       <div>
@@ -148,7 +148,7 @@ export default function GlobalSearch({
 
               {results.properties.length > 0 && (
                 <div className="px-4 py-2 border-t border-stone-200">
-                  <h4 className="text-xs font-bold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><Building className="w-3 h-3 mr-1" /> Properties</h4>
+                  <h4 className="text-xs font-semibold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><Building className="w-3 h-3 mr-1" /> Properties</h4>
                   {results.properties.map((p: any) => (
                     <button key={p.id} onClick={() => { setIsOpen(false); onNavigate('property', p.id); }} className="w-full text-left p-3 hover:bg-stone-50 rounded-xl flex items-center justify-between mb-1">
                       <div>
@@ -163,7 +163,7 @@ export default function GlobalSearch({
 
               {results.bookings.length > 0 && (
                 <div className="px-4 py-2 border-t border-stone-200">
-                  <h4 className="text-xs font-bold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><FileText className="w-3 h-3 mr-1" /> Bookings</h4>
+                  <h4 className="text-xs font-semibold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><FileText className="w-3 h-3 mr-1" /> Bookings</h4>
                   {results.bookings.map(b => (
                     <button key={b.id} onClick={() => { setIsOpen(false); onNavigate('booking', b.id); }} className="w-full text-left p-3 hover:bg-stone-50 rounded-xl flex items-center justify-between mb-1">
                       <div>
@@ -178,7 +178,7 @@ export default function GlobalSearch({
 
               {results.damageReports.length > 0 && (
                 <div className="px-4 py-2 border-t border-stone-200">
-                  <h4 className="text-xs font-bold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><AlertTriangle className="w-3 h-3 mr-1" /> Damage Reports</h4>
+                  <h4 className="text-xs font-semibold text-#6B7280 uppercase tracking-wider mb-2 flex items-center"><AlertTriangle className="w-3 h-3 mr-1" /> Damage Reports</h4>
                   {results.damageReports.map(d => (
                     <button key={d.id} onClick={() => { setIsOpen(false); onNavigate('damage', d.id); }} className="w-full text-left p-3 hover:bg-stone-50 rounded-xl flex items-center justify-between mb-1">
                       <div>

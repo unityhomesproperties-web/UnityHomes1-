@@ -62,10 +62,10 @@ export default function ProfessionalsPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               FOR REAL ESTATE PROFESSIONALS
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               The right expertise for better property decisions.
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl font-medium">
@@ -114,10 +114,10 @@ export default function ProfessionalsPage() {
           transition={{ duration: 0.4 }}
           className="max-w-3xl mx-auto space-y-6"
         >
-          <h4 className="text-sm font-bold tracking-widest uppercase text-[#6B7280]">
+          <h4 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280]">
             A TRUSTED PROFESSIONAL NETWORK
           </h4>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#132A1D] leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#132A1D] leading-tight">
             Expertise matters when property decisions matter.
           </h2>
           <p className="text-lg md:text-xl text-[#6B7280] leading-relaxed">
@@ -134,7 +134,7 @@ export default function ProfessionalsPage() {
               <button
                 key={prof.roleId}
                 onClick={() => scrollToSection(`prof-${prof.roleId}`)}
-                className="whitespace-nowrap text-sm font-bold text-[#6B7280] hover:text-[#6FBE45] transition-colors focus:outline-none"
+                className="whitespace-nowrap text-sm font-semibold text-[#6B7280] hover:text-[#6FBE45] transition-colors focus:outline-none"
               >
                 {prof.title}
               </button>
@@ -165,11 +165,11 @@ export default function ProfessionalsPage() {
                   className={`space-y-8 ${isEven ? 'lg:order-last' : 'lg:order-first'}`}
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-lg font-bold text-[#6FBE45]">{prof.id}</span>
+                    <span className="text-lg font-semibold text-[#6FBE45]">{prof.id}</span>
                     <div className="h-px bg-gray-200 flex-1"></div>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-extrabold text-[#132A1D]">
+                  <h3 className="text-3xl md:text-4xl font-semibold text-[#132A1D]">
                     {prof.title}
                   </h3>
                   
@@ -180,7 +180,7 @@ export default function ProfessionalsPage() {
                   <Link
                     to="/waitlist"
                     state={{ role: prof.roleId }}
-                    className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group"
+                    className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group"
                   >
                     Join The Waitlist
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -214,13 +214,13 @@ export default function ProfessionalsPage() {
             transition={{ duration: 0.4 }}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#132A1D] leading-tight">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#132A1D] leading-tight">
               Built around professional accountability.
             </h2>
             <p className="text-lg text-[#6B7280] leading-relaxed">
               Expertise requires responsibility. We are building a network focused on qualified professionals who can provide accurate information and reliable service for every property transaction.
             </p>
-            <h3 className="text-2xl font-bold text-[#132A1D] mt-8 pt-8 border-t border-gray-200">
+            <h3 className="text-2xl font-semibold text-[#132A1D] mt-8 pt-8 border-t border-gray-200">
               Professional participation starts with review.
             </h3>
             <p className="text-lg text-[#6B7280] leading-relaxed">
@@ -247,7 +247,7 @@ export default function ProfessionalsPage() {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: idx * 0.2, duration: 0.3 }}
-                  className="w-10 h-10 rounded-full border-2 border-[#6FBE45] flex items-center justify-center text-xs font-bold text-[#6FBE45] bg-white group-hover:bg-[#6FBE45] group-hover:text-white transition-colors duration-300"
+                  className="w-10 h-10 rounded-full border-2 border-[#6FBE45] flex items-center justify-center text-xs font-semibold text-[#6FBE45] bg-white group-hover:bg-[#6FBE45] group-hover:text-white transition-colors duration-300"
                 >
                   0{idx + 1}
                 </motion.div>
@@ -257,7 +257,7 @@ export default function ProfessionalsPage() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: (idx * 0.2) + 0.1, duration: 0.3 }}
                 >
-                  <h4 className="text-lg font-bold text-[#132A1D] tracking-wide">{step}</h4>
+                  <h4 className="text-lg font-semibold text-[#132A1D] tracking-wide">{step}</h4>
                 </motion.div>
               </div>
             ))}
@@ -289,7 +289,7 @@ export default function ProfessionalsPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-8">
               Build the future of real estate with Unity Homes.
             </h2>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-12">
@@ -297,7 +297,7 @@ export default function ProfessionalsPage() {
             </p>
             <Link
               to="/waitlist"
-              className="inline-flex bg-white text-[#6FBE45] px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
+              className="inline-flex bg-white text-[#6FBE45] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
             >
               Join The Waitlist
             </Link>

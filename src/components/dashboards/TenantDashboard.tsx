@@ -882,7 +882,7 @@ export default function TenantDashboard({
           />
           <div className="flex items-center space-x-2 bg-white px-3 py-1.5 rounded-full shadow-xs border border-stone-200">
             {isOffline ? <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></div> : (isSyncing ? <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div> : <div className="w-2 h-2 rounded-full bg-emerald-500"></div>)}
-            <span className="text-[10px] font-mono uppercase font-bold text-#6B7280">{isOffline ? 'Offline' : (isSyncing ? 'Syncing' : 'Online')}</span>
+            <span className="text-[10px] font-mono uppercase font-semibold text-#6B7280">{isOffline ? 'Offline' : (isSyncing ? 'Syncing' : 'Online')}</span>
           </div>
           <button onClick={() => setShowNotifications(true)} className="p-2 border border-stone-200 bg-white rounded-full hover:bg-stone-50 transition relative shadow-xs">
             <Bell className="w-4 h-4 text-#6B7280" />
@@ -903,7 +903,7 @@ export default function TenantDashboard({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-#132A1D pb-3 gap-2">
           <div className="flex items-center space-x-2">
             <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
-            <h3 className="font-display font-black uppercase text-xs tracking-wider text-amber-500">Compliance & Audit Sandbox Control</h3>
+            <h3 className="font-display font-semibold uppercase text-xs tracking-wider text-amber-500">Compliance & Audit Sandbox Control</h3>
           </div>
           <span className="text-[10px] font-mono text-stone-400">Environment Clock: 2026-07-20 UTC</span>
         </div>
@@ -911,7 +911,7 @@ export default function TenantDashboard({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Persona Switcher */}
           <div className="space-y-2">
-            <label className="block text-[9px] font-mono text-stone-400 uppercase font-bold">Select Active Demo Tenant Persona:</label>
+            <label className="block text-[9px] font-mono text-stone-400 uppercase font-semibold">Select Active Demo Tenant Persona:</label>
             <div className="flex flex-col sm:flex-row gap-2">
               <button
                 type="button"
@@ -942,7 +942,7 @@ export default function TenantDashboard({
 
           {/* Cloud Function / Time Simulator */}
           <div className="space-y-2">
-            <label className="block text-[9px] font-mono text-stone-400 uppercase font-bold">Time & Status Simulator:</label>
+            <label className="block text-[9px] font-mono text-stone-400 uppercase font-semibold">Time & Status Simulator:</label>
             <div className="flex">
               <button
                 type="button"
@@ -960,7 +960,7 @@ export default function TenantDashboard({
       {successMsg && (
         <div className="p-4 bg-emerald-50 border border-emerald-300 rounded-2xl flex items-center space-x-2 text-xs text-emerald-805 tracking-normal shadow-sm">
           <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0" />
-          <span className="font-bold">{successMsg}</span>
+          <span className="font-semibold">{successMsg}</span>
         </div>
       )}
 
@@ -971,7 +971,7 @@ export default function TenantDashboard({
           {/* AREA 1: HOME */}
           <button
             onClick={() => setActiveTab('Overview')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               activeTab === 'Overview'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -983,7 +983,7 @@ export default function TenantDashboard({
           {/* AREA 2: PROPERTY */}
           <button
             onClick={() => setActiveTab('Profile')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               activeTab === 'Profile'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -995,7 +995,7 @@ export default function TenantDashboard({
           {/* AREA 3: MONEY */}
           <button
             onClick={() => setActiveTab('Payments')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               activeTab === 'Payments'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1007,7 +1007,7 @@ export default function TenantDashboard({
           {/* AREA 4: OPERATIONS / SUPPORT */}
           <button
             onClick={() => setActiveTab('Services')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Services', 'Support'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1019,7 +1019,7 @@ export default function TenantDashboard({
           {/* AREA 5: MORE */}
           <button
             onClick={() => setActiveTab('Vault')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
               activeTab === 'Vault'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1032,19 +1032,19 @@ export default function TenantDashboard({
         {/* DYNAMIC SECONDARY SUB-NAVIGATION PILLS FOR ACTIVE AREA */}
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
           {activeTab === 'Overview' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Overview &amp; Resident Briefing
             </button>
           )}
 
           {activeTab === 'Profile' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Lease &amp; Tenant Profile
             </button>
           )}
 
           {activeTab === 'Payments' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Rent &amp; Service Charge Payments
             </button>
           )}
@@ -1053,7 +1053,7 @@ export default function TenantDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Services')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Services' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1061,7 +1061,7 @@ export default function TenantDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Support')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Support' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1071,7 +1071,7 @@ export default function TenantDashboard({
           )}
 
           {activeTab === 'Vault' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Document Vault &amp; Receipts
             </button>
           )}
@@ -1115,38 +1115,38 @@ export default function TenantDashboard({
             <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Building className="text-[#18452E] w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Verified Property</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Verified Property</h3>
               </div>
               
               <div className="space-y-3 text-xs">
                 <div className="flex flex-col space-y-1">
-                  <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Property Name</span>
+                  <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Property Name</span>
                   <strong className="text-#132A1D text-sm">{tenantMatch.propertyName}</strong>
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Property Address</span>
+                  <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Property Address</span>
                   <span className="text-#132A1D">Lagos, Nigeria</span>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col space-y-1">
-                    <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Unit Number</span>
+                    <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Unit Number</span>
                     <strong className="text-#132A1D">{tenantMatch.unitNumber}</strong>
                   </div>
                   <div className="flex flex-col space-y-1">
-                    <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Property Type</span>
+                    <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Property Type</span>
                     <span className="text-#132A1D">Residential</span>
                   </div>
                   <div className="flex flex-col space-y-1">
-                    <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Lease Start Date</span>
+                    <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Lease Start Date</span>
                     <span className="text-#132A1D">2026-04-12</span>
                   </div>
                   <div className="flex flex-col space-y-1">
-                    <span className="text-stone-400 uppercase font-mono text-[9px] font-bold">Lease End Date</span>
+                    <span className="text-stone-400 uppercase font-mono text-[9px] font-semibold">Lease End Date</span>
                     <span className="text-#132A1D">2027-04-11</span>
                   </div>
                 </div>
                 <div className="pt-2 border-t border-stone-200">
-                  <span className="px-2.5 py-1 rounded-full text-[9px] font-bold uppercase bg-emerald-100 text-emerald-800 inline-block">Active Occupancy</span>
+                  <span className="px-2.5 py-1 rounded-full text-[9px] font-semibold uppercase bg-emerald-100 text-emerald-800 inline-block">Active Occupancy</span>
                 </div>
               </div>
             </div>
@@ -1155,14 +1155,14 @@ export default function TenantDashboard({
             <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <User className="text-[#18452E] w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Landlord Verification</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Landlord Verification</h3>
               </div>
               
               <div className="flex items-start space-x-4">
                 <img src={landlordDetails.photo} alt={landlordDetails.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
                 <div className="space-y-1">
-                  <h4 className="font-bold text-#132A1D text-sm">{landlordDetails.name}</h4>
-                  <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-emerald-100 text-emerald-800 flex items-center w-fit">
+                  <h4 className="font-semibold text-#132A1D text-sm">{landlordDetails.name}</h4>
+                  <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase bg-emerald-100 text-emerald-800 flex items-center w-fit">
                     <ShieldCheck className="w-3 h-3 mr-1" /> Verified Status
                   </span>
                   <span className="text-[#18452E] font-mono block text-xs mt-1">{landlordDetails.code}</span>
@@ -1186,14 +1186,14 @@ export default function TenantDashboard({
               <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4">
                 <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                   <Building className="text-teal-700 w-5 h-5" />
-                  <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Property Management Company</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Property Management Company</h3>
                 </div>
                 
                 <div className="flex items-start space-x-4">
                   <img src={pmcDetails.logo} alt={pmcDetails.name} className="w-16 h-16 rounded-2xl object-cover border-2 border-white shadow-sm" />
                   <div className="space-y-1">
-                    <h4 className="font-bold text-#132A1D text-sm">{pmcDetails.name}</h4>
-                    <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-teal-100 text-teal-800 flex items-center w-fit">
+                    <h4 className="font-semibold text-#132A1D text-sm">{pmcDetails.name}</h4>
+                    <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase bg-teal-100 text-teal-800 flex items-center w-fit">
                       <ShieldCheck className="w-3 h-3 mr-1" /> Verified PMC
                     </span>
                     <span className="text-teal-700 font-mono block text-xs mt-1">{pmcDetails.code}</span>
@@ -1218,16 +1218,16 @@ export default function TenantDashboard({
               <div className="absolute top-0 right-0 w-16 h-16 bg-[#18452E]/5 rounded-bl-full"></div>
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3 relative z-10">
                 <Landmark className="text-[#18452E] w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Payment Destination Center</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Payment Destination Center</h3>
               </div>
 
               <div className="grid grid-cols-2 gap-4 text-xs relative z-10">
                 <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl">
-                  <span className="block text-[9px] font-mono text-stone-400 uppercase font-bold">Receives Rent</span>
+                  <span className="block text-[9px] font-mono text-stone-400 uppercase font-semibold">Receives Rent</span>
                   <strong className="text-#132A1D">{landlordDetails.name}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl">
-                  <span className="block text-[9px] font-mono text-stone-400 uppercase font-bold">Receives Service Charge</span>
+                  <span className="block text-[9px] font-mono text-stone-400 uppercase font-semibold">Receives Service Charge</span>
                   <strong className="text-#132A1D">{pmcDetails.active ? pmcDetails.name : landlordDetails.name}</strong>
                 </div>
               </div>
@@ -1235,17 +1235,17 @@ export default function TenantDashboard({
               <div className="space-y-3 text-xs relative z-10 pt-2">
                 <div className="bg-[#18452E]/5 p-3.5 rounded-xl border border-stone-150 relative">
                   <ShieldCheck className="absolute top-3.5 right-3.5 w-4 h-4 text-emerald-600" />
-                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">VERIFIED BANK ACCOUNT</span>
-                  <span className="block font-bold mt-0.5 font-display text-emerald-950 text-sm">{landlordDetails.bank}</span>
+                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">VERIFIED BANK ACCOUNT</span>
+                  <span className="block font-semibold mt-0.5 font-display text-emerald-950 text-sm">{landlordDetails.bank}</span>
                 </div>
 
                 <div className="bg-[#18452E]/5 p-3.5 rounded-xl border border-stone-150">
-                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">ACCOUNT NUMBER</span>
+                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">ACCOUNT NUMBER</span>
                   <div className="flex justify-between items-center mt-0.5">
-                    <span className="block font-mono font-black text-emerald-950 text-sm tracking-widest">{landlordDetails.accountNumber}</span>
+                    <span className="block font-mono font-semibold text-emerald-950 text-sm tracking-widest">{landlordDetails.accountNumber}</span>
                     <span 
                       onClick={() => triggerSuccess('Account number copied to clipboard.')}
-                      className="text-[9px] uppercase font-mono text-emerald-700 bg-emerald-100 rounded px-2 py-0.5 font-bold cursor-pointer hover:bg-emerald-200 transition"
+                      className="text-[9px] uppercase font-mono text-emerald-700 bg-emerald-100 rounded px-2 py-0.5 font-semibold cursor-pointer hover:bg-emerald-200 transition"
                     >
                       Copy
                     </span>
@@ -1254,8 +1254,8 @@ export default function TenantDashboard({
 
                 <div className="bg-[#18452E]/5 p-3.5 rounded-xl border border-stone-150 relative">
                   <ShieldCheck className="absolute top-3.5 right-3.5 w-4 h-4 text-emerald-600" />
-                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">BENEFICIARY ACCOUNT NAME</span>
-                  <span className="block font-bold text-[#18452E] mt-0.5 text-xs">{landlordDetails.beneficiaryName}</span>
+                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">BENEFICIARY ACCOUNT NAME</span>
+                  <span className="block font-semibold text-[#18452E] mt-0.5 text-xs">{landlordDetails.beneficiaryName}</span>
                 </div>
               </div>
             </div>
@@ -1266,7 +1266,7 @@ export default function TenantDashboard({
             <div>
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3 mb-4">
                 <Clock className="text-stone-400 w-4 h-4" />
-                <h3 className="font-display font-black text-#6B7280 uppercase text-xs tracking-wider">Recently Viewed</h3>
+                <h3 className="font-display font-semibold text-#6B7280 uppercase text-xs tracking-wider">Recently Viewed</h3>
               </div>
               <div className="flex overflow-x-auto gap-4 pb-2 snap-x">
                 {recentlyViewed.length > 0 ? recentlyViewed.map((item, idx) => (
@@ -1274,7 +1274,7 @@ export default function TenantDashboard({
                     <div className="w-8 h-8 rounded-full bg-stone-50 border border-stone-200 flex items-center justify-center mb-2">
                        <Activity className="w-4 h-4 text-#6B7280" />
                     </div>
-                    <span className="font-bold text-xs text-#132A1D line-clamp-1">{item.name}</span>
+                    <span className="font-semibold text-xs text-#132A1D line-clamp-1">{item.name}</span>
                     <span className="text-[9px] font-mono text-stone-400 mt-1 uppercase">{item.type}</span>
                   </div>
                 )) : (
@@ -1286,17 +1286,17 @@ export default function TenantDashboard({
             <div>
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3 mb-4">
                 <Bell className="text-[#18452E] w-4 h-4" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-xs tracking-wider">Platform Announcements</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-xs tracking-wider">Platform Announcements</h3>
               </div>
               <div className="space-y-3">
                 {announcements.map((ann, idx) => (
                   <div key={idx} className="bg-stone-50 border border-stone-200 p-4 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group">
                     <div>
-                      <h4 className="font-bold text-#132A1D text-sm">{ann.title}</h4>
+                      <h4 className="font-semibold text-#132A1D text-sm">{ann.title}</h4>
                       <p className="text-#6B7280 text-xs mt-1 leading-relaxed">{ann.body}</p>
                       <span className="text-[10px] font-mono text-stone-400 mt-2 block">{ann.date}</span>
                     </div>
-                    <button onClick={() => setAnnouncements(announcements.filter(a => a.id !== ann.id))} className="shrink-0 px-3 py-1.5 bg-white border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-bold uppercase hover:bg-stone-50 transition">Dismiss</button>
+                    <button onClick={() => setAnnouncements(announcements.filter(a => a.id !== ann.id))} className="shrink-0 px-3 py-1.5 bg-white border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-semibold uppercase hover:bg-stone-50 transition">Dismiss</button>
                   </div>
                 ))}
                 {announcements.length === 0 && <div className="text-xs text-#6B7280 font-mono">No new announcements.</div>}
@@ -1311,35 +1311,35 @@ export default function TenantDashboard({
           {/* TENANT RENT STATUS */}
           <div className="bg-stone-50 border border-stone-200 rounded-[var(--radius-large)] p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-center text-xs">
             <div className="lg:col-span-2">
-              <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Tenant Rent Status</span>
-              <h3 className="font-display font-extrabold text-[#18452E] text-sm md:text-base mt-1">
+              <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Tenant Rent Status</span>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm md:text-base mt-1">
                 {collectionTenant ? collectionTenant.propertyName : tenantMatch.propertyName}
               </h3>
-              <span className="text-stone-400 block font-light mt-0.5">
+              <span className="text-stone-400 block font-normal mt-0.5">
                 Annual Rent: <strong className="text-#132A1D">₦{collectionTenant ? collectionTenant.rentAmount.toLocaleString() : tenantMatch.rentAmount.toLocaleString()}</strong>
               </span>
             </div>
 
             <div>
               <span className="text-[10px] uppercase font-mono text-stone-400 block">Amount Paid</span>
-              <span className="text-lg font-display font-black text-[#18452E] mt-1 block">
+              <span className="text-lg font-display font-semibold text-[#18452E] mt-1 block">
                 ₦{collectionTenant ? collectionTenant.rentPaid.toLocaleString() : tenantMatch.rentAmount.toLocaleString()}
               </span>
             </div>
 
             <div>
               <span className="text-[10px] uppercase font-mono text-stone-400 block">Outstanding Balance</span>
-              <span className="text-lg font-display font-black text-rose-600 mt-1 block">
+              <span className="text-lg font-display font-semibold text-rose-600 mt-1 block">
                 ₦{collectionTenant ? (collectionTenant.rentAmount - collectionTenant.rentPaid).toLocaleString() : '0'}
               </span>
             </div>
 
             <div className="space-y-1.5 lg:border-l pl-0 lg:pl-6">
-              <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Next Renewal Date</span>
-              <div className="font-display font-black text-[#18452E] text-sm">
+              <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Next Renewal Date</span>
+              <div className="font-display font-semibold text-[#18452E] text-sm">
                 {collectionTenant ? collectionTenant.rentDueDate : (tenantMatch.dueDate === '-' ? 'No target set' : tenantMatch.dueDate)}
               </div>
-              <span className="text-[9px] font-bold text-rose-600 font-mono block uppercase">
+              <span className="text-[9px] font-semibold text-rose-600 font-mono block uppercase">
                 {collectionTenant && (collectionTenant.rentAmount - collectionTenant.rentPaid) > 0 ? `${collectionTenant.overdueDays} Days Overdue` : `${daysRemaining} Days Until Due`}
               </span>
             </div>
@@ -1352,7 +1352,7 @@ export default function TenantDashboard({
                 <div className="bg-amber-50 border border-amber-300 px-5 py-4 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs animate-fade-in text-amber-900">
                   <div className="flex items-center gap-2">
                     <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
-                    <span className="font-bold text-amber-800">Move-Out Process Started</span>
+                    <span className="font-semibold text-amber-800">Move-Out Process Started</span>
                   </div>
                   <p className="text-stone-650 text-xs">
                     Notice period ends on <strong>{collectionTenant.legalEndDate}</strong>. Contact Unity Homes if you have questions.
@@ -1364,7 +1364,7 @@ export default function TenantDashboard({
                   <div className="flex justify-end">
                     <button
                       onClick={handleTriggerMoveOutFlow}
-                      className="px-4 py-2 border border-amber-500 hover:bg-amber-50 text-amber-700 hover:text-amber-800 font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer"
+                      className="px-4 py-2 border border-amber-500 hover:bg-amber-50 text-amber-700 hover:text-amber-800 font-semibold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer"
                     >
                       I Want to Move Out
                     </button>
@@ -1379,11 +1379,11 @@ export default function TenantDashboard({
             <div className="bg-rose-50/50 border border-rose-200 p-6 rounded-[var(--radius-large)] space-y-4 animate-fade-in">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="space-y-1 text-center md:text-left">
-                  <span className="font-display font-extrabold text-rose-700 uppercase text-xs tracking-wider block">
+                  <span className="font-display font-semibold text-rose-700 uppercase text-xs tracking-wider block">
                     {collectionTenant.rentStatus === 'Payment Commitment Not Met' ? 'Payment Commitment Not Met' : 'You Have Outstanding Rent'}
                   </span>
                   <p className="text-stone-650 text-xs">
-                    Outstanding Rent: <strong className="text-rose-650 text-sm font-extrabold">₦{(collectionTenant.rentAmount - collectionTenant.rentPaid).toLocaleString()}</strong> | Due Date: <strong>{collectionTenant.rentDueDate || 'N/A'}</strong>
+                    Outstanding Rent: <strong className="text-rose-650 text-sm font-semibold">₦{(collectionTenant.rentAmount - collectionTenant.rentPaid).toLocaleString()}</strong> | Due Date: <strong>{collectionTenant.rentDueDate || 'N/A'}</strong>
                   </p>
                 </div>
 
@@ -1398,13 +1398,13 @@ export default function TenantDashboard({
                         <span className="text-[10px] text-#6B7280">Withdraw?</span>
                         <button
                           onClick={() => handleCancelPromise(activePromise.id)}
-                          className="text-[10px] text-rose-600 font-bold hover:underline cursor-pointer"
+                          className="text-[10px] text-rose-600 font-semibold hover:underline cursor-pointer"
                         >
                           Yes
                         </button>
                         <button
                           onClick={() => setShowCancelPromiseConfirmId(null)}
-                          className="text-[10px] text-#6B7280 font-bold hover:underline cursor-pointer"
+                          className="text-[10px] text-#6B7280 font-semibold hover:underline cursor-pointer"
                         >
                           No
                         </button>
@@ -1426,20 +1426,20 @@ export default function TenantDashboard({
                 <div className="pt-2 border-t border-rose-100 flex flex-wrap gap-3 w-full justify-start items-center">
                   <button 
                     onClick={() => handleTenantPayNow('Rent', collectionTenant.rentAmount - collectionTenant.rentPaid)}
-                    className="px-5 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs uppercase transition tracking-wider flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                    className="px-5 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs uppercase transition tracking-wider flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
                   >
                     Pay Now
                   </button>
                   <button 
                     onClick={() => openPromiseModal('Rent', collectionTenant.rentAmount - collectionTenant.rentPaid)}
-                    className="px-5 py-2.5 border border-[#18452E] text-[#18452E] hover:bg-emerald-50/50 font-bold rounded-xl text-xs uppercase transition tracking-wider cursor-pointer"
+                    className="px-5 py-2.5 border border-[#18452E] text-[#18452E] hover:bg-emerald-50/50 font-semibold rounded-xl text-xs uppercase transition tracking-wider cursor-pointer"
                   >
                     Promise to Pay
                   </button>
                   {isWithin90Days && collectionTenant.renewalIntention !== 'vacating' && (
                     <button
                       onClick={handleTriggerMoveOutFlow}
-                      className="px-5 py-2.5 border border-amber-500 hover:bg-amber-50 text-amber-700 hover:text-amber-800 font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer"
+                      className="px-5 py-2.5 border border-amber-500 hover:bg-amber-50 text-amber-700 hover:text-amber-800 font-semibold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer"
                     >
                       I Want to Move Out
                     </button>
@@ -1454,7 +1454,7 @@ export default function TenantDashboard({
             <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Clock className="text-[#18452E] w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Payment Timeline</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Payment Timeline</h3>
               </div>
               
               <div className="relative pl-6 space-y-6 before:absolute before:inset-0 before:ml-2.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before: before:from-emerald-500 before:via-stone-200 before:to-stone-200">
@@ -1465,7 +1465,7 @@ export default function TenantDashboard({
                   </div>
                   <div className="w-full md:w-[calc(50%-2rem)] bg-emerald-50 p-3 rounded-xl border border-emerald-100 shadow-sm">
                     <div className="flex justify-between mb-1">
-                      <span className="font-bold text-emerald-800 text-xs">Receipt Uploaded</span>
+                      <span className="font-semibold text-emerald-800 text-xs">Receipt Uploaded</span>
                       <span className="text-[9px] text-emerald-600 font-mono">12 Apr 2026</span>
                     </div>
                     <p className="text-[10px] text-emerald-700">Payment receipt attached successfully.</p>
@@ -1479,10 +1479,10 @@ export default function TenantDashboard({
                   </div>
                   <div className="w-full md:w-[calc(50%-2rem)] bg-emerald-50 p-3 rounded-xl border border-emerald-100 shadow-sm">
                     <div className="flex justify-between mb-1">
-                      <span className="font-bold text-emerald-800 text-xs">Bank Reference</span>
+                      <span className="font-semibold text-emerald-800 text-xs">Bank Reference</span>
                       <span className="text-[9px] text-emerald-600 font-mono">12 Apr 2026</span>
                     </div>
-                    <p className="text-[10px] font-mono text-emerald-800 font-bold">GTB/12345/RENT</p>
+                    <p className="text-[10px] font-mono text-emerald-800 font-semibold">GTB/12345/RENT</p>
                   </div>
                 </div>
 
@@ -1493,7 +1493,7 @@ export default function TenantDashboard({
                   </div>
                   <div className="w-full md:w-[calc(50%-2rem)] bg-emerald-50 p-3 rounded-xl border border-emerald-100 shadow-sm">
                     <div className="flex justify-between mb-1">
-                      <span className="font-bold text-emerald-800 text-xs">Verified</span>
+                      <span className="font-semibold text-emerald-800 text-xs">Verified</span>
                       <span className="text-[9px] text-emerald-600 font-mono">13 Apr 2026</span>
                     </div>
                     {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
@@ -1507,7 +1507,7 @@ export default function TenantDashboard({
                   </div>
                   <div className="w-full md:w-[calc(50%-2rem)] bg-stone-50 p-3 rounded-xl border border-stone-200 shadow-sm">
                     <div className="flex justify-between mb-1">
-                      <span className="font-bold text-#6B7280 text-xs">Next Payment Due</span>
+                      <span className="font-semibold text-#6B7280 text-xs">Next Payment Due</span>
                       <span className="text-[9px] text-stone-400 font-mono">12 Apr 2027</span>
                     </div>
                     <p className="text-[10px] text-#6B7280">Awaiting next renewal cycle.</p>
@@ -1519,18 +1519,18 @@ export default function TenantDashboard({
                 {receiptUploadCharge && (
                   <div className="grid grid-cols-2 gap-4">
                     <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl">
-                      <span className="text-emerald-800 font-bold uppercase tracking-wider text-[10px] block">Settling Charge:</span>
+                      <span className="text-emerald-800 font-semibold uppercase tracking-wider text-[10px] block">Settling Charge:</span>
                       <strong className="text-emerald-900 text-sm block">{receiptUploadCharge.name}</strong>
                     </div>
                     <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl">
-                      <span className="text-emerald-800 font-bold uppercase tracking-wider text-[10px] block">Amount:</span>
+                      <span className="text-emerald-800 font-semibold uppercase tracking-wider text-[10px] block">Amount:</span>
                       <strong className="text-emerald-900 text-sm block font-mono">₦{receiptUploadCharge.amount.toLocaleString()}</strong>
                     </div>
                   </div>
                 )}
                 <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl space-y-2 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-#6B7280 font-bold uppercase tracking-wider text-[10px]">Bank Transfer Reference:</span>
+                    <span className="text-#6B7280 font-semibold uppercase tracking-wider text-[10px]">Bank Transfer Reference:</span>
                     <input 
                       type="text" 
                       placeholder="e.g. GTB/12345/RENT" 
@@ -1543,7 +1543,7 @@ export default function TenantDashboard({
                     Enter the transaction reference or narration from your bank transfer. For example GTB/12345/RENT or TRF-2026-07-001. This field is optional.
                   </p>
                 </div>
-                <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
+                <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
                   {receiptUploadCharge ? "Submit Service Charge Receipt" : "Submit Rent Payment"}
                 </button>
               </form>
@@ -1554,16 +1554,16 @@ export default function TenantDashboard({
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div className="flex items-center space-x-2.5">
                   <BarChart2 className="text-[#18452E] w-5 h-5" />
-                  <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Rent Savings Tracker</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Rent Savings Tracker</h3>
                 </div>
-                <span className="text-[10px] font-mono font-bold text-[#C9A84C] bg-[#C9A84C]/5 px-2.5 py-1 rounded border border-[#C9A84C]/20 uppercase">
+                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] bg-[#C9A84C]/5 px-2.5 py-1 rounded border border-[#C9A84C]/20 uppercase">
                   {percentSaved}% Achievement
                 </span>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Savings Goal</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Savings Goal</label>
                   <input 
                     type="number" 
                     value={targetRent} 
@@ -1572,7 +1572,7 @@ export default function TenantDashboard({
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Current Savings</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Current Savings</label>
                   <input 
                     type="number" 
                     value={savedSoFar} 
@@ -1584,20 +1584,20 @@ export default function TenantDashboard({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-teal-50/50 border border-teal-100 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-teal-800 block font-bold">Amount Remaining</span>
-                  <span className="text-lg font-display font-black text-teal-950 block mt-1">₦{stillNeeded.toLocaleString()}</span>
+                  <span className="text-[9px] font-mono uppercase text-teal-800 block font-semibold">Amount Remaining</span>
+                  <span className="text-lg font-display font-semibold text-teal-950 block mt-1">₦{stillNeeded.toLocaleString()}</span>
                 </div>
                 <div className="p-4 bg-teal-50/50 border border-teal-100 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-teal-800 block font-bold">Days Remaining</span>
-                  <span className="text-lg font-display font-black text-teal-950 block mt-1">{daysRemaining} Days</span>
+                  <span className="text-[9px] font-mono uppercase text-teal-800 block font-semibold">Days Remaining</span>
+                  <span className="text-lg font-display font-semibold text-teal-950 block mt-1">{daysRemaining} Days</span>
                 </div>
                 <div className="p-4 bg-[#C9A84C]/5 border border-[#C9A84C]/20 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-bold">Weekly Target</span>
-                  <span className="text-base font-display font-black text-[#C9A84C] block mt-1">₦{suggestedWeeklySaving.toLocaleString()}</span>
+                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-semibold">Weekly Target</span>
+                  <span className="text-base font-display font-semibold text-[#C9A84C] block mt-1">₦{suggestedWeeklySaving.toLocaleString()}</span>
                 </div>
                 <div className="p-4 bg-[#C9A84C]/5 border border-[#C9A84C]/20 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-bold">Monthly Target</span>
-                  <span className="text-base font-display font-black text-[#C9A84C] block mt-1">₦{suggestedMonthlySaving.toLocaleString()}</span>
+                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-semibold">Monthly Target</span>
+                  <span className="text-base font-display font-semibold text-[#C9A84C] block mt-1">₦{suggestedMonthlySaving.toLocaleString()}</span>
                 </div>
               </div>
 
@@ -1619,17 +1619,17 @@ export default function TenantDashboard({
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-3">
               <div className="flex items-center space-x-2.5">
                 <Activity className="text-[#18452E] w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Payment History</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Payment History</h3>
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {savedFilters.map((f, i) => (
-                  <span key={i} className="px-2 py-1 bg-stone-50 border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-200">{f.name}</span>
+                  <span key={i} className="px-2 py-1 bg-stone-50 border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-semibold uppercase cursor-pointer hover:bg-stone-200">{f.name}</span>
                 ))}
-                <button onClick={() => setShowFilterNamePrompt({tab: "Payments", filterData: {}})} className="px-2 py-1 bg-stone-200 text-#132A1D rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-300">+ Save Filter</button>
-                <button onClick={() => triggerSuccess("Exporting Payment History as CSV...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1">
+                <button onClick={() => setShowFilterNamePrompt({tab: "Payments", filterData: {}})} className="px-2 py-1 bg-stone-200 text-#132A1D rounded-lg text-[9px] font-semibold uppercase cursor-pointer hover:bg-stone-300">+ Save Filter</button>
+                <button onClick={() => triggerSuccess("Exporting Payment History as CSV...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-semibold uppercase transition flex items-center space-x-1">
                   <Download className="w-3 h-3" /><span>CSV</span>
                 </button>
-                <button onClick={() => triggerSuccess("Exporting Payment History as PDF...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1">
+                <button onClick={() => triggerSuccess("Exporting Payment History as PDF...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-semibold uppercase transition flex items-center space-x-1">
                   <Download className="w-3 h-3" /><span>PDF</span>
                 </button>
               </div>
@@ -1641,13 +1641,13 @@ export default function TenantDashboard({
                   <span className="text-stone-400">2026-04-13 16:45:00 UTC</span>
                 </div>
                 <div className="flex items-center space-x-3 mt-2">
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider">Receipt Uploaded</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-semibold tracking-wider">Receipt Uploaded</span>
                   <span className="text-stone-400">➔</span>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider">Verification Started</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-semibold tracking-wider">Verification Started</span>
                   <span className="text-stone-400">➔</span>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-bold tracking-wider">Verification Completed</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 uppercase font-semibold tracking-wider">Verification Completed</span>
                   <span className="text-stone-400">➔</span>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-700 text-white uppercase font-bold tracking-wider">Confirmed</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-emerald-700 text-white uppercase font-semibold tracking-wider">Confirmed</span>
                 </div>
               </div>
             </div>
@@ -1658,7 +1658,7 @@ export default function TenantDashboard({
             <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-4 animate-fade-in">
               <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
                 <Clock className="text-amber-500 w-5 h-5" />
-                <h3 className="font-display font-black text-[#18452E] uppercase text-sm">My Payment Commitments</h3>
+                <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">My Payment Commitments</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {promises.map((p) => {
@@ -1671,14 +1671,14 @@ export default function TenantDashboard({
                     <div key={p.id} className="p-4 bg-stone-50 border border-stone-150 rounded-2xl flex flex-col justify-between space-y-3">
                       <div>
                         <div className="flex justify-between items-start">
-                          <span className="text-[10px] uppercase font-mono bg-stone-200 px-2.5 py-0.5 rounded font-bold text-#132A1D">
+                          <span className="text-[10px] uppercase font-mono bg-stone-200 px-2.5 py-0.5 rounded font-semibold text-#132A1D">
                             {p.paymentType} Promise
                           </span>
                           <span className={`text-[9px] uppercase font-mono px-2 py-0.5 rounded-full border ${statusBg}`}>
                             {p.status}
                           </span>
                         </div>
-                        <h4 className="font-display font-extrabold text-[#18452E] text-sm mt-2">₦{p.promisedAmount.toLocaleString()}</h4>
+                        <h4 className="font-display font-semibold text-[#18452E] text-sm mt-2">₦{p.promisedAmount.toLocaleString()}</h4>
                         <div className="text-[10px] text-#6B7280 mt-1 space-y-1">
                           <p>Expected On: <strong className="text-#132A1D font-mono">{p.expectedPaymentDate}</strong></p>
                           <p>Reason: <strong className="text-#132A1D">{p.reasonForDelay}</strong></p>
@@ -1691,7 +1691,7 @@ export default function TenantDashboard({
                         {p.status === 'Upcoming' && (
                           <button 
                             onClick={() => handleTenantPayNow(p.paymentType, p.promisedAmount)}
-                            className="px-2 py-1 bg-[#18452E] text-white hover:bg-[#18452E] rounded font-bold uppercase transition text-[8px] tracking-wider cursor-pointer"
+                            className="px-2 py-1 bg-[#18452E] text-white hover:bg-[#18452E] rounded font-semibold uppercase transition text-[8px] tracking-wider cursor-pointer"
                           >
                             Pay Dues
                           </button>
@@ -1710,14 +1710,14 @@ export default function TenantDashboard({
         <div className="space-y-6">
           <div className="flex justify-between items-end">
              <div>
-               <h2 className="font-display font-black text-[#18452E] uppercase text-lg">Charges and Levies</h2>
+               <h2 className="font-display font-semibold text-[#18452E] uppercase text-lg">Charges and Levies</h2>
                <p className="text-xs text-#6B7280">Real-time status of all your service charges.</p>
              </div>
              <div className="flex gap-2">
-               <button onClick={() => triggerSuccess("Exporting Service Charge Ledger as CSV...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1">
+               <button onClick={() => triggerSuccess("Exporting Service Charge Ledger as CSV...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-semibold uppercase transition flex items-center space-x-1">
                  <Download className="w-3 h-3" /><span>CSV</span>
                </button>
-               <button onClick={() => triggerSuccess("Exporting Service Charge Ledger as PDF...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-bold uppercase transition flex items-center space-x-1">
+               <button onClick={() => triggerSuccess("Exporting Service Charge Ledger as PDF...")} className="px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 text-#6B7280 rounded-lg text-[10px] font-semibold uppercase transition flex items-center space-x-1">
                  <Download className="w-3 h-3" /><span>PDF</span>
                </button>
              </div>
@@ -1731,7 +1731,7 @@ export default function TenantDashboard({
                 "border-l-4 border-l-emerald-500 border-stone-200"
               }`}>
                 <div>
-                  <h4 className="font-display font-black text-#132A1D text-sm">{sc.name}</h4>
+                  <h4 className="font-display font-semibold text-#132A1D text-sm">{sc.name}</h4>
                   <div className="flex items-center space-x-2 mt-1">
                     <strong className="text-[#18452E] font-mono text-sm">₦{sc.amount.toLocaleString()}</strong>
                     <span className="text-[10px] text-stone-400 font-mono">{sc.frequency}</span>
@@ -1741,26 +1741,26 @@ export default function TenantDashboard({
                 <div className="flex flex-col items-end shrink-0 space-y-2">
                   {sc.status === "Unpaid" && (
                      <div className="flex items-center space-x-3">
-                       <span className="text-red-600 font-black font-display uppercase tracking-wider">UNPAID</span>
+                       <span className="text-red-600 font-semibold font-display uppercase tracking-wider">UNPAID</span>
                        <strong className="text-red-600 font-mono">₦{sc.amount.toLocaleString()}</strong>
                      </div>
                   )}
                   {sc.status === "Unpaid" && (
                      <button 
                        onClick={() => { setReceiptUploadCharge({name: sc.name, amount: sc.amount}); setActiveTab("Payments"); addToRecentlyViewed({ id: sc.id, type: "Service Charge", name: sc.name, time: "Just now", icon: DollarSign }); }}
-                       className="px-5 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl text-xs font-bold uppercase transition shadow-md"
+                       className="px-5 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl text-xs font-semibold uppercase transition shadow-md"
                      >Pay Now</button>
                   )}
                   {sc.status === "Pending Verification" && (
                      <div className="flex flex-col items-end">
-                       <span className="text-amber-500 font-black font-display uppercase tracking-wider">PENDING VERIFICATION</span>
+                       <span className="text-amber-500 font-semibold font-display uppercase tracking-wider">PENDING VERIFICATION</span>
                        <span className="text-stone-400 text-[10px] font-mono mt-1">Receipt Uploaded on {sc.verificationDate}</span>
                      </div>
                   )}
                   {sc.status === "Paid" && (
                      <div className="flex items-center space-x-3">
-                       <span className="text-emerald-600 font-black font-display uppercase tracking-wider">PAID</span>
-                       <span className="text-emerald-700 text-xs font-mono font-bold bg-emerald-50 px-2 py-0.5 rounded-md">Paid {sc.verificationDate}</span>
+                       <span className="text-emerald-600 font-semibold font-display uppercase tracking-wider">PAID</span>
+                       <span className="text-emerald-700 text-xs font-mono font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Paid {sc.verificationDate}</span>
                      </div>
                   )}
                 </div>
@@ -1771,13 +1771,13 @@ export default function TenantDashboard({
           {/* SUMMARY LINE */}
           {serviceCharges.some(sc => sc.status !== "Paid") ? (
              <div className="bg-amber-50 border border-amber-200 p-4 rounded-2xl flex justify-between items-center">
-               <span className="text-amber-800 text-xs font-bold uppercase tracking-wider">Total Outstanding</span>
+               <span className="text-amber-800 text-xs font-semibold uppercase tracking-wider">Total Outstanding</span>
                <strong className="text-amber-900 font-mono text-base">₦{serviceCharges.filter(sc => sc.status !== "Paid").reduce((acc, curr) => acc + curr.amount, 0).toLocaleString()} across {serviceCharges.filter(sc => sc.status !== "Paid").length} charges</strong>
              </div>
           ) : (
              <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl flex items-center space-x-3 justify-center text-emerald-800">
                <CheckCircle className="w-5 h-5" />
-               <span className="font-bold text-sm uppercase tracking-wider">All Charges Cleared for This Period</span>
+               <span className="font-semibold text-sm uppercase tracking-wider">All Charges Cleared for This Period</span>
              </div>
           )}
         </div>
@@ -1792,7 +1792,7 @@ export default function TenantDashboard({
           <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <Wrench className="text-[#18452E] w-5 h-5" />
-              <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Maintenance Request Center</h3>
+              <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Maintenance Request Center</h3>
             </div>
             
             <form onSubmit={(e) => {
@@ -1801,7 +1801,7 @@ export default function TenantDashboard({
             }} className="space-y-4">
               <div className="space-y-3 text-xs">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Issue Category</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Issue Category</label>
                   <select required className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-[#18452E] font-mono">
                     <option value="">Select category</option>
                     <option value="Plumbing">Plumbing</option>
@@ -1811,25 +1811,25 @@ export default function TenantDashboard({
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Description</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Description</label>
                   <textarea required rows={3} className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-[#18452E]" placeholder="Describe the maintenance issue..."></textarea>
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Upload Photos</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Upload Photos</label>
                   <input type="file" multiple accept="image/*" className="w-full p-2 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-[#18452E] font-mono" />
                 </div>
               </div>
-              <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
+              <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
                 Report Issue
               </button>
             </form>
 
             <div className="pt-4 border-t border-stone-200 space-y-3">
-              <h4 className="font-bold text-xs uppercase text-#6B7280 tracking-wider">Recent Requests</h4>
+              <h4 className="font-semibold text-xs uppercase text-#6B7280 tracking-wider">Recent Requests</h4>
               <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs space-y-2">
                 <div className="flex justify-between items-center">
                   <strong className="text-#132A1D">Leaking Sink</strong>
-                  <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-amber-100 text-amber-800">Assigned</span>
+                  <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase bg-amber-100 text-amber-800">Assigned</span>
                 </div>
                 <div className="text-#6B7280 font-mono text-[10px]">Staff: John Doe (Plumber)</div>
                 <div className="text-#6B7280 font-mono text-[10px]">Timeline: Logged 23 Jun &bull; Scheduled 26 Jun</div>
@@ -1849,22 +1849,22 @@ export default function TenantDashboard({
           <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <FileLock className="text-[#18452E] w-5 h-5" />
-              <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Tenant Document Vault</h3>
+              <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Tenant Document Vault</h3>
             </div>
 
             <div className="flex justify-between items-center bg-stone-50 p-2 rounded-xl mb-4">
               <div className="flex gap-2">
                 {savedFilters.map((f, i) => (
-                  <span key={i} className="px-2 py-1 bg-white border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-50">{f.name}</span>
+                  <span key={i} className="px-2 py-1 bg-white border border-stone-200 text-#6B7280 rounded-lg text-[9px] font-semibold uppercase cursor-pointer hover:bg-stone-50">{f.name}</span>
                 ))}
               </div>
-              <button onClick={() => setShowFilterNamePrompt({tab: "Vault", filterData: {}})} className="px-2 py-1 bg-stone-200 text-#132A1D rounded-lg text-[9px] font-bold uppercase cursor-pointer hover:bg-stone-300">+ Save Filter</button>
+              <button onClick={() => setShowFilterNamePrompt({tab: "Vault", filterData: {}})} className="px-2 py-1 bg-stone-200 text-#132A1D rounded-lg text-[9px] font-semibold uppercase cursor-pointer hover:bg-stone-300">+ Save Filter</button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl flex items-start space-x-3 cursor-pointer hover:border-[#0E2F1F] transition group">
                 <FileText className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E] text-xs">Lease Agreement</span>
+                  <span className="font-semibold block text-[#18452E] text-xs">Lease Agreement</span>
                   <span className="text-[10px] text-stone-400 block mb-2 font-mono">Signed: 12 Apr 2026</span>
                   <span className="text-[#18452E] group-hover:underline font-semibold text-[9px] uppercase tracking-wider">Download PDF</span>
                 </div>
@@ -1872,7 +1872,7 @@ export default function TenantDashboard({
               <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl flex items-start space-x-3 cursor-pointer hover:border-[#0E2F1F] transition group">
                 <FileText className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E] text-xs">Rent Receipt</span>
+                  <span className="font-semibold block text-[#18452E] text-xs">Rent Receipt</span>
                   <span className="text-[10px] text-stone-400 block mb-2 font-mono">Period: 2026 - 2027</span>
                   <span className="text-[#18452E] group-hover:underline font-semibold text-[9px] uppercase tracking-wider">Download PDF</span>
                 </div>
@@ -1880,7 +1880,7 @@ export default function TenantDashboard({
               <div className="p-4 bg-stone-50 border border-stone-200 rounded-2xl flex items-start space-x-3 cursor-pointer hover:border-[#0E2F1F] transition group">
                 <FileText className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E] text-xs">Move-In Inspection Report</span>
+                  <span className="font-semibold block text-[#18452E] text-xs">Move-In Inspection Report</span>
                   <span className="text-[10px] text-stone-400 block mb-2 font-mono">Date: 14 Apr 2026</span>
                   <span className="text-[#18452E] group-hover:underline font-semibold text-[9px] uppercase tracking-wider">Download PDF</span>
                 </div>
@@ -1892,10 +1892,10 @@ export default function TenantDashboard({
           <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
             <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
               <Activity className="text-[#18452E] w-5 h-5" />
-              <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Transparency Ledger</h3>
+              <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Transparency Ledger</h3>
             </div>
             
-            <p className="text-xs text-#6B7280 font-light mt-0.5">Permanent, immutable history of all your interactions.</p>
+            <p className="text-xs text-#6B7280 font-normal mt-0.5">Permanent, immutable history of all your interactions.</p>
 
             <div className="space-y-3 font-mono text-[10px]">
               <div className="p-3 bg-stone-50 border-l-2 border-[#0E2F1F] rounded-r-xl">
@@ -1939,14 +1939,14 @@ export default function TenantDashboard({
             
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-black">
+                <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
                   LIFETIME TENANCY SYSTEM PORTAL
                 </span>
-                <h3 className="font-display font-black text-lg uppercase tracking-wide mt-1">
+                <h3 className="font-display font-semibold text-lg uppercase tracking-wide mt-1">
                   {session.name}&apos;s Permanent Medical Record
                 </h3>
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-emerald-300 bg-emerald-950/40 px-2.5 py-1 rounded-lg border border-emerald-800/30 font-bold flex items-center space-x-1">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-emerald-300 bg-emerald-950/40 px-2.5 py-1 rounded-lg border border-emerald-800/30 font-semibold flex items-center space-x-1">
                 <Lock className="w-3 h-3 text-emerald-400 animate-pulse" />
                 <span>Unalterable</span>
               </span>
@@ -1956,27 +1956,27 @@ export default function TenantDashboard({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-3 border-t border-emerald-800/60 text-center">
               <div className="bg-emerald-950/20 p-3 rounded-2xl border border-emerald-800/30">
                 <span className="text-[9px] font-mono text-emerald-300 uppercase block tracking-wider">Lifetime Tenure</span>
-                <strong className="block text-base font-black font-display text-white mt-1">2 Years, 3 Mos</strong>
-                <span className="text-[9px] text-emerald-400 font-light mt-0.5 block">Platform-wide</span>
+                <strong className="block text-base font-semibold font-display text-white mt-1">2 Years, 3 Mos</strong>
+                <span className="text-[9px] text-emerald-400 font-normal mt-0.5 block">Platform-wide</span>
               </div>
               <div className="bg-emerald-950/20 p-3 rounded-2xl border border-emerald-800/30">
                 <span className="text-[9px] font-mono text-emerald-300 uppercase block tracking-wider">Tenanted Properties</span>
-                <strong className="block text-base font-black font-display text-white mt-1">2 Properties</strong>
-                <span className="text-[9px] text-emerald-400 font-light mt-0.5 block">Distinct assets</span>
+                <strong className="block text-base font-semibold font-display text-white mt-1">2 Properties</strong>
+                <span className="text-[9px] text-emerald-400 font-normal mt-0.5 block">Distinct assets</span>
               </div>
               <div className="bg-emerald-950/20 p-3 rounded-2xl border border-emerald-800/30">
                 <span className="text-[9px] font-mono text-emerald-300 uppercase block tracking-wider">Total Rent Settled</span>
-                <strong className="block text-base font-black font-mono text-white mt-1">₦7,000,000</strong>
-                <span className="text-[9px] text-emerald-400 font-light mt-0.5 block">100% direct cleared</span>
+                <strong className="block text-base font-semibold font-mono text-white mt-1">₦7,000,000</strong>
+                <span className="text-[9px] text-emerald-400 font-normal mt-0.5 block">100% direct cleared</span>
               </div>
               <div className="bg-emerald-950/20 p-3 rounded-2xl border border-emerald-800/30">
                 <span className="text-[9px] font-mono text-emerald-300 uppercase block tracking-wider">Service Charge Bills</span>
-                <strong className="block text-base font-black font-display text-white mt-1">18 Bills</strong>
-                <span className="text-[9px] text-emerald-400 font-light mt-0.5 block">Across all tenures</span>
+                <strong className="block text-base font-semibold font-display text-white mt-1">18 Bills</strong>
+                <span className="text-[9px] text-emerald-400 font-normal mt-0.5 block">Across all tenures</span>
               </div>
             </div>
             
-            <p className="text-[10px] text-emerald-300/80 italic font-light leading-relaxed text-center">
+            <p className="text-[10px] text-emerald-300/80 italic font-normal leading-relaxed text-center">
               Disclaimer: The figures displayed above represent your verified lifetime statistics recorded under the Unity Homes Tenancy Charter.
             </p>
           </div>
@@ -2004,7 +2004,7 @@ export default function TenantDashboard({
             >
               <Lock className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
               <span>Audit History</span>
-              <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
+              <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
             </button>
           </div>
 
@@ -2013,16 +2013,16 @@ export default function TenantDashboard({
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div className="flex items-center space-x-2.5">
                   <User className="text-[#18452E] w-5 h-5" />
-                  <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Profile Status</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Profile Status</h3>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-end">
                   <div>
-                    <span className="text-xs font-bold text-#6B7280 block mb-1">Profile Completion</span>
-                    <span className="text-2xl font-black font-display text-[#18452E]">85%</span>
+                    <span className="text-xs font-semibold text-#6B7280 block mb-1">Profile Completion</span>
+                    <span className="text-2xl font-semibold font-display text-[#18452E]">85%</span>
                   </div>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#18452E] bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-100 font-bold">Almost Complete</span>
+                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#18452E] bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-100 font-semibold">Almost Complete</span>
                 </div>
                 <div className="w-full bg-stone-50 h-3 rounded-full overflow-hidden border border-stone-200/50">
                   <div className="bg-[#18452E] h-full rounded-full transition-all duration-500 shadow-sm" style={{ width: "85%" }}></div>
@@ -2030,20 +2030,20 @@ export default function TenantDashboard({
                 <div className="space-y-2 mt-4 pt-4 border-t border-stone-200">
                    <div className="flex items-center space-x-3 bg-stone-50 p-2.5 rounded-xl border border-stone-200">
                      <CheckCircle className="w-4 h-4 text-emerald-600" />
-                     <span className="text-xs text-#132A1D font-bold">Identity Verified</span>
+                     <span className="text-xs text-#132A1D font-semibold">Identity Verified</span>
                    </div>
                    <div className="flex items-center space-x-3 bg-stone-50 p-2.5 rounded-xl border border-stone-200">
                      <CheckCircle className="w-4 h-4 text-emerald-600" />
-                     <span className="text-xs text-#132A1D font-bold">Guarantor Added</span>
+                     <span className="text-xs text-#132A1D font-semibold">Guarantor Added</span>
                    </div>
                    <div className="flex items-center space-x-3 bg-stone-50 p-2.5 rounded-xl border border-stone-200">
                      <CheckCircle className="w-4 h-4 text-emerald-600" />
-                     <span className="text-xs text-#132A1D font-bold">Work References Uploaded</span>
+                     <span className="text-xs text-#132A1D font-semibold">Work References Uploaded</span>
                    </div>
                    <div className="flex items-center space-x-3 bg-amber-50 p-2.5 rounded-xl border border-amber-200 cursor-pointer hover:bg-amber-100 transition">
                      <div className="w-4 h-4 rounded-full border-2 border-amber-500 shrink-0"></div>
                      <div className="flex justify-between w-full items-center">
-                       <span className="text-xs text-amber-900 font-bold">Add Emergency Contact</span>
+                       <span className="text-xs text-amber-900 font-semibold">Add Emergency Contact</span>
                        <span className="text-[9px] uppercase font-mono text-amber-700 bg-white px-2 py-0.5 rounded shadow-sm">Action Required</span>
                      </div>
                    </div>
@@ -2064,12 +2064,12 @@ export default function TenantDashboard({
           <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm max-w-xl w-full overflow-hidden flex flex-col my-8">
             <div className="p-6 border-b border-stone-200 bg-stone-50 flex justify-between items-center">
               <div>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-bold block">Unity Homes Trust &amp; Ledger</span>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Submit Payment Commitment</h3>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-semibold block">Unity Homes Trust &amp; Ledger</span>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Submit Payment Commitment</h3>
               </div>
               <button 
                 onClick={() => setIsPromiseModalOpen(false)}
-                className="text-stone-400 hover:text-#6B7280 font-bold font-mono text-sm cursor-pointer p-1"
+                className="text-stone-400 hover:text-#6B7280 font-semibold font-mono text-sm cursor-pointer p-1"
               >
                 ✕
               </button>
@@ -2077,25 +2077,25 @@ export default function TenantDashboard({
 
             <form onSubmit={handleCreatePromise} className="p-6 space-y-5 text-xs">
               <div className="bg-amber-50/70 border border-amber-200 p-4 rounded-2xl text-[11px] text-amber-900 leading-relaxed space-y-1">
-                <strong className="block text-amber-950 font-bold">⚠️ Notice of Overdue Payment Plan</strong>
+                <strong className="block text-amber-950 font-semibold">⚠️ Notice of Overdue Payment Plan</strong>
                 <p>Registering this commitment suspends automated overdue reminders immediately. To keep your payment record in good standing, please complete payment on or before the selected date.</p>
               </div>
 
               {/* READ ONLY TENANCY DETAILS */}
               <div className="grid grid-cols-2 gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-200/60">
                 <div>
-                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Tenant Name</span>
-                  <span className="font-bold text-#132A1D block mt-0.5">{collectionTenant.tenantName}</span>
+                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Tenant Name</span>
+                  <span className="font-semibold text-#132A1D block mt-0.5">{collectionTenant.tenantName}</span>
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Property &amp; Unit</span>
-                  <span className="font-bold text-#132A1D block mt-0.5">{collectionTenant.propertyName} ({collectionTenant.unitNumber})</span>
+                  <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Property &amp; Unit</span>
+                  <span className="font-semibold text-#132A1D block mt-0.5">{collectionTenant.propertyName} ({collectionTenant.unitNumber})</span>
                 </div>
               </div>
 
               {/* PAYMENT TYPE SELECTION */}
               <div>
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Payment Type</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Payment Type</label>
                 <select 
                   required
                   value={selectedPaymentType}
@@ -2125,16 +2125,16 @@ export default function TenantDashboard({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Outstanding Amount</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Outstanding Amount</label>
                   <input 
                     type="text" 
                     readOnly 
                     value={`₦${promiseOutstandingAmount.toLocaleString()}`}
-                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl font-bold text-rose-600 outline-none font-mono" 
+                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl font-semibold text-rose-600 outline-none font-mono" 
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Amount I Will Pay (₦)</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Amount I Will Pay (₦)</label>
                   <input 
                     type="number" 
                     required 
@@ -2142,25 +2142,25 @@ export default function TenantDashboard({
                     max={promiseOutstandingAmount}
                     value={promisedAmount}
                     onChange={(e) => setPromisedAmount(Number(e.target.value))}
-                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-emerald-600 font-mono font-bold text-#132A1D" 
+                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-emerald-600 font-mono font-semibold text-#132A1D" 
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Expected Payment Date</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Expected Payment Date</label>
                   <input 
                     type="date" 
                     required 
                     value={expectedPaymentDate}
                     onChange={(e) => setExpectedPaymentDate(e.target.value)}
-                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-emerald-600 font-mono font-bold text-#132A1D" 
+                    className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-1 focus:ring-emerald-600 font-mono font-semibold text-#132A1D" 
                   />
                   <span className="text-[10px] text-stone-400 block mt-1">Must be within 60 days from today.</span>
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Reason for Delay</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Reason for Delay</label>
                   <select 
                     required
                     value={reasonForDelay}
@@ -2179,7 +2179,7 @@ export default function TenantDashboard({
 
               {reasonForDelay === 'Other' && (
                 <div className="animate-fade-in">
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1.5">Please Specify Reason</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1.5">Please Specify Reason</label>
                   <input 
                     type="text" 
                     required 
@@ -2193,7 +2193,7 @@ export default function TenantDashboard({
 
               <div>
                 <div className="flex justify-between items-center mb-1">
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase">Optional Note</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase">Optional Note</label>
                   <span className="text-[10px] text-stone-400 font-mono">{promiseNote.length}/200 chars</span>
                 </div>
                 <textarea 
@@ -2224,14 +2224,14 @@ export default function TenantDashboard({
                 <button 
                   type="button" 
                   onClick={() => setIsPromiseModalOpen(false)}
-                  className="w-1/3 py-3 border border-stone-200 text-#6B7280 hover:bg-stone-50 font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs transition"
+                  className="w-1/3 py-3 border border-stone-200 text-#6B7280 hover:bg-stone-50 font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs transition"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit" 
                   disabled={!isCommitmentTicked}
-                  className={`w-2/3 py-3 font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs flex justify-center items-center gap-1.5 transition ${
+                  className={`w-2/3 py-3 font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs flex justify-center items-center gap-1.5 transition ${
                     isCommitmentTicked 
                       ? 'bg-[#18452E] hover:bg-[#18452E] text-white' 
                       : 'bg-stone-200 text-stone-400 cursor-not-allowed'
@@ -2251,12 +2251,12 @@ export default function TenantDashboard({
           <div className="bg-white rounded-[var(--radius-large)] border border-stone-200 shadow-sm max-w-lg w-full overflow-hidden flex flex-col my-8 animate-fade-in">
             <div className="p-6 border-b border-stone-200 bg-stone-50 flex justify-between items-center">
               <div>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-bold block">Tenancy Termination System</span>
-                <h3 className="font-display font-black text-#132A1D text-sm uppercase">Notice of Intent to Move Out</h3>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-amber-600 font-semibold block">Tenancy Termination System</span>
+                <h3 className="font-display font-semibold text-#132A1D text-sm uppercase">Notice of Intent to Move Out</h3>
               </div>
               <button 
                 onClick={() => setIsMoveOutFlowOpen(false)}
-                className="text-stone-400 hover:text-#6B7280 font-bold font-mono text-sm cursor-pointer p-1"
+                className="text-stone-400 hover:text-#6B7280 font-semibold font-mono text-sm cursor-pointer p-1"
               >
                 ✕
               </button>
@@ -2269,7 +2269,7 @@ export default function TenantDashboard({
                   <div className="bg-amber-50 border border-amber-200 p-5 rounded-2xl space-y-2.5">
                     <div className="flex items-center gap-2">
                       <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0" />
-                      <strong className="text-amber-900 text-xs font-bold uppercase tracking-wider">Crucial Tenancy Warning</strong>
+                      <strong className="text-amber-900 text-xs font-semibold uppercase tracking-wider">Crucial Tenancy Warning</strong>
                     </div>
                     <ul className="list-disc pl-4 space-y-1.5 text-stone-650 leading-relaxed text-[11px]">
                       <li>Upon proceeding, formal notice of your intent to vacate will be sent to your Landlord (<strong>{landlordDetails.name}</strong>) and Unity Homes immediately.</li>
@@ -2281,13 +2281,13 @@ export default function TenantDashboard({
                   <div className="flex justify-end gap-3 pt-2">
                     <button
                       onClick={() => setIsMoveOutFlowOpen(false)}
-                      className="px-5 py-2.5 border border-stone-200 text-#6B7280 hover:bg-stone-50 rounded-xl font-bold uppercase transition"
+                      className="px-5 py-2.5 border border-stone-200 text-#6B7280 hover:bg-stone-50 rounded-xl font-semibold uppercase transition"
                     >
                       Keep My Tenancy
                     </button>
                     <button
                       onClick={() => setMoveOutStep(2)}
-                      className="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-bold uppercase transition"
+                      className="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold uppercase transition"
                     >
                       I Understand, Proceed
                     </button>
@@ -2297,24 +2297,24 @@ export default function TenantDashboard({
                 /* STEP 2: STATUTORY FACTS */
                 <div className="space-y-4">
                   <div className="bg-stone-50 border border-stone-200 p-4 rounded-2xl space-y-3">
-                    <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Termination Parameters</span>
+                    <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Termination Parameters</span>
                     
                     <div className="grid grid-cols-2 gap-3 text-[11px]">
                       <div>
                         <span className="text-stone-400 block">Notice Period Required</span>
-                        <strong className="text-#132A1D font-bold block mt-0.5">{collectionTenant.tenancyType === 'Monthly' ? '1 Month' : '6 Months'}</strong>
+                        <strong className="text-#132A1D font-semibold block mt-0.5">{collectionTenant.tenancyType === 'Monthly' ? '1 Month' : '6 Months'}</strong>
                       </div>
                       <div>
                         <span className="text-stone-400 block">Notice Effective Date</span>
-                        <strong className="text-#132A1D font-bold block mt-0.5">Today (2026-07-20)</strong>
+                        <strong className="text-#132A1D font-semibold block mt-0.5">Today (2026-07-20)</strong>
                       </div>
                       <div>
                         <span className="text-stone-400 block">Current Lease Expiry</span>
-                        <strong className="text-#132A1D font-bold block mt-0.5">{collectionTenant.leaseExpiryDate}</strong>
+                        <strong className="text-#132A1D font-semibold block mt-0.5">{collectionTenant.leaseExpiryDate}</strong>
                       </div>
                       <div>
                         <span className="text-stone-400 block">Earliest Legal Vacate Date</span>
-                        <strong className="text-emerald-700 font-bold block mt-0.5">{earliestVacateDateStr}</strong>
+                        <strong className="text-emerald-700 font-semibold block mt-0.5">{earliestVacateDateStr}</strong>
                       </div>
                     </div>
                   </div>
@@ -2336,14 +2336,14 @@ export default function TenantDashboard({
                   <div className="flex justify-end gap-3 pt-2">
                     <button
                       onClick={() => setMoveOutStep(1)}
-                      className="px-5 py-2.5 border border-stone-200 text-#6B7280 hover:bg-stone-50 rounded-xl font-bold uppercase transition"
+                      className="px-5 py-2.5 border border-stone-200 text-#6B7280 hover:bg-stone-50 rounded-xl font-semibold uppercase transition"
                     >
                       Back
                     </button>
                     <button
                       disabled={!isMoveOutCheckboxTicked}
                       onClick={handleConfirmMoveOut}
-                      className={`px-5 py-2.5 font-bold uppercase rounded-xl transition ${
+                      className={`px-5 py-2.5 font-semibold uppercase rounded-xl transition ${
                         isMoveOutCheckboxTicked
                           ? 'bg-rose-600 hover:bg-rose-700 text-white'
                           : 'bg-stone-200 text-stone-400 cursor-not-allowed'
@@ -2364,14 +2364,14 @@ export default function TenantDashboard({
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
           <div className="bg-white rounded-[var(--radius-large)] border-2 border-[#0E2F1F] shadow-sm max-w-md w-full overflow-hidden flex flex-col relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 pointer-events-none opacity-[0.08]">
-              <div className="border-4 border-[#18452E] text-[#18452E] font-display font-black text-4xl p-4 uppercase tracking-widest rounded-[var(--radius-large)]">
+              <div className="border-4 border-[#18452E] text-[#18452E] font-display font-semibold text-4xl p-4 uppercase tracking-widest rounded-[var(--radius-large)]">
                 CLEARED
               </div>
             </div>
 
             <div className="p-6  text-white text-center">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-extrabold block mb-1">Unity Homes Ledger System</span>
-              <h3 className="font-display font-black text-sm uppercase tracking-wider">Clearance Certificate</h3>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-semibold block mb-1">Unity Homes Ledger System</span>
+              <h3 className="font-display font-semibold text-sm uppercase tracking-wider">Clearance Certificate</h3>
               <p className="text-[9px] text-stone-200 font-mono mt-1">Ref: {showTenantReceipt.ref}</p>
             </div>
 
@@ -2398,11 +2398,11 @@ export default function TenantDashboard({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-stone-400">Amount Settled</span>
-                  <strong className="text-[#18452E] text-sm font-mono font-extrabold">₦{showTenantReceipt.amount.toLocaleString()}</strong>
+                  <strong className="text-[#18452E] text-sm font-mono font-semibold">₦{showTenantReceipt.amount.toLocaleString()}</strong>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-stone-400">Status</span>
-                  <span className="px-2 py-0.5 rounded text-[8px] font-mono font-bold uppercase bg-emerald-100 text-emerald-800">100% Cleared</span>
+                  <span className="px-2 py-0.5 rounded text-[8px] font-mono font-semibold uppercase bg-emerald-100 text-emerald-800">100% Cleared</span>
                 </div>
               </div>
 
@@ -2418,7 +2418,7 @@ export default function TenantDashboard({
               <div className="pt-2">
                 <button 
                   onClick={() => setShowTenantReceipt(null)}
-                  className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs transition"
+                  className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs transition"
                 >
                   Acknowledge and Close
                 </button>
@@ -2429,7 +2429,7 @@ export default function TenantDashboard({
       )}
 
       {/* FOOTER DISCOVERY CREED */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-bold tracking-wider pt-8">
+      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider pt-8">
         Unity Homes &bull; Secure Rent Ledger Planning Tool &bull; Don&apos;t Buy Wahala
       </p>
 
@@ -2570,7 +2570,7 @@ function TenantComplaintCenterSection({
     <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-6">
       <div className="flex items-center space-x-2.5 border-b border-stone-200 pb-3">
         <MessageCircle className="text-emerald-800 w-5 h-5" />
-        <h3 className="font-display font-black text-[#18452E] uppercase text-sm">Tenant Complaint Center</h3>
+        <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Tenant Complaint Center</h3>
       </div>
 
       {noticeMessage && (
@@ -2582,7 +2582,7 @@ function TenantComplaintCenterSection({
 
       <form onSubmit={handleSubmit} className="space-y-4 text-xs">
         <div>
-          <label className="block text-[10px] font-mono font-bold text-#132A1D uppercase mb-1">
+          <label className="block text-[10px] font-mono font-semibold text-#132A1D uppercase mb-1">
             What is your complaint about? *
           </label>
           <select 
@@ -2604,14 +2604,14 @@ function TenantComplaintCenterSection({
 
         {category === 'Landlord Conduct or Behaviour' && (
           <div className="p-3.5 bg-amber-50 border border-amber-300 text-amber-950 rounded-2xl text-xs font-medium space-y-1">
-            <strong className="block font-bold text-amber-900 uppercase text-[10px] tracking-wider">🔒 Direct Private Complaint:</strong>
+            <strong className="block font-semibold text-amber-900 uppercase text-[10px] tracking-wider">🔒 Direct Private Complaint:</strong>
             <p className="text-amber-900">Your complaint about your landlord has been received by Unity Homes directly. We will review this privately.</p>
           </div>
         )}
 
         {category === 'Property Management Company Conduct' && (
           <div className="p-3.5 bg-blue-50 border border-blue-300 text-blue-950 rounded-2xl text-xs font-medium space-y-1">
-            <strong className="block font-bold text-blue-900 uppercase text-[10px] tracking-wider">🛡️ Direct Admin Handling:</strong>
+            <strong className="block font-semibold text-blue-900 uppercase text-[10px] tracking-wider">🛡️ Direct Admin Handling:</strong>
             <p className="text-blue-900">Your complaint regarding your Property Management Company will be handled directly by Unity Homes Admin. Your landlord will also be notified.</p>
           </div>
         )}
@@ -2619,7 +2619,7 @@ function TenantComplaintCenterSection({
         {category === 'Waste and Refuse Collection' && (
           <div className="space-y-3 bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100/60">
             <div>
-              <label className="block text-[9px] font-mono font-bold text-emerald-900 uppercase mb-1">Type of Waste Issue *</label>
+              <label className="block text-[9px] font-mono font-semibold text-emerald-900 uppercase mb-1">Type of Waste Issue *</label>
               <select 
                 value={typeOfWasteIssue}
                 onChange={(e) => setTypeOfWasteIssue(e.target.value)}
@@ -2637,7 +2637,7 @@ function TenantComplaintCenterSection({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[9px] font-mono font-bold text-emerald-900 uppercase mb-1">Days Since Last Collection *</label>
+                <label className="block text-[9px] font-mono font-semibold text-emerald-900 uppercase mb-1">Days Since Last Collection *</label>
                 <input 
                   type="number"
                   min="0"
@@ -2653,7 +2653,7 @@ function TenantComplaintCenterSection({
               </div>
 
               <div>
-                <label className="block text-[9px] font-mono font-bold text-emerald-900 uppercase mb-1">Usual Collection Day *</label>
+                <label className="block text-[9px] font-mono font-semibold text-emerald-900 uppercase mb-1">Usual Collection Day *</label>
                 <select
                   value={usualCollectionDay}
                   onChange={(e) => setUsualCollectionDay(e.target.value)}
@@ -2673,7 +2673,7 @@ function TenantComplaintCenterSection({
             </div>
 
             <div>
-              <label className="block text-[9px] font-mono font-bold text-emerald-900 uppercase mb-1">Upload Evidence Photos (Optional)</label>
+              <label className="block text-[9px] font-mono font-semibold text-emerald-900 uppercase mb-1">Upload Evidence Photos (Optional)</label>
               <div className="flex gap-2">
                 <input 
                   type="text"
@@ -2685,7 +2685,7 @@ function TenantComplaintCenterSection({
                 <button 
                   type="button" 
                   onClick={handleAddPhoto}
-                  className="px-3 py-2 bg-emerald-800 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider cursor-pointer hover:bg-emerald-900 shrink-0"
+                  className="px-3 py-2 bg-emerald-800 text-white rounded-xl text-[10px] font-semibold uppercase tracking-wider cursor-pointer hover:bg-emerald-900 shrink-0"
                 >
                   Add Photo
                 </button>
@@ -2705,7 +2705,7 @@ function TenantComplaintCenterSection({
         )}
 
         <div>
-          <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">Detailed Description / Notes</label>
+          <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">Detailed Description / Notes</label>
           <textarea 
             rows={3} 
             value={details}
@@ -2715,13 +2715,13 @@ function TenantComplaintCenterSection({
           />
         </div>
 
-        <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
+        <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl tracking-wider uppercase cursor-pointer text-xs">
           Submit Complaint
         </button>
       </form>
 
       <div className="pt-4 border-t border-stone-200 space-y-3">
-        <h4 className="font-bold text-xs uppercase text-#6B7280 tracking-wider">Complaint History</h4>
+        <h4 className="font-semibold text-xs uppercase text-#6B7280 tracking-wider">Complaint History</h4>
         <div className="space-y-3">
           {myComplaints.length === 0 ? (
             <p className="text-xs text-stone-400 italic">No complaints logged yet.</p>
@@ -2741,7 +2741,7 @@ function TenantComplaintCenterSection({
                         {comp.propertyName} &bull; {comp.unit}
                       </span>
                     </div>
-                    <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase border ${statusBadgeClass}`}>
+                    <span className={`px-2 py-0.5 rounded text-[9px] font-semibold uppercase border ${statusBadgeClass}`}>
                       {comp.status}
                     </span>
                   </div>
@@ -2799,7 +2799,7 @@ function TenantComplaintCenterSection({
                       <button
                         type="button"
                         onClick={() => setConfirmingEscalationComplaint(comp)}
-                        className="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-#132A1D font-extrabold rounded-xl uppercase text-[11px] tracking-wider transition shadow-xs cursor-pointer flex items-center justify-center gap-2"
+                        className="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-#132A1D font-semibold rounded-xl uppercase text-[11px] tracking-wider transition shadow-xs cursor-pointer flex items-center justify-center gap-2"
                       >
                         <span>⚡ Escalate to Unity Homes</span>
                       </button>
@@ -2812,7 +2812,7 @@ function TenantComplaintCenterSection({
                   {/* Escalated Status Banner */}
                   {comp.status === 'Escalated' && (
                     <div className="mt-3 p-3 bg-amber-100/80 border border-amber-400 rounded-2xl space-y-1">
-                      <div className="flex items-center gap-1.5 text-amber-900 font-bold text-xs uppercase">
+                      <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-xs uppercase">
                         <ShieldAlert className="w-4 h-4 text-amber-700 shrink-0" />
                         <span>Escalated to Unity Homes Admin</span>
                       </div>
@@ -2847,7 +2847,7 @@ function TenantComplaintCenterSection({
                 <ShieldAlert className="w-6 h-6 text-amber-700" />
               </div>
               <div>
-                <h3 className="font-display font-black text-#132A1D text-sm uppercase">Escalate Complaint to Admin</h3>
+                <h3 className="font-display font-semibold text-#132A1D text-sm uppercase">Escalate Complaint to Admin</h3>
                 <p className="text-[10px] text-#6B7280 font-mono">Statutory Escalation Workflow</p>
               </div>
             </div>
@@ -2866,7 +2866,7 @@ function TenantComplaintCenterSection({
               <button
                 type="button"
                 onClick={() => setConfirmingEscalationComplaint(null)}
-                className="flex-1 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs uppercase tracking-wider cursor-pointer"
+                className="flex-1 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs uppercase tracking-wider cursor-pointer"
               >
                 Cancel
               </button>
@@ -2884,7 +2884,7 @@ function TenantComplaintCenterSection({
                     alert(res.message);
                   }
                 }}
-                className="flex-1 py-3 bg-amber-500 hover:bg-amber-600 text-stone-950 font-extrabold rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-md"
+                className="flex-1 py-3 bg-amber-500 hover:bg-amber-600 text-stone-950 font-semibold rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-md"
               >
                 Confirm Escalation
               </button>

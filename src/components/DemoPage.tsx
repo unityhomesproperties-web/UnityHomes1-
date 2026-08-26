@@ -54,19 +54,19 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
       
       {/* HEADER GREEN BOX */}
       <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 text-center mb-10 shadow-sm">
-        <span className="text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C] bg-[#18452E]/30 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/20">
+        <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/30 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/20">
           SYSTEM PREVIEWS
         </span>
-        <h1 className="text-3xl md:text-4.5xl font-display font-black text-white mt-3">
+        <h1 className="text-3xl md:text-4.5xl font-display font-semibold text-white mt-3">
           See Unity Homes In Action
         </h1>
-        <p className="text-xs sm:text-sm text-stone-200 font-light max-w-xl mx-auto mt-2 leading-relaxed">
+        <p className="text-xs sm:text-sm text-stone-200 font-normal max-w-xl mx-auto mt-2 leading-relaxed">
           Explore walk-around recordings of our property operations screens, live remind engines, and landlord split wallets.
         </p>
       </div>
 
       {/* PERSISTENT GOLD DEMO ALERT BANNER */}
-      <div className="mb-8 bg-[#C9A84C]/15 border-l-4 border-[#C9A84C] p-3 text-xs text-[#18452E] font-mono font-bold flex items-center space-x-2 rounded-r-lg shadow-inner">
+      <div className="mb-8 bg-[#C9A84C]/15 border-l-4 border-[#C9A84C] p-3 text-xs text-[#18452E] font-mono font-semibold flex items-center space-x-2 rounded-r-lg shadow-inner">
         <ShieldAlert className="w-5 h-5 text-[#C9A84C] shrink-0" />
         <span>Sample data shown inside recordings and dashboard modules is for demonstration purposes only.</span>
       </div>
@@ -77,7 +77,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
           <button
             key={tb.id}
             onClick={() => setActiveTab(tb.id as any)}
-            className={`px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold border cursor-pointer transition ${
+            className={`px-4 py-2.5 rounded-lg text-xs md:text-sm font-semibold border cursor-pointer transition ${
               activeTab === tb.id 
                 ? 'bg-[#18452E] text-white border-[#18452E]' 
                 : 'text-stone-500 bg-white border-stone-200 hover:bg-stone-50'
@@ -104,10 +104,10 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
             ></iframe>
           </div>
           <div>
-            <h3 className="font-display font-black text-base text-[#18452E]">
+            <h3 className="font-display font-semibold text-base text-[#18452E]">
               ✦ Video: {videoMeta[activeTab].title}
             </h3>
-            <p className="text-xs text-stone-500 mt-1 font-light leading-relaxed">
+            <p className="text-xs text-stone-500 mt-1 font-normal leading-relaxed">
               {videoMeta[activeTab].desc}
             </p>
           </div>
@@ -118,16 +118,16 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
           <div className="bg-[#18452E] rounded-2xl p-6 shadow-sm text-white">
             <div className="flex items-center space-x-2 mb-3">
               <BarChart2 className="w-6 h-6 text-[#C9A84C]" />
-              <h3 className="font-display font-black text-white text-lg">
+              <h3 className="font-display font-semibold text-white text-lg">
                 Performance Center
               </h3>
             </div>
-            <p className="text-xs text-stone-300 leading-relaxed mb-4 font-light">
+            <p className="text-xs text-stone-300 leading-relaxed mb-4 font-normal">
               Don't want to log in? Instantly explore our simulated analytics, generated reports, and proprietary portfolio health scores right now.
             </p>
             <button
               onClick={() => navigate('/performance-demo')}
-              className="w-full py-3.5 bg-[#C9A84C] text-[#18452E] hover:bg-white rounded-xl font-bold flex items-center justify-center space-x-2 transition cursor-pointer"
+              className="w-full py-3.5 bg-[#C9A84C] text-[#18452E] hover:bg-white rounded-xl font-semibold flex items-center justify-center space-x-2 transition cursor-pointer"
             >
               <BarChart2 className="w-5 h-5" />
               <span>Enter Performance Center</span>
@@ -137,11 +137,11 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
           <div className="bg-white rounded-2xl border-2 border-dashed border-[#C9A84C]/40 p-6 shadow-sm">
           <div className="flex items-center space-x-2 mb-4">
             <Activity className="w-5 h-5 text-[#18452E]" />
-            <h3 className="font-display font-extrabold text-[#18452E] text-sm">
+            <h3 className="font-display font-semibold text-[#18452E] text-sm">
               Live Clickable Sandbox
             </h3>
           </div>
-          <p className="text-xs text-stone-500 leading-relaxed mb-4 font-light">
+          <p className="text-xs text-stone-500 leading-relaxed mb-4 font-normal">
             Skip registration. Directly launch into pre-seeded credentials for each workspace role to inspect the ledger structures yourself.
           </p>
 
@@ -161,7 +161,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
                 className="w-full p-3 bg-[#F0F8F4] hover:bg-[#18452E] group hover:text-white border border-stone-200 rounded-xl flex items-center justify-between transition text-left cursor-pointer"
               >
                 <div>
-                  <span className="block text-xs font-bold text-[#18452E] group-hover:text-white leading-tight">
+                  <span className="block text-xs font-semibold text-[#18452E] group-hover:text-white leading-tight">
                     Simulate {tb.label}
                   </span>
                   <span className="block text-[9px] text-stone-500 group-hover:text-stone-300 font-mono tracking-wide mt-0.5">
@@ -185,7 +185,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
               className="w-full p-3 bg-stone-50 hover:bg-[#18452E] group hover:text-white border border-stone-200 rounded-xl flex items-center justify-between transition text-left cursor-pointer"
             >
               <div>
-                <span className="block text-xs font-bold text-stone-900 group-hover:text-white leading-tight">
+                <span className="block text-xs font-semibold text-stone-900 group-hover:text-white leading-tight">
                   Simulate Admin Desk
                 </span>
                 <span className="block text-[9px] text-stone-500 group-hover:text-stone-300 font-mono mt-0.5">
@@ -207,16 +207,16 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
       {/* CALL TO ACTION BUTTON REUSING WHATSAPP */}
       <div className="bg-[#C9A84C] text-[#18452E] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
         <div className="max-w-xl text-center md:text-left">
-          <h3 className="font-display font-black text-lg">
+          <h3 className="font-display font-semibold text-lg">
             Have Questions About Operating System Scoping?
           </h3>
-          <p className="text-xs font-light mt-1 text-[#18452E] leading-normal">
+          <p className="text-xs font-normal mt-1 text-[#18452E] leading-normal">
             Request an structured zoom onboarding walk-around for your real estate company or asset management team directly with Olayinka Ayodele.
           </p>
         </div>
         <button
           onClick={handleDemoWhatsApp}
-          className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] text-xs font-bold rounded-xl shadow-sm shrink-0 flex items-center space-x-1.5 cursor-pointer"
+          className="px-6 py-3.5 bg-[#18452E] text-white hover:bg-[#18452E] text-xs font-semibold rounded-xl shadow-sm shrink-0 flex items-center space-x-1.5 cursor-pointer"
         >
           <span>Request Corporate Demo Introduce</span>
           <ArrowRight className="w-4 h-4" />

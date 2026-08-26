@@ -33,20 +33,20 @@ export default function TransparencyTimeline({
       {/* Header */}
       <div className="flex justify-between items-start pb-3 border-b border-stone-200">
         <div>
-          <span className="text-[9px] font-mono font-black text-teal-900 bg-teal-50 px-2.5 py-0.5 rounded uppercase">
+          <span className="text-[9px] font-mono font-semibold text-teal-900 bg-teal-50 px-2.5 py-0.5 rounded uppercase">
             Financial Transparency Center
           </span>
-          <h3 className="font-display font-black text-teal-950 text-sm mt-1.5 uppercase leading-tight">
+          <h3 className="font-display font-semibold text-teal-950 text-sm mt-1.5 uppercase leading-tight">
             {title}
           </h3>
           <span className="text-[10px] text-stone-400 font-mono block mt-1">
-            Reference Ledger Key: <strong className="text-teal-950 font-bold">{referenceId}</strong>
+            Reference Ledger Key: <strong className="text-teal-950 font-semibold">{referenceId}</strong>
           </span>
         </div>
 
         <div className="text-right shrink-0 bg-stone-50 border border-stone-200 p-2.5 rounded-2xl">
-          <span className="block text-[9px] uppercase font-bold text-stone-400">Ledger Value</span>
-          <strong className="block font-mono font-black text-teal-950 text-base">
+          <span className="block text-[9px] uppercase font-semibold text-stone-400">Ledger Value</span>
+          <strong className="block font-mono font-semibold text-teal-950 text-base">
             ₦{amount.toLocaleString()}
           </strong>
         </div>
@@ -81,20 +81,20 @@ export default function TransparencyTimeline({
                     : 'bg-stone-50/50 border-stone-200 text-#6B7280'
               }`}>
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
-                  <strong className={`text-xs font-bold uppercase ${
+                  <strong className={`text-xs font-semibold uppercase ${
                     step.completed ? 'text-emerald-950' : step.active ? 'text-teal-950' : 'text-#6B7280'
                   }`}>
                     {step.label}
                   </strong>
-                  <span className="text-[10px] font-mono text-stone-400 block font-bold">
+                  <span className="text-[10px] font-mono text-stone-400 block font-semibold">
                     {step.timestamp}
                   </span>
                 </div>
-                <p className="text-[11px] font-light mt-1 text-#6B7280 leading-relaxed">
+                <p className="text-[11px] font-normal mt-1 text-#6B7280 leading-relaxed">
                   {step.description}
                 </p>
                 {step.operator && (
-                  <span className="text-[9px] font-mono text-stone-400 block mt-2 font-bold uppercase">
+                  <span className="text-[9px] font-mono text-stone-400 block mt-2 font-semibold uppercase">
                     Operator: <strong className="text-teal-900">{step.operator}</strong>
                   </span>
                 )}
@@ -117,7 +117,7 @@ export default function TransparencyTimeline({
         <div className="flex justify-end pt-2 border-t">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-teal-800 text-white font-bold rounded-xl text-xs hover:bg-teal-900 transition cursor-pointer"
+            className="px-4 py-2 bg-teal-800 text-white font-semibold rounded-xl text-xs hover:bg-teal-900 transition cursor-pointer"
           >
             Dismiss Ledger Lifecycle
           </button>

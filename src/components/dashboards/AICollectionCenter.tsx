@@ -740,8 +740,8 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <h2 className="font-display font-black text-xl text-[#18452E] uppercase tracking-tight">Automated Collection &amp; Reminder Engine</h2>
-              <span className="bg-[#18452E]/10 text-[#18452E] text-[9px] font-mono font-black uppercase px-2.5 py-0.5 rounded-full">ACTIVE AUTOMATION</span>
+              <h2 className="font-display font-semibold text-xl text-[#18452E] uppercase tracking-tight">Automated Collection &amp; Reminder Engine</h2>
+              <span className="bg-[#18452E]/10 text-[#18452E] text-[9px] font-mono font-semibold uppercase px-2.5 py-0.5 rounded-full">ACTIVE AUTOMATION</span>
             </div>
             <p className="text-#6B7280 text-xs mt-1">Smart real-time tenant ledger monitoring, personalized template dispatches, and immutable transaction audits.</p>
           </div>
@@ -753,7 +753,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             localStorage.removeItem(LOCAL_STORAGE_TENANTS_KEY);
             window.location.reload();
           }} 
-          className="flex items-center space-x-1.5 px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 rounded-xl text-#6B7280 text-[10px] font-bold uppercase transition"
+          className="flex items-center space-x-1.5 px-3 py-1.5 border border-stone-200 bg-white hover:bg-stone-50 rounded-xl text-#6B7280 text-[10px] font-semibold uppercase transition"
         >
           <RefreshCw className="w-3.5 h-3.5" />
           <span>Reset Demo Data</span>
@@ -806,40 +806,40 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             
             {/* Rent Collected Card */}
             <div className="bg-white border border-stone-200 p-5 rounded-2xl space-y-2 shadow-xs">
-              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-bold">Long-Term Rent Ledger</span>
+              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-semibold">Long-Term Rent Ledger</span>
               <div className="flex justify-between items-end">
                 <div>
-                  <span className="text-2xl font-display font-black text-stone-850">₦{rentCollected.toLocaleString()}</span>
+                  <span className="text-2xl font-display font-semibold text-stone-850">₦{rentCollected.toLocaleString()}</span>
                   <span className="text-[10px] text-stone-400 block mt-0.5">Collected of ₦{rentExpected.toLocaleString()}</span>
                 </div>
-                <span className="text-xs bg-[#18452E]/10 text-[#18452E] px-2 py-1 rounded-lg font-black">{rentCollectionRate.toFixed(1)}%</span>
+                <span className="text-xs bg-[#18452E]/10 text-[#18452E] px-2 py-1 rounded-lg font-semibold">{rentCollectionRate.toFixed(1)}%</span>
               </div>
               <div className="pt-2 border-t border-stone-200 flex justify-between text-[10px]">
-                <span className="text-rose-550 font-bold">Outstanding: ₦{rentOutstanding.toLocaleString()}</span>
+                <span className="text-rose-550 font-semibold">Outstanding: ₦{rentOutstanding.toLocaleString()}</span>
               </div>
             </div>
 
             {/* Service Charge Card */}
             <div className="bg-white border border-stone-200 p-5 rounded-2xl space-y-2 shadow-xs">
-              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-bold">Service Charge Ledger</span>
+              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-semibold">Service Charge Ledger</span>
               <div className="flex justify-between items-end">
                 <div>
-                  <span className="text-2xl font-display font-black text-stone-850">₦{scCollected.toLocaleString()}</span>
+                  <span className="text-2xl font-display font-semibold text-stone-850">₦{scCollected.toLocaleString()}</span>
                   <span className="text-[10px] text-stone-400 block mt-0.5">Collected of ₦{scExpected.toLocaleString()}</span>
                 </div>
-                <span className="text-xs bg-[#18452E]/10 text-[#18452E] px-2 py-1 rounded-lg font-black">{scCollectionRate.toFixed(1)}%</span>
+                <span className="text-xs bg-[#18452E]/10 text-[#18452E] px-2 py-1 rounded-lg font-semibold">{scCollectionRate.toFixed(1)}%</span>
               </div>
               <div className="pt-2 border-t border-stone-200 flex justify-between text-[10px]">
-                <span className="text-rose-550 font-bold">Outstanding: ₦{scOutstanding.toLocaleString()}</span>
+                <span className="text-rose-550 font-semibold">Outstanding: ₦{scOutstanding.toLocaleString()}</span>
               </div>
             </div>
 
             {/* Overall Collection */}
             <div className="bg-[#18452E] text-white p-5 rounded-2xl space-y-2 shadow-sm">
-              <span className="text-[10px] font-mono text-[#C9A84C] uppercase tracking-widest block font-bold">Overall Collection Performance</span>
+              <span className="text-[10px] font-mono text-[#C9A84C] uppercase tracking-widest block font-semibold">Overall Collection Performance</span>
               <div className="flex justify-between items-end">
                 <div>
-                  <span className="text-2xl font-display font-black text-white">{overallCollectionRate.toFixed(1)}%</span>
+                  <span className="text-2xl font-display font-semibold text-white">{overallCollectionRate.toFixed(1)}%</span>
                   <span className="text-[10px] text-stone-300 block mt-0.5">Combined collection percentage</span>
                 </div>
                 <div className="bg-white/10 p-1.5 rounded-lg">
@@ -853,18 +853,18 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             {/* Reminder Status */}
             <div className="bg-white border border-stone-200 p-5 rounded-2xl space-y-2 shadow-xs">
-              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-bold">Automated Dispatches</span>
+              <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest block font-semibold">Automated Dispatches</span>
               <div className="grid grid-cols-2 gap-2 text-center pt-1">
                 <div className="bg-stone-50 p-2 rounded-xl">
-                  <span className="text-xl font-bold text-#132A1D">{remindersSentToday}</span>
+                  <span className="text-xl font-semibold text-#132A1D">{remindersSentToday}</span>
                   <span className="text-[9px] text-stone-400 block uppercase font-mono mt-0.5">Sent Today</span>
                 </div>
                 <div className="bg-emerald-50 p-2 rounded-xl">
-                  <span className="text-xl font-bold text-emerald-800">{paymentsReceivedAfterReminder}</span>
+                  <span className="text-xl font-semibold text-emerald-800">{paymentsReceivedAfterReminder}</span>
                   <span className="text-[9px] text-emerald-500 block uppercase font-mono mt-0.5">Receipts</span>
                 </div>
               </div>
-              <div className="text-[9px] text-stone-450 text-center font-bold uppercase tracking-wider pt-1">
+              <div className="text-[9px] text-stone-450 text-center font-semibold uppercase tracking-wider pt-1">
                 Avg Days to Payment: <strong className="text-emerald-700">4.2 Days</strong>
               </div>
             </div>
@@ -875,32 +875,32 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           <div className="bg-amber-50/50 border border-amber-200 rounded-[var(--radius-large)] p-5 space-y-3 shadow-xs">
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-amber-600 shrink-0" />
-              <h3 className="font-display font-black text-xs uppercase text-[#18452E] tracking-wider">Automated Collection Insights &amp; Audit Recommendations</h3>
+              <h3 className="font-display font-semibold text-xs uppercase text-[#18452E] tracking-wider">Automated Collection Insights &amp; Audit Recommendations</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">Critical Arrears Threshold</span>
+                <span className="font-semibold text-#132A1D block">Critical Arrears Threshold</span>
                 <p className="text-#6B7280 leading-normal"><strong>8 tenants</strong> are more than 30 days overdue. Recommended action: Dispatch One-Tap Bulk reminders via SMS and WhatsApp immediate escalation.</p>
               </div>
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">High Outstandings Filter</span>
+                <span className="font-semibold text-#132A1D block">High Outstandings Filter</span>
                 <p className="text-#6B7280 leading-normal"><strong>5 tenants</strong> have outstanding service charges exceeding ₦500,000. Recommend custom verification checks.</p>
               </div>
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">Response Velocity Index</span>
+                <span className="font-semibold text-#132A1D block">Response Velocity Index</span>
                 <p className="text-#6B7280 leading-normal"><strong>3 tenants</strong> usually pay within 48 hours after receiving an automated reminder. System recommends softer templates first.</p>
               </div>
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">Highest Unit Risk</span>
+                <span className="font-semibold text-#132A1D block">Highest Unit Risk</span>
                 <p className="text-#6B7280 leading-normal"><strong>Apartment B12</strong> (The Oasis Towers) currently holds the single highest outstanding balance of ₦{highestOutstandingTenantAmt.toLocaleString()}.</p>
               </div>
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">Asset Needs Attention</span>
+                <span className="font-semibold text-#132A1D block">Asset Needs Attention</span>
                 <p className="text-#6B7280 leading-normal"><strong>Palm View Estate</strong> has the lowest overall collection rate this month (71%). Recommend review with the Property Relationship Manager.</p>
               </div>
               <div className="bg-white border border-stone-200 p-3.5 rounded-xl text-xs space-y-1">
-                <span className="font-bold text-#132A1D block">Ledger Remittance Delta</span>
+                <span className="font-semibold text-#132A1D block">Ledger Remittance Delta</span>
                 <p className="text-#6B7280 leading-normal">Collection performance improved by <strong>14%</strong> compared with last month. 22 reminders sent yesterday resulted in <strong>9 immediate payments</strong> today.</p>
               </div>
             </div>
@@ -911,13 +911,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             
             {/* Collection Performance Charts (Simple Elegant Pure SVG) */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
-              <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Real-Time Portfolio Collection Status</h4>
+              <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Real-Time Portfolio Collection Status</h4>
               
               <div className="space-y-4 pt-2">
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
-                    <span className="font-bold">Total Long-term Rent Received</span>
-                    <span className="font-mono text-[#18452E] font-bold">₦{rentCollected.toLocaleString()} ({rentCollectionRate.toFixed(1)}%)</span>
+                    <span className="font-semibold">Total Long-term Rent Received</span>
+                    <span className="font-mono text-[#18452E] font-semibold">₦{rentCollected.toLocaleString()} ({rentCollectionRate.toFixed(1)}%)</span>
                   </div>
                   <div className="w-full bg-stone-50 h-3.5 rounded-full overflow-hidden">
                     <div className="bg-emerald-600 h-full transition-all duration-550" style={{ width: `${rentCollectionRate}%` }}></div>
@@ -926,8 +926,8 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
-                    <span className="font-bold">Total Service Charges Collected</span>
-                    <span className="font-mono text-teal-700 font-bold">₦{scCollected.toLocaleString()} ({scCollectionRate.toFixed(1)}%)</span>
+                    <span className="font-semibold">Total Service Charges Collected</span>
+                    <span className="font-mono text-teal-700 font-semibold">₦{scCollected.toLocaleString()} ({scCollectionRate.toFixed(1)}%)</span>
                   </div>
                   <div className="w-full bg-stone-50 h-3.5 rounded-full overflow-hidden">
                     <div className="bg-teal-600 h-full transition-all duration-550" style={{ width: `${scCollectionRate}%` }}></div>
@@ -936,8 +936,8 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
-                    <span className="font-bold">Combined Collection Rate</span>
-                    <span className="font-mono text-[#C9A84C] font-bold">₦{(rentCollected + scCollected).toLocaleString()} ({overallCollectionRate.toFixed(1)}%)</span>
+                    <span className="font-semibold">Combined Collection Rate</span>
+                    <span className="font-mono text-[#C9A84C] font-semibold">₦{(rentCollected + scCollected).toLocaleString()} ({overallCollectionRate.toFixed(1)}%)</span>
                   </div>
                   <div className="w-full bg-stone-50 h-3.5 rounded-full overflow-hidden">
                     <div className="bg-[#C9A84C] h-full transition-all duration-550" style={{ width: `${overallCollectionRate}%` }}></div>
@@ -952,35 +952,35 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             {/* Highest Outstandings Leaderboard */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs space-y-4">
-              <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Outstandings Leaderboard Rankings</h4>
+              <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase tracking-wider border-b border-stone-200 pb-2">Outstandings Leaderboard Rankings</h4>
               
               <div className="space-y-3 text-xs">
                 <div className="flex justify-between items-center p-2 bg-stone-50 rounded-xl border border-stone-200">
                   <span className="text-#6B7280 uppercase font-mono text-[9px] tracking-wide">Highest Outstanding Tenant</span>
                   <div className="text-right">
-                    <span className="font-bold text-#132A1D block">{highestOutstandingTenant}</span>
-                    <span className="font-mono text-xs font-black text-rose-700">₦{highestOutstandingTenantAmt.toLocaleString()}</span>
+                    <span className="font-semibold text-#132A1D block">{highestOutstandingTenant}</span>
+                    <span className="font-mono text-xs font-semibold text-rose-700">₦{highestOutstandingTenantAmt.toLocaleString()}</span>
                   </div>
                 </div>
 
                 <div className="flex justify-between items-center p-2 bg-stone-50 rounded-xl border border-stone-200">
                   <span className="text-#6B7280 uppercase font-mono text-[9px] tracking-wide">Highest Outstanding Property</span>
-                  <span className="font-bold text-#132A1D text-right">{highestOutstandingProperty}</span>
+                  <span className="font-semibold text-#132A1D text-right">{highestOutstandingProperty}</span>
                 </div>
 
                 <div className="flex justify-between items-center p-2 bg-stone-50 rounded-xl border border-stone-200">
                   <span className="text-#6B7280 uppercase font-mono text-[9px] tracking-wide">Highest Outstanding Estate</span>
-                  <span className="font-bold text-#132A1D text-right">{highestOutstandingEstate}</span>
+                  <span className="font-semibold text-#132A1D text-right">{highestOutstandingEstate}</span>
                 </div>
 
                 <div className="flex justify-between items-center p-2 bg-stone-50 rounded-xl border border-stone-200">
                   <span className="text-#6B7280 uppercase font-mono text-[9px] tracking-wide">Landlord Portfolio Arrears</span>
-                  <span className="font-bold text-#132A1D text-right">{highestOutstandingLandlord}</span>
+                  <span className="font-semibold text-#132A1D text-right">{highestOutstandingLandlord}</span>
                 </div>
 
                 <div className="flex justify-between items-center p-2 bg-stone-50 rounded-xl border border-stone-200">
                   <span className="text-#6B7280 uppercase font-mono text-[9px] tracking-wide">PMC Portfolio Arrears</span>
-                  <span className="font-bold text-#132A1D text-right">{highestOutstandingPMC}</span>
+                  <span className="font-semibold text-#132A1D text-right">{highestOutstandingPMC}</span>
                 </div>
               </div>
             </div>
@@ -996,7 +996,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
       {activeSubTab === 'BulkReminders' && (
         <div className="space-y-6">
           <div className="p-4 bg-teal-50 border border-teal-200 rounded-2xl text-xs leading-normal">
-            <span className="font-bold text-[#18452E] block mb-1">One-Click Dispatch Rules</span>
+            <span className="font-semibold text-[#18452E] block mb-1">One-Click Dispatch Rules</span>
             Unity Homes Automated System utilizes immediate personalized multi-channel reminder templates mapping exact arrears balances, payment verification details, and contact points to accelerate recovery metrics.
           </div>
 
@@ -1004,13 +1004,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             
             <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
               <div>
-                <span className="bg-rose-100 text-rose-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-black">RENT OVERDUES</span>
-                <h4 className="font-display font-black text-sm text-[#18452E] uppercase mt-2">Remind All Rent Owings</h4>
+                <span className="bg-rose-100 text-rose-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold">RENT OVERDUES</span>
+                <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mt-2">Remind All Rent Owings</h4>
                 <p className="text-xs text-#6B7280 mt-1">Dispatches notifications to every active tenant currently owing outstanding rent balances.</p>
               </div>
               <button 
                 onClick={() => handleTriggerBulkReminders('all_rent')}
-                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-black uppercase py-2.5 rounded-xl transition cursor-pointer"
+                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold uppercase py-2.5 rounded-xl transition cursor-pointer"
               >
                 Trigger Rent Reminders
               </button>
@@ -1018,13 +1018,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
               <div>
-                <span className="bg-teal-100 text-teal-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-black">SERVICE CHARGE ARREARS</span>
-                <h4 className="font-display font-black text-sm text-[#18452E] uppercase mt-2">Remind All Service Charges</h4>
+                <span className="bg-teal-100 text-teal-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold">SERVICE CHARGE ARREARS</span>
+                <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mt-2">Remind All Service Charges</h4>
                 <p className="text-xs text-#6B7280 mt-1">Targets tenants who haven&apos;t completed service charge payments this cycle.</p>
               </div>
               <button 
                 onClick={() => handleTriggerBulkReminders('all_sc')}
-                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-black uppercase py-2.5 rounded-xl transition cursor-pointer"
+                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold uppercase py-2.5 rounded-xl transition cursor-pointer"
               >
                 Trigger Service Charge Reminders
               </button>
@@ -1032,13 +1032,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
               <div>
-                <span className="bg-purple-100 text-purple-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-black">COMBINED ARREARS</span>
-                <h4 className="font-display font-black text-sm text-[#18452E] uppercase mt-2">Remind Combined Owings</h4>
+                <span className="bg-purple-100 text-purple-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold">COMBINED ARREARS</span>
+                <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mt-2">Remind Combined Owings</h4>
                 <p className="text-xs text-#6B7280 mt-1">Triggers customized dual-balance templates to tenants owing both rent and service charges.</p>
               </div>
               <button 
                 onClick={() => handleTriggerBulkReminders('all_both')}
-                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-black uppercase py-2.5 rounded-xl transition cursor-pointer"
+                className="w-full bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold uppercase py-2.5 rounded-xl transition cursor-pointer"
               >
                 Trigger Combined Reminders
               </button>
@@ -1046,13 +1046,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
               <div>
-                <span className="bg-amber-100 text-amber-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-black">OVERDUE &gt; 30 DAYS</span>
-                <h4 className="font-display font-black text-sm text-[#18452E] uppercase mt-2">Arrears Exceeding 30d</h4>
+                <span className="bg-amber-100 text-amber-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold">OVERDUE &gt; 30 DAYS</span>
+                <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mt-2">Arrears Exceeding 30d</h4>
                 <p className="text-xs text-#6B7280 mt-1">High urgency escalation reminder sent to tenants overdue by more than a month.</p>
               </div>
               <button 
                 onClick={() => handleTriggerBulkReminders('overdue_30')}
-                className="w-full bg-rose-700 hover:bg-rose-800 text-white text-[10px] font-black uppercase py-2.5 rounded-xl transition cursor-pointer"
+                className="w-full bg-rose-700 hover:bg-rose-800 text-white text-[10px] font-semibold uppercase py-2.5 rounded-xl transition cursor-pointer"
               >
                 Trigger Urgent Reminders
               </button>
@@ -1060,13 +1060,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
               <div>
-                <span className="bg-blue-100 text-blue-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-black">DUE WITHIN 7 DAYS</span>
-                <h4 className="font-display font-black text-sm text-[#18452E] uppercase mt-2">Upcoming Grace Period</h4>
+                <span className="bg-blue-100 text-blue-800 text-[9px] uppercase font-mono px-2 py-0.5 rounded-full font-semibold">DUE WITHIN 7 DAYS</span>
+                <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mt-2">Upcoming Grace Period</h4>
                 <p className="text-xs text-#6B7280 mt-1">Friendly automated reminders dispatched 7 days prior to their official due date.</p>
               </div>
               <button 
                 onClick={() => handleTriggerBulkReminders('due_7')}
-                className="w-full bg-blue-750 hover:bg-blue-800 text-white text-[10px] font-black uppercase py-2.5 rounded-xl transition cursor-pointer"
+                className="w-full bg-blue-750 hover:bg-blue-800 text-white text-[10px] font-semibold uppercase py-2.5 rounded-xl transition cursor-pointer"
               >
                 Trigger friendly Reminders
               </button>
@@ -1083,13 +1083,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Automatic Scheduler Rules</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Automatic Scheduler Rules</h3>
               {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
               <p className="text-#6B7280 text-xs mt-0.5">Automate dispatches pre &amp; post rent cycles. Stopped automatically upon complete payment confirmation.</p>
             </div>
             <button 
               onClick={() => setShowAddRuleModal(true)}
-              className="flex items-center space-x-1 px-4 py-2 bg-[#18452E] text-white text-[10px] font-black uppercase rounded-xl transition hover:bg-[#18452E] cursor-pointer"
+              className="flex items-center space-x-1 px-4 py-2 bg-[#18452E] text-white text-[10px] font-semibold uppercase rounded-xl transition hover:bg-[#18452E] cursor-pointer"
             >
               <Plus className="w-4 h-4" />
               <span>Add Custom Rule</span>
@@ -1100,7 +1100,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black">
+                  <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold">
                     <th className="p-4">Trigger Event</th>
                     <th className="p-4">Delivery Channels</th>
                     <th className="p-4">Status</th>
@@ -1110,18 +1110,18 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                 <tbody className="divide-y divide-stone-100 text-xs">
                   {rules.map((rule) => (
                     <tr key={rule.id} className="hover:bg-stone-50/50 transition">
-                      <td className="p-4 font-bold text-#132A1D">{rule.triggerEvent}</td>
+                      <td className="p-4 font-semibold text-#132A1D">{rule.triggerEvent}</td>
                       <td className="p-4">
                         <div className="flex flex-wrap gap-1">
                           {rule.channels.map(ch => (
-                            <span key={ch} className="bg-stone-50 border text-#6B7280 text-[9px] font-mono font-bold px-2 py-0.5 rounded">
+                            <span key={ch} className="bg-stone-50 border text-#6B7280 text-[9px] font-mono font-semibold px-2 py-0.5 rounded">
                               {ch}
                             </span>
                           ))}
                         </div>
                       </td>
                       <td className="p-4">
-                        <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase ${
+                        <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[9px] font-semibold uppercase ${
                           rule.isEnabled ? 'bg-emerald-100 text-emerald-800' : 'bg-stone-200 text-#6B7280'
                         }`}>
                           {rule.isEnabled ? 'Active Scheduler' : 'Disabled'}
@@ -1131,7 +1131,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                         <div className="flex items-center justify-center space-x-2">
                           <button 
                             onClick={() => handleToggleRule(rule.id)}
-                            className={`px-3 py-1 rounded-lg text-[9px] font-bold uppercase transition ${
+                            className={`px-3 py-1 rounded-lg text-[9px] font-semibold uppercase transition ${
                               rule.isEnabled ? 'bg-amber-100 hover:bg-amber-200 text-amber-800' : 'bg-emerald-100 hover:bg-emerald-200 text-emerald-800'
                             }`}
                           >
@@ -1198,7 +1198,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
               <button
                 onClick={() => setIsExportOpen(true)}
-                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-2xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-2xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>Export Ledger Report</span>
@@ -1244,7 +1244,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           {/* TENANTS LIST VIEW */}
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
             <div className="p-4 bg-stone-50/50 border-b border-stone-150 flex justify-between items-center">
-              <span className="font-mono text-[9px] text-stone-400 uppercase font-black tracking-widest">
+              <span className="font-mono text-[9px] text-stone-400 uppercase font-semibold tracking-widest">
                 ACTIVE TENANT LEDGER RECORDS ({filteredTenants.length} FOUND)
               </span>
             </div>
@@ -1252,7 +1252,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-stone-50 border-b border-stone-150 text-[9px] font-mono text-stone-400 uppercase tracking-widest font-black">
+                  <tr className="bg-stone-50 border-b border-stone-150 text-[9px] font-mono text-stone-400 uppercase tracking-widest font-semibold">
                     <th className="p-4">Tenant Details</th>
                     <th className="p-4">Property &amp; Unit</th>
                     <th className="p-4">Rent Ledger</th>
@@ -1272,12 +1272,12 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                         <td className="p-4">
                           <div className="space-y-0.5">
                             <div className="flex items-center space-x-1.5">
-                              <span className="font-bold text-#132A1D">{tenant.tenantName}</span>
+                              <span className="font-semibold text-#132A1D">{tenant.tenantName}</span>
                               {tenant.isHighRisk && (
-                                <span className="bg-rose-100 text-rose-800 text-[8px] font-black px-1.5 py-0.5 rounded-full uppercase">High Risk</span>
+                                <span className="bg-rose-100 text-rose-800 text-[8px] font-semibold px-1.5 py-0.5 rounded-full uppercase">High Risk</span>
                               )}
                               {tenant.latePaymentHistoryCount > 0 && (
-                                <span className="bg-amber-100 text-amber-800 text-[8px] font-black px-1.5 py-0.5 rounded-full uppercase">Late Payer</span>
+                                <span className="bg-amber-100 text-amber-800 text-[8px] font-semibold px-1.5 py-0.5 rounded-full uppercase">Late Payer</span>
                               )}
                             </div>
                             <span className="text-[10px] font-mono text-stone-400 block">{tenant.tenantCode}</span>
@@ -1291,30 +1291,30 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                         </td>
                         <td className="p-4">
                           {tenant.rentStatus === 'Paid' ? (
-                            <span className="text-emerald-700 font-bold">Fully Settled</span>
+                            <span className="text-emerald-700 font-semibold">Fully Settled</span>
                           ) : (
                             <div className="space-y-0.5">
-                              <span className="font-bold text-#132A1D">₦{rentOutstanding.toLocaleString()}</span>
+                              <span className="font-semibold text-#132A1D">₦{rentOutstanding.toLocaleString()}</span>
                               <span className="text-[9px] text-stone-450 block uppercase tracking-wide font-mono">Due: {tenant.rentDueDate}</span>
                             </div>
                           )}
                         </td>
                         <td className="p-4">
                           {tenant.serviceChargeStatus === 'Paid' ? (
-                            <span className="text-emerald-700 font-bold">Fully Settled</span>
+                            <span className="text-emerald-700 font-semibold">Fully Settled</span>
                           ) : (
                             <div className="space-y-0.5">
-                              <span className="font-bold text-#132A1D">₦{scOutstanding.toLocaleString()}</span>
-                              <span className="text-[9px] text-stone-450 block uppercase tracking-wide font-mono font-bold">Due: {tenant.serviceChargeDueDate}</span>
+                              <span className="font-semibold text-#132A1D">₦{scOutstanding.toLocaleString()}</span>
+                              <span className="text-[9px] text-stone-450 block uppercase tracking-wide font-mono font-semibold">Due: {tenant.serviceChargeDueDate}</span>
                             </div>
                           )}
                         </td>
                         <td className="p-4">
                           {combinedOutstanding === 0 ? (
-                            <span className="bg-emerald-100 text-emerald-800 text-[9px] font-black uppercase px-2 py-0.5 rounded">Paid</span>
+                            <span className="bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase px-2 py-0.5 rounded">Paid</span>
                           ) : (
-                            <span className={`inline-flex px-2 py-0.5 rounded text-[9px] font-black uppercase ${
-                              tenant.overdueDays >= 60 ? 'bg-rose-100 text-rose-800 font-bold' : 'bg-amber-100 text-amber-800'
+                            <span className={`inline-flex px-2 py-0.5 rounded text-[9px] font-semibold uppercase ${
+                              tenant.overdueDays >= 60 ? 'bg-rose-100 text-rose-800 font-semibold' : 'bg-amber-100 text-amber-800'
                             }`}>
                               {tenant.overdueDays > 0 ? `${tenant.overdueDays} Days Overdue` : 'Due Soon'}
                             </span>
@@ -1325,7 +1325,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                             <div className="flex items-center justify-center gap-1.5">
                               <button 
                                 onClick={() => handleOpenSingleReminder(tenant)}
-                                className="flex items-center space-x-1 px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-[9px] font-bold uppercase hover:bg-[#18452E] transition"
+                                className="flex items-center space-x-1 px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-[9px] font-semibold uppercase hover:bg-[#18452E] transition"
                               >
                                 <Send className="w-3 h-3" />
                                 <span>Remind</span>
@@ -1333,13 +1333,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
                               <button 
                                 onClick={() => handleSimulatePayment(tenant.id, rentOutstanding > 0 && scOutstanding > 0 ? 'Both' : (rentOutstanding > 0 ? 'Rent' : 'ServiceCharge'))}
-                                className="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-[9px] font-bold uppercase hover:bg-emerald-700 transition"
+                                className="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-[9px] font-semibold uppercase hover:bg-emerald-700 transition"
                               >
                                 Clear Balance
                               </button>
                             </div>
                           ) : (
-                            <span className="text-emerald-650 font-bold text-[10px] uppercase font-mono tracking-wider flex items-center justify-center gap-1">
+                            <span className="text-emerald-650 font-semibold text-[10px] uppercase font-mono tracking-wider flex items-center justify-center gap-1">
                               <Check className="w-4.5 h-4.5 text-emerald-600" /> Settled
                             </span>
                           )}
@@ -1372,12 +1372,12 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
         <div className="space-y-6">
           <div className="flex justify-between items-center bg-white border border-stone-200 p-4 rounded-[var(--radius-large)]">
             <div>
-              <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Reminder Dispatch History</h4>
-              <p className="text-stone-400 text-[10px] font-light">Comprehensive real-time tracking of all alert payloads sent across the network.</p>
+              <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Reminder Dispatch History</h4>
+              <p className="text-stone-400 text-[10px] font-normal">Comprehensive real-time tracking of all alert payloads sent across the network.</p>
             </div>
             <button
               onClick={() => setIsHistoryExportOpen(true)}
-              className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
+              className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
             >
               <FileText className="w-4 h-4" />
               <span>Export Audit History Logs</span>
@@ -1406,23 +1406,23 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           />
 
           <div className="p-4 bg-white border border-stone-200 rounded-[var(--radius-large)] space-y-2">
-            <span className="text-xs font-mono text-stone-400 uppercase tracking-widest font-black block">Log Delivery Channel Summary</span>
+            <span className="text-xs font-mono text-stone-400 uppercase tracking-widest font-semibold block">Log Delivery Channel Summary</span>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
               <div className="bg-stone-50 border p-3 rounded-2xl">
-                <span className="text-xl font-bold text-#132A1D">{logs.filter(l => l.channel === 'In-App').length}</span>
-                <span className="text-[10px] text-#6B7280 block font-bold uppercase font-mono mt-0.5">In-App Alerts</span>
+                <span className="text-xl font-semibold text-#132A1D">{logs.filter(l => l.channel === 'In-App').length}</span>
+                <span className="text-[10px] text-#6B7280 block font-semibold uppercase font-mono mt-0.5">In-App Alerts</span>
               </div>
               <div className="bg-stone-50 border p-3 rounded-2xl">
-                <span className="text-xl font-bold text-#132A1D">{logs.filter(l => l.channel === 'Email').length}</span>
-                <span className="text-[10px] text-#6B7280 block font-bold uppercase font-mono mt-0.5">Email logs</span>
+                <span className="text-xl font-semibold text-#132A1D">{logs.filter(l => l.channel === 'Email').length}</span>
+                <span className="text-[10px] text-#6B7280 block font-semibold uppercase font-mono mt-0.5">Email logs</span>
               </div>
               <div className="bg-stone-50 border p-3 rounded-2xl">
-                <span className="text-xl font-bold text-#132A1D">{logs.filter(l => l.channel === 'SMS').length}</span>
-                <span className="text-[10px] text-#6B7280 block font-bold uppercase font-mono mt-0.5">SMS dispatches</span>
+                <span className="text-xl font-semibold text-#132A1D">{logs.filter(l => l.channel === 'SMS').length}</span>
+                <span className="text-[10px] text-#6B7280 block font-semibold uppercase font-mono mt-0.5">SMS dispatches</span>
               </div>
               <div className="bg-stone-50 border p-3 rounded-2xl">
-                <span className="text-xl font-bold text-#132A1D">{logs.filter(l => l.channel === 'WhatsApp').length}</span>
-                <span className="text-[10px] text-#6B7280 block font-bold uppercase font-mono mt-0.5">WhatsApp alerts</span>
+                <span className="text-xl font-semibold text-#132A1D">{logs.filter(l => l.channel === 'WhatsApp').length}</span>
+                <span className="text-[10px] text-#6B7280 block font-semibold uppercase font-mono mt-0.5">WhatsApp alerts</span>
               </div>
             </div>
           </div>
@@ -1431,7 +1431,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black">
+                  <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold">
                     <th className="p-4">Reminder ID</th>
                     <th className="p-4">Tenant &amp; Apartment</th>
                     <th className="p-4">Property</th>
@@ -1446,7 +1446,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                       <td className="p-4 font-mono text-#6B7280">{log.id}</td>
                       <td className="p-4">
                         <div>
-                          <span className="font-bold text-#132A1D block">{log.tenantName}</span>
+                          <span className="font-semibold text-#132A1D block">{log.tenantName}</span>
                           <span className="text-[10px] text-stone-400 block">{log.unitNumber}</span>
                         </div>
                       </td>
@@ -1462,12 +1462,12 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                           <span className="bg-stone-50 text-#6B7280 text-[9px] font-mono px-2 py-0.5 rounded">
                             {log.channel}
                           </span>
-                          <span className="bg-emerald-100 text-emerald-800 text-[9px] font-mono px-2 py-0.5 rounded font-black uppercase">
+                          <span className="bg-emerald-100 text-emerald-800 text-[9px] font-mono px-2 py-0.5 rounded font-semibold uppercase">
                             {log.status}
                           </span>
                         </div>
                       </td>
-                      <td className="p-4 font-mono font-bold text-#132A1D">
+                      <td className="p-4 font-mono font-semibold text-#132A1D">
                         {log.outstandingAmt > 0 ? `₦${log.outstandingAmt.toLocaleString()}` : <span className="text-emerald-700">Settled</span>}
                       </td>
                     </tr>
@@ -1514,23 +1514,23 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             {/* PROMISE SUMMARY METRICS */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Total Value Promised</span>
-                <span className="text-xl font-display font-black text-[#18452E] block">₦{totalValuePromised.toLocaleString()}</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold block">Total Value Promised</span>
+                <span className="text-xl font-display font-semibold text-[#18452E] block">₦{totalValuePromised.toLocaleString()}</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Accumulated tenant commitments</span>
               </div>
               <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Active Promises</span>
-                <span className="text-xl font-display font-black text-amber-600 block">{activePromises} Accounts</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold block">Active Promises</span>
+                <span className="text-xl font-display font-semibold text-amber-600 block">{activePromises} Accounts</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Automatic alerts suspended</span>
               </div>
               <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Broken Promises</span>
-                <span className="text-xl font-display font-black text-rose-600 block">{brokenPromises} Defaults</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold block">Broken Promises</span>
+                <span className="text-xl font-display font-semibold text-rose-600 block">{brokenPromises} Defaults</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Resumed overdue schedules</span>
               </div>
               <div className="bg-white border border-stone-200 p-4 rounded-[var(--radius-large)] space-y-1">
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black block">Promise Broken Rate</span>
-                <span className="text-xl font-display font-black text-#132A1D block">{brokenPromisesRate}%</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold block">Promise Broken Rate</span>
+                <span className="text-xl font-display font-semibold text-#132A1D block">{brokenPromisesRate}%</span>
                 <span className="text-[9px] text-#6B7280 block font-medium">Weighted tenant performance</span>
               </div>
             </div>
@@ -1539,20 +1539,20 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white border border-stone-200 p-5 rounded-[var(--radius-large)] space-y-3">
                 <div className="border-b pb-2 flex justify-between items-center">
-                  <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Properties With Most Broken Promises</h4>
-                  <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase">Defaults count</span>
+                  <h4 className="font-display font-semibold text-[#18452E] uppercase tracking-wider text-xs">Properties With Most Broken Promises</h4>
+                  <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-semibold uppercase">Defaults count</span>
                 </div>
                 {propertiesRanking.length > 0 ? (
                   <div className="space-y-2">
                     {propertiesRanking.map((prop, idx) => (
                       <div key={prop.name} className="flex justify-between items-center p-2.5 bg-stone-50 rounded-xl border border-stone-150">
                         <div className="flex items-center space-x-2">
-                          <span className="text-[10px] font-mono bg-[#18452E] text-white w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                          <span className="text-[10px] font-mono bg-[#18452E] text-white w-4 h-4 rounded-full flex items-center justify-center font-semibold">
                             {idx + 1}
                           </span>
-                          <span className="font-bold text-#132A1D">{prop.name}</span>
+                          <span className="font-semibold text-#132A1D">{prop.name}</span>
                         </div>
-                        <span className="font-mono font-black text-rose-600 bg-rose-50 border border-rose-100 px-2.5 py-0.5 rounded-lg text-[10px]">
+                        <span className="font-mono font-semibold text-rose-600 bg-rose-50 border border-rose-100 px-2.5 py-0.5 rounded-lg text-[10px]">
                           {prop.count} Broken
                         </span>
                       </div>
@@ -1565,20 +1565,20 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
               <div className="bg-white border border-stone-200 p-5 rounded-[var(--radius-large)] space-y-3">
                 <div className="border-b pb-2 flex justify-between items-center">
-                  <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Tenants With Most Broken Promises</h4>
-                  <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase">Defaults count</span>
+                  <h4 className="font-display font-semibold text-[#18452E] uppercase tracking-wider text-xs">Tenants With Most Broken Promises</h4>
+                  <span className="text-[9px] font-mono bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-semibold uppercase">Defaults count</span>
                 </div>
                 {tenantsRanking.length > 0 ? (
                   <div className="space-y-2">
                     {tenantsRanking.map((t, idx) => (
                       <div key={t.name} className="flex justify-between items-center p-2.5 bg-stone-50 rounded-xl border border-stone-150">
                         <div className="flex items-center space-x-2">
-                          <span className="text-[10px] font-mono bg-[#18452E] text-white w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                          <span className="text-[10px] font-mono bg-[#18452E] text-white w-4 h-4 rounded-full flex items-center justify-center font-semibold">
                             {idx + 1}
                           </span>
-                          <span className="font-bold text-#132A1D">{t.name}</span>
+                          <span className="font-semibold text-#132A1D">{t.name}</span>
                         </div>
-                        <span className="font-mono font-black text-rose-600 bg-rose-50 border border-rose-100 px-2.5 py-0.5 rounded-lg text-[10px]">
+                        <span className="font-mono font-semibold text-rose-600 bg-rose-50 border border-rose-100 px-2.5 py-0.5 rounded-lg text-[10px]">
                           {t.count} Broken
                         </span>
                       </div>
@@ -1593,14 +1593,14 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             {/* ALL PROMISES DATABASE LEDGER */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] overflow-hidden shadow-xs">
               <div className="p-4 bg-stone-50 border-b border-stone-150 flex justify-between items-center">
-                <h4 className="font-display font-black text-[#18452E] uppercase tracking-wider text-xs">Active & Historical Promises Ledger</h4>
+                <h4 className="font-display font-semibold text-[#18452E] uppercase tracking-wider text-xs">Active & Historical Promises Ledger</h4>
                 <span className="text-[10px] text-stone-400 font-mono">Logged role: <strong>{role}</strong></span>
               </div>
               
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-black">
+                    <tr className="bg-stone-50 border-b border-stone-150 text-[10px] font-mono text-stone-400 uppercase tracking-widest font-semibold">
                       <th className="p-4">Tenant & Unit</th>
                       <th className="p-4">Type & Amount</th>
                       <th className="p-4">Expected Date</th>
@@ -1622,14 +1622,14 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                           {/* TENANT & UNIT */}
                           <td className="p-4">
                             <div>
-                              <span className="font-bold text-#132A1D block">{p.tenantName}</span>
+                              <span className="font-semibold text-#132A1D block">{p.tenantName}</span>
                               <span className="text-[10px] text-stone-400 block font-mono">{p.propertyName}</span>
                             </div>
                           </td>
                           {/* AMOUNT */}
                           <td className="p-4">
                             <div>
-                              <span className="font-mono font-bold text-[#18452E] block">₦{p.promisedAmount.toLocaleString()}</span>
+                              <span className="font-mono font-semibold text-[#18452E] block">₦{p.promisedAmount.toLocaleString()}</span>
                               <span className="text-[9px] uppercase font-mono text-stone-400 block">{p.paymentType} Promise</span>
                             </div>
                           </td>
@@ -1640,7 +1640,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                           {/* REASON & NOTE */}
                           <td className="p-4 max-w-xs">
                             <div className="space-y-0.5">
-                              <span className="font-bold text-#6B7280 block">{p.reasonForDelay}</span>
+                              <span className="font-semibold text-#6B7280 block">{p.reasonForDelay}</span>
                               {p.note && <span className="text-[10px] text-stone-400 italic block">"{p.note}"</span>}
                             </div>
                           </td>
@@ -1651,18 +1651,18 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                               <div className="flex items-center space-x-1">
                                 <span className="text-[9px] text-stone-400 uppercase font-mono">Landlord:</span>
                                 {p.acknowledgedByLandlord ? (
-                                  <span className="text-[9px] text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">ACK</span>
+                                  <span className="text-[9px] text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">ACK</span>
                                 ) : (
-                                  <span className="text-[9px] text-stone-400 font-bold bg-stone-50 px-1.5 py-0.5 rounded">PENDING</span>
+                                  <span className="text-[9px] text-stone-400 font-semibold bg-stone-50 px-1.5 py-0.5 rounded">PENDING</span>
                                 )}
                               </div>
                               {/* PMC ACK */}
                               <div className="flex items-center space-x-1">
                                 <span className="text-[9px] text-stone-400 uppercase font-mono">PMC:</span>
                                 {p.acknowledgedByPMC ? (
-                                  <span className="text-[9px] text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">ACK</span>
+                                  <span className="text-[9px] text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">ACK</span>
                                 ) : (
-                                  <span className="text-[9px] text-stone-400 font-bold bg-stone-50 px-1.5 py-0.5 rounded">PENDING</span>
+                                  <span className="text-[9px] text-stone-400 font-semibold bg-stone-50 px-1.5 py-0.5 rounded">PENDING</span>
                                 )}
                               </div>
                             </div>
@@ -1680,7 +1680,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                               {(!p.acknowledgedByLandlord && (role === 'Landlord' || role === 'Admin')) && (
                                 <button 
                                   onClick={() => handleAcknowledgePromise(p.id, 'Landlord')}
-                                  className="px-2 py-1 bg-amber-500 text-white hover:bg-amber-600 rounded font-bold uppercase transition text-[8px] tracking-wider cursor-pointer"
+                                  className="px-2 py-1 bg-amber-500 text-white hover:bg-amber-600 rounded font-semibold uppercase transition text-[8px] tracking-wider cursor-pointer"
                                 >
                                   Ack Landlord
                                 </button>
@@ -1688,7 +1688,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                               {(!p.acknowledgedByPMC && (role === 'PMC' || role === 'Admin')) && (
                                 <button 
                                   onClick={() => handleAcknowledgePromise(p.id, 'PMC')}
-                                  className="px-2 py-1 bg-amber-500 text-white hover:bg-amber-600 rounded font-bold uppercase transition text-[8px] tracking-wider cursor-pointer"
+                                  className="px-2 py-1 bg-amber-500 text-white hover:bg-amber-600 rounded font-semibold uppercase transition text-[8px] tracking-wider cursor-pointer"
                                 >
                                   Ack PMC
                                 </button>
@@ -1699,14 +1699,14 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                                 <div className="flex gap-1">
                                   <button 
                                     onClick={() => handleUpdatePromiseStatus(p.id, 'Fulfilled')}
-                                    className="px-2 py-1 bg-emerald-600 text-white hover:bg-emerald-700 rounded font-bold uppercase transition text-[8px] tracking-wider cursor-pointer font-mono"
+                                    className="px-2 py-1 bg-emerald-600 text-white hover:bg-emerald-700 rounded font-semibold uppercase transition text-[8px] tracking-wider cursor-pointer font-mono"
                                   >
                                     {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
                                     Verify Payment
                                   </button>
                                   <button 
                                     onClick={() => handleUpdatePromiseStatus(p.id, 'Broken Promise')}
-                                    className="px-2 py-1 bg-rose-600 text-white hover:bg-rose-700 rounded font-bold uppercase transition text-[8px] tracking-wider cursor-pointer font-mono"
+                                    className="px-2 py-1 bg-rose-600 text-white hover:bg-rose-700 rounded font-semibold uppercase transition text-[8px] tracking-wider cursor-pointer font-mono"
                                   >
                                     Mark Default
                                   </button>
@@ -1714,10 +1714,10 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                               )}
                               
                               {p.status === 'Fulfilled' && (
-                                <span className="text-[9px] font-mono text-emerald-650 font-bold">Closed (Fulfilled)</span>
+                                <span className="text-[9px] font-mono text-emerald-650 font-semibold">Closed (Fulfilled)</span>
                               )}
                               {p.status === 'Broken Promise' && (
-                                <span className="text-[9px] font-mono text-rose-600 font-bold">Closed (Broken)</span>
+                                <span className="text-[9px] font-mono text-rose-600 font-semibold">Closed (Broken)</span>
                               )}
                             </div>
                           </td>
@@ -1745,7 +1745,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
           <div className="bg-white rounded-[var(--radius-large)] max-w-lg w-full border border-stone-200 shadow-sm p-6 space-y-5 animate-scale-up text-xs sm:text-sm">
             <div className="flex items-center space-x-2.5 text-[#18452E] border-b pb-3">
               <Bot className="w-6 h-6" />
-              <h3 className="font-display font-black text-sm uppercase">Confirm Bulk Collection Reminders Dispatch</h3>
+              <h3 className="font-display font-semibold text-sm uppercase">Confirm Bulk Collection Reminders Dispatch</h3>
             </div>
 
             <div className="space-y-3">
@@ -1755,22 +1755,22 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
               <div className="bg-stone-50 border p-4 rounded-2xl space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-bold">Total Recipients:</span>
-                  <span className="font-bold text-#132A1D">{showBulkConfirmModal.tenants.length} Tenants</span>
+                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-semibold">Total Recipients:</span>
+                  <span className="font-semibold text-#132A1D">{showBulkConfirmModal.tenants.length} Tenants</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-bold">Total Outstanding:</span>
-                  <span className="font-mono font-black text-rose-700">₦{showBulkConfirmModal.totalOutstanding.toLocaleString()}</span>
+                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-semibold">Total Outstanding:</span>
+                  <span className="font-mono font-semibold text-rose-700">₦{showBulkConfirmModal.totalOutstanding.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-bold">Estimated Deliveries:</span>
-                  <span className="font-bold text-#132A1D">{showBulkConfirmModal.tenants.length * selectedChannels.length} Alerts</span>
+                  <span className="text-#6B7280 font-mono text-[9px] uppercase font-semibold">Estimated Deliveries:</span>
+                  <span className="font-semibold text-#132A1D">{showBulkConfirmModal.tenants.length * selectedChannels.length} Alerts</span>
                 </div>
               </div>
 
               {/* Channel Selector */}
               <div className="space-y-1.5">
-                <label className="block text-[10px] font-mono text-stone-400 uppercase font-black tracking-widest">ENABLED CHANNELS</label>
+                <label className="block text-[10px] font-mono text-stone-400 uppercase font-semibold tracking-widest">ENABLED CHANNELS</label>
                 <div className="flex flex-wrap gap-2">
                   {['In-App', 'Email', 'SMS', 'WhatsApp'].map(ch => {
                     const isSelected = selectedChannels.includes(ch as any);
@@ -1784,7 +1784,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                             setSelectedChannels(prev => [...prev, ch as any]);
                           }
                         }}
-                        className={`px-3 py-1.5 border rounded-xl font-bold uppercase text-[10px] transition ${
+                        className={`px-3 py-1.5 border rounded-xl font-semibold uppercase text-[10px] transition ${
                           isSelected ? 'bg-[#18452E] text-white border-[#0E2F1F]' : 'bg-white border-stone-250 text-#6B7280 hover:bg-stone-50'
                         }`}
                       >
@@ -1799,13 +1799,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="flex gap-2 pt-2 border-t">
               <button 
                 onClick={handleConfirmBulkReminders}
-                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-black uppercase transition shadow-md cursor-pointer"
+                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-semibold uppercase transition shadow-md cursor-pointer"
               >
                 Confirm &amp; Dispatch Bulk
               </button>
               <button 
                 onClick={() => setShowBulkConfirmModal(null)}
-                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2.5 rounded-xl text-[10px] font-black uppercase transition cursor-pointer"
+                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2.5 rounded-xl text-[10px] font-semibold uppercase transition cursor-pointer"
               >
                 Cancel
               </button>
@@ -1823,9 +1823,9 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="flex items-center space-x-2 text-[#18452E] border-b pb-3 justify-between">
               <div className="flex items-center space-x-2">
                 <Bot className="w-5.5 h-5.5" />
-                <h3 className="font-display font-black text-sm uppercase">Automated Personalized Reminder Preview</h3>
+                <h3 className="font-display font-semibold text-sm uppercase">Automated Personalized Reminder Preview</h3>
               </div>
-              <span className="font-mono text-[9px] text-[#18452E] bg-[#18452E]/10 px-2 py-0.5 rounded font-black uppercase">LIVE PREVIEW</span>
+              <span className="font-mono text-[9px] text-[#18452E] bg-[#18452E]/10 px-2 py-0.5 rounded font-semibold uppercase">LIVE PREVIEW</span>
             </div>
 
             <p className="text-#6B7280 leading-normal">
@@ -1852,8 +1852,8 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                   <strong>₦{(showSingleReminderModal.serviceChargeAmount - showSingleReminderModal.serviceChargePaid).toLocaleString()}</strong>
                 </div>
                 <div className="flex justify-between pt-1">
-                  <span className="font-bold text-rose-800">Total Arrears Balance:</span>
-                  <strong className="text-rose-800 font-bold">₦{((showSingleReminderModal.rentAmount - showSingleReminderModal.rentPaid) + (showSingleReminderModal.serviceChargeAmount - showSingleReminderModal.serviceChargePaid)).toLocaleString()}</strong>
+                  <span className="font-semibold text-rose-800">Total Arrears Balance:</span>
+                  <strong className="text-rose-800 font-semibold">₦{((showSingleReminderModal.rentAmount - showSingleReminderModal.rentPaid) + (showSingleReminderModal.serviceChargeAmount - showSingleReminderModal.serviceChargePaid)).toLocaleString()}</strong>
                 </div>
               </div>
 
@@ -1876,7 +1876,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             {/* Channel Selector */}
             <div className="space-y-1.5">
-              <label className="block text-[10px] font-mono text-stone-400 uppercase font-black tracking-widest">ENABLED CHANNELS FOR DISPATCH</label>
+              <label className="block text-[10px] font-mono text-stone-400 uppercase font-semibold tracking-widest">ENABLED CHANNELS FOR DISPATCH</label>
               <div className="flex flex-wrap gap-2">
                 {['In-App', 'Email', 'SMS', 'WhatsApp'].map(ch => {
                   const isSelected = selectedChannels.includes(ch as any);
@@ -1890,7 +1890,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                           setSelectedChannels(prev => [...prev, ch as any]);
                         }
                       }}
-                      className={`px-3 py-1.5 border rounded-xl font-bold uppercase text-[10px] transition ${
+                      className={`px-3 py-1.5 border rounded-xl font-semibold uppercase text-[10px] transition ${
                         isSelected ? 'bg-[#18452E] text-white border-[#0E2F1F]' : 'bg-white border-stone-250 text-#6B7280 hover:bg-stone-50'
                       }`}
                     >
@@ -1904,13 +1904,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="flex gap-2 pt-2 border-t">
               <button 
                 onClick={handleConfirmSingleReminder}
-                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-black uppercase transition shadow-md cursor-pointer"
+                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-semibold uppercase transition shadow-md cursor-pointer"
               >
                 Dispatch Personalized Alert
               </button>
               <button 
                 onClick={() => setShowSingleReminderModal(null)}
-                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2.5 rounded-xl text-[10px] font-black uppercase transition cursor-pointer"
+                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2.5 rounded-xl text-[10px] font-semibold uppercase transition cursor-pointer"
               >
                 Close
               </button>
@@ -1929,32 +1929,32 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
               <div className="bg-emerald-100 p-2.5 rounded-full text-emerald-800">
                 <Receipt className="w-7 h-7" />
               </div>
-              <h3 className="font-display font-black text-sm uppercase text-[#18452E] tracking-wider mt-1">AUTO-GENERATED SETTLED RECEIPT</h3>
-              <span className="bg-emerald-100 text-emerald-800 text-[9px] font-mono font-black px-2.5 py-0.5 rounded uppercase">SMART AUTOMATION COMPLIANT</span>
+              <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] tracking-wider mt-1">AUTO-GENERATED SETTLED RECEIPT</h3>
+              <span className="bg-emerald-100 text-emerald-800 text-[9px] font-mono font-semibold px-2.5 py-0.5 rounded uppercase">SMART AUTOMATION COMPLIANT</span>
             </div>
 
             <div className="bg-stone-50 border border-stone-150 p-4 rounded-2xl space-y-2 text-#132A1D font-mono text-[11px]">
               <div className="flex justify-between border-b pb-1">
                 <span>Receipt Number:</span>
-                <span className="font-bold text-#132A1D">{showReceiptModal.ref}</span>
+                <span className="font-semibold text-#132A1D">{showReceiptModal.ref}</span>
               </div>
               <div className="flex justify-between border-b pb-1">
                 <span>Tenant Name:</span>
-                <span className="font-bold text-#132A1D">{showReceiptModal.tenant.tenantName}</span>
+                <span className="font-semibold text-#132A1D">{showReceiptModal.tenant.tenantName}</span>
               </div>
               <div className="flex justify-between border-b pb-1">
                 <span>Property Unit:</span>
-                <span className="font-bold text-#132A1D">{showReceiptModal.tenant.propertyName} ({showReceiptModal.tenant.unitNumber})</span>
+                <span className="font-semibold text-#132A1D">{showReceiptModal.tenant.propertyName} ({showReceiptModal.tenant.unitNumber})</span>
               </div>
               <div className="flex justify-between border-b pb-1">
                 <span>Payment Category:</span>
-                <span className="font-bold text-#132A1D">{showReceiptModal.paymentType}</span>
+                <span className="font-semibold text-#132A1D">{showReceiptModal.paymentType}</span>
               </div>
               <div className="flex justify-between border-b pb-1">
                 <span>Date Settled:</span>
-                <span className="font-bold text-#132A1D">{showReceiptModal.date}</span>
+                <span className="font-semibold text-#132A1D">{showReceiptModal.date}</span>
               </div>
-              <div className="flex justify-between pt-1 text-sm border-t font-black">
+              <div className="flex justify-between pt-1 text-sm border-t font-semibold">
                 <span className="text-[#18452E]">Total Amount Paid:</span>
                 <span className="text-[#18452E]">₦{showReceiptModal.amount.toLocaleString()}</span>
               </div>
@@ -1966,7 +1966,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             <button 
               onClick={() => setShowReceiptModal(null)}
-              className="w-full bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider transition cursor-pointer"
+              className="w-full bg-[#18452E] hover:bg-[#18452E] text-white py-2.5 rounded-xl text-[10px] font-semibold uppercase tracking-wider transition cursor-pointer"
             >
               Acknowledge &amp; Close Receipt
             </button>
@@ -1980,11 +1980,11 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
       {showAddRuleModal && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full border border-stone-200 shadow-sm p-6 space-y-4 animate-scale-up text-xs sm:text-sm">
-            <h3 className="font-display font-black text-sm uppercase text-[#18452E] border-b pb-2">Add Automated Reminder Rule</h3>
+            <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] border-b pb-2">Add Automated Reminder Rule</h3>
             
             <div className="space-y-4">
               <div>
-                <label className="block text-[10px] font-mono text-stone-400 uppercase font-black tracking-widest mb-1.5">Trigger Event</label>
+                <label className="block text-[10px] font-mono text-stone-400 uppercase font-semibold tracking-widest mb-1.5">Trigger Event</label>
                 <input 
                   type="text"
                   placeholder="e.g. 5 days overdue"
@@ -1995,7 +1995,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono text-stone-400 uppercase font-black tracking-widest mb-1.5">Channels</label>
+                <label className="block text-[10px] font-mono text-stone-400 uppercase font-semibold tracking-widest mb-1.5">Channels</label>
                 <div className="flex flex-wrap gap-2">
                   {['In-App', 'Email', 'SMS', 'WhatsApp'].map(ch => {
                     const isSelected = newRule.channels.includes(ch);
@@ -2009,7 +2009,7 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                             setNewRule(prev => ({ ...prev, channels: [...prev.channels, ch] }));
                           }
                         }}
-                        className={`px-3 py-1.5 border rounded-xl font-bold uppercase text-[10px] transition ${
+                        className={`px-3 py-1.5 border rounded-xl font-semibold uppercase text-[10px] transition ${
                           isSelected ? 'bg-[#18452E] text-white border-[#0E2F1F]' : 'bg-white border-stone-250 text-#6B7280 hover:bg-stone-50'
                         }`}
                       >
@@ -2024,13 +2024,13 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
             <div className="flex gap-2 pt-2 border-t">
               <button 
                 onClick={handleAddRule}
-                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2 rounded-xl text-[10px] font-black uppercase transition cursor-pointer"
+                className="flex-1 bg-[#18452E] hover:bg-[#18452E] text-white py-2 rounded-xl text-[10px] font-semibold uppercase transition cursor-pointer"
               >
                 Create Rule
               </button>
               <button 
                 onClick={() => setShowAddRuleModal(false)}
-                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2 rounded-xl text-[10px] font-black uppercase transition cursor-pointer"
+                className="flex-1 bg-stone-50 hover:bg-stone-200 text-#6B7280 py-2 rounded-xl text-[10px] font-semibold uppercase transition cursor-pointer"
               >
                 Cancel
               </button>

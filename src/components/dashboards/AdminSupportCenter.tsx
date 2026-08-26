@@ -221,7 +221,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         <div>
           <div className="flex items-center space-x-2 text-[#18452E]">
             <HelpCircle className="w-5 h-5" />
-            <h2 className="font-display font-black text-#132A1D text-lg uppercase tracking-wider">
+            <h2 className="font-display font-semibold text-#132A1D text-lg uppercase tracking-wider">
               Platform Support Tickets Command Center
             </h2>
           </div>
@@ -236,10 +236,10 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         {/* Card 1: Open Tickets */}
         <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-#6B7280">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider">Open Tickets</span>
+            <span className="text-[10px] font-mono font-semibold uppercase tracking-wider">Open Tickets</span>
             <MessageSquare className="w-4 h-4 text-amber-600" />
           </div>
-          <div className="text-2xl font-display font-extrabold text-#132A1D">
+          <div className="text-2xl font-display font-semibold text-#132A1D">
             {openTicketsCount}
           </div>
           <span className="text-[10px] text-stone-400 block">Pending admin resolution</span>
@@ -248,10 +248,10 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         {/* Card 2: Urgent Tickets */}
         <div className="bg-red-50/80 p-4 rounded-2xl border border-red-200 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-red-700">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider">Urgent Tickets</span>
+            <span className="text-[10px] font-mono font-semibold uppercase tracking-wider">Urgent Tickets</span>
             <AlertTriangle className="w-4 h-4 text-red-600" />
           </div>
-          <div className="text-2xl font-display font-extrabold text-red-900">
+          <div className="text-2xl font-display font-semibold text-red-900">
             {urgentOpenTicketsCount}
           </div>
           <span className="text-[10px] text-red-700 font-medium block">Account lockouts or payment issues</span>
@@ -260,10 +260,10 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         {/* Card 3: Average Response Time */}
         <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-#6B7280">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider">Avg Response Time</span>
+            <span className="text-[10px] font-mono font-semibold uppercase tracking-wider">Avg Response Time</span>
             <Clock className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-2xl font-display font-extrabold text-[#18452E]">
+          <div className="text-2xl font-display font-semibold text-[#18452E]">
             {avgResponseTimeHours} <span className="text-xs font-normal text-#6B7280">hrs</span>
           </div>
           <span className="text-[10px] text-stone-400 block">First admin response metric</span>
@@ -272,10 +272,10 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         {/* Card 4: Tickets Resolved This Month */}
         <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs space-y-1">
           <div className="flex items-center justify-between text-#6B7280">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider">Resolved This Month</span>
+            <span className="text-[10px] font-mono font-semibold uppercase tracking-wider">Resolved This Month</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-2xl font-display font-extrabold text-#132A1D">
+          <div className="text-2xl font-display font-semibold text-#132A1D">
             {resolvedThisMonth.length}
           </div>
           <span className="text-[10px] text-stone-400 block">Completed support dockets</span>
@@ -303,7 +303,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-3 py-2 bg-white border border-stone-200 rounded-xl text-xs font-bold text-#132A1D"
+                className="px-3 py-2 bg-white border border-stone-200 rounded-xl text-xs font-semibold text-#132A1D"
               >
                 <option value="All">All Statuses</option>
                 <option value="New">New</option>
@@ -315,7 +315,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
               <select
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value)}
-                className="px-3 py-2 bg-white border border-stone-200 rounded-xl text-xs font-bold text-#132A1D"
+                className="px-3 py-2 bg-white border border-stone-200 rounded-xl text-xs font-semibold text-#132A1D"
               >
                 <option value="All">All Priorities</option>
                 <option value="Urgent">Urgent</option>
@@ -354,12 +354,12 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
                         className="hover:bg-stone-50/80 transition cursor-pointer group"
                         onClick={() => setSelectedTicket(t)}
                       >
-                        <td className="p-3.5 font-mono font-extrabold text-[#18452E]">
+                        <td className="p-3.5 font-mono font-semibold text-[#18452E]">
                           #{t.refNumber}
                         </td>
 
                         <td className="p-3.5">
-                          <strong className="block text-#132A1D font-bold">{t.userName}</strong>
+                          <strong className="block text-#132A1D font-semibold">{t.userName}</strong>
                           <span className="text-[10px] font-mono text-#6B7280 uppercase px-1.5 py-0.2 bg-stone-50 rounded">
                             {t.userRole}
                           </span>
@@ -370,7 +370,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
                         </td>
 
                         <td className="p-3.5">
-                          <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(t.priority)}`}>
+                          <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(t.priority)}`}>
                             {t.priority}
                           </span>
                         </td>
@@ -380,7 +380,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
                         </td>
 
                         <td className="p-3.5">
-                          <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(t.status)}`}>
+                          <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(t.status)}`}>
                             {t.status}
                           </span>
                         </td>
@@ -391,7 +391,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
                               e.stopPropagation();
                               setSelectedTicket(t);
                             }}
-                            className="px-3 py-1.5 bg-stone-50 group-hover:bg-[#18452E] group-hover:text-white text-#132A1D rounded-lg text-xs font-bold transition cursor-pointer"
+                            className="px-3 py-1.5 bg-stone-50 group-hover:bg-[#18452E] group-hover:text-white text-#132A1D rounded-lg text-xs font-semibold transition cursor-pointer"
                           >
                             Respond
                           </button>
@@ -409,7 +409,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
         <div className="space-y-6 animate-fade-in">
           <button
             onClick={() => setSelectedTicket(null)}
-            className="px-3.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
+            className="px-3.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to All Tickets</span>
@@ -419,13 +419,13 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
           <div className="bg-white border border-stone-200 rounded-2xl p-5 space-y-4 shadow-2xs">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 pb-3">
               <div className="flex items-center space-x-2">
-                <span className="font-mono font-black text-base text-[#18452E] bg-emerald-50 px-3 py-1 rounded-xl border border-emerald-200">
+                <span className="font-mono font-semibold text-base text-[#18452E] bg-emerald-50 px-3 py-1 rounded-xl border border-emerald-200">
                   #{selectedTicket.refNumber}
                 </span>
-                <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(selectedTicket.priority)}`}>
+                <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(selectedTicket.priority)}`}>
                   {selectedTicket.priority} Priority
                 </span>
-                <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(selectedTicket.status)}`}>
+                <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(selectedTicket.status)}`}>
                   {selectedTicket.status}
                 </span>
               </div>
@@ -438,18 +438,18 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               <div>
                 <span className="text-stone-400 font-mono text-[10px] uppercase block">Submitting User</span>
-                <strong className="text-#132A1D font-bold text-sm">{selectedTicket.userName}</strong>
+                <strong className="text-#132A1D font-semibold text-sm">{selectedTicket.userName}</strong>
                 <span className="text-[10px] text-#6B7280 block">{selectedTicket.userRole} &bull; {selectedTicket.userEmail}</span>
               </div>
 
               <div>
                 <span className="text-stone-400 font-mono text-[10px] uppercase block">Issue Category</span>
-                <strong className="text-#132A1D font-bold">{selectedTicket.category}</strong>
+                <strong className="text-#132A1D font-semibold">{selectedTicket.category}</strong>
               </div>
 
               <div>
                 <span className="text-stone-400 font-mono text-[10px] uppercase block">Contact Preference</span>
-                <strong className="text-#132A1D font-bold">{selectedTicket.contactPreference}</strong>
+                <strong className="text-#132A1D font-semibold">{selectedTicket.contactPreference}</strong>
               </div>
 
               {selectedTicket.affectedPageOrFeature && (
@@ -465,7 +465,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
 
           {/* THREADED MESSAGES */}
           <div className="space-y-4">
-            <h3 className="font-display font-bold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
+            <h3 className="font-display font-semibold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
               <MessageSquare className="w-4 h-4 text-[#18452E]" />
               <span>Conversation Thread</span>
             </h3>
@@ -484,13 +484,13 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
                   >
                     <div className="flex items-center justify-between gap-2 border-b border-stone-200/50 pb-2 mb-2">
                       <div className="flex items-center space-x-2">
-                        <div className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-[10px] ${
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center font-semibold text-[10px] ${
                           isAdmin ? 'bg-[#18452E] text-white' : 'bg-stone-200 text-#132A1D'
                         }`}>
                           {isAdmin ? <ShieldAlert className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
                         </div>
-                        <span className="font-bold text-xs text-#132A1D">{msg.senderName}</span>
-                        <span className={`text-[9px] font-mono px-2 py-0.2 rounded font-bold uppercase ${
+                        <span className="font-semibold text-xs text-#132A1D">{msg.senderName}</span>
+                        <span className={`text-[9px] font-mono px-2 py-0.2 rounded font-semibold uppercase ${
                           isAdmin ? 'bg-emerald-800 text-white' : 'bg-stone-50 text-#6B7280'
                         }`}>
                           {msg.senderRole}
@@ -529,13 +529,13 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
 
           {/* ADMIN RESPONSE FORM */}
           <form onSubmit={handleAdminResponseSubmit} className="bg-white border border-stone-200 rounded-2xl p-5 space-y-4 shadow-sm">
-            <h4 className="font-display font-extrabold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
+            <h4 className="font-display font-semibold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
               <Send className="w-4 h-4 text-[#18452E]" />
               <span>Admin Response &amp; Status Update</span>
             </h4>
 
             <div>
-              <label className="block text-xs font-bold text-#132A1D mb-1">
+              <label className="block text-xs font-semibold text-#132A1D mb-1">
                 Admin Message to User *
               </label>
               <textarea
@@ -550,13 +550,13 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-#132A1D mb-1">
+                <label className="block text-xs font-semibold text-#132A1D mb-1">
                   Update Ticket Status *
                 </label>
                 <select
                   value={newStatus}
                   onChange={(e) => setNewStatus(e.target.value as SupportStatus)}
-                  className="w-full p-2.5 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-#132A1D"
+                  className="w-full p-2.5 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-#132A1D"
                 >
                   <option value="In Progress">In Progress</option>
                   <option value="Awaiting User Response">Awaiting User Response</option>
@@ -566,7 +566,7 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
 
               <div className="flex items-end">
                 {responseSuccess && (
-                  <span className="text-xs text-emerald-800 font-bold bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 w-full block text-center">
+                  <span className="text-xs text-emerald-800 font-semibold bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 w-full block text-center">
                     {responseSuccess}
                   </span>
                 )}
@@ -577,13 +577,13 @@ export default function AdminSupportCenter({ session }: AdminSupportCenterProps)
               <button
                 type="button"
                 onClick={() => setSelectedTicket(null)}
-                className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs rounded-xl cursor-pointer"
+                className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs rounded-xl cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-[#18452E] hover:bg-[#112d22] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer shadow-md flex items-center space-x-2"
+                className="px-5 py-2.5 bg-[#18452E] hover:bg-[#112d22] text-white font-semibold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer shadow-md flex items-center space-x-2"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Send Admin Response</span>

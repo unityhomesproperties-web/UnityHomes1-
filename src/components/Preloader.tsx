@@ -173,7 +173,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 1, ease: "easeOut" }}
         >
-          <h1 className="font-display font-black text-2xl md:text-3xl text-white tracking-[0.2em] md:tracking-[0.25em] uppercase">
+          <h1 className="font-display font-semibold text-2xl md:text-3xl text-white tracking-[0.2em] md:tracking-[0.25em] uppercase">
             Unity Homes
           </h1>
           <p className="font-mono text-[9px] md:text-[10px] text-[#C9A84C] tracking-[0.3em] uppercase mt-2">

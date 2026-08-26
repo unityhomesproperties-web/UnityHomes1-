@@ -135,10 +135,10 @@ export default function ProfileCompletionIndicator({
       {/* Header and Ring Row */}
       <div className="flex items-center justify-between pb-3.5 border-b border-stone-200">
         <div>
-          <h3 className="font-display font-black text-teal-950 uppercase text-xs tracking-wider">
+          <h3 className="font-display font-semibold text-teal-950 uppercase text-xs tracking-wider">
             PMC PROFILE COMPLETION VETTING
           </h3>
-          <p className="text-stone-400 font-light text-[11px] mt-1 leading-relaxed">
+          <p className="text-stone-400 font-normal text-[11px] mt-1 leading-relaxed">
             Complete the compliance checklist to authorize unlimited tenant remittances and custom statements.
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function ProfileCompletionIndicator({
               className="transition-all duration-500 ease-out"
             />
           </svg>
-          <span className="absolute font-mono font-black text-xs text-teal-950">
+          <span className="absolute font-mono font-semibold text-xs text-teal-950">
             {percentage}%
           </span>
         </div>
@@ -192,7 +192,7 @@ export default function ProfileCompletionIndicator({
                   <IconComponent className="w-4 h-4" />
                 </div>
                 <div>
-                  <strong className="block text-xs font-bold">{item.label}</strong>
+                  <strong className="block text-xs font-semibold">{item.label}</strong>
                   <span className="text-[10px] text-stone-400 font-mono uppercase tracking-wider block mt-0.5">
                     {item.completed ? 'COMPLIANT & SECURE' : 'ACTION REQUIRED'}
                   </span>
@@ -202,13 +202,13 @@ export default function ProfileCompletionIndicator({
               {!item.completed ? (
                 <button
                   onClick={item.action}
-                  className="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl text-[10px] uppercase tracking-wider flex items-center space-x-1 cursor-pointer transition shadow-xs"
+                  className="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl text-[10px] uppercase tracking-wider flex items-center space-x-1 cursor-pointer transition shadow-xs"
                 >
                   <span>{item.actionLabel}</span>
                   <ArrowRight className="w-3 h-3" />
                 </button>
               ) : (
-                <span className="px-2.5 py-1 text-[9px] font-bold text-emerald-850 font-mono uppercase bg-emerald-100 rounded-lg">
+                <span className="px-2.5 py-1 text-[9px] font-semibold text-emerald-850 font-mono uppercase bg-emerald-100 rounded-lg">
                   Passed
                 </span>
               )}

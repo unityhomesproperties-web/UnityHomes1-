@@ -300,13 +300,13 @@ function AdminComplaintOversightSection({
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-stone-200 pb-4">
         <div>
-          <h3 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-2">
+          <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase flex items-center gap-2">
             <span>🛡️ Complaint Routing & Statutory Oversight Master Ledger</span>
-            <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] rounded-full font-mono font-bold">
+            <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] rounded-full font-mono font-semibold">
               {complaints.length} Total Registered
             </span>
           </h3>
-          <p className="text-xs text-#6B7280 font-light mt-0.5">
+          <p className="text-xs text-#6B7280 font-normal mt-0.5">
             Real-time oversight of all platform complaints. Reassign routing paths, issue binding admin responses, and audit complete timelines.
           </p>
         </div>
@@ -321,13 +321,13 @@ function AdminComplaintOversightSection({
           <div className=" border-2 border-amber-400 rounded-[var(--radius-large)] p-5 space-y-4 shadow-xs">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-amber-200 pb-3">
               <div className="flex items-center gap-2.5">
-                <div className="p-2 bg-amber-500 text-stone-950 font-black rounded-xl text-xs shrink-0 flex items-center justify-center">
+                <div className="p-2 bg-amber-500 text-stone-950 font-semibold rounded-xl text-xs shrink-0 flex items-center justify-center">
                   <ShieldAlert className="w-5 h-5 text-stone-950" />
                 </div>
                 <div>
-                  <h4 className="font-display font-black text-amber-950 uppercase text-xs tracking-wider flex items-center gap-2">
+                  <h4 className="font-display font-semibold text-amber-950 uppercase text-xs tracking-wider flex items-center gap-2">
                     <span>⚡ Escalated Complaints (Admin Review & Resolution Required)</span>
-                    <span className="px-2.5 py-0.5 bg-amber-200 text-amber-900 rounded-full font-mono text-[10px] font-bold">
+                    <span className="px-2.5 py-0.5 bg-amber-200 text-amber-900 rounded-full font-mono text-[10px] font-semibold">
                       {escalatedList.length} Case{escalatedList.length > 1 ? 's' : ''}
                     </span>
                   </h4>
@@ -347,7 +347,7 @@ function AdminComplaintOversightSection({
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-stone-200 pb-2">
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-mono text-[10px] font-bold text-amber-900 bg-amber-100 px-2 py-0.5 rounded">
+                          <span className="font-mono text-[10px] font-semibold text-amber-900 bg-amber-100 px-2 py-0.5 rounded">
                             {c.id}
                           </span>
                           <strong className="text-#132A1D text-xs">{c.propertyName} &bull; {c.unit}</strong>
@@ -358,7 +358,7 @@ function AdminComplaintOversightSection({
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="px-2.5 py-1 bg-amber-500 text-stone-950 rounded font-mono font-bold text-[10px] uppercase">
+                        <span className="px-2.5 py-1 bg-amber-500 text-stone-950 rounded font-mono font-semibold text-[10px] uppercase">
                           {c.status === 'Escalated' ? `Escalated (${daysOpen} days open)` : `Status: ${c.status}`}
                         </span>
                       </div>
@@ -371,7 +371,7 @@ function AdminComplaintOversightSection({
                     {/* Response History */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                       <div className="p-2.5 bg-amber-50/50 rounded-xl border border-amber-200/60">
-                        <span className="block font-mono text-[9px] font-bold text-amber-900 uppercase mb-1">
+                        <span className="block font-mono text-[9px] font-semibold text-amber-900 uppercase mb-1">
                           Landlord Response ({c.landlordName || 'Landlord'})
                         </span>
                         {c.landlordResponse ? (
@@ -382,7 +382,7 @@ function AdminComplaintOversightSection({
                       </div>
 
                       <div className="p-2.5 bg-emerald-50/50 rounded-xl border border-emerald-200/60">
-                        <span className="block font-mono text-[9px] font-bold text-emerald-900 uppercase mb-1">
+                        <span className="block font-mono text-[9px] font-semibold text-emerald-900 uppercase mb-1">
                           PMC Response ({c.managementCompanyId || 'PMC Handler'})
                         </span>
                         {c.pmcResponse ? (
@@ -402,7 +402,7 @@ function AdminComplaintOversightSection({
                     {/* Action Outcomes */}
                     {c.escalation_outcome ? (
                       <div className="p-3 bg-#132A1D text-white rounded-xl text-xs space-y-1">
-                        <span className="text-[10px] font-mono font-bold uppercase text-amber-400 block">
+                        <span className="text-[10px] font-mono font-semibold uppercase text-amber-400 block">
                           Outcome Applied: {c.escalation_outcome}
                         </span>
                         {c.resolutionNote && <p className="text-stone-200 text-[11px]">&quot;{c.resolutionNote}&quot;</p>}
@@ -416,7 +416,7 @@ function AdminComplaintOversightSection({
                             setEscalatingActionComplaint(c);
                             setSelectedOutcome('Resolved by Admin');
                           }}
-                          className="px-3.5 py-2 bg-emerald-800 hover:bg-emerald-900 text-white font-bold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
+                          className="px-3.5 py-2 bg-emerald-800 hover:bg-emerald-900 text-white font-semibold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
                         >
                           1. Resolved by Admin
                         </button>
@@ -426,7 +426,7 @@ function AdminComplaintOversightSection({
                             setEscalatingActionComplaint(c);
                             setSelectedOutcome('Returned to Primary Handler');
                           }}
-                          className="px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
+                          className="px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
                         >
                           2. Return to Primary Handler (48h)
                         </button>
@@ -436,7 +436,7 @@ function AdminComplaintOversightSection({
                             setEscalatingActionComplaint(c);
                             setSelectedOutcome('Serious Concern Flagged');
                           }}
-                          className="px-3.5 py-2 bg-red-700 hover:bg-red-800 text-white font-bold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
+                          className="px-3.5 py-2 bg-red-700 hover:bg-red-800 text-white font-semibold rounded-xl text-[10px] uppercase tracking-wider cursor-pointer shadow-xs"
                         >
                           3. Flag Serious Concern
                         </button>
@@ -453,7 +453,7 @@ function AdminComplaintOversightSection({
       {/* Filter Bar */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 bg-amber-50/80 p-4 rounded-2xl border border-stone-200 text-xs">
         <div>
-          <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">Filter by Category</label>
+          <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">Filter by Category</label>
           <select
             value={categoryFilter}
             onChange={(e) => setCategoryFilter(e.target.value)}
@@ -472,7 +472,7 @@ function AdminComplaintOversightSection({
         </div>
 
         <div>
-          <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">Filter by Routing Path</label>
+          <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">Filter by Routing Path</label>
           <select
             value={pathFilter}
             onChange={(e) => setPathFilter(e.target.value)}
@@ -488,7 +488,7 @@ function AdminComplaintOversightSection({
         </div>
 
         <div>
-          <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">Filter by Status</label>
+          <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">Filter by Status</label>
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
@@ -521,10 +521,10 @@ function AdminComplaintOversightSection({
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-stone-200/80 pb-3">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <strong className="text-#132A1D font-bold text-sm">{c.complaint_category || c.category}</strong>
+                      <strong className="text-#132A1D font-semibold text-sm">{c.complaint_category || c.category}</strong>
                       <span className="font-mono text-[10px] text-stone-400">({c.id})</span>
                       {c.urgency && (
-                        <span className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase ${c.urgency === 'Urgent' ? 'bg-red-600 text-white' : 'bg-blue-600 text-white'}`}>
+                        <span className={`px-2 py-0.5 rounded text-[8px] font-semibold uppercase ${c.urgency === 'Urgent' ? 'bg-red-600 text-white' : 'bg-blue-600 text-white'}`}>
                           {c.urgency}
                         </span>
                       )}
@@ -534,7 +534,7 @@ function AdminComplaintOversightSection({
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className={`px-2.5 py-1 rounded text-[9px] font-bold uppercase border ${statusBadgeClass}`}>
+                    <span className={`px-2.5 py-1 rounded text-[9px] font-semibold uppercase border ${statusBadgeClass}`}>
                       {c.status}
                     </span>
                   </div>
@@ -543,15 +543,15 @@ function AdminComplaintOversightSection({
                 {/* Routing info & Primary/Secondary Recipients */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-white p-3 rounded-xl border border-stone-150 text-[10px] font-mono">
                   <div>
-                    <span className="text-stone-400 uppercase block font-bold">Routing Path</span>
-                    <span className="text-#132A1D font-bold">{c.routingPath || 'Path 1'}</span>
+                    <span className="text-stone-400 uppercase block font-semibold">Routing Path</span>
+                    <span className="text-#132A1D font-semibold">{c.routingPath || 'Path 1'}</span>
                   </div>
                   <div>
-                    <span className="text-stone-400 uppercase block font-bold">Primary Recipient</span>
-                    <span className="text-emerald-800 font-black uppercase">{c.primaryRecipientRole || 'Admin'}</span>
+                    <span className="text-stone-400 uppercase block font-semibold">Primary Recipient</span>
+                    <span className="text-emerald-800 font-semibold uppercase">{c.primaryRecipientRole || 'Admin'}</span>
                   </div>
                   <div>
-                    <span className="text-stone-400 uppercase block font-bold">Secondary Recipient</span>
+                    <span className="text-stone-400 uppercase block font-semibold">Secondary Recipient</span>
                     <span className="text-#132A1D uppercase">{c.secondaryRecipientRole || 'None (Oversight)'}</span>
                   </div>
                 </div>
@@ -600,7 +600,7 @@ function AdminComplaintOversightSection({
                         setNewPrimaryRole((c.primaryRecipientRole as any) || 'Admin');
                         setReassignReason('');
                       }}
-                      className="px-3 py-1.5 bg-stone-200 hover:bg-stone-300 text-#132A1D font-bold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
+                      className="px-3 py-1.5 bg-stone-200 hover:bg-stone-300 text-#132A1D font-semibold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
                     >
                       🔄 Reassign Routing
                     </button>
@@ -613,7 +613,7 @@ function AdminComplaintOversightSection({
                         setAdminActionTaken(c.adminActionTaken || '');
                         setAdminNewStatus(c.status === 'Resolved' ? 'Resolved' : 'Responded');
                       }}
-                      className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
+                      className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
                     >
                       💬 Admin Direct Response
                     </button>
@@ -621,7 +621,7 @@ function AdminComplaintOversightSection({
                     <button
                       type="button"
                       onClick={() => setExpandedTimelineId(expandedTimelineId === c.id ? null : c.id)}
-                      className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
+                      className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-lg text-[10px] uppercase font-mono transition cursor-pointer"
                     >
                       {expandedTimelineId === c.id ? 'Hide Audit Log' : '📜 View Activity Log'}
                     </button>
@@ -631,7 +631,7 @@ function AdminComplaintOversightSection({
                 {/* Expandable Activity Log / Audit Trail */}
                 {expandedTimelineId === c.id && (
                   <div className="bg-white p-4 rounded-xl border border-stone-200 space-y-2 animate-fade-in text-[10px]">
-                    <strong className="block font-mono uppercase text-#6B7280 font-bold">Activity Log &amp; Routing Timeline</strong>
+                    <strong className="block font-mono uppercase text-#6B7280 font-semibold">Activity Log &amp; Routing Timeline</strong>
                     <div className="space-y-1.5 border-l-2 border-emerald-500 pl-3 pt-1">
                       <div className="text-#132A1D">
                         <span className="font-mono text-stone-400 block">{c.date} 09:00</span>
@@ -668,21 +668,21 @@ function AdminComplaintOversightSection({
       {reassigningComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
           <form onSubmit={handleReassignSubmit} className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
-            <h4 className="font-display font-black text-[#18452E] text-sm uppercase">
+            <h4 className="font-display font-semibold text-[#18452E] text-sm uppercase">
               Reassign Complaint Routing Path
             </h4>
-            <p className="text-#6B7280 text-[11px] font-light">
+            <p className="text-#6B7280 text-[11px] font-normal">
               Reassign complaint <strong className="font-mono">{reassigningComplaint.id}</strong> ({reassigningComplaint.complaint_category}) to a new primary recipient role.
             </p>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 New Primary Recipient Role *
               </label>
               <select
                 value={newPrimaryRole}
                 onChange={(e) => setNewPrimaryRole(e.target.value as any)}
-                className="w-full p-2.5 bg-amber-50/80 border border-stone-200 rounded-xl font-bold outline-none"
+                className="w-full p-2.5 bg-amber-50/80 border border-stone-200 rounded-xl font-semibold outline-none"
               >
                 <option value="Admin">Admin (System Controller)</option>
                 <option value="Landlord">Landlord (Property Owner)</option>
@@ -691,7 +691,7 @@ function AdminComplaintOversightSection({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 Reason for Reassignment * (Mandatory for compliance audit)
               </label>
               <textarea
@@ -708,13 +708,13 @@ function AdminComplaintOversightSection({
               <button
                 type="button"
                 onClick={() => setReassigningComplaint(null)}
-                className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-xl cursor-pointer"
+                className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl cursor-pointer"
+                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl cursor-pointer"
               >
                 Confirm Reassignment
               </button>
@@ -727,15 +727,15 @@ function AdminComplaintOversightSection({
       {respondingComplaint && (
         <div className="fixed inset-0 bg-#132A1D/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
           <form onSubmit={handleAdminResponseSubmit} className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
-            <h4 className="font-display font-black text-[#18452E] text-sm uppercase">
+            <h4 className="font-display font-semibold text-[#18452E] text-sm uppercase">
               Submit Direct Admin Response / Binding Ruling
             </h4>
-            <p className="text-#6B7280 text-[11px] font-light">
+            <p className="text-#6B7280 text-[11px] font-normal">
               Publish official Admin response for complaint <strong className="font-mono">{respondingComplaint.id}</strong> filed by {respondingComplaint.tenant}.
             </p>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 Response / Ruling Text *
               </label>
               <textarea
@@ -749,7 +749,7 @@ function AdminComplaintOversightSection({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 Action Taken / Statutory Order (Optional)
               </label>
               <input
@@ -762,13 +762,13 @@ function AdminComplaintOversightSection({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 Update Status To
               </label>
               <select
                 value={adminNewStatus}
                 onChange={(e) => setAdminNewStatus(e.target.value as any)}
-                className="w-full p-2.5 bg-amber-50/80 border border-stone-200 rounded-xl font-bold outline-none"
+                className="w-full p-2.5 bg-amber-50/80 border border-stone-200 rounded-xl font-semibold outline-none"
               >
                 <option value="Responded">Responded (Under Active Administrative Monitoring)</option>
                 <option value="Resolved">Resolved (Case Formally Closed)</option>
@@ -779,13 +779,13 @@ function AdminComplaintOversightSection({
               <button
                 type="button"
                 onClick={() => setRespondingComplaint(null)}
-                className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-xl cursor-pointer"
+                className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl cursor-pointer font-mono"
+                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl cursor-pointer font-mono"
               >
                 Publish Admin Response
               </button>
@@ -800,7 +800,7 @@ function AdminComplaintOversightSection({
           <form onSubmit={handleEscalationActionSubmit} className="bg-white rounded-[var(--radius-large)] max-w-lg w-full p-6 space-y-4 border border-stone-200 shadow-sm text-xs">
             <div className="flex items-center gap-2 text-amber-700">
               <ShieldAlert className="w-5 h-5" />
-              <h4 className="font-display font-black text-#132A1D text-sm uppercase">
+              <h4 className="font-display font-semibold text-#132A1D text-sm uppercase">
                 Resolve Escalated Complaint #{escalatingActionComplaint.id}
               </h4>
             </div>
@@ -810,13 +810,13 @@ function AdminComplaintOversightSection({
             </p>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#132A1D uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#132A1D uppercase mb-1">
                 Select Resolution Outcome *
               </label>
               <select
                 value={selectedOutcome}
                 onChange={(e) => setSelectedOutcome(e.target.value as any)}
-                className="w-full p-3 bg-amber-50/80 border border-stone-300 rounded-xl font-bold text-xs outline-none"
+                className="w-full p-3 bg-amber-50/80 border border-stone-300 rounded-xl font-semibold text-xs outline-none"
               >
                 <option value="Resolved by Admin">1. Resolved by Admin (Direct Admin Closure)</option>
                 <option value="Returned to Primary Handler">2. Returned to Primary Handler (48-Hour Directive)</option>
@@ -826,7 +826,7 @@ function AdminComplaintOversightSection({
 
             {selectedOutcome === 'Resolved by Admin' && (
               <div>
-                <label className="block text-[10px] font-mono font-bold text-emerald-900 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-emerald-900 uppercase mb-1">
                   Resolution Note * (Sent to Tenant, Landlord, and PMC)
                 </label>
                 <textarea
@@ -842,7 +842,7 @@ function AdminComplaintOversightSection({
 
             {selectedOutcome === 'Returned to Primary Handler' && (
               <div>
-                <label className="block text-[10px] font-mono font-bold text-amber-900 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-amber-900 uppercase mb-1">
                   Directive Message to Handler * (Must resolve within 48 hours)
                 </label>
                 <textarea
@@ -866,13 +866,13 @@ function AdminComplaintOversightSection({
               <button
                 type="button"
                 onClick={() => setEscalatingActionComplaint(null)}
-                className="px-4 py-2.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-xl cursor-pointer"
+                className="px-4 py-2.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-stone-950 font-extrabold rounded-xl cursor-pointer shadow-md uppercase tracking-wider"
+                className="px-4 py-2.5 bg-amber-500 hover:bg-amber-600 text-stone-950 font-semibold rounded-xl cursor-pointer shadow-md uppercase tracking-wider"
               >
                 Apply Outcome & Send Notifications
               </button>
@@ -928,7 +928,7 @@ function AdminLevel2VerificationQueue() {
   return (
     <div className="bg-amber-50/80 border-2 border-amber-300 rounded-[var(--radius-large)] p-6 space-y-4 shadow-sm animate-fade-in mb-6">
       {toastMessage && (
-        <div className="p-3 bg-emerald-800 text-white text-xs font-bold rounded-2xl shadow-sm">
+        <div className="p-3 bg-emerald-800 text-white text-xs font-semibold rounded-2xl shadow-sm">
           {toastMessage}
         </div>
       )}
@@ -936,11 +936,11 @@ function AdminLevel2VerificationQueue() {
       <div className="flex items-center justify-between border-b border-amber-200 pb-3">
         <div className="flex items-center gap-2">
           <ShieldCheck className="w-5 h-5 text-amber-700" />
-          <h3 className="font-display font-black text-amber-950 text-sm uppercase">
+          <h3 className="font-display font-semibold text-amber-950 text-sm uppercase">
             Level 2 Tenant Identity Verification Queue
           </h3>
         </div>
-        <span className="px-2.5 py-1 bg-amber-200 text-amber-900 font-mono font-bold text-[10px] rounded-full">
+        <span className="px-2.5 py-1 bg-amber-200 text-amber-900 font-mono font-semibold text-[10px] rounded-full">
           {pendingRequests.length} Pending
         </span>
       </div>
@@ -954,7 +954,7 @@ function AdminLevel2VerificationQueue() {
           return (
             <div key={req.id} className="bg-white rounded-2xl border border-amber-200 p-4 space-y-3 shadow-xs">
               {duplicates.length > 0 && (
-                <div className="p-3 bg-rose-100 border border-rose-300 text-rose-900 rounded-xl flex items-center gap-2 text-xs font-bold">
+                <div className="p-3 bg-rose-100 border border-rose-300 text-rose-900 rounded-xl flex items-center gap-2 text-xs font-semibold">
                   <ShieldAlert className="w-4 h-4 text-rose-700 shrink-0" />
                   <span>
                     DUPLICATE NIN WARNING: NIN ({req.nin}) matches existing profile "{duplicates[0].full_name}" ({duplicates[0].id})!
@@ -964,16 +964,16 @@ function AdminLevel2VerificationQueue() {
 
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-stone-200 pb-2">
                 <div>
-                  <strong className="text-#132A1D text-xs font-bold block">{tenantName}</strong>
+                  <strong className="text-#132A1D text-xs font-semibold block">{tenantName}</strong>
                   <span className="text-[10px] text-#6B7280 font-mono">
                     ID: {req.tenant_id} &bull; Submitted: {new Date(req.submitted_at).toLocaleDateString()}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[9px] font-mono font-bold bg-amber-50/80 px-2 py-0.5 rounded-lg text-#132A1D">
+                  <span className="text-[9px] font-mono font-semibold bg-amber-50/80 px-2 py-0.5 rounded-lg text-#132A1D">
                     Type: {req.id_type || 'NIN'}
                   </span>
-                  <span className="text-[9px] font-mono font-bold bg-amber-50/80 px-2 py-0.5 rounded-lg text-#132A1D">
+                  <span className="text-[9px] font-mono font-semibold bg-amber-50/80 px-2 py-0.5 rounded-lg text-#132A1D">
                     NIN: {req.nin || 'Not provided'}
                   </span>
                 </div>
@@ -981,7 +981,7 @@ function AdminLevel2VerificationQueue() {
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <span className="text-[9px] font-mono uppercase text-stone-400 block font-bold">Government ID Document</span>
+                  <span className="text-[9px] font-mono uppercase text-stone-400 block font-semibold">Government ID Document</span>
                   <a href={req.government_id_photo} target="_blank" rel="noopener noreferrer">
                     <img 
                       src={req.government_id_photo} 
@@ -991,7 +991,7 @@ function AdminLevel2VerificationQueue() {
                   </a>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[9px] font-mono uppercase text-stone-400 block font-bold">Verification Selfie Photo</span>
+                  <span className="text-[9px] font-mono uppercase text-stone-400 block font-semibold">Verification Selfie Photo</span>
                   <a href={req.verification_selfie_photo} target="_blank" rel="noopener noreferrer">
                     <img 
                       src={req.verification_selfie_photo} 
@@ -1005,14 +1005,14 @@ function AdminLevel2VerificationQueue() {
               <div className="flex gap-2 pt-2 border-t border-stone-200">
                 <button
                   onClick={() => handleApprove(req)}
-                  className="flex-1 py-2 bg-emerald-800 text-white font-bold rounded-xl hover:bg-emerald-900 text-xs transition cursor-pointer flex items-center justify-center gap-1"
+                  className="flex-1 py-2 bg-emerald-800 text-white font-semibold rounded-xl hover:bg-emerald-900 text-xs transition cursor-pointer flex items-center justify-center gap-1"
                 >
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Approve & Grant Verified Badge</span>
                 </button>
                 <button
                   onClick={() => handleReject(req)}
-                  className="flex-1 py-2 bg-rose-100 text-rose-800 font-bold rounded-xl hover:bg-rose-200 text-xs transition cursor-pointer flex items-center justify-center gap-1"
+                  className="flex-1 py-2 bg-rose-100 text-rose-800 font-semibold rounded-xl hover:bg-rose-200 text-xs transition cursor-pointer flex items-center justify-center gap-1"
                 >
                   <XCircle className="w-3.5 h-3.5" />
                   <span>Reject Request</span>
@@ -2176,10 +2176,10 @@ export default function AdminDashboard({
       {/* SIDEBAR TABS */}
       <div className="w-full lg:w-72 shrink-0 spatial-glass border border-stone-200/50 rounded-2xl p-4 space-y-2 overflow-y-auto max-h-[90vh]">
         <div className="border-b border-stone-200/50 pb-3 mb-3 text-center">
-          <span className="text-[10px] font-mono font-bold tracking-widest text-[#C9A84C] block uppercase">
+          <span className="text-[10px] font-mono font-semibold tracking-widest text-[#C9A84C] block uppercase">
             ADMINISTRATOR COMMAND
           </span>
-          <h2 className="font-display font-black text-xs text-[#18452E]">SYSTEM CONTROLLER</h2>
+          <h2 className="font-display font-semibold text-xs text-[#18452E]">SYSTEM CONTROLLER</h2>
         </div>
         
         {sidebarTabs.map((tab) => {
@@ -2197,7 +2197,7 @@ export default function AdminDashboard({
               }}
               className={`w-full text-left py-2 px-3 rounded-lg text-xs font-medium cursor-pointer transition-all flex items-center justify-between ${
                 isActive 
-                  ? 'bg-[#18452E] text-white font-bold shadow-md transform translate-x-1' 
+                  ? 'bg-[#18452E] text-white font-semibold shadow-md transform translate-x-1' 
                   : 'text-#6B7280 hover:bg-[#18452E]/5 hover:text-[#18452E]'
               }`}
             >
@@ -2222,17 +2222,17 @@ export default function AdminDashboard({
               </span>
               <div>
                 <div className="flex items-center space-x-2">
-                  <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Core Services Vitals</h4>
+                  <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Core Services Vitals</h4>
                   
                   {/* ADDITION EIGHT: CONNECTIVITY INDICATOR (Ties into Firestore health) */}
                   <div className="flex items-center space-x-1 px-2 py-0.5 rounded-full bg-amber-50/80 border border-stone-200">
                     <span className={`w-2 h-2 rounded-full ${firestoreStatus === 'Error' ? 'bg-rose-600 animate-ping' : 'bg-emerald-600'}`}></span>
-                    <span className="text-[9px] font-mono font-bold text-#6B7280 uppercase">
+                    <span className="text-[9px] font-mono font-semibold text-#6B7280 uppercase">
                       {firestoreStatus === 'Error' ? 'Offline' : 'Online'}
                     </span>
                   </div>
                 </div>
-                <p className="text-[10px] text-#6B7280 font-light">Real-time status monitoring of critical integrated service APIs.</p>
+                <p className="text-[10px] text-#6B7280 font-normal">Real-time status monitoring of critical integrated service APIs.</p>
               </div>
             </div>
 
@@ -2276,8 +2276,8 @@ export default function AdminDashboard({
               <div className="flex items-start space-x-2.5">
                 <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
-                  <h5 className="font-bold text-rose-950 uppercase tracking-wider text-[10px] font-mono">ALERT: Degradation of Core System Subservices</h5>
-                  <div className="mt-2 space-y-2 text-[11px] text-rose-900 leading-relaxed font-light">
+                  <h5 className="font-semibold text-rose-950 uppercase tracking-wider text-[10px] font-mono">ALERT: Degradation of Core System Subservices</h5>
+                  <div className="mt-2 space-y-2 text-[11px] text-rose-900 leading-relaxed font-normal">
                     {firestoreStatus === 'Error' && (
                       <p>
                         &bull; <strong>Firestore Database Outage:</strong> Direct writes are blocked. Local operations will be cached offline. 
@@ -2315,14 +2315,14 @@ export default function AdminDashboard({
           ) : (
             <div className="mt-3 py-1.5 px-3 bg-emerald-50 text-emerald-900 border border-emerald-100 rounded-xl text-[10px] font-mono flex justify-between items-center">
               <span>&bull; Status Check: ALL CENTRAL DATA LINKS SECURE</span>
-              <span className="font-bold text-emerald-700">100% DISPATCH OK</span>
+              <span className="font-semibold text-emerald-700">100% DISPATCH OK</span>
             </div>
           )}
 
           {/* Interactive Simulation Controls Panel */}
           <div className="mt-3 border-t border-stone-200 pt-3">
             <details className="outline-none">
-              <summary className="text-[10px] font-bold text-#6B7280 uppercase cursor-pointer hover:text-#132A1D select-none">
+              <summary className="text-[10px] font-semibold text-#6B7280 uppercase cursor-pointer hover:text-#132A1D select-none">
                 Interactive Service Testing Controls &bull; Toggle Health Vitals
               </summary>
               <div className="mt-3 grid grid-cols-2 sm:grid-cols-5 gap-2">
@@ -2332,7 +2332,7 @@ export default function AdminDashboard({
                     setFirestoreStatus(next);
                     setHealthStatusWithTimestamp('Firestore', next);
                   }}
-                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-bold transition ${
+                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-semibold transition ${
                     firestoreStatus === 'Connected' ? 'bg-[#18452E]/10 text-emerald-800' : 'bg-rose-100 text-rose-800'
                   }`}
                 >
@@ -2344,7 +2344,7 @@ export default function AdminDashboard({
                     setAuthStatus(next);
                     setHealthStatusWithTimestamp('Auth', next);
                   }}
-                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-bold transition ${
+                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-semibold transition ${
                     authStatus === 'Active' ? 'bg-[#18452E]/10 text-emerald-800' : 'bg-rose-100 text-rose-800'
                   }`}
                 >
@@ -2356,7 +2356,7 @@ export default function AdminDashboard({
                     setPaystackStatus(next);
                     setHealthStatusWithTimestamp('Paystack', next);
                   }}
-                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-bold transition ${
+                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-semibold transition ${
                     paystackStatus === 'Connected' ? 'bg-[#18452E]/10 text-emerald-800' : 'bg-rose-100 text-rose-800'
                   }`}
                 >
@@ -2368,7 +2368,7 @@ export default function AdminDashboard({
                     setEmailStatus(next);
                     setHealthStatusWithTimestamp('Email', next);
                   }}
-                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-bold transition ${
+                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-semibold transition ${
                     emailStatus === 'Sending' ? 'bg-[#18452E]/10 text-emerald-800' : 'bg-rose-100 text-rose-800'
                   }`}
                 >
@@ -2380,14 +2380,14 @@ export default function AdminDashboard({
                     setStorageStatus(next);
                     setHealthStatusWithTimestamp('Storage', next);
                   }}
-                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-bold transition ${
+                  className={`py-1 px-2 rounded-lg text-[9px] font-mono font-semibold transition ${
                     storageStatus === 'Available' ? 'bg-[#18452E]/10 text-emerald-800' : 'bg-rose-100 text-rose-800'
                   }`}
                 >
                   Storage: {storageStatus}
                 </button>
               </div>
-              <div className="mt-2 text-[9px] text-stone-400 leading-relaxed font-light flex items-center justify-between">
+              <div className="mt-2 text-[9px] text-stone-400 leading-relaxed font-normal flex items-center justify-between">
                 <span>Toggle keys to test Firestore offline routing or email latency scenarios.</span>
                 <button 
                   type="button" 
@@ -2435,12 +2435,12 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
-                  <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Platform Announcements Manager</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Platform Announcements Manager</h3>
                   <p className="text-xs text-#6B7280 mt-1">Publish role-scoped passive notices that appear on user dashboards.</p>
                 </div>
                 <button 
                   onClick={() => triggerBrandedExport('Platform Announcements', announcements, 'All Active & Archived')} 
-                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
+                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
                 >
                   <FileSpreadsheet className="w-4 h-4 text-emerald-700" />
                   <span>Export Announcements</span>
@@ -2450,13 +2450,13 @@ export default function AdminDashboard({
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Announcement Creation Form */}
                 <form onSubmit={saveAnnouncement} className="lg:col-span-1 bg-amber-50/80 border border-stone-200 rounded-2xl p-5 space-y-4">
-                  <h4 className="font-display font-bold text-xs uppercase text-[#18452E] flex items-center space-x-1.5">
+                  <h4 className="font-display font-semibold text-xs uppercase text-[#18452E] flex items-center space-x-1.5">
                     <PlusCircle className="w-4 h-4" />
                     <span>{editingAnnId ? 'Edit Announcement' : 'New Announcement'}</span>
                   </h4>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Announcement Title</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Announcement Title</label>
                     <input 
                       type="text" 
                       value={annTitle} 
@@ -2469,7 +2469,7 @@ export default function AdminDashboard({
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-bold text-#6B7280 uppercase">Target Audience</label>
+                      <label className="text-[10px] font-semibold text-#6B7280 uppercase">Target Audience</label>
                       <select 
                         value={annTarget} 
                         onChange={(e) => setAnnTarget(e.target.value)}
@@ -2484,7 +2484,7 @@ export default function AdminDashboard({
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-bold text-#6B7280 uppercase">Urgency Level</label>
+                      <label className="text-[10px] font-semibold text-#6B7280 uppercase">Urgency Level</label>
                       <select 
                         value={annUrgency} 
                         onChange={(e) => setAnnUrgency(e.target.value as any)}
@@ -2498,7 +2498,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Expiry Date</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Expiry Date</label>
                     <input 
                       type="date" 
                       value={annExpiry} 
@@ -2509,8 +2509,8 @@ export default function AdminDashboard({
 
                   <div className="space-y-1.5">
                     <div className="flex justify-between items-center">
-                      <label className="text-[10px] font-bold text-#6B7280 uppercase">Announcement Body</label>
-                      <span className={`text-[10px] font-mono ${annBody.trim().split(/\s+/).filter(Boolean).length > 300 ? 'text-rose-600 font-bold' : 'text-stone-400'}`}>
+                      <label className="text-[10px] font-semibold text-#6B7280 uppercase">Announcement Body</label>
+                      <span className={`text-[10px] font-mono ${annBody.trim().split(/\s+/).filter(Boolean).length > 300 ? 'text-rose-600 font-semibold' : 'text-stone-400'}`}>
                         {annBody.trim().split(/\s+/).filter(Boolean).length} / 300 words
                       </span>
                     </div>
@@ -2527,7 +2527,7 @@ export default function AdminDashboard({
                   <div className="flex space-x-2 pt-2">
                     <button 
                       type="submit" 
-                      className="flex-1 py-2 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-xl uppercase tracking-wider transition cursor-pointer"
+                      className="flex-1 py-2 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-xl uppercase tracking-wider transition cursor-pointer"
                     >
                       {editingAnnId ? 'Update Notice' : 'Publish Notice'}
                     </button>
@@ -2539,7 +2539,7 @@ export default function AdminDashboard({
                           setAnnTitle('');
                           setAnnBody('');
                         }}
-                        className="px-3 py-2 bg-stone-200 hover:bg-stone-300 text-#132A1D text-xs font-bold rounded-xl"
+                        className="px-3 py-2 bg-stone-200 hover:bg-stone-300 text-#132A1D text-xs font-semibold rounded-xl"
                       >
                         Cancel
                       </button>
@@ -2549,7 +2549,7 @@ export default function AdminDashboard({
 
                 {/* Announcement Dashboard List */}
                 <div className="lg:col-span-2 space-y-4">
-                  <h4 className="font-display font-bold text-xs uppercase text-#6B7280">Live &amp; Active Notices</h4>
+                  <h4 className="font-display font-semibold text-xs uppercase text-#6B7280">Live &amp; Active Notices</h4>
                   
                   {announcements.length === 0 ? (
                     <div className="p-8 border-2 border-dashed border-stone-200 rounded-2xl text-center text-stone-400">
@@ -2562,7 +2562,7 @@ export default function AdminDashboard({
                           <div className="flex justify-between items-start">
                             <div>
                               <div className="flex items-center space-x-2">
-                                <span className={`px-2 py-0.5 text-[9px] font-bold rounded-full ${
+                                <span className={`px-2 py-0.5 text-[9px] font-semibold rounded-full ${
                                   ann.urgency === 'Urgent' ? 'bg-rose-100 text-rose-800' :
                                   ann.urgency === 'Important' ? 'bg-amber-100 text-amber-800' :
                                   'bg-sky-100 text-sky-800'
@@ -2571,16 +2571,16 @@ export default function AdminDashboard({
                                 </span>
                                 <span className="text-[10px] font-mono text-stone-400">Target: {ann.targetGroup}</span>
                               </div>
-                              <h5 className="font-display font-black text-xs text-[#18452E] mt-1">{ann.title}</h5>
+                              <h5 className="font-display font-semibold text-xs text-[#18452E] mt-1">{ann.title}</h5>
                             </div>
-                            <span className={`px-2 py-0.5 text-[9px] font-bold rounded ${
+                            <span className={`px-2 py-0.5 text-[9px] font-semibold rounded ${
                               ann.status === 'Published' ? 'bg-emerald-50 text-emerald-800 border border-emerald-100' : 'bg-amber-50/80 text-#6B7280'
                             }`}>
                               {ann.status}
                             </span>
                           </div>
 
-                          <p className="text-xs text-#6B7280 leading-relaxed font-light">{ann.body}</p>
+                          <p className="text-xs text-#6B7280 leading-relaxed font-normal">{ann.body}</p>
 
                           <div className="flex justify-between items-center pt-2 border-t border-stone-200 text-[10px] text-stone-400">
                             <span>Expiry: <strong>{ann.expiryDate}</strong> &bull; Created: {ann.dateCreated}</span>
@@ -2600,21 +2600,21 @@ export default function AdminDashboard({
                                 setAnnExpiry(ann.expiryDate);
                                 setAnnTarget(ann.targetGroup);
                               }}
-                              className="px-2.5 py-1 text-[10px] font-bold text-#132A1D bg-amber-50/80 hover:bg-stone-200 rounded-lg cursor-pointer"
+                              className="px-2.5 py-1 text-[10px] font-semibold text-#132A1D bg-amber-50/80 hover:bg-stone-200 rounded-lg cursor-pointer"
                             >
                               Edit
                             </button>
                             {ann.status === 'Published' && (
                               <button 
                                 onClick={() => archiveAnnouncement(ann.id)}
-                                className="px-2.5 py-1 text-[10px] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 rounded-lg cursor-pointer"
+                                className="px-2.5 py-1 text-[10px] font-semibold text-amber-700 bg-amber-50 hover:bg-amber-100 rounded-lg cursor-pointer"
                               >
                                 Archive Early
                               </button>
                             )}
                             <button 
                               onClick={() => deleteAnnouncement(ann.id)}
-                              className="px-2.5 py-1 text-[10px] font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded-lg cursor-pointer"
+                              className="px-2.5 py-1 text-[10px] font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded-lg cursor-pointer"
                             >
                               Delete
                             </button>
@@ -2634,12 +2634,12 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
-                  <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Active Broadcast Command</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Active Broadcast Command</h3>
                   <p className="text-xs text-#6B7280 mt-1">Dispatches persistent, high-priority real-time alerts into selected recipient notification streams.</p>
                 </div>
                 <button 
                   onClick={() => triggerBrandedExport('Dispatched Broadcasts', broadcastsHistory, 'All History')} 
-                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
+                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
                 >
                   <FileSpreadsheet className="w-4 h-4 text-emerald-700" />
                   <span>Export History</span>
@@ -2649,17 +2649,17 @@ export default function AdminDashboard({
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Broadcast Composor */}
                 <form onSubmit={(e) => { e.preventDefault(); setBcastPreviewRecipient({ title: bcastTitle, message: bcastMessage, urgency: bcastUrgency, target: bcastTarget, scheduleLater: bcastScheduleLater, scheduleTime: bcastScheduleTime }); }} className="lg:col-span-1 bg-amber-50/80 border border-stone-200 rounded-2xl p-5 space-y-4">
-                  <h4 className="font-display font-bold text-xs uppercase text-[#18452E] flex items-center space-x-1.5">
+                  <h4 className="font-display font-semibold text-xs uppercase text-[#18452E] flex items-center space-x-1.5">
                     <Send className="w-4 h-4" />
                     <span>Compose Active Broadcast</span>
                   </h4>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Recipient Target Group</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Recipient Target Group</label>
                     <select 
                       value={bcastTarget} 
                       onChange={(e) => setBcastTarget(e.target.value)}
-                      className="w-full p-2 bg-white border border-stone-200 rounded-xl text-xs font-sans outline-none font-bold"
+                      className="w-full p-2 bg-white border border-stone-200 rounded-xl text-xs font-sans outline-none font-semibold"
                     >
                       <option value="All Landlords">All Landlords (Passive + Active)</option>
                       <option value="All Tenants">All Tenants (Direct Verification Tenants)</option>
@@ -2672,7 +2672,7 @@ export default function AdminDashboard({
                   {/* Conditional dropdowns based on recipient selector */}
                   {bcastTarget === 'Specific Landlord' && (
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-bold text-#6B7280 uppercase">Select Landlord</label>
+                      <label className="text-[10px] font-semibold text-#6B7280 uppercase">Select Landlord</label>
                       <select 
                         value={bcastLandlordId} 
                         onChange={(e) => setBcastLandlordId(e.target.value)}
@@ -2688,7 +2688,7 @@ export default function AdminDashboard({
 
                   {bcastTarget === 'Individually named users' && (
                     <div className="space-y-1.5">
-                      <label className="text-[10px] font-bold text-#6B7280 uppercase">Enter User's Name</label>
+                      <label className="text-[10px] font-semibold text-#6B7280 uppercase">Enter User's Name</label>
                       <input 
                         type="text" 
                         value={bcastUserName} 
@@ -2700,11 +2700,11 @@ export default function AdminDashboard({
                   )}
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Urgency Level</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Urgency Level</label>
                     <select 
                       value={bcastUrgency} 
                       onChange={(e: any) => setBcastUrgency(e.target.value)}
-                      className="w-full p-2 bg-white border border-stone-200 rounded-xl text-xs font-sans outline-none font-bold text-#132A1D"
+                      className="w-full p-2 bg-white border border-stone-200 rounded-xl text-xs font-sans outline-none font-semibold text-#132A1D"
                     >
                       <option value="Low">Low Priority</option>
                       <option value="Medium">Medium Priority</option>
@@ -2714,14 +2714,14 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Broadcast Title Header (100 Chars Limit)</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Broadcast Title Header (100 Chars Limit)</label>
                     <input 
                       type="text" 
                       maxLength={100}
                       value={bcastTitle} 
                       onChange={(e) => setBcastTitle(e.target.value)} 
                       placeholder="e.g. Action Required: Settlement portal updates" 
-                      className="w-full p-2.5 bg-white border border-stone-200 rounded-xl text-xs outline-none focus:ring-1 focus:ring-[#18452E] font-bold"
+                      className="w-full p-2.5 bg-white border border-stone-200 rounded-xl text-xs outline-none focus:ring-1 focus:ring-[#18452E] font-semibold"
                       required
                     />
                     <span className="text-[9px] text-stone-400 font-mono block text-right">
@@ -2730,7 +2730,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[10px] font-bold text-#6B7280 uppercase">Message Text (500 Chars Limit)</label>
+                    <label className="text-[10px] font-semibold text-#6B7280 uppercase">Message Text (500 Chars Limit)</label>
                     <textarea 
                       value={bcastMessage} 
                       onChange={(e) => setBcastMessage(e.target.value)} 
@@ -2748,7 +2748,7 @@ export default function AdminDashboard({
                   {/* Scheduling Engine */}
                   <div className="p-3 bg-amber-50/80 border border-stone-200 rounded-xl space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-#6B7280 uppercase">Schedule for later</span>
+                      <span className="text-[10px] font-semibold text-#6B7280 uppercase">Schedule for later</span>
                       <input 
                         type="checkbox"
                         checked={bcastScheduleLater}
@@ -2758,7 +2758,7 @@ export default function AdminDashboard({
                     </div>
                     {bcastScheduleLater && (
                       <div className="space-y-1 animate-fade-in">
-                        <label className="text-[8px] font-mono font-bold text-stone-400 uppercase">Target Date &amp; Time</label>
+                        <label className="text-[8px] font-mono font-semibold text-stone-400 uppercase">Target Date &amp; Time</label>
                         <input 
                           type="datetime-local"
                           required
@@ -2787,14 +2787,14 @@ export default function AdminDashboard({
                           scheduleTime: bcastScheduleTime
                         });
                       }}
-                      className="flex-1 py-2 bg-stone-200 hover:bg-stone-300 text-#132A1D text-[10px] font-bold rounded-lg uppercase tracking-wider transition cursor-pointer flex items-center justify-center space-x-1"
+                      className="flex-1 py-2 bg-stone-200 hover:bg-stone-300 text-#132A1D text-[10px] font-semibold rounded-lg uppercase tracking-wider transition cursor-pointer flex items-center justify-center space-x-1"
                     >
                       <Eye className="w-3 h-3" />
                       <span>Preview</span>
                     </button>
                     <button 
                       type="submit" 
-                      className="flex-1 py-2 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-bold rounded-lg uppercase tracking-wider transition cursor-pointer flex items-center justify-center space-x-1"
+                      className="flex-1 py-2 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold rounded-lg uppercase tracking-wider transition cursor-pointer flex items-center justify-center space-x-1"
                     >
                       <Send className="w-3 h-3" />
                       <span>Dispatch</span>
@@ -2804,7 +2804,7 @@ export default function AdminDashboard({
 
                 {/* Broadcast Dispatch History */}
                 <div className="lg:col-span-2 space-y-4">
-                  <h4 className="font-display font-bold text-xs uppercase text-#6B7280">Dispatch Audit Log</h4>
+                  <h4 className="font-display font-semibold text-xs uppercase text-#6B7280">Dispatch Audit Log</h4>
                   
                   <div className="overflow-x-auto border border-stone-200 rounded-2xl">
                     <table className="w-full text-xs text-left text-#6B7280">
@@ -2823,16 +2823,16 @@ export default function AdminDashboard({
                             <td className="p-3 font-mono text-[10px] text-stone-400 whitespace-nowrap">{bc.timestamp}</td>
                             <td className="p-3">
                               <strong className="block text-[#18452E]">{bc.title}</strong>
-                              <span className="text-[10px] font-light block text-#6B7280 mt-0.5">{bc.message}</span>
+                              <span className="text-[10px] font-normal block text-#6B7280 mt-0.5">{bc.message}</span>
                             </td>
                             <td className="p-3">
-                              <span className="bg-emerald-55 text-emerald-800 text-[9px] font-bold px-2 py-0.5 rounded font-mono uppercase">
+                              <span className="bg-emerald-55 text-emerald-800 text-[9px] font-semibold px-2 py-0.5 rounded font-mono uppercase">
                                 {bc.segment}
                               </span>
                             </td>
-                            <td className="p-3 text-center font-mono font-bold text-#132A1D">{bc.recipientCount}</td>
+                            <td className="p-3 text-center font-mono font-semibold text-#132A1D">{bc.recipientCount}</td>
                             <td className="p-3 text-center">
-                              <span className={`font-mono font-bold text-xs ${bc.seenCount > 0 ? 'text-emerald-600' : 'text-stone-400'}`}>
+                              <span className={`font-mono font-semibold text-xs ${bc.seenCount > 0 ? 'text-emerald-600' : 'text-stone-400'}`}>
                                 {bc.seenCount}
                               </span>
                             </td>
@@ -2852,7 +2852,7 @@ export default function AdminDashboard({
                   <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-[#18452E] text-white">
                     <div className="flex items-center space-x-2">
                       <Megaphone className="w-5 h-5" />
-                      <span className="font-display font-bold uppercase">Admin Broadcast Preview</span>
+                      <span className="font-display font-semibold uppercase">Admin Broadcast Preview</span>
                     </div>
                     <button onClick={() => setBcastPreviewRecipient(null)} className="p-1 rounded-full hover:bg-white/20 transition-all text-white">
                       <X className="w-5 h-5" />
@@ -2862,19 +2862,19 @@ export default function AdminDashboard({
                   <div className="p-6 space-y-4 bg-amber-50/80">
                     <div className="bg-white rounded-2xl border border-stone-200 p-4 space-y-3 shadow-xs">
                       <div className="flex justify-between items-center text-[10px]">
-                        <span className={`px-2 py-0.5 rounded-full font-extrabold uppercase ${
+                        <span className={`px-2 py-0.5 rounded-full font-semibold uppercase ${
                           bcastPreviewRecipient.urgency === 'Urgent' ? 'bg-rose-100 text-rose-800' :
                           bcastPreviewRecipient.urgency === 'High' ? 'bg-amber-100 text-amber-800' :
                           'bg-amber-50/80 text-#6B7280'
                         }`}>
                           Urgency: {bcastPreviewRecipient.urgency}
                         </span>
-                        <span className="text-stone-400 font-mono font-bold uppercase">
+                        <span className="text-stone-400 font-mono font-semibold uppercase">
                           Target: {bcastPreviewRecipient.target}
                         </span>
                       </div>
                       
-                      <h4 className="font-bold text-stone-850 text-sm border-b border-stone-200 pb-2">{bcastPreviewRecipient.title || '(No title entered)'}</h4>
+                      <h4 className="font-semibold text-stone-850 text-sm border-b border-stone-200 pb-2">{bcastPreviewRecipient.title || '(No title entered)'}</h4>
                       
                       <p className="text-xs text-#132A1D leading-relaxed font-mono bg-amber-50/80 p-2.5 rounded-xl border border-stone-150">
                         {bcastPreviewRecipient.message || '(No message content entered)'}
@@ -2884,7 +2884,7 @@ export default function AdminDashboard({
                         <span>Routing Channels:</span>
                         <span className="px-1.5 bg-amber-50/80 text-#6B7280 rounded border border-stone-200">In-App</span>
                         <span className="px-1.5 bg-amber-50/80 text-#6B7280 rounded border border-stone-200">Email</span>
-                        <span className="text-rose-500 line-through px-1 font-bold">WhatsApp/SMS Restricted</span>
+                        <span className="text-rose-500 line-through px-1 font-semibold">WhatsApp/SMS Restricted</span>
                       </div>
                     </div>
 
@@ -2899,7 +2899,7 @@ export default function AdminDashboard({
                   <div className="px-6 py-4 bg-amber-50/80 border-t border-stone-200 flex justify-end space-x-2">
                     <button
                       onClick={() => setBcastPreviewRecipient(null)}
-                      className="px-4 py-2 border border-stone-300 hover:bg-amber-50/80 text-#132A1D font-bold rounded-xl text-xs uppercase cursor-pointer"
+                      className="px-4 py-2 border border-stone-300 hover:bg-amber-50/80 text-#132A1D font-semibold rounded-xl text-xs uppercase cursor-pointer"
                     >
                       Back to Edit
                     </button>
@@ -2908,7 +2908,7 @@ export default function AdminDashboard({
                         setBcastPreviewRecipient(null);
                         sendBroadcast(e);
                       }}
-                      className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs uppercase cursor-pointer"
+                      className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs uppercase cursor-pointer"
                     >
                       Confirm &amp; Launch
                     </button>
@@ -2924,12 +2924,12 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-stone-200 pb-4">
                 <div>
-                  <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Compliance Audit Trail</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Compliance Audit Trail</h3>
                   <p className="text-xs text-#6B7280 mt-1">Unified append-only regulatory register recording all administrative and operational activities.</p>
                 </div>
                 <button 
                   onClick={() => triggerBrandedExport('Compliance Audit Log', auditLogs, 'Filtered compliance records')} 
-                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-md"
+                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-md"
                 >
                   <Download className="w-4 h-4" />
                   <span>Download Audit Log</span>
@@ -2939,7 +2939,7 @@ export default function AdminDashboard({
               {/* Advanced Filter Box */}
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl space-y-4 text-xs">
                 <div className="flex items-center justify-between border-b border-stone-200/50 pb-2">
-                  <span className="font-bold text-[#18452E] uppercase text-[10px] font-mono">Dynamic Log Filters</span>
+                  <span className="font-semibold text-[#18452E] uppercase text-[10px] font-mono">Dynamic Log Filters</span>
                   <button 
                     onClick={() => {
                       setAuditUser('');
@@ -2958,7 +2958,7 @@ export default function AdminDashboard({
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-stone-400 uppercase">Actor Name</label>
+                    <label className="text-[9px] font-semibold text-stone-400 uppercase">Actor Name</label>
                     <input 
                       type="text" 
                       value={auditUser} 
@@ -2969,7 +2969,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-stone-400 uppercase">Actor Role</label>
+                    <label className="text-[9px] font-semibold text-stone-400 uppercase">Actor Role</label>
                     <select 
                       value={auditRole} 
                       onChange={(e) => setAuditRole(e.target.value)}
@@ -2985,7 +2985,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-stone-400 uppercase">Action Type</label>
+                    <label className="text-[9px] font-semibold text-stone-400 uppercase">Action Type</label>
                     <select 
                       value={auditAction} 
                       onChange={(e) => setAuditAction(e.target.value)}
@@ -3004,7 +3004,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-stone-400 uppercase">Target Record ID</label>
+                    <label className="text-[9px] font-semibold text-stone-400 uppercase">Target Record ID</label>
                     <input 
                       type="text" 
                       value={auditRecordId} 
@@ -3046,7 +3046,7 @@ export default function AdminDashboard({
                             <span className="text-[9px] uppercase font-mono text-stone-400 block">{log.actorRole}</span>
                           </td>
                           <td className="p-3">
-                            <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase ${
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-semibold uppercase ${
                               log.actionType.includes('SUSPENSION') ? 'bg-rose-100 text-rose-800' :
                               log.actionType.includes('DISPUTE') ? 'bg-amber-100 text-amber-800' :
                               'bg-amber-50/80 text-#132A1D'
@@ -3074,13 +3074,13 @@ export default function AdminDashboard({
                             {log.previousValue ? (
                               <div className="space-y-0.5">
                                 <span className="text-stone-400 block line-through">{log.previousValue}</span>
-                                <span className="text-emerald-700 block font-bold">{log.newValue}</span>
+                                <span className="text-emerald-700 block font-semibold">{log.newValue}</span>
                               </div>
                             ) : (
-                              <span className="text-#132A1D font-bold">{log.newValue || '-'}</span>
+                              <span className="text-#132A1D font-semibold">{log.newValue || '-'}</span>
                             )}
                           </td>
-                          <td className="p-3 text-[11px] text-#6B7280 font-light">{log.details}</td>
+                          <td className="p-3 text-[11px] text-#6B7280 font-normal">{log.details}</td>
                         </tr>
                       ))}
                   </tbody>
@@ -3093,7 +3093,7 @@ export default function AdminDashboard({
         {/* TAB 0: GLOBAL SEARCH */}
         {activeTab === 'Global Search' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Global Master Search</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Global Master Search</h3>
             <p className="text-xs text-#6B7280">Search Landlord, Tenant, PMC, Property, Unit, Booking, Document, Phone Number.</p>
             
             <div className="relative">
@@ -3103,14 +3103,14 @@ export default function AdminDashboard({
                 className="w-full p-4 pl-12 bg-amber-50/80 border border-stone-200 rounded-2xl text-xs outline-none focus:ring-2 focus:ring-[#18452E] font-mono shadow-inner"
               />
               <Search className="w-5 h-5 text-stone-400 absolute left-4 top-1/2 transform -translate-y-1/2" />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-[#18452E] text-white text-[10px] font-bold rounded-xl uppercase tracking-wider hover:bg-[#18452E] transition shadow-md cursor-pointer">
+              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-[#18452E] text-white text-[10px] font-semibold rounded-xl uppercase tracking-wider hover:bg-[#18452E] transition shadow-md cursor-pointer">
                 Scan Platform
               </button>
             </div>
             
             <div className="p-10 border-2 border-dashed border-stone-200 rounded-2xl flex flex-col items-center justify-center text-center text-stone-400">
               <Search className="w-10 h-10 mb-3 text-stone-300" />
-              <p className="text-xs font-mono font-bold uppercase tracking-widest">Awaiting Query</p>
+              <p className="text-xs font-mono font-semibold uppercase tracking-widest">Awaiting Query</p>
               <p className="text-[10px] mt-2">Enter parameters above to scan the unified database.</p>
             </div>
           </div>
@@ -3122,32 +3122,32 @@ export default function AdminDashboard({
             
             {/* TODAY'S SUMMARY CARDS */}
             <section>
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase mb-4 tracking-wider">Today's Summary</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase mb-4 tracking-wider">Today's Summary</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 <button onClick={() => triggerSuccess('Total Users view opened')} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-2xl font-display font-black text-[#18452E] mb-1">
+                  <span className="text-2xl font-display font-semibold text-[#18452E] mb-1">
                     {mockLandlords.length + mockTenants.length + mockPMCs.length + mockShortlets.length + 15}
                   </span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Total Active Users</span>
                 </button>
                 <button onClick={() => setActiveTab('Landlords')} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-2xl font-display font-black text-[#18452E] mb-1">{mockLandlords.length}</span>
+                  <span className="text-2xl font-display font-semibold text-[#18452E] mb-1">{mockLandlords.length}</span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Active Landlords</span>
                 </button>
                 <button onClick={() => setActiveTab('PMCs')} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-2xl font-display font-black text-[#18452E] mb-1">{mockPMCs.length}</span>
+                  <span className="text-2xl font-display font-semibold text-[#18452E] mb-1">{mockPMCs.length}</span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Active PMCs</span>
                 </button>
                 <button onClick={() => setActiveTab('Properties')} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-2xl font-display font-black text-[#18452E] mb-1">{properties.length}</span>
+                  <span className="text-2xl font-display font-semibold text-[#18452E] mb-1">{properties.length}</span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Properties on Platform</span>
                 </button>
                 <button onClick={() => setActiveTab('Finance')} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-lg font-display font-black text-[#18452E] mb-1">₦4.2M</span>
+                  <span className="text-lg font-display font-semibold text-[#18452E] mb-1">₦4.2M</span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Platform Revenue (Mo)</span>
                 </button>
                 <button onClick={() => setShowNotifications(true)} className="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col justify-center shadow-sm cursor-pointer hover:border-[#18452E] transition-colors text-left">
-                  <span className="text-2xl font-display font-black text-rose-600 mb-1">8</span>
+                  <span className="text-2xl font-display font-semibold text-rose-600 mb-1">8</span>
                   <span className="text-[10px] uppercase font-mono text-#6B7280 font-semibold">Open Support Issues</span>
                 </button>
               </div>
@@ -3155,7 +3155,7 @@ export default function AdminDashboard({
 
             {/* QUICK ACTIONS */}
             <section>
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase mb-4 tracking-wider">Quick Actions</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase mb-4 tracking-wider">Quick Actions</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
                   { label: 'Approve Pending Users', icon: UserCheck },
@@ -3175,7 +3175,7 @@ export default function AdminDashboard({
                     <div className="p-2 bg-amber-50/80 rounded-lg group-hover:bg-[#18452E]/10 transition-colors">
                       <action.icon className="w-4 h-4 text-[#18452E]" />
                     </div>
-                    <span className="text-xs font-bold text-#132A1D group-hover:text-[#18452E] leading-tight">{action.label}</span>
+                    <span className="text-xs font-semibold text-#132A1D group-hover:text-[#18452E] leading-tight">{action.label}</span>
                   </button>
                 ))}
               </div>
@@ -3184,7 +3184,7 @@ export default function AdminDashboard({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* PORTFOLIO INSIGHTS */}
               <section className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-sm">
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase mb-5 tracking-wider flex items-center">
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase mb-5 tracking-wider flex items-center">
                   <Activity className="w-4 h-4 mr-2" />
                   Platform Insights
                 </h3>
@@ -3206,7 +3206,7 @@ export default function AdminDashboard({
 
               {/* PRIORITY ALERTS */}
               <section className="bg-white border border-rose-200 rounded-[var(--radius-large)] p-6 shadow-sm">
-                <h3 className="font-display font-black text-rose-700 text-sm uppercase mb-5 tracking-wider flex items-center">
+                <h3 className="font-display font-semibold text-rose-700 text-sm uppercase mb-5 tracking-wider flex items-center">
                   <ShieldAlert className="w-4 h-4 mr-2" />
                   Priority Alerts
                 </h3>
@@ -3237,13 +3237,13 @@ export default function AdminDashboard({
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Landlord Management</h3>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Landlord Management</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">Manage all landlords, their portfolios, and nested tenant lists.</p>
               </div>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={() => toggleBulkMode('Landlords')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center space-x-1 cursor-pointer ${
                     bulkMode['Landlords'] ? 'bg-rose-600 text-white' : 'bg-amber-50/80 hover:bg-stone-200 text-#132A1D'
                   }`}
                 >
@@ -3252,7 +3252,7 @@ export default function AdminDashboard({
                 </button>
                 <button 
                   onClick={() => triggerBrandedExport('Landlords List', landlords, activeFilterName ? `Filter: ${activeFilterName}` : 'All Active')}
-                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
+                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Export</span>
@@ -3262,7 +3262,7 @@ export default function AdminDashboard({
 
             {/* ADDITION SEVEN: SAVED FILTERS PILLS */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider">
+              <div className="flex items-center justify-between text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider">
                 <span>Quick Saved Filters</span>
                 <button 
                   onClick={() => {
@@ -3349,21 +3349,21 @@ export default function AdminDashboard({
                         <div className="flex-1">
                         <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                           <div>
-                            <h4 className="font-display font-black text-[#18452E] text-sm uppercase">{landlordName}</h4>
+                            <h4 className="font-display font-semibold text-[#18452E] text-sm uppercase">{landlordName}</h4>
                             <span className="text-[10px] text-stone-400 font-mono">
                               Properties: {Array.from(new Set(unitsInLandlord.map(u => u.propertyName))).length} &bull; Units: {unitsInLandlord.length}
                             </span>
                           </div>
                           <div className="text-right flex items-center space-x-3 bg-amber-50/80 p-2 rounded-lg border border-stone-200">
                              <div className="text-right">
-                               <span className="block text-[9px] uppercase font-bold text-stone-400">Awaiting Remittance</span>
-                               <span className="block font-mono font-black text-#132A1D">₦{awaitingRemittance.toLocaleString()}</span>                             </div>
+                               <span className="block text-[9px] uppercase font-semibold text-stone-400">Awaiting Remittance</span>
+                               <span className="block font-mono font-semibold text-#132A1D">₦{awaitingRemittance.toLocaleString()}</span>                             </div>
                              {awaitingRemittance > 0 ? (
-                               <span className="px-2 py-1 bg-red-100 text-red-800 text-[10px] font-bold uppercase rounded tracking-wider shadow-sm border border-red-200">
+                               <span className="px-2 py-1 bg-red-100 text-red-800 text-[10px] font-semibold uppercase rounded tracking-wider shadow-sm border border-red-200">
                                  Action Required
                                </span>
                              ) : (
-                               <span className="px-2 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase rounded tracking-wider shadow-sm border border-emerald-200">
+                               <span className="px-2 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-semibold uppercase rounded tracking-wider shadow-sm border border-emerald-200">
                                  Nothing Outstanding
                                </span>
                              )}
@@ -3371,29 +3371,29 @@ export default function AdminDashboard({
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
                           <div className="bg-amber-50/80 p-3 rounded-xl border border-stone-200">
-                            <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Portfolio Value</span>
-                            <span className="block font-mono font-bold text-#132A1D text-xs">₦{expectedRent.toLocaleString()}</span>
+                            <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Portfolio Value</span>
+                            <span className="block font-mono font-semibold text-#132A1D text-xs">₦{expectedRent.toLocaleString()}</span>
                           </div>
                           <div className="bg-amber-50/80 p-3 rounded-xl border border-stone-200">
-                            <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Collected Rent</span>
-                            <span className="block font-mono font-bold text-#132A1D text-xs">₦{collectedRent.toLocaleString()}</span>
+                            <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Collected Rent</span>
+                            <span className="block font-mono font-semibold text-#132A1D text-xs">₦{collectedRent.toLocaleString()}</span>
                           </div>
                           <div className="bg-amber-50/80 p-3 rounded-xl border border-stone-200">
-                            <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Remitted Rent</span>
-                            <span className="block font-mono font-bold text-#132A1D text-xs">₦{actualRemitted.toLocaleString()}</span>
+                            <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Remitted Rent</span>
+                            <span className="block font-mono font-semibold text-#132A1D text-xs">₦{actualRemitted.toLocaleString()}</span>
                           </div>
                           <div className="bg-amber-50/80 p-3 rounded-xl border border-stone-200">
-                            <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Management Fee</span>
-                            <span className="block font-mono font-bold text-#132A1D text-xs">₦{managementFee.toLocaleString()}</span>
+                            <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Management Fee</span>
+                            <span className="block font-mono font-semibold text-#132A1D text-xs">₦{managementFee.toLocaleString()}</span>
                           </div>
                           <div className="bg-amber-50/80 p-3 rounded-xl border border-stone-200 flex flex-col justify-center items-start">
-                            <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Status</span>
+                            <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Status</span>
                             {collectedRent === 0 ? (
-                              <span className="text-[10px] bg-amber-50/80 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase border border-stone-200">No Payments Recorded</span>
+                              <span className="text-[10px] bg-amber-50/80 text-#6B7280 px-2 py-0.5 rounded font-semibold uppercase border border-stone-200">No Payments Recorded</span>
                             ) : isFullyAccounted ? (
-                              <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase border border-emerald-200">Fully Accounted</span>
+                              <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold uppercase border border-emerald-200">Fully Accounted</span>
                             ) : (
-                              <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase border border-amber-200">Discrepancy</span>
+                              <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold uppercase border border-amber-200">Discrepancy</span>
                             )}
                           </div>
                         </div>
@@ -3412,7 +3412,7 @@ export default function AdminDashboard({
                           </div>
                         ) : (
                           <div className="space-y-3">
-                            <h5 className="text-[10px] uppercase font-bold text-#6B7280 mb-2">Tenant Roster</h5>
+                            <h5 className="text-[10px] uppercase font-semibold text-#6B7280 mb-2">Tenant Roster</h5>
                             {unitsInLandlord.filter(u => u.paymentStatus !== 'Vacant').map(u => (
                               <div 
                                 key={u.id}
@@ -3425,24 +3425,24 @@ export default function AdminDashboard({
     className="w-10 h-10 rounded-full object-cover border border-stone-200"
   />
                                   <div>
-                                    <strong className="block text-[#18452E] font-bold text-sm">{u.tenantName}</strong>
+                                    <strong className="block text-[#18452E] font-semibold text-sm">{u.tenantName}</strong>
                                     <span className="block text-#6B7280 text-[10px] mt-0.5">{u.propertyName} ({u.unitNumber})</span>
                                   </div>
                                 </div>
                                 <div className="flex items-center space-x-4">
                                   {u.paymentStatus === 'Paid' ? (
-                                    <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold uppercase">Paid</span>
+                                    <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-semibold uppercase">Paid</span>
                                   ) : u.paymentStatus === 'Due Soon' ? (
-                                    <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-bold uppercase">Due Soon</span>
+                                    <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-semibold uppercase">Due Soon</span>
                                   ) : u.paymentStatus === 'Overdue' ? (
                                     <div className="text-right">
-                                      <span className="text-[10px] bg-red-100 text-red-800 px-2 py-1 rounded font-bold uppercase block mb-1">Overdue</span>
-                                      <span className="text-xs font-mono font-black text-red-700 block">₦{u.rentAmount.toLocaleString()}</span>
+                                      <span className="text-[10px] bg-red-100 text-red-800 px-2 py-1 rounded font-semibold uppercase block mb-1">Overdue</span>
+                                      <span className="text-xs font-mono font-semibold text-red-700 block">₦{u.rentAmount.toLocaleString()}</span>
                                     </div>
                                   ) : u.paymentStatus === 'Lease Expiring Soon' ? (
-                                    <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-bold uppercase">Expiring</span>
+                                    <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-semibold uppercase">Expiring</span>
                                   ) : (
-                                    <span className="text-[10px] bg-amber-50/80 text-#132A1D px-2 py-1 rounded font-bold uppercase">{u.paymentStatus}</span>
+                                    <span className="text-[10px] bg-amber-50/80 text-#132A1D px-2 py-1 rounded font-semibold uppercase">{u.paymentStatus}</span>
                                   )}
                                 </div>
                               </div>
@@ -3461,7 +3461,7 @@ export default function AdminDashboard({
               <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
-                  <span className="text-xs font-mono font-bold text-stone-300 uppercase">
+                  <span className="text-xs font-mono font-semibold text-stone-300 uppercase">
                     {(selectedIds['Landlords'] || []).length} Checked
                   </span>
                 </div>
@@ -3471,13 +3471,13 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Landlords');
                       setShowBulkBroadcastModal(true);
                     }}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Send Broadcast
                   </button>
                   <button 
                     onClick={() => triggerBrandedExport('Bulk Selected Landlords', landlords.filter(l => (selectedIds['Landlords'] || []).includes(l.name)))}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Export
                   </button>
@@ -3486,20 +3486,20 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Landlords');
                       setShowSuspensionModal(true);
                     }}
-                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Suspend
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Landlords')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
                 </div>
                 <button 
                   onClick={() => setSelectedIds(prev => ({ ...prev, Landlords: [] }))}
-                  className="text-stone-400 hover:text-white text-xs font-bold"
+                  className="text-stone-400 hover:text-white text-xs font-semibold"
                 >
                   Clear
                 </button>
@@ -3513,13 +3513,13 @@ export default function AdminDashboard({
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Active Tenancies Verified</h3>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Active Tenancies Verified</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">Current tenants registered under zero-trust direct-routing logs.</p>
               </div>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={() => toggleBulkMode('Tenants')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center space-x-1 cursor-pointer ${
                     bulkMode['Tenants'] ? 'bg-rose-600 text-white' : 'bg-amber-50/80 hover:bg-stone-200 text-#132A1D'
                   }`}
                 >
@@ -3528,7 +3528,7 @@ export default function AdminDashboard({
                 </button>
                 <button 
                   onClick={() => triggerBrandedExport('Active Tenants List', mockTenants, activeFilterName ? `Filter: ${activeFilterName}` : 'All Verified')}
-                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
+                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Export</span>
@@ -3538,7 +3538,7 @@ export default function AdminDashboard({
 
             {/* ADDITION SEVEN: SAVED FILTERS PILLS */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider">
+              <div className="flex items-center justify-between text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider">
                 <span>Quick Saved Filters</span>
                 <button 
                   onClick={() => {
@@ -3627,7 +3627,7 @@ export default function AdminDashboard({
                           )}
                           <img src={tenant.photo} alt={tenant.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
                           <div>
-                            <span className="block font-black text-[#18452E] text-sm uppercase">{tenant.name}</span>
+                            <span className="block font-semibold text-[#18452E] text-sm uppercase">{tenant.name}</span>
                             <span className="block text-[10px] text-#6B7280 font-mono mt-0.5">{tenant.occupation} at {tenant.employer}</span>
                             <span className="block text-[10px] text-#6B7280 font-mono">{tenant.phone} | {tenant.email}</span>
                           </div>
@@ -3640,7 +3640,7 @@ export default function AdminDashboard({
                               e.stopPropagation();
                               setSelectedTenantModal(tenant);
                             }}
-                            className="text-stone-400 hover:text-[#18452E] text-xs font-mono font-bold"
+                            className="text-stone-400 hover:text-[#18452E] text-xs font-mono font-semibold"
                           >
                             Review &bull; View Profile
                           </button>
@@ -3649,19 +3649,19 @@ export default function AdminDashboard({
 
                       <div className="grid grid-cols-2 gap-3 text-xs">
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Property</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Property</span>
                           <strong className="font-mono text-#132A1D text-[10px]">{tenant.property} ({tenant.unit})</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Rent Amount</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Rent Amount</span>
                           <strong className="font-mono text-#132A1D">₦{tenant.rentAmount.toLocaleString()}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Lease End</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Lease End</span>
                           <strong className="font-mono text-#132A1D">{tenant.leaseEnd}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Payment History</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Payment History</span>
                           <strong className="font-mono text-emerald-600">{tenant.paymentHistory}</strong>
                         </div>
                       </div>
@@ -3690,7 +3690,7 @@ export default function AdminDashboard({
               <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
-                  <span className="text-xs font-mono font-bold text-stone-300 uppercase">
+                  <span className="text-xs font-mono font-semibold text-stone-300 uppercase">
                     {(selectedIds['Tenants'] || []).length} Checked
                   </span>
                 </div>
@@ -3700,13 +3700,13 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Tenants');
                       setShowBulkBroadcastModal(true);
                     }}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Send Broadcast
                   </button>
                   <button 
                     onClick={() => triggerBrandedExport('Bulk Selected Tenants', mockTenants.filter(t => (selectedIds['Tenants'] || []).includes(t.id)))}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Export
                   </button>
@@ -3715,20 +3715,20 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Tenants');
                       setShowSuspensionModal(true);
                     }}
-                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Suspend
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Tenants')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
                 </div>
                 <button 
                   onClick={() => setSelectedIds(prev => ({ ...prev, Tenants: [] }))}
-                  className="text-stone-400 hover:text-white text-xs font-bold"
+                  className="text-stone-400 hover:text-white text-xs font-semibold"
                 >
                   Clear
                 </button>
@@ -3744,7 +3744,7 @@ export default function AdminDashboard({
             <div className=" border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div>
-                  <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider flex items-center space-x-1.5">
+                  <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase tracking-wider flex items-center space-x-1.5">
                     <Mail className="w-4 h-4 text-[#C9A84C]" />
                     <span>Payment Receipt Email Simulator</span>
                   </h4>
@@ -3753,7 +3753,7 @@ export default function AdminDashboard({
                 
                 {/* Failure Toggle switch */}
                 <div className="flex items-center space-x-2.5">
-                  <span className="text-[10px] font-mono font-bold text-#6B7280 uppercase tracking-wider">
+                  <span className="text-[10px] font-mono font-semibold text-#6B7280 uppercase tracking-wider">
                     {emailFailureSimulation ? "SMTP Failure Active" : "SMTP Success Active"}
                   </span>
                   <button
@@ -3781,14 +3781,14 @@ export default function AdminDashboard({
                 <div className="p-3 bg-rose-50 border border-rose-150 rounded-xl flex items-start space-x-2 text-[11px] text-rose-800">
                   <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold">Gateway Obstruction Triggered:</span> All receipt dispatch attempts will fail to connect with the remote SMTP server. An immediate high-priority Admin Notification alert will flag on the dashboard to warn staff of customer invoice communication outages.
+                    <span className="font-semibold">Gateway Obstruction Triggered:</span> All receipt dispatch attempts will fail to connect with the remote SMTP server. An immediate high-priority Admin Notification alert will flag on the dashboard to warn staff of customer invoice communication outages.
                   </div>
                 </div>
               ) : (
                 <div className="p-3 bg-emerald-50/50 border border-emerald-150 rounded-xl flex items-start space-x-2 text-[11px] text-[#18452E]">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold">Gateway Healthy:</span> Confirmation will generate a branded email, trigger automatic PDF Transparency Certificate generation, upload to the Document Vault, and append an immutable transaction log entry to the platform.
+                    <span className="font-semibold">Gateway Healthy:</span> Confirmation will generate a branded email, trigger automatic PDF Transparency Certificate generation, upload to the Document Vault, and append an immutable transaction log entry to the platform.
                   </div>
                 </div>
               )}
@@ -3797,7 +3797,7 @@ export default function AdminDashboard({
             {/* 2. PENDING CLEARANCE QUEUE */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div>
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase tracking-wider">
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase tracking-wider">
                   Pending Receipt Verification Queue
                 </h4>
                 <p className="text-[10px] text-#6B7280 mt-0.5">Incoming payments awaiting admin verification before ledger certification.</p>
@@ -3813,13 +3813,13 @@ export default function AdminDashboard({
                     <div key={p.id} className="p-4 bg-amber-50/40 border border-amber-150 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4">
                       <div className="space-y-1 text-xs">
                         <div className="flex items-center space-x-2">
-                          <span className="font-black text-#132A1D">{p.tenantName}</span>
-                          <span className="bg-amber-100 text-amber-800 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase">
+                          <span className="font-semibold text-#132A1D">{p.tenantName}</span>
+                          <span className="bg-amber-100 text-amber-800 text-[9px] font-semibold px-1.5 py-0.5 rounded-full uppercase">
                             Awaiting Audit
                           </span>
                         </div>
                         <p className="text-#6B7280 text-[11px]">
-                          Property: <span className="font-bold text-#6B7280">{p.propertyName}</span> &bull; Unit: <span className="font-bold text-#6B7280">{p.unitNumber}</span>
+                          Property: <span className="font-semibold text-#6B7280">{p.propertyName}</span> &bull; Unit: <span className="font-semibold text-#6B7280">{p.unitNumber}</span>
                         </p>
                         <p className="text-stone-400 text-[10px]">
                           Target Clearance Bank: <span className="font-mono">{p.receivingBankName} ({p.receivingAccountNumber})</span>
@@ -3828,7 +3828,7 @@ export default function AdminDashboard({
 
                       <div className="flex items-center justify-between md:justify-end gap-4 shrink-0">
                         <div className="text-right">
-                          <span className="block font-mono font-black text-[#18452E] text-sm">
+                          <span className="block font-mono font-semibold text-[#18452E] text-sm">
                             ₦{p.amount.toLocaleString()}
                           </span>
                           <span className="text-[10px] font-mono text-stone-400">Ref: {p.ref}</span>
@@ -3836,7 +3836,7 @@ export default function AdminDashboard({
 
                         <button
                           onClick={() => handleConfirmRentPayment(p.id)}
-                          className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer transition shadow-sm"
+                          className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer transition shadow-sm"
                         >
                           <Check className="w-3.5 h-3.5" />
                           <span>Clear & Certified</span>
@@ -3852,7 +3852,7 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-150 pb-3 gap-4">
                 <div>
-                  <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Ledger Rental Payments</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Ledger Rental Payments</h3>
                   {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
                   <p className="text-xs text-#6B7280 mt-0.5">Real-time ledger entries of verified rent confirmations.</p>
                 </div>
@@ -3866,7 +3866,7 @@ export default function AdminDashboard({
                   />
                   <button 
                     onClick={() => triggerBrandedExport('Rent Payments Ledger', landlordUnits.filter(u => u.paymentStatus === 'Paid'), activeFilterName ? `Filter: ${activeFilterName}` : 'All Confirmations')}
-                    className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
+                    className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>Download Ledger</span>
@@ -3876,7 +3876,7 @@ export default function AdminDashboard({
 
               {/* ADDITION SEVEN: SAVED FILTERS PILLS */}
               <div className="space-y-2">
-                <div className="flex items-center justify-between text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider">
+                <div className="flex items-center justify-between text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider">
                   <span>Quick Saved Filters</span>
                   <button 
                     onClick={() => {
@@ -3941,16 +3941,16 @@ export default function AdminDashboard({
                   return (
                     <div key={u.id} className="p-4 bg-emerald-50/50 border border-emerald-150 rounded-xl flex items-center justify-between text-xs hover:shadow-xs transition duration-150">
                       <div>
-                        <span className="font-bold text-[#18452E]">{u.tenantName} - {u.propertyName}</span>
+                        <span className="font-semibold text-[#18452E]">{u.tenantName} - {u.propertyName}</span>
                         <span className="block text-[10px] text-stone-400 mt-0.5">{getCollectionAccountTextForAdmin(u.propertyName)}</span>
                         {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-                        <span className="block text-[9px] font-mono font-bold text-[#C9A84C] mt-1">Rent Period &bull; Q3 2026 Confirmation</span>
+                        <span className="block text-[9px] font-mono font-semibold text-[#C9A84C] mt-1">Rent Period &bull; Q3 2026 Confirmation</span>
                       </div>
                       <div className="flex items-center space-x-4">
                         <div className="text-right">
-                          <span className="block font-mono font-bold text-[#18452E] text-sm">₦{u.rentAmount.toLocaleString()}</span>
+                          <span className="block font-mono font-semibold text-[#18452E] text-sm">₦{u.rentAmount.toLocaleString()}</span>
                           {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-                          <span className="text-[9px] font-mono text-emerald-700 bg-emerald-100 rounded px-1.5 py-0.5 inline-block uppercase font-bold mt-1">Verified Payment</span>
+                          <span className="text-[9px] font-mono text-emerald-700 bg-emerald-100 rounded px-1.5 py-0.5 inline-block uppercase font-semibold mt-1">Verified Payment</span>
                         </div>
                         
                         {/* ADDITION TEN: TRANSPARENCY TIMELINE FOR PAYMENT RECORD */}
@@ -3971,7 +3971,7 @@ export default function AdminDashboard({
             {/* 4. AUTOMATED EMAIL DISPATCH LOGS */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Automated Receipt Email Logs (SMTP Dispatch)</h3>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Automated Receipt Email Logs (SMTP Dispatch)</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">A complete, scannable history of automated payment receipt emails generated by the server side Cloud Function.</p>
               </div>
 
@@ -3983,7 +3983,7 @@ export default function AdminDashboard({
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-xs border-collapse">
                     <thead>
-                      <tr className="border-b border-stone-200 text-stone-400 font-mono font-bold uppercase text-[9px] tracking-wider">
+                      <tr className="border-b border-stone-200 text-stone-400 font-mono font-semibold uppercase text-[9px] tracking-wider">
                         <th className="pb-2">Recipient</th>
                         <th className="pb-2">Subject Header</th>
                         <th className="pb-2">Dispatch Timestamp</th>
@@ -4001,7 +4001,7 @@ export default function AdminDashboard({
                             {new Date(email.sentAt).toLocaleString()}
                           </td>
                           <td className="py-2.5 text-center">
-                            <span className={`px-2 py-0.5 rounded-full font-bold text-[9px] uppercase ${
+                            <span className={`px-2 py-0.5 rounded-full font-semibold text-[9px] uppercase ${
                               email.status === 'delivered' 
                                 ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' 
                                 : 'bg-rose-100 text-rose-800 border border-rose-200'
@@ -4009,13 +4009,13 @@ export default function AdminDashboard({
                               {email.status}
                             </span>
                           </td>
-                          <td className="py-2.5 text-right font-mono text-[10px] text-[#C9A84C] font-bold">
+                          <td className="py-2.5 text-right font-mono text-[10px] text-[#C9A84C] font-semibold">
                             {email.attachments?.[0]?.fileName || 'None'}
                           </td>
                           <td className="py-2.5 text-right">
                             <button
                               onClick={() => setSelectedEmailPreview(email)}
-                              className="px-2.5 py-1 bg-amber-50/80 hover:bg-[#18452E]/10 text-[#18452E] font-bold rounded-lg text-[10px] cursor-pointer transition"
+                              className="px-2.5 py-1 bg-amber-50/80 hover:bg-[#18452E]/10 text-[#18452E] font-semibold rounded-lg text-[10px] cursor-pointer transition"
                             >
                               Inspect Email
                             </button>
@@ -4033,7 +4033,7 @@ export default function AdminDashboard({
         {/* TAB 6: PROFESSIONALS */}
         {activeTab === 'Professionals' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Professional Directory</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Professional Directory</h3>
             <p className="text-xs text-#6B7280">6 accredited legal and engineering experts currently in active founding roles:</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -4041,9 +4041,9 @@ export default function AdminDashboard({
                 <div key={prof.id} className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex items-center space-x-3">
                   <img src={prof.avatarUrl} alt={prof.name} className="w-12 h-12 rounded-full object-cover border border-stone-200" />
                   <div className="text-xs">
-                    <span className="block font-bold text-[#18452E]">{prof.name}</span>
+                    <span className="block font-semibold text-[#18452E]">{prof.name}</span>
                     <span className="block text-[10px] text-[#C9A84C] font-mono">{prof.category} &bull; Reg: {prof.regNumber}</span>
-                    <span className="block text-stone-400 font-light mt-0.5">{prof.statesCovered.join(', ')} Coverage-area</span>
+                    <span className="block text-stone-400 font-normal mt-0.5">{prof.statesCovered.join(', ')} Coverage-area</span>
                   </div>
                 </div>
               ))}
@@ -4087,16 +4087,16 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-stone-200">
                 <div>
-                  <h3 className="font-display font-black text-[#18452E] text-lg uppercase tracking-tight">
+                  <h3 className="font-display font-semibold text-[#18452E] text-lg uppercase tracking-tight">
                     Professional Connections &amp; Bundle Management
                   </h3>
-                  <p className="text-xs text-#6B7280 font-light mt-0.5">
+                  <p className="text-xs text-#6B7280 font-normal mt-0.5">
                     Track client bundle selections, Paystack connection fee payments, and expert assignments.
                   </p>
                 </div>
                 <button
                   onClick={() => setAllConnections(loadProfessionalConnections())}
-                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-[#18452E] text-xs font-mono font-bold rounded-xl flex items-center space-x-1.5 self-start md:self-auto cursor-pointer"
+                  className="px-3 py-1.5 bg-amber-50/80 hover:bg-stone-200 text-[#18452E] text-xs font-mono font-semibold rounded-xl flex items-center space-x-1.5 self-start md:self-auto cursor-pointer"
                 >
                   <RefreshCw className="w-3.5 h-3.5 text-[#18452E]" />
                   <span>Refresh Connections</span>
@@ -4106,32 +4106,32 @@ export default function AdminDashboard({
               {/* SUMMARY METRICS CARDS */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div className="bg-emerald-50/60 border border-emerald-100 p-4 rounded-2xl">
-                  <span className="block text-[9px] font-mono font-bold text-emerald-800 uppercase tracking-wider">Total Revenue</span>
-                  <span className="text-xl md:text-2xl font-black text-[#18452E] font-display block mt-1">
+                  <span className="block text-[9px] font-mono font-semibold text-emerald-800 uppercase tracking-wider">Total Revenue</span>
+                  <span className="text-xl md:text-2xl font-semibold text-[#18452E] font-display block mt-1">
                     ₦{totalRevenue.toLocaleString()}
                   </span>
                   <span className="text-[10px] text-#6B7280 font-mono mt-0.5 block">{allConnections.length} Total Paid Links</span>
                 </div>
 
                 <div className="bg-amber-50/80 border border-stone-200 p-4 rounded-2xl">
-                  <span className="block text-[9px] font-mono font-bold text-#6B7280 uppercase tracking-wider">Single Connections</span>
-                  <span className="text-xl md:text-2xl font-black text-[#18452E] font-display block mt-1">
+                  <span className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase tracking-wider">Single Connections</span>
+                  <span className="text-xl md:text-2xl font-semibold text-[#18452E] font-display block mt-1">
                     {singleCount}
                   </span>
                   <span className="text-[10px] text-stone-400 font-mono mt-0.5 block">₦55,000 / link</span>
                 </div>
 
                 <div className="bg-emerald-50/40 border border-emerald-200 p-4 rounded-2xl">
-                  <span className="block text-[9px] font-mono font-bold text-[#18452E] uppercase tracking-wider">Dual Bundles</span>
-                  <span className="text-xl md:text-2xl font-black text-[#18452E] font-display block mt-1">
+                  <span className="block text-[9px] font-mono font-semibold text-[#18452E] uppercase tracking-wider">Dual Bundles</span>
+                  <span className="text-xl md:text-2xl font-semibold text-[#18452E] font-display block mt-1">
                     {dualCount}
                   </span>
                   <span className="text-[10px] text-#6B7280 font-mono mt-0.5 block">₦95,000 / bundle</span>
                 </div>
 
                 <div className="bg-[#18452E] text-white p-4 rounded-2xl border border-amber-400/30 relative overflow-hidden">
-                  <span className="block text-[9px] font-mono font-bold text-[#C9A84C] uppercase tracking-wider">Complete Bundles</span>
-                  <span className="text-xl md:text-2xl font-black text-[#C9A84C] font-display block mt-1">
+                  <span className="block text-[9px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">Complete Bundles</span>
+                  <span className="text-xl md:text-2xl font-semibold text-[#C9A84C] font-display block mt-1">
                     {completeCount}
                   </span>
                   <span className="text-[10px] text-stone-300 font-mono mt-0.5 block">₦120,000 / full shield</span>
@@ -4145,7 +4145,7 @@ export default function AdminDashboard({
                     <button
                       key={tab}
                       onClick={() => setPkgTypeFilter(tab)}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition shrink-0 cursor-pointer ${
+                      className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition shrink-0 cursor-pointer ${
                         pkgTypeFilter === tab
                           ? 'bg-[#18452E] text-white shadow-xs'
                           : 'bg-white text-#6B7280 hover:bg-amber-50/80 border border-stone-200'
@@ -4185,7 +4185,7 @@ export default function AdminDashboard({
                   <tbody className="divide-y divide-stone-100">
                     {filteredConnections.length === 0 ? (
                       <tr>
-                        <td colSpan={7} className="p-8 text-center text-stone-400 font-light">
+                        <td colSpan={7} className="p-8 text-center text-stone-400 font-normal">
                           No professional connections found matching current filter criteria.
                         </td>
                       </tr>
@@ -4193,23 +4193,23 @@ export default function AdminDashboard({
                       filteredConnections.map((conn) => (
                         <tr key={conn.id} className="hover:bg-amber-50/80/80 transition">
                           <td className="p-3.5">
-                            <span className="font-bold text-[#18452E] block">{conn.clientName}</span>
+                            <span className="font-semibold text-[#18452E] block">{conn.clientName}</span>
                             <span className="text-[10px] text-#6B7280 font-mono block">{conn.clientEmail}</span>
                             <span className="text-[10px] text-stone-400 font-mono block">{conn.clientPhone}</span>
                           </td>
                           <td className="p-3.5">
                             {conn.packageType === 'SINGLE' && (
-                              <span className="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-mono font-bold">
+                              <span className="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-mono font-semibold">
                                 Single Connection
                               </span>
                             )}
                             {conn.packageType === 'DUAL_BUNDLE' && (
-                              <span className="inline-block px-2.5 py-1 rounded-full bg-emerald-100 text-[#18452E] border border-emerald-300 text-[10px] font-mono font-bold">
+                              <span className="inline-block px-2.5 py-1 rounded-full bg-emerald-100 text-[#18452E] border border-emerald-300 text-[10px] font-mono font-semibold">
                                 Dual Bundle
                               </span>
                             )}
                             {conn.packageType === 'COMPLETE_BUNDLE' && (
-                              <span className="inline-block px-2.5 py-1 rounded-full bg-[#18452E] text-[#C9A84C] border border-amber-400/40 text-[10px] font-mono font-bold">
+                              <span className="inline-block px-2.5 py-1 rounded-full bg-[#18452E] text-[#C9A84C] border border-amber-400/40 text-[10px] font-mono font-semibold">
                                 Complete Bundle
                               </span>
                             )}
@@ -4222,12 +4222,12 @@ export default function AdminDashboard({
                           <td className="p-3.5">
                             {conn.promoCode ? (
                               <div className="space-y-0.5">
-                                <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-bold border border-amber-300">
+                                <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-semibold border border-amber-300">
                                   <Tag className="w-3 h-3 text-[#C9A84C]" />
                                   <span>{conn.promoCode}</span>
                                 </span>
                                 {conn.discountAmount && conn.discountAmount > 0 ? (
-                                  <span className="block text-[9px] text-emerald-700 font-mono font-bold">
+                                  <span className="block text-[9px] text-emerald-700 font-mono font-semibold">
                                     -₦{conn.discountAmount.toLocaleString()}
                                   </span>
                                 ) : null}
@@ -4236,11 +4236,11 @@ export default function AdminDashboard({
                               <span className="text-stone-400 font-mono text-[10px]">None</span>
                             )}
                           </td>
-                          <td className="p-3.5 font-mono font-bold text-[#18452E]">
+                          <td className="p-3.5 font-mono font-semibold text-[#18452E]">
                             ₦{(conn.amountPaid || 0).toLocaleString()}
                           </td>
                           <td className="p-3.5">
-                            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold uppercase">
+                            <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-mono font-semibold uppercase">
                               <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                               <span>{conn.status || 'CONFIRMED'}</span>
                             </span>
@@ -4279,7 +4279,7 @@ export default function AdminDashboard({
 
               {/* MANUAL MATCH ASSIGNMENT FORM */}
               <div className="pt-4 border-t border-stone-200">
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase mb-2">
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase mb-2">
                   Assign Panel Member to Client Dossier
                 </h4>
                 <form 
@@ -4295,7 +4295,7 @@ export default function AdminDashboard({
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">CLIENT / DOSSIER NAME</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">CLIENT / DOSSIER NAME</label>
                       <input 
                         type="text" 
                         required
@@ -4306,7 +4306,7 @@ export default function AdminDashboard({
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">PANEL PROFESSIONAL</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">PANEL PROFESSIONAL</label>
                       <select 
                         value={matchingClient.prof}
                         onChange={(e) => setMatchingClient(prev => ({ ...prev, prof: e.target.value }))}
@@ -4319,7 +4319,7 @@ export default function AdminDashboard({
                       </select>
                     </div>
                   </div>
-                  <button type="submit" className="w-full py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl cursor-pointer transition">
+                  <button type="submit" className="w-full py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl cursor-pointer transition">
                     Confirm Match Assignment
                   </button>
                 </form>
@@ -4335,13 +4335,13 @@ export default function AdminDashboard({
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Accredited PM Companies</h3>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Accredited PM Companies</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">Authorized PMC agents operating registered properties.</p>
               </div>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={() => toggleBulkMode('Property Management Companies')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center space-x-1 cursor-pointer ${
                     bulkMode['Property Management Companies'] ? 'bg-rose-600 text-white' : 'bg-amber-50/80 hover:bg-stone-200 text-#132A1D'
                   }`}
                 >
@@ -4350,7 +4350,7 @@ export default function AdminDashboard({
                 </button>
                 <button 
                   onClick={() => triggerBrandedExport('Property Management Companies', mockPMCs, activeFilterName ? `Filter: ${activeFilterName}` : 'All Accredited')}
-                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
+                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Export</span>
@@ -4360,7 +4360,7 @@ export default function AdminDashboard({
 
             {/* ADDITION SEVEN: SAVED FILTERS PILLS */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider">
+              <div className="flex items-center justify-between text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider">
                 <span>Quick Saved Filters</span>
                 <button 
                   onClick={() => {
@@ -4448,28 +4448,28 @@ export default function AdminDashboard({
                             />
                           )}
                           <div>
-                            <h4 className="font-bold text-sm text-[#18452E] uppercase">{pmc.name}</h4>
+                            <h4 className="font-semibold text-sm text-[#18452E] uppercase">{pmc.name}</h4>
                             <span className="block text-[10px] font-mono text-#6B7280 mt-0.5">{pmc.address} | {pmc.phone}</span>
                           </div>
                         </div>
-                        <span className="text-[9px] uppercase font-bold text-teal-800 bg-teal-100 px-2 py-0.5 rounded border border-teal-200">Active</span>
+                        <span className="text-[9px] uppercase font-semibold text-teal-800 bg-teal-100 px-2 py-0.5 rounded border border-teal-200">Active</span>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3 text-xs">
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Landlords Managed</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Landlords Managed</span>
                           <strong className="font-mono text-#132A1D">{pmc.landlordsManaged}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Properties Managed</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Properties Managed</span>
                           <strong className="font-mono text-#132A1D">{pmc.propertiesManaged}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Tenants Managed</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Tenants Managed</span>
                           <strong className="font-mono text-#132A1D">{pmc.tenantsManaged}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Collection History</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Collection History</span>
                           <strong className="font-mono text-emerald-600">{pmc.collectionHistory}</strong>
                         </div>
                       </div>
@@ -4498,7 +4498,7 @@ export default function AdminDashboard({
               <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
-                  <span className="text-xs font-mono font-bold text-stone-300 uppercase">
+                  <span className="text-xs font-mono font-semibold text-stone-300 uppercase">
                     {(selectedIds['Property Management Companies'] || []).length} Checked
                   </span>
                 </div>
@@ -4508,13 +4508,13 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Property Management Companies');
                       setShowBulkBroadcastModal(true);
                     }}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Send Broadcast
                   </button>
                   <button 
                     onClick={() => triggerBrandedExport('Bulk Selected PMCs', mockPMCs.filter(p => (selectedIds['Property Management Companies'] || []).includes(p.id)))}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Export
                   </button>
@@ -4523,20 +4523,20 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Property Management Companies');
                       setShowSuspensionModal(true);
                     }}
-                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Suspend
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Property Management Companies')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
                 </div>
                 <button 
                   onClick={() => setSelectedIds(prev => ({ ...prev, 'Property Management Companies': [] }))}
-                  className="text-stone-400 hover:text-white text-xs font-bold"
+                  className="text-stone-400 hover:text-white text-xs font-semibold"
                 >
                   Clear
                 </button>
@@ -4548,7 +4548,7 @@ export default function AdminDashboard({
         {/* TAB 9: COMPANY APPLICATIONS */}
         {activeTab === 'Company Applications' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Validate PM Corporate Filings</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Validate PM Corporate Filings</h3>
             <p className="text-xs text-#6B7280">Review, vet legal CAC declarations, and approve pending PM Company access:</p>
             
             <div className="space-y-4">
@@ -4559,22 +4559,22 @@ export default function AdminDashboard({
                       <strong className="text-sm text-[#18452E]">{app.companyName}</strong>
                       <span className="text-[10px] bg-[#C9A84C]/10 text-[#C9A84C] font-mono px-2 py-0.5 rounded">{app.cacNumber}</span>
                     </div>
-                    <span className="block text-#6B7280 font-light">Officer: {app.contactName} ({app.phone})</span>
+                    <span className="block text-#6B7280 font-normal">Officer: {app.contactName} ({app.phone})</span>
                     <span className="block text-#6B7280">Address: {app.address}</span>
                     <span className="block text-stone-400 text-[10px]">Managed Assets Queue: {app.propertiesManaged} Properties / {app.yearsOperating} Years Operating</span>
                   </div>
                   
                   <div className="flex space-x-2 shrink-0">
-                    <span className={`px-2 py-1 text-[10px] font-mono font-bold rounded ${
+                    <span className={`px-2 py-1 text-[10px] font-mono font-semibold rounded ${
                       app.status === 'Approved' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'
                     }`}>{app.status}</span>
                     
                     {app.status === 'Pending' && (
                       <div className="flex space-x-1">
-                        <button onClick={() => handleApprovePMC(app.id)} className="px-2 py-1 bg-emerald-600 text-white rounded text-[10px] font-bold cursor-pointer">
+                        <button onClick={() => handleApprovePMC(app.id)} className="px-2 py-1 bg-emerald-600 text-white rounded text-[10px] font-semibold cursor-pointer">
                           Approve Corporate Pack
                         </button>
-                        <button onClick={() => handleRejectPMC(app.id)} className="px-2 py-1 bg-red-600 text-white rounded text-[10px] font-bold cursor-pointer">
+                        <button onClick={() => handleRejectPMC(app.id)} className="px-2 py-1 bg-red-600 text-white rounded text-[10px] font-semibold cursor-pointer">
                           Reject
                         </button>
                       </div>
@@ -4594,13 +4594,13 @@ export default function AdminDashboard({
             {/* Header Controls */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-stone-200 pb-4 gap-4">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Shortlet Managers Overview</h3>
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Shortlet Managers Overview</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">Monitor registered shortlet managers and performance.</p>
               </div>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={() => toggleBulkMode('Shortlet Management')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center space-x-1 cursor-pointer ${
                     bulkMode['Shortlet Management'] ? 'bg-rose-600 text-white' : 'bg-amber-50/80 hover:bg-stone-200 text-#132A1D'
                   }`}
                 >
@@ -4609,7 +4609,7 @@ export default function AdminDashboard({
                 </button>
                 <button 
                   onClick={() => triggerBrandedExport('Shortlet Managers List', mockShortlets, activeFilterName ? `Filter: ${activeFilterName}` : 'All Managers')}
-                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
+                  className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs flex items-center space-x-1 cursor-pointer shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Export</span>
@@ -4619,7 +4619,7 @@ export default function AdminDashboard({
 
             {/* ADDITION SEVEN: SAVED FILTERS PILLS */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider">
+              <div className="flex items-center justify-between text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider">
                 <span>Quick Saved Filters</span>
                 <button 
                   onClick={() => {
@@ -4707,32 +4707,32 @@ export default function AdminDashboard({
                             />
                           )}
                           <div>
-                            <h4 className="font-bold text-sm text-[#18452E] uppercase">{shortlet.name}</h4>
+                            <h4 className="font-semibold text-sm text-[#18452E] uppercase">{shortlet.name}</h4>
                             <span className="block text-[10px] font-mono text-#6B7280 mt-0.5">Manager: {shortlet.manager}</span>
                           </div>
                         </div>
-                        <span className="text-[9px] uppercase font-bold text-teal-800 bg-teal-100 px-2 py-0.5 rounded border border-teal-200">Active</span>
+                        <span className="text-[9px] uppercase font-semibold text-teal-800 bg-teal-100 px-2 py-0.5 rounded border border-teal-200">Active</span>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3 text-xs">
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Properties Managed</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Properties Managed</span>
                           <strong className="font-mono text-#132A1D">{shortlet.propertiesManaged}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Bookings Logged</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Bookings Logged</span>
                           <strong className="font-mono text-#132A1D">{shortlet.bookingsLogged}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Revenue Managed</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Revenue Managed</span>
                           <strong className="font-mono text-#132A1D">₦{(shortlet.revenueManaged).toLocaleString()}</strong>
                         </div>
                         <div>
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Commission Earned</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Commission Earned</span>
                           <strong className="font-mono text-emerald-600">₦{(shortlet.commissionEarned).toLocaleString()}</strong>
                         </div>
                         <div className="col-span-2">
-                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-bold">Remittance Performance</span>
+                          <span className="text-[10px] uppercase font-mono text-stone-400 block font-semibold">Remittance Performance</span>
                           <strong className="font-mono text-teal-600">{shortlet.remittancePerformance} Success Rate</strong>
                         </div>
                       </div>
@@ -4761,7 +4761,7 @@ export default function AdminDashboard({
               <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-#132A1D border border-#132A1D text-white px-6 py-4 rounded-2xl shadow-sm flex items-center space-x-6 z-50 animate-bounce-short">
                 <div className="flex items-center space-x-2 border-r border-#132A1D pr-6">
                   <span className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></span>
-                  <span className="text-xs font-mono font-bold text-stone-300 uppercase">
+                  <span className="text-xs font-mono font-semibold text-stone-300 uppercase">
                     {(selectedIds['Shortlet Management'] || []).length} Checked
                   </span>
                 </div>
@@ -4771,13 +4771,13 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Shortlet Management');
                       setShowBulkBroadcastModal(true);
                     }}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Send Broadcast
                   </button>
                   <button 
                     onClick={() => triggerBrandedExport('Bulk Selected Shortlet Managers', mockShortlets.filter(s => (selectedIds['Shortlet Management'] || []).includes(s.id)))}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Export
                   </button>
@@ -4786,20 +4786,20 @@ export default function AdminDashboard({
                       setBulkActionTargetTab('Shortlet Management');
                       setShowSuspensionModal(true);
                     }}
-                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Suspend
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Shortlet Management')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-bold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
                 </div>
                 <button 
                   onClick={() => setSelectedIds(prev => ({ ...prev, 'Shortlet Management': [] }))}
-                  className="text-stone-400 hover:text-white text-xs font-bold"
+                  className="text-stone-400 hover:text-white text-xs font-semibold"
                 >
                   Clear
                 </button>
@@ -4816,13 +4816,13 @@ export default function AdminDashboard({
                 <Award className="w-48 h-48 text-emerald-200" />
               </div>
               <div className="relative z-10 max-w-3xl">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-bold block mb-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-semibold block mb-1">
                   Official Administrative Board
                 </span>
-                <h3 className="font-display font-black text-2xl uppercase tracking-tight text-white mb-2">
+                <h3 className="font-display font-semibold text-2xl uppercase tracking-tight text-white mb-2">
                   Caution Deposit Mediation Panel
                 </h3>
-                <p className="text-emerald-100 text-xs leading-relaxed font-light">
+                <p className="text-emerald-100 text-xs leading-relaxed font-normal">
                   Unity Homes acts as an impartial third-party mediator for shortlet caution deposit disputes. While Unity Homes never holds or touches deposit funds, administrators review landlord dispute claims, manager checkout logs, and photo evidence to issue final, binding rulings.
                 </p>
               </div>
@@ -4831,24 +4831,24 @@ export default function AdminDashboard({
             {/* Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-amber-50/80 p-4 rounded-2xl border border-stone-200">
-                <span className="block text-[10px] font-mono text-stone-400 uppercase font-bold">Total Escalated Disputes</span>
-                <span className="text-xl font-display font-black text-#132A1D">{adminDepositResolutions.length}</span>
+                <span className="block text-[10px] font-mono text-stone-400 uppercase font-semibold">Total Escalated Disputes</span>
+                <span className="text-xl font-display font-semibold text-#132A1D">{adminDepositResolutions.length}</span>
               </div>
               <div className="bg-amber-50 p-4 rounded-2xl border border-amber-200">
-                <span className="block text-[10px] font-mono text-amber-700 uppercase font-bold">Pending Admin Rulings</span>
-                <span className="text-xl font-display font-black text-amber-900">
+                <span className="block text-[10px] font-mono text-amber-700 uppercase font-semibold">Pending Admin Rulings</span>
+                <span className="text-xl font-display font-semibold text-amber-900">
                   {adminDepositResolutions.filter(r => r.status?.includes('Disputed')).length}
                 </span>
               </div>
               <div className="bg-purple-50 p-4 rounded-2xl border border-purple-200">
-                <span className="block text-[10px] font-mono text-purple-700 uppercase font-bold">Binding Rulings Issued</span>
-                <span className="text-xl font-display font-black text-purple-900">
+                <span className="block text-[10px] font-mono text-purple-700 uppercase font-semibold">Binding Rulings Issued</span>
+                <span className="text-xl font-display font-semibold text-purple-900">
                   {adminDepositResolutions.filter(r => r.status === 'Ruled by Admin').length}
                 </span>
               </div>
               <div className="bg-emerald-50 p-4 rounded-2xl border border-emerald-200">
-                <span className="block text-[10px] font-mono text-emerald-700 uppercase font-bold">Accepted by Landlords</span>
-                <span className="text-xl font-display font-black text-emerald-900">
+                <span className="block text-[10px] font-mono text-emerald-700 uppercase font-semibold">Accepted by Landlords</span>
+                <span className="text-xl font-display font-semibold text-emerald-900">
                   {adminDepositResolutions.filter(r => r.status === 'Accepted by Landlord').length}
                 </span>
               </div>
@@ -4857,14 +4857,14 @@ export default function AdminDashboard({
             {/* Cases list */}
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-stone-200 pb-3">
-                <h4 className="font-display font-black text-[#18452E] text-sm uppercase">Caution Deposit Dispute Docket</h4>
+                <h4 className="font-display font-semibold text-[#18452E] text-sm uppercase">Caution Deposit Dispute Docket</h4>
                 <span className="text-xs font-mono text-stone-400">{adminDepositResolutions.length} Docket Records</span>
               </div>
 
               {adminDepositResolutions.length === 0 ? (
                 <div className="p-12 text-center bg-amber-50/80 rounded-2xl border border-stone-200">
                   <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto mb-3 opacity-60" />
-                  <h5 className="font-bold text-#132A1D text-sm">No Active Caution Deposit Disputes</h5>
+                  <h5 className="font-semibold text-#132A1D text-sm">No Active Caution Deposit Disputes</h5>
                   <p className="text-xs text-stone-400 mt-1">
                     When landlords escalate a deposit dispute against a shortlet manager, the case will immediately populate here for administrative mediation.
                   </p>
@@ -4881,8 +4881,8 @@ export default function AdminDashboard({
                         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-3 border-b border-stone-200">
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="font-bold text-sm text-[#18452E]">{res.propertyName}</span>
-                              <span className="text-[10px] font-mono bg-stone-200 text-#132A1D px-2 py-0.5 rounded font-bold">
+                              <span className="font-semibold text-sm text-[#18452E]">{res.propertyName}</span>
+                              <span className="text-[10px] font-mono bg-stone-200 text-#132A1D px-2 py-0.5 rounded font-semibold">
                                 Booking #{res.bookingId}
                               </span>
                             </div>
@@ -4891,7 +4891,7 @@ export default function AdminDashboard({
                             </p>
                           </div>
 
-                          <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full border ${
+                          <span className={`px-3 py-1 text-[10px] font-semibold uppercase rounded-full border ${
                             isRuled ? 'bg-purple-100 text-purple-900 border-purple-300' :
                             isPendingDispute ? 'bg-rose-100 text-rose-900 border-rose-300' :
                             isAccepted ? 'bg-emerald-100 text-emerald-900 border-emerald-300' :
@@ -4905,26 +4905,26 @@ export default function AdminDashboard({
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 bg-white p-3.5 rounded-xl border border-stone-200 text-xs">
                           <div>
                             <span className="block text-[9px] font-mono text-stone-400 uppercase">Caution Deposit</span>
-                            <span className="font-bold font-mono text-#132A1D">₦{(res.depositAmount || 0).toLocaleString()}</span>
+                            <span className="font-semibold font-mono text-#132A1D">₦{(res.depositAmount || 0).toLocaleString()}</span>
                           </div>
                           <div>
                             <span className="block text-[9px] font-mono text-stone-400 uppercase">Checkout Condition</span>
-                            <span className="font-bold uppercase text-#132A1D">{res.condition || 'Inspected'}</span>
+                            <span className="font-semibold uppercase text-#132A1D">{res.condition || 'Inspected'}</span>
                           </div>
                           <div>
                             <span className="block text-[9px] font-mono text-stone-400 uppercase">Manager Retained</span>
-                            <span className="font-bold font-mono text-rose-600">₦{(res.amountRetained || 0).toLocaleString()}</span>
+                            <span className="font-semibold font-mono text-rose-600">₦{(res.amountRetained || 0).toLocaleString()}</span>
                           </div>
                           <div>
                             <span className="block text-[9px] font-mono text-stone-400 uppercase">Manager Returned</span>
-                            <span className="font-bold font-mono text-emerald-600">₦{(res.amountReturned || 0).toLocaleString()}</span>
+                            <span className="font-semibold font-mono text-emerald-600">₦{(res.amountReturned || 0).toLocaleString()}</span>
                           </div>
                         </div>
 
                         {/* Manager retention rationale */}
                         {res.retentionJustification && (
                           <div className="p-3 bg-amber-50/80 rounded-xl text-xs text-#132A1D space-y-1">
-                            <strong className="block font-bold text-[10px] text-#6B7280 uppercase">Manager Retention Notes</strong>
+                            <strong className="block font-semibold text-[10px] text-#6B7280 uppercase">Manager Retention Notes</strong>
                             <p>{res.retentionJustification}</p>
                           </div>
                         )}
@@ -4932,7 +4932,7 @@ export default function AdminDashboard({
                         {/* Landlord dispute rationale */}
                         {res.landlordDisputeReason && (
                           <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-900 space-y-1">
-                            <strong className="block font-bold text-[10px] text-rose-800 uppercase">Landlord Dispute Claim</strong>
+                            <strong className="block font-semibold text-[10px] text-rose-800 uppercase">Landlord Dispute Claim</strong>
                             <p className="italic">"{res.landlordDisputeReason}"</p>
                           </div>
                         )}
@@ -4941,7 +4941,7 @@ export default function AdminDashboard({
                         {res.adminRuling && (
                           <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl text-xs text-purple-950 space-y-2">
                             <div className="flex justify-between items-center">
-                              <strong className="font-bold uppercase text-xs text-purple-950 flex items-center gap-1">
+                              <strong className="font-semibold uppercase text-xs text-purple-950 flex items-center gap-1">
                                 <Award className="w-4 h-4 text-purple-700" /> Unity Homes Official Binding Ruling
                               </strong>
                               <span className="text-[10px] font-mono text-purple-700">{res.adminRuling.ruledAt?.substring(0, 10)}</span>
@@ -4963,7 +4963,7 @@ export default function AdminDashboard({
                                 setAdminCustomRetained(res.amountRetained || 0);
                                 setAdminRulingJustification('');
                               }}
-                              className="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 cursor-pointer shadow-sm transition"
+                              className="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white font-semibold rounded-xl text-xs flex items-center gap-1.5 cursor-pointer shadow-sm transition"
                             >
                               <Award className="w-3.5 h-3.5" />
                               <span>Adjudicate &amp; Issue Binding Ruling</span>
@@ -4983,8 +4983,8 @@ export default function AdminDashboard({
                 <div className="bg-white rounded-[var(--radius-large)] max-w-xl w-full p-6 space-y-5 shadow-sm border border-stone-200">
                   <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                     <div>
-                      <span className="text-[9px] font-mono text-purple-700 font-bold uppercase block">Unity Homes Dispute Adjudication Board</span>
-                      <h4 className="font-display font-black text-[#18452E] text-base">Issue Binding Caution Deposit Ruling</h4>
+                      <span className="text-[9px] font-mono text-purple-700 font-semibold uppercase block">Unity Homes Dispute Adjudication Board</span>
+                      <h4 className="font-display font-semibold text-[#18452E] text-base">Issue Binding Caution Deposit Ruling</h4>
                     </div>
                     <button 
                       onClick={() => setAdjudicatingRes(null)}
@@ -4996,14 +4996,14 @@ export default function AdminDashboard({
 
                   {/* Summary card */}
                   <div className="bg-purple-50 border border-purple-200 p-3.5 rounded-xl text-xs text-purple-950 space-y-1">
-                    <p className="font-bold">{adjudicatingRes.propertyName} (Booking #{adjudicatingRes.bookingId})</p>
+                    <p className="font-semibold">{adjudicatingRes.propertyName} (Booking #{adjudicatingRes.bookingId})</p>
                     <p>Total Deposit: <strong>₦{(adjudicatingRes.depositAmount || 0).toLocaleString()}</strong> &bull; Manager Retained: <strong>₦{(adjudicatingRes.amountRetained || 0).toLocaleString()}</strong></p>
                     <p className="text-[11px] text-purple-800 italic mt-1">Landlord Claim: "{adjudicatingRes.landlordDisputeReason}"</p>
                   </div>
 
                   {/* Decision selector */}
                   <div className="space-y-2">
-                    <label className="block text-xs font-bold text-#132A1D uppercase font-mono">
+                    <label className="block text-xs font-semibold text-#132A1D uppercase font-mono">
                       Select Binding Decision
                     </label>
                     <div className="space-y-2">
@@ -5054,7 +5054,7 @@ export default function AdminDashboard({
                   {/* Custom amount input if selected */}
                   {adminRulingDecision === 'Custom Split' && (
                     <div className="space-y-1">
-                      <label className="block text-xs font-bold text-#132A1D uppercase font-mono">
+                      <label className="block text-xs font-semibold text-#132A1D uppercase font-mono">
                         Custom Amount to Retain (₦)
                       </label>
                       <input
@@ -5068,7 +5068,7 @@ export default function AdminDashboard({
 
                   {/* Justification textarea */}
                   <div className="space-y-1">
-                    <label className="block text-xs font-bold text-#132A1D uppercase font-mono">
+                    <label className="block text-xs font-semibold text-#132A1D uppercase font-mono">
                       Binding Ruling Justification &amp; Rationale <span className="text-rose-600">*</span>
                     </label>
                     <textarea
@@ -5083,13 +5083,13 @@ export default function AdminDashboard({
                   <div className="flex justify-end space-x-2 pt-2 border-t border-stone-200">
                     <button
                       onClick={() => setAdjudicatingRes(null)}
-                      className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-bold text-xs rounded-xl cursor-pointer"
+                      className="px-4 py-2 bg-amber-50/80 hover:bg-stone-200 text-#132A1D font-semibold text-xs rounded-xl cursor-pointer"
                     >
                       Cancel
                     </button>
                     <button
                       onClick={handleIssueAdminBindingRuling}
-                      className="px-5 py-2 bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs rounded-xl cursor-pointer shadow-sm"
+                      className="px-5 py-2 bg-purple-700 hover:bg-purple-800 text-white font-semibold text-xs rounded-xl cursor-pointer shadow-sm"
                     >
                       Publish Binding Ruling
                     </button>
@@ -5103,7 +5103,7 @@ export default function AdminDashboard({
         {/* TAB 11: SUBSCRIPTION INQUIRIES */}
         {activeTab === 'Subscription Inquiries' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Incoming Verification Callbacks</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Incoming Verification Callbacks</h3>
             <p className="text-xs text-#6B7280">Validate the active pipeline of client profile subscriptions via telephone/WhatsApp checks:</p>
             
             <div className="space-y-4">
@@ -5114,16 +5114,16 @@ export default function AdminDashboard({
                       <strong className="text-sm text-[#18452E]">{inq.targetName}</strong>
                       <span className="text-[10px] bg-amber-100 text-amber-800 px-2 rounded-full">{inq.type}</span>
                     </div>
-                    <span className="block font-light text-#6B7280">Submitted by: {inq.requesterName} &bull; Hotline: {inq.requesterPhone}</span>
+                    <span className="block font-normal text-#6B7280">Submitted by: {inq.requesterName} &bull; Hotline: {inq.requesterPhone}</span>
                     <span className="block text-stone-400 text-[10px]">Contact Date: {inq.dateCreated}</span>
                     {inq.promo_code && (
                       <div className="mt-1.5 flex items-center space-x-2">
-                        <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-bold border border-amber-300">
+                        <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-semibold border border-amber-300">
                           <Tag className="w-3 h-3 text-[#C9A84C]" />
                           <span>Promo Code: {inq.promo_code}</span>
                         </span>
                         {inq.promo_discount_text && (
-                          <span className="text-[10px] font-mono text-emerald-700 font-bold">
+                          <span className="text-[10px] font-mono text-emerald-700 font-semibold">
                             ({inq.promo_discount_text})
                           </span>
                         )}
@@ -5132,11 +5132,11 @@ export default function AdminDashboard({
                   </div>
                   
                   <div className="flex items-center space-x-2">
-                    <span className={`px-2 py-1 text-[10px] font-mono font-bold rounded ${
+                    <span className={`px-2 py-1 text-[10px] font-mono font-semibold rounded ${
                       inq.status === 'Contacted' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'
                     }`}>{inq.status}</span>
                     {inq.status === 'Pending' && (
-                      <button onClick={() => handleProcessInquiry(inq.id)} className="px-3 py-1.5 bg-[#18452E] text-white text-[10px] font-bold rounded-lg cursor-pointer">
+                      <button onClick={() => handleProcessInquiry(inq.id)} className="px-3 py-1.5 bg-[#18452E] text-white text-[10px] font-semibold rounded-lg cursor-pointer">
                         Mark Callback Initiated
                       </button>
                     )}
@@ -5151,7 +5151,7 @@ export default function AdminDashboard({
         {activeTab === 'Subscription Management' && (
           <div className="space-y-6">
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-sm animate-fade-in">
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Configure Subscription Tiers</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Configure Subscription Tiers</h3>
               <p className="text-xs text-#6B7280">Edit billing tiers securely. Note: Larger accounts are dynamically priced to ensure legal equity.</p>
               
               <div className="space-y-3">
@@ -5159,13 +5159,13 @@ export default function AdminDashboard({
                   <div key={plan.id} className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex justify-between items-center text-xs">
                     <div>
                       <strong className="block text-[#18452E] font-display text-sm">{plan.level}</strong>
-                      <span className="text-stone-400 font-light block mt-0.5">{plan.clientCount} Rate Metric</span>
+                      <span className="text-stone-400 font-normal block mt-0.5">{plan.clientCount} Rate Metric</span>
                     </div>
                     <div className="text-right">
-                      <span className="font-mono font-black text-base text-[#18452E] block">₦{plan.price.toLocaleString()}</span>
+                      <span className="font-mono font-semibold text-base text-[#18452E] block">₦{plan.price.toLocaleString()}</span>
                       <button 
                         onClick={() => triggerSuccess(`Billing price updated for plan '${plan.level}'`)}
-                        className="text-[#C9A84C] hover:underline font-mono text-[10px] font-bold cursor-pointer"
+                        className="text-[#C9A84C] hover:underline font-mono text-[10px] font-semibold cursor-pointer"
                       >
                         Configure Price
                       </button>
@@ -5178,7 +5178,7 @@ export default function AdminDashboard({
             {/* ADMIN SUBSCRIPTION OVERRIDES & SYSTEM ALLOCATIONS */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 shadow-sm animate-fade-in">
               <div>
-                <h3 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-1.5">
+                <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase flex items-center gap-1.5">
                   <ShieldAlert className="w-5 h-5 text-[#C9A84C]" />
                   <span>Subscription Capacity Enforcement & Override Controller</span>
                 </h3>
@@ -5189,13 +5189,13 @@ export default function AdminDashboard({
 
               {/* OVERRIDE FORM */}
               <div className="bg-amber-50/80 border border-stone-200 p-6 rounded-2xl">
-                <h4 className="font-display font-black text-xs text-#132A1D uppercase border-b pb-2 mb-4">
+                <h4 className="font-display font-semibold text-xs text-#132A1D uppercase border-b pb-2 mb-4">
                   Configure Capacity Override
                 </h4>
                 <form onSubmit={handleApplyOverride} className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                   <div className="space-y-3">
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">SELECT SUBSCRIPTION ENTITY</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">SELECT SUBSCRIPTION ENTITY</label>
                       <select
                         required
                         value={selectedEntity}
@@ -5219,7 +5219,7 @@ export default function AdminDashboard({
                     </div>
 
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">TEMPORARY OVERRIDE LIMIT (PROPERTIES)</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">TEMPORARY OVERRIDE LIMIT (PROPERTIES)</label>
                       <input
                         type="number"
                         required
@@ -5232,7 +5232,7 @@ export default function AdminDashboard({
                     </div>
 
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">AUTO-REVERT EXPIRY PERIOD</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">AUTO-REVERT EXPIRY PERIOD</label>
                       <select
                         value={revertPeriod}
                         onChange={(e) => setRevertPeriod(e.target.value)}
@@ -5248,7 +5248,7 @@ export default function AdminDashboard({
 
                   <div className="space-y-3 flex flex-col justify-between">
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">ADMIN OVERRIDE REASON (FOR IMMUTABLE AUDIT LOGS)</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">ADMIN OVERRIDE REASON (FOR IMMUTABLE AUDIT LOGS)</label>
                       <textarea
                         required
                         rows={4}
@@ -5261,7 +5261,7 @@ export default function AdminDashboard({
 
                     <button
                       type="submit"
-                      className="w-full py-3 bg-[#18452E] hover:bg-[#123023] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-md uppercase tracking-wider"
+                      className="w-full py-3 bg-[#18452E] hover:bg-[#123023] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md uppercase tracking-wider"
                     >
                       Apply Override & Log to Ledger
                     </button>
@@ -5271,13 +5271,13 @@ export default function AdminDashboard({
 
               {/* OVERRIDES & LIVE CAPACITIES TABLE */}
               <div className="space-y-3">
-                <h4 className="font-display font-black text-xs text-#132A1D uppercase">
+                <h4 className="font-display font-semibold text-xs text-#132A1D uppercase">
                   Real-time Subscriber Resource Allocations
                 </h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-xs border-collapse">
                     <thead>
-                      <tr className="border-b border-stone-200 bg-amber-50/80 font-mono text-[9px] font-bold text-stone-400 uppercase">
+                      <tr className="border-b border-stone-200 bg-amber-50/80 font-mono text-[9px] font-semibold text-stone-400 uppercase">
                         <th className="p-3">Entity Name</th>
                         <th className="p-3">Type</th>
                         <th className="p-3 text-center">Current Usage / Active Properties</th>
@@ -5306,8 +5306,8 @@ export default function AdminDashboard({
 
                         return (
                           <tr key={sub.id} className="hover:bg-amber-50/80/50 transition">
-                            <td className="p-3 font-display font-extrabold text-[#18452E]">{sub.entityId}</td>
-                            <td className="p-3 font-mono font-bold text-[10px]">
+                            <td className="p-3 font-display font-semibold text-[#18452E]">{sub.entityId}</td>
+                            <td className="p-3 font-mono font-semibold text-[10px]">
                               <span className={`px-2 py-0.5 rounded-full ${
                                 sub.entityType === 'PMC' ? 'bg-teal-50 text-teal-700 border border-teal-100' : 'bg-blue-50 text-blue-700 border border-blue-100'
                               }`}>
@@ -5316,7 +5316,7 @@ export default function AdminDashboard({
                             </td>
                             <td className="p-3 text-center">
                               <div className="flex flex-col items-center justify-center">
-                                <span className="font-mono font-bold">{usageCount} properties</span>
+                                <span className="font-mono font-semibold">{usageCount} properties</span>
                                 <div className="w-24 bg-amber-50/80 h-1.5 rounded-full mt-1 overflow-hidden border">
                                   <div 
                                     className={`h-full ${percent >= 100 ? 'bg-rose-600' : percent >= 75 ? 'bg-amber-500' : 'bg-[#18452E]'}`}
@@ -5325,14 +5325,14 @@ export default function AdminDashboard({
                                 </div>
                               </div>
                             </td>
-                            <td className="p-3 text-center font-mono font-black text-sm text-[#18452E]">{sub.property_limit}</td>
+                            <td className="p-3 text-center font-mono font-semibold text-sm text-[#18452E]">{sub.property_limit}</td>
                             <td className="p-3 text-center">
                               {sub.is_overridden ? (
-                                <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200 font-mono animate-pulse">
+                                <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200 font-mono animate-pulse">
                                   OVERRIDDEN
                                 </span>
                               ) : (
-                                <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50/80 text-#6B7280 font-mono">
+                                <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-50/80 text-#6B7280 font-mono">
                                   STANDARD
                                 </span>
                               )}
@@ -5353,7 +5353,7 @@ export default function AdminDashboard({
                               {sub.is_overridden ? (
                                 <button
                                   onClick={() => handleForceRevert(sub.entityId)}
-                                  className="px-3 py-1.5 bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 text-[10px] font-bold rounded-lg cursor-pointer transition flex items-center gap-1 ml-auto"
+                                  className="px-3 py-1.5 bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 text-[10px] font-semibold rounded-lg cursor-pointer transition flex items-center gap-1 ml-auto"
                                 >
                                   <RefreshCw className="w-3.5 h-3.5 animate-pulse" />
                                   <span>Force Expire Now</span>
@@ -5364,7 +5364,7 @@ export default function AdminDashboard({
                                     setSelectedEntity(sub.entityId);
                                     setTempOverrideLimit(sub.property_limit);
                                   }}
-                                  className="px-3 py-1.5 bg-white hover:bg-amber-50/80 border border-stone-200 text-[10px] font-bold rounded-lg cursor-pointer transition"
+                                  className="px-3 py-1.5 bg-white hover:bg-amber-50/80 border border-stone-200 text-[10px] font-semibold rounded-lg cursor-pointer transition"
                                 >
                                   Adjust Limit
                                 </button>
@@ -5389,18 +5389,18 @@ export default function AdminDashboard({
         {/* TAB 13: PARTNER NETWORK */}
         {activeTab === 'Partner Network' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Affiliate Referral Payouts</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Affiliate Referral Payouts</h3>
             <p className="text-xs text-#6B7280">Approve referrals for landlords, tenants, or legal connection matches securely:</p>
             
             <div className="space-y-3 text-xs">
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                  <span className="font-bold text-[#18452E] block">Chief Raymond Temowo (Affiliate Partner)</span>
+                  <span className="font-semibold text-[#18452E] block">Chief Raymond Temowo (Affiliate Partner)</span>
                   <span className="block text-[10px] text-stone-400">Referred: Landlord Dr. Chioma Okafor</span>
                 </div>
                 <div className="text-right shrink-0">
-                  <span className="block font-mono font-bold text-[#18452E]">₦50,000 Reward</span>
-                  <button onClick={() => triggerSuccess('Referral payout approved. Dispatched to verified FBN account line within 14 business days.')} className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[9px] font-bold rounded mt-1.5 cursor-pointer">
+                  <span className="block font-mono font-semibold text-[#18452E]">₦50,000 Reward</span>
+                  <button onClick={() => triggerSuccess('Referral payout approved. Dispatched to verified FBN account line within 14 business days.')} className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[9px] font-semibold rounded mt-1.5 cursor-pointer">
                     Approve Cash Release
                   </button>
                 </div>
@@ -5408,12 +5408,12 @@ export default function AdminDashboard({
 
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
-                  <span className="font-bold text-[#18452E] block">Adebisi Joshua (Affiliate Partner)</span>
+                  <span className="font-semibold text-[#18452E] block">Adebisi Joshua (Affiliate Partner)</span>
                   <span className="block text-[10px] text-stone-400">Referred: Tenant Fatima Yusuf</span>
                 </div>
                 <div className="text-right shrink-0">
-                  <span className="block font-mono font-bold text-[#18452E]">₦10,000 Reward</span>
-                  <button onClick={() => triggerSuccess('Referral payout approved. Dispatched to verified Zenith account.')} className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[9px] font-bold rounded mt-1.5 cursor-pointer">
+                  <span className="block font-mono font-semibold text-[#18452E]">₦10,000 Reward</span>
+                  <button onClick={() => triggerSuccess('Referral payout approved. Dispatched to verified Zenith account.')} className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[9px] font-semibold rounded mt-1.5 cursor-pointer">
                     Approve Cash Release
                   </button>
                 </div>
@@ -5430,19 +5430,19 @@ export default function AdminDashboard({
         {/* TAB 15: DAMAGE REPORTS */}
         {activeTab === 'Damage Reports' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Damage Claims &amp; Estimates</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Damage Claims &amp; Estimates</h3>
             <p className="text-xs text-#6B7280">Security caution deposit claims logged by landlords:</p>
             
             <div className="space-y-4">
               {damages.map((dmg) => (
                 <div key={dmg.id} className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs">
                   <div>
-                    <span className="font-bold text-[#18452E] text-sm block">{dmg.property}</span>
-                    <span className="block text-#6B7280 font-light">Tenant: {dmg.tenant} &bull; Damage Category: {dmg.type}</span>
+                    <span className="font-semibold text-[#18452E] text-sm block">{dmg.property}</span>
+                    <span className="block text-#6B7280 font-normal">Tenant: {dmg.tenant} &bull; Damage Category: {dmg.type}</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="block font-mono font-bold text-red-600">Est Value: ₦{dmg.value.toLocaleString()}</span>
-                    <button onClick={() => triggerSuccess('Caution Deposit dispute logged under active investigation.')} className="px-2.5 py-1 bg-red-600/10 text-red-700 font-bold text-[10px] rounded hover:bg-red-600 hover:text-white mt-1 cursor-pointer">
+                    <span className="block font-mono font-semibold text-red-600">Est Value: ₦{dmg.value.toLocaleString()}</span>
+                    <button onClick={() => triggerSuccess('Caution Deposit dispute logged under active investigation.')} className="px-2.5 py-1 bg-red-600/10 text-red-700 font-semibold text-[10px] rounded hover:bg-red-600 hover:text-white mt-1 cursor-pointer">
                       Open Ledger Dispute Case
                     </button>
                   </div>
@@ -5458,7 +5458,7 @@ export default function AdminDashboard({
             <div className="flex items-center space-x-3 text-[#18452E] mb-4 border-b border-stone-200 pb-4">
               <FolderOpen className="w-6 h-6" />
               <div>
-                <h3 className="font-display font-black text-sm uppercase">Global Document Vault</h3>
+                <h3 className="font-display font-semibold text-sm uppercase">Global Document Vault</h3>
                 <p className="text-xs text-#6B7280 mt-0.5">Access every verified survey map, COREN log, title deed, and ID uploaded on the platform.</p>
               </div>
             </div>
@@ -5467,7 +5467,7 @@ export default function AdminDashboard({
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex items-start space-x-3">
                 <FileLock className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E]">COREN Structural Sanity Ledger</span>
+                  <span className="font-semibold block text-[#18452E]">COREN Structural Sanity Ledger</span>
                   <span className="text-[10px] text-stone-400 block mb-2">Platform-wide: COREN_UH_2026_Audit_Log.pdf</span>
                   <button onClick={() => triggerSuccess('COREN Structural Sanity file downloaded to local safe.')} className="text-[#18452E] hover:underline font-semibold text-[10px] cursor-pointer">
                     Download Secure Audit File
@@ -5478,7 +5478,7 @@ export default function AdminDashboard({
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex items-start space-x-3">
                 <Map className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E]">Global C of O Surveyor Map Checks</span>
+                  <span className="font-semibold block text-[#18452E]">Global C of O Surveyor Map Checks</span>
                   <span className="text-[10px] text-stone-400 block mb-2">Platform-wide: SURCON_EP_Lagoon_Deed.pdf</span>
                   <button onClick={() => triggerSuccess('SURCON surveyor map downloaded.')} className="text-[#18452E] hover:underline font-semibold text-[10px] cursor-pointer">
                     Download Secure Audit File
@@ -5489,7 +5489,7 @@ export default function AdminDashboard({
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex items-start space-x-3">
                 <ShieldCheck className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E]">Tenant Background Screening Master File</span>
+                  <span className="font-semibold block text-[#18452E]">Tenant Background Screening Master File</span>
                   <span className="text-[10px] text-stone-400 block mb-2">Platform-wide: UH_Global_Tenants_2026.pdf</span>
                   <button onClick={() => triggerSuccess('Master background file downloaded.')} className="text-[#18452E] hover:underline font-semibold text-[10px] cursor-pointer">
                     Download Secure Audit File
@@ -5500,7 +5500,7 @@ export default function AdminDashboard({
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex items-start space-x-3">
                 <FileText className="w-5 h-5 text-[#18452E] shrink-0" />
                 <div>
-                  <span className="font-bold block text-[#18452E]">CAC Corporate Filings (PMCs)</span>
+                  <span className="font-semibold block text-[#18452E]">CAC Corporate Filings (PMCs)</span>
                   <span className="text-[10px] text-stone-400 block mb-2">Platform-wide: UH_PMC_Corporate_Registry.zip</span>
                   <button onClick={() => triggerSuccess('Corporate filings downloaded.')} className="text-[#18452E] hover:underline font-semibold text-[10px] cursor-pointer">
                     Download Secure Audit File
@@ -5515,10 +5515,10 @@ export default function AdminDashboard({
         {activeTab === 'Birthday Alerts' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="flex justify-between items-center">
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Birthdays System</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Birthdays System</h3>
               <Gift className="w-5 h-5 text-[#C9A84C]" />
             </div>
-            <p className="text-xs text-#6B7280 leading-relaxed font-light">
+            <p className="text-xs text-#6B7280 leading-relaxed font-normal">
               Tenant dates of birth are completely protected under compliance privacy. This dashboard alerts management to send congratulations securely.
             </p>
             
@@ -5527,9 +5527,9 @@ export default function AdminDashboard({
                 <div key={index} className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl flex justify-between items-center text-xs">
                   <div>
                     <strong className="block text-#132A1D text-sm">{bday.name}</strong>
-                    <span className="text-stone-400 block font-light">Birthday: {bday.bday} &bull; Age: {bday.age} Years Old</span>
+                    <span className="text-stone-400 block font-normal">Birthday: {bday.bday} &bull; Age: {bday.age} Years Old</span>
                   </div>
-                  <button onClick={() => handleTriggerBdayAlert(bday.name, bday.phone)} className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-bold rounded-lg cursor-pointer">
+                  <button onClick={() => handleTriggerBdayAlert(bday.name, bday.phone)} className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold rounded-lg cursor-pointer">
                     Dispatch SMS Vow
                   </button>
                 </div>
@@ -5541,31 +5541,31 @@ export default function AdminDashboard({
         {/* TAB 18: PLATFORM STATS */}
         {activeTab === 'Platform Stats' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Platform Metrics &amp; Health</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Platform Metrics &amp; Health</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-2xl space-y-1">
-                <span className="text-[10px] font-mono uppercase text-emerald-800 font-extrabold blocking">Rent Collection Volume</span>
-                <span className="text-2xl font-black text-emerald-950 block">₦28.4M</span>
+                <span className="text-[10px] font-mono uppercase text-emerald-800 font-semibold blocking">Rent Collection Volume</span>
+                <span className="text-2xl font-semibold text-emerald-950 block">₦28.4M</span>
                 <span className="text-[9px] text-[#18452E] font-mono">100% Ledger Integrity Cleared</span>
               </div>
 
               <div className="p-4 bg-teal-50 border border-teal-100 rounded-2xl space-y-1">
-                <span className="text-[10px] font-mono uppercase text-teal-800 font-extrabold blocking">Overall Occupancy Rate</span>
-                <span className="text-2xl font-black text-teal-950 block">85.4%</span>
+                <span className="text-[10px] font-mono uppercase text-teal-800 font-semibold blocking">Overall Occupancy Rate</span>
+                <span className="text-2xl font-semibold text-teal-950 block">85.4%</span>
                 <span className="text-[9px] text-teal-700 font-mono">30 properties active tracking</span>
               </div>
 
               <div className="p-4 bg-amber-50 border border-amber-100 rounded-2xl space-y-1">
-                <span className="text-[10px] font-mono uppercase text-amber-800 font-extrabold blocking">Affiliate Dispatch Rate</span>
-                <span className="text-2xl font-black text-amber-950 block">100%</span>
+                <span className="text-[10px] font-mono uppercase text-amber-800 font-semibold blocking">Affiliate Dispatch Rate</span>
+                <span className="text-2xl font-semibold text-amber-950 block">100%</span>
                 <span className="text-[9px] text-[#C9A84C] font-mono">14 business days payment cycle</span>
               </div>
             </div>
 
             <div className="p-5 border border-stone-200 rounded-2xl space-y-2">
-              <span className="text-xs uppercase font-mono text-stone-400 block font-bold">Nigeria Real Estate Safety Chart Index</span>
-              <div className="h-6 bg-[#16A34A] rounded-md flex items-center justify-center text-[10px] text-white font-mono font-bold tracking-wide">
+              <span className="text-xs uppercase font-mono text-stone-400 block font-semibold">Nigeria Real Estate Safety Chart Index</span>
+              <div className="h-6 bg-[#16A34A] rounded-md flex items-center justify-center text-[10px] text-white font-mono font-semibold tracking-wide">
                 98% Safety Score Index (98% transaction free of litigation/scam)
               </div>
             </div>
@@ -5576,9 +5576,9 @@ export default function AdminDashboard({
         {activeTab === 'Compliance' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <div>
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-2">
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase flex items-center gap-2">
                 <span>COMPLIANCE &amp; PMC AGREEMENT CONTROL CENTER</span>
-                <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[9px] rounded-full font-mono font-bold uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[9px] rounded-full font-mono font-semibold uppercase tracking-wider">
                   System Controller
                 </span>
               </h3>
@@ -5591,10 +5591,10 @@ export default function AdminDashboard({
             <div className="p-5 border border-stone-200 rounded-2xl bg-amber-50/80/30 space-y-4">
               <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                 <div>
-                  <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Pending Fee Change Proposals</h4>
+                  <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Pending Fee Change Proposals</h4>
                   <p className="text-[10px] text-#6B7280">Proposals submitted by PMCs awaiting regulatory admin sign-off.</p>
                 </div>
-                <span className="px-2 py-0.5 bg-amber-100 border border-amber-200 text-amber-800 font-mono text-[9px] font-bold rounded-md">
+                <span className="px-2 py-0.5 bg-amber-100 border border-amber-200 text-amber-800 font-mono text-[9px] font-semibold rounded-md">
                   {feeRequests.filter(r => r.status === 'Pending').length} Pending Approval
                 </span>
               </div>
@@ -5657,15 +5657,15 @@ export default function AdminDashboard({
                       <div key={req.id} className="p-4 bg-white border border-stone-200 rounded-xl space-y-3">
                         <div className="flex justify-between items-start">
                           <div>
-                            <span className="font-bold text-stone-850 text-xs block">{req.propertyName}</span>
+                            <span className="font-semibold text-stone-850 text-xs block">{req.propertyName}</span>
                             <span className="text-[10px] text-#6B7280 font-mono">Managed by: <strong>{req.pmcName}</strong></span>
                           </div>
                           <div className="text-right">
                             <span className="text-[10px] text-stone-400 font-mono block">Submitted: {req.createdAt}</span>
                             <span className="inline-flex items-center gap-1 text-xs">
-                              <span className="text-#6B7280 font-mono font-bold">{req.currentPercentage}%</span>
+                              <span className="text-#6B7280 font-mono font-semibold">{req.currentPercentage}%</span>
                               <span className="text-stone-400">&rarr;</span>
-                              <span className="text-[#18452E] font-mono font-black">{req.proposedPercentage}%</span>
+                              <span className="text-[#18452E] font-mono font-semibold">{req.proposedPercentage}%</span>
                             </span>
                           </div>
                         </div>
@@ -5675,13 +5675,13 @@ export default function AdminDashboard({
                         <div className="flex items-center justify-end space-x-2">
                           <button
                             onClick={handleApprove}
-                            className="px-3 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] uppercase font-bold rounded-lg cursor-pointer transition shadow-xs"
+                            className="px-3 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] uppercase font-semibold rounded-lg cursor-pointer transition shadow-xs"
                           >
                             Approve &amp; Apply
                           </button>
                           <button
                             onClick={handleReject}
-                            className="px-3 py-1 bg-white hover:bg-amber-50/80 border border-stone-200 text-#6B7280 text-[10px] uppercase font-bold rounded-lg cursor-pointer transition"
+                            className="px-3 py-1 bg-white hover:bg-amber-50/80 border border-stone-200 text-#6B7280 text-[10px] uppercase font-semibold rounded-lg cursor-pointer transition"
                           >
                             Reject
                           </button>
@@ -5697,19 +5697,19 @@ export default function AdminDashboard({
             <div className="p-5 border border-stone-200 rounded-2xl bg-rose-50/10 space-y-4">
               <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                 <div>
-                  <h4 className="font-display font-black text-rose-800 text-xs uppercase flex items-center gap-1.5">
+                  <h4 className="font-display font-semibold text-rose-800 text-xs uppercase flex items-center gap-1.5">
                     <span>Outstanding Compliance Anomalies</span>
                   </h4>
                   <p className="text-[10px] text-#6B7280">Properties assigned to PMCs but missing their mandatory contract management fee percentage.</p>
                 </div>
-                <span className="px-2 py-0.5 bg-rose-100 border border-rose-200 text-rose-800 font-mono text-[9px] font-bold rounded-md">
+                <span className="px-2 py-0.5 bg-rose-100 border border-rose-200 text-rose-800 font-mono text-[9px] font-semibold rounded-md">
                   {managementCompanyProperties.filter((m: any) => m.management_fee_percentage === undefined || m.management_fee_percentage === null).length} Flagged
                 </span>
               </div>
 
               {managementCompanyProperties.filter((m: any) => m.management_fee_percentage === undefined || m.management_fee_percentage === null).length === 0 ? (
                 <div className="p-6 bg-emerald-50/50 border border-emerald-200 rounded-xl text-center space-y-1">
-                  <span className="text-emerald-800 font-bold text-xs block">🛡️ All Contracts Fully Compliant</span>
+                  <span className="text-emerald-800 font-semibold text-xs block">🛡️ All Contracts Fully Compliant</span>
                   <span className="text-#6B7280 text-[10px]">No active property management agreements are missing fee metrics. No profit calculations are blocked.</span>
                 </div>
               ) : (
@@ -5719,8 +5719,8 @@ export default function AdminDashboard({
                       <div key={mcp.id} className="p-4 bg-white border border-rose-100 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
                         <div className="space-y-1">
                           <div className="flex items-center gap-2">
-                            <span className="font-bold text-stone-850 text-xs">{mcp.propertyName}</span>
-                            <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[8px] rounded-full font-mono font-bold uppercase tracking-wider">
+                            <span className="font-semibold text-stone-850 text-xs">{mcp.propertyName}</span>
+                            <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[8px] rounded-full font-mono font-semibold uppercase tracking-wider">
                               Management Fee Not Set
                             </span>
                           </div>
@@ -5767,7 +5767,7 @@ export default function AdminDashboard({
                               triggerSuccess(`Compliance anomaly resolved! Agreed fee set to ${val}% for '${mcp.propertyName}'.`);
                               window.dispatchEvent(new Event('storage'));
                             }}
-                            className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white text-[11px] font-bold rounded-lg cursor-pointer transition shadow-xs"
+                            className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white text-[11px] font-semibold rounded-lg cursor-pointer transition shadow-xs"
                           >
                             Rectify &amp; Save
                           </button>
@@ -5782,7 +5782,7 @@ export default function AdminDashboard({
             {/* SECTION 3: ASSIGN PROPERTY TO PROPERTY MANAGEMENT COMPANY (PMC) */}
             <div className="p-5 border border-stone-200 rounded-2xl bg-amber-50/80/10 space-y-4">
               <div className="border-b border-stone-200 pb-3">
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Assign Property to Management Company</h4>
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Assign Property to Management Company</h4>
                 <p className="text-[10px] text-#6B7280">Draft a management agreement to delegate landlord portfolio assets to active PMCs.</p>
               </div>
 
@@ -5836,7 +5836,7 @@ export default function AdminDashboard({
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {/* Select Property */}
                   <div>
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">Select Asset Property</label>
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">Select Asset Property</label>
                     <select
                       required
                       value={assignPropertyId}
@@ -5857,7 +5857,7 @@ export default function AdminDashboard({
 
                   {/* Select PMC */}
                   <div>
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">Select Property Management Company</label>
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">Select Property Management Company</label>
                     <select
                       required
                       value={assignPmcId}
@@ -5873,7 +5873,7 @@ export default function AdminDashboard({
 
                   {/* Fee Percentage */}
                   <div>
-                    <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">Agreed Management Fee (%)</label>
+                    <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">Agreed Management Fee (%)</label>
                     <input
                       type="number"
                       required
@@ -5895,7 +5895,7 @@ export default function AdminDashboard({
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="py-2.5 px-6 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl cursor-pointer transition shadow-sm text-xs"
+                    className="py-2.5 px-6 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl cursor-pointer transition shadow-sm text-xs"
                   >
                     Create and Authorize Agreement
                   </button>
@@ -5906,7 +5906,7 @@ export default function AdminDashboard({
             {/* SECTION 4: GENERAL PMC AGREEMENT LEDGER */}
             <div className="p-5 border border-stone-200 rounded-2xl space-y-4">
               <div>
-                <h4 className="font-display font-black text-[#18452E] text-xs uppercase">Accredited PMC Agreement Registry</h4>
+                <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase">Accredited PMC Agreement Registry</h4>
                 <p className="text-[10px] text-#6B7280">Every active property management agreement currently authenticated across the portfolio.</p>
               </div>
 
@@ -5923,13 +5923,13 @@ export default function AdminDashboard({
                   <tbody className="divide-y divide-stone-100">
                     {managementCompanyProperties.map((mcp: any) => (
                       <tr key={mcp.id} className="hover:bg-amber-50/80/50">
-                        <td className="p-3 font-bold text-#132A1D">{mcp.propertyName}</td>
+                        <td className="p-3 font-semibold text-#132A1D">{mcp.propertyName}</td>
                         <td className="p-3 text-stone-550">{mcp.company_id}</td>
-                        <td className="p-3 text-center font-mono font-bold text-[#18452E]">
+                        <td className="p-3 text-center font-mono font-semibold text-[#18452E]">
                           {mcp.management_fee_percentage !== undefined ? `${mcp.management_fee_percentage}%` : 'Not Set'}
                         </td>
                         <td className="p-3 text-right">
-                          <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase ${
+                          <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold font-mono uppercase ${
                             mcp.is_active !== false ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50/80 text-#6B7280'
                           }`}>
                             {mcp.is_active !== false ? 'Active' : 'Terminated'}
@@ -5947,7 +5947,7 @@ export default function AdminDashboard({
         {/* TAB 19: TRANSPARENCY LEDGER */}
         {activeTab === 'Transparency Ledger' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase">Global Transparency Ledger</h3>
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Global Transparency Ledger</h3>
             <p className="text-xs text-#6B7280">Every transaction, edit, upload, and approval on the platform is permanently logged here. Nothing hidden.</p>
             
             <div className="space-y-3 font-mono text-[10px]">
@@ -6000,13 +6000,13 @@ export default function AdminDashboard({
         {activeTab === 'Settings' && (
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6">
             <div>
-              <h3 className="font-display font-black text-[#18452E] text-sm uppercase">System Settings &amp; Ledger API</h3>
+              <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">System Settings &amp; Ledger API</h3>
               <p className="text-xs text-#6B7280">Configure global admin parameters securely. All connections operate on zero-trust token models.</p>
             </div>
             
             <div className="space-y-6 text-xs font-sans">
               <div className="p-4 bg-[#18452E]/5 border border-[#0E2F1F]/10 rounded-2xl space-y-3">
-                <span className="font-bold text-[#18452E] text-sm block">Sandbox Environment Testing</span>
+                <span className="font-semibold text-[#18452E] text-sm block">Sandbox Environment Testing</span>
                 <p className="text-#6B7280 leading-relaxed text-[11px]">
                   Pre-populate your tenant registers, billing, shortlet booking logs, promise-to-pay ledger, platform documents, and unread notification layers with a rich demo dataset instantly to test all real-time compliance and automation engines.
                 </p>
@@ -6016,7 +6016,7 @@ export default function AdminDashboard({
                       generateDemoDataset();
                       triggerSuccess('Sandbox Demo Dataset reset and reloaded from scratch successfully!');
                     }}
-                    className="flex-1 py-2 px-4 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-center cursor-pointer transition shadow-sm"
+                    className="flex-1 py-2 px-4 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-center cursor-pointer transition shadow-sm"
                   >
                     Reset and Reload Demo Data
                   </button>
@@ -6025,7 +6025,7 @@ export default function AdminDashboard({
                       removeDemoDataset();
                       triggerSuccess('Sandbox Demo Dataset cleared from all registers successfully.');
                     }}
-                    className="flex-1 py-2 px-4 bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-700 font-bold rounded-xl text-center cursor-pointer transition"
+                    className="flex-1 py-2 px-4 bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-700 font-semibold rounded-xl text-center cursor-pointer transition"
                   >
                     Clear Demo Dataset
                   </button>
@@ -6033,7 +6033,7 @@ export default function AdminDashboard({
               </div>
 
               <div className="p-4 bg-amber-500/5 border border-amber-200/50 rounded-2xl space-y-3">
-                <span className="font-bold text-amber-800 text-sm block">PROMPT THREE &bull; Monthly summary Reports Cloud Function</span>
+                <span className="font-semibold text-amber-800 text-sm block">PROMPT THREE &bull; Monthly summary Reports Cloud Function</span>
                 <p className="text-#6B7280 leading-relaxed text-[11px]">
                   Emulate the automated Monthly Summary Cloud Function (scheduled to run at 8am Nigerian time on the first day of every month). This compiles real confirmed previous-month data, generates Unity Homes branded performance PDFs, uploads them to the database, and dispatches them as email attachments to active landlords (e.g. Mrs Adunola Fashola) and PMCs.
                 </p>
@@ -6047,14 +6047,14 @@ export default function AdminDashboard({
                     } catch {}
                     triggerSuccess('Automated Monthly Portfolio Summary Report Cloud Function executed! Performance summaries generated and delivered successfully.');
                   }}
-                  className="w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-xl text-center cursor-pointer transition shadow-sm"
+                  className="w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-xl text-center cursor-pointer transition shadow-sm"
                 >
                   Trigger Scheduled Monthly Summary Reports Function
                 </button>
               </div>
 
               <div className="p-4 bg-amber-50/80 border border-stone-200 rounded-2xl space-y-3">
-                <span className="font-bold text-[#18452E] block">Compliance Configuration Parameters</span>
+                <span className="font-semibold text-[#18452E] block">Compliance Configuration Parameters</span>
                 
                 <div className="flex items-center justify-between">
                   <span>Mandatory Guarantor Check Gating</span>
@@ -6067,7 +6067,7 @@ export default function AdminDashboard({
                 </div>
               </div>
 
-              <p className="text-stone-400 font-light text-[10px] text-center italic">
+              <p className="text-stone-400 font-normal text-[10px] text-center italic">
                 Unity Homes Admin Workspace RC-1849120 &bull; Don&apos;t Buy Wahala!
               </p>
             </div>
@@ -6112,7 +6112,7 @@ export default function AdminDashboard({
               <div className="flex items-center space-x-4">
                 <img src={selectedLandlordModal.photo} alt={selectedLandlordModal.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
                 <div>
-                  <h3 className="font-display font-black text-xl">{selectedLandlordModal.name}</h3>
+                  <h3 className="font-display font-semibold text-xl">{selectedLandlordModal.name}</h3>
                   <p className="text-xs font-mono text-emerald-200 mt-1">{selectedLandlordModal.type} &bull; {selectedLandlordModal.phone} &bull; {selectedLandlordModal.email}</p>
                 </div>
               </div>
@@ -6125,7 +6125,7 @@ export default function AdminDashboard({
               <div className="flex border-b border-stone-200">
                 <button
                   onClick={() => setLandlordModalTab('details')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition cursor-pointer ${
                     landlordModalTab === 'details'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6135,7 +6135,7 @@ export default function AdminDashboard({
                 </button>
                 <button
                   onClick={() => setLandlordModalTab('history')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
                     landlordModalTab === 'history'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6152,11 +6152,11 @@ export default function AdminDashboard({
                   {/* PROFILE COMPLETION INDICATOR */}
                   <div className="p-4 bg-emerald-50/50 border border-emerald-200 rounded-2xl space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
+                      <span className="text-xs font-semibold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#18452E]" />
                         <span>Profile Verification Strength</span>
                       </span>
-                      <span className="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">85% Complete</span>
+                      <span className="text-[10px] font-mono font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">85% Complete</span>
                     </div>
                     {/* Progress Bar */}
                     <div className="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
@@ -6165,20 +6165,20 @@ export default function AdminDashboard({
                     {/* Checklist */}
                     <div className="grid grid-cols-2 gap-2 text-[10px] text-#6B7280 font-mono mt-1 pt-1 border-t border-emerald-100">
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">C of O Verified</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Govt ID Scanned</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Settlement Setup</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-amber-600 font-bold">○</span>
-                        <span className="text-#132A1D font-bold">Corporate CAC Check</span>
+                        <span className="text-amber-600 font-semibold">○</span>
+                        <span className="text-#132A1D font-semibold">Corporate CAC Check</span>
                       </div>
                     </div>
                   </div>
@@ -6205,17 +6205,17 @@ export default function AdminDashboard({
                   </div>
                   
                   <div className="space-y-2">
-                    <h4 className="font-display font-bold text-xs uppercase text-#6B7280">Service Charges &amp; Ledger History</h4>
+                    <h4 className="font-display font-semibold text-xs uppercase text-#6B7280">Service Charges &amp; Ledger History</h4>
                     <div className="p-4 bg-amber-50/80 rounded-xl border border-stone-200 text-xs text-#6B7280 font-mono">
                       All service charges up to date. Ledger shows 100% remittance rate for 2026.
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="font-display font-bold text-xs uppercase text-#6B7280">Associated Documents</h4>
+                    <h4 className="font-display font-semibold text-xs uppercase text-#6B7280">Associated Documents</h4>
                     <div className="flex space-x-2">
-                      <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-lg text-[10px] font-bold">C of O Verified</span>
-                      <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-lg text-[10px] font-bold">Govt ID Scanned</span>
+                      <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-lg text-[10px] font-semibold">C of O Verified</span>
+                      <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-lg text-[10px] font-semibold">Govt ID Scanned</span>
                     </div>
                   </div>
                 </>
@@ -6235,7 +6235,7 @@ export default function AdminDashboard({
               <div className="flex items-center space-x-4">
                 <img src={selectedTenantModal.photo} alt={selectedTenantModal.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
                 <div>
-                  <h3 className="font-display font-black text-xl">{selectedTenantModal.name}</h3>
+                  <h3 className="font-display font-semibold text-xl">{selectedTenantModal.name}</h3>
                   <p className="text-xs font-mono text-emerald-200 mt-1">{selectedTenantModal.occupation} at {selectedTenantModal.employer}</p>
                 </div>
               </div>
@@ -6247,25 +6247,25 @@ export default function AdminDashboard({
               {/* TENANCY RECORD SUMMARY */}
               <div className=" text-white p-5 rounded-2xl space-y-3.5 shadow-sm">
                 <div className="flex justify-between items-center border-b border-white/10 pb-2">
-                  <h4 className="font-display font-black text-xs uppercase tracking-wide text-emerald-300">Tenancy Lifetime Summary</h4>
-                  <span className="text-[9px] font-mono font-bold bg-white/15 px-2 py-0.5 rounded uppercase tracking-wider text-white">System Audited</span>
+                  <h4 className="font-display font-semibold text-xs uppercase tracking-wide text-emerald-300">Tenancy Lifetime Summary</h4>
+                  <span className="text-[9px] font-mono font-semibold bg-white/15 px-2 py-0.5 rounded uppercase tracking-wider text-white">System Audited</span>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono">
                   <div>
-                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-bold mb-1">Time on Platform</span>
-                    <strong className="text-sm text-white font-bold block">1 Yr, 4 Months</strong>
+                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-semibold mb-1">Time on Platform</span>
+                    <strong className="text-sm text-white font-semibold block">1 Yr, 4 Months</strong>
                   </div>
                   <div>
-                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-bold mb-1">Properties Tenanted</span>
-                    <strong className="text-sm text-white font-bold block">2 Distinct</strong>
+                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-semibold mb-1">Properties Tenanted</span>
+                    <strong className="text-sm text-white font-semibold block">2 Distinct</strong>
                   </div>
                   <div>
-                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-bold mb-1">Lifetime Rent Paid</span>
-                    <strong className="text-sm text-emerald-300 font-bold block">₦3,750,000.00</strong>
+                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-semibold mb-1">Lifetime Rent Paid</span>
+                    <strong className="text-sm text-emerald-300 font-semibold block">₦3,750,000.00</strong>
                   </div>
                   <div>
-                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-bold mb-1">Service Bills Paid</span>
-                    <strong className="text-sm text-white font-bold block">14 Periodical</strong>
+                    <span className="block text-[8px] uppercase text-emerald-200/70 font-sans tracking-wider font-semibold mb-1">Service Bills Paid</span>
+                    <strong className="text-sm text-white font-semibold block">14 Periodical</strong>
                   </div>
                 </div>
               </div>
@@ -6274,7 +6274,7 @@ export default function AdminDashboard({
               <div className="flex border-b border-stone-200">
                 <button
                   onClick={() => setTenantModalTab('details')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition cursor-pointer ${
                     tenantModalTab === 'details'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6284,7 +6284,7 @@ export default function AdminDashboard({
                 </button>
                 <button
                   onClick={() => setTenantModalTab('history')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
                     tenantModalTab === 'history'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6301,11 +6301,11 @@ export default function AdminDashboard({
                   {/* PROFILE COMPLETION INDICATOR */}
                   <div className="p-4 bg-emerald-50/50 border border-emerald-200 rounded-2xl space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
+                      <span className="text-xs font-semibold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#18452E]" />
                         <span>Tenant Profile Verification Strength</span>
                       </span>
-                      <span className="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">100% Complete</span>
+                      <span className="text-[10px] font-mono font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">100% Complete</span>
                     </div>
                     {/* Progress Bar */}
                     <div className="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
@@ -6314,19 +6314,19 @@ export default function AdminDashboard({
                     {/* Checklist */}
                     <div className="grid grid-cols-2 gap-2 text-[10px] text-#6B7280 font-mono mt-1 pt-1 border-t border-emerald-100">
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Bio &amp; Photo uploaded</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Guarantor Verification</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Employment confirmed</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">References Cleared</span>
                       </div>
                     </div>
@@ -6341,7 +6341,7 @@ export default function AdminDashboard({
                   </div>
                   
                   <div className="p-4 bg-amber-50/80 rounded-xl border border-stone-200 space-y-3">
-                    <h4 className="font-display font-bold text-xs uppercase text-[#18452E]">Tenancy Details</h4>
+                    <h4 className="font-display font-semibold text-xs uppercase text-[#18452E]">Tenancy Details</h4>
                     <div className="grid grid-cols-2 gap-4 text-xs">
                       <div><span className="block text-[9px] text-stone-400 uppercase">Property</span><strong>{selectedTenantModal.property} ({selectedTenantModal.unit})</strong></div>
                       <div><span className="block text-[9px] text-stone-400 uppercase">Rent</span><strong className="font-mono text-[#18452E]">₦{selectedTenantModal.rentAmount.toLocaleString()}</strong></div>
@@ -6351,7 +6351,7 @@ export default function AdminDashboard({
                   </div>
 
                   <div className="p-4 bg-amber-50 rounded-xl border border-amber-200 space-y-3">
-                    <h4 className="font-display font-bold text-xs uppercase text-amber-900">Guarantor Information</h4>
+                    <h4 className="font-display font-semibold text-xs uppercase text-amber-900">Guarantor Information</h4>
                     <div className="grid grid-cols-2 gap-4 text-xs">
                       <div><span className="block text-[9px] text-amber-700 uppercase">Name</span><strong className="text-amber-900">{selectedTenantModal.guarantor.name} ({selectedTenantModal.guarantor.relationship})</strong></div>
                       <div><span className="block text-[9px] text-amber-700 uppercase">Phone</span><strong className="font-mono text-amber-900">{selectedTenantModal.guarantor.phone}</strong></div>
@@ -6374,7 +6374,7 @@ export default function AdminDashboard({
           <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div>
-                <h3 className="font-display font-black text-xl">{selectedPMCModal.name}</h3>
+                <h3 className="font-display font-semibold text-xl">{selectedPMCModal.name}</h3>
                 <p className="text-xs font-mono text-emerald-200 mt-1">{selectedPMCModal.address} &bull; {selectedPMCModal.phone} &bull; {selectedPMCModal.email}</p>
               </div>
               <button onClick={() => setSelectedPMCModal(null)} className="p-2 hover:bg-white/10 rounded-full cursor-pointer">
@@ -6386,7 +6386,7 @@ export default function AdminDashboard({
               <div className="flex border-b border-stone-200">
                 <button
                   onClick={() => setPmcModalTab('details')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition cursor-pointer ${
                     pmcModalTab === 'details'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6396,7 +6396,7 @@ export default function AdminDashboard({
                 </button>
                 <button
                   onClick={() => setPmcModalTab('history')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
                     pmcModalTab === 'history'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6413,11 +6413,11 @@ export default function AdminDashboard({
                   {/* PROFILE COMPLETION INDICATOR */}
                   <div className="p-4 bg-emerald-50/50 border border-emerald-200 rounded-2xl space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
+                      <span className="text-xs font-semibold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#18452E]" />
                         <span>Corporate Profile Strength</span>
                       </span>
-                      <span className="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">90% Complete</span>
+                      <span className="text-[10px] font-mono font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">90% Complete</span>
                     </div>
                     {/* Progress Bar */}
                     <div className="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
@@ -6426,20 +6426,20 @@ export default function AdminDashboard({
                     {/* Checklist */}
                     <div className="grid grid-cols-2 gap-2 text-[10px] text-#6B7280 font-mono mt-1 pt-1 border-t border-emerald-100">
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">CAC Certificate Verified</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Tax ID Compliance verified</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Professional Indemnity Scan</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-amber-600 font-bold">○</span>
-                        <span className="text-#132A1D font-bold">Regulatory Audited Rating</span>
+                        <span className="text-amber-600 font-semibold">○</span>
+                        <span className="text-#132A1D font-semibold">Regulatory Audited Rating</span>
                       </div>
                     </div>
                   </div>
@@ -6464,11 +6464,11 @@ export default function AdminDashboard({
                   </div>
                   <div className="p-4 bg-amber-50/80 rounded-xl border border-stone-200 space-y-2 text-xs">
                     <div className="flex justify-between border-b border-stone-200 pb-2">
-                      <span className="text-#6B7280 font-bold uppercase">Subscription Tier</span>
+                      <span className="text-#6B7280 font-semibold uppercase">Subscription Tier</span>
                       <strong className="text-[#18452E]">{selectedPMCModal.subscription}</strong>
                     </div>
                     <div className="flex justify-between pt-2">
-                      <span className="text-#6B7280 font-bold uppercase">YTD Collection History</span>
+                      <span className="text-#6B7280 font-semibold uppercase">YTD Collection History</span>
                       <strong className="font-mono text-emerald-600">{selectedPMCModal.collectionHistory}</strong>
                     </div>
                   </div>
@@ -6487,7 +6487,7 @@ export default function AdminDashboard({
           <div className="bg-white rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm">
             <div className="bg-[#18452E] p-6 text-white flex justify-between items-start">
               <div>
-                <h3 className="font-display font-black text-xl">{selectedShortletModal.name}</h3>
+                <h3 className="font-display font-semibold text-xl">{selectedShortletModal.name}</h3>
                 <p className="text-xs font-mono text-emerald-200 mt-1">Manager: {selectedShortletModal.manager}</p>
               </div>
               <button onClick={() => setSelectedShortletModal(null)} className="p-2 hover:bg-white/10 rounded-full cursor-pointer">
@@ -6499,7 +6499,7 @@ export default function AdminDashboard({
               <div className="flex border-b border-stone-200">
                 <button
                   onClick={() => setShortletModalTab('details')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition cursor-pointer ${
                     shortletModalTab === 'details'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6509,7 +6509,7 @@ export default function AdminDashboard({
                 </button>
                 <button
                   onClick={() => setShortletModalTab('history')}
-                  className={`px-4 py-2 border-b-2 font-display font-bold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
+                  className={`px-4 py-2 border-b-2 font-display font-semibold text-xs uppercase tracking-wider transition flex items-center space-x-1 cursor-pointer ${
                     shortletModalTab === 'history'
                       ? 'border-[#18452E] text-[#18452E]'
                       : 'border-transparent text-stone-400 hover:text-#6B7280'
@@ -6526,11 +6526,11 @@ export default function AdminDashboard({
                   {/* PROFILE COMPLETION INDICATOR */}
                   <div className="p-4 bg-emerald-50/50 border border-emerald-200 rounded-2xl space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-bold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
+                      <span className="text-xs font-semibold text-[#18452E] uppercase tracking-wider flex items-center space-x-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#18452E]" />
                         <span>Manager Profile Strength</span>
                       </span>
-                      <span className="text-[10px] font-mono font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">75% Complete</span>
+                      <span className="text-[10px] font-mono font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md">75% Complete</span>
                     </div>
                     {/* Progress Bar */}
                     <div className="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
@@ -6539,20 +6539,20 @@ export default function AdminDashboard({
                     {/* Checklist */}
                     <div className="grid grid-cols-2 gap-2 text-[10px] text-#6B7280 font-mono mt-1 pt-1 border-t border-emerald-100">
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">ID Verification scan</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Escrow Security Escrow</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-emerald-600 font-bold">✓</span>
+                        <span className="text-emerald-600 font-semibold">✓</span>
                         <span className="line-through text-stone-400">Interactive Host Course</span>
                       </div>
                       <div className="flex items-center space-x-1.5">
-                        <span className="text-amber-600 font-bold">○</span>
-                        <span className="text-#132A1D font-bold">Review Rating Audit (&gt;=4.0)</span>
+                        <span className="text-amber-600 font-semibold">○</span>
+                        <span className="text-#132A1D font-semibold">Review Rating Audit (&gt;=4.0)</span>
                       </div>
                     </div>
                   </div>
@@ -6576,7 +6576,7 @@ export default function AdminDashboard({
                     </div>
                   </div>
                   <div className="p-4 bg-teal-50 rounded-xl border border-teal-200 text-xs flex justify-between items-center">
-                    <span className="text-teal-800 font-bold uppercase">Remittance Performance</span>
+                    <span className="text-teal-800 font-semibold uppercase">Remittance Performance</span>
                     <strong className="font-mono text-teal-900 text-lg">{selectedShortletModal.remittancePerformance}</strong>
                   </div>
                 </>
@@ -6594,7 +6594,7 @@ export default function AdminDashboard({
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] w-full max-w-2xl overflow-hidden shadow-sm animate-fade-in flex flex-col max-h-[90vh]">
             <div className="p-5 border-b border-stone-150 flex justify-between items-center bg-[#18452E] text-white">
               <div>
-                <h4 className="font-display font-black text-xs uppercase tracking-wider">Receipt Email Inspector</h4>
+                <h4 className="font-display font-semibold text-xs uppercase tracking-wider">Receipt Email Inspector</h4>
                 <p className="text-[10px] opacity-85 mt-0.5 font-mono">Recipient: {selectedEmailPreview.recipientEmail} &bull; Ref: {selectedEmailPreview.id}</p>
               </div>
               <button 
@@ -6606,21 +6606,21 @@ export default function AdminDashboard({
             </div>
             <div className="p-6 overflow-y-auto bg-amber-50/80 flex-1 space-y-4">
               <div className="bg-white p-4 border border-stone-200 rounded-xl text-xs space-y-1 font-mono">
-                <div><span className="font-bold text-#6B7280">To:</span> {selectedEmailPreview.recipientEmail}</div>
-                <div><span className="font-bold text-#6B7280">Subject:</span> {selectedEmailPreview.subject}</div>
-                <div><span className="font-bold text-#6B7280">Sent At:</span> {new Date(selectedEmailPreview.sentAt).toLocaleString()}</div>
+                <div><span className="font-semibold text-#6B7280">To:</span> {selectedEmailPreview.recipientEmail}</div>
+                <div><span className="font-semibold text-#6B7280">Subject:</span> {selectedEmailPreview.subject}</div>
+                <div><span className="font-semibold text-#6B7280">Sent At:</span> {new Date(selectedEmailPreview.sentAt).toLocaleString()}</div>
                 <div>
-                  <span className="font-bold text-#6B7280">Attachments:</span>{' '}
+                  <span className="font-semibold text-#6B7280">Attachments:</span>{' '}
                   {selectedEmailPreview.attachments?.map((att: any) => (
-                    <span key={att.fileName} className="bg-amber-50 text-[#C9A84C] border border-amber-400/20 px-1.5 py-0.5 rounded font-bold text-[10px] inline-flex items-center space-x-1">
+                    <span key={att.fileName} className="bg-amber-50 text-[#C9A84C] border border-amber-400/20 px-1.5 py-0.5 rounded font-semibold text-[10px] inline-flex items-center space-x-1">
                       <FileText className="w-3 h-3 inline" />
                       <span>{att.fileName}</span>
                     </span>
                   )) || <span className="text-stone-400">None</span>}
                 </div>
                 <div>
-                  <span className="font-bold text-#6B7280">Status:</span>{' '}
-                  <span className={`px-1.5 py-0.5 rounded font-bold text-[10px] uppercase ${
+                  <span className="font-semibold text-#6B7280">Status:</span>{' '}
+                  <span className={`px-1.5 py-0.5 rounded font-semibold text-[10px] uppercase ${
                     selectedEmailPreview.status === 'delivered' ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' : 'bg-rose-100 text-rose-800 border border-rose-200'
                   }`}>
                     {selectedEmailPreview.status}
@@ -6641,7 +6641,7 @@ export default function AdminDashboard({
               {/* Display Transparency Certificate PDF Mock Content if exists */}
               {selectedEmailPreview.attachments?.[0] && (
                 <div className="border border-amber-400/30 bg-amber-50/20 rounded-xl p-4 space-y-2">
-                  <div className="flex items-center space-x-1.5 text-[10px] font-bold text-#6B7280 uppercase tracking-wider">
+                  <div className="flex items-center space-x-1.5 text-[10px] font-semibold text-#6B7280 uppercase tracking-wider">
                     <FileLock className="w-4 h-4 text-[#C9A84C]" />
                     <span>Attached Document: {selectedEmailPreview.attachments[0].fileName}</span>
                   </div>
@@ -6654,7 +6654,7 @@ export default function AdminDashboard({
             <div className="p-4 border-t border-stone-150 bg-amber-50/80 flex justify-end">
               <button 
                 onClick={() => setSelectedEmailPreview(null)}
-                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl text-xs cursor-pointer transition"
+                className="px-4 py-2 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl text-xs cursor-pointer transition"
               >
                 Close Preview
               </button>

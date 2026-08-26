@@ -64,11 +64,11 @@ export default function FAQSection({ limit }: { limit?: number }) {
             >
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className={`text-[11px] font-bold uppercase tracking-widest ${statusColor}`}>
+                  <span className={`text-[11px] font-semibold uppercase tracking-widest ${statusColor}`}>
                     {faq.status}
                   </span>
                 </div>
-                <h3 className={`text-lg md:text-xl font-bold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D]'}`}>
+                <h3 className={`text-lg md:text-xl font-semibold transition-colors duration-200 ${isExpanded ? 'text-[#6FBE45]' : 'text-[#132A1D]'}`}>
                   {faq.question}
                 </h3>
               </div>

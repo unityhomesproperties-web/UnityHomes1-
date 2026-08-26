@@ -330,21 +330,21 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         <div className="relative z-10 space-y-2">
           <div className="flex items-center space-x-2 text-[#C9A84C]">
             <Tag className="w-5 h-5" />
-            <span className="text-xs font-mono font-bold tracking-widest uppercase">
+            <span className="text-xs font-mono font-semibold tracking-widest uppercase">
               Fee Management & Promotion Engine
             </span>
           </div>
-          <h2 className="font-display font-black text-2xl md:text-3xl text-white">
+          <h2 className="font-display font-semibold text-2xl md:text-3xl text-white">
             Promo Code Management
           </h2>
-          <p className="text-xs text-stone-200 max-w-2xl font-light leading-relaxed">
+          <p className="text-xs text-stone-200 max-w-2xl font-normal leading-relaxed">
             Configure, validate, and track promotional codes for Unity Homes connection fees and platform subscription charges. Promo codes strictly apply to platform fees and never touch landlord rent, caution deposits, or service charges.
           </p>
         </div>
 
         <button
           onClick={handleOpenAddModal}
-          className="relative z-10 px-6 py-3.5 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-black text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
+          className="relative z-10 px-6 py-3.5 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Add New Promo Code</span>
@@ -360,13 +360,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         {/* Card 1: Total Active Codes */}
         <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400 block tracking-wider">
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400 block tracking-wider">
               Total Active Codes
             </span>
-            <span className="font-display font-black text-2xl text-[#18452E] mt-1 block">
+            <span className="font-display font-semibold text-2xl text-[#18452E] mt-1 block">
               {activeCodesCount}
             </span>
-            <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">
+            <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">
               Out of {promoCodes.length} total codes created
             </span>
           </div>
@@ -378,13 +378,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         {/* Card 2: Total Redemptions This Month */}
         <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400 block tracking-wider">
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400 block tracking-wider">
               Redemptions This Month
             </span>
-            <span className="font-display font-black text-2xl text-[#18452E] mt-1 block">
+            <span className="font-display font-semibold text-2xl text-[#18452E] mt-1 block">
               {totalRedemptionsThisMonth}
             </span>
-            <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">
+            <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">
               {redemptions.length} total lifetime uses
             </span>
           </div>
@@ -396,10 +396,10 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         {/* Card 3: Total Discount Value Given This Month */}
         <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400 block tracking-wider">
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400 block tracking-wider">
               Discounts Given This Month
             </span>
-            <span className="font-display font-black text-2xl text-[#18452E] mt-1 block">
+            <span className="font-display font-semibold text-2xl text-[#18452E] mt-1 block">
               ₦{totalDiscountGivenThisMonth.toLocaleString()}
             </span>
             <span className="text-[10px] text-emerald-800 font-medium mt-0.5 block">
@@ -414,13 +414,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         {/* Card 4: Most Used Code This Month */}
         <div className="bg-white border border-stone-200 rounded-2xl p-5 shadow-xs flex items-center justify-between">
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400 block tracking-wider">
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400 block tracking-wider">
               Most Used Code (This Month)
             </span>
-            <span className="font-display font-black text-xl text-[#C9A84C] font-mono mt-1 block uppercase">
+            <span className="font-display font-semibold text-xl text-[#C9A84C] font-mono mt-1 block uppercase">
               {mostUsedCodeThisMonth}
             </span>
-            <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">
+            <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">
               {maxCountThisMonth > 0 ? `${maxCountThisMonth} redemptions recorded` : 'No redemptions this month'}
             </span>
           </div>
@@ -451,11 +451,11 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
           
           {/* Status Filter */}
           <div className="flex items-center space-x-2 bg-stone-50 border border-stone-200 rounded-xl px-3 py-1.5">
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400">Status:</span>
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400">Status:</span>
             <select
               value={statusFilter}
               onChange={e => setStatusFilter(e.target.value as any)}
-              className="bg-transparent text-xs font-bold text-[#18452E] focus:outline-none cursor-pointer"
+              className="bg-transparent text-xs font-semibold text-[#18452E] focus:outline-none cursor-pointer"
             >
               <option value="all">All Statuses</option>
               <option value="active">Active Only</option>
@@ -465,11 +465,11 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
           {/* Scope Filter */}
           <div className="flex items-center space-x-2 bg-stone-50 border border-stone-200 rounded-xl px-3 py-1.5">
-            <span className="text-[10px] font-mono font-bold uppercase text-stone-400">Scope:</span>
+            <span className="text-[10px] font-mono font-semibold uppercase text-stone-400">Scope:</span>
             <select
               value={scopeFilter}
               onChange={e => setScopeFilter(e.target.value as any)}
-              className="bg-transparent text-xs font-bold text-[#18452E] focus:outline-none cursor-pointer"
+              className="bg-transparent text-xs font-semibold text-[#18452E] focus:outline-none cursor-pointer"
             >
               <option value="all">All Scopes</option>
               <option value="professional_connection">Connection Fees</option>
@@ -484,7 +484,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 setStatusFilter('all');
                 setScopeFilter('all');
               }}
-              className="px-3 py-2 text-xs font-bold text-#6B7280 hover:text-#132A1D underline cursor-pointer"
+              className="px-3 py-2 text-xs font-semibold text-#6B7280 hover:text-#132A1D underline cursor-pointer"
             >
               Reset Filters
             </button>
@@ -499,7 +499,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-stone-50 border-b border-stone-200 text-[10px] font-mono font-extrabold uppercase text-#6B7280 tracking-wider">
+              <tr className="bg-stone-50 border-b border-stone-200 text-[10px] font-mono font-semibold uppercase text-#6B7280 tracking-wider">
                 <th onClick={() => handleSort('code')} className="py-3.5 px-4 cursor-pointer hover:bg-stone-50 transition">
                   <div className="flex items-center space-x-1">
                     <span>Code</span>
@@ -559,7 +559,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             <tbody className="divide-y divide-stone-150 text-xs">
               {filteredCodes.length === 0 ? (
                 <tr>
-                  <td colSpan={10} className="py-12 text-center text-stone-400 font-light">
+                  <td colSpan={10} className="py-12 text-center text-stone-400 font-normal">
                     No promo codes found matching search and filter criteria.
                   </td>
                 </tr>
@@ -571,7 +571,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     <tr key={code.id} className="hover:bg-stone-50/80 transition">
                       
                       {/* Code string with Copy button */}
-                      <td className="py-3.5 px-4 font-mono font-black text-sm text-[#18452E]">
+                      <td className="py-3.5 px-4 font-mono font-semibold text-sm text-[#18452E]">
                         <div className="flex items-center space-x-2">
                           <span className="bg-[#18452E]/5 px-2.5 py-1 rounded-lg border border-[#0E2F1F]/10 tracking-wider">
                             {code.code}
@@ -596,26 +596,26 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                           {code.description}
                         </p>
                         {code.specific_plan && (
-                          <span className="inline-block mt-1 px-2 py-0.5 bg-purple-50 text-purple-800 border border-purple-200 rounded text-[9px] font-mono font-bold">
+                          <span className="inline-block mt-1 px-2 py-0.5 bg-purple-50 text-purple-800 border border-purple-200 rounded text-[9px] font-mono font-semibold">
                             Plan Restriction: {code.specific_plan}
                           </span>
                         )}
                       </td>
 
                       {/* Discount Value */}
-                      <td className="py-3.5 px-4 font-bold text-#132A1D">
+                      <td className="py-3.5 px-4 font-semibold text-#132A1D">
                         {code.discount_type === 'percentage' && (
-                          <span className="text-emerald-700 font-mono font-black text-sm">
+                          <span className="text-emerald-700 font-mono font-semibold text-sm">
                             {code.discount_value}% Off
                           </span>
                         )}
                         {code.discount_type === 'fixed_amount' && (
-                          <span className="text-emerald-700 font-mono font-black text-sm">
+                          <span className="text-emerald-700 font-mono font-semibold text-sm">
                             ₦{code.discount_value.toLocaleString()} Off
                           </span>
                         )}
                         {code.discount_type === 'free_months' && (
-                          <span className="text-purple-700 font-mono font-black text-xs">
+                          <span className="text-purple-700 font-mono font-semibold text-xs">
                             {code.discount_value} Month(s) Free
                           </span>
                         )}
@@ -624,17 +624,17 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       {/* Applies To */}
                       <td className="py-3.5 px-4">
                         {code.applies_to === 'all' && (
-                          <span className="px-2 py-0.5 bg-stone-50 text-#132A1D rounded text-[10px] font-mono font-bold uppercase">
+                          <span className="px-2 py-0.5 bg-stone-50 text-#132A1D rounded text-[10px] font-mono font-semibold uppercase">
                             All Platform Fees
                           </span>
                         )}
                         {code.applies_to === 'professional_connection' && (
-                          <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[10px] font-mono font-bold uppercase">
+                          <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[10px] font-mono font-semibold uppercase">
                             Connections Only
                           </span>
                         )}
                         {code.applies_to === 'subscription' && (
-                          <span className="px-2 py-0.5 bg-blue-50 text-blue-800 border border-blue-200 rounded text-[10px] font-mono font-bold uppercase">
+                          <span className="px-2 py-0.5 bg-blue-50 text-blue-800 border border-blue-200 rounded text-[10px] font-mono font-semibold uppercase">
                             Subscriptions Only
                           </span>
                         )}
@@ -643,14 +643,14 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       {/* Eligible Roles */}
                       <td className="py-3.5 px-4 text-[10px] font-mono text-#6B7280">
                         {code.eligible_roles.includes('all') ? (
-                          <span className="text-#6B7280 font-bold">Any Role</span>
+                          <span className="text-#6B7280 font-semibold">Any Role</span>
                         ) : (
                           <span>{code.eligible_roles.join(', ')}</span>
                         )}
                       </td>
 
                       {/* Uses */}
-                      <td className="py-3.5 px-4 font-mono font-bold text-#132A1D">
+                      <td className="py-3.5 px-4 font-mono font-semibold text-#132A1D">
                         <span>{code.current_uses}</span>
                         <span className="text-stone-400 font-normal"> / </span>
                         <span>{code.max_uses === null ? '∞' : code.max_uses}</span>
@@ -664,7 +664,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       {/* Expires At */}
                       <td className="py-3.5 px-4 font-mono text-[11px]">
                         {code.expires_at ? (
-                          <span className={isExpired ? 'text-red-600 font-bold' : 'text-#6B7280'}>
+                          <span className={isExpired ? 'text-red-600 font-semibold' : 'text-#6B7280'}>
                             {code.expires_at.split('T')[0]} {isExpired && '(Expired)'}
                           </span>
                         ) : (
@@ -675,17 +675,17 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       {/* Status */}
                       <td className="py-3.5 px-4">
                         {code.is_active && !isExpired ? (
-                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full text-[10px] font-mono font-bold uppercase">
+                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full text-[10px] font-mono font-semibold uppercase">
                             <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span>
                             <span>Active</span>
                           </span>
                         ) : isExpired ? (
-                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-red-50 text-red-800 border border-red-200 rounded-full text-[10px] font-mono font-bold uppercase">
+                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-red-50 text-red-800 border border-red-200 rounded-full text-[10px] font-mono font-semibold uppercase">
                             <span className="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
                             <span>Expired</span>
                           </span>
                         ) : (
-                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-stone-50 text-#6B7280 border border-stone-200 rounded-full text-[10px] font-mono font-bold uppercase">
+                          <span className="inline-flex items-center space-x-1 px-2.5 py-1 bg-stone-50 text-#6B7280 border border-stone-200 rounded-full text-[10px] font-mono font-semibold uppercase">
                             <span className="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
                             <span>Inactive</span>
                           </span>
@@ -700,7 +700,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                           <button
                             onClick={() => setViewRedemptionsCode(code)}
                             title="View Redemptions Log"
-                            className="p-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D rounded-lg text-xs font-bold transition cursor-pointer flex items-center space-x-1"
+                            className="p-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D rounded-lg text-xs font-semibold transition cursor-pointer flex items-center space-x-1"
                           >
                             <Eye className="w-3.5 h-3.5" />
                             <span className="hidden xl:inline">Redemptions</span>
@@ -710,7 +710,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                           <button
                             onClick={() => handleOpenEditModal(code)}
                             title="Edit Promo Code Parameters"
-                            className="p-1.5 bg-blue-50 hover:bg-blue-100 text-blue-800 rounded-lg text-xs font-bold transition cursor-pointer flex items-center space-x-1 border border-blue-200"
+                            className="p-1.5 bg-blue-50 hover:bg-blue-100 text-blue-800 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center space-x-1 border border-blue-200"
                           >
                             <Edit3 className="w-3.5 h-3.5" />
                             <span className="hidden xl:inline">Edit</span>
@@ -721,7 +721,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                             <button
                               onClick={() => handleDeactivateCode(code)}
                               title="Deactivate Promo Code"
-                              className="p-1.5 bg-red-50 hover:bg-red-100 text-red-800 rounded-lg text-xs font-bold transition cursor-pointer flex items-center space-x-1 border border-red-200"
+                              className="p-1.5 bg-red-50 hover:bg-red-100 text-red-800 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center space-x-1 border border-red-200"
                             >
                               <Power className="w-3.5 h-3.5" />
                               <span className="hidden xl:inline">Deactivate</span>
@@ -730,7 +730,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                             <button
                               onClick={() => handleReactivateCode(code)}
                               title="Reactivate Promo Code"
-                              className="p-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold transition cursor-pointer flex items-center space-x-1 border border-emerald-200"
+                              className="p-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center space-x-1 border border-emerald-200"
                             >
                               <RefreshCw className="w-3.5 h-3.5" />
                               <span className="hidden xl:inline">Reactivate</span>
@@ -760,8 +760,8 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                   <Tag className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-lg text-[#18452E]">Create New Promo Code</h3>
-                  <p className="text-xs text-#6B7280 font-light">Set discount type, rules, role access, and expiry constraints.</p>
+                  <h3 className="font-display font-semibold text-lg text-[#18452E]">Create New Promo Code</h3>
+                  <p className="text-xs text-#6B7280 font-normal">Set discount type, rules, role access, and expiry constraints.</p>
                 </div>
               </div>
               <button
@@ -776,7 +776,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               
               {/* Promo Code string (Auto Uppercase) */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                   Promo Code String *
                 </label>
                 <input
@@ -785,16 +785,16 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                   placeholder="e.g. LAUNCH20, WELCOME50"
                   value={formCode}
                   onChange={e => setFormCode(e.target.value.toUpperCase())}
-                  className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-xl font-mono font-black text-base tracking-wider text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none uppercase"
+                  className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-xl font-mono font-semibold text-base tracking-wider text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none uppercase"
                 />
-                <p className="text-[10px] text-#6B7280 font-light mt-1">
+                <p className="text-[10px] text-#6B7280 font-normal mt-1">
                   Enforced in uppercase automatically. Must be unique across all promo codes.
                 </p>
               </div>
 
               {/* Internal Description */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                   Description (Internal Admin Note Only) *
                 </label>
                 <textarea
@@ -810,13 +810,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Discount Type & Value Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Discount Type *
                   </label>
                   <select
                     value={formDiscountType}
                     onChange={e => setFormDiscountType(e.target.value as DiscountType)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   >
                     <option value="percentage">Percentage Off (%)</option>
                     <option value="fixed_amount">Fixed Amount Reduction (₦)</option>
@@ -825,7 +825,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Discount Value *
                   </label>
                   <input
@@ -834,9 +834,9 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     min={1}
                     value={formDiscountValue}
                     onChange={e => setFormDiscountValue(Number(e.target.value))}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   />
-                  <p className="text-[10px] text-#6B7280 font-light mt-1">
+                  <p className="text-[10px] text-#6B7280 font-normal mt-1">
                     {formDiscountType === 'percentage' && 'Enter percentage discount (1 - 100)'}
                     {formDiscountType === 'fixed_amount' && 'Enter naira amount to subtract'}
                     {formDiscountType === 'free_months' && 'Enter number of free subscription months'}
@@ -847,13 +847,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Applies To Scope & Specific Plan */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Applies To Scope *
                   </label>
                   <select
                     value={formAppliesTo}
                     onChange={e => setFormAppliesTo(e.target.value as AppliesToScope)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   >
                     <option value="all">All Fee Types (Connections & Subscriptions)</option>
                     <option value="professional_connection">Professional Connection Fees Only</option>
@@ -862,7 +862,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Specific Plan Restriction (Optional)
                   </label>
                   <input
@@ -877,7 +877,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
               {/* Eligible User Roles */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1.5">
+                <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1.5">
                   Eligible User Roles
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -895,7 +895,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                         key={role.id}
                         type="button"
                         onClick={() => handleToggleRole(role.id)}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer border ${
+                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer border ${
                           isSelected 
                             ? 'bg-[#18452E] text-white border-[#0E2F1F]' 
                             : 'bg-stone-50 text-#6B7280 border-stone-200 hover:bg-stone-200'
@@ -911,7 +911,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Max Uses Constraint */}
               <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase text-#132A1D">Usage Limit (Max Uses)</span>
+                  <span className="text-xs font-mono font-semibold uppercase text-#132A1D">Usage Limit (Max Uses)</span>
                   <label className="flex items-center space-x-2 text-xs font-medium text-#6B7280 cursor-pointer">
                     <input
                       type="checkbox"
@@ -929,7 +929,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     value={formMaxUses}
                     onChange={e => setFormMaxUses(Number(e.target.value))}
                     placeholder="Enter maximum redemptions count"
-                    className="w-full p-2.5 bg-white border border-stone-300 rounded-lg text-xs font-bold text-[#18452E] focus:outline-none"
+                    className="w-full p-2.5 bg-white border border-stone-300 rounded-lg text-xs font-semibold text-[#18452E] focus:outline-none"
                   />
                 )}
               </div>
@@ -937,7 +937,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Dates: Valid From & Expires At */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Valid From Date *
                   </label>
                   <input
@@ -945,13 +945,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     required
                     value={formValidFrom}
                     onChange={e => setFormValidFrom(e.target.value)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="text-xs font-mono font-bold uppercase text-#132A1D">
+                    <label className="text-xs font-mono font-semibold uppercase text-#132A1D">
                       Expiration Date
                     </label>
                     <label className="flex items-center space-x-1.5 text-[11px] text-#6B7280 cursor-pointer">
@@ -970,7 +970,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       required
                       value={formExpiresAt}
                       onChange={e => setFormExpiresAt(e.target.value)}
-                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                     />
                   )}
                 </div>
@@ -981,13 +981,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 <button
                   type="button"
                   onClick={() => setShowAddModal(false)}
-                  className="px-5 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs uppercase rounded-xl transition cursor-pointer"
+                  className="px-5 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs uppercase rounded-xl transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition cursor-pointer"
+                  className="px-6 py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition cursor-pointer"
                 >
                   Save &amp; Activate Promo Code
                 </button>
@@ -1006,10 +1006,10 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-wider">
+                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">
                   Editing Code Parameters
                 </span>
-                <h3 className="font-display font-black text-xl text-[#18452E]">
+                <h3 className="font-display font-semibold text-xl text-[#18452E]">
                   Code: {editingCode.code}
                 </h3>
               </div>
@@ -1023,13 +1023,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
             <form onSubmit={handleSaveEditCode} className="space-y-4">
               
-              <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 leading-relaxed font-light">
+              <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 leading-relaxed font-normal">
                 Note: The code string (<strong>{editingCode.code}</strong>) and current redemption count (<strong>{editingCode.current_uses}</strong>) are fixed to maintain historical ledger integrity.
               </div>
 
               {/* Description */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                   Description (Internal Admin Note) *
                 </label>
                 <textarea
@@ -1044,13 +1044,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Discount Type & Value Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Discount Type *
                   </label>
                   <select
                     value={formDiscountType}
                     onChange={e => setFormDiscountType(e.target.value as DiscountType)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   >
                     <option value="percentage">Percentage Off (%)</option>
                     <option value="fixed_amount">Fixed Amount Reduction (₦)</option>
@@ -1059,7 +1059,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Discount Value *
                   </label>
                   <input
@@ -1068,7 +1068,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     min={1}
                     value={formDiscountValue}
                     onChange={e => setFormDiscountValue(Number(e.target.value))}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   />
                 </div>
               </div>
@@ -1076,13 +1076,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Applies To Scope & Specific Plan */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Applies To Scope *
                   </label>
                   <select
                     value={formAppliesTo}
                     onChange={e => setFormAppliesTo(e.target.value as AppliesToScope)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   >
                     <option value="all">All Fee Types (Connections & Subscriptions)</option>
                     <option value="professional_connection">Professional Connection Fees Only</option>
@@ -1091,7 +1091,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Specific Plan Restriction (Optional)
                   </label>
                   <input
@@ -1106,7 +1106,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
               {/* Eligible User Roles */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1.5">
+                <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1.5">
                   Eligible User Roles
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -1124,7 +1124,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                         key={role.id}
                         type="button"
                         onClick={() => handleToggleRole(role.id)}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer border ${
+                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer border ${
                           isSelected 
                             ? 'bg-[#18452E] text-white border-[#0E2F1F]' 
                             : 'bg-stone-50 text-#6B7280 border-stone-200 hover:bg-stone-200'
@@ -1140,7 +1140,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Max Uses Constraint */}
               <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase text-#132A1D">Max Uses Limit</span>
+                  <span className="text-xs font-mono font-semibold uppercase text-#132A1D">Max Uses Limit</span>
                   <label className="flex items-center space-x-2 text-xs font-medium text-#6B7280 cursor-pointer">
                     <input
                       type="checkbox"
@@ -1157,7 +1157,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     min={editingCode.current_uses}
                     value={formMaxUses}
                     onChange={e => setFormMaxUses(Number(e.target.value))}
-                    className="w-full p-2.5 bg-white border border-stone-300 rounded-lg text-xs font-bold text-[#18452E] focus:outline-none"
+                    className="w-full p-2.5 bg-white border border-stone-300 rounded-lg text-xs font-semibold text-[#18452E] focus:outline-none"
                   />
                 )}
               </div>
@@ -1165,7 +1165,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               {/* Dates */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono font-bold uppercase text-#132A1D mb-1">
+                  <label className="block text-xs font-mono font-semibold uppercase text-#132A1D mb-1">
                     Valid From Date *
                   </label>
                   <input
@@ -1173,13 +1173,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                     required
                     value={formValidFrom}
                     onChange={e => setFormValidFrom(e.target.value)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="text-xs font-mono font-bold uppercase text-#132A1D">
+                    <label className="text-xs font-mono font-semibold uppercase text-#132A1D">
                       Expiration Date
                     </label>
                     <label className="flex items-center space-x-1.5 text-[11px] text-#6B7280 cursor-pointer">
@@ -1198,7 +1198,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                       required
                       value={formExpiresAt}
                       onChange={e => setFormExpiresAt(e.target.value)}
-                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
+                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-[#18452E] focus:bg-white focus:border-[#18452E] focus:outline-none"
                     />
                   )}
                 </div>
@@ -1209,13 +1209,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                 <button
                   type="button"
                   onClick={() => setEditingCode(null)}
-                  className="px-5 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs uppercase rounded-xl transition cursor-pointer"
+                  className="px-5 py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs uppercase rounded-xl transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition cursor-pointer"
+                  className="px-6 py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition cursor-pointer"
                 >
                   Save Changes
                 </button>
@@ -1234,13 +1234,13 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
-                <span className="text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-wider">
+                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">
                   Redemption History Panel
                 </span>
-                <h3 className="font-display font-black text-2xl text-[#18452E]">
+                <h3 className="font-display font-semibold text-2xl text-[#18452E]">
                   Code: {viewRedemptionsCode.code}
                 </h3>
-                <p className="text-xs text-#6B7280 font-light mt-0.5">
+                <p className="text-xs text-#6B7280 font-normal mt-0.5">
                   Showing all individual promoCodeRedemptions documents recorded for this code.
                 </p>
               </div>
@@ -1257,7 +1257,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="bg-stone-50 border-b border-stone-200 text-[10px] font-mono font-bold uppercase text-#6B7280">
+                    <tr className="bg-stone-50 border-b border-stone-200 text-[10px] font-mono font-semibold uppercase text-#6B7280">
                       <th className="py-3 px-4">User Name</th>
                       <th className="py-3 px-4">Role</th>
                       <th className="py-3 px-4">Applied To / Context</th>
@@ -1271,21 +1271,21 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                   <tbody className="divide-y divide-stone-150 text-xs">
                     {redemptions.filter(r => r.promo_code_id === viewRedemptionsCode.id || r.code === viewRedemptionsCode.code).length === 0 ? (
                       <tr>
-                        <td colSpan={8} className="py-8 text-center text-stone-400 font-light">
+                        <td colSpan={8} className="py-8 text-center text-stone-400 font-normal">
                           No redemptions recorded for this code yet.
                         </td>
                       </tr>
                     ) : (
                       redemptions.filter(r => r.promo_code_id === viewRedemptionsCode.id || r.code === viewRedemptionsCode.code).map(r => (
                         <tr key={r.id} className="hover:bg-stone-50/80 transition">
-                          <td className="py-3 px-4 font-bold text-#132A1D">
+                          <td className="py-3 px-4 font-semibold text-#132A1D">
                             {r.userName || r.user_id}
                           </td>
                           <td className="py-3 px-4 font-mono text-[11px] text-#6B7280">
                             {r.user_role}
                           </td>
                           <td className="py-3 px-4 text-[11px]">
-                            <span className="font-bold text-[#18452E] block uppercase">
+                            <span className="font-semibold text-[#18452E] block uppercase">
                               {r.applied_to}
                             </span>
                             <span className="text-[10px] font-mono text-stone-400">
@@ -1295,17 +1295,17 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
                           <td className="py-3 px-4 font-mono text-#6B7280">
                             ₦{r.original_amount.toLocaleString()}
                           </td>
-                          <td className="py-3 px-4 font-mono font-bold text-emerald-700">
+                          <td className="py-3 px-4 font-mono font-semibold text-emerald-700">
                             -₦{r.discount_amount.toLocaleString()}
                           </td>
-                          <td className="py-3 px-4 font-mono font-black text-[#18452E]">
+                          <td className="py-3 px-4 font-mono font-semibold text-[#18452E]">
                             ₦{r.final_amount.toLocaleString()}
                           </td>
                           <td className="py-3 px-4 font-mono text-[10px] text-#6B7280">
                             {r.redeemed_at ? new Date(r.redeemed_at).toLocaleString() : 'N/A'}
                           </td>
                           <td className="py-3 px-4 text-right">
-                            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[9px] font-mono font-bold uppercase">
+                            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[9px] font-mono font-semibold uppercase">
                               {r.status}
                             </span>
                           </td>
@@ -1320,7 +1320,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             <div className="flex justify-end pt-2">
               <button
                 onClick={() => setViewRedemptionsCode(null)}
-                className="px-6 py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs uppercase rounded-xl transition cursor-pointer"
+                className="px-6 py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs uppercase rounded-xl transition cursor-pointer"
               >
                 Close Panel
               </button>
@@ -1338,24 +1338,24 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <div>
-              <span className="text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-widest block">
+              <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-widest block">
                 Promo Code Successfully Generated
               </span>
-              <h3 className="font-display font-black text-2xl text-[#18452E] mt-1">
+              <h3 className="font-display font-semibold text-2xl text-[#18452E] mt-1">
                 {createdCodeNotification.code}
               </h3>
-              <p className="text-xs text-#6B7280 font-light mt-2 leading-relaxed">
+              <p className="text-xs text-#6B7280 font-normal mt-2 leading-relaxed">
                 {createdCodeNotification.desc}
               </p>
             </div>
 
             <div className="bg-stone-50 p-4 rounded-2xl border border-stone-200 flex items-center justify-between">
-              <span className="font-mono font-black text-lg text-[#18452E]">
+              <span className="font-mono font-semibold text-lg text-[#18452E]">
                 {createdCodeNotification.code}
               </span>
               <button
                 onClick={() => handleCopyCode(createdCodeNotification.code)}
-                className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-bold hover:bg-[#18452E] transition cursor-pointer flex items-center space-x-1.5"
+                className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-semibold hover:bg-[#18452E] transition cursor-pointer flex items-center space-x-1.5"
               >
                 {copiedCodeSuccess === createdCodeNotification.code ? (
                   <>
@@ -1373,7 +1373,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
             <button
               onClick={() => setCreatedCodeNotification(null)}
-              className="w-full py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs uppercase rounded-xl transition cursor-pointer"
+              className="w-full py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs uppercase rounded-xl transition cursor-pointer"
             >
               Done &amp; Return to List
             </button>

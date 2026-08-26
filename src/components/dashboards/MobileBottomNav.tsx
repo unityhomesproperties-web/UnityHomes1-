@@ -40,7 +40,7 @@ export default function MobileBottomNav({ role, activeTab, setActiveTab, setShow
         className={`flex flex-col items-center justify-center w-16 h-12 transition-colors ${activeTab === 'Overview' ? 'text-[#18452E]' : 'text-stone-400'}`}
       >
         <Home className={`w-5 h-5 mb-1 ${activeTab === 'Overview' ? 'fill-[#0E2F1F]/20' : ''}`} />
-        <span className="text-[9px] font-bold">Home</span>
+        <span className="text-[9px] font-semibold">Home</span>
       </button>
 
       <button 
@@ -51,7 +51,7 @@ export default function MobileBottomNav({ role, activeTab, setActiveTab, setShow
         className={`flex flex-col items-center justify-center w-16 h-12 transition-colors ${activeTab === financeTab.id ? 'text-[#18452E]' : 'text-stone-400'}`}
       >
         <financeTab.icon className={`w-5 h-5 mb-1 ${activeTab === financeTab.id ? 'fill-[#0E2F1F]/20' : ''}`} />
-        <span className="text-[9px] font-bold">{financeTab.label}</span>
+        <span className="text-[9px] font-semibold">{financeTab.label}</span>
       </button>
 
       <button 
@@ -66,7 +66,7 @@ export default function MobileBottomNav({ role, activeTab, setActiveTab, setShow
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-white animate-pulse"></span>
           )}
         </div>
-        <span className="text-[9px] font-bold">Alerts</span>
+        <span className="text-[9px] font-semibold">Alerts</span>
       </button>
 
       <button 
@@ -77,7 +77,7 @@ export default function MobileBottomNav({ role, activeTab, setActiveTab, setShow
         className={`flex flex-col items-center justify-center w-16 h-12 transition-colors ${isSupportActive ? 'text-[#18452E]' : 'text-stone-400'}`}
       >
         <HelpCircle className={`w-5 h-5 mb-1 ${isSupportActive ? 'fill-[#0E2F1F]/20' : ''}`} />
-        <span className="text-[9px] font-bold">More</span>
+        <span className="text-[9px] font-semibold">More</span>
       </button>
     </div>
   );

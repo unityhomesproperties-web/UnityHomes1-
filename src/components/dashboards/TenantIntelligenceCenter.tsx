@@ -165,7 +165,7 @@ export default function TenantIntelligenceCenter({
       <div className="space-y-6 animate-fade-in">
         <button 
           onClick={() => setSelectedTenant(null)} 
-          className="text-xs font-bold uppercase tracking-wider text-#6B7280 hover:text-teal-800 flex items-center gap-2 cursor-pointer"
+          className="text-xs font-semibold uppercase tracking-wider text-#6B7280 hover:text-teal-800 flex items-center gap-2 cursor-pointer"
         >
           &larr; Back to Tenant Records
         </button>
@@ -179,12 +179,12 @@ export default function TenantIntelligenceCenter({
             
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-3">
-                <span className={`px-2 py-1 text-[9px] font-bold uppercase rounded ${
+                <span className={`px-2 py-1 text-[9px] font-semibold uppercase rounded ${
                   selectedTenant.paymentStatus === 'Overdue' ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'
                 }`}>{selectedTenant.paymentStatus}</span>
-                <span className="px-2 py-1 bg-stone-50 text-#6B7280 text-[9px] font-bold uppercase rounded">Lease Active</span>
+                <span className="px-2 py-1 bg-stone-50 text-#6B7280 text-[9px] font-semibold uppercase rounded">Lease Active</span>
               </div>
-              <h2 className="text-2xl font-display font-black text-teal-950">{selectedTenant.tenantName}</h2>
+              <h2 className="text-2xl font-display font-semibold text-teal-950">{selectedTenant.tenantName}</h2>
               <p className="text-#6B7280 font-mono text-xs mt-1">{selectedTenant.unitNumber} &bull; {property?.title}</p>
             </div>
           </div>
@@ -193,21 +193,21 @@ export default function TenantIntelligenceCenter({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4 border-t border-stone-200">
             <button 
               onClick={() => triggerLocalSuccess(`Initiated direct call dialer payload to ${selectedTenant.tenantName} at 0801 234 5678.`)}
-              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-bold uppercase cursor-pointer"
+              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
               <Phone className="w-4 h-4 text-[#C9A84C]" />
               <span>Call Tenant</span>
             </button>
             <button 
               onClick={() => triggerLocalSuccess(`Certified lease ledger compiled for ${selectedTenant.tenantName}`)}
-              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-bold uppercase cursor-pointer"
+              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
               <FileText className="w-4 h-4 text-[#C9A84C]" />
               <span>View Ledger</span>
             </button>
             <button 
               onClick={() => triggerLocalSuccess(`Renew lease sequence queued for ${selectedTenant.tenantName}`)}
-              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-bold uppercase cursor-pointer"
+              className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
               <Calendar className="w-4 h-4 text-[#C9A84C]" />
               <span>Renew Lease</span>
@@ -239,31 +239,31 @@ export default function TenantIntelligenceCenter({
           <Users className="w-48 h-48 text-[#C9A84C]" />
         </div>
         <div className="relative z-10">
-          <h2 className="font-display font-black text-2xl uppercase tracking-tight mb-2">Universal Tenant Records</h2>
-          <p className="text-teal-100 text-xs max-w-xl font-light">
+          <h2 className="font-display font-semibold text-2xl uppercase tracking-tight mb-2">Universal Tenant Records</h2>
+          <p className="text-teal-100 text-xs max-w-xl font-normal">
             Instantly track every tenant across your portfolio. Identify risks, monitor leases, and automate collections from a single command center.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-8">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
               <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">Total Tenants</span>
-              <span className="text-2xl font-display font-black">{totalTenants}</span>
+              <span className="text-2xl font-display font-semibold">{totalTenants}</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
               <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">Vacant Units</span>
-              <span className="text-2xl font-display font-black">{vacantUnits.length}</span>
+              <span className="text-2xl font-display font-semibold">{vacantUnits.length}</span>
             </div>
             <div className="bg-rose-500/20 backdrop-blur-sm border border-rose-500/30 p-4 rounded-2xl">
               <span className="block text-[10px] font-mono text-rose-300 uppercase tracking-wider mb-1">Outstanding Rent</span>
-              <span className="text-2xl font-display font-black">₦{(outstandingRent/1000000).toFixed(1)}m</span>
+              <span className="text-2xl font-display font-semibold">₦{(outstandingRent/1000000).toFixed(1)}m</span>
             </div>
             <div className="bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 p-4 rounded-2xl">
               <span className="block text-[10px] font-mono text-amber-300 uppercase tracking-wider mb-1">Unpaid S/C</span>
-              <span className="text-2xl font-display font-black">₦{(outstandingSC/1000000).toFixed(1)}m</span>
+              <span className="text-2xl font-display font-semibold">₦{(outstandingSC/1000000).toFixed(1)}m</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
               <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">High Risk</span>
-              <span className="text-2xl font-display font-black">{highRiskCount}</span>
+              <span className="text-2xl font-display font-semibold">{highRiskCount}</span>
             </div>
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function TenantIntelligenceCenter({
           
           <button
             onClick={() => setIsExportOpen(true)}
-            className="px-5 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer w-full md:w-auto justify-center"
+            className="px-5 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl font-semibold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer w-full md:w-auto justify-center"
           >
             <Download className="w-4 h-4" />
             <span>Export Roster</span>
@@ -297,7 +297,7 @@ export default function TenantIntelligenceCenter({
               setIsBulkMode(!isBulkMode);
               setSelectedTenantIds([]);
             }}
-            className={`px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer w-full md:w-auto justify-center border ${
+            className={`px-5 py-3 rounded-xl font-semibold text-xs uppercase tracking-wider flex items-center gap-1.5 transition cursor-pointer w-full md:w-auto justify-center border ${
               isBulkMode ? 'bg-amber-100 border-amber-300 text-amber-900' : 'bg-stone-50 border-stone-200 text-#132A1D hover:bg-stone-50'
             }`}
           >
@@ -321,37 +321,37 @@ export default function TenantIntelligenceCenter({
       {isBulkMode && (
         <div className="bg-amber-50 border border-amber-300 rounded-2xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
           <div>
-            <strong className="block text-amber-950 font-bold text-xs uppercase">BULK RECORD OPERATIONS ACTIVE</strong>
+            <strong className="block text-amber-950 font-semibold text-xs uppercase">BULK RECORD OPERATIONS ACTIVE</strong>
             <span className="text-[10px] text-amber-800 block mt-0.5">
-              Selected <strong className="font-bold">{selectedTenantIds.length}</strong> record(s) out of {filteredUnits.length} matches.
+              Selected <strong className="font-semibold">{selectedTenantIds.length}</strong> record(s) out of {filteredUnits.length} matches.
             </span>
           </div>
 
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => handleBulkAction('notice')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Send className="w-3 h-3" />
               <span>Send Notice</span>
             </button>
             <button
               onClick={() => handleBulkAction('receipts')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Download className="w-3 h-3" />
               <span>Zip Receipts</span>
             </button>
             <button
               onClick={() => handleBulkAction('reminder')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <MessageSquare className="w-3 h-3" />
               <span>Send Reminders</span>
             </button>
             <button
               onClick={() => handleBulkAction('archive')}
-              className="px-3 py-2 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Trash2 className="w-3 h-3" />
               <span>Bulk Archive</span>
@@ -365,7 +365,7 @@ export default function TenantIntelligenceCenter({
         {filteredUnits.length === 0 ? (
           <div className="col-span-full bg-white border border-stone-200 rounded-[var(--radius-large)] p-12 text-center text-stone-400">
             <Inbox className="w-12 h-12 text-stone-300 mx-auto mb-3" />
-            <strong className="block font-bold">No Records Match Current Filter Selection</strong>
+            <strong className="block font-semibold">No Records Match Current Filter Selection</strong>
             <span className="text-xs block mt-1">Try resetting your active filters or query.</span>
           </div>
         ) : (
@@ -408,7 +408,7 @@ export default function TenantIntelligenceCenter({
                     <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${unit.tenantName}`} alt={unit.tenantName || 'Vacant'} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display font-black text-teal-950 truncate text-base">{unit.tenantName || 'Vacant Unit'}</h3>
+                    <h3 className="font-display font-semibold text-teal-950 truncate text-base">{unit.tenantName || 'Vacant Unit'}</h3>
                     <div className="flex items-center gap-1 text-[9px] font-mono text-#6B7280 uppercase mt-1">
                       <MapPin className="w-3 h-3" />
                       <span className="truncate">{property?.title || unit.propertyName}</span>
@@ -419,15 +419,15 @@ export default function TenantIntelligenceCenter({
                 <div className="p-4 grid grid-cols-2 gap-4 bg-stone-50/50 flex-1">
                   <div>
                     <span className="block text-[10px] font-mono text-stone-400 uppercase">Apartment</span>
-                    <span className="font-bold text-xs text-#132A1D">{unit.unitNumber}</span>
+                    <span className="font-semibold text-xs text-#132A1D">{unit.unitNumber}</span>
                   </div>
                   <div>
                     <span className="block text-[10px] font-mono text-stone-400 uppercase">Rent</span>
-                    <span className="font-bold text-xs text-teal-850">₦{(unit.rentAmount/1000).toLocaleString()}k</span>
+                    <span className="font-semibold text-xs text-teal-850">₦{(unit.rentAmount/1000).toLocaleString()}k</span>
                   </div>
                 </div>
 
-                <div className="p-4 flex flex-wrap gap-1.5 border-t border-stone-200 bg-white text-[9px] font-bold uppercase">
+                <div className="p-4 flex flex-wrap gap-1.5 border-t border-stone-200 bg-white text-[9px] font-semibold uppercase">
                   <span className={`px-2 py-0.5 rounded ${
                     unit.paymentStatus === 'Overdue' ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'
                   }`}>{unit.paymentStatus || 'No Record'}</span>

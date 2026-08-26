@@ -235,13 +235,13 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
         <div className="p-5 border-b border-stone-200 flex justify-between items-center bg-[#18452E] text-white">
           <div className="flex items-center space-x-2">
             <Bell className="w-5 h-5 animate-pulse" />
-            <h2 className="font-display font-bold">Live Activity Feed</h2>
+            <h2 className="font-display font-semibold">Live Activity Feed</h2>
           </div>
           <div className="flex items-center space-x-2">
             {liveNotifications.some(n => !(n as any).read) && (
               <button 
                 onClick={handleMarkAllAsRead} 
-                className="text-[9px] font-bold uppercase bg-[#C9A84C] text-[#18452E] px-2 py-1 rounded hover:bg-[#C9A84C]/90 transition"
+                className="text-[9px] font-semibold uppercase bg-[#C9A84C] text-[#18452E] px-2 py-1 rounded hover:bg-[#C9A84C]/90 transition"
               >
                 Mark All Read
               </button>
@@ -259,7 +259,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
               <button
                 key={tab}
                 onClick={() => setActiveFilter(tab)}
-                className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase transition-colors ${
+                className={`px-3 py-1.5 rounded-full text-[10px] font-semibold uppercase transition-colors ${
                   activeFilter === tab ? 'bg-[#C9A84C] text-[#18452E]' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -286,7 +286,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <div className="flex items-center space-x-1.5">
-                      <h4 className="text-xs font-bold text-#132A1D flex items-center">
+                      <h4 className="text-xs font-semibold text-#132A1D flex items-center">
                         {pinnedIds.includes(notif.id) && <Pin className="w-3 h-3 mr-1 text-[#C9A84C]" />}
                         {notif.title}
                       </h4>
@@ -298,7 +298,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                       {notif.unread && (
                         <button 
                           onClick={() => handleMarkAsRead(notif.id)} 
-                          className="text-[9px] text-[#18452E] font-bold uppercase hover:underline mr-1"
+                          className="text-[9px] text-[#18452E] font-semibold uppercase hover:underline mr-1"
                         >
                           Mark Read
                         </button>
@@ -308,10 +308,10 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                       </button>
                       {openMenuId === notif.id && (
                         <div className="absolute right-0 mt-6 w-36 bg-white border border-stone-200 rounded-xl shadow-sm overflow-hidden z-10">
-                          <button onClick={() => handlePin(notif.id)} className="w-full text-left px-4 py-2 text-[10px] uppercase font-bold text-#6B7280 hover:bg-stone-50 flex items-center">
+                          <button onClick={() => handlePin(notif.id)} className="w-full text-left px-4 py-2 text-[10px] uppercase font-semibold text-#6B7280 hover:bg-stone-50 flex items-center">
                             <Pin className="w-3 h-3 mr-2" /> {pinnedIds.includes(notif.id) ? 'Unpin' : 'Pin This'}
                           </button>
-                          <button onClick={() => handleArchive(notif.id)} className="w-full text-left px-4 py-2 text-[10px] uppercase font-bold text-#6B7280 hover:bg-stone-50 flex items-center">
+                          <button onClick={() => handleArchive(notif.id)} className="w-full text-left px-4 py-2 text-[10px] uppercase font-semibold text-#6B7280 hover:bg-stone-50 flex items-center">
                             <Archive className="w-3 h-3 mr-2" /> {archivedIds.includes(notif.id) ? 'Unarchive' : 'Archive'}
                           </button>
                         </div>
@@ -323,16 +323,16 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                   {/* Channels visual confirmation */}
                   {notif.channels && notif.channels.length > 0 && (
                     <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                      <span className="text-[8px] font-bold text-stone-400 uppercase font-mono">Via:</span>
+                      <span className="text-[8px] font-semibold text-stone-400 uppercase font-mono">Via:</span>
                       {notif.channels.map(ch => (
-                        <span key={ch} className="px-1.5 py-0.5 text-[8px] font-extrabold uppercase rounded bg-stone-50 text-#6B7280 border border-stone-200/60 font-mono">
+                        <span key={ch} className="px-1.5 py-0.5 text-[8px] font-semibold uppercase rounded bg-stone-50 text-#6B7280 border border-stone-200/60 font-mono">
                           {ch}
                         </span>
                       ))}
                     </div>
                   )}
 
-                  <span className="text-[9px] font-mono font-bold text-stone-400 block mt-2">{notif.time}</span>
+                  <span className="text-[9px] font-mono font-semibold text-stone-400 block mt-2">{notif.time}</span>
                 </div>
               </div>
             ))

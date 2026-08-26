@@ -151,14 +151,14 @@ export default function OperationsBriefingCard({
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <h3 className="font-display font-black text-white text-sm uppercase tracking-wider">
+              <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider">
                 7:00 AM Morning Briefing
               </h3>
-              <span className="text-[9px] font-mono bg-[#C9A84C] text-[#112A1F] font-bold px-2 py-0.5 rounded-full uppercase">
+              <span className="text-[9px] font-mono bg-[#C9A84C] text-[#112A1F] font-semibold px-2 py-0.5 rounded-full uppercase">
                 Daily 07:00 WAT
               </span>
             </div>
-            <p className="text-[11px] text-emerald-200/80 font-light mt-0.5">
+            <p className="text-[11px] text-emerald-200/80 font-normal mt-0.5">
               Automated executive summary generated daily at 7:00 AM WAT
             </p>
           </div>
@@ -176,7 +176,7 @@ export default function OperationsBriefingCard({
 
           <button
             onClick={toggleEmailDigest}
-            className={`px-3 py-1.5 rounded-xl text-[10px] font-mono font-bold flex items-center space-x-1.5 border transition cursor-pointer ${
+            className={`px-3 py-1.5 rounded-xl text-[10px] font-mono font-semibold flex items-center space-x-1.5 border transition cursor-pointer ${
               emailDigestEnabled 
                 ? 'bg-[#C9A84C] text-[#112A1F] border-[#C9A84C]' 
                 : 'bg-emerald-900/40 text-emerald-300 border-emerald-700/50 hover:bg-emerald-800/50'
@@ -201,11 +201,11 @@ export default function OperationsBriefingCard({
             }`}
           >
             <div className="flex items-center space-x-1.5 mb-1">
-              <span className="text-[9px] font-mono font-bold text-[#C9A84C] tracking-wider uppercase">
+              <span className="text-[9px] font-mono font-semibold text-[#C9A84C] tracking-wider uppercase">
                 {b.category}
               </span>
             </div>
-            <p className="text-[11px] leading-relaxed font-light">
+            <p className="text-[11px] leading-relaxed font-normal">
               {b.text}
             </p>
           </div>

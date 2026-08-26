@@ -193,25 +193,25 @@ export default function ServiceChargeIntelligence({
           <DollarSign className="w-32 h-32 text-[#C9A84C]" />
         </div>
         <div className="relative z-10">
-          <h2 className="font-display font-black text-2xl text-white uppercase mb-1">Service Charge Intelligence</h2>
-          <p className="text-teal-200 text-xs mb-6 font-light">Real-time monitoring and collection tracking across your portfolio.</p>
+          <h2 className="font-display font-semibold text-2xl text-white uppercase mb-1">Service Charge Intelligence</h2>
+          <p className="text-teal-200 text-xs mb-6 font-normal">Real-time monitoring and collection tracking across your portfolio.</p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white/10 p-4 rounded-2xl border border-white/25">
               <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Total Expected</span>
-              <span className="text-xl font-display font-black">₦{totalExpected.toLocaleString()}</span>
+              <span className="text-xl font-display font-semibold">₦{totalExpected.toLocaleString()}</span>
             </div>
             <div className="bg-emerald-500/20 p-4 rounded-2xl border border-emerald-500/30">
               <span className="block text-[10px] font-mono text-emerald-300 uppercase mb-1">Total Collected</span>
-              <span className="text-xl font-display font-black">₦{totalCollected.toLocaleString()}</span>
+              <span className="text-xl font-display font-semibold">₦{totalCollected.toLocaleString()}</span>
             </div>
             <div className="bg-rose-500/20 p-4 rounded-2xl border border-rose-500/30">
               <span className="block text-[10px] font-mono text-rose-300 uppercase mb-1">Outstanding Balance</span>
-              <span className="text-xl font-display font-black">₦{totalOutstanding.toLocaleString()}</span>
+              <span className="text-xl font-display font-semibold">₦{totalOutstanding.toLocaleString()}</span>
             </div>
             <div className="bg-white/10 p-4 rounded-2xl border border-white/25">
               <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Collection Rate</span>
-              <span className="text-xl font-display font-black">{collectionRate}%</span>
+              <span className="text-xl font-display font-semibold">{collectionRate}%</span>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function ServiceChargeIntelligence({
               setFilterStatus(e.target.value);
               setActiveFilters(prev => ({ ...prev, filterStatus: e.target.value }));
             }}
-            className="p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold uppercase outline-none text-teal-950"
+            className="p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs font-semibold uppercase outline-none text-teal-950"
           >
             <option value="All">All Statuses</option>
             <option value="Paid">Paid</option>
@@ -259,7 +259,7 @@ export default function ServiceChargeIntelligence({
 
           <button
             onClick={() => setIsExportOpen(true)}
-            className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
+            className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
           >
             <Download className="w-4 h-4" />
             <span>Export Levy Ledger</span>
@@ -270,7 +270,7 @@ export default function ServiceChargeIntelligence({
               setIsBulkMode(!isBulkMode);
               setSelectedBillIds([]);
             }}
-            className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer border ${
+            className={`px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer border ${
               isBulkMode ? 'bg-amber-100 border-amber-300 text-amber-900' : 'bg-stone-50 border-stone-200 text-#132A1D hover:bg-stone-50'
             }`}
           >
@@ -294,37 +294,37 @@ export default function ServiceChargeIntelligence({
       {isBulkMode && (
         <div className="bg-amber-50 border border-amber-300 rounded-2xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
           <div>
-            <strong className="block text-amber-950 font-bold text-xs uppercase">BULK LEVY ACTIONS ACTIVE</strong>
+            <strong className="block text-amber-950 font-semibold text-xs uppercase">BULK LEVY ACTIONS ACTIVE</strong>
             <span className="text-[10px] text-amber-800 block mt-0.5">
-              Selected <strong className="font-bold">{selectedBillIds.length}</strong> bill(s) out of {filteredCharges.length} matches.
+              Selected <strong className="font-semibold">{selectedBillIds.length}</strong> bill(s) out of {filteredCharges.length} matches.
             </span>
           </div>
 
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => handleBulkAction('notice')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Send className="w-3 h-3" />
               <span>Send Notice</span>
             </button>
             <button
               onClick={() => handleBulkAction('receipts')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Download className="w-3 h-3" />
               <span>Zip Receipts</span>
             </button>
             <button
               onClick={() => handleBulkAction('reminder')}
-              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-teal-850 hover:bg-teal-950 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <AlertTriangle className="w-3 h-3" />
               <span>Send Reminders</span>
             </button>
             <button
               onClick={() => handleBulkAction('archive')}
-              className="px-3 py-2 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-[9px] font-bold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
+              className="px-3 py-2 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-[9px] font-semibold uppercase tracking-wider transition cursor-pointer flex items-center space-x-1"
             >
               <Trash2 className="w-3 h-3" />
               <span>Bulk Archive</span>
@@ -413,20 +413,20 @@ export default function ServiceChargeIntelligence({
                         <div className="w-8 h-8 rounded-full bg-stone-50 overflow-hidden shrink-0 border border-white shadow-xs">
                           <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${sc.tenantName}`} alt={sc.tenantName} className="w-full h-full object-cover" />
                         </div>
-                        <div className="font-bold text-[#18452E]">{sc.tenantName}</div>
+                        <div className="font-semibold text-[#18452E]">{sc.tenantName}</div>
                       </div>
                     </td>
                     <td className="p-3">
-                      <div className="text-xs text-teal-950 font-bold">{property?.title || unit?.propertyName || 'Unknown Property'}</div>
+                      <div className="text-xs text-teal-950 font-semibold">{property?.title || unit?.propertyName || 'Unknown Property'}</div>
                       <div className="text-[10px] text-stone-400 font-mono">Apt: {unit?.unitNumber || 'TBD'} &bull; {property?.location || 'Lagos'}</div>
                     </td>
-                    <td className="p-3 text-xs font-mono text-#6B7280 font-bold">{sc.categoryId.replace('cat-', '').toUpperCase()}</td>
-                    <td className="p-3 font-bold text-#132A1D text-right">₦{sc.amount.toLocaleString()}</td>
-                    <td className="p-3 font-bold text-emerald-600 text-right">₦{amountPaid.toLocaleString()}</td>
-                    <td className="p-3 font-bold text-rose-600 text-right">₦{balance.toLocaleString()}</td>
+                    <td className="p-3 text-xs font-mono text-#6B7280 font-semibold">{sc.categoryId.replace('cat-', '').toUpperCase()}</td>
+                    <td className="p-3 font-semibold text-#132A1D text-right">₦{sc.amount.toLocaleString()}</td>
+                    <td className="p-3 font-semibold text-emerald-600 text-right">₦{amountPaid.toLocaleString()}</td>
+                    <td className="p-3 font-semibold text-rose-600 text-right">₦{balance.toLocaleString()}</td>
                     <td className="p-3 text-xs text-#6B7280 font-mono">{sc.dueDate}</td>
                     <td className="p-3">
-                      <span className={`px-2.5 py-1 text-[10px] uppercase font-bold rounded ${statusColor}`}>
+                      <span className={`px-2.5 py-1 text-[10px] uppercase font-semibold rounded ${statusColor}`}>
                         {statusText}
                       </span>
                     </td>
@@ -435,13 +435,13 @@ export default function ServiceChargeIntelligence({
                         {role !== 'Tenant' && balance > 0 && sc.status !== 'Pending Verification' && (
                           <button 
                             onClick={() => triggerLocalSuccess(`WhatsApp/Email collection nudge dispatched for ${sc.tenantName}.`)}
-                            className="px-3 py-1.5 bg-rose-600 text-white rounded-lg text-[9px] font-bold hover:bg-rose-700 shadow-xs uppercase tracking-wider transition active:scale-95 cursor-pointer"
+                            className="px-3 py-1.5 bg-rose-600 text-white rounded-lg text-[9px] font-semibold hover:bg-rose-700 shadow-xs uppercase tracking-wider transition active:scale-95 cursor-pointer"
                           >
                             SEND REMINDER
                           </button>
                         )}
                         {role !== 'Tenant' && sc.status === 'Pending Verification' && (
-                          <button onClick={() => handleVerify(sc.id)} className="px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-[9px] font-bold hover:bg-[#18452E] shadow-xs uppercase tracking-wider transition active:scale-95 cursor-pointer">
+                          <button onClick={() => handleVerify(sc.id)} className="px-3 py-1.5 bg-[#18452E] text-white rounded-lg text-[9px] font-semibold hover:bg-[#18452E] shadow-xs uppercase tracking-wider transition active:scale-95 cursor-pointer">
                             VERIFY
                           </button>
                         )}

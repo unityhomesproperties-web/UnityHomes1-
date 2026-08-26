@@ -113,8 +113,8 @@ export default function ConnectivityIndicator({
           </div>
           <div>
             <div className="flex items-center space-x-1.5">
-              <span className="text-xs font-bold text-teal-950 uppercase">PMC NETWORK FEED</span>
-              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md font-bold uppercase ${
+              <span className="text-xs font-semibold text-teal-950 uppercase">PMC NETWORK FEED</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md font-semibold uppercase ${
                 status === 'Online' ? 'bg-emerald-50 text-emerald-800 border border-emerald-100' :
                 status === 'Offline' ? 'bg-rose-50 text-rose-800 border border-rose-100' :
                 'bg-amber-50 text-amber-800 border border-amber-100 animate-pulse'
@@ -131,12 +131,12 @@ export default function ConnectivityIndicator({
 
         <div className="flex items-center space-x-3">
           {offlineQueue.length > 0 && (
-            <span className="text-[10px] font-mono font-bold bg-amber-100 border border-amber-200 text-amber-800 px-2 py-1 rounded-lg">
+            <span className="text-[10px] font-mono font-semibold bg-amber-100 border border-amber-200 text-amber-800 px-2 py-1 rounded-lg">
               {offlineQueue.length} Queue Pending
             </span>
           )}
           
-          <span className="text-[10px] font-mono font-bold text-#6B7280 uppercase px-2.5 py-1 bg-stone-50 border border-stone-200 rounded-lg flex items-center space-x-1.5">
+          <span className="text-[10px] font-mono font-semibold text-#6B7280 uppercase px-2.5 py-1 bg-stone-50 border border-stone-200 rounded-lg flex items-center space-x-1.5">
             <span className={`w-2 h-2 rounded-full ${status === 'Online' ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
             <span>{status === 'Online' ? 'System Live' : status}</span>
           </span>
@@ -148,7 +148,7 @@ export default function ConnectivityIndicator({
         <div className="bg-amber-50 border border-amber-300 text-amber-900 px-4 py-3 rounded-2xl flex items-start space-x-2.5 animate-pulse text-xs">
           <AlertTriangle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
           <div>
-            <strong className="block font-bold">Offline Local-First Operations Enabled</strong>
+            <strong className="block font-semibold">Offline Local-First Operations Enabled</strong>
             <span className="text-[11px] block mt-0.5 text-amber-800">
               Your modifications are queued locally in your browser sandbox. When the connection toggle is switched back, your mutations will automatically resolve.
             </span>

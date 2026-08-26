@@ -28,10 +28,10 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white/80 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/80 mb-4">
               GET IN TOUCH
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-6">
               Let's talk about real estate.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-xl font-medium">
@@ -99,7 +99,7 @@ export default function ContactPage() {
           {/* Contact Information */}
           <div className="md:col-span-5 space-y-12">
             <div>
-              <h2 className="text-3xl font-extrabold text-[#132A1D] mb-8">Contact Information</h2>
+              <h2 className="text-3xl font-semibold text-[#132A1D] mb-8">Contact Information</h2>
               <p className="text-lg text-[#6B7280] leading-relaxed mb-10">
                 Whether you're interested in our upcoming platform, joining the waitlist, or seeking general information, we're ready to answer your questions.
               </p>
@@ -107,28 +107,28 @@ export default function ContactPage() {
             
             <div className="space-y-10">
               <div className="flex flex-col">
-                <h3 className="text-sm font-bold tracking-widest uppercase text-[#6B7280] mb-3">Email</h3>
+                <h3 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280] mb-3">Email</h3>
                 <a 
                   href="mailto:unityhomesproperties@gmail.com" 
-                  className="text-xl md:text-2xl font-bold text-[#132A1D] hover:text-[#6FBE45] transition-colors"
+                  className="text-xl md:text-2xl font-semibold text-[#132A1D] hover:text-[#6FBE45] transition-colors"
                 >
                   unityhomesproperties@gmail.com
                 </a>
               </div>
               
               <div className="flex flex-col">
-                <h3 className="text-sm font-bold tracking-widest uppercase text-[#6B7280] mb-3">Phone</h3>
+                <h3 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280] mb-3">Phone</h3>
                 <a 
                   href="tel:+2348000000000" 
-                  className="text-xl md:text-2xl font-bold text-[#132A1D] hover:text-[#6FBE45] transition-colors"
+                  className="text-xl md:text-2xl font-semibold text-[#132A1D] hover:text-[#6FBE45] transition-colors"
                 >
                   +234 800 000 0000
                 </a>
               </div>
               
               <div className="flex flex-col">
-                <h3 className="text-sm font-bold tracking-widest uppercase text-[#6B7280] mb-3">Office</h3>
-                <p className="text-xl font-bold text-[#132A1D]">
+                <h3 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280] mb-3">Office</h3>
+                <p className="text-xl font-semibold text-[#132A1D]">
                   Lagos, Nigeria
                 </p>
                 <p className="text-[#6B7280] mt-1">
@@ -149,13 +149,13 @@ export default function ContactPage() {
                 <div className="w-16 h-16 bg-white rounded-[18px] border border-[#6FBE45]/20 flex items-center justify-center text-[#6FBE45] mb-6 shadow-sm">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-3xl font-extrabold text-[#132A1D] mb-4">Message received.</h3>
+                <h3 className="text-3xl font-semibold text-[#132A1D] mb-4">Message received.</h3>
                 <p className="text-xl text-[#6B7280] mb-10 leading-relaxed">
                   Thank you for reaching out to Unity Homes. We'll get back to you through the contact details you provided.
                 </p>
                 <button
                   onClick={() => setIsSuccess(false)}
-                  className="inline-flex items-center text-[#2F8D46] font-bold text-lg hover:text-[#6FBE45] transition-colors"
+                  className="inline-flex items-center text-[#2F8D46] font-semibold text-lg hover:text-[#6FBE45] transition-colors"
                 >
                   Send another message
                 </button>
@@ -163,7 +163,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-[24px] border border-gray-200 shadow-sm space-y-8">
                 <div>
-                  <label className="block text-sm font-bold text-[#132A1D] mb-3">Name</label>
+                  <label className="block text-sm font-semibold text-[#132A1D] mb-3">Name</label>
                   <input 
                     type="text" 
                     required
@@ -172,7 +172,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-[#132A1D] mb-3">Email</label>
+                  <label className="block text-sm font-semibold text-[#132A1D] mb-3">Email</label>
                   <input 
                     type="email" 
                     required
@@ -181,7 +181,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-[#132A1D] mb-3">Message</label>
+                  <label className="block text-sm font-semibold text-[#132A1D] mb-3">Message</label>
                   <textarea 
                     required
                     rows={6}
@@ -192,7 +192,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#6FBE45] text-white px-8 py-5 rounded-[18px] font-bold text-lg hover:bg-[#5CA636] transition-all duration-200 min-h-[56px] flex items-center justify-center disabled:opacity-50 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
+                  className="w-full bg-[#6FBE45] text-white px-8 py-5 rounded-[18px] font-semibold text-lg hover:bg-[#5CA636] transition-all duration-200 min-h-[56px] flex items-center justify-center disabled:opacity-50 hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
                 >
                   {isSubmitting ? (
                     <>
@@ -213,10 +213,10 @@ export default function ContactPage() {
       <div className="py-24 bg-[#F5FAF2] border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[#2F8D46] mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#2F8D46] mb-4">
               QUESTIONS, ANSWERED.
             </h4>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#132A1D] mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#132A1D] mb-4">
               Everything you need to know about Unity Homes.
             </h2>
           </div>

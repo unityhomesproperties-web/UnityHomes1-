@@ -318,10 +318,10 @@ export default function WaitlistPage() {
       <div className="relative bg-[#2F8D46] pt-12 pb-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
         <BannerAnimation />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="inline-block text-white/80 font-bold tracking-widest text-xs uppercase mb-4">
+          <span className="inline-block text-white/80 font-semibold tracking-widest text-xs uppercase mb-4">
             Join Unity Homes
           </span>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-semibold text-white mb-4">
             Be part of what's next in Nigerian real estate.
           </h1>
           <p className="text-lg text-white/90">
@@ -338,7 +338,7 @@ export default function WaitlistPage() {
           <div className="md:w-80 bg-stone-50 border-b md:border-b-0 md:border-r border-[var(--color-border)] p-6 md:p-10 flex-shrink-0">
             {/* Mobile Progress */}
             <div className="md:hidden">
-              <div className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">
+              <div className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">
                 Step {currentStep} of {steps.length}
               </div>
               <div className="w-full bg-gray-200 h-1.5 rounded-full mb-4">
@@ -347,14 +347,14 @@ export default function WaitlistPage() {
                   style={{ width: `${(currentStep / steps.length) * 100}%` }}
                 />
               </div>
-              <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
+              <h2 className="text-lg font-semibold text-[var(--color-text-primary)]">
                 {steps[currentStep - 1].title}
               </h2>
             </div>
 
             {/* Desktop Progress */}
             <div className="hidden md:block">
-              <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest mb-10">
+              <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest mb-10">
                 Your Journey
               </h3>
               <div className="space-y-8 relative">
@@ -374,12 +374,12 @@ export default function WaitlistPage() {
                         {isCurrent && <div className="w-2 h-2 rounded-full bg-[#6FBE45]" />}
                       </div>
                       <div className="ml-4">
-                        <span className={`block text-xs font-bold mb-1 ${
+                        <span className={`block text-xs font-semibold mb-1 ${
                           isCompleted || isCurrent ? 'text-[#6FBE45]' : 'text-gray-400'
                         }`}>
                           0{step.num}
                         </span>
-                        <span className={`block font-bold ${
+                        <span className={`block font-semibold ${
                           isCurrent ? 'text-[var(--color-text-primary)]' : 
                           isCompleted ? 'text-[var(--color-text-secondary)]' : 
                           'text-gray-400'
@@ -406,7 +406,7 @@ export default function WaitlistPage() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="flex items-center text-xs font-bold text-[#6FBE45] bg-[#EAF5E3] px-3 py-1 rounded-full shadow-sm"
+                    className="flex items-center text-xs font-semibold text-[#6FBE45] bg-[#EAF5E3] px-3 py-1 rounded-full shadow-sm"
                   >
                     <Check className="w-3.5 h-3.5 mr-1" />
                     Saved
@@ -417,10 +417,10 @@ export default function WaitlistPage() {
 
             <form onSubmit={handleSubmit} className="h-full flex flex-col">
               <div className="mb-8 hidden md:block">
-                <span className="text-xs font-bold text-[#6FBE45] uppercase tracking-wider mb-2 block">
+                <span className="text-xs font-semibold text-[#6FBE45] uppercase tracking-wider mb-2 block">
                   Step 0{currentStep}
                 </span>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)]">
+                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)]">
                   {steps[currentStep - 1].title}
                 </h2>
               </div>
@@ -455,7 +455,7 @@ export default function WaitlistPage() {
                               {data.role === r.id && <Check className="w-3 h-3 text-white" />}
                             </div>
                             <div className="ml-4">
-                              <span className="block font-bold text-[var(--color-text-primary)]">{r.title}</span>
+                              <span className="block font-semibold text-[var(--color-text-primary)]">{r.title}</span>
                               <span className="block text-sm text-[var(--color-text-secondary)] mt-1">{r.desc}</span>
                             </div>
                             <input 
@@ -475,7 +475,7 @@ export default function WaitlistPage() {
                     {currentStep === 2 && (
                       <div className="space-y-6">
                         <div>
-                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Full Name</label>
+                          <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Full Name</label>
                           <input 
                             type="text" 
                             value={data.full_name}
@@ -487,7 +487,7 @@ export default function WaitlistPage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Email Address</label>
+                            <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Email Address</label>
                             <input 
                               type="email" 
                               value={data.email}
@@ -498,7 +498,7 @@ export default function WaitlistPage() {
                             {renderError('email', currentErrors)}
                           </div>
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Phone Number</label>
+                            <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Phone Number</label>
                             <input 
                               type="tel" 
                               value={data.phone}
@@ -510,7 +510,7 @@ export default function WaitlistPage() {
                           </div>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">State (Nigeria)</label>
+                          <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">State (Nigeria)</label>
                           <select 
                             value={data.state}
                             onChange={(e) => updateData('state', e.target.value)}
@@ -523,7 +523,7 @@ export default function WaitlistPage() {
                           {renderError('state', currentErrors)}
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-400 mb-2 uppercase">Country</label>
+                          <label className="block text-sm font-semibold text-gray-400 mb-2 uppercase">Country</label>
                           <input 
                             type="text" 
                             value="Nigeria"
@@ -540,7 +540,7 @@ export default function WaitlistPage() {
                         {/* PROPERTY SEEKER */}
                         {data.role === 'property_seeker' && (
                           <div>
-                            <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">What are you interested in?</label>
+                            <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4 uppercase">What are you interested in?</label>
                             <div className="space-y-3">
                               {['Buy Property', 'Rent Property', 'Find a Professional', 'Property Verification', 'Area Intelligence'].map(interest => {
                                 const selected = (data.role_specific_data.interests || []).includes(interest);
@@ -556,7 +556,7 @@ export default function WaitlistPage() {
                                     }`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
-                                    <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
+                                    <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
                                     <input 
                                       type="checkbox"
                                       className="sr-only"
@@ -580,7 +580,7 @@ export default function WaitlistPage() {
                         {['long_term_landlord', 'shortlet_landlord'].includes(data.role) && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
+                              <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
                               <div className="space-y-3">
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
@@ -589,7 +589,7 @@ export default function WaitlistPage() {
                                       <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
                                       <input 
                                         type="radio"
                                         name="landlord_pref"
@@ -606,7 +606,7 @@ export default function WaitlistPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties or Units</label>
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties or Units</label>
                                 <input 
                                   type="number" min="1"
                                   value={data.role_specific_data.properties_count || ''}
@@ -617,7 +617,7 @@ export default function WaitlistPage() {
                                 {renderError('properties_count', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Property Type</label>
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Property Type</label>
                                 <input 
                                   type="text" placeholder="e.g. Residential, Commercial"
                                   value={data.role_specific_data.property_type || ''}
@@ -629,7 +629,7 @@ export default function WaitlistPage() {
                               </div>
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Short Description (Optional)</label>
+                              <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Short Description (Optional)</label>
                               <textarea 
                                 rows={3}
                                 value={data.role_specific_data.description || ''}
@@ -645,7 +645,7 @@ export default function WaitlistPage() {
                           <div className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Company Name</label>
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Company Name</label>
                                 <input 
                                   type="text" 
                                   value={data.role_specific_data.company_name || ''}
@@ -656,7 +656,7 @@ export default function WaitlistPage() {
                                 {renderError('company_name', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Contact Person</label>
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Contact Person</label>
                                 <input 
                                   type="text" 
                                   value={data.role_specific_data.contact_person || ''}
@@ -668,7 +668,7 @@ export default function WaitlistPage() {
                               </div>
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
+                              <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-4 uppercase">Service Preference</label>
                               <div className="space-y-3">
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
@@ -677,7 +677,7 @@ export default function WaitlistPage() {
                                       <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-bold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
                                       <input 
                                         type="radio" name="pmc_pref" className="sr-only"
                                         checked={selected}
@@ -691,7 +691,7 @@ export default function WaitlistPage() {
                               {renderError('service_preference', currentErrors)}
                             </div>
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties Managed</label>
+                              <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Number of Properties Managed</label>
                               <input 
                                 type="number" min="1"
                                 value={data.role_specific_data.properties_count || ''}
@@ -708,7 +708,7 @@ export default function WaitlistPage() {
                         {['property_lawyer', 'licensed_surveyor', 'structural_engineer'].includes(data.role) && (
                           <div className="space-y-6">
                             <div>
-                              <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Firm or Practice Name</label>
+                              <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Firm or Practice Name</label>
                               <input 
                                 type="text" 
                                 value={data.role_specific_data.firm_name || ''}
@@ -720,7 +720,7 @@ export default function WaitlistPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">
                                   {data.role === 'property_lawyer' ? 'NBA Registration Number' : 
                                    data.role === 'licensed_surveyor' ? 'SURCON Registration / License Number' : 
                                    'COREN Registration Number'}
@@ -737,7 +737,7 @@ export default function WaitlistPage() {
                                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                       Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                                     </p>
-                                    <p className="text-sm font-bold text-[#2F8D46]">
+                                    <p className="text-sm font-semibold text-[#2F8D46]">
                                       Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
                                     </p>
                                   </div>
@@ -745,7 +745,7 @@ export default function WaitlistPage() {
                                 {renderError('registration_number', currentErrors)}
                               </div>
                               <div>
-                                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-2 uppercase">Years of Experience</label>
+                                <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Years of Experience</label>
                                 <input 
                                   type="number" min="0"
                                   value={data.role_specific_data.years_of_experience || ''}
@@ -776,7 +776,7 @@ export default function WaitlistPage() {
                                   </div>
                                 </div>
                                 <div className="ml-2 mt-3">
-                                  <span className="block text-[var(--color-text-primary)] font-bold mb-1 leading-relaxed">
+                                  <span className="block text-[var(--color-text-primary)] font-semibold mb-1 leading-relaxed">
                                     I consent to Unity Homes verifying my eligibility, professional registration, and active membership status with the appropriate professional regulatory body before considering me for the Unity Homes Professional Directory.
                                   </span>
                                   <span className="block text-sm text-[var(--color-text-secondary)] leading-relaxed">
@@ -796,51 +796,51 @@ export default function WaitlistPage() {
                       <div className="space-y-6">
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
-                          <p className="text-lg font-bold text-[var(--color-text-primary)]">
+                          <p className="text-lg font-semibold text-[var(--color-text-primary)]">
                             {ROLES_DISPLAY.find(r => r.id === data.role)?.title}
                           </p>
                         </div>
 
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Name</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.full_name}</span>
+                              <span className="block text-[11px] font-semibold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Name</span>
+                              <span className="block font-semibold text-[var(--color-text-primary)] text-base">{data.full_name}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Email</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.email}</span>
+                              <span className="block text-[11px] font-semibold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Email</span>
+                              <span className="block font-semibold text-[var(--color-text-primary)] text-base">{data.email}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Phone</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.phone}</span>
+                              <span className="block text-[11px] font-semibold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">Phone</span>
+                              <span className="block font-semibold text-[var(--color-text-primary)] text-base">{data.phone}</span>
                             </div>
                             <div>
-                              <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">State</span>
-                              <span className="block font-bold text-[var(--color-text-primary)] text-base">{data.state}, Nigeria</span>
+                              <span className="block text-[11px] font-semibold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">State</span>
+                              <span className="block font-semibold text-[var(--color-text-primary)] text-base">{data.state}, Nigeria</span>
                             </div>
                           </div>
                         </div>
 
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
-                            <h3 className="text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#6FBE45] text-sm font-bold hover:underline">EDIT</button>
+                            <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {Object.entries(data.role_specific_data).map(([key, val]) => {
                               if (key === 'consent' || val === '' || val === null || val === undefined) return null;
                               return (
                                 <div key={key} className={Array.isArray(val) || key === 'description' ? 'col-span-1 sm:col-span-2' : ''}>
-                                  <span className="block text-[11px] font-bold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</span>
-                                  <span className="block font-bold text-[var(--color-text-primary)] text-base">
+                                  <span className="block text-[11px] font-semibold text-[var(--color-text-secondary)] mb-1 uppercase tracking-wider">{key.replace(/_/g, ' ')}</span>
+                                  <span className="block font-semibold text-[var(--color-text-primary)] text-base">
                                     {key === 'registration_number' && data.role === 'licensed_surveyor' && val ? `${val} (SURCON, Verification Pending)` : Array.isArray(val) ? val.join(', ') : String(val)}
                                   </span>
                                 </div>
@@ -873,7 +873,7 @@ export default function WaitlistPage() {
                               </div>
                             </div>
                             <div className="ml-2 mt-[14px]">
-                              <span className="block font-bold text-[var(--color-text-primary)] leading-relaxed">
+                              <span className="block font-semibold text-[var(--color-text-primary)] leading-relaxed">
                                 I confirm that the information I provided is accurate.
                               </span>
                             </div>
@@ -891,7 +891,7 @@ export default function WaitlistPage() {
                   <button
                     type="button"
                     onClick={handleBack}
-                    className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-bold transition-colors px-2 py-2 min-h-[48px]"
+                    className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-semibold transition-colors px-2 py-2 min-h-[48px]"
                   >
                     <ChevronLeft className="w-5 h-5 mr-1" />
                     Back
@@ -904,7 +904,7 @@ export default function WaitlistPage() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="flex items-center bg-[#6FBE45] text-white px-8 py-3 rounded-[18px] font-bold text-lg hover:bg-[#5CA636] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm"
+                    className="flex items-center bg-[#6FBE45] text-white px-8 py-3 rounded-[18px] font-semibold text-lg hover:bg-[#5CA636] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm"
                   >
                     Next
                     <ChevronRight className="w-5 h-5 ml-1" />
@@ -913,7 +913,7 @@ export default function WaitlistPage() {
                   <button
                     type="submit"
                     disabled={!data.information_confirmed || isSubmitting}
-                    className="flex items-center bg-[#132A1D] text-white px-8 py-3 rounded-[18px] font-bold text-lg hover:bg-[#0E2F1F] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="flex items-center bg-[#132A1D] text-white px-8 py-3 rounded-[18px] font-semibold text-lg hover:bg-[#0E2F1F] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <>

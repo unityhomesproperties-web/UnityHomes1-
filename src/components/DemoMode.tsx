@@ -93,7 +93,7 @@ export default function DemoMode() {
               <X className="w-6 h-6" />
             </button>
             
-            <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-2 flex items-center">
+            <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mb-2 flex items-center">
               <Settings className="w-5 h-5 mr-2 text-[var(--color-brand-medium)]" />
               Demo Testing Tools
             </h3>

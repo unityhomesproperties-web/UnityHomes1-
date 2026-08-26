@@ -27,10 +27,10 @@ export class ErrorBoundary extends React.Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="bg-teal-950 text-teal-50 p-6 rounded-2xl shadow-sm border border-teal-800 text-center flex flex-col items-center justify-center space-y-4">
-          <h2 className="text-lg font-black font-display uppercase tracking-widest text-teal-400">Something went wrong loading this section</h2>
-          <p className="text-sm font-light">An error occurred while rendering the data.</p>
+          <h2 className="text-lg font-semibold font-display uppercase tracking-widest text-teal-400">Something went wrong loading this section</h2>
+          <p className="text-sm font-normal">An error occurred while rendering the data.</p>
           <button
-            className="px-6 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg font-bold uppercase text-xs tracking-wider transition shadow-md"
+            className="px-6 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg font-semibold uppercase text-xs tracking-wider transition shadow-md"
             onClick={() => (this as any).setState({ hasError: false, error: null })}
           >
             Retry

@@ -86,7 +86,7 @@ export default function QuickSupportButton({
 
           <div className="absolute right-0 mt-2 w-72 bg-white rounded-2xl shadow-sm border border-stone-200 z-50 p-3 space-y-2 animate-fade-in text-xs">
             <div className="flex items-center justify-between pb-2 border-b border-stone-200 px-1">
-              <span className="font-display font-extrabold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-1">
+              <span className="font-display font-semibold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-1">
                 <HelpCircle className="w-3.5 h-3.5 text-[#18452E]" />
                 <span>Support Access</span>
               </span>
@@ -109,7 +109,7 @@ export default function QuickSupportButton({
                     <FileText className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block font-bold text-#132A1D text-xs group-hover:text-[#18452E]">View FAQ &amp; Help</strong>
+                    <strong className="block font-semibold text-#132A1D text-xs group-hover:text-[#18452E]">View FAQ &amp; Help</strong>
                     <span className="text-[10px] text-#6B7280">Common platform answers</span>
                   </div>
                 </div>
@@ -126,9 +126,9 @@ export default function QuickSupportButton({
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block font-bold text-[#18452E] text-xs">Contact Support</strong>
+                    <strong className="block font-semibold text-[#18452E] text-xs">Contact Support</strong>
                     <span className="text-[10px] text-emerald-800">
-                      Pre-selects: <span className="font-mono font-bold">{getCategoryFromTab(currentTab)}</span>
+                      Pre-selects: <span className="font-mono font-semibold">{getCategoryFromTab(currentTab)}</span>
                     </span>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export default function QuickSupportButton({
                   <FileText className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-display font-extrabold text-#132A1D text-base uppercase tracking-wider">
+                  <h3 className="font-display font-semibold text-#132A1D text-base uppercase tracking-wider">
                     Frequently Asked Questions
                   </h3>
                   <p className="text-xs text-#6B7280">
@@ -168,8 +168,8 @@ export default function QuickSupportButton({
             <div className="space-y-3">
               {faqItems.map((item, idx) => (
                 <div key={idx} className="p-4 bg-stone-50 rounded-2xl border border-stone-200/80 space-y-1.5">
-                  <h4 className="font-bold text-#132A1D text-xs flex items-start space-x-2">
-                    <span className="text-[#18452E] font-mono font-black">Q{idx + 1}.</span>
+                  <h4 className="font-semibold text-#132A1D text-xs flex items-start space-x-2">
+                    <span className="text-[#18452E] font-mono font-semibold">Q{idx + 1}.</span>
                     <span>{item.q}</span>
                   </h4>
                   <p className="text-#6B7280 text-xs pl-6 leading-relaxed">
@@ -188,7 +188,7 @@ export default function QuickSupportButton({
                   setShowFaqModal(false);
                   handleContactSupport();
                 }}
-                className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-bold hover:bg-[#112d22] transition cursor-pointer flex items-center space-x-1.5"
+                className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-semibold hover:bg-[#112d22] transition cursor-pointer flex items-center space-x-1.5"
               >
                 <MessageSquare className="w-3.5 h-3.5" />
                 <span>Contact Support Center</span>

@@ -118,7 +118,7 @@ export default function HomePage() {
               <div className="max-w-xl mx-auto lg:mx-0 w-full">
                 <div className="overflow-hidden mb-6">
                   <div 
-                    className={`inline-flex items-center text-xs uppercase tracking-widest font-bold text-[var(--color-brand-medium)] transition-all duration-700 delay-100 ${
+                    className={`inline-flex items-center text-xs uppercase tracking-widest font-semibold text-[var(--color-brand-medium)] transition-all duration-700 delay-100 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -128,7 +128,7 @@ export default function HomePage() {
                 
                 <div className="overflow-hidden mb-6">
                   <h1 
-                    className={`text-4xl md:text-5xl lg:text-[56px] font-extrabold text-[var(--color-brand-deep)] leading-[1.1] transition-all duration-700 delay-200 ${
+                    className={`text-4xl md:text-5xl lg:text-[56px] font-semibold text-[var(--color-brand-deep)] leading-[1.1] transition-all duration-700 delay-200 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -154,14 +154,14 @@ export default function HomePage() {
                   >
                     <Link
                       to="/waitlist"
-                      className="w-full sm:w-auto bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[var(--radius-button)] font-bold text-base hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm"
+                      className="w-full sm:w-auto bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm"
                     >
                       Join The Waitlist
                     </Link>
                     <a
                       href="#services-preview"
                       onClick={scrollToServices}
-                      className="w-full sm:w-auto bg-transparent border border-[var(--color-border)] text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-bold text-base hover:bg-[var(--color-surface-soft)] transition-colors duration-200 min-h-[48px] flex items-center justify-center"
+                      className="w-full sm:w-auto bg-transparent border border-[var(--color-border)] text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-surface-soft)] transition-colors duration-200 min-h-[48px] flex items-center justify-center"
                     >
                       Explore Unity Homes
                     </a>
@@ -190,7 +190,7 @@ export default function HomePage() {
           <div className="max-w-xl mx-auto lg:mx-0 flex items-center justify-between pointer-events-auto">
             {/* Slide Indicator */}
             <div className="flex items-center gap-4">
-              <span className="font-bold text-sm text-[var(--color-brand-deep)] w-5">
+              <span className="font-semibold text-sm text-[var(--color-brand-deep)] w-5">
                 {String(currentSlide + 1).padStart(2, '0')}
               </span>
               
@@ -231,10 +231,10 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="space-y-6">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[var(--color-brand-medium)]">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[var(--color-brand-medium)]">
               About Unity Homes
             </h4>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--color-brand-deep)] leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[var(--color-brand-deep)] leading-[1.1]">
               Building greater confidence into every property decision.
             </h2>
           </div>
@@ -244,7 +244,7 @@ export default function HomePage() {
             </p>
             <Link 
               to="/about"
-              className="inline-flex items-center text-[var(--color-brand-deep)] font-bold group hover:text-[var(--color-brand-medium)] transition-colors"
+              className="inline-flex items-center text-[var(--color-brand-deep)] font-semibold group hover:text-[var(--color-brand-medium)] transition-colors"
             >
               Learn More 
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -262,10 +262,10 @@ export default function HomePage() {
             ].map(principle => (
               <div key={principle.id} className="group cursor-pointer">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-sm font-bold text-[var(--color-accent-gold)]">{principle.id}</span>
+                  <span className="text-sm font-semibold text-[var(--color-accent-gold)]">{principle.id}</span>
                   <div className="h-px bg-[var(--color-border)] flex-1 group-hover:bg-[var(--color-brand-fresh)] transition-colors duration-300"></div>
                 </div>
-                <h3 className="text-xl font-bold text-[var(--color-brand-deep)] mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                <h3 className="text-xl font-semibold text-[var(--color-brand-deep)] mb-3 group-hover:translate-x-1 transition-transform duration-300">
                   {principle.title}
                 </h3>
                 <p className="text-[var(--color-text-secondary)] leading-relaxed group-hover:text-[var(--color-text-primary)] transition-colors duration-300">
@@ -280,10 +280,10 @@ export default function HomePage() {
       {/* Services Preview */}
       <section id="services-preview" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-[var(--color-surface-light)] rounded-[32px] my-12 border border-[var(--color-border)]">
         <div className="mb-16">
-          <h4 className="text-sm font-bold tracking-widest uppercase text-[var(--color-brand-medium)] mb-4">
+          <h4 className="text-sm font-semibold tracking-widest uppercase text-[var(--color-brand-medium)] mb-4">
             WHAT WE'RE BUILDING
           </h4>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--color-brand-deep)] max-w-2xl leading-[1.2]">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-brand-deep)] max-w-2xl leading-[1.2]">
             Real estate services designed around better decisions.
           </h2>
         </div>
@@ -295,7 +295,7 @@ export default function HomePage() {
               <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[var(--color-surface-soft)] text-[var(--color-brand-deep)] mb-8">
                 <Building className="w-6 h-6" strokeWidth={1.5} />
               </div>
-              <h3 className="text-3xl font-extrabold text-[var(--color-brand-deep)] mb-4 uppercase">
+              <h3 className="text-3xl font-semibold text-[var(--color-brand-deep)] mb-4 uppercase">
                 Property Listings
               </h3>
               <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-8">
@@ -304,7 +304,7 @@ export default function HomePage() {
             </div>
             <Link
               to="/services"
-              className="mt-8 inline-flex items-center text-[var(--color-brand-deep)] font-bold group hover:text-[var(--color-brand-medium)] transition-colors"
+              className="mt-8 inline-flex items-center text-[var(--color-brand-deep)] font-semibold group hover:text-[var(--color-brand-medium)] transition-colors"
             >
               Explore Property 
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -322,18 +322,18 @@ export default function HomePage() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <service.icon className="w-6 h-6 text-[var(--color-brand-deep)]" strokeWidth={1.5} />
-                    <span className="text-xs font-bold uppercase tracking-wide text-[var(--color-text-secondary)]">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
                       {service.title === 'Property Verification' ? 'Coming Soon' : 'Active'}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-[var(--color-brand-deep)] mb-2">
+                  <h3 className="text-lg font-semibold text-[var(--color-brand-deep)] mb-2">
                     {service.title}
                   </h3>
                   <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 flex items-center text-sm font-bold text-[var(--color-brand-deep)] group-hover:text-[var(--color-brand-medium)] transition-colors">
+                <div className="mt-6 flex items-center text-sm font-semibold text-[var(--color-brand-deep)] group-hover:text-[var(--color-brand-medium)] transition-colors">
                   {service.linkText}
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
@@ -347,10 +347,10 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-[var(--color-border)]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[var(--color-brand-medium)] mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[var(--color-brand-medium)] mb-4">
               FAQ
             </h4>
-            <h2 className="text-3xl font-bold text-[var(--color-brand-deep)] mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-semibold text-[var(--color-brand-deep)] mb-4">Frequently Asked Questions</h2>
           </div>
           
           <FAQSection limit={4} />
@@ -358,7 +358,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link 
               to="/contact"
-              className="inline-flex items-center text-[var(--color-brand-deep)] font-bold group hover:text-[var(--color-brand-medium)] transition-colors"
+              className="inline-flex items-center text-[var(--color-brand-deep)] font-semibold group hover:text-[var(--color-brand-medium)] transition-colors"
             >
               View Full FAQ 
               <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -382,7 +382,7 @@ export default function HomePage() {
 
         <div className="max-w-4xl mx-auto space-y-8 relative z-10">
           <div className="w-16 h-1 bg-[var(--color-accent-gold)] mx-auto mb-8 rounded-full"></div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
             Be part of what's next in Nigerian real estate.
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
@@ -391,7 +391,7 @@ export default function HomePage() {
           <div className="pt-8">
             <Link
               to="/waitlist"
-              className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[var(--radius-button)] font-bold text-lg hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
+              className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[var(--radius-button)] font-semibold text-lg hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
               Join The Waitlist
             </Link>

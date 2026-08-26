@@ -151,13 +151,13 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
       
       {/* HEADER BAR */}
       <div className="mb-8 text-center md:text-left">
-        <span className="text-xs font-mono font-bold tracking-widest text-[#C9A84C] uppercase bg-white border border-stone-200 px-3 py-1 rounded-full shadow-sm">
+        <span className="text-xs font-mono font-semibold tracking-widest text-[#C9A84C] uppercase bg-white border border-stone-200 px-3 py-1 rounded-full shadow-sm">
           Strict Verification Framework
         </span>
-        <h1 className="text-3xl md:text-4xl font-display font-extrabold text-[#18452E] mt-3">
+        <h1 className="text-3xl md:text-4xl font-display font-semibold text-[#18452E] mt-3">
           {typeFilter === 'For Rent' ? 'Verified Rent Ledger Options' : typeFilter === 'For Lease' ? 'Protected Leasehold Offerings' : 'Unity Homes Properties Portal'}
         </h1>
-        <p className="text-xs md:text-sm text-stone-500 mt-1 font-light">
+        <p className="text-xs md:text-sm text-stone-500 mt-1 font-normal">
           All properties listed are directly title-checked, physical address verified, and linked exclusively to verified owner accounts.
         </p>
       </div>
@@ -165,7 +165,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
       {/* RENT AND LEASE SPECIFIC ADVERT DISCLAIMERS */}
       {typeFilter === 'For Lease' && (
         <div className="mb-6 bg-blue-50/40 border-l-4 border-blue-600 rounded-r-xl p-4 text-xs text-blue-900 leading-relaxed">
-          <span className="font-bold flex items-center space-x-1 uppercase tracking-wider font-mono text-[10px]">
+          <span className="font-semibold flex items-center space-x-1 uppercase tracking-wider font-mono text-[10px]">
             <Info className="w-4 h-4 text-blue-600 mr-1" />
             LEASE SPECIAL CONDITIONS
           </span>
@@ -181,7 +181,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
           
           {/* Status Dropdown conforming to STEP 8 spec */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Offer Status
             </label>
             <select
@@ -212,7 +212,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
           {/* Location / State Filter */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Select State
             </label>
             <select
@@ -228,7 +228,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
           {/* Property types */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Design Structure
             </label>
             <select
@@ -246,7 +246,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
           {/* Bedrooms */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Bedrooms count
             </label>
             <select
@@ -264,7 +264,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
           {/* Price Max */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Max Price (Annual/Daily)
             </label>
             <select
@@ -282,7 +282,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
           {/* Sort selection */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[#18452E] mb-1">
+            <label className="block text-[11px] font-semibold uppercase tracking-wider text-[#18452E] mb-1">
               Sort Price
             </label>
             <select
@@ -303,7 +303,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
       {(typeFilter === 'Commercial Rent' || typeFilter === 'Commercial Lease') && (
         <div className="mb-6 bg-[#C9A84C]/15 border-l-4 border-[#C9A84C] p-4 rounded-r-xl text-xs text-[#18452E] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shadow-xs">
           <div className="flex items-center space-x-2">
-            <span className="p-1 px-1.5 bg-[#C9A84C] text-[#18452E] font-mono font-bold text-[9px] rounded">
+            <span className="p-1 px-1.5 bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-[9px] rounded">
               DIRECT PORTAL
             </span>
             <span className="font-semibold text-xs leading-none">
@@ -314,7 +314,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
             href="https://wa.me/2348145550012?text=Hello%20Unity%20Homes,%20I%20am%20inquiring%20about%20commercial%20listings."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 bg-[#18452E] text-white hover:bg-[#18452E] text-[10px] font-bold rounded-md transition text-center inline-block"
+            className="px-3 py-1.5 bg-[#18452E] text-white hover:bg-[#18452E] text-[10px] font-semibold rounded-md transition text-center inline-block"
           >
             Inquire Directly
           </a>
@@ -327,7 +327,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
         {/* Main List Section */}
         <div className={`${selectedProperty ? 'md:col-span-6 lg:col-span-5' : 'md:col-span-12'} transition-all`}>
           <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-mono font-bold text-[#18452E]">
+            <span className="text-xs font-mono font-semibold text-[#18452E]">
               Showing <strong className="text-[#18452E] font-semibold">{sortedProperties.length}</strong> matching entries found
             </span>
           </div>
@@ -347,7 +347,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                     setBathroomsFilter('');
                     setPriceMaxFilter('');
                   }}
-                  className="mt-3 text-xs bg-[#18452E] text-white px-4 py-2 rounded-lg font-bold"
+                  className="mt-3 text-xs bg-[#18452E] text-white px-4 py-2 rounded-lg font-semibold"
                 >
                   Clear All Filters
                 </button>
@@ -377,7 +377,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute top-2 left-2 flex space-x-1 font-mono text-[9px] font-bold">
+                      <div className="absolute top-2 left-2 flex space-x-1 font-mono text-[9px] font-semibold">
                         <span className="px-1.5 py-0.5 rounded bg-[#16A34A] text-white">
                           Verified Check
                         </span>
@@ -390,11 +390,11 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                     <div className="p-4 flex flex-col justify-between flex-grow">
                       <div>
                         <div className="flex justify-between items-start">
-                          <span className="text-lg font-display font-extrabold text-[#18452E]">
+                          <span className="text-lg font-display font-semibold text-[#18452E]">
                             {prop.type === 'Shortlet' ? `₦${prop.price.toLocaleString()}/night` : `₦${prop.price.toLocaleString()}/yr`}
                           </span>
                         </div>
-                        <h3 className="text-xs font-bold text-[#18452E] mt-1 line-clamp-1">{prop.title}</h3>
+                        <h3 className="text-xs font-semibold text-[#18452E] mt-1 line-clamp-1">{prop.title}</h3>
                         <div className="flex items-center text-[10px] text-stone-500 mt-1">
                           <MapPin className="w-3 h-3 text-[#C9A84C] mr-1 shrink-0" />
                           <span className="line-clamp-1">{prop.location}</span>
@@ -407,7 +407,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                           <span>&bull;</span>
                           <span>{prop.bathrooms} Bath</span>
                         </div>
-                        <span className="text-[#18452E] font-bold flex items-center space-x-0.5">
+                        <span className="text-[#18452E] font-semibold flex items-center space-x-0.5">
                           <span>View walk</span>
                           <ChevronRight className="w-3 h-3" />
                         </span>
@@ -428,7 +428,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
             {/* Gallery Section */}
             <div className="flex justify-between items-center mb-5 pt-2">
-              <span className="font-mono text-[9px] font-black text-[#C9A84C] bg-[#C9A84C]/10 px-2.5 py-1 rounded-md uppercase tracking-widest">
+              <span className="font-mono text-[9px] font-semibold text-[#C9A84C] bg-[#C9A84C]/10 px-2.5 py-1 rounded-md uppercase tracking-widest">
                 Individual Verified Portfolio File
               </span>
               <button 
@@ -439,13 +439,13 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
               </button>
             </div>
 
-            <h2 className="text-2xl font-display font-black text-[#18452E] leading-tight mb-2.5">
+            <h2 className="text-2xl font-display font-semibold text-[#18452E] leading-tight mb-2.5">
               {selectedProperty.title}
             </h2>
 
             <div className="flex items-center text-xs text-stone-500 mb-5 font-semibold">
               <MapPin className="w-4 h-4 text-[#C9A84C] mr-1.5 shrink-0" />
-              <span>{selectedProperty.location} (State: <strong className="text-[#18452E] font-bold">{selectedProperty.state}</strong>)</span>
+              <span>{selectedProperty.location} (State: <strong className="text-[#18452E] font-semibold">{selectedProperty.state}</strong>)</span>
             </div>
 
             {/* Main high-res Photo Gallery */}
@@ -456,7 +456,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-[1.02]"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md text-white text-[9px] font-mono font-black tracking-widest px-2.5 py-1 rounded-md">
+              <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md text-white text-[9px] font-mono font-semibold tracking-widest px-2.5 py-1 rounded-md">
                 IMAGE {galleryIndex + 1} OF {selectedProperty.photos.length}
               </div>
             </div>
@@ -512,7 +512,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
               >
                 <Lock className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
                 <span>Audit History</span>
-                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
+                <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full uppercase scale-90">Permanent</span>
               </button>
             </div>
 
@@ -521,7 +521,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                 {/* Embedded Walkthrough YouTube Video Container */}
                 {selectedProperty.youtubeTourUrl && (
                   <div className="bg-[#F0F8F4]/40 border border-[#18452E]/10 rounded-2xl p-5 shadow-xs">
-                    <span className="block text-[10px] font-mono font-black uppercase tracking-widest text-[#18452E] mb-3.5 flex items-center">
+                    <span className="block text-[10px] font-mono font-semibold uppercase tracking-widest text-[#18452E] mb-3.5 flex items-center">
                       <Play className="w-3.5 h-3.5 text-rose-600 mr-2 fill-rose-600 animate-pulse" />
                       Property Walkthrough, Filmed by Unity Homes and Properties Ltd.
                     </span>
@@ -540,7 +540,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                 {/* Clickable Embedded Google Map */}
                 <div className="bg-[#F0F8F4]/40 border border-[#18452E]/10 rounded-2xl p-5">
-                  <span className="block text-[10px] font-mono font-black uppercase tracking-widest text-[#18452E] mb-3 flex items-center">
+                  <span className="block text-[10px] font-mono font-semibold uppercase tracking-widest text-[#18452E] mb-3 flex items-center">
                     <MapPin className="w-3.5 h-3.5 text-[#18452E] mr-2" />
                     Verified Location
                   </span>
@@ -556,30 +556,30 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                       allowFullScreen
                     ></iframe>
                   </div>
-                  <p className="text-[10px] text-stone-500 italic mt-2.5 leading-relaxed font-light">
+                  <p className="text-[10px] text-stone-500 italic mt-2.5 leading-relaxed font-normal">
                     Disclaimer: The coordinates shown conform precisely to official registrar listings. However, Unity Homes strongly recommends booking a physical walk-around before committing to transfers.
                   </p>
                 </div>
 
                 {/* Rental detail values / breakdown */}
                 <div className="bg-[#18452E]/5 rounded-2xl border border-stone-200/60 p-6">
-                  <h3 className="font-display font-black text-xs uppercase tracking-wider text-[#18452E] mb-4">Transparent Fee Breakdown</h3>
+                  <h3 className="font-display font-semibold text-xs uppercase tracking-wider text-[#18452E] mb-4">Transparent Fee Breakdown</h3>
                   
                   {/* Desktop Table View */}
                   <div className="hidden md:block overflow-hidden">
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="border-b-2 border-stone-200/80">
-                          <th className="pb-2 text-xs font-bold text-[#18452E]">Fee Name</th>
-                          <th className="pb-2 text-xs font-bold text-[#18452E]">Amount</th>
-                          <th className="pb-2 text-xs font-bold text-[#18452E]">What This Covers</th>
+                          <th className="pb-2 text-xs font-semibold text-[#18452E]">Fee Name</th>
+                          <th className="pb-2 text-xs font-semibold text-[#18452E]">Amount</th>
+                          <th className="pb-2 text-xs font-semibold text-[#18452E]">What This Covers</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-stone-200/50">
                         {selectedProperty.feeBreakdown.map((fee, fIdx) => (
                           <tr key={fIdx} className="hover:bg-white/30 transition-colors">
                             <td className="py-3 text-xs text-stone-500 font-medium pr-4">{fee.label}</td>
-                            <td className="py-3 text-xs font-mono font-bold text-[#18452E] whitespace-nowrap pr-4">₦{fee.amount.toLocaleString()}</td>
+                            <td className="py-3 text-xs font-mono font-semibold text-[#18452E] whitespace-nowrap pr-4">₦{fee.amount.toLocaleString()}</td>
                             <td className="py-3 text-xs text-stone-500 leading-relaxed">{fee.explanation || 'Standard fee associated with this property.'}</td>
                           </tr>
                         ))}
@@ -593,7 +593,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                       <div key={fIdx} className="bg-white/50 p-4 rounded-xl border border-stone-200/50 space-y-2">
                         <div className="flex justify-between items-start">
                           <span className="text-xs text-stone-500 font-medium block">{fee.label}</span>
-                          <span className="text-xs font-mono font-bold text-[#18452E] whitespace-nowrap">₦{fee.amount.toLocaleString()}</span>
+                          <span className="text-xs font-mono font-semibold text-[#18452E] whitespace-nowrap">₦{fee.amount.toLocaleString()}</span>
                         </div>
                         <div className="text-[11px] text-stone-500 leading-relaxed pt-1 border-t border-stone-200/40">
                           <strong className="text-[#18452E] font-semibold">Covers:</strong> {fee.explanation || 'Standard fee associated with this property.'}
@@ -603,9 +603,9 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                   </div>
                   
                   {/* Total check */}
-                  <div className="flex justify-between items-center text-xs font-bold pt-4 mt-4 border-t-2 border-stone-200 text-[#18452E]">
+                  <div className="flex justify-between items-center text-xs font-semibold pt-4 mt-4 border-t-2 border-stone-200 text-[#18452E]">
                     <span className="uppercase tracking-wider">Total Due Year 1</span>
-                    <span className="text-base font-mono font-black">
+                    <span className="text-base font-mono font-semibold">
                       ₦{selectedProperty.feeBreakdown.reduce((sum, f) => sum + f.amount, 0).toLocaleString()}
                     </span>
                   </div>
@@ -613,7 +613,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                 {/* Confirmed Amenities box */}
                 <div>
-                  <h3 className="font-display font-black text-xs uppercase text-[#18452E] tracking-wider mb-3.5">
+                  <h3 className="font-display font-semibold text-xs uppercase text-[#18452E] tracking-wider mb-3.5">
                     Confirmed Checked Amenities
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -622,11 +622,11 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                       return (
                         <div key={amen} className={`flex items-center space-x-2.5 text-xs font-semibold ${isPresent ? 'text-[#18452E]' : 'text-stone-400 opacity-60'}`}>
                           {isPresent ? (
-                            <span className="w-5 h-5 bg-[#F0F8F4] text-[#18452E] rounded-lg flex items-center justify-center shrink-0 text-[10px] font-extrabold shadow-xs">
+                            <span className="w-5 h-5 bg-[#F0F8F4] text-[#18452E] rounded-lg flex items-center justify-center shrink-0 text-[10px] font-semibold shadow-xs">
                               ✓
                             </span>
                           ) : (
-                            <span className="w-5 h-5 bg-stone-50 text-stone-400 rounded-lg flex items-center justify-center shrink-0 text-[10px] font-bold">
+                            <span className="w-5 h-5 bg-stone-50 text-stone-400 rounded-lg flex items-center justify-center shrink-0 text-[10px] font-semibold">
                               -
                             </span>
                           )}
@@ -639,11 +639,11 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                 {/* Exact Points Rules Box Conforming to STEP 9 SPEC */}
                 <div className="p-5 bg-amber-50/50 border-l-[5px] border-[#18452E] rounded-r-2xl shadow-xs">
-                  <span className="block font-mono font-black text-[10px] uppercase tracking-wider text-[#18452E] mb-3 flex items-center">
+                  <span className="block font-mono font-semibold text-[10px] uppercase tracking-wider text-[#18452E] mb-3 flex items-center">
                     <ShieldCheck className="w-4 h-4 text-[#18452E] mr-1.5 shrink-0" />
                     UNITY TENANCY DIRECT OPERATING CHARTER
                   </span>
-                  <ol className="list-decimal list-inside space-y-2.5 text-xs text-[#18452E] leading-relaxed font-light">
+                  <ol className="list-decimal list-inside space-y-2.5 text-xs text-[#18452E] leading-relaxed font-normal">
                     <li><strong className="font-semibold text-[#18452E]">Unity Homes manages this property directly</strong>, you will not deal with a third party agent.</li>
                     <li>The address shown has been confirmed, visit independently before paying anything.</li>
                     <li>All fees are as displayed, report any additional requested fee immediately.</li>
@@ -655,18 +655,18 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                 {/* Request Viewing Form */}
                 <div className="bg-stone-50 border border-stone-200/80 rounded-2xl p-6">
-                  <h3 className="font-display font-black text-[#18452E] text-sm uppercase tracking-wider mb-4">Request Secure Site Viewing</h3>
+                  <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase tracking-wider mb-4">Request Secure Site Viewing</h3>
                   
                   {formSubmitted ? (
                     <div className="bg-[#F0F8F4] text-[#18452E] border border-stone-200 p-5 rounded-2xl flex flex-col items-center text-center space-y-2.5 shadow-xs">
                       <span className="text-2xl animate-bounce">🎉</span>
-                      <h4 className="font-bold text-sm">Site Request Logged Successfully!</h4>
-                      <p className="text-xs text-stone-500 font-light leading-relaxed">
+                      <h4 className="font-semibold text-sm">Site Request Logged Successfully!</h4>
+                      <p className="text-xs text-stone-500 font-normal leading-relaxed">
                         Hello, {formData.fullName}. Your request to view on <strong className="text-[#18452E] font-semibold">{formData.preferredDate}</strong> has been logged to our administrator. An intro will follow shortly.
                       </p>
                       <button
                         onClick={() => setFormSubmitted(false)}
-                        className="text-white bg-[#18452E] hover:bg-[#18452E] text-xs font-bold px-4 py-2 rounded-xl mt-2 cursor-pointer transition-colors"
+                        className="text-white bg-[#18452E] hover:bg-[#18452E] text-xs font-semibold px-4 py-2 rounded-xl mt-2 cursor-pointer transition-colors"
                       >
                         Send Another Request
                       </button>
@@ -675,7 +675,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                     <form onSubmit={handleInquirySubmit} className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Your Full Name*</label>
+                          <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Your Full Name*</label>
                           <input
                             type="text"
                             required
@@ -686,7 +686,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Phone Number*</label>
+                          <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Phone Number*</label>
                           <input
                             type="text"
                             required
@@ -700,7 +700,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Email Address*</label>
+                          <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Email Address*</label>
                           <input
                             type="email"
                             required
@@ -711,7 +711,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Preferred Date*</label>
+                          <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Preferred Date*</label>
                           <input
                             type="date"
                             required
@@ -723,7 +723,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                       </div>
 
                       <div>
-                        <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Country of Residence</label>
+                        <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Country of Residence</label>
                         <input
                           type="text"
                           value={formData.country}
@@ -734,7 +734,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                       </div>
 
                       <div>
-                        <label className="block text-[10px] font-extrabold text-[#18452E] uppercase tracking-widest mb-1.5">Add Note or Schedule Preference</label>
+                        <label className="block text-[10px] font-semibold text-[#18452E] uppercase tracking-widest mb-1.5">Add Note or Schedule Preference</label>
                         <textarea
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -745,12 +745,12 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
                       <button
                         type="submit"
-                        className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold uppercase tracking-wider rounded-xl flex items-center justify-center space-x-2 cursor-pointer shadow-md hover:shadow-sm transition-all duration-300 hover:scale-[1.01]"
+                        className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold uppercase tracking-wider rounded-xl flex items-center justify-center space-x-2 cursor-pointer shadow-md hover:shadow-sm transition-all duration-300 hover:scale-[1.01]"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Log Site Viewing Request</span>
                       </button>
-                      <p className="text-[10px] text-center text-stone-500 font-light">
+                      <p className="text-[10px] text-center text-stone-500 font-normal">
                         *Submitting this will immediately register a viewing task in our Admin Dashboard.
                       </p>
                     </form>
@@ -763,7 +763,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
               <div className="space-y-6 animate-fade-in">
                 <div className="flex items-center space-x-2 pb-2 border-b border-stone-200">
                   <Clock className="w-5 h-5 text-[#18452E]" />
-                  <h3 className="text-sm font-display font-black text-[#18452E] uppercase tracking-wider">
+                  <h3 className="text-sm font-display font-semibold text-[#18452E] uppercase tracking-wider">
                     Property Lifetime Chronicle
                   </h3>
                 </div>
@@ -881,13 +881,13 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                           
                           {/* Card Content */}
                           <div className="mt-4 bg-stone-50/60 hover:bg-white border border-stone-200 rounded-xl p-4 text-center space-y-1.5 transition-all duration-300 hover:shadow-md">
-                            <span className="block font-mono text-[9px] font-black tracking-widest text-[#C9A84C] uppercase">
+                            <span className="block font-mono text-[9px] font-semibold tracking-widest text-[#C9A84C] uppercase">
                               {milestone.date}
                             </span>
-                            <h4 className="font-display font-extrabold text-[#18452E] text-xs">
+                            <h4 className="font-display font-semibold text-[#18452E] text-xs">
                               {milestone.title}
                             </h4>
-                            <p className="text-[10px] text-stone-500 leading-relaxed font-light line-clamp-3">
+                            <p className="text-[10px] text-stone-500 leading-relaxed font-normal line-clamp-3">
                               {milestone.description}
                             </p>
                           </div>
@@ -911,11 +911,11 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                 <div className="flex items-center justify-between pb-2 border-b border-stone-200">
                   <div className="flex items-center space-x-2">
                     <Lock className="w-5 h-5 text-emerald-600" />
-                    <h3 className="text-sm font-display font-black text-[#18452E] uppercase tracking-wider">
+                    <h3 className="text-sm font-display font-semibold text-[#18452E] uppercase tracking-wider">
                       Immutable Property Ledger
                     </h3>
                   </div>
-                  <span className="text-[9px] font-mono font-black text-emerald-700 bg-emerald-50 border border-emerald-200/50 px-2.5 py-1 rounded-md uppercase">
+                  <span className="text-[9px] font-mono font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/50 px-2.5 py-1 rounded-md uppercase">
                     Permanent Record
                   </span>
                 </div>

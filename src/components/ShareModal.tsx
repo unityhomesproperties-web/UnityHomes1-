@@ -46,7 +46,7 @@ export default function ShareModal({ url, title, text, isOpen, onClose }: ShareM
           ✕
         </button>
         
-        <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-6 text-center">
+        <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mb-6 text-center">
           Share Area Intelligence
         </h3>
 

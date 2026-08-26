@@ -93,7 +93,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
               <path d="M3 10L12 3L21 10V20C21 20.5523 20.5523 21 20 21H16V13H8V21H4C3.44772 21 3 20.4477 3 20V10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h1 className="text-xl font-display font-extrabold text-[#18452E] mt-3">
+          <h1 className="text-xl font-display font-semibold text-[#18452E] mt-3">
             Welcome Back
           </h1>
           <p className="text-xs text-stone-500 mt-0.5">Select your account type to proceed</p>
@@ -210,7 +210,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
             >
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-stone-400 shrink-0" />
-                <span className="text-[11px] font-mono uppercase tracking-wider font-extrabold">I am an Administrator</span>
+                <span className="text-[11px] font-mono uppercase tracking-wider font-semibold">I am an Administrator</span>
               </div>
               {selectedRole === 'Admin' && (
                 <span className="absolute -top-1.5 -right-1.5 bg-[#C9A84C] text-white p-0.5 rounded-full">
@@ -231,7 +231,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                 className="space-y-4 border-t border-stone-200 pt-5 overflow-hidden"
               >
                 <div>
-                  <label className="block text-[10px] font-bold text-[#18452E] uppercase mb-1">
+                  <label className="block text-[10px] font-semibold text-[#18452E] uppercase mb-1">
                     Verified Portfolio Email Code
                   </label>
                   <input
@@ -245,12 +245,12 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-[#18452E] uppercase mb-1 flex justify-between">
+                  <label className="block text-[10px] font-semibold text-[#18452E] uppercase mb-1 flex justify-between">
                     <span>Credentials Password Code</span>
                     <button
                       type="button"
                       onClick={() => navigate('/Pricing')} // Forgot password redirect link in gold as specified
-                      className="text-[#C9A84C] text-[10px] font-mono font-bold hover:underline"
+                      className="text-[#C9A84C] text-[10px] font-mono font-semibold hover:underline"
                     >
                       Forgot?
                     </button>
@@ -296,7 +296,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                 <button
                   type="submit"
                   disabled={isLoggingIn}
-                  className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] rounded-xl text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-md uppercase tracking-wider cursor-pointer"
+                  className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] rounded-xl text-white font-semibold text-xs flex items-center justify-center space-x-2 shadow-md uppercase tracking-wider cursor-pointer"
                 >
                   {isLoggingIn ? (
                     <>
@@ -315,7 +315,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
           <div className="text-center pt-2">
             <p className="text-[11px] text-stone-500 leading-relaxed">
               Accounts are created by our team after a personal onboarding conversation. <br />
-              New here? <button onClick={() => navigate('/pricing-and-services')} className="text-[#C9A84C] font-bold hover:underline">Visit unityhomes.ng to get started</button>
+              New here? <button onClick={() => navigate('/pricing-and-services')} className="text-[#C9A84C] font-semibold hover:underline">Visit unityhomes.ng to get started</button>
             </p>
           </div>
 

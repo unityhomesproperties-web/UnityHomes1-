@@ -114,20 +114,20 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             <Activity className="w-64 h-64 text-[#C9A84C]" />
           </div>
           <div className="relative z-10">
-            <span className="text-[10px] uppercase font-mono font-black tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full border border-[#C9A84C]/20">
+            <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full border border-[#C9A84C]/20">
               Interactive Value Sandbox
             </span>
-            <h1 className="text-4xl md:text-5xl font-display font-black mt-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-display font-semibold mt-4 leading-tight">
               Unity Performance Center
             </h1>
-            <p className="text-stone-300 max-w-2xl mt-4 font-light leading-relaxed">
+            <p className="text-stone-300 max-w-2xl mt-4 font-normal leading-relaxed">
               Experience the power of the Unity Homes Operating System before you subscribe. This simulated environment showcases the exact analytics, insights, and workflows available to our premium partners.
             </p>
             
             {/* DATASET SUMMARY PILLS */}
             <div className="flex flex-wrap gap-3 mt-8">
               {['5 Landlords', '30+ Properties', '120+ Units', '60+ Tenants', '2 PMCs', '4 Shortlet Managers', '15 Shortlet Apartments', '300+ Transactions', '40+ Service Charges', '20+ Maintenance Records', '20+ Damage Reports'].map((item, idx) => (
-                <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wider text-white uppercase flex items-center gap-1.5">
+                <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 rounded-lg text-[10px] font-mono font-semibold tracking-wider text-white uppercase flex items-center gap-1.5">
                   <CheckCircle2 className="w-3 h-3 text-[#C9A84C]" />
                   {item}
                 </div>
@@ -140,8 +140,8 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
         <div className="bg-white rounded-[var(--radius-large)] p-8 border border-stone-200 shadow-sm mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-1 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-stone-200 pb-8 lg:pb-0 lg:pr-8">
-              <h2 className="text-sm font-mono font-bold tracking-widest uppercase text-stone-400 mb-2">Proprietary Metric</h2>
-              <h3 className="text-2xl font-display font-black text-[#18452E] mb-6">Portfolio Health Score</h3>
+              <h2 className="text-sm font-mono font-semibold tracking-widest uppercase text-stone-400 mb-2">Proprietary Metric</h2>
+              <h3 className="text-2xl font-display font-semibold text-[#18452E] mb-6">Portfolio Health Score</h3>
               
               <div className="relative inline-block">
                 <svg className="w-40 h-40 transform -rotate-90">
@@ -153,13 +153,13 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-4xl font-display font-black text-[#18452E]">{healthScore}</span>
-                  <span className="text-[10px] font-mono font-bold text-stone-400">/ 100</span>
+                  <span className="text-4xl font-display font-semibold text-[#18452E]">{healthScore}</span>
+                  <span className="text-[10px] font-mono font-semibold text-stone-400">/ 100</span>
                 </div>
               </div>
               
               <div className="mt-6 flex justify-center lg:justify-start">
-                <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border ${status.bg} ${status.border} ${status.color}`}>
+                <span className={`px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider border ${status.bg} ${status.border} ${status.color}`}>
                   Status: {status.label}
                 </span>
               </div>
@@ -178,8 +178,8 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   <div className="flex justify-between items-start mb-2">
                     <metric.icon className="w-5 h-5 text-[#C9A84C]" />
                   </div>
-                  <span className="text-2xl font-display font-black text-[#18452E]">{metric.value}</span>
-                  <span className="text-[10px] font-mono font-bold text-#6B7280 uppercase tracking-wider mt-1">{metric.label}</span>
+                  <span className="text-2xl font-display font-semibold text-[#18452E]">{metric.value}</span>
+                  <span className="text-[10px] font-mono font-semibold text-#6B7280 uppercase tracking-wider mt-1">{metric.label}</span>
                 </div>
               ))}
             </div>
@@ -194,7 +194,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 min-w-[140px] px-4 py-3 text-xs font-bold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap ${
+                className={`flex-1 min-w-[140px] px-4 py-3 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all whitespace-nowrap ${
                   activeTab === tab.id 
                     ? 'bg-[#18452E] text-white shadow-md' 
                     : 'text-#6B7280 hover:bg-stone-200/50 hover:text-[#18452E]'
@@ -211,14 +211,14 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
               <div className="space-y-8 animate-fade-in">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-display font-black text-[#18452E]">Landlord Intelligence</h2>
+                    <h2 className="text-2xl font-display font-semibold text-[#18452E]">Landlord Intelligence</h2>
                     <p className="text-#6B7280 text-sm mt-1">Track portfolio growth, occupancy, and collection efficiency.</p>
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                    <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Revenue Growth vs Expected</h3>
+                    <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Revenue Growth vs Expected</h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <ComposedChart data={revenueData}>
@@ -235,7 +235,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   </div>
 
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                    <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Occupancy Trends</h3>
+                    <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Occupancy Trends</h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={occupancyData}>
@@ -252,19 +252,19 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-4 gap-4">
                      <div className="bg-[#18452E] text-white p-5 rounded-2xl">
                        <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Rent Collection Rate</span>
-                       <span className="text-3xl font-display font-black">94.5%</span>
+                       <span className="text-3xl font-display font-semibold">94.5%</span>
                      </div>
                      <div className="bg-white border border-stone-200 p-5 rounded-2xl">
                        <span className="block text-[10px] font-mono text-#6B7280 uppercase mb-1">Outstanding Rent</span>
-                       <span className="text-3xl font-display font-black text-rose-600">₦1.2m</span>
+                       <span className="text-3xl font-display font-semibold text-rose-600">₦1.2m</span>
                      </div>
                      <div className="bg-white border border-stone-200 p-5 rounded-2xl">
                        <span className="block text-[10px] font-mono text-#6B7280 uppercase mb-1">Service Charges</span>
-                       <span className="text-3xl font-display font-black text-emerald-600">100%</span>
+                       <span className="text-3xl font-display font-semibold text-emerald-600">100%</span>
                      </div>
                      <div className="bg-white border border-stone-200 p-5 rounded-2xl">
                        <span className="block text-[10px] font-mono text-#6B7280 uppercase mb-1">Property Ranking</span>
-                       <span className="text-3xl font-display font-black text-[#18452E]">Top 5%</span>
+                       <span className="text-3xl font-display font-semibold text-[#18452E]">Top 5%</span>
                      </div>
                   </div>
                 </div>
@@ -274,24 +274,24 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             {activeTab === 'Tenant' && (
               <div className="space-y-8 animate-fade-in">
                 <div>
-                  <h2 className="text-2xl font-display font-black text-[#18452E]">Tenant Experience</h2>
+                  <h2 className="text-2xl font-display font-semibold text-[#18452E]">Tenant Experience</h2>
                   <p className="text-#6B7280 text-sm mt-1">Seamless payment tracking, issue resolution, and document security.</p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 flex flex-col items-center text-center">
                     <DollarSign className="w-10 h-10 text-emerald-600 mb-4" />
-                    <h3 className="font-display font-bold text-lg text-[#18452E]">Payment Tracking</h3>
+                    <h3 className="font-display font-semibold text-lg text-[#18452E]">Payment Tracking</h3>
                     <p className="text-xs text-#6B7280 mt-2">Zero disputes. Digital receipts and ledger matching guarantee your payments are instantly recognized by landlords.</p>
                   </div>
                   <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 flex flex-col items-center text-center">
                     <Lock className="w-10 h-10 text-blue-600 mb-4" />
-                    <h3 className="font-display font-bold text-lg text-[#18452E]">Document Vault</h3>
+                    <h3 className="font-display font-semibold text-lg text-[#18452E]">Document Vault</h3>
                     <p className="text-xs text-#6B7280 mt-2">Secure access to tenancy agreements, house rules, and KYC data. Protected by robust cloud encryption.</p>
                   </div>
                   <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 flex flex-col items-center text-center">
                     <AlertTriangle className="w-10 h-10 text-amber-600 mb-4" />
-                    <h3 className="font-display font-bold text-lg text-[#18452E]">Complaint Management</h3>
+                    <h3 className="font-display font-semibold text-lg text-[#18452E]">Complaint Management</h3>
                     <p className="text-xs text-#6B7280 mt-2">Log issues directly to the property manager. Track resolution times and ensure your voice is heard.</p>
                   </div>
                 </div>
@@ -301,13 +301,13 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             {activeTab === 'PMC' && (
               <div className="space-y-8 animate-fade-in">
                 <div>
-                  <h2 className="text-2xl font-display font-black text-[#18452E]">PMC Command Center</h2>
+                  <h2 className="text-2xl font-display font-semibold text-[#18452E]">PMC Command Center</h2>
                   <p className="text-#6B7280 text-sm mt-1">Manage vast multi-landlord portfolios and optimize collection performance.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                     <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Collection Performance (Quarterly)</h3>
+                     <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Collection Performance (Quarterly)</h3>
                      <div className="h-64">
                        <ResponsiveContainer width="100%" height="100%">
                          <BarChart data={collectionData}>
@@ -324,7 +324,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   </div>
 
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                     <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Maintenance Resolution Velocity</h3>
+                     <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Maintenance Resolution Velocity</h3>
                      <div className="h-64">
                        <ResponsiveContainer width="100%" height="100%">
                          <AreaChart data={maintenanceData}>
@@ -344,21 +344,21 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                     <div className="p-4 border border-stone-200 rounded-xl bg-white flex items-center justify-between">
                       <div>
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Multi-Landlord Portfolio</span>
-                        <span className="text-xl font-bold text-[#18452E]">12 Active Owners</span>
+                        <span className="text-xl font-semibold text-[#18452E]">12 Active Owners</span>
                       </div>
                       <Users className="w-8 h-8 text-[#C9A84C]" />
                     </div>
                     <div className="p-4 border border-stone-200 rounded-xl bg-white flex items-center justify-between">
                       <div>
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Tenant Management</span>
-                        <span className="text-xl font-bold text-[#18452E]">84 Active Tenants</span>
+                        <span className="text-xl font-semibold text-[#18452E]">84 Active Tenants</span>
                       </div>
                       <Building className="w-8 h-8 text-[#C9A84C]" />
                     </div>
                     <div className="p-4 border border-stone-200 rounded-xl bg-white flex items-center justify-between">
                       <div>
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Report Generation</span>
-                        <span className="text-xl font-bold text-[#18452E]">Automated</span>
+                        <span className="text-xl font-semibold text-[#18452E]">Automated</span>
                       </div>
                       <FileText className="w-8 h-8 text-[#C9A84C]" />
                     </div>
@@ -370,13 +370,13 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             {activeTab === 'ShortletLandlord' && (
               <div className="space-y-8 animate-fade-in">
                 <div>
-                  <h2 className="text-2xl font-display font-black text-[#18452E]">Shortlet Owner Insights</h2>
+                  <h2 className="text-2xl font-display font-semibold text-[#18452E]">Shortlet Owner Insights</h2>
                   <p className="text-#6B7280 text-sm mt-1">Track high-yield shortlet performance, manager metrics, and asset protection.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                    <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Booking Revenue Trajectory</h3>
+                    <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Booking Revenue Trajectory</h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <ComposedChart data={bookingData}>
@@ -394,7 +394,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   </div>
 
                   <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                    <h3 className="font-display font-bold text-sm uppercase text-[#18452E] mb-4">Damage Cost Impact</h3>
+                    <h3 className="font-display font-semibold text-sm uppercase text-[#18452E] mb-4">Damage Cost Impact</h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={damageCostData}>
@@ -411,15 +411,15 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                   <div className="lg:col-span-2 flex flex-wrap gap-4">
                     <div className="flex-1 bg-white border border-stone-200 p-4 rounded-xl text-center">
                       <span className="block text-[10px] font-mono text-#6B7280 uppercase">Manager Performance</span>
-                      <span className="text-lg font-bold text-[#18452E]">98% Response Rate</span>
+                      <span className="text-lg font-semibold text-[#18452E]">98% Response Rate</span>
                     </div>
                     <div className="flex-1 bg-white border border-stone-200 p-4 rounded-xl text-center">
                       <span className="block text-[10px] font-mono text-#6B7280 uppercase">Remittance Tracking</span>
-                      <span className="text-lg font-bold text-[#18452E]">Automated Splits</span>
+                      <span className="text-lg font-semibold text-[#18452E]">Automated Splits</span>
                     </div>
                     <div className="flex-1 bg-white border border-stone-200 p-4 rounded-xl text-center">
                       <span className="block text-[10px] font-mono text-#6B7280 uppercase">Total Revenue</span>
-                      <span className="text-lg font-bold text-emerald-600">₦6.15m MTD</span>
+                      <span className="text-lg font-semibold text-emerald-600">₦6.15m MTD</span>
                     </div>
                   </div>
                 </div>
@@ -429,29 +429,29 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             {activeTab === 'ShortletManager' && (
               <div className="space-y-8 animate-fade-in">
                 <div>
-                  <h2 className="text-2xl font-display font-black text-[#18452E]">Manager Operations</h2>
+                  <h2 className="text-2xl font-display font-semibold text-[#18452E]">Manager Operations</h2>
                   <p className="text-#6B7280 text-sm mt-1">Streamline bookings, calc commissions, and handle incident reports efficiently.</p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="bg-white border border-stone-200 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
                     <Calendar className="w-10 h-10 text-[#18452E] mb-3" />
-                    <h3 className="font-bold text-[#18452E]">Booking Logging</h3>
+                    <h3 className="font-semibold text-[#18452E]">Booking Logging</h3>
                     <p className="text-[11px] text-#6B7280 mt-2">Log guest stays rapidly with auto-synced calendars.</p>
                   </div>
                   <div className="bg-white border border-stone-200 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
                     <DollarSign className="w-10 h-10 text-[#C9A84C] mb-3" />
-                    <h3 className="font-bold text-[#18452E]">Commission Calc</h3>
+                    <h3 className="font-semibold text-[#18452E]">Commission Calc</h3>
                     <p className="text-[11px] text-#6B7280 mt-2">Instant split calculations based on pre-agreed landlord percentages.</p>
                   </div>
                   <div className="bg-white border border-stone-200 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
                     <RefreshCw className="w-10 h-10 text-blue-500 mb-3" />
-                    <h3 className="font-bold text-[#18452E]">Remittance Flow</h3>
+                    <h3 className="font-semibold text-[#18452E]">Remittance Flow</h3>
                     <p className="text-[11px] text-#6B7280 mt-2">Send payout reports directly to landlord ledgers with one click.</p>
                   </div>
                   <div className="bg-white border border-stone-200 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
                     <AlertTriangle className="w-10 h-10 text-red-500 mb-3" />
-                    <h3 className="font-bold text-[#18452E]">Damage Reporting</h3>
+                    <h3 className="font-semibold text-[#18452E]">Damage Reporting</h3>
                     <p className="text-[11px] text-#6B7280 mt-2">Log incidents with photos for immediate landlord approval.</p>
                   </div>
                 </div>
@@ -461,7 +461,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             {activeTab === 'Admin' && (
               <div className="space-y-8 animate-fade-in">
                 <div>
-                  <h2 className="text-2xl font-display font-black text-[#18452E]">Global Admin Ledger</h2>
+                  <h2 className="text-2xl font-display font-semibold text-[#18452E]">Global Admin Ledger</h2>
                   <p className="text-#6B7280 text-sm mt-1">Total platform oversight, zero-trust dispute resolution, and transparency.</p>
                 </div>
                 

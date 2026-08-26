@@ -997,10 +997,10 @@ export default function ShortletDashboard({
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <div>
             <div className="flex items-center space-x-2">
-              <h1 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-tight">
+              <h1 className="font-display font-semibold text-lg sm:text-xl text-white uppercase tracking-tight">
                 Unity Shortlet Desk
               </h1>
-              <span className="bg-[#18452E] text-white text-[9px] font-mono font-bold px-2 py-0.5 rounded-full uppercase">
+              <span className="bg-[#18452E] text-white text-[9px] font-mono font-semibold px-2 py-0.5 rounded-full uppercase">
                 Live Portal
               </span>
             </div>
@@ -1035,7 +1035,7 @@ export default function ShortletDashboard({
       {/* RECENTLY VIEWED BAR (Addition One) */}
       {recentlyViewed.length > 0 && (
         <div className="bg-stone-50 border border-stone-200 rounded-2xl p-3 flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-[10px] font-mono font-bold text-#6B7280 uppercase flex items-center space-x-1 shrink-0">
+          <span className="text-[10px] font-mono font-semibold text-#6B7280 uppercase flex items-center space-x-1 shrink-0">
             <Clock className="w-3.5 h-3.5 text-[#18452E]" />
             <span>Recently Viewed:</span>
           </span>
@@ -1066,7 +1066,7 @@ export default function ShortletDashboard({
                 }}
                 className="px-2.5 py-1 bg-white hover:bg-stone-50 border border-stone-200 rounded-lg text-[10px] font-medium text-#132A1D hover:text-[#18452E] transition shadow-2xs flex items-center space-x-1.5 cursor-pointer"
               >
-                <span className="font-bold text-[#18452E]">{item.type.toUpperCase()}:</span>
+                <span className="font-semibold text-[#18452E]">{item.type.toUpperCase()}:</span>
                 <span className="truncate max-w-[110px]">{item.name}</span>
               </button>
             ))}
@@ -1081,7 +1081,7 @@ export default function ShortletDashboard({
           {/* AREA 1: HOME */}
           <button
             onClick={() => setActiveTab('Overview')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               activeTab === 'Overview'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1093,7 +1093,7 @@ export default function ShortletDashboard({
           {/* AREA 2: BOOKINGS & PROPERTIES */}
           <button
             onClick={() => setActiveTab('LogBooking')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['LogBooking', 'History'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1105,7 +1105,7 @@ export default function ShortletDashboard({
           {/* AREA 3: MONEY */}
           <button
             onClick={() => setActiveTab('LogRemittance')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['LogRemittance', 'EarningsPortfolio'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1117,7 +1117,7 @@ export default function ShortletDashboard({
           {/* AREA 4: OPERATIONS */}
           <button
             onClick={() => setActiveTab('DamageReport')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               activeTab === 'DamageReport'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1129,7 +1129,7 @@ export default function ShortletDashboard({
           {/* AREA 5: MORE */}
           <button
             onClick={() => setActiveTab('Profile')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
               activeTab === 'Profile'
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -1142,7 +1142,7 @@ export default function ShortletDashboard({
         {/* DYNAMIC SECONDARY SUB-NAVIGATION PILLS FOR ACTIVE AREA */}
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
           {activeTab === 'Overview' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Overview &amp; Desk Performance
             </button>
           )}
@@ -1151,7 +1151,7 @@ export default function ShortletDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('LogBooking')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'LogBooking' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1159,7 +1159,7 @@ export default function ShortletDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('History')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'History' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1172,7 +1172,7 @@ export default function ShortletDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('LogRemittance')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'LogRemittance' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1180,7 +1180,7 @@ export default function ShortletDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('EarningsPortfolio')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'EarningsPortfolio' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1190,7 +1190,7 @@ export default function ShortletDashboard({
           )}
 
           {activeTab === 'DamageReport' && (
-            <button className="px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl bg-[#18452E] text-white cursor-pointer">
+            <button className="px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl bg-[#18452E] text-white cursor-pointer">
               &bull; Report Property Damage ({damageReports.length})
             </button>
           )}
@@ -1199,7 +1199,7 @@ export default function ShortletDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Profile')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Profile' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1207,7 +1207,7 @@ export default function ShortletDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Support')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Support' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -1235,28 +1235,28 @@ export default function ShortletDashboard({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             
             <div className="spatial-glass border p-5 rounded-2xl space-y-1 bg-white">
-              <span className="text-[10px] text-stone-400 block font-mono font-bold uppercase">TOTAL BOOKINGS REVENUE</span>
-              <span className="text-2xl font-black text-[#18452E] block">₦{totalCollected.toLocaleString()}</span>
+              <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase">TOTAL BOOKINGS REVENUE</span>
+              <span className="text-2xl font-semibold text-[#18452E] block">₦{totalCollected.toLocaleString()}</span>
               <span className="text-[10px] text-#6B7280 block">Unified checks inside shortlet booking log.</span>
             </div>
 
             <div className="spatial-glass border p-5 rounded-2xl space-y-1 bg-emerald-50/30 border-emerald-100">
-              <span className="text-[10px] text-emerald-800 block font-mono font-bold uppercase">REMITTED TO LANDLORDS</span>
-              <span className="text-2xl font-black text-emerald-950 block">₦{totalRemitted.toLocaleString()}</span>
+              <span className="text-[10px] text-emerald-800 block font-mono font-semibold uppercase">REMITTED TO LANDLORDS</span>
+              <span className="text-2xl font-semibold text-emerald-950 block">₦{totalRemitted.toLocaleString()}</span>
               {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
               <span className="text-[10px] text-emerald-700 block font-medium">Remitted to Landlords</span>
             </div>
 
             <div className="spatial-glass border p-5 rounded-2xl space-y-1 bg-white">
-              <span className="text-[10px] text-[#C9A84C] block font-mono font-bold uppercase">MY EARNED COMMISSIONS</span>
-              <span className="text-2xl font-black text-[#C9A84C] block">₦{totalFees.toLocaleString()}</span>
+              <span className="text-[10px] text-[#C9A84C] block font-mono font-semibold uppercase">MY EARNED COMMISSIONS</span>
+              <span className="text-2xl font-semibold text-[#C9A84C] block">₦{totalFees.toLocaleString()}</span>
               <span className="text-[10px] text-stone-400 block">Commissions logged per agreed manager fees.</span>
             </div>
 
             <div className={`spatial-glass border p-5 rounded-2xl space-y-1 ${outstandingRemittances > 0 ? 'bg-rose-50/50 border-rose-200' : 'bg-emerald-50/50 border-emerald-200'}`}>
-              <span className={`text-[10px] block font-mono font-bold uppercase ${outstandingRemittances > 0 ? 'text-rose-800' : 'text-emerald-800'}`}>OUTSTANDING REMITTANCES</span>
-              <span className={`text-2xl font-black block ${outstandingRemittances > 0 ? 'text-rose-600' : 'text-emerald-600'}`}>₦{outstandingRemittances.toLocaleString()}</span>
-              <span className={`text-[10px] block font-medium ${outstandingRemittances > 0 ? 'text-rose-700 font-bold' : 'text-emerald-700'}`}>
+              <span className={`text-[10px] block font-mono font-semibold uppercase ${outstandingRemittances > 0 ? 'text-rose-800' : 'text-emerald-800'}`}>OUTSTANDING REMITTANCES</span>
+              <span className={`text-2xl font-semibold block ${outstandingRemittances > 0 ? 'text-rose-600' : 'text-emerald-600'}`}>₦{outstandingRemittances.toLocaleString()}</span>
+              <span className={`text-[10px] block font-medium ${outstandingRemittances > 0 ? 'text-rose-700 font-semibold' : 'text-emerald-700'}`}>
                 {outstandingRemittances > 0 ? 'Amount Not Yet Remitted to Landlords' : 'Fully Remitted'}
               </span>
             </div>
@@ -1266,15 +1266,15 @@ export default function ShortletDashboard({
           {/* 5TH LINE: REVENUE ACCOUNTING VERIFICATION */}
           <div className={`p-4 rounded-2xl border text-xs flex flex-wrap items-center justify-between gap-2 ${totalAccountedFor === totalCollected ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-rose-50 border-rose-300 text-rose-900'}`}>
             <div className="flex items-center space-x-2">
-              <span className="font-mono font-bold uppercase">Total Accounted For:</span>
-              <span className="font-display font-black text-sm">₦{totalAccountedFor.toLocaleString()}</span>
+              <span className="font-mono font-semibold uppercase">Total Accounted For:</span>
+              <span className="font-display font-semibold text-sm">₦{totalAccountedFor.toLocaleString()}</span>
             </div>
             {totalAccountedFor === totalCollected ? (
               <span className="text-[11px] text-emerald-800 font-medium">
                 ✓ 100% Reconciled (₦{totalRemitted.toLocaleString()} Remitted + ₦{totalFees.toLocaleString()} Commission + ₦{outstandingRemittances.toLocaleString()} Outstanding = ₦{totalCollected.toLocaleString()} Total)
               </span>
             ) : (
-              <span className="text-[11px] text-rose-800 font-bold bg-rose-100 px-2 py-1 rounded">
+              <span className="text-[11px] text-rose-800 font-semibold bg-rose-100 px-2 py-1 rounded">
                 ⚠ Calculation Discrepancy Detected, contact Unity Homes admin
               </span>
             )}
@@ -1285,11 +1285,11 @@ export default function ShortletDashboard({
       {/* TAB 2: LOG BOOKING FORM */}
       {activeTab === 'LogBooking' && (
         <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4 max-w-xl mx-auto">
-          <h3 className="font-display font-black text-sm text-[#18452E] uppercase border-b pb-2">Log a Shortlet Booking</h3>
+          <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase border-b pb-2">Log a Shortlet Booking</h3>
           
           <form onSubmit={handleBookingSubmit} className="space-y-4">
             <div>
-              <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">TARGET SHORTLET PORTFOLIO</label>
+              <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">TARGET SHORTLET PORTFOLIO</label>
               <select 
                 value={bookingForm.propertyName}
                 onChange={(e) => setBookingForm(prev => ({ ...prev, propertyName: e.target.value }))}
@@ -1303,7 +1303,7 @@ export default function ShortletDashboard({
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">UNIT IDENTIFIER</label>
+                <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">UNIT IDENTIFIER</label>
                 <input 
                   type="text" 
                   required
@@ -1313,7 +1313,7 @@ export default function ShortletDashboard({
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">GUEST FULL NAME</label>
+                <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">GUEST FULL NAME</label>
                 <input 
                   type="text" 
                   required
@@ -1327,7 +1327,7 @@ export default function ShortletDashboard({
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">BOOKING SOURCE</label>
+                <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">BOOKING SOURCE</label>
                 <select 
                   required
                   value={bookingForm.bookingSource}
@@ -1343,7 +1343,7 @@ export default function ShortletDashboard({
                 </select>
               </div>
               <div>
-                <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">NUMBER OF NIGHTS</label>
+                <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">NUMBER OF NIGHTS</label>
                 <input 
                   type="number" 
                   required
@@ -1355,7 +1355,7 @@ export default function ShortletDashboard({
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">NIGHTLY RATE (NGN)</label>
+              <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">NIGHTLY RATE (NGN)</label>
               <input 
                 type="number" 
                 required
@@ -1367,19 +1367,19 @@ export default function ShortletDashboard({
 
             <div className="p-4 bg-amber-50/50 border border-amber-200/80 rounded-2xl space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-bold text-amber-950 uppercase font-mono">Collect Caution Deposit?</label>
+                <label className="text-xs font-semibold text-amber-950 uppercase font-mono">Collect Caution Deposit?</label>
                 <div className="flex gap-2">
                   <button
                     type="button"
                     onClick={() => setBookingForm(prev => ({ ...prev, cautionDepositCollected: true }))}
-                    className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase font-mono cursor-pointer ${bookingForm.cautionDepositCollected ? 'bg-amber-800 text-white' : 'bg-white border border-amber-300 text-amber-900'}`}
+                    className={`px-3 py-1 rounded-lg text-[10px] font-semibold uppercase font-mono cursor-pointer ${bookingForm.cautionDepositCollected ? 'bg-amber-800 text-white' : 'bg-white border border-amber-300 text-amber-900'}`}
                   >
                     Yes
                   </button>
                   <button
                     type="button"
                     onClick={() => setBookingForm(prev => ({ ...prev, cautionDepositCollected: false }))}
-                    className={`px-3 py-1 rounded-lg text-[10px] font-bold uppercase font-mono cursor-pointer ${!bookingForm.cautionDepositCollected ? 'bg-amber-800 text-white' : 'bg-white border border-amber-300 text-amber-900'}`}
+                    className={`px-3 py-1 rounded-lg text-[10px] font-semibold uppercase font-mono cursor-pointer ${!bookingForm.cautionDepositCollected ? 'bg-amber-800 text-white' : 'bg-white border border-amber-300 text-amber-900'}`}
                   >
                     No
                   </button>
@@ -1388,7 +1388,7 @@ export default function ShortletDashboard({
 
               {bookingForm.cautionDepositCollected && (
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-amber-900 uppercase mb-1">Caution Deposit Amount (NGN)</label>
+                  <label className="block text-[9px] font-mono font-semibold text-amber-900 uppercase mb-1">Caution Deposit Amount (NGN)</label>
                   <input 
                     type="number"
                     value={bookingForm.cautionDepositAmount}
@@ -1403,7 +1403,7 @@ export default function ShortletDashboard({
               </p>
             </div>
 
-            <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-xl cursor-pointer transition">
+            <button type="submit" className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-xl cursor-pointer transition">
               Register Confirmed Check-In Log
             </button>
           </form>
@@ -1413,11 +1413,11 @@ export default function ShortletDashboard({
       {/* TAB 3: LOG REMITTANCE */}
       {activeTab === 'LogRemittance' && (
         <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-6 max-w-xl mx-auto shadow-sm">
-          <h3 className="font-display font-black text-sm text-[#18452E] uppercase border-b pb-2">Record Landlord Remittance</h3>
+          <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase border-b pb-2">Record Landlord Remittance</h3>
           
           <div className="space-y-5">
             <div>
-              <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">SELECT CORRESPONDING BOOKING</label>
+              <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">SELECT CORRESPONDING BOOKING</label>
               <select 
                 value={remitForm.bookingId}
                 onChange={(e) => {
@@ -1444,7 +1444,7 @@ export default function ShortletDashboard({
                   <div className="p-3.5 bg-amber-50 border border-amber-300 rounded-2xl flex items-start space-x-2.5 text-xs text-amber-900">
                     <AlertTriangle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
                     <div>
-                      <strong className="block font-bold">Recent Account Update</strong>
+                      <strong className="block font-semibold">Recent Account Update</strong>
                       <span className="text-[11px] block mt-0.5 text-amber-800">
                         This account was updated on {(selectedRemitAgreement as any)?.updatedDate || '2026-07-16'} and approved by Admin. Please verify this is correct before remitting.
                       </span>
@@ -1456,14 +1456,14 @@ export default function ShortletDashboard({
                 <div className="p-4 bg-emerald-900 text-white rounded-2xl border border-emerald-800 space-y-3 relative overflow-hidden shadow-md">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-bold text-emerald-100 text-sm font-display">
+                      <h4 className="font-semibold text-emerald-100 text-sm font-display">
                         {selectedRemitAgreement?.landlordName || (selectedRemitBooking as any)?.landlordName || 'Chief Emeka Obiora'}
                       </h4>
                       <p className="text-[11px] text-emerald-300/80 font-mono mt-0.5">
                         {selectedRemitBooking.propertyName}
                       </p>
                     </div>
-                    <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-emerald-800 text-emerald-200 text-[9px] font-mono font-bold uppercase border border-emerald-700">
+                    <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-emerald-800 text-emerald-200 text-[9px] font-mono font-semibold uppercase border border-emerald-700">
                       <span>✓ Verified by Unity Homes</span>
                     </span>
                   </div>
@@ -1478,12 +1478,12 @@ export default function ShortletDashboard({
 
                     <div>
                       <span className="text-[9px] text-emerald-400 font-mono uppercase block">BANK NAME</span>
-                      <span className="font-bold text-emerald-100 block">{(selectedRemitAgreement as any)?.bankName || 'FCMB'}</span>
+                      <span className="font-semibold text-emerald-100 block">{(selectedRemitAgreement as any)?.bankName || 'FCMB'}</span>
                     </div>
 
                     <div>
                       <span className="text-[9px] text-emerald-400 font-mono uppercase block">ACCOUNT NUMBER</span>
-                      <span className="font-mono font-bold text-emerald-100 block">
+                      <span className="font-mono font-semibold text-emerald-100 block">
                         ****{((selectedRemitAgreement as any)?.accountNumber || '0123456789').slice(-4)}
                       </span>
                     </div>
@@ -1504,29 +1504,29 @@ export default function ShortletDashboard({
                 <form onSubmit={handleCustomRemitSubmit} className="space-y-4 pt-2">
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">GROSS BOOKING AMOUNT</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">GROSS BOOKING AMOUNT</label>
                       <input 
                         type="text" 
                         readOnly
                         value={`₦${selectedRemitBooking.totalPaid.toLocaleString()}`}
-                        className="w-full p-2.5 bg-stone-50 border border-stone-200 text-#132A1D font-mono font-bold rounded-xl text-xs outline-none cursor-not-allowed"
+                        className="w-full p-2.5 bg-stone-50 border border-stone-200 text-#132A1D font-mono font-semibold rounded-xl text-xs outline-none cursor-not-allowed"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">MANAGER FEE ({remitFeePercent}%)</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">MANAGER FEE ({remitFeePercent}%)</label>
                       <input 
                         type="text" 
                         readOnly
                         value={`₦${remitManagerFee.toLocaleString()} (${remitFeePercent}%)`}
-                        className="w-full p-2.5 bg-stone-50 border border-stone-200 text-emerald-900 font-mono font-bold rounded-xl text-xs outline-none cursor-not-allowed"
+                        className="w-full p-2.5 bg-stone-50 border border-stone-200 text-emerald-900 font-mono font-semibold rounded-xl text-xs outline-none cursor-not-allowed"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">APPROVED EXPENSES (OPTIONAL)</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">APPROVED EXPENSES (OPTIONAL)</label>
                       <input 
                         type="number" 
                         placeholder="e.g. 5000"
@@ -1537,18 +1537,18 @@ export default function ShortletDashboard({
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">AMOUNT TO REMIT</label>
+                      <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">AMOUNT TO REMIT</label>
                       <input 
                         type="text" 
                         readOnly
                         value={`₦${remitNetAmount.toLocaleString()}`}
-                        className="w-full p-2.5 bg-emerald-50 border border-emerald-300 text-emerald-900 font-mono font-black rounded-xl text-sm outline-none cursor-not-allowed"
+                        className="w-full p-2.5 bg-emerald-50 border border-emerald-300 text-emerald-900 font-mono font-semibold rounded-xl text-sm outline-none cursor-not-allowed"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">TRANSFER REFERENCE (REQUIRED)</label>
+                    <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">TRANSFER REFERENCE (REQUIRED)</label>
                     <input 
                       type="text" 
                       required
@@ -1576,7 +1576,7 @@ export default function ShortletDashboard({
                   <button 
                     type="submit" 
                     disabled={!remitConfirmChecked || remitTransferRef.trim().length < 6}
-                    className={`w-full py-3.5 font-bold rounded-xl text-xs transition shadow-xs ${
+                    className={`w-full py-3.5 font-semibold rounded-xl text-xs transition shadow-xs ${
                       remitConfirmChecked && remitTransferRef.trim().length >= 6
                         ? 'bg-[#18452E] hover:bg-[#18452E] text-white cursor-pointer'
                         : 'bg-stone-200 text-stone-400 cursor-not-allowed'
@@ -1595,7 +1595,7 @@ export default function ShortletDashboard({
       {bookingConfirmData && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 shadow-sm relative border border-stone-200 animate-fade-in text-#132A1D">
-            <h4 className="font-display font-black text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
+            <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
               Confirm Booking Parameters
             </h4>
             
@@ -1606,9 +1606,9 @@ export default function ShortletDashboard({
               </div>
               <div className="flex justify-between py-1.5 border-b border-stone-200 items-center">
                 <span className="text-stone-400">Landlord:</span>
-                <span className="flex items-center space-x-1 font-bold text-#132A1D">
+                <span className="flex items-center space-x-1 font-semibold text-#132A1D">
                   <span>{bookingConfirmData.landlordName}</span>
-                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] font-bold">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] font-semibold">
                     ✓ Verified Partner
                   </span>
                 </span>
@@ -1623,19 +1623,19 @@ export default function ShortletDashboard({
               </div>
               <div className="flex justify-between py-1.5 border-b border-stone-200">
                 <span className="text-stone-400">Gross Revenue:</span>
-                <strong className="text-#132A1D font-bold">₦{bookingConfirmData.totalPaid.toLocaleString()}</strong>
+                <strong className="text-#132A1D font-semibold">₦{bookingConfirmData.totalPaid.toLocaleString()}</strong>
               </div>
               <div className="flex justify-between py-1.5 border-b border-stone-200 text-amber-700 font-medium">
                 <span>Management Fee ({bookingConfirmData.feePercent}%):</span>
                 <span>₦{bookingConfirmData.feeAmount.toLocaleString()}</span>
               </div>
-              <div className="flex justify-between py-1.5 border-b border-stone-200 text-[#18452E] font-black bg-emerald-50/30 px-2 rounded-lg">
+              <div className="flex justify-between py-1.5 border-b border-stone-200 text-[#18452E] font-semibold bg-emerald-50/30 px-2 rounded-lg">
                 <span>Net Landlord Share:</span>
                 <span>₦{bookingConfirmData.remittedAmount.toLocaleString()}</span>
               </div>
               <div className="flex justify-between py-1.5">
                 <span className="text-stone-400">Booking Source:</span>
-                <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 rounded font-mono text-[9px] uppercase font-bold">{bookingConfirmData.bookingSource}</span>
+                <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 rounded font-mono text-[9px] uppercase font-semibold">{bookingConfirmData.bookingSource}</span>
               </div>
             </div>
 
@@ -1656,7 +1656,7 @@ export default function ShortletDashboard({
               <button 
                 type="button" 
                 onClick={() => setBookingConfirmData(null)}
-                className="py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs transition cursor-pointer"
+                className="py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs transition cursor-pointer"
               >
                 Cancel and Go Back
               </button>
@@ -1664,7 +1664,7 @@ export default function ShortletDashboard({
                 type="button" 
                 disabled={!bookingChecked}
                 onClick={handleConfirmBooking}
-                className={`py-2.5 text-white font-bold rounded-xl text-xs transition cursor-pointer ${
+                className={`py-2.5 text-white font-semibold rounded-xl text-xs transition cursor-pointer ${
                   bookingChecked 
                     ? 'bg-[#18452E] hover:bg-[#18452E] shadow-md' 
                     : 'bg-stone-300 text-stone-400 cursor-not-allowed'
@@ -1681,16 +1681,16 @@ export default function ShortletDashboard({
       {remitConfirmData && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 shadow-sm relative border border-stone-200 animate-fade-in text-#132A1D">
-            <h4 className="font-display font-black text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
+            <h4 className="font-display font-semibold text-sm text-[#18452E] uppercase mb-4 tracking-tight border-b pb-2">
               Verify Remittance & Bank Logs
             </h4>
             
             <div className="space-y-2.5 mb-5 text-xs">
               <div className="flex justify-between py-1 border-b border-stone-200">
                 <span className="text-stone-400">Landlord Name:</span>
-                <span className="flex items-center space-x-1 font-bold text-#132A1D">
+                <span className="flex items-center space-x-1 font-semibold text-#132A1D">
                   <span>{remitConfirmData.landlordName}</span>
-                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] font-bold">
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] font-semibold">
                     ✓ Verified Partner
                   </span>
                 </span>
@@ -1721,11 +1721,11 @@ export default function ShortletDashboard({
                 <span className="text-stone-400">Management Fee:</span>
                 <strong className="text-amber-800">₦{remitConfirmData.managementFee.toLocaleString()}</strong>
               </div>
-              <div className="flex justify-between py-1 border-b border-stone-200 font-bold text-#132A1D">
+              <div className="flex justify-between py-1 border-b border-stone-200 font-semibold text-#132A1D">
                 <span>Agreement Net Share:</span>
                 <span>₦{remitConfirmData.landlordShare.toLocaleString()}</span>
               </div>
-              <div className="flex justify-between py-1.5 border-b border-stone-200 text-[#18452E] font-black bg-emerald-50 px-2 rounded-lg">
+              <div className="flex justify-between py-1.5 border-b border-stone-200 text-[#18452E] font-semibold bg-emerald-50 px-2 rounded-lg">
                 <span>Recorded Payout Amount:</span>
                 <span>₦{remitConfirmData.amountRemitted.toLocaleString()}</span>
               </div>
@@ -1743,7 +1743,7 @@ export default function ShortletDashboard({
 
             <div className="space-y-3 mb-5">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">
                   TRANSFER TRANSACTION REFERENCE (MIN 8 CHARS)
                 </label>
                 <input 
@@ -1774,7 +1774,7 @@ export default function ShortletDashboard({
               <button 
                 type="button" 
                 onClick={() => setRemitConfirmData(null)}
-                className="py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs transition cursor-pointer"
+                className="py-2.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs transition cursor-pointer"
               >
                 Cancel and Go Back
               </button>
@@ -1782,7 +1782,7 @@ export default function ShortletDashboard({
                 type="button" 
                 disabled={!remitChecked || transferRefInput.trim().length < 8}
                 onClick={handleConfirmRemittance}
-                className={`py-2.5 text-white font-bold rounded-xl text-xs transition cursor-pointer ${
+                className={`py-2.5 text-white font-semibold rounded-xl text-xs transition cursor-pointer ${
                   remitChecked && transferRefInput.trim().length >= 8
                     ? 'bg-[#18452E] hover:bg-[#18452E] shadow-md' 
                     : 'bg-stone-300 text-stone-400 cursor-not-allowed'
@@ -1800,7 +1800,7 @@ export default function ShortletDashboard({
         <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-4">
             <div>
-              <h3 className="font-display font-black text-base text-[#18452E] uppercase">
+              <h3 className="font-display font-semibold text-base text-[#18452E] uppercase">
                 Portfolio Statements &amp; Audit Log
               </h3>
               <p className="text-#6B7280 text-xs mt-0.5">
@@ -1812,7 +1812,7 @@ export default function ShortletDashboard({
             <div className="flex bg-stone-50 p-1 rounded-xl shrink-0 self-start sm:self-auto">
               <button
                 onClick={() => setHistorySubTab('bookings')}
-                className={`px-3.5 py-1.5 text-xs font-bold rounded-lg transition ${
+                className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition ${
                   historySubTab === 'bookings' ? 'bg-white text-[#18452E] shadow-xs' : 'text-#6B7280 hover:text-#132A1D'
                 }`}
               >
@@ -1820,7 +1820,7 @@ export default function ShortletDashboard({
               </button>
               <button
                 onClick={() => setHistorySubTab('remittances')}
-                className={`px-3.5 py-1.5 text-xs font-bold rounded-lg transition ${
+                className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition ${
                   historySubTab === 'remittances' ? 'bg-white text-[#18452E] shadow-xs' : 'text-#6B7280 hover:text-#132A1D'
                 }`}
               >
@@ -1837,7 +1837,7 @@ export default function ShortletDashboard({
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center space-x-2">
                     <Bookmark className="w-4 h-4 text-[#18452E]" />
-                    <span className="font-bold text-xs text-#132A1D uppercase tracking-wider">Saved Filters:</span>
+                    <span className="font-semibold text-xs text-#132A1D uppercase tracking-wider">Saved Filters:</span>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2">
@@ -1860,7 +1860,7 @@ export default function ShortletDashboard({
 
                     <button
                       onClick={() => setShowSaveBookingFilterName(!showSaveBookingFilterName)}
-                      className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-lg flex items-center space-x-1 cursor-pointer transition"
+                      className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-lg flex items-center space-x-1 cursor-pointer transition"
                     >
                       <Plus className="w-3 h-3" />
                       <span>Save Current Filter</span>
@@ -1884,7 +1884,7 @@ export default function ShortletDashboard({
                         setBookingFilterNameInput('');
                         setShowSaveBookingFilterName(false);
                       }}
-                      className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg cursor-pointer"
+                      className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold rounded-lg cursor-pointer"
                     >
                       Save Preset
                     </button>
@@ -1958,20 +1958,20 @@ export default function ShortletDashboard({
                 return (
                   <div className="space-y-4">
                     <div className="flex justify-between items-center bg-emerald-50/50 p-3 rounded-2xl border border-emerald-200">
-                      <span className="text-xs font-bold text-emerald-950">
+                      <span className="text-xs font-semibold text-emerald-950">
                         Showing {filteredBookings.length} filtered booking records
                       </span>
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handlePdfExport(`Booking Log Extract (${bookingFilters.source} - ${bookingFilters.property})`, filteredBookings, columns, activeProps)}
-                          className="px-3 py-1.5 bg-[#18452E] hover:bg-black text-white text-xs font-bold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
+                          className="px-3 py-1.5 bg-[#18452E] hover:bg-black text-white text-xs font-semibold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
                         >
                           <FileText className="w-3.5 h-3.5" />
                           <span>Export PDF</span>
                         </button>
                         <button
                           onClick={() => handleExcelExport(`Booking_Log_${bookingFilters.source}`, filteredBookings, columns, activeProps)}
-                          className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
+                          className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
                         >
                           <FileSpreadsheet className="w-3.5 h-3.5" />
                           <span>Export Excel</span>
@@ -1996,17 +1996,17 @@ export default function ShortletDashboard({
                             >
                               <div>
                                 <div className="flex flex-wrap items-center gap-2">
-                                  <span className="font-bold text-[#18452E] text-sm">{b.propertyName}</span>
-                                  <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 rounded text-[9px] font-mono uppercase font-bold">
+                                  <span className="font-semibold text-[#18452E] text-sm">{b.propertyName}</span>
+                                  <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 rounded text-[9px] font-mono uppercase font-semibold">
                                     {b.bookingSource || 'Direct'}
                                   </span>
                                   {hasDeposit && (
-                                    <span className="px-2 py-0.5 bg-amber-100 text-amber-900 border border-amber-300 rounded text-[9px] font-mono font-bold">
+                                    <span className="px-2 py-0.5 bg-amber-100 text-amber-900 border border-amber-300 rounded text-[9px] font-mono font-semibold">
                                       🛡️ Deposit: ₦{(b.caution_deposit_amount || 25000).toLocaleString()}
                                     </span>
                                   )}
                                   {hasDeposit && existingRes && (
-                                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded text-[9px] font-mono font-bold">
+                                    <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded text-[9px] font-mono font-semibold">
                                       ✓ Deposit Resolved ({existingRes.depositDecision})
                                     </span>
                                   )}
@@ -2017,9 +2017,9 @@ export default function ShortletDashboard({
                               </div>
 
                               <div className="flex flex-col sm:items-end gap-1 text-left sm:text-right">
-                                <span className="font-black text-sm text-[#18452E] block">₦{b.totalPaid.toLocaleString()}</span>
+                                <span className="font-semibold text-sm text-[#18452E] block">₦{b.totalPaid.toLocaleString()}</span>
                                 <div className="flex items-center gap-2">
-                                  <span className={`text-[9px] uppercase font-mono font-bold px-2 py-0.5 rounded ${
+                                  <span className={`text-[9px] uppercase font-mono font-semibold px-2 py-0.5 rounded ${
                                     b.remittanceFormSent ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'
                                   }`}>
                                     {b.remittanceFormSent ? 'Remitted' : 'Pending Remittance'}
@@ -2031,7 +2031,7 @@ export default function ShortletDashboard({
                                         e.stopPropagation();
                                         setResolutionModalBooking(b);
                                       }}
-                                      className="px-2.5 py-1 bg-amber-800 hover:bg-amber-900 text-white rounded-lg text-[9px] font-bold uppercase font-mono tracking-wider cursor-pointer"
+                                      className="px-2.5 py-1 bg-amber-800 hover:bg-amber-900 text-white rounded-lg text-[9px] font-semibold uppercase font-mono tracking-wider cursor-pointer"
                                     >
                                       Checkout &amp; Deposit Resolution
                                     </button>
@@ -2057,7 +2057,7 @@ export default function ShortletDashboard({
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center space-x-2">
                     <Bookmark className="w-4 h-4 text-[#18452E]" />
-                    <span className="font-bold text-xs text-#132A1D uppercase tracking-wider">Saved Remittance Filters:</span>
+                    <span className="font-semibold text-xs text-#132A1D uppercase tracking-wider">Saved Remittance Filters:</span>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2">
@@ -2080,7 +2080,7 @@ export default function ShortletDashboard({
 
                     <button
                       onClick={() => setShowSaveRemitFilterName(!showSaveRemitFilterName)}
-                      className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-lg flex items-center space-x-1 cursor-pointer transition"
+                      className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-lg flex items-center space-x-1 cursor-pointer transition"
                     >
                       <Plus className="w-3 h-3" />
                       <span>Save Preset</span>
@@ -2104,7 +2104,7 @@ export default function ShortletDashboard({
                         setRemitFilterNameInput('');
                         setShowSaveRemitFilterName(false);
                       }}
-                      className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg cursor-pointer"
+                      className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold rounded-lg cursor-pointer"
                     >
                       Save Filter
                     </button>
@@ -2165,20 +2165,20 @@ export default function ShortletDashboard({
                 return (
                   <div className="space-y-4">
                     <div className="flex justify-between items-center bg-emerald-50/50 p-3 rounded-2xl border border-emerald-200">
-                      <span className="text-xs font-bold text-emerald-950">
+                      <span className="text-xs font-semibold text-emerald-950">
                         Showing {filteredRemittances.length} remittance records
                       </span>
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => handlePdfExport(`Remittance Statement (${remittanceFilters.status} - ${remittanceFilters.property})`, filteredRemittances, columns, activeProps)}
-                          className="px-3 py-1.5 bg-[#18452E] hover:bg-black text-white text-xs font-bold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
+                          className="px-3 py-1.5 bg-[#18452E] hover:bg-black text-white text-xs font-semibold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
                         >
                           <FileText className="w-3.5 h-3.5" />
                           <span>Export PDF</span>
                         </button>
                         <button
                           onClick={() => handleExcelExport(`Remittances_${remittanceFilters.status}`, filteredRemittances, columns, activeProps)}
-                          className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
+                          className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold rounded-xl flex items-center space-x-1 cursor-pointer transition shadow-xs"
                         >
                           <FileSpreadsheet className="w-3.5 h-3.5" />
                           <span>Export Excel</span>
@@ -2198,7 +2198,7 @@ export default function ShortletDashboard({
                             className="p-4 bg-white border border-stone-200 rounded-2xl hover:border-[#18452E] hover:shadow-md transition cursor-pointer flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
                           >
                             <div>
-                              <p className="font-bold text-[#18452E] text-sm">{b.propertyName}</p>
+                              <p className="font-semibold text-[#18452E] text-sm">{b.propertyName}</p>
                               <p className="text-#6B7280 text-xs mt-0.5">
                                 Guest: {b.guestName} &bull; Check-in: {b.checkInDate}
                               </p>
@@ -2207,15 +2207,15 @@ export default function ShortletDashboard({
                             <div className="text-left sm:text-right">
                               {b.remittanceFormSent ? (
                                 <div>
-                                  <span className="font-black text-sm text-emerald-800 block">₦{b.remittanceAmount.toLocaleString()}</span>
-                                  <span className="text-[9px] uppercase font-mono font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">
+                                  <span className="font-semibold text-sm text-emerald-800 block">₦{b.remittanceAmount.toLocaleString()}</span>
+                                  <span className="text-[9px] uppercase font-mono font-semibold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">
                                     Disbursed Payout
                                   </span>
                                 </div>
                               ) : (
                                 <div>
-                                  <span className="font-black text-sm text-amber-800 block">₦{b.remittanceAmount.toLocaleString()}</span>
-                                  <span className="text-[9px] uppercase font-mono font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">
+                                  <span className="font-semibold text-sm text-amber-800 block">₦{b.remittanceAmount.toLocaleString()}</span>
+                                  <span className="text-[9px] uppercase font-mono font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">
                                     Awaiting Disbursal
                                   </span>
                                 </div>
@@ -2240,14 +2240,14 @@ export default function ShortletDashboard({
             
             {/* SUBMIT REPORT FORM */}
             <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4">
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center gap-2">
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-amber-600" />
                 Report Property Damage
               </h3>
               
               <form onSubmit={handleDamageSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Booking Reference</label>
+                  <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Booking Reference</label>
                   <select 
                     required
                     value={damageForm.bookingId}
@@ -2265,7 +2265,7 @@ export default function ShortletDashboard({
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Damage Category</label>
+                    <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Damage Category</label>
                     <select 
                       value={damageForm.damageCategory}
                       onChange={(e) => setDamageForm(prev => ({ ...prev, damageCategory: e.target.value }))}
@@ -2287,7 +2287,7 @@ export default function ShortletDashboard({
                     </select>
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Urgency Level</label>
+                    <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Urgency Level</label>
                     <select 
                       value={damageForm.urgencyLevel}
                       onChange={(e) => setDamageForm(prev => ({ ...prev, urgencyLevel: e.target.value }))}
@@ -2302,7 +2302,7 @@ export default function ShortletDashboard({
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Date Discovered</label>
+                  <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Date Discovered</label>
                   <input 
                     type="date"
                     required
@@ -2313,7 +2313,7 @@ export default function ShortletDashboard({
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Description of Damage</label>
+                  <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Description of Damage</label>
                   <textarea 
                     required
                     placeholder="Describe exactly what is broken or missing..."
@@ -2324,7 +2324,7 @@ export default function ShortletDashboard({
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Estimated Repair Cost (₦)</label>
+                  <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Estimated Repair Cost (₦)</label>
                   <input 
                     type="number"
                     required
@@ -2337,7 +2337,7 @@ export default function ShortletDashboard({
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Root Cause</label>
+                    <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Root Cause</label>
                     <input 
                       type="text"
                       placeholder="e.g. Guest negligence"
@@ -2347,7 +2347,7 @@ export default function ShortletDashboard({
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono font-bold text-stone-400 uppercase mb-1">Assigned Vendor (Optional)</label>
+                    <label className="block text-[10px] font-mono font-semibold text-stone-400 uppercase mb-1">Assigned Vendor (Optional)</label>
                     <input 
                       type="text"
                       placeholder="e.g. Tola Plumbing"
@@ -2359,10 +2359,10 @@ export default function ShortletDashboard({
                 </div>
 
                 <div className="border border-dashed border-stone-300 rounded-xl p-6 text-center bg-stone-50 cursor-pointer hover:bg-stone-50 transition-colors">
-                  <span className="block text-#6B7280 font-bold mb-1">Click to Upload Evidence</span>
+                  <span className="block text-#6B7280 font-semibold mb-1">Click to Upload Evidence</span>
                   <span className="block text-[10px] text-stone-400">Photos, Videos, Invoices, Quotes, Voice Notes</span>
                   {damageForm.evidenceCount > 0 && (
-                    <div className="mt-3 inline-flex bg-emerald-100 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <div className="mt-3 inline-flex bg-emerald-100 text-emerald-800 text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                       {damageForm.evidenceCount} Files Attached
                     </div>
                   )}
@@ -2376,7 +2376,7 @@ export default function ShortletDashboard({
                   </p>
                 </div>
 
-                <button type="submit" className="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl cursor-pointer">
+                <button type="submit" className="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl cursor-pointer">
                   Submit Damage Report
                 </button>
               </form>
@@ -2384,7 +2384,7 @@ export default function ShortletDashboard({
 
             {/* MANAGER REPAIR STATUS TRACKER */}
             <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-4">
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Damage Tracking Status</h3>
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Damage Tracking Status</h3>
               
               <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
                 {damageReports.length === 0 ? (
@@ -2394,10 +2394,10 @@ export default function ShortletDashboard({
                     <div key={report.id} className="p-3 bg-stone-50 border rounded-xl space-y-2">
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="font-bold text-[#18452E]">{report.propertyName}</p>
+                          <p className="font-semibold text-[#18452E]">{report.propertyName}</p>
                           <p className="text-#6B7280 font-mono text-[10px]">{report.damageCategory} &bull; {report.dateDiscovered}</p>
                         </div>
-                        <span className={`px-2 py-0.5 text-[9px] uppercase font-bold rounded ${
+                        <span className={`px-2 py-0.5 text-[9px] uppercase font-semibold rounded ${
                           report.status === 'Pending Approval' ? 'bg-amber-100 text-amber-800' :
                           report.status === 'Approved' ? 'bg-emerald-100 text-emerald-800' :
                           report.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
@@ -2413,10 +2413,10 @@ export default function ShortletDashboard({
                       </p>
                       
                       <div className="pt-2 border-t border-stone-200 flex justify-between items-center text-[10px]">
-                        <span className="font-bold text-#132A1D">Est: ₦{report.estimatedCost.toLocaleString()}</span>
+                        <span className="font-semibold text-#132A1D">Est: ₦{report.estimatedCost.toLocaleString()}</span>
                         <span className={`font-mono ${
-                          report.urgencyLevel === 'Critical' ? 'text-red-600 font-bold' :
-                          report.urgencyLevel === 'High' ? 'text-amber-600 font-bold' :
+                          report.urgencyLevel === 'Critical' ? 'text-red-600 font-semibold' :
+                          report.urgencyLevel === 'High' ? 'text-amber-600 font-semibold' :
                           'text-stone-400'
                         }`}>{report.urgencyLevel} Urgency</span>
                       </div>
@@ -2435,7 +2435,7 @@ export default function ShortletDashboard({
         <div className="space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 gap-4">
             <div>
-              <h2 className="font-display font-black text-xl text-[#18452E] uppercase tracking-tight">My Earnings Portfolio</h2>
+              <h2 className="font-display font-semibold text-xl text-[#18452E] uppercase tracking-tight">My Earnings Portfolio</h2>
               <p className="text-#6B7280 text-xs mt-1">
                 Real-time booking intelligence, commissions tracking, and property performance metrics.
               </p>
@@ -2445,7 +2445,7 @@ export default function ShortletDashboard({
             <div className="flex bg-stone-50 p-1 rounded-xl shrink-0 self-start md:self-auto">
               <button
                 onClick={() => setSubTab('Analysis')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-lg transition duration-200 ${
+                className={`px-4 py-1.5 text-xs font-semibold rounded-lg transition duration-200 ${
                   subTab === 'Analysis' 
                     ? 'bg-white text-[#18452E] shadow-xs' 
                     : 'text-#6B7280 hover:text-#132A1D'
@@ -2455,7 +2455,7 @@ export default function ShortletDashboard({
               </button>
               <button
                 onClick={() => setSubTab('Ranking')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-lg transition duration-200 ${
+                className={`px-4 py-1.5 text-xs font-semibold rounded-lg transition duration-200 ${
                   subTab === 'Ranking' 
                     ? 'bg-white text-[#18452E] shadow-xs' 
                     : 'text-#6B7280 hover:text-#132A1D'
@@ -2471,28 +2471,28 @@ export default function ShortletDashboard({
               {/* STEP 3: PORTFOLIO SUMMARY AT THE TOP */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div className="spatial-glass border border-stone-200/80 p-5 rounded-2xl bg-stone-50/50 space-y-1">
-                  <span className="text-[10px] text-stone-400 block font-mono font-bold uppercase tracking-wider">Commission This Month</span>
-                  <span className="text-2xl font-black text-[#18452E] block">₦{totalCommissionThisMonth.toLocaleString()}</span>
+                  <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase tracking-wider">Commission This Month</span>
+                  <span className="text-2xl font-semibold text-[#18452E] block">₦{totalCommissionThisMonth.toLocaleString()}</span>
                   <span className="text-[10px] text-#6B7280 block">Calculated from July booking logs.</span>
                 </div>
 
                 <div className="spatial-glass border border-stone-200/80 p-5 rounded-2xl bg-stone-50/50 space-y-1">
-                  <span className="text-[10px] text-stone-400 block font-mono font-bold uppercase tracking-wider">Commission This Year</span>
-                  <span className="text-2xl font-black text-[#C9A84C] block">₦{totalCommissionThisYear.toLocaleString()}</span>
+                  <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase tracking-wider">Commission This Year</span>
+                  <span className="text-2xl font-semibold text-[#C9A84C] block">₦{totalCommissionThisYear.toLocaleString()}</span>
                   <span className="text-[10px] text-#6B7280 block">Accumulated commissions for 2026.</span>
                 </div>
 
                 <div className="spatial-glass border border-stone-200/80 p-5 rounded-2xl bg-stone-50/50 space-y-1">
-                  <span className="text-[10px] text-stone-400 block font-mono font-bold uppercase tracking-wider">Most Profitable Property</span>
-                  <span className="text-base font-black text-#132A1D block truncate mt-1">
+                  <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase tracking-wider">Most Profitable Property</span>
+                  <span className="text-base font-semibold text-#132A1D block truncate mt-1">
                     {mostProfitablePropName}
                   </span>
                   <span className="text-[10px] text-#6B7280 block">Highest manager fee generator.</span>
                 </div>
 
                 <div className="spatial-glass border border-stone-200/80 p-5 rounded-2xl bg-stone-50/50 space-y-1">
-                  <span className="text-[10px] text-stone-400 block font-mono font-bold uppercase tracking-wider">Outstanding Remittances</span>
-                  <span className={`text-2xl font-black block ${totalOutstandingAll > 0 ? 'text-red-600' : 'text-#132A1D'}`}>
+                  <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase tracking-wider">Outstanding Remittances</span>
+                  <span className={`text-2xl font-semibold block ${totalOutstandingAll > 0 ? 'text-red-600' : 'text-#132A1D'}`}>
                     ₦{totalOutstandingAll.toLocaleString()}
                   </span>
                   <span className="text-[10px] text-#6B7280 block">Total pending landlord payouts.</span>
@@ -2502,8 +2502,8 @@ export default function ShortletDashboard({
               {/* STEP 2: PER-PROPERTY EARNINGS CARDS */}
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <h3 className="font-display font-black text-sm text-[#18452E] uppercase tracking-wider">Property Commission Analysis</h3>
-                  <span className="text-[10px] font-mono font-bold text-stone-400 uppercase">Sorted by profitability descending</span>
+                  <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase tracking-wider">Property Commission Analysis</h3>
+                  <span className="text-[10px] font-mono font-semibold text-stone-400 uppercase">Sorted by profitability descending</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2544,7 +2544,7 @@ export default function ShortletDashboard({
                     return (
                       <div key={p.agreement.propertyId} className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-5 hover:shadow-sm transition duration-250 flex flex-col justify-between space-y-4">
                         <div className="space-y-1">
-                          <h4 className="font-display font-black text-sm text-[#18452E] line-clamp-1">
+                          <h4 className="font-display font-semibold text-sm text-[#18452E] line-clamp-1">
                             {p.agreement.propertyName}
                           </h4>
                           <p className="text-[11px] text-stone-400 font-medium">
@@ -2556,27 +2556,27 @@ export default function ShortletDashboard({
                         <div className="bg-stone-50 border border-stone-200 rounded-2xl p-3.5 space-y-2">
                           <div className="flex justify-between text-[11px] border-b pb-1 border-stone-200/50">
                             <span className="text-#6B7280">Gross Revenue (Month):</span>
-                            <span className="font-mono font-bold text-#132A1D">₦{p.currentMonthGross.toLocaleString()}</span>
+                            <span className="font-mono font-semibold text-#132A1D">₦{p.currentMonthGross.toLocaleString()}</span>
                           </div>
                           <div className="flex justify-between text-[11px] border-b pb-1 border-stone-200/50">
                             <span className="text-#6B7280">Landlord Share (Month):</span>
-                            <span className="font-mono font-bold text-#132A1D">₦{(p.currentMonthGross - p.currentMonthCommission - p.currentMonthOutstanding).toLocaleString()}</span>
+                            <span className="font-mono font-semibold text-#132A1D">₦{(p.currentMonthGross - p.currentMonthCommission - p.currentMonthOutstanding).toLocaleString()}</span>
                           </div>
                           <div className="flex justify-between text-[11px]">
                             <span className="text-#6B7280">Commission (Month):</span>
-                            <span className="font-mono font-bold text-[#18452E]">₦{p.currentMonthCommission.toLocaleString()}</span>
+                            <span className="font-mono font-semibold text-[#18452E]">₦{p.currentMonthCommission.toLocaleString()}</span>
                           </div>
                         </div>
 
                         <div className="pt-2 border-t border-stone-200 flex items-center justify-between">
                           <div>
-                            <span className="text-[9px] font-mono text-stone-400 block uppercase font-bold">Outstanding Remittance</span>
-                            <span className={`text-xs font-mono font-black ${p.outstandingRemittances > 0 ? 'text-red-600' : 'text-stone-400'}`}>
+                            <span className="text-[9px] font-mono text-stone-400 block uppercase font-semibold">Outstanding Remittance</span>
+                            <span className={`text-xs font-mono font-semibold ${p.outstandingRemittances > 0 ? 'text-red-600' : 'text-stone-400'}`}>
                               ₦{p.outstandingRemittances.toLocaleString()}
                             </span>
                           </div>
 
-                          <div className={`flex items-center space-x-1 px-2.5 py-1 rounded-full text-[10px] font-mono font-bold ${trendColor}`}>
+                          <div className={`flex items-center space-x-1 px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold ${trendColor}`}>
                             {isUp ? (
                               <ArrowUpRight className="w-3 h-3 shrink-0" />
                             ) : (
@@ -2612,7 +2612,7 @@ export default function ShortletDashboard({
                       <div>
                         <div className="flex items-center space-x-2">
                           <ShieldCheck className="w-5 h-5 text-amber-300" />
-                          <h3 className="font-display font-black text-sm uppercase text-amber-100 tracking-wide">
+                          <h3 className="font-display font-semibold text-sm uppercase text-amber-100 tracking-wide">
                             Deposit Accountability Summary ({currentYearMonth})
                           </h3>
                         </div>
@@ -2622,11 +2622,11 @@ export default function ShortletDashboard({
                       </div>
 
                       {unresolvedCheckouts.length > 0 ? (
-                        <span className="px-3 py-1 bg-rose-600 text-white font-mono font-bold text-xs rounded-full uppercase flex items-center gap-1 shrink-0 animate-pulse">
+                        <span className="px-3 py-1 bg-rose-600 text-white font-mono font-semibold text-xs rounded-full uppercase flex items-center gap-1 shrink-0 animate-pulse">
                           ⚠️ {unresolvedCheckouts.length} Unresolved Checkouts
                         </span>
                       ) : (
-                        <span className="px-3 py-1 bg-emerald-800 text-emerald-100 font-mono font-bold text-xs rounded-full uppercase shrink-0">
+                        <span className="px-3 py-1 bg-emerald-800 text-emerald-100 font-mono font-semibold text-xs rounded-full uppercase shrink-0">
                           ✓ All Deposits Reconciled
                         </span>
                       )}
@@ -2634,26 +2634,26 @@ export default function ShortletDashboard({
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1">
                       <div className="bg-amber-900/40 border border-amber-700/40 p-4 rounded-2xl">
-                        <span className="text-[10px] font-mono uppercase text-amber-300/80 font-bold block">Total Collected</span>
-                        <span className="text-xl font-black text-white block mt-1">₦{monthDepositsCollected.toLocaleString()}</span>
+                        <span className="text-[10px] font-mono uppercase text-amber-300/80 font-semibold block">Total Collected</span>
+                        <span className="text-xl font-semibold text-white block mt-1">₦{monthDepositsCollected.toLocaleString()}</span>
                         <span className="text-[10px] text-amber-200/70 block mt-0.5">{monthBookingsWithDeposit.length} shortlet bookings</span>
                       </div>
 
                       <div className="bg-emerald-950/40 border border-emerald-700/40 p-4 rounded-2xl">
-                        <span className="text-[10px] font-mono uppercase text-emerald-300/80 font-bold block">Returned to Guests</span>
-                        <span className="text-xl font-black text-emerald-200 block mt-1">₦{monthDepositsReturned.toLocaleString()}</span>
+                        <span className="text-[10px] font-mono uppercase text-emerald-300/80 font-semibold block">Returned to Guests</span>
+                        <span className="text-xl font-semibold text-emerald-200 block mt-1">₦{monthDepositsReturned.toLocaleString()}</span>
                         <span className="text-[10px] text-emerald-300/70 block mt-0.5">Disbursed post-checkout</span>
                       </div>
 
                       <div className="bg-amber-950/60 border border-amber-600/50 p-4 rounded-2xl">
-                        <span className="text-[10px] font-mono uppercase text-amber-300/80 font-bold block">Retained for Damages</span>
-                        <span className="text-xl font-black text-amber-300 block mt-1">₦{monthDepositsRetained.toLocaleString()}</span>
+                        <span className="text-[10px] font-mono uppercase text-amber-300/80 font-semibold block">Retained for Damages</span>
+                        <span className="text-xl font-semibold text-amber-300 block mt-1">₦{monthDepositsRetained.toLocaleString()}</span>
                         <span className="text-[10px] text-amber-200/70 block mt-0.5">Backed by damage audits</span>
                       </div>
 
                       <div className="bg-#132A1D/60 border border-#132A1D/50 p-4 rounded-2xl">
-                        <span className="text-[10px] font-mono uppercase text-stone-300/80 font-bold block">Unresolved Checkouts</span>
-                        <span className={`text-xl font-black block mt-1 ${unresolvedCheckouts.length > 0 ? 'text-rose-400 font-extrabold' : 'text-stone-300'}`}>
+                        <span className="text-[10px] font-mono uppercase text-stone-300/80 font-semibold block">Unresolved Checkouts</span>
+                        <span className={`text-xl font-semibold block mt-1 ${unresolvedCheckouts.length > 0 ? 'text-rose-400 font-semibold' : 'text-stone-300'}`}>
                           {unresolvedCheckouts.length}
                         </span>
                         <span className="text-[10px] text-stone-400 block mt-0.5">Pending resolution report</span>
@@ -2668,9 +2668,9 @@ export default function ShortletDashboard({
                 <div className="flex justify-between items-center border-b pb-3">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="w-4 h-4 text-[#18452E]" />
-                    <h3 className="font-display font-black text-sm text-[#18452E] uppercase">6-Month Commission History</h3>
+                    <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">6-Month Commission History</h3>
                   </div>
-                  <span className="text-[9px] font-mono font-bold text-stone-400 bg-stone-50 px-2 py-0.5 rounded uppercase">
+                  <span className="text-[9px] font-mono font-semibold text-stone-400 bg-stone-50 px-2 py-0.5 rounded uppercase">
                     Interactive Hover Breakdown
                   </span>
                 </div>
@@ -2699,9 +2699,9 @@ export default function ShortletDashboard({
               <div className="flex justify-between items-center border-b pb-3">
                 <div className="flex items-center space-x-2">
                   <Award className="w-5 h-5 text-[#C9A84C]" />
-                  <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Property Performance Leaderboard</h3>
+                  <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Property Performance Leaderboard</h3>
                 </div>
-                <span className="text-[10px] font-mono font-bold text-stone-400 uppercase">Current Month Statistics</span>
+                <span className="text-[10px] font-mono font-semibold text-stone-400 uppercase">Current Month Statistics</span>
               </div>
 
               <div className="space-y-4">
@@ -2718,7 +2718,7 @@ export default function ShortletDashboard({
                       className="flex flex-col lg:flex-row lg:items-center justify-between p-5 bg-stone-50 border border-stone-200/60 rounded-2xl gap-4 hover:shadow-md transition duration-200"
                     >
                       <div className="flex items-center space-x-4">
-                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-display font-black text-sm shrink-0 ${
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-display font-semibold text-sm shrink-0 ${
                           isTop 
                             ? 'bg-amber-100 text-[#C9A84C] border border-amber-200' 
                             : 'bg-stone-200 text-#6B7280'
@@ -2726,38 +2726,38 @@ export default function ShortletDashboard({
                           #{idx + 1}
                         </div>
                         <div className="min-w-0">
-                          <p className="font-bold text-[#18452E] text-sm md:text-base truncate">{p.agreement.propertyName}</p>
+                          <p className="font-semibold text-[#18452E] text-sm md:text-base truncate">{p.agreement.propertyName}</p>
                           <p className="text-stone-400 text-xs">Landlord: {p.agreement.landlordName}</p>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-left lg:text-right">
                         <div>
-                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Total Bookings</span>
-                          <span className="font-bold text-#132A1D text-xs md:text-sm mt-0.5 block">{p.currentMonthBookingsCount} bookings</span>
+                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Total Bookings</span>
+                          <span className="font-semibold text-#132A1D text-xs md:text-sm mt-0.5 block">{p.currentMonthBookingsCount} bookings</span>
                         </div>
                         <div>
-                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Avg Night Rate</span>
-                          <span className="font-bold text-#132A1D text-xs md:text-sm mt-0.5 block">₦{p.currentMonthAverageRate.toLocaleString()}</span>
+                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Avg Night Rate</span>
+                          <span className="font-semibold text-#132A1D text-xs md:text-sm mt-0.5 block">₦{p.currentMonthAverageRate.toLocaleString()}</span>
                         </div>
                         <div>
-                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Occupancy Rate</span>
-                          <span className="font-bold text-#132A1D text-xs md:text-sm mt-0.5 block">{occupancyRate.toFixed(1)}%</span>
+                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Occupancy Rate</span>
+                          <span className="font-semibold text-#132A1D text-xs md:text-sm mt-0.5 block">{occupancyRate.toFixed(1)}%</span>
                         </div>
                         <div>
-                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-bold">Commission Earned</span>
-                          <span className="font-bold text-[#18452E] text-xs md:text-sm mt-0.5 block">₦{p.currentMonthCommission.toLocaleString()}</span>
+                          <span className="text-[9px] uppercase font-mono text-stone-400 block font-semibold">Commission Earned</span>
+                          <span className="font-semibold text-[#18452E] text-xs md:text-sm mt-0.5 block">₦{p.currentMonthCommission.toLocaleString()}</span>
                         </div>
                       </div>
 
                       <div className="lg:min-w-[130px] lg:text-right shrink-0">
                         {isTop && (
-                          <span className="inline-block bg-amber-50 text-[#C9A84C] border border-[#C9A84C]/30 px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider">
+                          <span className="inline-block bg-amber-50 text-[#C9A84C] border border-[#C9A84C]/30 px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider">
                             Most Profitable
                           </span>
                         )}
                         {isBottom && (
-                          <span className="inline-block bg-stone-50 text-#6B7280 border border-stone-200 px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider">
+                          <span className="inline-block bg-stone-50 text-#6B7280 border border-stone-200 px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider">
                             Needs Attention
                           </span>
                         )}
@@ -2776,11 +2776,11 @@ export default function ShortletDashboard({
         <div className="space-y-6 max-w-2xl mx-auto">
           <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
-              <h3 className="font-display font-black text-sm text-[#18452E] uppercase flex items-center space-x-2">
+              <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase flex items-center space-x-2">
                 <User className="w-5 h-5 text-[#18452E]" />
                 <span>Manager Profile &amp; Verification Progress</span>
               </h3>
-              <span className="text-[10px] font-mono font-bold text-stone-400 uppercase">
+              <span className="text-[10px] font-mono font-semibold text-stone-400 uppercase">
                 ID: {session.userId || 'SM-8921'}
               </span>
             </div>
@@ -2803,12 +2803,12 @@ export default function ShortletDashboard({
                 <div className="space-y-4 bg-stone-50 border border-stone-200 p-5 rounded-2xl">
                   <div className="flex justify-between items-center">
                     <div>
-                      <h4 className="font-bold text-xs text-#132A1D uppercase tracking-wider">Verification Completeness</h4>
+                      <h4 className="font-semibold text-xs text-#132A1D uppercase tracking-wider">Verification Completeness</h4>
                       <p className="text-[10px] text-#6B7280 font-mono mt-0.5">
                         {completedCount} of {totalCount} compliance checkpoints passed
                       </p>
                     </div>
-                    <span className={`text-xl font-black font-mono ${percentage === 100 ? 'text-emerald-700' : 'text-amber-700'}`}>
+                    <span className={`text-xl font-semibold font-mono ${percentage === 100 ? 'text-emerald-700' : 'text-amber-700'}`}>
                       {percentage}%
                     </span>
                   </div>
@@ -2831,12 +2831,12 @@ export default function ShortletDashboard({
                           ) : (
                             <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
                           )}
-                          <span className={item.done ? 'text-#132A1D font-medium' : 'text-#132A1D font-bold'}>
+                          <span className={item.done ? 'text-#132A1D font-medium' : 'text-#132A1D font-semibold'}>
                             {item.label}
                           </span>
                         </div>
                         {item.done ? (
-                          <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-bold uppercase rounded-full">
+                          <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase rounded-full">
                             Complete
                           </span>
                         ) : (
@@ -2845,7 +2845,7 @@ export default function ShortletDashboard({
                               setProfileState(prev => ({ ...prev, [item.key]: true }));
                               triggerSuccess(`Verified item: ${item.label}`);
                             }}
-                            className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-bold rounded-lg uppercase cursor-pointer transition shadow-xs"
+                            className="px-2.5 py-1 bg-[#18452E] hover:bg-[#18452E] text-white text-[10px] font-semibold rounded-lg uppercase cursor-pointer transition shadow-xs"
                           >
                             {item.action}
                           </button>
@@ -2858,7 +2858,7 @@ export default function ShortletDashboard({
             })()}
 
             <div className="space-y-3 pt-2">
-              <h4 className="font-bold text-xs uppercase text-#132A1D font-mono">Assigned Manager Details</h4>
+              <h4 className="font-semibold text-xs uppercase text-#132A1D font-mono">Assigned Manager Details</h4>
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div className="p-3 bg-stone-50 rounded-xl border border-stone-150">
                   <span className="text-[9px] text-stone-400 font-mono block uppercase">Name</span>
@@ -2888,7 +2888,7 @@ export default function ShortletDashboard({
           <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-lg w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
-                <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Booking Record Detail</h3>
+                <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Booking Record Detail</h3>
                 <span className="text-[10px] font-mono text-stone-400">ID: {selectedDetailBooking.id}</span>
               </div>
               <button onClick={() => setSelectedDetailBooking(null)} className="p-1 hover:bg-stone-50 rounded-lg text-stone-400 hover:text-#132A1D">
@@ -2899,33 +2899,33 @@ export default function ShortletDashboard({
             <div className="space-y-3 text-xs">
               <div className="p-3 bg-stone-50 rounded-2xl border space-y-1">
                 <span className="text-[9px] font-mono text-stone-400 block uppercase">Shortlet Property</span>
-                <strong className="text-sm font-bold text-[#18452E]">{selectedDetailBooking.propertyName}</strong>
+                <strong className="text-sm font-semibold text-[#18452E]">{selectedDetailBooking.propertyName}</strong>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Guest Name</span>
-                  <strong className="text-#132A1D font-bold">{selectedDetailBooking.guestName}</strong>
+                  <strong className="text-#132A1D font-semibold">{selectedDetailBooking.guestName}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Booking Channel</span>
-                  <strong className="text-#132A1D font-bold">{selectedDetailBooking.bookingSource || 'Direct'}</strong>
+                  <strong className="text-#132A1D font-semibold">{selectedDetailBooking.bookingSource || 'Direct'}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Check-In Date</span>
-                  <strong className="text-#132A1D font-bold">{selectedDetailBooking.checkInDate}</strong>
+                  <strong className="text-#132A1D font-semibold">{selectedDetailBooking.checkInDate}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Check-Out Date</span>
-                  <strong className="text-#132A1D font-bold">{selectedDetailBooking.checkOutDate}</strong>
+                  <strong className="text-#132A1D font-semibold">{selectedDetailBooking.checkOutDate}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Gross Revenue Collected</span>
-                  <strong className="text-[#18452E] font-black text-sm">₦{selectedDetailBooking.totalPaid.toLocaleString()}</strong>
+                  <strong className="text-[#18452E] font-semibold text-sm">₦{selectedDetailBooking.totalPaid.toLocaleString()}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Remittance Net Amount</span>
-                  <strong className="text-emerald-800 font-black text-sm">₦{selectedDetailBooking.remittanceAmount.toLocaleString()}</strong>
+                  <strong className="text-emerald-800 font-semibold text-sm">₦{selectedDetailBooking.remittanceAmount.toLocaleString()}</strong>
                 </div>
               </div>
             </div>
@@ -2933,7 +2933,7 @@ export default function ShortletDashboard({
             <div className="flex justify-end space-x-2 pt-2 border-t">
               <button
                 onClick={() => setSelectedDetailBooking(null)}
-                className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs cursor-pointer"
+                className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs cursor-pointer"
               >
                 Close
               </button>
@@ -2948,7 +2948,7 @@ export default function ShortletDashboard({
           <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-xl w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
-                <h3 className="font-display font-black text-sm text-[#18452E] uppercase">Remittance Disbursement Record</h3>
+                <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Remittance Disbursement Record</h3>
                 <span className="text-[10px] font-mono text-stone-400">Statement ID: {selectedDetailRemittance.id}</span>
               </div>
               <button onClick={() => setSelectedDetailRemittance(null)} className="p-1 hover:bg-stone-50 rounded-lg text-stone-400 hover:text-#132A1D">
@@ -2959,24 +2959,24 @@ export default function ShortletDashboard({
             <div className="grid grid-cols-2 gap-3 text-xs">
               <div className="p-3 bg-stone-50 rounded-2xl border">
                 <span className="text-[9px] font-mono text-stone-400 block uppercase">Property Covered</span>
-                <strong className="text-#132A1D font-bold">{selectedDetailRemittance.propertyName}</strong>
+                <strong className="text-#132A1D font-semibold">{selectedDetailRemittance.propertyName}</strong>
               </div>
               <div className="p-3 bg-stone-50 rounded-2xl border">
                 <span className="text-[9px] font-mono text-stone-400 block uppercase">Net Disbursed Share</span>
-                <strong className="text-emerald-800 font-black text-sm">₦{selectedDetailRemittance.remittanceAmount.toLocaleString()}</strong>
+                <strong className="text-emerald-800 font-semibold text-sm">₦{selectedDetailRemittance.remittanceAmount.toLocaleString()}</strong>
               </div>
             </div>
 
             {/* TRANSPARENCY TIMELINE (Addition Seven) */}
             <div className="space-y-3 bg-stone-50 border p-4 rounded-2xl">
-              <h4 className="font-bold text-xs uppercase text-#132A1D font-mono tracking-wider">
+              <h4 className="font-semibold text-xs uppercase text-#132A1D font-mono tracking-wider">
                 Transparency Audit Timeline
               </h4>
 
               <div className="space-y-3 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-stone-200">
                 {/* STEP 1 */}
                 <div className="flex items-start space-x-3 relative z-10">
-                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-bold">1</div>
+                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-semibold">1</div>
                   <div>
                     <strong className="text-xs text-#132A1D block">Remittance Submitted</strong>
                     <span className="text-[10px] text-#6B7280 font-mono block">Submitted by Manager: {session.name}</span>
@@ -2985,7 +2985,7 @@ export default function ShortletDashboard({
 
                 {/* STEP 2 */}
                 <div className="flex items-start space-x-3 relative z-10">
-                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-bold">2</div>
+                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-semibold">2</div>
                   <div>
                     <strong className="text-xs text-#132A1D block">Transfer Reference Entered</strong>
                     <span className="text-[10px] text-#6B7280 font-mono block">Ref: TRF-SHORTLET-{selectedDetailRemittance.id.substring(0, 8).toUpperCase()}</span>
@@ -2994,7 +2994,7 @@ export default function ShortletDashboard({
 
                 {/* STEP 3 */}
                 <div className="flex items-start space-x-3 relative z-10">
-                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-bold">3</div>
+                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-semibold">3</div>
                   <div>
                     <strong className="text-xs text-#132A1D block">Confirmation Checkbox Ticked</strong>
                     <span className="text-[10px] text-#6B7280 font-mono block">Manager Verified Payment Transfer</span>
@@ -3003,7 +3003,7 @@ export default function ShortletDashboard({
 
                 {/* STEP 4 */}
                 <div className="flex items-start space-x-3 relative z-10">
-                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-bold">4</div>
+                  <div className="w-6 h-6 bg-emerald-600 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-semibold">4</div>
                   <div>
                     <strong className="text-xs text-#132A1D block">Landlord Notified</strong>
                     <span className="text-[10px] text-#6B7280 font-mono block">Dispatched to Landlord Feed &amp; Email</span>
@@ -3012,7 +3012,7 @@ export default function ShortletDashboard({
 
                 {/* STEP 5: ACKNOWLEDGED OR DISPUTED */}
                 <div className="flex items-start space-x-3 relative z-10">
-                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-bold ${
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white shrink-0 text-[10px] font-semibold ${
                     selectedDetailRemittance.remittanceStatus === 'acknowledged' ? 'bg-emerald-600' :
                     selectedDetailRemittance.remittanceStatus === 'disputed' ? 'bg-rose-600' : 'bg-amber-500'
                   }`}>5</div>
@@ -3046,7 +3046,7 @@ export default function ShortletDashboard({
                     handleAcknowledgeRemittance(selectedDetailRemittance.id);
                     setSelectedDetailRemittance(null);
                   }}
-                  className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl text-xs cursor-pointer transition shadow-xs"
+                  className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-xl text-xs cursor-pointer transition shadow-xs"
                 >
                   Acknowledge Remittance
                 </button>
@@ -3055,7 +3055,7 @@ export default function ShortletDashboard({
                     setDisputedRemittanceId(selectedDetailRemittance.id);
                     setShowDisputeModal(true);
                   }}
-                  className="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-800 font-bold rounded-xl text-xs cursor-pointer transition border border-rose-200"
+                  className="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-800 font-semibold rounded-xl text-xs cursor-pointer transition border border-rose-200"
                 >
                   Dispute Statement
                 </button>
@@ -3063,7 +3063,7 @@ export default function ShortletDashboard({
 
               <button
                 onClick={() => setSelectedDetailRemittance(null)}
-                className="px-4 py-2 bg-stone-50 text-#132A1D font-bold rounded-xl text-xs cursor-pointer"
+                className="px-4 py-2 bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs cursor-pointer"
               >
                 Close
               </button>
@@ -3076,7 +3076,7 @@ export default function ShortletDashboard({
       {showDisputeModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 z-55">
           <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-md w-full space-y-4 shadow-sm">
-            <h3 className="font-display font-black text-sm text-rose-800 uppercase">Dispute Remittance Statement</h3>
+            <h3 className="font-display font-semibold text-sm text-rose-800 uppercase">Dispute Remittance Statement</h3>
             <p className="text-xs text-#6B7280">
               Please specify the reason for disputing this remittance statement. This will trigger an immediate audit alert to management.
             </p>
@@ -3094,7 +3094,7 @@ export default function ShortletDashboard({
                   setShowDisputeModal(false);
                   setDisputeReasonInput('');
                 }}
-                className="px-4 py-2 bg-stone-50 text-#132A1D font-bold rounded-xl text-xs cursor-pointer"
+                className="px-4 py-2 bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs cursor-pointer"
               >
                 Cancel
               </button>
@@ -3106,7 +3106,7 @@ export default function ShortletDashboard({
                   setDisputeReasonInput('');
                   setSelectedDetailRemittance(null);
                 }}
-                className="px-4 py-2 bg-rose-700 hover:bg-rose-800 text-white font-bold rounded-xl text-xs cursor-pointer shadow-xs"
+                className="px-4 py-2 bg-rose-700 hover:bg-rose-800 text-white font-semibold rounded-xl text-xs cursor-pointer shadow-xs"
               >
                 Submit Dispute
               </button>
@@ -3121,7 +3121,7 @@ export default function ShortletDashboard({
           <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-2xl w-full space-y-5 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
-                <h3 className="font-display font-black text-base text-[#18452E] uppercase">{selectedDetailProperty.propertyName}</h3>
+                <h3 className="font-display font-semibold text-base text-[#18452E] uppercase">{selectedDetailProperty.propertyName}</h3>
                 <span className="text-[10px] font-mono text-stone-400">Property ID: {selectedDetailProperty.propertyId}</span>
               </div>
               <button onClick={() => setSelectedDetailProperty(null)} className="p-1 hover:bg-stone-50 rounded-lg text-stone-400 hover:text-#132A1D">
@@ -3133,7 +3133,7 @@ export default function ShortletDashboard({
             <div className="flex bg-stone-50 p-1 rounded-xl">
               <button
                 onClick={() => setPropertyDetailTab('info')}
-                className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition ${
+                className={`flex-1 py-1.5 text-xs font-semibold rounded-lg transition ${
                   propertyDetailTab === 'info' ? 'bg-white text-[#18452E] shadow-xs' : 'text-#6B7280'
                 }`}
               >
@@ -3141,7 +3141,7 @@ export default function ShortletDashboard({
               </button>
               <button
                 onClick={() => setPropertyDetailTab('agreements')}
-                className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition ${
+                className={`flex-1 py-1.5 text-xs font-semibold rounded-lg transition ${
                   propertyDetailTab === 'agreements' ? 'bg-white text-[#18452E] shadow-xs' : 'text-#6B7280'
                 }`}
               >
@@ -3149,7 +3149,7 @@ export default function ShortletDashboard({
               </button>
               <button
                 onClick={() => setPropertyDetailTab('history')}
-                className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition ${
+                className={`flex-1 py-1.5 text-xs font-semibold rounded-lg transition ${
                   propertyDetailTab === 'history' ? 'bg-white text-[#18452E] shadow-xs' : 'text-#6B7280'
                 }`}
               >
@@ -3161,19 +3161,19 @@ export default function ShortletDashboard({
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Management Fee</span>
-                  <strong className="text-[#18452E] font-bold">{selectedDetailProperty.managementFeePercent}%</strong>
+                  <strong className="text-[#18452E] font-semibold">{selectedDetailProperty.managementFeePercent}%</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Landlord / Owner</span>
-                  <strong className="text-#132A1D font-bold">{selectedDetailProperty.landlordName || session.name}</strong>
+                  <strong className="text-#132A1D font-semibold">{selectedDetailProperty.landlordName || session.name}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Agreement Status</span>
-                  <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold text-[9px] uppercase">Active</span>
+                  <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-semibold text-[9px] uppercase">Active</span>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Nightly Standard Rate</span>
-                  <strong className="text-#132A1D font-bold">₦{selectedDetailProperty.nightlyRate ? selectedDetailProperty.nightlyRate.toLocaleString() : '85,000'}</strong>
+                  <strong className="text-#132A1D font-semibold">₦{selectedDetailProperty.nightlyRate ? selectedDetailProperty.nightlyRate.toLocaleString() : '85,000'}</strong>
                 </div>
               </div>
             )}
@@ -3181,7 +3181,7 @@ export default function ShortletDashboard({
             {propertyDetailTab === 'agreements' && (
               <div className="space-y-3 text-xs">
                 <div className="p-4 bg-stone-50 border rounded-2xl space-y-2">
-                  <h4 className="font-bold text-#132A1D uppercase font-mono text-[10px]">Management Terms &amp; Commission</h4>
+                  <h4 className="font-semibold text-#132A1D uppercase font-mono text-[10px]">Management Terms &amp; Commission</h4>
                   <p className="text-#6B7280">
                     Unity Homes manages this unit at a fixed commission rate of <strong className="text-[#18452E]">{selectedDetailProperty.managementFeePercent}%</strong> of gross revenue collected. All utility and cleaning expenses are reconciled monthly.
                   </p>
@@ -3192,7 +3192,7 @@ export default function ShortletDashboard({
             {/* AUDIT HISTORY TAB (Addition Four) */}
             {propertyDetailTab === 'history' && (
               <div className="space-y-3 max-h-60 overflow-y-auto pr-1">
-                <h4 className="font-bold text-xs uppercase text-#132A1D font-mono">Significant Changes &amp; Action Logs</h4>
+                <h4 className="font-semibold text-xs uppercase text-#132A1D font-mono">Significant Changes &amp; Action Logs</h4>
 
                 {(() => {
                   const logs = getLogsForRecord(selectedDetailProperty.propertyName);
@@ -3207,7 +3207,7 @@ export default function ShortletDashboard({
                   return logs.map((log: any) => (
                     <div key={log.id} className="p-3 bg-stone-50 border rounded-xl space-y-1 text-xs">
                       <div className="flex justify-between items-center">
-                        <span className="font-bold text-[#18452E]">{log.action || 'Rate Change'}</span>
+                        <span className="font-semibold text-[#18452E]">{log.action || 'Rate Change'}</span>
                         <span className="text-[9px] font-mono text-stone-400">{log.timestamp}</span>
                       </div>
                       <p className="text-#6B7280">{log.details}</p>
@@ -3221,7 +3221,7 @@ export default function ShortletDashboard({
             <div className="flex justify-end pt-2 border-t">
               <button
                 onClick={() => setSelectedDetailProperty(null)}
-                className="px-4 py-2 bg-stone-50 text-#132A1D font-bold rounded-xl text-xs cursor-pointer"
+                className="px-4 py-2 bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs cursor-pointer"
               >
                 Close
               </button>
@@ -3236,7 +3236,7 @@ export default function ShortletDashboard({
           <div className="bg-white rounded-[var(--radius-large)] p-6 max-w-lg w-full space-y-4 shadow-sm">
             <div className="flex justify-between items-center border-b pb-3">
               <div>
-                <h3 className="font-display font-black text-sm text-amber-800 uppercase">Damage Report Detail</h3>
+                <h3 className="font-display font-semibold text-sm text-amber-800 uppercase">Damage Report Detail</h3>
                 <span className="text-[10px] font-mono text-stone-400">ID: {selectedDetailDamage.id}</span>
               </div>
               <button onClick={() => setSelectedDetailDamage(null)} className="p-1 hover:bg-stone-50 rounded-lg text-stone-400 hover:text-#132A1D">
@@ -3247,7 +3247,7 @@ export default function ShortletDashboard({
             <div className="space-y-3 text-xs">
               <div className="p-3 bg-stone-50 rounded-2xl border">
                 <span className="text-[9px] font-mono text-stone-400 block uppercase">Property Name</span>
-                <strong className="text-[#18452E] font-bold text-sm block">{selectedDetailDamage.propertyName}</strong>
+                <strong className="text-[#18452E] font-semibold text-sm block">{selectedDetailDamage.propertyName}</strong>
               </div>
               <div className="p-3 bg-stone-50 rounded-2xl border">
                 <span className="text-[9px] font-mono text-stone-400 block uppercase">Damage Description</span>
@@ -3256,11 +3256,11 @@ export default function ShortletDashboard({
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Estimated Repair Cost</span>
-                  <strong className="text-rose-700 font-black text-sm">₦{selectedDetailDamage.estimatedCost.toLocaleString()}</strong>
+                  <strong className="text-rose-700 font-semibold text-sm">₦{selectedDetailDamage.estimatedCost.toLocaleString()}</strong>
                 </div>
                 <div className="p-3 bg-stone-50 rounded-2xl border">
                   <span className="text-[9px] font-mono text-stone-400 block uppercase">Urgency Rating</span>
-                  <strong className="text-amber-700 font-bold">{selectedDetailDamage.urgency || 'Medium'}</strong>
+                  <strong className="text-amber-700 font-semibold">{selectedDetailDamage.urgency || 'Medium'}</strong>
                 </div>
               </div>
             </div>
@@ -3268,7 +3268,7 @@ export default function ShortletDashboard({
             <div className="flex justify-end pt-2 border-t">
               <button
                 onClick={() => setSelectedDetailDamage(null)}
-                className="px-4 py-2 bg-stone-50 text-#132A1D font-bold rounded-xl text-xs cursor-pointer"
+                className="px-4 py-2 bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs cursor-pointer"
               >
                 Close
               </button>
@@ -3301,7 +3301,7 @@ export default function ShortletDashboard({
       )}
 
       {/* COMPLIANT FOOTER */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-bold tracking-wider">
+      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider">
         Unity Homes Shortlet Management Desk &bull; Don&apos;t Buy Wahala
       </p>
 
@@ -3456,7 +3456,7 @@ function DepositResolutionModal({
           <div>
             <div className="flex items-center space-x-2">
               <ShieldCheck className="w-5 h-5 text-amber-700" />
-              <h3 className="font-display font-black text-lg text-[#18452E] uppercase">
+              <h3 className="font-display font-semibold text-lg text-[#18452E] uppercase">
                 Checkout &amp; Deposit Resolution
               </h3>
             </div>
@@ -3474,13 +3474,13 @@ function DepositResolutionModal({
             <ShieldAlert className="w-4 h-4 text-amber-700 shrink-0" />
             <span>Caution Deposit Held by Manager:</span>
           </div>
-          <span className="font-mono font-black text-sm text-amber-950">₦{depositAmt.toLocaleString()}</span>
+          <span className="font-mono font-semibold text-sm text-amber-950">₦{depositAmt.toLocaleString()}</span>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* CHECKOUT CONDITION */}
           <div>
-            <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+            <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
               PROPERTY CONDITION AT CHECKOUT *
             </label>
             <select
@@ -3499,13 +3499,13 @@ function DepositResolutionModal({
           {/* DAMAGE DETAILS (IF ANY DAMAGE) */}
           {checkoutCondition !== 'No Damage Observed' && (
             <div className="p-4 bg-amber-50/50 border border-amber-200 rounded-2xl space-y-4 animate-fade-in">
-              <h4 className="font-bold text-xs text-amber-950 uppercase font-mono flex items-center gap-1.5">
+              <h4 className="font-semibold text-xs text-amber-950 uppercase font-mono flex items-center gap-1.5">
                 <AlertTriangle className="w-4 h-4 text-amber-700" />
                 Damage Evidence &amp; Repair Estimate
               </h4>
 
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   DESCRIPTION OF DAMAGE *
                 </label>
                 <textarea
@@ -3520,7 +3520,7 @@ function DepositResolutionModal({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                  <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                     ESTIMATED REPAIR / REPLACEMENT COST (NGN)
                   </label>
                   <input
@@ -3532,7 +3532,7 @@ function DepositResolutionModal({
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                  <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                     DAMAGE EVIDENCE PHOTOS ({damagePhotos.length}/10)
                   </label>
                   <div className="flex gap-2">
@@ -3546,7 +3546,7 @@ function DepositResolutionModal({
                     <button
                       type="button"
                       onClick={handleAddPhoto}
-                      className="px-3 py-2 bg-amber-800 text-white font-bold rounded-xl text-xs shrink-0 cursor-pointer"
+                      className="px-3 py-2 bg-amber-800 text-white font-semibold rounded-xl text-xs shrink-0 cursor-pointer"
                     >
                       + Add
                     </button>
@@ -3562,7 +3562,7 @@ function DepositResolutionModal({
                       <button
                         type="button"
                         onClick={() => setDamagePhotos(damagePhotos.filter((_, i) => i !== idx))}
-                        className="absolute top-0 right-0 bg-rose-600 text-white w-4 h-4 text-[9px] flex items-center justify-center font-bold"
+                        className="absolute top-0 right-0 bg-rose-600 text-white w-4 h-4 text-[9px] flex items-center justify-center font-semibold"
                       >
                         ×
                       </button>
@@ -3575,7 +3575,7 @@ function DepositResolutionModal({
 
           {/* DEPOSIT DECISION */}
           <div className="space-y-3">
-            <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase">
+            <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase">
               DEPOSIT RESOLUTION DECISION *
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -3594,7 +3594,7 @@ function DepositResolutionModal({
                       : 'bg-stone-50 hover:bg-stone-50 text-#132A1D border-stone-200'
                   }`}
                 >
-                  <span className="font-bold text-xs block">{opt.label}</span>
+                  <span className="font-semibold text-xs block">{opt.label}</span>
                   <span className={`text-[10px] block mt-0.5 ${depositDecision === opt.id ? 'text-amber-200' : 'text-stone-400'}`}>
                     {opt.desc}
                   </span>
@@ -3607,7 +3607,7 @@ function DepositResolutionModal({
           {depositDecision === 'Partial Deposit Returned' && (
             <div className="p-4 bg-stone-50 border rounded-2xl grid grid-cols-2 gap-4 animate-fade-in">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   AMOUNT RETAINED FOR DAMAGE (NGN)
                 </label>
                 <input
@@ -3622,7 +3622,7 @@ function DepositResolutionModal({
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+                <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                   AMOUNT RETURNED TO GUEST (NGN)
                 </label>
                 <input
@@ -3642,7 +3642,7 @@ function DepositResolutionModal({
           {/* RETENTION JUSTIFICATION */}
           {depositDecision !== 'Full Deposit Returned to Guest' && (
             <div>
-              <label className="block text-[10px] font-mono font-bold text-#6B7280 uppercase mb-1">
+              <label className="block text-[10px] font-mono font-semibold text-#6B7280 uppercase mb-1">
                 RETENTION JUSTIFICATION FOR LANDLORD &amp; ADMIN AUDIT *
               </label>
               <textarea
@@ -3675,14 +3675,14 @@ function DepositResolutionModal({
             <button
               type="button"
               onClick={onClose}
-              className="py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-xl text-xs transition cursor-pointer"
+              className="py-3 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-xl text-xs transition cursor-pointer"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!confirmed}
-              className={`py-3 text-white font-bold rounded-xl text-xs transition cursor-pointer ${
+              className={`py-3 text-white font-semibold rounded-xl text-xs transition cursor-pointer ${
                 confirmed ? 'bg-[#18452E] hover:bg-[#18452E] shadow-md' : 'bg-stone-300 text-stone-400 cursor-not-allowed'
               }`}
             >
@@ -3701,17 +3701,17 @@ const CustomTooltip = ({ active, payload }: any) => {
     const data = payload[0].payload;
     return (
       <div className="bg-white border border-stone-200 p-4 rounded-2xl shadow-sm space-y-2 max-w-xs text-xs">
-        <p className="font-bold text-#6B7280 uppercase tracking-wider text-[10px] font-mono">
+        <p className="font-semibold text-#6B7280 uppercase tracking-wider text-[10px] font-mono">
           {data.month} Breakdown
         </p>
-        <p className="font-black text-sm text-[#18452E] border-b border-stone-200 pb-1.5">
+        <p className="font-semibold text-sm text-[#18452E] border-b border-stone-200 pb-1.5">
           Commission: ₦{data.total.toLocaleString()}
         </p>
         <div className="space-y-1">
           {data.breakdown.map((item: any, idx: number) => (
             <div key={idx} className="flex justify-between items-center space-x-4">
               <span className="text-#6B7280 truncate max-w-[140px]">{item.propertyName}</span>
-              <span className="font-mono font-bold text-#132A1D shrink-0">₦{item.commission.toLocaleString()}</span>
+              <span className="font-mono font-semibold text-#132A1D shrink-0">₦{item.commission.toLocaleString()}</span>
             </div>
           ))}
         </div>

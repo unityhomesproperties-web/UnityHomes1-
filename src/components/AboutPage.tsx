@@ -16,13 +16,13 @@ export default function AboutPage({ navigate }: AboutPageProps) {
         <div className="absolute -bottom-24 -right-20 w-72 h-72 rounded-full bg-[#C9A84C]/10 blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 space-y-4">
-          <span className="text-[10px] sm:text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C] bg-[#18452E]/40 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/30">
+          <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/40 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/30">
             OUR FOUNDATIONAL MISSION
           </span>
-          <h1 className="text-4xl md:text-5xl font-display font-black text-white leading-tight mt-2">
+          <h1 className="text-4xl md:text-5xl font-display font-semibold text-white leading-tight mt-2">
             Nigeria&apos;s Cleanest Property Ecosystem
           </h1>
-          <p className="text-xs sm:text-sm text-stone-200 font-light max-w-2xl mx-auto leading-relaxed mt-4">
+          <p className="text-xs sm:text-sm text-stone-200 font-normal max-w-2xl mx-auto leading-relaxed mt-4">
             Eliminating structural crack surprises, double-allocated land litigation, and unchecked landlord tenancy disputes. Established in Lagos, Nigeria.
           </p>
         </div>
@@ -30,11 +30,11 @@ export default function AboutPage({ navigate }: AboutPageProps) {
 
       {/* CORE FOUNDER STORY STORY - 3 PARAGRAPHS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        <div className="space-y-6 text-#132A1D font-sans text-xs sm:text-sm leading-relaxed font-light">
-          <span className="text-[10px] font-mono font-black text-[#C9A84C] tracking-widest uppercase block">
+        <div className="space-y-6 text-#132A1D font-sans text-xs sm:text-sm leading-relaxed font-normal">
+          <span className="text-[10px] font-mono font-semibold text-[#C9A84C] tracking-widest uppercase block">
             HOW WE WERE FORMED
           </span>
-          <h2 className="text-2xl font-display font-black text-[#18452E]">
+          <h2 className="text-2xl font-display font-semibold text-[#18452E]">
             The Olayinka Ayodele Story
           </h2>
           <p>
@@ -51,7 +51,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
             <p className="text-xs font-semibold text-[#18452E] italic leading-relaxed">
               &quot;We don&apos;t sell houses. We sell legal and structural clarity. In a market plagued with uncertainty, our absolute operating vow remains: Don&apos;t Buy Wahala.&quot;
             </p>
-            <span className="block text-[10px] font-mono text-[#C9A84C] mt-2 font-black">— OLAYINKA AYODELE, FOUNDER</span>
+            <span className="block text-[10px] font-mono text-[#C9A84C] mt-2 font-semibold">— OLAYINKA AYODELE, FOUNDER</span>
           </div>
         </div>
 
@@ -62,13 +62,13 @@ export default function AboutPage({ navigate }: AboutPageProps) {
               <Compass className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-display font-black text-[#18452E] text-sm tracking-wide uppercase">
+              <h3 className="font-display font-semibold text-[#18452E] text-sm tracking-wide uppercase">
                 Our Immutable Mission
               </h3>
               <p className="text-[10px] text-stone-400 font-mono">EST. LAGOS, NIGERIA</p>
             </div>
           </div>
-          <p className="text-xs sm:text-sm text-#6B7280 leading-relaxed font-light">
+          <p className="text-xs sm:text-sm text-#6B7280 leading-relaxed font-normal">
             To provide a fully verified, transparent real estate operational mesh for Nigeria that secures the tenant&apos;s lease rights, ensures structural safety through professional certification, hides no hidden listing fees, and guarantees absolute transaction safety.
           </p>
           
@@ -88,40 +88,40 @@ export default function AboutPage({ navigate }: AboutPageProps) {
       {/* WHAT MAKES US DIFFERENT BLOCKS - GOLD LEFT BORDERS */}
       <div className="space-y-6">
         <div className="text-center">
-          <span className="text-[9px] font-mono font-black text-[#C9A84C] tracking-widest uppercase block">OPERATING PILLARS</span>
-          <h2 className="text-2xl font-display font-black text-[#18452E] mt-1">What Makes Us Different</h2>
+          <span className="text-[9px] font-mono font-semibold text-[#C9A84C] tracking-widest uppercase block">OPERATING PILLARS</span>
+          <h2 className="text-2xl font-display font-semibold text-[#18452E] mt-1">What Makes Us Different</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Blocks with gold left border */}
           <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <ShieldCheck className="w-6 h-6 text-[#18452E]" />
-            <h3 className="font-display font-bold text-sm text-[#18452E]">SURCON Standardized Listings</h3>
-            <p className="text-[11px] text-stone-500 leading-relaxed font-light">
+            <h3 className="font-display font-semibold text-sm text-[#18452E]">SURCON Standardized Listings</h3>
+            <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
               Every single listing coordinate chart displayed on our platform is dynamically validated against certified Surveyor Registry datasets. You get exact mapping, zero double-allocation plots, and zero imaginary survey plans.
             </p>
           </div>
 
           <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <Award className="w-6 h-6 text-emerald-800" />
-            <h3 className="font-display font-bold text-sm text-[#18452E]">Independent COREN Audits</h3>
-            <p className="text-[11px] text-stone-500 leading-relaxed font-light">
+            <h3 className="font-display font-semibold text-sm text-[#18452E]">Independent COREN Audits</h3>
+            <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
               We require fully independent registered structural engineering review signatures (COREN status checked) for multi-story properties, validating concrete load factors and swamp soil foundation pillars beforehand.
             </p>
           </div>
 
           <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <Compass className="w-6 h-6 text-teal-700" />
-            <h3 className="font-display font-bold text-sm text-[#18452E]">Caution Deposit Mediation</h3>
-            <p className="text-[11px] text-stone-500 leading-relaxed font-light">
+            <h3 className="font-display font-semibold text-sm text-[#18452E]">Caution Deposit Mediation</h3>
+            <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
               Caution deposits are held by the landlord directly. Any dispute over a caution deposit is mediated by Unity Homes admin using documented evidence including the Damage Reports feature. Unity Homes never holds, locks, or moves tenant money at any point.
             </p>
           </div>
 
           <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <HeartHandshake className="w-6 h-6 text-[#C9A84C]" />
-            <h3 className="font-display font-bold text-sm text-[#18452E]">Certified Professional Panels</h3>
-            <p className="text-[11px] text-stone-500 leading-relaxed font-light">
+            <h3 className="font-display font-semibold text-sm text-[#18452E]">Certified Professional Panels</h3>
+            <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
               We only hook you up with verified industry experts. Real lawyers check property title validity, real surveyors chart the physical earth, and specialized property management companies oversee direct operations.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
         <div className="flex items-center space-x-3 border-b border-stone-200 pb-4">
           <Landmark className="w-5 h-5 text-[#18452E]" />
           <div>
-            <h3 className="font-display font-black text-[#18452E] text-sm uppercase tracking-wider">
+            <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase tracking-wider">
               Regulatory Commitments &amp; Authorisations
             </h3>
             <p className="text-[10px] text-stone-500 mt-0.5">We operate strictly under authorized Nigerian real estate regulatory frameworks.</p>
@@ -142,32 +142,32 @@ export default function AboutPage({ navigate }: AboutPageProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs font-sans">
           <div className="space-y-1.5 p-4 bg-[#F0F8F4] rounded-xl border border-[#18452E]/10">
-            <h4 className="font-bold text-[#18452E] tracking-normal font-display">CAC Compliance Vow</h4>
-            <p className="text-#6B7280 text-[11px] leading-relaxed font-light">
+            <h4 className="font-semibold text-[#18452E] tracking-normal font-display">CAC Compliance Vow</h4>
+            <p className="text-#6B7280 text-[11px] leading-relaxed font-normal">
               Unity Homes &amp; Properties Ltd is duly incorporated with the Corporate Affairs Commission under Registered Charter Number: <strong>RC-1849120</strong>, operating with authorized legal power.
             </p>
           </div>
           <div className="space-y-1.5 p-4 bg-[#F0F8F4] rounded-xl border border-[#18452E]/10">
-            <h4 className="font-bold text-[#18452E] tracking-normal font-display">LASRERA Registered Frameworks</h4>
-            <p className="text-#6B7280 text-[11px] leading-relaxed font-light">
+            <h4 className="font-semibold text-[#18452E] tracking-normal font-display">LASRERA Registered Frameworks</h4>
+            <p className="text-#6B7280 text-[11px] leading-relaxed font-normal">
               We operate in full alignment with the Lagos State Real Estate Regulatory Authority. All listings are subject to the LASRERA fair tenancy practices act guidelines.
             </p>
           </div>
           <div className="space-y-1.5 p-4 bg-[#F0F8F4] rounded-xl border border-[#18452E]/10">
-            <h4 className="font-bold text-[#18452E] tracking-normal font-display">ESVARBON Valuer Access</h4>
-            <p className="text-#6B7280 text-[11px] leading-relaxed font-light">
+            <h4 className="font-semibold text-[#18452E] tracking-normal font-display">ESVARBON Valuer Access</h4>
+            <p className="text-#6B7280 text-[11px] leading-relaxed font-normal">
               Our partner properties are evaluated by professionals certified in compliance with the Estate Surveyors and Valuers Registration Board of Nigeria, preventing fake appraisals.
             </p>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between gap-4 items-center bg-stone-50 p-4 rounded-xl border border-stone-200">
-          <p className="text-[11px] text-#6B7280 font-light text-center sm:text-left">
+          <p className="text-[11px] text-#6B7280 font-normal text-center sm:text-left">
             Verify our active subscription licensing fees details or join our partner networks.
           </p>
           <button
             onClick={() => navigate('/pricing-and-services')}
-            className="px-5 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-bold rounded-xl shadow-md transition shrink-0 cursor-pointer"
+            className="px-5 py-2.5 bg-[#18452E] hover:bg-[#18452E] text-white text-xs font-semibold rounded-xl shadow-md transition shrink-0 cursor-pointer"
           >
             Pricing and Services
           </button>

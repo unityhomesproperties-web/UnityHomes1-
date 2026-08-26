@@ -735,7 +735,7 @@ export default function PmcDashboard({
           {/* AREA 1: HOME */}
           <button
             onClick={() => setActiveTab('Portfolio')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Portfolio', 'PortfolioHealth'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -747,7 +747,7 @@ export default function PmcDashboard({
           {/* AREA 2: PROPERTIES */}
           <button
             onClick={() => setActiveTab('Clients')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Clients', 'TenantIntelligence', 'LeaseRenewal'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -759,7 +759,7 @@ export default function PmcDashboard({
           {/* AREA 3: MONEY */}
           <button
             onClick={() => setActiveTab('Payments')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Payments', 'ServiceCharges', 'AICollection', 'Subscription'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -771,7 +771,7 @@ export default function PmcDashboard({
           {/* AREA 4: OPERATIONS */}
           <button
             onClick={() => setActiveTab('Maintenance')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer ${
               ['Maintenance', 'Staff', 'Reports'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -783,7 +783,7 @@ export default function PmcDashboard({
           {/* AREA 5: MORE */}
           <button
             onClick={() => setActiveTab('Broadcast')}
-            className={`py-2.5 px-3 font-display text-xs font-bold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
+            className={`py-2.5 px-3 font-display text-xs font-semibold rounded-2xl border text-center transition cursor-pointer col-span-2 sm:col-span-1 ${
               ['Broadcast'].includes(activeTab)
                 ? 'bg-[#18452E] text-white border-[#0E2F1F] shadow-sm'
                 : 'bg-white border-stone-200 text-#132A1D hover:bg-stone-50'
@@ -799,7 +799,7 @@ export default function PmcDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Portfolio')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Portfolio' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -807,7 +807,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('PortfolioHealth')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'PortfolioHealth' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -820,7 +820,7 @@ export default function PmcDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Clients')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Clients' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -828,7 +828,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('TenantIntelligence')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'TenantIntelligence' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -836,7 +836,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('LeaseRenewal')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'LeaseRenewal' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -849,7 +849,7 @@ export default function PmcDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Payments')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Payments' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -857,7 +857,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('ServiceCharges')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'ServiceCharges' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -865,7 +865,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('AICollection')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'AICollection' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -873,7 +873,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Subscription')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Subscription' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -886,7 +886,7 @@ export default function PmcDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Maintenance')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Maintenance' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -894,7 +894,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('WasteComplaints')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'WasteComplaints' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -902,7 +902,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Staff')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Staff' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -910,7 +910,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Reports')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl transition cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl transition cursor-pointer ${
                   activeTab === 'Reports' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -923,7 +923,7 @@ export default function PmcDashboard({
             <>
               <button 
                 onClick={() => setActiveTab('Broadcast')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Broadcast' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -931,7 +931,7 @@ export default function PmcDashboard({
               </button>
               <button 
                 onClick={() => setActiveTab('Support')} 
-                className={`px-3 py-1.5 font-mono text-[11px] font-bold rounded-xl cursor-pointer ${
+                className={`px-3 py-1.5 font-mono text-[11px] font-semibold rounded-xl cursor-pointer ${
                   activeTab === 'Support' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
@@ -971,10 +971,10 @@ export default function PmcDashboard({
               <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
                 MANAGED PORTFOLIO VALUE
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-black text-white mt-1">
+              <h2 className="text-3xl md:text-5xl font-display font-semibold text-white mt-1">
                 ₦{pmcTotalPortfolioValue.toLocaleString()}
               </h2>
-              <span className="text-[10px] text-teal-300/80 font-light block mt-1 tracking-normal">
+              <span className="text-[10px] text-teal-300/80 font-normal block mt-1 tracking-normal">
                 Aggregate expected contract rent value across other represented landlord client files managed.
               </span>
             </div>
@@ -982,8 +982,8 @@ export default function PmcDashboard({
             {/* METRICS GRID */}
             <div className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto pb-2 pt-4 border-t border-teal-900 scrollbar-thin">
               <div className="bg-teal-900/50 border border-teal-850 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
-                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-bold">Occupancy Rate</span>
-                <span className="text-xl font-display font-bold mt-1 block">{pmcOccupancyRate}% Occupied</span>
+                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-semibold">Occupancy Rate</span>
+                <span className="text-xl font-display font-semibold mt-1 block">{pmcOccupancyRate}% Occupied</span>
                 <div className="w-full bg-teal-800 h-1.5 mt-2 rounded-full overflow-hidden">
                   <div className="bg-[#C9A84C] h-full" style={{ width: `${pmcOccupancyRate}%` }}></div>
                 </div>
@@ -996,15 +996,15 @@ export default function PmcDashboard({
                   <span className="text-[9px] uppercase font-mono text-teal-300 block mb-2">Rent Payment Metrics</span>
                   <div className="grid grid-cols-3 gap-2">
                     <div>
-                      <span className="text-[8px] uppercase font-mono text-teal-400 block font-bold">Collected</span>
+                      <span className="text-[8px] uppercase font-mono text-teal-400 block font-semibold">Collected</span>
                       <strong className="text-xs font-display block mt-0.5">₦{pmcTotalCollected.toLocaleString()}</strong>
                     </div>
                     <div>
-                      <span className="text-[8px] uppercase font-mono text-rose-300 block font-bold">Outstanding</span>
+                      <span className="text-[8px] uppercase font-mono text-rose-300 block font-semibold">Outstanding</span>
                       <strong className="text-xs font-display block text-rose-300 mt-0.5">₦{pmcTotalOutstanding.toLocaleString()}</strong>
                     </div>
                     <div>
-                      <span className="text-[8px] uppercase font-mono text-[#C9A84C] block font-bold">Rate</span>
+                      <span className="text-[8px] uppercase font-mono text-[#C9A84C] block font-semibold">Rate</span>
                       <strong className="text-xs font-display block text-[#C9A84C] mt-0.5">
                         {pmcTotalCollected + pmcTotalOutstanding > 0 
                           ? Math.round((pmcTotalCollected / (pmcTotalCollected + pmcTotalOutstanding)) * 100) 
@@ -1017,7 +1017,7 @@ export default function PmcDashboard({
 
               <div className="bg-teal-900/50 border border-teal-850 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
                 <span className="text-[9px] uppercase font-mono text-rose-300 block">Rent Outstanding Balance</span>
-                <span className="text-xl font-display font-bold mt-1 block text-rose-300">₦{pmcTotalOutstanding.toLocaleString()}</span>
+                <span className="text-xl font-display font-semibold mt-1 block text-rose-300">₦{pmcTotalOutstanding.toLocaleString()}</span>
                 <span className="text-[9px] text-red-300 font-mono italic leading-none">&bull; Due Soon/Overdue</span>
               </div>
             </div>
@@ -1026,8 +1026,8 @@ export default function PmcDashboard({
           {/* PMC SUBSCRIPTION CAPACITY PROGRESS BAR */}
           <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] space-y-3 shadow-sm animate-fade-in">
             <div className="flex justify-between items-center text-xs">
-              <span className="font-display font-bold text-teal-950 uppercase tracking-wider">PMC Managed Properties Capacity Tracker</span>
-              <span className="font-mono font-bold text-#6B7280">
+              <span className="font-display font-semibold text-teal-950 uppercase tracking-wider">PMC Managed Properties Capacity Tracker</span>
+              <span className="font-mono font-semibold text-#6B7280">
                 {(managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length} of {((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)} properties ({Math.round(((managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length / ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)) * 100)}%)
               </span>
             </div>
@@ -1048,9 +1048,9 @@ export default function PmcDashboard({
             {Math.round(((managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length / ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)) * 100) >= 70 && (
               <p className={`text-xs mt-1 animate-pulse ${
                 Math.round(((managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length / ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)) * 100) >= 100
-                  ? "text-rose-600 font-black uppercase"
+                  ? "text-rose-600 font-semibold uppercase"
                   : Math.round(((managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length / ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)) * 100) >= 90
-                  ? "text-rose-600 font-bold"
+                  ? "text-rose-600 font-semibold"
                   : "text-amber-600 font-medium"
               }`}>
                 &bull; {
@@ -1073,7 +1073,7 @@ export default function PmcDashboard({
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="font-display font-black text-xl text-#132A1D uppercase tracking-tight">
+                  <h3 className="font-display font-semibold text-xl text-#132A1D uppercase tracking-tight">
                     Subscription Limit Reached
                   </h3>
                   <p className="text-xs text-#6B7280 leading-relaxed">
@@ -1087,13 +1087,13 @@ export default function PmcDashboard({
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-extrabold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
+                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
                   <button
                     onClick={() => setShowLimitModal(false)}
-                    className="w-full py-3 bg-white hover:bg-stone-50 text-#6B7280 border border-stone-200 text-xs font-extrabold rounded-xl transition cursor-pointer"
+                    className="w-full py-3 bg-white hover:bg-stone-50 text-#6B7280 border border-stone-200 text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Cancel
                   </button>
@@ -1109,10 +1109,10 @@ export default function PmcDashboard({
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#18452E] font-semibold">
                   MONEY AWAITING REMITTANCE
                 </span>
-                <h3 className="text-2xl md:text-3xl font-display font-black text-#132A1D mt-1">
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-#132A1D mt-1">
                   ₦{awaitingRemittanceAmt.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </h3>
-                <p className="text-[10px] text-#6B7280 font-light mt-0.5">
+                <p className="text-[10px] text-#6B7280 font-normal mt-0.5">
                   Aggregate ledger delta between verified customer payments and processed landlord disbursements.
                 </p>
               </div>
@@ -1120,12 +1120,12 @@ export default function PmcDashboard({
               {/* Dynamic status badge */}
               <div>
                 {awaitingRemittanceAmt > 0 ? (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200 font-mono">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-semibold bg-rose-50 text-rose-700 border border-rose-200 font-mono">
                     <span className="w-2 h-2 rounded-full bg-rose-600 mr-1.5 animate-pulse"></span>
                     ₦{awaitingRemittanceAmt.toLocaleString(undefined, { maximumFractionDigits: 0 })} AWAITING
                   </span>
                 ) : (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono">
                     <span className="w-2 h-2 rounded-full bg-emerald-600 mr-1.5"></span>
                     ALL REMITTANCES SETTLED
                   </span>
@@ -1136,8 +1136,8 @@ export default function PmcDashboard({
             {/* THE THREE FIGURES GRID */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-stone-200 pt-4">
               <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4">
-                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-bold">Total Collected</span>
-                <span className="text-lg font-display font-bold text-#132A1D mt-1 block">
+                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-semibold">Total Collected</span>
+                <span className="text-lg font-display font-semibold text-#132A1D mt-1 block">
                   ₦{totalCollectedAcrossPortfolio.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </span>
                 <span className="text-[9px] text-stone-400 font-mono block mt-1">
@@ -1146,8 +1146,8 @@ export default function PmcDashboard({
               </div>
 
               <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4">
-                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-bold">Already Remitted</span>
-                <span className="text-lg font-display font-bold text-emerald-700 mt-1 block">
+                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-semibold">Already Remitted</span>
+                <span className="text-lg font-display font-semibold text-emerald-700 mt-1 block">
                   ₦{totalAlreadyRemittedToLandlords.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </span>
                 <span className="text-[9px] text-stone-400 font-mono block mt-1">
@@ -1156,8 +1156,8 @@ export default function PmcDashboard({
               </div>
 
               <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4">
-                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-bold">Net Awaiting Remittance</span>
-                <span className="text-lg font-display font-bold text-rose-600 mt-1 block">
+                <span className="text-[9px] uppercase font-mono text-#6B7280 block font-semibold">Net Awaiting Remittance</span>
+                <span className="text-lg font-display font-semibold text-rose-600 mt-1 block">
                   ₦{awaitingRemittanceAmt.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </span>
                 <span className="text-[9px] text-stone-400 font-mono block mt-1 font-semibold">
@@ -1204,7 +1204,7 @@ export default function PmcDashboard({
                 <div className="bg-amber-50/60 border border-amber-200 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs relative overflow-hidden">
                   <div className="flex justify-between items-start">
                     <div className="space-y-1">
-                      <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-bold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
+                      <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-semibold flex items-center gap-1"><Award className="w-3.5 h-3.5" /> Top Performing Properties</span>
                     </div>
                     <select 
                       value={perfSortCriteria} 
@@ -1223,12 +1223,12 @@ export default function PmcDashboard({
                       return (
                         <div key={perf.b.id} className="flex gap-4 items-center bg-white p-3 rounded-xl border border-amber-100 shadow-sm relative">
                           {idx === 0 && (
-                             <div className="absolute -top-2 -right-2 bg-amber-400 text-#132A1D font-bold px-2 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm">
+                             <div className="absolute -top-2 -right-2 bg-amber-400 text-#132A1D font-semibold px-2 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm">
                                Top Performer
                              </div>
                           )}
                           {isLowest && (
-                             <div className="absolute -top-2 -right-2 bg-rose-100 text-rose-700 font-bold px-2.5 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm border border-rose-200 font-semibold">
+                             <div className="absolute -top-2 -right-2 bg-rose-100 text-rose-700 font-semibold px-2.5 py-0.5 rounded-full text-[8px] uppercase font-mono tracking-widest shadow-sm border border-rose-200 font-semibold">
                                Needs Attention
                              </div>
                           )}
@@ -1238,7 +1238,7 @@ export default function PmcDashboard({
                             className="w-12 h-12 rounded-lg object-cover border border-amber-200"
                           />
                           <div className="text-xs flex-1">
-                            <h4 className="font-display font-black text-#132A1D text-xs uppercase leading-tight">{perf.b.name}</h4>
+                            <h4 className="font-display font-semibold text-#132A1D text-xs uppercase leading-tight">{perf.b.name}</h4>
                             <div className="grid grid-cols-2 gap-2 mt-1 text-[9px] text-#6B7280 font-mono">
                               <div>Occ: <strong className="text-#132A1D">{Math.round(perf.occ)}%</strong></div>
                               <div>Pay: <strong className="text-#132A1D">{Math.round(perf.pay)}%</strong></div>
@@ -1258,16 +1258,16 @@ export default function PmcDashboard({
                 <div className="flex items-center justify-between border-b border-stone-200 pb-2.5">
                   <div className="flex items-center space-x-2">
                     <AlertCircle className="w-4.5 h-4.5 text-rose-600" />
-                    <h4 className="font-display font-extrabold text-xs text-#132A1D uppercase">Tenant Complaints</h4>
+                    <h4 className="font-display font-semibold text-xs text-#132A1D uppercase">Tenant Complaints</h4>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs flex justify-between items-center">
                     <div>
                       <strong className="text-teal-950 block">Plumbing / Water</strong>
-                      <span className="text-#6B7280 font-light block mt-0.5">Reported by: Kola Abiodun</span>
+                      <span className="text-#6B7280 font-normal block mt-0.5">Reported by: Kola Abiodun</span>
                     </div>
-                    <span className="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-bold text-[9px] uppercase tracking-wider">Under Review</span>
+                    <span className="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-semibold text-[9px] uppercase tracking-wider">Under Review</span>
                   </div>
                   <div className="text-[9px] font-mono text-stone-400">
                     Complaints are mediated exclusively by Unity Homes admin. Direct messaging is disabled to maintain zero-wahala guarantees.
@@ -1282,8 +1282,8 @@ export default function PmcDashboard({
             <div className="space-y-6 animate-fade-in">
               <div className="flex justify-between items-center flex-wrap gap-4 border-b pb-4">
                 <div>
-                  <h3 className="font-display font-black text-teal-950 uppercase text-sm">Managed Buildings Portfolio</h3>
-                  <p className="text-#6B7280 font-light leading-relaxed text-xs">
+                  <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Managed Buildings Portfolio</h3>
+                  <p className="text-#6B7280 font-normal leading-relaxed text-xs">
                     Every building listed here is synchronized with your management license. Select a building below to review internal unit configurations and occupant parameters.
                   </p>
                 </div>
@@ -1300,7 +1300,7 @@ export default function PmcDashboard({
                     }}
                     disabled={(managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length >= ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)}
                     title={(managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length >= ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10) ? "Subscription limit reached" : ""}
-                    className={`px-4 py-2.5 text-xs font-extrabold rounded-xl flex items-center space-x-1 cursor-pointer transition ${
+                    className={`px-4 py-2.5 text-xs font-semibold rounded-xl flex items-center space-x-1 cursor-pointer transition ${
                       (managementCompanyProperties || []).filter(m => m.company_id === activePmcName && m.is_active === true).length >= ((subscriptions || []).find(s => s.entityId === activePmcName)?.property_limit || 10)
                         ? "bg-stone-50 text-stone-400 border border-stone-200 cursor-not-allowed"
                         : "bg-teal-800 text-white hover:bg-teal-950 shadow-md shadow-teal-950/10"
@@ -1314,12 +1314,12 @@ export default function PmcDashboard({
 
               {showAddPmcProperty && (
                 <div className="bg-white border border-stone-200 p-6 rounded-[var(--radius-large)] max-w-xl space-y-4 animate-scale-up">
-                  <h4 className="font-display font-black text-xs text-teal-900 uppercase border-b pb-2">
+                  <h4 className="font-display font-semibold text-xs text-teal-900 uppercase border-b pb-2">
                     Register New Property Under Management License
                   </h4>
                   <form onSubmit={handleAddPmcPropertySubmit} className="space-y-3 text-xs">
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">PROPERTY NAME</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">PROPERTY NAME</label>
                       <input 
                         type="text" 
                         required
@@ -1330,7 +1330,7 @@ export default function PmcDashboard({
                       />
                     </div>
                     <div>
-                      <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">STREET ADDRESS</label>
+                      <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">STREET ADDRESS</label>
                       <input 
                         type="text" 
                         required
@@ -1341,10 +1341,10 @@ export default function PmcDashboard({
                       />
                     </div>
                     <div className="flex gap-2 pt-2">
-                      <button type="submit" className="px-4 py-2 bg-teal-800 text-white rounded-xl text-xs font-bold cursor-pointer hover:bg-teal-950 transition">
+                      <button type="submit" className="px-4 py-2 bg-teal-800 text-white rounded-xl text-xs font-semibold cursor-pointer hover:bg-teal-950 transition">
                         Confirm Registration
                       </button>
-                      <button type="button" onClick={() => setShowAddPmcProperty(false)} className="px-4 py-2 bg-stone-50 text-#6B7280 rounded-xl text-xs font-bold cursor-pointer hover:bg-stone-200 transition">
+                      <button type="button" onClick={() => setShowAddPmcProperty(false)} className="px-4 py-2 bg-stone-50 text-#6B7280 rounded-xl text-xs font-semibold cursor-pointer hover:bg-stone-200 transition">
                         Cancel
                       </button>
                     </div>
@@ -1374,17 +1374,17 @@ export default function PmcDashboard({
                           alt={bld.name} 
                           className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                         />
-                        <div className="absolute top-3 right-3 bg-teal-950/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase text-white tracking-widest">
+                        <div className="absolute top-3 right-3 bg-teal-950/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold uppercase text-white tracking-widest">
                           {bld.blockLabel}
                         </div>
                       </div>
 
                       <div className="p-4 flex-1 flex flex-col justify-between space-y-4">
                         <div>
-                          <h4 className="font-display font-extrabold text-teal-950 text-sm md:text-base leading-tight group-hover:text-teal-700 transition">
+                          <h4 className="font-display font-semibold text-teal-950 text-sm md:text-base leading-tight group-hover:text-teal-700 transition">
                             {bld.name}
                           </h4>
-                          <p className="text-[11px] text-stone-400 mt-1 leading-normal font-light">
+                          <p className="text-[11px] text-stone-400 mt-1 leading-normal font-normal">
                             {bld.address}
                           </p>
                         </div>
@@ -1392,15 +1392,15 @@ export default function PmcDashboard({
                         <div className="grid grid-cols-3 gap-2 border-t border-teal-50 pt-3 text-center text-xs">
                           <div>
                             <span className="text-[9px] uppercase font-mono text-stone-400 block">Total</span>
-                            <strong className="text-#132A1D font-bold block">{totalUnitsCount} Units</strong>
+                            <strong className="text-#132A1D font-semibold block">{totalUnitsCount} Units</strong>
                           </div>
                           <div>
                             <span className="text-[9px] uppercase font-mono text-teal-600 block">Occupied</span>
-                            <strong className="text-teal-700 font-bold block">{occupiedCount} Flats</strong>
+                            <strong className="text-teal-700 font-semibold block">{occupiedCount} Flats</strong>
                           </div>
                           <div>
                             <span className="text-[9px] uppercase font-mono text-stone-400 block">Vacant</span>
-                            <strong className="text-#6B7280 font-bold block">{vacantCount} Flats</strong>
+                            <strong className="text-#6B7280 font-semibold block">{vacantCount} Flats</strong>
                           </div>
                         </div>
                       </div>
@@ -1420,10 +1420,10 @@ export default function PmcDashboard({
                   <ArrowLeft className="w-4 h-4" />
                 </button>
                 <div>
-                  <span className="text-[9px] uppercase font-mono text-teal-600 font-bold tracking-wider block">
+                  <span className="text-[9px] uppercase font-mono text-teal-600 font-semibold tracking-wider block">
                     Building Unit Allocations
                   </span>
-                  <h3 className="font-display font-black text-sm text-teal-950 uppercase">
+                  <h3 className="font-display font-semibold text-sm text-teal-950 uppercase">
                     {(buildings && buildings.length > 0 ? buildings : initialBuildings).find(b => b.id === selectedBuildingId)?.name}
                   </h3>
                 </div>
@@ -1444,14 +1444,14 @@ export default function PmcDashboard({
                           alt={u.propertyName} 
                           className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                         />
-                        <div className="absolute top-3 right-3 bg-teal-950/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-bold uppercase text-white tracking-widest">
+                        <div className="absolute top-3 right-3 bg-teal-950/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold uppercase text-white tracking-widest">
                           {u.unitNumber}
                         </div>
                       </div>
 
                       <div className="p-4 space-y-3.5 flex-1 flex flex-col justify-between">
                         <div>
-                          <h4 className="font-display font-extrabold text-teal-950 text-sm md:text-base leading-tight">
+                          <h4 className="font-display font-semibold text-teal-950 text-sm md:text-base leading-tight">
                             {u.propertyName}
                           </h4>
                           <p className="text-[9px] text-teal-600 font-mono tracking-wider mt-1">{getCollectionAccountName(u.propertyName).split(' (AC')[0]}</p>
@@ -1465,10 +1465,10 @@ export default function PmcDashboard({
                           <div className="text-right">
                             <span className="text-[9px] uppercase font-mono text-stone-400 block">Payout value</span>
                             <div className="flex items-center space-x-1.5 justify-end">
-                              <span className={`px-2 py-0.5 rounded text-[8px] font-mono font-bold uppercase ${
+                              <span className={`px-2 py-0.5 rounded text-[8px] font-mono font-semibold uppercase ${
                                 u.paymentStatus === 'Paid' ? 'bg-emerald-100 text-[#18452E]' : 'bg-amber-100 text-amber-900'
                               }`}>{u.paymentStatus}</span>
-                              <strong className="font-mono font-black text-teal-700">₦{u.rentAmount.toLocaleString()}</strong>
+                              <strong className="font-mono font-semibold text-teal-700">₦{u.rentAmount.toLocaleString()}</strong>
                             </div>
                           </div>
                         </div>
@@ -1486,9 +1486,9 @@ export default function PmcDashboard({
       {activeTab === 'Clients' && (
         <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-6 animate-fade-in">
           <div>
-            <h3 className="font-display font-black text-teal-950 uppercase text-sm">Landlord Client Parameters</h3>
+            <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Landlord Client Parameters</h3>
             {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-            <p className="text-#6B7280 font-light mt-1">
+            <p className="text-#6B7280 font-normal mt-1">
               Track payouts, payment logs, and review tenant dossiers for property owners represented under your management license:
             </p>
           </div>
@@ -1505,7 +1505,7 @@ export default function PmcDashboard({
               />
               <button
                 onClick={() => setIsClientsExportOpen(true)}
-                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
+                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>Export Client Records</span>
@@ -1637,9 +1637,9 @@ export default function PmcDashboard({
                     <div className="flex-1">
                       <div className="flex justify-between items-center border-b border-stone-200 pb-3">
                         <div>
-                          <h4 className="font-display font-black text-[#18452E] text-sm uppercase flex items-center gap-2 flex-wrap">
+                          <h4 className="font-display font-semibold text-[#18452E] text-sm uppercase flex items-center gap-2 flex-wrap">
                             <span>{landlordName}</span>
-                            <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] rounded-full font-mono font-bold tracking-wider uppercase">
+                            <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[9px] rounded-full font-mono font-semibold tracking-wider uppercase">
                               {feePercentageLabel}
                             </span>
                           </h4>
@@ -1650,15 +1650,15 @@ export default function PmcDashboard({
                         {/* Money Awaiting Remittance Card included inline as per Step 3 focused view */}
                         <div className="text-right flex items-center space-x-3 bg-stone-50 p-2 rounded-lg border border-stone-200">
                            <div className="text-right">
-                             <span className="block text-[9px] uppercase font-bold text-stone-400">Awaiting Remittance</span>
-                             <span className="block font-mono font-black text-#132A1D">₦{awaitingRemittance.toLocaleString()}</span>
+                             <span className="block text-[9px] uppercase font-semibold text-stone-400">Awaiting Remittance</span>
+                             <span className="block font-mono font-semibold text-#132A1D">₦{awaitingRemittance.toLocaleString()}</span>
                            </div>
                            {awaitingRemittance > 0 ? (
-                             <span className="px-2 py-1 bg-red-100 text-red-800 text-[10px] font-bold uppercase rounded tracking-wider shadow-sm border border-red-200">
+                             <span className="px-2 py-1 bg-red-100 text-red-800 text-[10px] font-semibold uppercase rounded tracking-wider shadow-sm border border-red-200">
                                Action Required
                              </span>
                            ) : (
-                             <span className="px-2 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase rounded tracking-wider shadow-sm border border-emerald-200">
+                             <span className="px-2 py-1 bg-emerald-100 text-emerald-800 text-[10px] font-semibold uppercase rounded tracking-wider shadow-sm border border-emerald-200">
                                Nothing Outstanding
                              </span>
                            )}
@@ -1667,29 +1667,29 @@ export default function PmcDashboard({
                       {/* Landlord Transparency Center figures (Step 3) */}
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
                         <div className="bg-stone-50 p-3 rounded-xl border border-stone-200">
-                          <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Portfolio Value</span>
-                          <span className="block font-mono font-bold text-#132A1D text-xs">₦{expectedRent.toLocaleString()}</span>
+                          <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Portfolio Value</span>
+                          <span className="block font-mono font-semibold text-#132A1D text-xs">₦{expectedRent.toLocaleString()}</span>
                         </div>
                         <div className="bg-stone-50 p-3 rounded-xl border border-stone-200">
-                          <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Collected Rent</span>
-                          <span className="block font-mono font-bold text-#132A1D text-xs">₦{collectedRent.toLocaleString()}</span>
+                          <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Collected Rent</span>
+                          <span className="block font-mono font-semibold text-#132A1D text-xs">₦{collectedRent.toLocaleString()}</span>
                         </div>
                         <div className="bg-stone-50 p-3 rounded-xl border border-stone-200">
-                          <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Remitted Rent</span>
-                          <span className="block font-mono font-bold text-#132A1D text-xs">₦{actualRemitted.toLocaleString()}</span>
+                          <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Remitted Rent</span>
+                          <span className="block font-mono font-semibold text-#132A1D text-xs">₦{actualRemitted.toLocaleString()}</span>
                         </div>
                         <div className="bg-stone-50 p-3 rounded-xl border border-stone-200">
-                          <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Management Fee</span>
-                          <span className="block font-mono font-bold text-#132A1D text-xs">₦{managementFee.toLocaleString()}</span>
+                          <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Management Fee</span>
+                          <span className="block font-mono font-semibold text-#132A1D text-xs">₦{managementFee.toLocaleString()}</span>
                         </div>
                         <div className="bg-stone-50 p-3 rounded-xl border border-stone-200 flex flex-col justify-center items-start">
-                          <span className="block text-[9px] uppercase font-bold text-#6B7280 mb-1">Status</span>
+                          <span className="block text-[9px] uppercase font-semibold text-#6B7280 mb-1">Status</span>
                           {collectedRent === 0 ? (
-                            <span className="text-[10px] bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-bold uppercase border border-stone-200">No Payments Recorded</span>
+                            <span className="text-[10px] bg-stone-50 text-#6B7280 px-2 py-0.5 rounded font-semibold uppercase border border-stone-200">No Payments Recorded</span>
                           ) : isFullyAccounted ? (
-                            <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase border border-emerald-200">{'Fully Accounted'}</span>
+                            <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold uppercase border border-emerald-200">{'Fully Accounted'}</span>
                           ) : (
-                            <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase border border-amber-200">Discrepancy</span>
+                            <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold uppercase border border-amber-200">Discrepancy</span>
                           )}
                         </div>
                       </div>
@@ -1707,7 +1707,7 @@ export default function PmcDashboard({
                         </div>
                       ) : (
                         <div className="space-y-3">
-                          <h5 className="text-[10px] uppercase font-bold text-#6B7280 mb-2">Tenant Roster</h5>
+                          <h5 className="text-[10px] uppercase font-semibold text-#6B7280 mb-2">Tenant Roster</h5>
                           {unitsInLandlord.filter(u => u.paymentStatus !== 'Vacant').map(u => {
                               let tenantDetails;
                               try {
@@ -1729,24 +1729,24 @@ export default function PmcDashboard({
                                   className="w-10 h-10 rounded-full object-cover border border-stone-200"
                                 />
                                 <div>
-                                  <strong className="block text-[#18452E] font-bold text-sm">{u.tenantName}</strong>
+                                  <strong className="block text-[#18452E] font-semibold text-sm">{u.tenantName}</strong>
                                   <span className="block text-#6B7280 text-[10px] mt-0.5">{u.propertyName} ({u.unitNumber})</span>
                                 </div>
                               </div>
                               <div className="flex items-center space-x-4">
                                 {u.paymentStatus === 'Paid' ? (
-                                  <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold uppercase">Paid</span>
+                                  <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-semibold uppercase">Paid</span>
                                 ) : u.paymentStatus === 'Due Soon' ? (
-                                  <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-bold uppercase">Due Soon</span>
+                                  <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-semibold uppercase">Due Soon</span>
                                 ) : u.paymentStatus === 'Overdue' ? (
                                   <div className="text-right">
-                                    <span className="text-[10px] bg-red-100 text-red-800 px-2 py-1 rounded font-bold uppercase block mb-1">Overdue</span>
-                                    <span className="text-xs font-mono font-black text-red-700 block">₦{u.rentAmount.toLocaleString()}</span>
+                                    <span className="text-[10px] bg-red-100 text-red-800 px-2 py-1 rounded font-semibold uppercase block mb-1">Overdue</span>
+                                    <span className="text-xs font-mono font-semibold text-red-700 block">₦{u.rentAmount.toLocaleString()}</span>
                                   </div>
                                 ) : u.paymentStatus === 'Lease Expiring Soon' ? (
-                                  <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-bold uppercase">Expiring</span>
+                                  <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded font-semibold uppercase">Expiring</span>
                                 ) : (
-                                  <span className="text-[10px] bg-stone-50 text-#132A1D px-2 py-1 rounded font-bold uppercase">{u.paymentStatus}</span>
+                                  <span className="text-[10px] bg-stone-50 text-#132A1D px-2 py-1 rounded font-semibold uppercase">{u.paymentStatus}</span>
                                 )}
                               </div>
                             </div>
@@ -1768,8 +1768,8 @@ export default function PmcDashboard({
           </div>
           {/* PRIVATE REPRESENTED TENANT DOSSIER MATRIX (Fix Seven) */}
           <div className="space-y-3 pt-4 border-t border-teal-50">
-            <h4 className="font-display font-black text-teal-950 uppercase text-xs tracking-wider">Represented Tenant Dossiers</h4>
-            <p className="text-stone-400 text-xs font-light">Directly review complete dossiers, verified guarantor parameters, and historical clearances:</p>
+            <h4 className="font-display font-semibold text-teal-950 uppercase text-xs tracking-wider">Represented Tenant Dossiers</h4>
+            <p className="text-stone-400 text-xs font-normal">Directly review complete dossiers, verified guarantor parameters, and historical clearances:</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {pmcManagedUnits.map((u) => {
@@ -1796,7 +1796,7 @@ export default function PmcDashboard({
                       <span className="text-[10px] text-stone-400 block">{u.propertyName} ({u.unitNumber})</span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono text-teal-800 bg-teal-50 px-2.5 py-1 rounded-xl font-bold uppercase">
+                  <span className="text-[10px] font-mono text-teal-800 bg-teal-50 px-2.5 py-1 rounded-xl font-semibold uppercase">
                     Review File
                   </span>
                 </div>
@@ -1817,8 +1817,8 @@ export default function PmcDashboard({
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
                 {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-                <h3 className="font-display font-black text-teal-950 uppercase text-sm">Rent confirmed payments log</h3>
-                <p className="text-#6B7280 font-light text-xs mt-0.5">Mirror of active confirmed rent entries under validated verification:</p>
+                <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Rent confirmed payments log</h3>
+                <p className="text-#6B7280 font-normal text-xs mt-0.5">Mirror of active confirmed rent entries under validated verification:</p>
               </div>
               <div className="flex items-center space-x-2 bg-teal-50/60 px-4 py-2.5 rounded-2xl border border-teal-100">
                 <input 
@@ -1828,7 +1828,7 @@ export default function PmcDashboard({
                   onChange={(e) => setShowInstallmentOnly(e.target.checked)}
                   className="w-4 h-4 text-teal-700 border-stone-300 rounded focus:ring-teal-500 cursor-pointer"
                 />
-                <label htmlFor="installment-filter-checkbox" className="text-xs font-bold text-teal-950 cursor-pointer select-none">
+                <label htmlFor="installment-filter-checkbox" className="text-xs font-semibold text-teal-950 cursor-pointer select-none">
                   Show Installment Tenancies Only
                 </label>
               </div>
@@ -1844,7 +1844,7 @@ export default function PmcDashboard({
               />
               <button
                 onClick={() => setIsPaymentsExportOpen(true)}
-                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
+                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>Export Payments</span>
@@ -1854,7 +1854,7 @@ export default function PmcDashboard({
                   setPaymentsBulkMode(!paymentsBulkMode);
                   setSelectedPaymentIds([]);
                 }}
-                className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition ${
+                className={`px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition ${
                   paymentsBulkMode ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-stone-50 border border-stone-200 text-#132A1D hover:bg-stone-150'
                 }`}
               >
@@ -1946,7 +1946,7 @@ export default function PmcDashboard({
           {paymentsBulkMode && (
             <div className="bg-amber-50 border border-amber-300 rounded-[var(--radius-large)] p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
               <div>
-                <strong className="text-amber-950 font-bold block text-xs uppercase font-mono">BULK PAYMENT OPERATIONS ACTIVE</strong>
+                <strong className="text-amber-950 font-semibold block text-xs uppercase font-mono">BULK PAYMENT OPERATIONS ACTIVE</strong>
                 <span className="text-[10px] text-amber-800">Selected <strong className="font-mono">{selectedPaymentIds.length}</strong> items.</span>
               </div>
               <div className="flex gap-2">
@@ -1956,7 +1956,7 @@ export default function PmcDashboard({
                     setSelectedPaymentIds([]);
                     setPaymentsBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Confirm &amp; Settle
                 </button>
@@ -1966,7 +1966,7 @@ export default function PmcDashboard({
                     setSelectedPaymentIds([]);
                     setPaymentsBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Send Reminders
                 </button>
@@ -1975,7 +1975,7 @@ export default function PmcDashboard({
                     setSelectedPaymentIds([]);
                     setPaymentsBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Cancel
                 </button>
@@ -1999,8 +1999,8 @@ export default function PmcDashboard({
                         <span className="block text-stone-400 text-[10px] mt-0.5">{u.unitNumber} &bull; {getCollectionAccountName(u.propertyName)}</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-mono font-bold text-[#18452E] text-base block">₦{u.rentAmount.toLocaleString()}</span>
-                        <span className="text-[9px] font-mono text-emerald-800 font-bold bg-emerald-100 rounded px-1.5 py-0.5 inline-block mt-1">Payment Confirmed</span>
+                        <span className="font-mono font-semibold text-[#18452E] text-base block">₦{u.rentAmount.toLocaleString()}</span>
+                        <span className="text-[9px] font-mono text-emerald-800 font-semibold bg-emerald-100 rounded px-1.5 py-0.5 inline-block mt-1">Payment Confirmed</span>
                       </div>
                     </div>
                   ))}
@@ -2027,18 +2027,18 @@ export default function PmcDashboard({
                 return (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-white border border-teal-100 rounded-2xl p-5 shadow-sm">
-                      <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-[#C9A84C] block">Total Annual Rent Expected</span>
-                      <strong className="text-2xl font-display font-black text-teal-950 block mt-1">₦{totalAnnualRent.toLocaleString()}</strong>
+                      <span className="text-[9px] font-mono font-semibold uppercase tracking-wider text-[#C9A84C] block">Total Annual Rent Expected</span>
+                      <strong className="text-2xl font-display font-semibold text-teal-950 block mt-1">₦{totalAnnualRent.toLocaleString()}</strong>
                       <span className="text-[10px] text-stone-400 mt-1 block">Sum of all active lease values</span>
                     </div>
                     <div className="bg-white border border-teal-100 rounded-2xl p-5 shadow-sm">
-                      <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-600 block">Total Received to Date</span>
-                      <strong className="text-2xl font-display font-black text-emerald-600 block mt-1">₦{totalReceived.toLocaleString()}</strong>
+                      <span className="text-[9px] font-mono font-semibold uppercase tracking-wider text-emerald-600 block">Total Received to Date</span>
+                      <strong className="text-2xl font-display font-semibold text-emerald-600 block mt-1">₦{totalReceived.toLocaleString()}</strong>
                       <span className="text-[10px] text-stone-400 mt-1 block">Cleared ledger collection amounts</span>
                     </div>
                     <div className="bg-white border border-teal-100 rounded-2xl p-5 shadow-sm">
-                      <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-rose-600 block">Outstanding Balance</span>
-                      <strong className="text-2xl font-display font-black text-rose-600 block mt-1">₦{outstandingBalance.toLocaleString()}</strong>
+                      <span className="text-[9px] font-mono font-semibold uppercase tracking-wider text-rose-600 block">Outstanding Balance</span>
+                      <strong className="text-2xl font-display font-semibold text-rose-600 block mt-1">₦{outstandingBalance.toLocaleString()}</strong>
                       <span className="text-[10px] text-stone-400 mt-1 block">Expected upcoming collections</span>
                     </div>
                   </div>
@@ -2061,13 +2061,13 @@ export default function PmcDashboard({
                       {/* HEADER */}
                       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 pb-3 border-b border-stone-200">
                         <div>
-                          <h4 className="font-display font-black text-teal-950 text-sm uppercase">{u.tenantName}</h4>
+                          <h4 className="font-display font-semibold text-teal-950 text-sm uppercase">{u.tenantName}</h4>
                           <span className="text-[11px] text-#6B7280 font-mono mt-0.5 block">{u.propertyName} ({u.unitNumber}) &bull; Landlord: {getLandlordName(u.propertyName)}</span>
                         </div>
                         <div className="text-right shrink-0">
                           <span className="text-[10px] font-mono text-stone-400 uppercase">Lease Term Progress</span>
                           <div className="flex items-center space-x-2 mt-1">
-                            <span className="font-mono text-xs font-bold text-teal-900">₦{(u.rentPaid || 0).toLocaleString()} / ₦{u.rentAmount.toLocaleString()} ({pctPaid}%)</span>
+                            <span className="font-mono text-xs font-semibold text-teal-900">₦{(u.rentPaid || 0).toLocaleString()} / ₦{u.rentAmount.toLocaleString()} ({pctPaid}%)</span>
                           </div>
                           <div className="w-48 bg-stone-50 h-1.5 rounded-full mt-1.5 overflow-hidden">
                             <div className="bg-teal-700 h-full" style={{ width: `${pctPaid}%` }}></div>
@@ -2094,7 +2094,7 @@ export default function PmcDashboard({
                               
                               return (
                                 <tr key={inst.id} className="border-b border-stone-50 hover:bg-stone-50/50">
-                                  <td className="py-3 font-mono font-bold text-teal-950 flex items-center">
+                                  <td className="py-3 font-mono font-semibold text-teal-950 flex items-center">
                                     {paymentsBulkMode && (
                                       <input 
                                         type="checkbox" 
@@ -2108,20 +2108,20 @@ export default function PmcDashboard({
                                     <span>Installment #{index + 1}</span>
                                   </td>
                                   <td className="py-3 font-mono text-#6B7280">{inst.dueDate}</td>
-                                  <td className="py-3 font-mono font-bold text-teal-950">₦{inst.amount.toLocaleString()}</td>
+                                  <td className="py-3 font-mono font-semibold text-teal-950">₦{inst.amount.toLocaleString()}</td>
                                   <td className="py-3">
                                     {isOverdue ? (
-                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-rose-50 text-rose-700 border border-rose-200 rounded-full text-[10px] font-bold">
+                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-rose-50 text-rose-700 border border-rose-200 rounded-full text-[10px] font-semibold">
                                         <AlertCircle className="w-3.5 h-3.5" />
                                         <span>Overdue ({overdueDays} Days)</span>
                                       </span>
                                     ) : inst.status === 'Paid' ? (
-                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full text-[10px] font-bold">
+                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full text-[10px] font-semibold">
                                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                                         <span>Paid & Cleared</span>
                                       </span>
                                     ) : (
-                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-stone-50 text-#6B7280 border border-stone-200 rounded-full text-[10px] font-bold">
+                                      <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 bg-stone-50 text-#6B7280 border border-stone-200 rounded-full text-[10px] font-semibold">
                                         <Clock className="w-3.5 h-3.5 text-stone-400 shrink-0" />
                                         <span>Unpaid</span>
                                       </span>
@@ -2132,14 +2132,14 @@ export default function PmcDashboard({
                                       <div className="flex justify-end gap-1.5">
                                         <button 
                                           onClick={() => setShowConfirmInstallmentModal({ unit: u, installment: inst })}
-                                          className="px-2.5 py-1 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
+                                          className="px-2.5 py-1 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
                                         >
                                           <CheckCircle className="w-3 h-3" />
                                           <span>Confirm Payment</span>
                                         </button>
                                         <button 
                                           onClick={() => handleSendReminder(u, inst)}
-                                          className="px-2.5 py-1 bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-200 font-bold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
+                                          className="px-2.5 py-1 bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-200 font-semibold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
                                         >
                                           <Bell className="w-3 h-3" />
                                           <span>Send Reminder</span>
@@ -2150,7 +2150,7 @@ export default function PmcDashboard({
                                             setPromiseDate(inst.dueDate);
                                             setPromiseNote('');
                                           }}
-                                          className="px-2.5 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 font-bold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
+                                          className="px-2.5 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 font-semibold rounded-lg text-[10px] transition cursor-pointer inline-flex items-center space-x-1"
                                         >
                                           <MessageSquare className="w-3 h-3" />
                                           <span>Promise to Pay</span>
@@ -2181,8 +2181,8 @@ export default function PmcDashboard({
           <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-5 space-y-4 animate-fade-in">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
-                <h3 className="font-display font-black text-teal-950 uppercase text-sm">Maintenance &amp; Repair Work orders</h3>
-                <p className="text-#6B7280 font-light text-xs mt-0.5">Track, schedule, and execute building repairs under PMC supervision:</p>
+                <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Maintenance &amp; Repair Work orders</h3>
+                <p className="text-#6B7280 font-normal text-xs mt-0.5">Track, schedule, and execute building repairs under PMC supervision:</p>
               </div>
             </div>
 
@@ -2196,7 +2196,7 @@ export default function PmcDashboard({
               />
               <button
                 onClick={() => setIsMaintExportOpen(true)}
-                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
+                className="px-4 py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>Export Jobs</span>
@@ -2206,7 +2206,7 @@ export default function PmcDashboard({
                   setMaintBulkMode(!maintBulkMode);
                   setSelectedMaintIds([]);
                 }}
-                className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition ${
+                className={`px-4 py-3 rounded-xl text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 cursor-pointer transition ${
                   maintBulkMode ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-stone-50 border border-stone-200 text-#132A1D hover:bg-stone-150'
                 }`}
               >
@@ -2262,7 +2262,7 @@ export default function PmcDashboard({
           {maintBulkMode && (
             <div className="bg-amber-50 border border-amber-300 rounded-[var(--radius-large)] p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-slide-in">
               <div>
-                <strong className="text-amber-950 font-bold block text-xs uppercase font-mono">BULK MAINTENANCE ACTIONS ACTIVE</strong>
+                <strong className="text-amber-950 font-semibold block text-xs uppercase font-mono">BULK MAINTENANCE ACTIONS ACTIVE</strong>
                 <span className="text-[10px] text-amber-800">Selected <strong className="font-mono">{selectedMaintIds.length}</strong> items.</span>
               </div>
               <div className="flex gap-2">
@@ -2276,7 +2276,7 @@ export default function PmcDashboard({
                     setSelectedMaintIds([]);
                     setMaintBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Bulk Resolve
                 </button>
@@ -2286,7 +2286,7 @@ export default function PmcDashboard({
                     setSelectedMaintIds([]);
                     setMaintBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-teal-800 text-white rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Bulk Notify
                 </button>
@@ -2295,7 +2295,7 @@ export default function PmcDashboard({
                     setSelectedMaintIds([]);
                     setMaintBulkMode(false);
                   }}
-                  className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg font-bold text-[10px] uppercase tracking-wider"
+                  className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg font-semibold text-[10px] uppercase tracking-wider"
                 >
                   Cancel
                 </button>
@@ -2343,17 +2343,17 @@ export default function PmcDashboard({
                           <div>
                             <div className="flex items-center space-x-2">
                               <strong className="text-[#18452E]">{job.property}</strong>
-                              <span className={`text-[9px] font-bold px-1.5 rounded ${job.priority === 'High' ? 'bg-rose-100 text-rose-800' : 'bg-teal-100 text-teal-800'}`}>
+                              <span className={`text-[9px] font-semibold px-1.5 rounded ${job.priority === 'High' ? 'bg-rose-100 text-rose-800' : 'bg-teal-100 text-teal-800'}`}>
                                 {job.priority} Priority
                               </span>
                             </div>
-                            <p className="text-#6B7280 font-light mt-1">&quot;{job.issue}&quot;</p>
+                            <p className="text-#6B7280 font-normal mt-1">&quot;{job.issue}&quot;</p>
                             <span className="text-[10px] text-stone-400 block mt-0.5">Status Check: {job.status}</span>
                           </div>
                         </div>
                         
                         {job.status !== 'Resolved & Closed' && (
-                          <button onClick={() => handleResolveJob(job.id)} className="px-3 py-1.5 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded text-xs cursor-pointer shrink-0">
+                          <button onClick={() => handleResolveJob(job.id)} className="px-3 py-1.5 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded text-xs cursor-pointer shrink-0">
                             Approve Estimate / Close Job
                           </button>
                         )}
@@ -2371,8 +2371,8 @@ export default function PmcDashboard({
           {/* INTEGRATED AUDIT HISTORY FOR MAINTENANCE */}
           <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-3">
             <div>
-              <h4 className="font-display font-black text-teal-950 uppercase text-xs">System Activity &amp; Maintenance Audit</h4>
-              <p className="text-stone-400 text-[10px] font-light">Authenticated audit log record of operations executed under the maintenance module.</p>
+              <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">System Activity &amp; Maintenance Audit</h4>
+              <p className="text-stone-400 text-[10px] font-normal">Authenticated audit log record of operations executed under the maintenance module.</p>
             </div>
             <div className="pt-2 border-t border-stone-200">
               <AuditHistoryTab recordType="maintenance" recordId="maintenance" />
@@ -2395,14 +2395,14 @@ export default function PmcDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs flex flex-col justify-center space-y-4">
               <div className="flex items-center space-x-3 text-[#18452E]">
                 <FileText className="w-6 h-6 text-teal-800" />
-                <h4 className="font-display font-black text-sm text-teal-950 uppercase">Generate New Payout Summary</h4>
+                <h4 className="font-display font-semibold text-sm text-teal-950 uppercase">Generate New Payout Summary</h4>
               </div>
-              <p className="text-#6B7280 font-light text-xs leading-relaxed">
+              <p className="text-#6B7280 font-normal text-xs leading-relaxed">
                 Log financial metrics and dispatch completely branded PDF payout summaries directly to represented landlords. All certifications are embedded automatically.
               </p>
               <button 
                 onClick={() => triggerSuccess('Branded PMC PDF statements generated and dispatched successfully to customer landlord folders.')}
-                className="w-full py-3 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl text-xs uppercase transition tracking-wide cursor-pointer flex items-center justify-center space-x-2 shadow-xs"
+                className="w-full py-3 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-xl text-xs uppercase transition tracking-wide cursor-pointer flex items-center justify-center space-x-2 shadow-xs"
               >
                 <FileText className="w-4 h-4" />
                 <span>Generate Branded PDF Payout Sheet</span>
@@ -2411,7 +2411,7 @@ export default function PmcDashboard({
 
             {/* TRACKING LOG */}
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 shadow-xs">
-              <h4 className="font-display font-black text-xs text-teal-950 uppercase mb-4">Report Delivery Tracking</h4>
+              <h4 className="font-display font-semibold text-xs text-teal-950 uppercase mb-4">Report Delivery Tracking</h4>
               <div className="space-y-3">
                 {reports.length === 0 ? (
                   <div className="p-8 text-center border-2 border-dashed border-stone-150 rounded-2xl text-stone-400 text-xs leading-relaxed">
@@ -2423,10 +2423,10 @@ export default function PmcDashboard({
                     <div key={report.id} className="p-3 bg-amber-500/5 border border-amber-200/50 hover:border-amber-400 rounded-xl transition-all duration-200">
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <span className="block font-bold text-teal-950 text-xs">Monthly Portfolio Summary &bull; {report.monthCovered}</span>
+                          <span className="block font-semibold text-teal-950 text-xs">Monthly Portfolio Summary &bull; {report.monthCovered}</span>
                           <span className="block text-[9px] font-mono text-stone-400 mt-0.5">Ref: {report.id} &bull; Sent: {new Date(report.sentAt).toLocaleString()}</span>
                         </div>
-                        <span className={`px-2 py-0.5 text-[9px] font-bold uppercase rounded ${report.downloaded ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800 animate-pulse'}`}>
+                        <span className={`px-2 py-0.5 text-[9px] font-semibold uppercase rounded ${report.downloaded ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800 animate-pulse'}`}>
                           {report.downloaded ? 'Downloaded' : 'Pending Download'}
                         </span>
                       </div>
@@ -2438,7 +2438,7 @@ export default function PmcDashboard({
                         </div>
                         <button
                           onClick={() => handleOpenReport(report)}
-                          className="text-[10px] text-amber-700 font-bold uppercase hover:underline flex items-center space-x-1 cursor-pointer"
+                          className="text-[10px] text-amber-700 font-semibold uppercase hover:underline flex items-center space-x-1 cursor-pointer"
                         >
                           <Download className="w-3 h-3" />
                           <span>Open &amp; Download</span>
@@ -2458,11 +2458,11 @@ export default function PmcDashboard({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start animate-fade-in">
           
           <div className="md:col-span-4 bg-stone-50 p-5 rounded-2xl space-y-4">
-            <h4 className="font-display font-black text-teal-950 uppercase text-xs">Add Field Operator</h4>
+            <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">Add Field Operator</h4>
             
             <form onSubmit={handleAddStaffSubmit} className="space-y-3 text-xs">
               <div>
-                <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">OPERATOR NAME</label>
+                <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">OPERATOR NAME</label>
                 <input 
                   type="text" 
                   required
@@ -2474,7 +2474,7 @@ export default function PmcDashboard({
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">PHONE NO</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">PHONE NO</label>
                   <input 
                     type="tel" 
                     required
@@ -2485,7 +2485,7 @@ export default function PmcDashboard({
                   />
                 </div>
                 <div>
-                  <label className="block text-[9px] font-mono font-bold text-stone-400 uppercase mb-1">ROLE</label>
+                  <label className="block text-[9px] font-mono font-semibold text-stone-400 uppercase mb-1">ROLE</label>
                   <select 
                     value={newStaff.role}
                     onChange={(e) => setNewStaff(prev => ({ ...prev, role: e.target.value }))}
@@ -2496,22 +2496,22 @@ export default function PmcDashboard({
                   </select>
                 </div>
               </div>
-              <button type="submit" className="w-[100%] py-2 bg-teal-700 text-white rounded font-bold cursor-pointer">
+              <button type="submit" className="w-[100%] py-2 bg-teal-700 text-white rounded font-semibold cursor-pointer">
                 Submit Staff Access Vouch
               </button>
             </form>
           </div>
 
           <div className="md:col-span-8 space-y-3">
-            <h4 className="font-display font-black text-teal-950 uppercase text-xs">Active Field Operators List</h4>
+            <h4 className="font-display font-semibold text-teal-950 uppercase text-xs">Active Field Operators List</h4>
             <div className="space-y-3">
               {staffList.map((st) => (
                 <div key={st.id} className="p-4 bg-white border border-stone-200 rounded-[var(--radius-large)] flex justify-between items-center text-xs">
                   <div>
                     <strong className="block text-teal-955 font-display text-sm">{st.name}</strong>
-                    <span className="text-stone-400 block font-light">Role: {st.role} &bull; Hotline: {st.phone}</span>
+                    <span className="text-stone-400 block font-normal">Role: {st.role} &bull; Hotline: {st.phone}</span>
                   </div>
-                  <span className="text-[9px] uppercase font-mono bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded">Active Key</span>
+                  <span className="text-[9px] uppercase font-mono bg-teal-100 text-teal-800 font-semibold px-2 py-0.5 rounded">Active Key</span>
                 </div>
               ))}
             </div>
@@ -2523,17 +2523,17 @@ export default function PmcDashboard({
       {/* TAB 7: SUBSCRIPTION SUMMARY */}
       {activeTab === 'Subscription' && (
         <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 animate-fade-in">
-          <h3 className="font-display font-black text-teal-950 uppercase text-sm">PMC License Subscriptions</h3>
-          <p className="text-#6B7280 font-light">Your current membership is on the <strong>PMC Professional Suite</strong>, giving you up to 100 concurrently managed property units:</p>
+          <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">PMC License Subscriptions</h3>
+          <p className="text-#6B7280 font-normal">Your current membership is on the <strong>PMC Professional Suite</strong>, giving you up to 100 concurrently managed property units:</p>
 
           <div className="p-4 bg-teal-50 border border-teal-100 rounded-2xl flex justify-between items-center text-xs md:text-sm">
             <div>
               <strong className="block text-teal-900 font-display">PMC Professional Suite</strong>
-              <span className="text-stone-400 block font-light">Annual clearance rate: Unlimited Portfolio</span>
+              <span className="text-stone-400 block font-normal">Annual clearance rate: Unlimited Portfolio</span>
             </div>
             <div className="text-right">
-              <span className="font-mono font-extrabold text-teal-950 block">₦45,000 / month</span>
-              <span className="text-[10px] text-emerald-800 font-bold block">Status: Paid &amp; Active</span>
+              <span className="font-mono font-semibold text-teal-950 block">₦45,000 / month</span>
+              <span className="text-[10px] text-emerald-800 font-semibold block">Status: Paid &amp; Active</span>
             </div>
           </div>
         </div>
@@ -2563,7 +2563,7 @@ export default function PmcDashboard({
 
             {/* HEADER DESIGN WITH PHOTO AND BACKGROUND GLOSS */}
             <div className="border-b border-teal-100 pb-4 space-y-4">
-              <span className="text-[9px] uppercase font-mono font-black text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-bold">
+              <span className="text-[9px] uppercase font-mono font-semibold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-semibold">
                 VERIFIED PROFILE DOCKET
               </span>
               
@@ -2575,18 +2575,18 @@ export default function PmcDashboard({
                     className="w-16 h-16 rounded-full object-cover border-2 border-teal-500 shadow-sm"
                   />
                 ) : (
-                  <div className="w-16 h-16 rounded-full bg-stone-50 border-2 border-dashed border-stone-300 flex items-center justify-center text-stone-400 text-xs shrink-0 font-mono font-bold uppercase">
+                  <div className="w-16 h-16 rounded-full bg-stone-50 border-2 border-dashed border-stone-300 flex items-center justify-center text-stone-400 text-xs shrink-0 font-mono font-semibold uppercase">
                     VAC
                   </div>
                 )}
                 <div>
-                  <h3 className="font-display font-black text-teal-950 text-lg leading-tight uppercase tracking-wider">
+                  <h3 className="font-display font-semibold text-teal-950 text-lg leading-tight uppercase tracking-wider">
                     {selectedUnit.paymentStatus !== 'Vacant' ? selectedUnit.tenantName : 'VACANT UNIT'}
                   </h3>
-                  <span className="text-[10px] font-mono text-teal-800 uppercase tracking-wider font-bold">
+                  <span className="text-[10px] font-mono text-teal-800 uppercase tracking-wider font-semibold">
                     {selectedUnit.paymentStatus !== 'Vacant' ? selectedUnit.tenantCode : `Unit: ${selectedUnit.unitNumber}`}
                   </span>
-                  <span className="block text-stone-400 font-light mt-0.5">{selectedUnit.propertyName}</span>
+                  <span className="block text-stone-400 font-normal mt-0.5">{selectedUnit.propertyName}</span>
                 </div>
               </div>
             </div>
@@ -2596,13 +2596,13 @@ export default function PmcDashboard({
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-stone-50/50 p-3 rounded-2xl border border-stone-200">
-                    <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">PHONE NUMBER</span>
+                    <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">PHONE NUMBER</span>
                     <strong className="block text-stone-850 mt-0.5 font-medium">
                       {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).phone}
                     </strong>
                   </div>
                   <div className="bg-stone-50/50 p-3 rounded-2xl border border-stone-200">
-                    <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">OCCUPATION</span>
+                    <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">OCCUPATION</span>
                     <strong className="block text-stone-850 mt-0.5 truncate font-medium">
                       {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).occupation}
                     </strong>
@@ -2611,7 +2611,7 @@ export default function PmcDashboard({
 
                 {/* GUARANTOR SEGMENTATION */}
                 <div className="p-4 bg-teal-50/30 border border-teal-100 rounded-2xl space-y-2">
-                  <span className="text-[9px] font-mono text-teal-800 uppercase font-black block tracking-widest">GUARANTOR INFORMATION</span>
+                  <span className="text-[9px] font-mono text-teal-800 uppercase font-semibold block tracking-widest">GUARANTOR INFORMATION</span>
                   
                   <div className="space-y-1">
                     <div className="flex justify-between items-center text-xs">
@@ -2628,7 +2628,7 @@ export default function PmcDashboard({
                     </div>
                     <div className="flex justify-between items-center text-xs">
                       <span className="text-stone-400">Guarantor Relationship:</span>
-                      <span className="text-[10px] uppercase font-mono bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">
+                      <span className="text-[10px] uppercase font-mono bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-semibold">
                         {getTenantDetails(selectedUnit.tenantName, selectedUnit.tenantCode, selectedUnit.rentAmount, selectedUnit.propertyName).relationship}
                       </span>
                     </div>
@@ -2639,11 +2639,11 @@ export default function PmcDashboard({
                 <div className="p-4 bg-amber-50/50 border border-amber-200 rounded-2xl space-y-2">
                   <div className="flex justify-between items-center">
                     <div>
-                      <span className="text-[10px] font-mono text-[#18452E] uppercase font-black block tracking-widest">MANAGEMENT AGREEMENT</span>
-                      <span className="text-#132A1D font-bold text-xs">Agreed Management Fee:</span>
+                      <span className="text-[10px] font-mono text-[#18452E] uppercase font-semibold block tracking-widest">MANAGEMENT AGREEMENT</span>
+                      <span className="text-#132A1D font-semibold text-xs">Agreed Management Fee:</span>
                     </div>
                     <div className="text-right">
-                      <span className="font-display font-black text-[#18452E] text-base">
+                      <span className="font-display font-semibold text-[#18452E] text-base">
                         {getPropertyFeePercentage(selectedUnit.propertyName) !== undefined 
                           ? `${getPropertyFeePercentage(selectedUnit.propertyName)}%` 
                           : 'Not Set'}
@@ -2655,7 +2655,7 @@ export default function PmcDashboard({
                   {showFeeChangeForm ? (
                     <form onSubmit={handleRequestFeeChange} className="mt-3 pt-3 border-t border-amber-200/50 space-y-3">
                       <div>
-                        <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">Proposed Fee Percentage (%)</label>
+                        <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">Proposed Fee Percentage (%)</label>
                         <input 
                           type="number" 
                           required 
@@ -2670,7 +2670,7 @@ export default function PmcDashboard({
                         <span className="text-[9px] text-stone-400 font-mono block mt-1">Must be between 1% and 50%.</span>
                       </div>
                       <div>
-                        <label className="block text-[9px] font-mono font-bold text-#6B7280 uppercase mb-1">Reason for Proposal</label>
+                        <label className="block text-[9px] font-mono font-semibold text-#6B7280 uppercase mb-1">Reason for Proposal</label>
                         <textarea 
                           required 
                           rows={2}
@@ -2683,7 +2683,7 @@ export default function PmcDashboard({
                       <div className="flex items-center space-x-2">
                         <button 
                           type="submit" 
-                          className="flex-1 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-bold rounded-lg text-xs transition cursor-pointer"
+                          className="flex-1 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold rounded-lg text-xs transition cursor-pointer"
                         >
                           Submit Proposal
                         </button>
@@ -2698,7 +2698,7 @@ export default function PmcDashboard({
                     </form>
                   ) : (
                     <div className="flex justify-between items-center mt-2 pt-2 border-t border-amber-200/30 gap-2">
-                      <span className="text-[9px] text-#6B7280 font-light leading-snug">
+                      <span className="text-[9px] text-#6B7280 font-normal leading-snug">
                         Rate represents your cut of rent. Propose a new rate for landlord/admin approval.
                       </span>
                       <button 
@@ -2706,7 +2706,7 @@ export default function PmcDashboard({
                           setProposedFee(String(getPropertyFeePercentage(selectedUnit.propertyName) || 10));
                           setShowFeeChangeForm(true);
                         }}
-                        className="px-3 py-1 bg-white hover:bg-amber-50 text-[#18452E] hover:text-[#18452E] font-bold rounded-lg text-[10px] uppercase tracking-wider transition cursor-pointer border border-[#18452E] shadow-xs shrink-0"
+                        className="px-3 py-1 bg-white hover:bg-amber-50 text-[#18452E] hover:text-[#18452E] font-semibold rounded-lg text-[10px] uppercase tracking-wider transition cursor-pointer border border-[#18452E] shadow-xs shrink-0"
                       >
                         Request Fee Change
                       </button>
@@ -2716,19 +2716,19 @@ export default function PmcDashboard({
 
                 {/* HISTORIC LEDGER RECORD */}
                 <div className="space-y-2">
-                  <span className="text-[9px] font-mono text-stone-400 uppercase font-black block tracking-widest">BILLING & PAYMENT HISTORY</span>
+                  <span className="text-[9px] font-mono text-stone-400 uppercase font-semibold block tracking-widest">BILLING & PAYMENT HISTORY</span>
                   
                   <div className="space-y-2 max-h-[140px] overflow-y-auto border border-stone-200 rounded-xl divide-y">
                     
                     {/* CURRENT YEAR CYCLE */}
                     <div className="p-2.5 flex justify-between items-center bg-stone-50/20 text-xs">
                       <div>
-                        <span className="font-bold text-stone-850 block">Cycle: 2026 - 2027</span>
+                        <span className="font-semibold text-stone-850 block">Cycle: 2026 - 2027</span>
                         <span className="text-[10px] text-stone-400 block font-mono">Reference: NGN_CYC_0012_UH</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-bold text-#132A1D block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
-                        <span className={`inline-block px-1 rounded text-[8px] font-mono font-bold uppercase ${
+                        <span className="font-semibold text-#132A1D block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
+                        <span className={`inline-block px-1 rounded text-[8px] font-mono font-semibold uppercase ${
                           selectedUnit.paymentStatus === 'Paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'
                         }`}>{selectedUnit.paymentStatus}</span>
                       </div>
@@ -2737,12 +2737,12 @@ export default function PmcDashboard({
                     {/* PREVIOUS YEAR CYCLE */}
                     <div className="p-2.5 flex justify-between items-center text-xs">
                       <div>
-                        <span className="font-bold text-stone-500 block">Cycle: 2025 - 2026</span>
+                        <span className="font-semibold text-stone-500 block">Cycle: 2025 - 2026</span>
                         <span className="text-[10px] text-stone-400 block font-mono">Reference: NGN_CYC_9981_UH</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-bold text-#6B7280 block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
-                        <span className="inline-block px-1 rounded text-[8px] font-mono font-bold uppercase bg-stone-50 text-stone-550">PAID</span>
+                        <span className="font-semibold text-#6B7280 block font-mono">₦{selectedUnit.rentAmount.toLocaleString()}</span>
+                        <span className="inline-block px-1 rounded text-[8px] font-mono font-semibold uppercase bg-stone-50 text-stone-550">PAID</span>
                       </div>
                     </div>
 
@@ -2822,8 +2822,8 @@ export default function PmcDashboard({
           {/* TITLE & METADATA */}
           <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
-              <h2 className="text-xl font-display font-black text-teal-950 uppercase">Lease Renewal Center</h2>
-              <p className="text-#6B7280 font-light text-xs mt-1">Portfolio-wide operations dashboard for tracking multi-property tenancies, notice timelines, and upcoming move-outs.</p>
+              <h2 className="text-xl font-display font-semibold text-teal-950 uppercase">Lease Renewal Center</h2>
+              <p className="text-#6B7280 font-normal text-xs mt-1">Portfolio-wide operations dashboard for tracking multi-property tenancies, notice timelines, and upcoming move-outs.</p>
             </div>
             <div className="text-stone-400 font-mono text-[10px] bg-stone-50 border border-stone-200 px-3.5 py-1.5 rounded-xl uppercase">
               Operational Timeline: <strong className="text-teal-900">FY 2026 / 2027</strong>
@@ -2838,9 +2838,9 @@ export default function PmcDashboard({
                 <CheckCircle2 className="w-6 h-6 text-emerald-600" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-bold">Tenants Who Will Renew</span>
-                <strong className="text-2xl font-display font-black text-teal-950 block mt-0.5">{pmcTenantsWhoWillRenew}</strong>
-                <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">Renewal intention logged</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-semibold">Tenants Who Will Renew</span>
+                <strong className="text-2xl font-display font-semibold text-teal-950 block mt-0.5">{pmcTenantsWhoWillRenew}</strong>
+                <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">Renewal intention logged</span>
               </div>
             </div>
 
@@ -2849,9 +2849,9 @@ export default function PmcDashboard({
                 <X className="w-6 h-6 text-rose-600" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-bold">Tenants Who Will Vacate</span>
-                <strong className="text-2xl font-display font-black text-teal-950 block mt-0.5">{pmcTenantsWhoWillVacate}</strong>
-                <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">Vacating intention logged</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-semibold">Tenants Who Will Vacate</span>
+                <strong className="text-2xl font-display font-semibold text-teal-950 block mt-0.5">{pmcTenantsWhoWillVacate}</strong>
+                <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">Vacating intention logged</span>
               </div>
             </div>
 
@@ -2860,9 +2860,9 @@ export default function PmcDashboard({
                 <ShieldAlert className="w-6 h-6 text-amber-600" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-bold">Tenants In Notice Period</span>
-                <strong className="text-2xl font-display font-black text-teal-950 block mt-0.5">{pmcTenantsInNoticePeriod}</strong>
-                <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">Legal quit notice active</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-semibold">Tenants In Notice Period</span>
+                <strong className="text-2xl font-display font-semibold text-teal-950 block mt-0.5">{pmcTenantsInNoticePeriod}</strong>
+                <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">Legal quit notice active</span>
               </div>
             </div>
 
@@ -2871,9 +2871,9 @@ export default function PmcDashboard({
                 <Clock className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-bold">Awaiting Decision</span>
-                <strong className="text-2xl font-display font-black text-teal-950 block mt-0.5">{pmcAwaitingDecision}</strong>
-                <span className="text-[10px] text-#6B7280 font-light mt-0.5 block">&lt; 90 days from expiry</span>
+                <span className="text-[10px] font-mono text-stone-400 uppercase tracking-wider block font-semibold">Awaiting Decision</span>
+                <strong className="text-2xl font-display font-semibold text-teal-950 block mt-0.5">{pmcAwaitingDecision}</strong>
+                <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">&lt; 90 days from expiry</span>
               </div>
             </div>
 
@@ -2883,8 +2883,8 @@ export default function PmcDashboard({
           <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
               <div>
-                <h3 className="font-display font-black text-teal-950 uppercase text-sm">Approaching Expiries &amp; Decision Logs</h3>
-                <p className="text-#6B7280 font-light text-xs mt-0.5">Sortable directory of active corporate tenancies nearing the 2026/2027 contract boundary.</p>
+                <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Approaching Expiries &amp; Decision Logs</h3>
+                <p className="text-#6B7280 font-normal text-xs mt-0.5">Sortable directory of active corporate tenancies nearing the 2026/2027 contract boundary.</p>
               </div>
             </div>
 
@@ -2910,12 +2910,12 @@ export default function PmcDashboard({
                             setRenewalSortCol(col.key as any);
                             setRenewalSortDirection(newDir);
                           }}
-                          className={`py-3 px-4 font-bold select-none uppercase tracking-wider ${col.key !== 'landlord' ? 'cursor-pointer hover:bg-stone-50 text-teal-950' : 'text-stone-400'}`}
+                          className={`py-3 px-4 font-semibold select-none uppercase tracking-wider ${col.key !== 'landlord' ? 'cursor-pointer hover:bg-stone-50 text-teal-950' : 'text-stone-400'}`}
                         >
                           <div className="flex items-center space-x-1.5">
                             <span>{col.label}</span>
                             {isSorted && (
-                              <span className="text-[9px] font-mono font-black text-teal-800">
+                              <span className="text-[9px] font-mono font-semibold text-teal-800">
                                 {renewalSortDirection === 'asc' ? '▲' : '▼'}
                               </span>
                             )}
@@ -2958,15 +2958,15 @@ export default function PmcDashboard({
                       
                       return (
                         <tr key={u.id} className="border-b border-stone-50 hover:bg-stone-50/50">
-                          <td className="py-3 px-4 font-bold text-teal-950 text-sm">{u.tenantName}</td>
+                          <td className="py-3 px-4 font-semibold text-teal-950 text-sm">{u.tenantName}</td>
                           <td className="py-3 px-4 text-#6B7280">
                             <strong className="text-#132A1D block font-normal">{u.propertyName}</strong>
                             <span className="text-[10px] text-stone-400 font-mono block mt-0.5">{u.unitNumber}</span>
                           </td>
-                          <td className="py-3 px-4 font-mono font-bold text-teal-950">{landlordName}</td>
+                          <td className="py-3 px-4 font-mono font-semibold text-teal-950">{landlordName}</td>
                           <td className="py-3 px-4 font-mono text-#6B7280">{u.leaseExpiryDate || 'N/A'}</td>
                           <td className="py-3 px-4">
-                            <span className={`inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold ${
+                            <span className={`inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold ${
                               daysLeft <= 30 ? 'bg-rose-50 text-rose-700 border border-rose-200' :
                               daysLeft <= 90 ? 'bg-amber-50 text-amber-700 border border-amber-200' :
                               'bg-teal-50 text-teal-700 border border-teal-200'
@@ -2976,15 +2976,15 @@ export default function PmcDashboard({
                           </td>
                           <td className="py-3 px-4">
                             {u.renewalIntention === 'renewing' ? (
-                              <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded text-[10px] font-bold uppercase font-mono">
+                              <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded text-[10px] font-semibold uppercase font-mono">
                                 Renewing
                               </span>
                             ) : u.renewalIntention === 'vacating' ? (
-                              <span className="px-2 py-0.5 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[10px] font-bold uppercase font-mono">
+                              <span className="px-2 py-0.5 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[10px] font-semibold uppercase font-mono">
                                 Vacating
                               </span>
                             ) : (
-                              <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 border border-stone-200 rounded text-[10px] font-bold uppercase font-mono">
+                              <span className="px-2 py-0.5 bg-stone-50 text-#6B7280 border border-stone-200 rounded text-[10px] font-semibold uppercase font-mono">
                                 Awaiting Decision
                               </span>
                             )}
@@ -2993,7 +2993,7 @@ export default function PmcDashboard({
                             <div className="flex justify-end gap-1.5">
                               <button 
                                 onClick={() => setShowTenancyModal(u)}
-                                className="px-2.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold rounded-lg text-[10px] transition cursor-pointer"
+                                className="px-2.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold rounded-lg text-[10px] transition cursor-pointer"
                               >
                                 View Tenancy
                               </button>
@@ -3004,7 +3004,7 @@ export default function PmcDashboard({
                                     setNotifyChannel('WhatsApp');
                                     setNotifyCustomMessage(`Dear ${u.tenantName}, your lease expiry for ${u.propertyName} (${u.unitNumber}) is approaching on ${u.leaseExpiryDate}. Kindly log in to your portal and confirm your lease renewal decision.`);
                                   }}
-                                  className="px-2.5 py-1.5 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-lg text-[10px] transition cursor-pointer"
+                                  className="px-2.5 py-1.5 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-lg text-[10px] transition cursor-pointer"
                                 >
                                   Notify Tenant
                                 </button>
@@ -3028,8 +3028,8 @@ export default function PmcDashboard({
           {/* READ-ONLY QUIT NOTICES REGISTER (PMC SOURCING PIPELINE PLANNING) */}
           <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 shadow-sm space-y-4">
             <div>
-              <h3 className="font-display font-black text-teal-950 uppercase text-sm">Quit Notices Register (Read-Only)</h3>
-              <p className="text-#6B7280 font-light text-xs mt-0.5">
+              <h3 className="font-display font-semibold text-teal-950 uppercase text-sm">Quit Notices Register (Read-Only)</h3>
+              <p className="text-#6B7280 font-normal text-xs mt-0.5">
                 This read-only operational registry tracks quit notices across all managed tenancies. The PMC uses this view for vacancy planning and prospective tenant pipeline management. Approval and release controls are restricted to System Administrators.
               </p>
             </div>
@@ -3051,25 +3051,25 @@ export default function PmcDashboard({
                     const daysLeft = getDaysRemaining(u.quitNoticeEndDate);
                     return (
                       <tr key={u.id} className="border-b border-stone-50 hover:bg-stone-50/50">
-                        <td className="py-3 px-4 font-bold text-teal-950 text-sm">{u.tenantName}</td>
+                        <td className="py-3 px-4 font-semibold text-teal-950 text-sm">{u.tenantName}</td>
                         <td className="py-3 px-4 text-#6B7280">
                           <strong className="text-#132A1D block font-normal">{u.propertyName}</strong>
                           <span className="text-[10px] text-stone-400 font-mono block mt-0.5">{u.unitNumber}</span>
                         </td>
                         <td className="py-3 px-4 font-mono text-#6B7280">{u.quitNoticeInitiationDate || 'N/A'}</td>
-                        <td className="py-3 px-4 font-mono font-bold text-teal-950">{u.quitNoticeLegalPeriod || '6 Months'}</td>
+                        <td className="py-3 px-4 font-mono font-semibold text-teal-950">{u.quitNoticeLegalPeriod || '6 Months'}</td>
                         <td className="py-3 px-4 font-mono text-#6B7280">{u.quitNoticeEndDate || 'N/A'}</td>
                         <td className="py-3 px-4">
                           {u.quitNoticeStatus === 'Pending Admin Review' ? (
-                            <span className="px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded text-[10px] font-bold uppercase font-mono">
+                            <span className="px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded text-[10px] font-semibold uppercase font-mono">
                               Pending Admin Review
                             </span>
                           ) : u.quitNoticeStatus === 'Released to Both Parties' ? (
-                            <span className="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded text-[10px] font-bold uppercase font-mono">
+                            <span className="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded text-[10px] font-semibold uppercase font-mono">
                               Released to Both Parties
                             </span>
                           ) : (
-                            <span className="px-2.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[10px] font-bold uppercase font-mono inline-flex items-center space-x-1">
+                            <span className="px-2.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[10px] font-semibold uppercase font-mono inline-flex items-center space-x-1">
                               <span>Notice Period Active ({daysLeft} Days Left)</span>
                             </span>
                           )}
@@ -3103,10 +3103,10 @@ export default function PmcDashboard({
             </button>
 
             <div className="border-b border-teal-100 pb-3 space-y-1.5">
-              <span className="text-[9px] uppercase font-mono font-black text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-bold">
+              <span className="text-[9px] uppercase font-mono font-semibold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-semibold">
                 Confirm Installment Receipt
               </span>
-              <h3 className="font-display font-black text-teal-950 text-base leading-tight uppercase">
+              <h3 className="font-display font-semibold text-teal-950 text-base leading-tight uppercase">
                 Confirm Bank Collection
               </h3>
             </div>
@@ -3150,13 +3150,13 @@ export default function PmcDashboard({
                 <button 
                   type="button"
                   onClick={() => setShowConfirmInstallmentModal(null)}
-                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit"
-                  className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Confirm Receipt Collection
                 </button>
@@ -3179,10 +3179,10 @@ export default function PmcDashboard({
             </button>
 
             <div className="border-b border-teal-100 pb-3 space-y-1.5">
-              <span className="text-[9px] uppercase font-mono font-black text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-bold">
+              <span className="text-[9px] uppercase font-mono font-semibold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-semibold">
                 Flag Promise To Pay
               </span>
-              <h3 className="font-display font-black text-teal-950 text-base leading-tight uppercase">
+              <h3 className="font-display font-semibold text-teal-950 text-base leading-tight uppercase">
                 Log Tenant Promise
               </h3>
             </div>
@@ -3225,13 +3225,13 @@ export default function PmcDashboard({
                 <button 
                   type="button"
                   onClick={() => setShowPromiseModal(null)}
-                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit"
-                  className="px-5 py-2 bg-amber-750 hover:bg-amber-850 text-white font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-5 py-2 bg-amber-750 hover:bg-amber-850 text-white font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Submit Promise to Pay
                 </button>
@@ -3254,10 +3254,10 @@ export default function PmcDashboard({
             </button>
 
             <div className="border-b border-teal-100 pb-3 space-y-1.5">
-              <span className="text-[9px] uppercase font-mono font-black text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-bold">
+              <span className="text-[9px] uppercase font-mono font-semibold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-semibold">
                 Lease Expiry Notice Dispatch
               </span>
-              <h3 className="font-display font-black text-teal-950 text-base leading-tight uppercase">
+              <h3 className="font-display font-semibold text-teal-950 text-base leading-tight uppercase">
                 Notify Tenant Decision Awaiting
               </h3>
             </div>
@@ -3281,7 +3281,7 @@ export default function PmcDashboard({
                       key={channel}
                       type="button"
                       onClick={() => setNotifyChannel(channel)}
-                      className={`py-2 px-3 rounded-xl border text-center text-xs font-bold transition cursor-pointer ${
+                      className={`py-2 px-3 rounded-xl border text-center text-xs font-semibold transition cursor-pointer ${
                         notifyChannel === channel 
                           ? 'bg-teal-800 text-white border-teal-800 shadow-sm' 
                           : 'bg-stone-50 text-#6B7280 border-stone-200 hover:bg-stone-50'
@@ -3307,13 +3307,13 @@ export default function PmcDashboard({
                 <button 
                   type="button"
                   onClick={() => setShowNotifyModal(null)}
-                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-4 py-2 bg-stone-50 hover:bg-stone-200 text-#6B7280 font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit"
-                  className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl text-xs transition cursor-pointer"
+                  className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl text-xs transition cursor-pointer"
                 >
                   Dispatch Notice
                 </button>
@@ -3336,10 +3336,10 @@ export default function PmcDashboard({
             </button>
 
             <div className="border-b border-teal-100 pb-3 space-y-1.5">
-              <span className="text-[9px] uppercase font-mono font-black text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-bold">
+              <span className="text-[9px] uppercase font-mono font-semibold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md tracking-widest font-semibold">
                 Lease Details Profile
               </span>
-              <h3 className="font-display font-black text-teal-950 text-base leading-tight uppercase">
+              <h3 className="font-display font-semibold text-teal-950 text-base leading-tight uppercase">
                 {showTenancyModal.tenantName}
               </h3>
             </div>
@@ -3364,33 +3364,33 @@ export default function PmcDashboard({
 
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div>
-                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-bold">Lease End Date</span>
+                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-semibold">Lease End Date</span>
                   <strong className="text-#132A1D font-mono block mt-0.5">{showTenancyModal.leaseExpiryDate || 'N/A'}</strong>
                 </div>
                 <div>
-                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-bold">Days Remaining</span>
+                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-semibold">Days Remaining</span>
                   <strong className="text-#132A1D font-mono block mt-0.5">{getDaysRemaining(showTenancyModal.leaseExpiryDate)} Days</strong>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-xs border-t pt-3">
                 <div>
-                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-bold">Decision Status</span>
+                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-semibold">Decision Status</span>
                   <strong className="text-#132A1D block mt-0.5 capitalize">{showTenancyModal.renewalIntention || 'Awaiting decision'}</strong>
                 </div>
                 <div>
-                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-bold">Annual Rent Value</span>
+                  <span className="text-stone-400 font-mono block text-[9px] uppercase font-semibold">Annual Rent Value</span>
                   <strong className="text-teal-900 font-mono block mt-0.5">₦{showTenancyModal.rentAmount.toLocaleString()}</strong>
                 </div>
               </div>
 
               {showTenancyModal.quitNoticeGenerated && (
                 <div className="p-3 bg-rose-50 border border-rose-200 text-rose-900 rounded-xl space-y-1">
-                  <span className="font-mono block text-[9px] uppercase font-bold">Active Quit Notice</span>
+                  <span className="font-mono block text-[9px] uppercase font-semibold">Active Quit Notice</span>
                   <p className="text-[11px] leading-relaxed">
                     Notice of intent to vacate was generated on <strong>{showTenancyModal.quitNoticeInitiationDate}</strong> with a legal period of <strong>{showTenancyModal.quitNoticeLegalPeriod}</strong>. End Date is set to <strong>{showTenancyModal.quitNoticeEndDate}</strong>.
                   </p>
-                  <span className="inline-block mt-1 font-mono text-[9px] bg-rose-100 px-1.5 py-0.5 rounded font-bold uppercase">
+                  <span className="inline-block mt-1 font-mono text-[9px] bg-rose-100 px-1.5 py-0.5 rounded font-semibold uppercase">
                     Status: {showTenancyModal.quitNoticeStatus}
                   </span>
                 </div>
@@ -3400,7 +3400,7 @@ export default function PmcDashboard({
             <div className="pt-3 border-t flex justify-end">
               <button 
                 onClick={() => setShowTenancyModal(null)}
-                className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl text-xs transition cursor-pointer"
+                className="px-5 py-2 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-xl text-xs transition cursor-pointer"
               >
                 Close Profile
               </button>
@@ -3451,7 +3451,7 @@ export default function PmcDashboard({
       )}
 
       {/* FOOTER */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-bold tracking-wider">
+      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider">
         Unity Homes PMC Management Network &bull; Don&apos;t Buy Wahala
       </p>
 
@@ -3466,7 +3466,7 @@ export default function PmcDashboard({
             <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200 bg-stone-50">
               <div className="flex items-center space-x-2">
                 <FileText className="w-5 h-5 text-[#18452E]" />
-                <span className="font-display font-bold text-#132A1D text-sm">Monthly Summary Report Preview</span>
+                <span className="font-display font-semibold text-#132A1D text-sm">Monthly Summary Report Preview</span>
               </div>
               <button 
                 onClick={() => setSelectedReport(null)}
@@ -3483,7 +3483,7 @@ export default function PmcDashboard({
                 />
               ) : (
                 <div className="bg-white rounded-2xl shadow-sm border border-stone-150 p-8 text-center space-y-4">
-                  <h3 className="font-display font-bold text-lg text-#132A1D">{selectedReport.name || selectedReport.title}</h3>
+                  <h3 className="font-display font-semibold text-lg text-#132A1D">{selectedReport.name || selectedReport.title}</h3>
                   <p className="text-xs text-#6B7280">Legacy PDF Document reference securely catalogued in Unity Homes Ledger.</p>
                   <div className="p-4 bg-stone-50 border border-stone-150 rounded-xl inline-block text-[11px] font-mono text-#6B7280">
                     Document Ref: {selectedReport.id || 'DOC-LEGACY-001'}
@@ -3497,13 +3497,13 @@ export default function PmcDashboard({
                   triggerSuccess('Document downloaded to local storage registers successfully!');
                   setSelectedReport(null);
                 }}
-                className="px-4 py-2.5 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2.5 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Download PDF File
               </button>
               <button
                 onClick={() => setSelectedReport(null)}
-                className="px-4 py-2.5 border border-stone-300 hover:bg-stone-50 text-#132A1D font-bold rounded-xl text-xs uppercase cursor-pointer"
+                className="px-4 py-2.5 border border-stone-300 hover:bg-stone-50 text-#132A1D font-semibold rounded-xl text-xs uppercase cursor-pointer"
               >
                 Close Preview
               </button>
@@ -3624,13 +3624,13 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
       <div className="bg-white border border-teal-100 rounded-[var(--radius-large)] p-6 space-y-4 shadow-xs">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h3 className="font-display font-black text-teal-950 uppercase text-sm flex items-center gap-2">
+            <h3 className="font-display font-semibold text-teal-950 uppercase text-sm flex items-center gap-2">
               <span>🗑️ Waste & Refuse Complaints Ledger</span>
               <span className="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-full text-[10px] font-mono">
                 {pmcComplaints.filter(c => c.status !== 'Resolved').length} Active
               </span>
             </h3>
-            <p className="text-#6B7280 font-light text-xs mt-0.5">
+            <p className="text-#6B7280 font-normal text-xs mt-0.5">
               Direct municipal LAWMA & refuse management tickets across managed portfolio. Sorted by urgency &amp; days outstanding.
             </p>
           </div>
@@ -3638,19 +3638,19 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
           <div className="flex gap-2">
             <button 
               onClick={() => setFilterMode('open')}
-              className={`px-3 py-1.5 rounded-xl font-bold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'open' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
+              className={`px-3 py-1.5 rounded-xl font-semibold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'open' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
             >
               Open Complaints
             </button>
             <button 
               onClick={() => setFilterMode('resolved')}
-              className={`px-3 py-1.5 rounded-xl font-bold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'resolved' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
+              className={`px-3 py-1.5 rounded-xl font-semibold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'resolved' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
             >
               Resolved
             </button>
             <button 
               onClick={() => setFilterMode('all')}
-              className={`px-3 py-1.5 rounded-xl font-bold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'all' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
+              className={`px-3 py-1.5 rounded-xl font-semibold font-mono text-[10px] uppercase cursor-pointer ${filterMode === 'all' ? 'bg-[#18452E] text-white' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'}`}
             >
               All
             </button>
@@ -3685,7 +3685,7 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                   return (
                     <React.Fragment key={comp.id}>
                       <tr className={`hover:bg-stone-50/80 transition ${isUrgent ? 'bg-red-50/30' : ''}`}>
-                        <td className="p-3 font-bold text-teal-950">{comp.tenant}</td>
+                        <td className="p-3 font-semibold text-teal-950">{comp.tenant}</td>
                         <td className="p-3">
                           <strong className="block text-#132A1D">{comp.propertyName || 'Portfolio Asset'}</strong>
                           <span className="text-[10px] text-stone-400 font-mono">{comp.unit}</span>
@@ -3696,24 +3696,24 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                         </td>
                         <td className="p-3">
                           {isUrgent && (
-                            <span className="px-2.5 py-1 bg-red-100 text-red-800 border border-red-300 rounded-full font-mono text-[9px] font-bold uppercase inline-flex items-center gap-1">
+                            <span className="px-2.5 py-1 bg-red-100 text-red-800 border border-red-300 rounded-full font-mono text-[9px] font-semibold uppercase inline-flex items-center gap-1">
                               <span>🚨 Urgent Escalation</span>
                             </span>
                           )}
                           {isHigh && (
-                            <span className="px-2.5 py-1 bg-amber-100 text-amber-900 border border-amber-300 rounded-full font-mono text-[9px] font-bold uppercase inline-flex items-center gap-1">
+                            <span className="px-2.5 py-1 bg-amber-100 text-amber-900 border border-amber-300 rounded-full font-mono text-[9px] font-semibold uppercase inline-flex items-center gap-1">
                               <span>⚠️ High Priority</span>
                             </span>
                           )}
                           {!isUrgent && !isHigh && (
-                            <span className="px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full font-mono text-[9px] font-bold uppercase">
+                            <span className="px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full font-mono text-[9px] font-semibold uppercase">
                               Normal
                             </span>
                           )}
                         </td>
-                        <td className="p-3 text-center font-mono font-bold text-#132A1D">
+                        <td className="p-3 text-center font-mono font-semibold text-#132A1D">
                           {comp.daysSinceLastCollection ? (
-                            <span className={comp.daysSinceLastCollection >= 7 ? 'text-red-700 font-black' : ''}>
+                            <span className={comp.daysSinceLastCollection >= 7 ? 'text-red-700 font-semibold' : ''}>
                               {comp.daysSinceLastCollection} Days
                             </span>
                           ) : (
@@ -3721,7 +3721,7 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                           )}
                         </td>
                         <td className="p-3 font-mono text-[10px]">
-                          <span className={`px-2 py-0.5 rounded font-bold uppercase ${
+                          <span className={`px-2 py-0.5 rounded font-semibold uppercase ${
                             comp.status === 'Resolved' ? 'bg-emerald-100 text-emerald-800' :
                             comp.status === 'Action Being Taken' ? 'bg-amber-100 text-amber-800' : 'bg-stone-50 text-#132A1D'
                           }`}>
@@ -3739,7 +3739,7 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                                 setResolutionNote(comp.resolutionNote || '');
                               }
                             }}
-                            className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[10px] font-bold uppercase tracking-wider cursor-pointer"
+                            className="px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[10px] font-semibold uppercase tracking-wider cursor-pointer"
                           >
                             {selectedComplaintId === comp.id ? 'Close Panel' : 'Resolve / Update'}
                           </button>
@@ -3755,11 +3755,11 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                                 UPDATE RESOLUTION FOR: {comp.tenant} ({comp.propertyName})
                               </strong>
                               <div className="flex items-center gap-2">
-                                <label className="text-[10px] font-mono font-bold uppercase text-#6B7280">Update Status:</label>
+                                <label className="text-[10px] font-mono font-semibold uppercase text-#6B7280">Update Status:</label>
                                 <select 
                                   value={newStatus}
                                   onChange={(e) => setNewStatus(e.target.value)}
-                                  className="p-1.5 bg-white border border-emerald-300 rounded-lg text-xs font-bold"
+                                  className="p-1.5 bg-white border border-emerald-300 rounded-lg text-xs font-semibold"
                                 >
                                   <option value="Received by Property Manager">Received by Property Manager</option>
                                   <option value="Action Being Taken">Action Being Taken</option>
@@ -3769,7 +3769,7 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                             </div>
 
                             <div>
-                              <label className="block text-[10px] font-mono font-bold text-emerald-900 uppercase mb-1">
+                              <label className="block text-[10px] font-mono font-semibold text-emerald-900 uppercase mb-1">
                                 Resolution / Action Note * (Mandatory for resolving)
                               </label>
                               <textarea 
@@ -3784,13 +3784,13 @@ function PmcWasteComplaintsSection({ triggerSuccess }: { triggerSuccess: (msg: s
                             <div className="flex justify-end gap-2">
                               <button 
                                 onClick={() => setSelectedComplaintId(null)}
-                                className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg text-[10px] font-bold uppercase cursor-pointer"
+                                className="px-3 py-1.5 bg-stone-200 text-#132A1D rounded-lg text-[10px] font-semibold uppercase cursor-pointer"
                               >
                                 Cancel
                               </button>
                               <button 
                                 onClick={() => handleUpdateComplaint(comp.id)}
-                                className="px-4 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[10px] font-bold uppercase cursor-pointer font-mono"
+                                className="px-4 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[10px] font-semibold uppercase cursor-pointer font-mono"
                               >
                                 Save &amp; Dispatch Resolution
                               </button>

@@ -121,7 +121,7 @@ export default function RecentlyViewed({ onNavigate, triggerRefreshKey }: Recent
 
   return (
     <div className="space-y-2 animate-fade-in">
-      <h4 className="text-[10px] uppercase font-bold text-stone-400 font-mono tracking-wider flex items-center space-x-1.5">
+      <h4 className="text-[10px] uppercase font-semibold text-stone-400 font-mono tracking-wider flex items-center space-x-1.5">
         <span>Recently Viewed Records (Session)</span>
       </h4>
       <div className="flex overflow-x-auto pb-1.5 gap-3 scrollbar-none snap-x touch-pan-x">
@@ -135,7 +135,7 @@ export default function RecentlyViewed({ onNavigate, triggerRefreshKey }: Recent
               {getIcon(item.type)}
             </div>
             <div className="max-w-[150px]">
-              <strong className="block text-teal-950 font-bold text-xs truncate leading-tight">
+              <strong className="block text-teal-950 font-semibold text-xs truncate leading-tight">
                 {item.name}
               </strong>
               <span className="block text-[9px] text-stone-400 capitalize mt-0.5 truncate">

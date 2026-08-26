@@ -249,7 +249,7 @@ export default function PlatformAnnouncements({ userRole = 'All', userId = 'anon
       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-200 pb-3 gap-2">
         <div className="flex items-center space-x-2">
           <Megaphone className="w-4 h-4 text-[#18452E]" />
-          <h3 className="font-display font-black text-[#18452E] uppercase text-xs tracking-wider">
+          <h3 className="font-display font-semibold text-[#18452E] uppercase text-xs tracking-wider">
             Announcements &amp; Broadcasts
           </h3>
         </div>
@@ -259,7 +259,7 @@ export default function PlatformAnnouncements({ userRole = 'All', userId = 'anon
           <div className="flex items-center space-x-1 bg-stone-50 p-1 rounded-xl border border-stone-200 self-start sm:self-auto">
             <button
               onClick={() => setTenantTab('platform')}
-              className={`px-3 py-1 rounded-lg font-mono text-[10px] font-bold transition ${
+              className={`px-3 py-1 rounded-lg font-mono text-[10px] font-semibold transition ${
                 tenantTab === 'platform'
                   ? 'bg-[#18452E] text-white shadow-xs'
                   : 'text-#6B7280 hover:text-#132A1D'
@@ -269,7 +269,7 @@ export default function PlatformAnnouncements({ userRole = 'All', userId = 'anon
             </button>
             <button
               onClick={() => setTenantTab('property')}
-              className={`px-3 py-1 rounded-lg font-mono text-[10px] font-bold transition ${
+              className={`px-3 py-1 rounded-lg font-mono text-[10px] font-semibold transition ${
                 tenantTab === 'property'
                   ? 'bg-[#18452E] text-white shadow-xs'
                   : 'text-#6B7280 hover:text-#132A1D'
@@ -305,15 +305,15 @@ export default function PlatformAnnouncements({ userRole = 'All', userId = 'anon
 
                 <div className="pr-6 space-y-1.5">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className={`text-[8px] font-mono font-black uppercase px-2 py-0.5 rounded-md border ${getUrgencyBadge(ann.urgency)}`}>
+                    <span className={`text-[8px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md border ${getUrgencyBadge(ann.urgency)}`}>
                       {ann.urgency}
                     </span>
-                    <span className="text-[9px] font-mono font-bold text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-200 uppercase">
+                    <span className="text-[9px] font-mono font-semibold text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-200 uppercase">
                       Source: {sourceBadgeText}
                     </span>
-                    <strong className="text-#132A1D font-bold text-xs block">{ann.title}</strong>
+                    <strong className="text-#132A1D font-semibold text-xs block">{ann.title}</strong>
                   </div>
-                  <p className="text-#6B7280 font-light leading-relaxed text-[11px]">
+                  <p className="text-#6B7280 font-normal leading-relaxed text-[11px]">
                     {ann.body}
                   </p>
                   <div className="flex items-center gap-3 text-[10px] text-stone-400 font-mono pt-1">

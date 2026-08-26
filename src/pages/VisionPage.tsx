@@ -23,10 +23,10 @@ export default function VisionPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               OUR VISION
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               Building the infrastructure for a better property experience.
             </h1>
           </motion.div>
@@ -76,7 +76,7 @@ export default function VisionPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-[#6B7280]">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#6B7280]">
               OUR VISION
             </h4>
             <div className="w-12 h-1 bg-[#6FBE45] mt-6 rounded-full hidden md:block"></div>
@@ -87,7 +87,7 @@ export default function VisionPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className="text-2xl md:text-3xl text-[#132A1D] font-extrabold leading-relaxed"
+              className="text-2xl md:text-3xl text-[#132A1D] font-semibold leading-relaxed"
             >
               To build a trusted digital infrastructure for real estate in Nigeria where people can discover properties, access the right professionals, understand important information and manage property with greater confidence.
             </motion.p>
@@ -110,13 +110,13 @@ export default function VisionPage() {
               transition={{ duration: 0.4 }}
               className="relative pl-12 pb-12 group cursor-default"
             >
-              <div className={`absolute left-0 top-1 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-bold z-10 transition-colors duration-300 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
+              <div className={`absolute left-0 top-1 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold z-10 transition-colors duration-300 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
                 0{idx + 1}
               </div>
               
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                <h3 className="text-xl font-bold text-[#132A1D] uppercase tracking-wide group-hover:text-[#6FBE45] transition-colors duration-300">{item.step}</h3>
-                <div className={`inline-flex px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full self-start ${
+                <h3 className="text-xl font-semibold text-[#132A1D] uppercase tracking-wide group-hover:text-[#6FBE45] transition-colors duration-300">{item.step}</h3>
+                <div className={`inline-flex px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full self-start ${
                   item.status === 'Available Now' 
                     ? 'bg-[#EAF5E3] text-[#6FBE45]' 
                     : 'bg-stone-50 text-[#C9A84C] border border-[#C9A84C]/30'
@@ -153,12 +153,12 @@ export default function VisionPage() {
                 transition={{ duration: 0.4, delay: idx * 0.15 }}
                 className="relative group cursor-default pt-12 hover:-translate-y-1 transition-transform duration-300"
               >
-                <div className={`absolute top-[-15px] left-0 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-bold transition-colors duration-300 z-20 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
+                <div className={`absolute top-[-15px] left-0 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold transition-colors duration-300 z-20 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
                   0{idx + 1}
                 </div>
                 
-                <h3 className="text-lg font-bold text-[#132A1D] uppercase tracking-wide mb-3 group-hover:text-[#6FBE45] transition-colors duration-300">{item.step}</h3>
-                <div className={`inline-flex mb-4 px-2 py-1 text-[9px] font-bold uppercase tracking-wider rounded-full ${
+                <h3 className="text-lg font-semibold text-[#132A1D] uppercase tracking-wide mb-3 group-hover:text-[#6FBE45] transition-colors duration-300">{item.step}</h3>
+                <div className={`inline-flex mb-4 px-2 py-1 text-[9px] font-semibold uppercase tracking-wider rounded-full ${
                   item.status === 'Available Now' 
                     ? 'bg-[#EAF5E3] text-[#6FBE45]' 
                     : 'bg-stone-50 text-[#C9A84C] border border-[#C9A84C]/30'
@@ -183,20 +183,20 @@ export default function VisionPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-12">
               Join the Unity Homes journey.
             </h2>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
               <Link
                 to="/waitlist"
-                className="w-full sm:w-auto inline-flex justify-center bg-[#6FBE45] text-white px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:bg-[#5CA636] transition-all duration-200"
+                className="w-full sm:w-auto inline-flex justify-center bg-[#6FBE45] text-white px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:bg-[#5CA636] transition-all duration-200"
               >
                 Join The Waitlist
               </Link>
               <Link
                 to="/area-intelligence"
-                className="w-full sm:w-auto inline-flex justify-center bg-transparent text-white border-2 border-white/80 px-10 py-5 rounded-[18px] font-bold text-lg hover:-translate-y-0.5 active:translate-y-0 hover:bg-white hover:text-[#2F8D46] transition-all duration-200"
+                className="w-full sm:w-auto inline-flex justify-center bg-transparent text-white border-2 border-white/80 px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 hover:bg-white hover:text-[#2F8D46] transition-all duration-200"
               >
                 Explore Area Intelligence
               </Link>

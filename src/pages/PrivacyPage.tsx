@@ -5,7 +5,7 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-white pt-32 pb-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="space-y-4 border-b border-[var(--color-border)] pb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-brand-deep)] tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold text-[var(--color-brand-deep)] tracking-tight">
             Privacy Policy
           </h1>
           <p className="text-xl text-[var(--color-text-secondary)]">

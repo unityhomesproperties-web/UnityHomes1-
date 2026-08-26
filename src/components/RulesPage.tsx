@@ -71,13 +71,13 @@ export default function RulesPage({ navigate }: RulesPageProps) {
       
       {/* HEADER HERO */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-[10px] sm:text-xs uppercase font-mono font-bold tracking-widest text-[#C9A84C] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/25">
+        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/25">
           Ecosystem Constitution
         </span>
-        <h1 className="text-3xl md:text-5xl font-display font-black text-[#18452E] leading-tight">
+        <h1 className="text-3xl md:text-5xl font-display font-semibold text-[#18452E] leading-tight">
           Rules &amp; Disclaimers
         </h1>
-        <p className="text-xs sm:text-sm text-#6B7280 font-light leading-relaxed">
+        <p className="text-xs sm:text-sm text-#6B7280 font-normal leading-relaxed">
           The legal framework and transactional bylaws governing Unity Homes. Crafted to protect honesty, eliminate property fraud, and prevent litigation.
         </p>
       </div>
@@ -115,11 +115,11 @@ export default function RulesPage({ navigate }: RulesPageProps) {
               id={sec.id}
               className="spatial-glass border border-stone-200/50 p-6 sm:p-8 rounded-[var(--radius-large)] space-y-3 shadow-xs hover:border-[#C9A84C]/40 transition duration-200"
             >
-              <h3 className="font-display font-extrabold text-sm sm:text-base text-[#18452E] border-b border-stone-200 pb-2.5 flex items-center justify-between">
+              <h3 className="font-display font-semibold text-sm sm:text-base text-[#18452E] border-b border-stone-200 pb-2.5 flex items-center justify-between">
                 <span>{sec.title}</span>
                 <Scale className="w-4 h-4 text-[#C9A84C]" />
               </h3>
-              <p className="text-xs sm:text-sm text-#6B7280 font-light leading-relaxed font-sans">
+              <p className="text-xs sm:text-sm text-#6B7280 font-normal leading-relaxed font-sans">
                 {sec.content}
               </p>
             </div>
@@ -131,10 +131,10 @@ export default function RulesPage({ navigate }: RulesPageProps) {
       <div className="p-6 bg-amber-50 border border-amber-200 rounded-[var(--radius-large)] flex items-start space-x-3 text-xs text-amber-800 font-sans leading-relaxed">
         <ShieldAlert className="w-5 h-5 shrink-0 text-amber-700 mt-0.5" />
         <div className="space-y-1">
-          <h4 className="font-bold uppercase tracking-wider text-[11px] text-amber-950 font-display">
+          <h4 className="font-semibold uppercase tracking-wider text-[11px] text-amber-950 font-display">
             MANDATORY COMPLIANCE ACKNOWLEDGEMENT
           </h4>
-          <p className="font-light">
+          <p className="font-normal">
             By creating or logging into any workspace dashboard, you grant irreversible confirmation of your consent to abide by these regulatory coordinates, legal bylaws, and fee structures. Non-compliance results in automatic ledger locks and formal CAC/LASRERA deregistration requests.
           </p>
         </div>

@@ -183,14 +183,14 @@ export default function GlobalAICommandCenter() {
                   <div className="p-4 bg-white border border-stone-200 rounded-2xl space-y-1">
                     <div className="flex items-center space-x-2">
                       <Sparkles className="w-4 h-4 text-[#C9A84C]" />
-                      <h4 className="font-display font-black text-xs text-[#18452E] uppercase">{title}</h4>
+                      <h4 className="font-display font-semibold text-xs text-[#18452E] uppercase">{title}</h4>
                     </div>
                     <p className="text-xs text-stone-550 leading-relaxed pt-1">{explanation}</p>
                   </div>
 
                   {/* Tenants Result List */}
                   <div className="bg-white border rounded-2xl overflow-hidden divide-y divide-stone-100">
-                    <div className="p-3 bg-stone-50 font-mono text-[9px] text-stone-400 uppercase font-black tracking-wider">
+                    <div className="p-3 bg-stone-50 font-mono text-[9px] text-stone-400 uppercase font-semibold tracking-wider">
                       Live Database Results ({matchedTenants.length} profiles matching)
                     </div>
                     
@@ -203,9 +203,9 @@ export default function GlobalAICommandCenter() {
                           <div key={tenant.id} className="p-3.5 hover:bg-stone-50/50 transition flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-xs">
                             <div>
                               <div className="flex items-center space-x-1.5">
-                                <span className="font-bold text-#132A1D">{tenant.tenantName}</span>
+                                <span className="font-semibold text-#132A1D">{tenant.tenantName}</span>
                                 {tenant.isHighRisk && (
-                                  <span className="bg-rose-100 text-rose-800 text-[8px] font-bold px-1.5 py-0.5 rounded uppercase">High Risk</span>
+                                  <span className="bg-rose-100 text-rose-800 text-[8px] font-semibold px-1.5 py-0.5 rounded uppercase">High Risk</span>
                                 )}
                               </div>
                               <span className="text-[10px] text-stone-450 block font-mono">{tenant.propertyName} ({tenant.unitNumber})</span>
@@ -219,7 +219,7 @@ export default function GlobalAICommandCenter() {
 
                               <button
                                 onClick={() => handleDispatchReminder(tenant)}
-                                className="flex items-center space-x-1 px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[9px] font-black uppercase transition cursor-pointer"
+                                className="flex items-center space-x-1 px-3 py-1.5 bg-[#18452E] hover:bg-[#18452E] text-white rounded-lg text-[9px] font-semibold uppercase transition cursor-pointer"
                               >
                                 <Send className="w-3 h-3" />
                                 <span>Remind</span>
@@ -241,7 +241,7 @@ export default function GlobalAICommandCenter() {
                       <Sparkles className="w-4 h-4" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-#132A1D">Ask AI Engine: "{query}"</h4>
+                      <h4 className="font-semibold text-#132A1D">Ask AI Engine: "{query}"</h4>
                       <p className="text-xs text-#6B7280 mt-1">Submit this natural query to search our active rent &amp; service ledgers</p>
                     </div>
                     <ChevronRight className="w-5 h-5 text-stone-300 group-hover:text-#6B7280" />
@@ -257,7 +257,7 @@ export default function GlobalAICommandCenter() {
                 <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
                   <Bot className="w-32 h-32" />
                 </div>
-                <h3 className="text-[10px] font-mono uppercase text-[#C9A84C] font-black mb-2.5 tracking-widest flex items-center gap-2">
+                <h3 className="text-[10px] font-mono uppercase text-[#C9A84C] font-semibold mb-2.5 tracking-widest flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5" /> AI Daily Collection Briefing
                 </h3>
                 <ul className="space-y-2 text-xs text-stone-200">
@@ -277,7 +277,7 @@ export default function GlobalAICommandCenter() {
               </div>
 
               {/* Quick Suggestion buttons */}
-              <h3 className="text-[10px] font-mono uppercase text-stone-400 font-bold mb-2 tracking-widest px-1">Suggested Collections Commands</h3>
+              <h3 className="text-[10px] font-mono uppercase text-stone-400 font-semibold mb-2 tracking-widest px-1">Suggested Collections Commands</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {[
@@ -297,7 +297,7 @@ export default function GlobalAICommandCenter() {
                       <Command className="w-4 h-4 text-#6B7280" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-stone-850">{cmd.text}</div>
+                      <div className="text-xs font-semibold text-stone-850">{cmd.text}</div>
                       <div className="text-[10px] text-stone-400 mt-0.5">{cmd.sub}</div>
                     </div>
                   </button>
@@ -310,10 +310,10 @@ export default function GlobalAICommandCenter() {
         
         {/* Footer */}
         <div className="p-3 bg-stone-50 border-t border-stone-250 text-center flex items-center justify-between">
-          <span className="text-[10px] font-mono text-stone-400 font-bold uppercase tracking-wider flex items-center gap-1">
+          <span className="text-[10px] font-mono text-stone-400 font-semibold uppercase tracking-wider flex items-center gap-1">
             <Command className="w-3.5 h-3.5" /> Cmd K to close
           </span>
-          <span className="text-[10px] text-[#18452E] font-black uppercase tracking-wider bg-[#18452E]/10 px-2.5 py-1 rounded">
+          <span className="text-[10px] text-[#18452E] font-semibold uppercase tracking-wider bg-[#18452E]/10 px-2.5 py-1 rounded">
             Unity Homes AI Active
           </span>
         </div>

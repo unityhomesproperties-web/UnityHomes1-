@@ -312,7 +312,7 @@ export default function SupportCenter({
             <HelpCircle className="w-6 h-6 text-emerald-300" />
           </div>
           <div>
-            <h2 className="text-lg font-display font-extrabold tracking-tight">Unity Homes Support Center</h2>
+            <h2 className="text-lg font-display font-semibold tracking-tight">Unity Homes Support Center</h2>
             <p className="text-xs text-emerald-200/80">
               Direct assistance from the Unity Homes platform support & technical staff
             </p>
@@ -334,7 +334,7 @@ export default function SupportCenter({
       <div className="flex border-b border-stone-200 bg-stone-50/80 px-6 pt-3 gap-2">
         <button
           onClick={() => { setActiveTab('my-tickets'); setSelectedTicket(null); setSubmittedRef(null); }}
-          className={`px-5 py-3 font-display text-xs font-bold rounded-t-2xl border-t border-x transition flex items-center space-x-2 cursor-pointer ${
+          className={`px-5 py-3 font-display text-xs font-semibold rounded-t-2xl border-t border-x transition flex items-center space-x-2 cursor-pointer ${
             activeTab === 'my-tickets'
               ? 'bg-white border-stone-200 text-[#18452E] shadow-xs -mb-px'
               : 'border-transparent text-#6B7280 hover:text-#132A1D'
@@ -343,7 +343,7 @@ export default function SupportCenter({
           <MessageSquare className="w-4 h-4" />
           <span>My Support Tickets</span>
           {myTickets.length > 0 && (
-            <span className="bg-emerald-100 text-emerald-900 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">
+            <span className="bg-emerald-100 text-emerald-900 text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full">
               {myTickets.length}
             </span>
           )}
@@ -351,7 +351,7 @@ export default function SupportCenter({
 
         <button
           onClick={() => { setActiveTab('new-request'); setSelectedTicket(null); setSubmittedRef(null); }}
-          className={`px-5 py-3 font-display text-xs font-bold rounded-t-2xl border-t border-x transition flex items-center space-x-2 cursor-pointer ${
+          className={`px-5 py-3 font-display text-xs font-semibold rounded-t-2xl border-t border-x transition flex items-center space-x-2 cursor-pointer ${
             activeTab === 'new-request'
               ? 'bg-white border-stone-200 text-[#18452E] shadow-xs -mb-px'
               : 'border-transparent text-#6B7280 hover:text-#132A1D'
@@ -383,7 +383,7 @@ export default function SupportCenter({
                   </div>
                   <button
                     onClick={() => setActiveTab('new-request')}
-                    className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-bold hover:bg-[#112d22] transition flex items-center space-x-1.5 cursor-pointer shrink-0"
+                    className="px-4 py-2 bg-[#18452E] text-white rounded-xl text-xs font-semibold hover:bg-[#112d22] transition flex items-center space-x-1.5 cursor-pointer shrink-0"
                   >
                     <PlusCircle className="w-4 h-4" />
                     <span>Create Ticket</span>
@@ -394,13 +394,13 @@ export default function SupportCenter({
                 {myTickets.length === 0 ? (
                   <div className="text-center py-12 bg-stone-50/50 rounded-[var(--radius-large)] border border-dashed border-stone-200 p-8 space-y-3">
                     <HelpCircle className="w-12 h-12 text-stone-300 mx-auto" />
-                    <h3 className="font-display font-bold text-#132A1D text-sm">No Support Tickets Found</h3>
+                    <h3 className="font-display font-semibold text-#132A1D text-sm">No Support Tickets Found</h3>
                     <p className="text-#6B7280 text-xs max-w-md mx-auto">
                       Have a technical problem, billing question, or feature inquiry? Create a new support ticket and our dedicated platform staff will assist you.
                     </p>
                     <button
                       onClick={() => setActiveTab('new-request')}
-                      className="mt-2 px-5 py-2.5 bg-[#18452E] text-white rounded-xl text-xs font-bold hover:bg-[#112d22] transition inline-flex items-center space-x-2 cursor-pointer"
+                      className="mt-2 px-5 py-2.5 bg-[#18452E] text-white rounded-xl text-xs font-semibold hover:bg-[#112d22] transition inline-flex items-center space-x-2 cursor-pointer"
                     >
                       <PlusCircle className="w-4 h-4" />
                       <span>Submit New Support Request</span>
@@ -416,13 +416,13 @@ export default function SupportCenter({
                       >
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <div className="flex items-center space-x-2">
-                            <span className="font-mono font-black text-xs text-[#18452E] bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100">
+                            <span className="font-mono font-semibold text-xs text-[#18452E] bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100">
                               #{ticket.refNumber}
                             </span>
-                            <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(ticket.priority)}`}>
+                            <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(ticket.priority)}`}>
                               {ticket.priority} Priority
                             </span>
-                            <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(ticket.status)}`}>
+                            <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(ticket.status)}`}>
                               {ticket.status}
                             </span>
                           </div>
@@ -433,7 +433,7 @@ export default function SupportCenter({
                         </div>
 
                         <div>
-                          <h4 className="font-bold text-#132A1D text-sm group-hover:text-[#18452E] transition">
+                          <h4 className="font-semibold text-#132A1D text-sm group-hover:text-[#18452E] transition">
                             {ticket.category}
                           </h4>
                           <p className="text-xs text-#6B7280 line-clamp-2 mt-1">
@@ -446,7 +446,7 @@ export default function SupportCenter({
                             <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                             <span>{ticket.messages.length} message(s) in thread</span>
                           </span>
-                          <span className="text-[11px] font-bold text-[#18452E] group-hover:translate-x-1 transition flex items-center space-x-1">
+                          <span className="text-[11px] font-semibold text-[#18452E] group-hover:translate-x-1 transition flex items-center space-x-1">
                             <span>View Thread</span>
                             <ChevronRight className="w-4 h-4" />
                           </span>
@@ -461,7 +461,7 @@ export default function SupportCenter({
               <div className="space-y-6 animate-fade-in">
                 <button
                   onClick={() => setSelectedTicket(null)}
-                  className="px-3.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-bold text-xs rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
+                  className="px-3.5 py-1.5 bg-stone-50 hover:bg-stone-200 text-#132A1D font-semibold text-xs rounded-xl transition flex items-center space-x-1.5 cursor-pointer"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back to My Tickets</span>
@@ -471,13 +471,13 @@ export default function SupportCenter({
                 <div className="bg-stone-50 border border-stone-200 rounded-2xl p-5 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-200/80 pb-3">
                     <div className="flex items-center space-x-2">
-                      <span className="font-mono font-black text-sm text-[#18452E] bg-emerald-100/60 px-3 py-1 rounded-xl border border-emerald-200">
+                      <span className="font-mono font-semibold text-sm text-[#18452E] bg-emerald-100/60 px-3 py-1 rounded-xl border border-emerald-200">
                         #{selectedTicket.refNumber}
                       </span>
-                      <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(selectedTicket.priority)}`}>
+                      <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getPriorityBadge(selectedTicket.priority)}`}>
                         {selectedTicket.priority} Priority
                       </span>
-                      <span className={`text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(selectedTicket.status)}`}>
+                      <span className={`text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border uppercase ${getStatusBadge(selectedTicket.status)}`}>
                         {selectedTicket.status}
                       </span>
                     </div>
@@ -490,12 +490,12 @@ export default function SupportCenter({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                     <div>
                       <span className="text-stone-400 font-mono text-[10px] uppercase block">Issue Category</span>
-                      <strong className="text-#132A1D font-bold">{selectedTicket.category}</strong>
+                      <strong className="text-#132A1D font-semibold">{selectedTicket.category}</strong>
                     </div>
 
                     <div>
                       <span className="text-stone-400 font-mono text-[10px] uppercase block">Contact Preference</span>
-                      <strong className="text-#132A1D font-bold">{selectedTicket.contactPreference}</strong>
+                      <strong className="text-#132A1D font-semibold">{selectedTicket.contactPreference}</strong>
                     </div>
 
                     {selectedTicket.affectedPageOrFeature && (
@@ -511,7 +511,7 @@ export default function SupportCenter({
 
                 {/* CONVERSATION THREAD */}
                 <div className="space-y-4">
-                  <h3 className="font-display font-bold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
+                  <h3 className="font-display font-semibold text-#132A1D text-xs uppercase tracking-wider flex items-center space-x-2">
                     <MessageSquare className="w-4 h-4 text-[#18452E]" />
                     <span>Communication Thread ({selectedTicket.messages.length})</span>
                   </h3>
@@ -530,13 +530,13 @@ export default function SupportCenter({
                         >
                           <div className="flex items-center justify-between gap-2 border-b border-stone-200/50 pb-2 mb-2">
                             <div className="flex items-center space-x-2">
-                              <div className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-[10px] ${
+                              <div className={`w-6 h-6 rounded-full flex items-center justify-center font-semibold text-[10px] ${
                                 isAdmin ? 'bg-[#18452E] text-white' : 'bg-stone-200 text-#132A1D'
                               }`}>
                                 {isAdmin ? <ShieldAlert className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
                               </div>
-                              <span className="font-bold text-xs text-#132A1D">{msg.senderName}</span>
-                              <span className={`text-[9px] font-mono px-2 py-0.2 rounded font-bold uppercase ${
+                              <span className="font-semibold text-xs text-#132A1D">{msg.senderName}</span>
+                              <span className={`text-[9px] font-mono px-2 py-0.2 rounded font-semibold uppercase ${
                                 isAdmin ? 'bg-emerald-800 text-white' : 'bg-stone-50 text-#6B7280'
                               }`}>
                                 {msg.senderRole}
@@ -576,7 +576,7 @@ export default function SupportCenter({
                 {/* REPLY INPUT AREA */}
                 {selectedTicket.status !== 'Resolved' ? (
                   <form onSubmit={handleSendReply} className="bg-white border border-stone-200 rounded-2xl p-4 space-y-3 shadow-sm">
-                    <label className="block text-xs font-bold text-#132A1D">
+                    <label className="block text-xs font-semibold text-#132A1D">
                       Send Reply to Support
                     </label>
                     <textarea
@@ -589,7 +589,7 @@ export default function SupportCenter({
                     />
 
                     {replySuccess && (
-                      <p className="text-xs text-emerald-800 bg-emerald-50 p-2 rounded-lg font-bold">
+                      <p className="text-xs text-emerald-800 bg-emerald-50 p-2 rounded-lg font-semibold">
                         {replySuccess}
                       </p>
                     )}
@@ -597,7 +597,7 @@ export default function SupportCenter({
                     <div className="flex justify-end">
                       <button
                         type="submit"
-                        className="px-5 py-2.5 bg-[#18452E] hover:bg-[#112d22] text-white font-bold text-xs rounded-xl transition flex items-center space-x-2 cursor-pointer shadow-xs"
+                        className="px-5 py-2.5 bg-[#18452E] hover:bg-[#112d22] text-white font-semibold text-xs rounded-xl transition flex items-center space-x-2 cursor-pointer shadow-xs"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Send Reply</span>
@@ -626,8 +626,8 @@ export default function SupportCenter({
                 </div>
 
                 <div className="space-y-1">
-                  <span className="text-xs font-mono font-bold text-emerald-800 uppercase tracking-wider block">Support Request Submitted</span>
-                  <h3 className="font-display font-extrabold text-#132A1D text-xl">
+                  <span className="text-xs font-mono font-semibold text-emerald-800 uppercase tracking-wider block">Support Request Submitted</span>
+                  <h3 className="font-display font-semibold text-#132A1D text-xl">
                     Reference #{submittedRef}
                   </h3>
                 </div>
@@ -644,13 +644,13 @@ export default function SupportCenter({
                 <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                   <button
                     onClick={() => { setSubmittedRef(null); setActiveTab('my-tickets'); }}
-                    className="px-5 py-2.5 bg-[#18452E] text-white rounded-xl font-bold text-xs hover:bg-[#112d22] transition cursor-pointer shadow-sm"
+                    className="px-5 py-2.5 bg-[#18452E] text-white rounded-xl font-semibold text-xs hover:bg-[#112d22] transition cursor-pointer shadow-sm"
                   >
                     View My Support Tickets
                   </button>
                   <button
                     onClick={() => { setSubmittedRef(null); }}
-                    className="px-5 py-2.5 bg-white border border-stone-300 text-#132A1D rounded-xl font-bold text-xs hover:bg-stone-50 transition cursor-pointer"
+                    className="px-5 py-2.5 bg-white border border-stone-300 text-#132A1D rounded-xl font-semibold text-xs hover:bg-stone-50 transition cursor-pointer"
                   >
                     Submit Another Request
                   </button>
@@ -660,7 +660,7 @@ export default function SupportCenter({
               /* TICKET FORM */
               <form onSubmit={handleSubmitTicket} className="space-y-5 max-w-2xl mx-auto">
                 <div className="border-b border-stone-200 pb-3">
-                  <h3 className="font-display font-bold text-#132A1D text-sm uppercase tracking-wider">
+                  <h3 className="font-display font-semibold text-#132A1D text-sm uppercase tracking-wider">
                     Submit Platform Support Ticket
                   </h3>
                   <p className="text-#6B7280 text-xs">
@@ -670,13 +670,13 @@ export default function SupportCenter({
 
                 {/* Category Dropdown */}
                 <div>
-                  <label className="block text-xs font-bold text-#132A1D mb-1">
+                  <label className="block text-xs font-semibold text-#132A1D mb-1">
                     Issue Category *
                   </label>
                   <select
                     value={category}
                     onChange={(e) => setCategory(e.target.value as SupportCategory)}
-                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
+                    className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
                   >
                     <option value="Account and Login Issues">1. Account and Login Issues</option>
                     <option value="Billing and Subscription">2. Billing and Subscription</option>
@@ -691,7 +691,7 @@ export default function SupportCenter({
                 {/* Conditional Field for Tech Bug */}
                 {category === 'Technical Problem or Bug' && (
                   <div className="bg-amber-50/60 p-4 rounded-2xl border border-amber-200 space-y-2 animate-fade-in">
-                    <label className="block text-xs font-bold text-amber-900">
+                    <label className="block text-xs font-semibold text-amber-900">
                       What page or feature was affected and what happened? (Optional)
                     </label>
                     <input
@@ -707,10 +707,10 @@ export default function SupportCenter({
                 {/* Issue Description */}
                 <div>
                   <div className="flex justify-between items-center mb-1">
-                    <label className="block text-xs font-bold text-#132A1D">
+                    <label className="block text-xs font-semibold text-#132A1D">
                       Issue Description *
                     </label>
-                    <span className={`text-[10px] font-mono ${description.length > 900 ? 'text-red-600 font-bold' : 'text-stone-400'}`}>
+                    <span className={`text-[10px] font-mono ${description.length > 900 ? 'text-red-600 font-semibold' : 'text-stone-400'}`}>
                       {description.length} / 1000
                     </span>
                   </div>
@@ -727,7 +727,7 @@ export default function SupportCenter({
 
                 {/* Screenshot Upload (Max 3) */}
                 <div>
-                  <label className="block text-xs font-bold text-#132A1D mb-1">
+                  <label className="block text-xs font-semibold text-#132A1D mb-1">
                     Screenshot Upload (Optional, up to 3 images)
                   </label>
                   <div className="flex flex-wrap items-center gap-3">
@@ -747,7 +747,7 @@ export default function SupportCenter({
                     {screenshots.length < 3 && (
                       <label className="w-20 h-20 rounded-xl border-2 border-dashed border-stone-300 hover:border-emerald-500 bg-stone-50 hover:bg-emerald-50/30 flex flex-col items-center justify-center cursor-pointer transition text-#6B7280 hover:text-emerald-700">
                         <ImageIcon className="w-5 h-5 mb-1" />
-                        <span className="text-[9px] font-bold">Add Photo</span>
+                        <span className="text-[9px] font-semibold">Add Photo</span>
                         <input
                           type="file"
                           accept="image/*"
@@ -764,13 +764,13 @@ export default function SupportCenter({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Contact Preference */}
                   <div>
-                    <label className="block text-xs font-bold text-#132A1D mb-1">
+                    <label className="block text-xs font-semibold text-#132A1D mb-1">
                       Contact Preference *
                     </label>
                     <select
                       value={contactPreference}
                       onChange={(e) => setContactPreference(e.target.value as SupportContactPreference)}
-                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
+                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
                     >
                       <option value="In-App Response">In-App Response</option>
                       <option value="Email Response">Email Response</option>
@@ -780,13 +780,13 @@ export default function SupportCenter({
 
                   {/* Priority */}
                   <div>
-                    <label className="block text-xs font-bold text-#132A1D mb-1">
+                    <label className="block text-xs font-semibold text-#132A1D mb-1">
                       Priority Level *
                     </label>
                     <select
                       value={priority}
                       onChange={(e) => setPriority(e.target.value as SupportPriority)}
-                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-bold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
+                      className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-xs font-semibold text-#132A1D focus:outline-none focus:ring-1 focus:ring-[#0E2F1F]"
                     >
                       <option value="Normal">Normal Priority</option>
                       <option value="Urgent">Urgent Priority</option>
@@ -794,7 +794,7 @@ export default function SupportCenter({
                     </select>
 
                     {priority === 'Urgent' && (
-                      <p className="text-[10px] text-red-700 font-bold bg-red-50 border border-red-200 p-2 rounded-lg mt-1.5 flex items-center space-x-1">
+                      <p className="text-[10px] text-red-700 font-semibold bg-red-50 border border-red-200 p-2 rounded-lg mt-1.5 flex items-center space-x-1">
                         <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
                         <span>Urgent priority is reserved for account lockouts or active payment issues only.</span>
                       </p>
@@ -812,7 +812,7 @@ export default function SupportCenter({
                 <div className="pt-3 border-t border-stone-200 flex justify-end">
                   <button
                     type="submit"
-                    className="px-6 py-3 bg-[#18452E] hover:bg-[#112d22] text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer shadow-md flex items-center space-x-2"
+                    className="px-6 py-3 bg-[#18452E] hover:bg-[#112d22] text-white font-semibold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer shadow-md flex items-center space-x-2"
                   >
                     <Send className="w-4 h-4" />
                     <span>Submit Request to Admin</span>

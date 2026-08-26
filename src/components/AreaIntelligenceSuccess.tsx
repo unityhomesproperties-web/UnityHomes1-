@@ -38,7 +38,7 @@ export default function AreaIntelligenceSuccess({ onReset }: AISuccessStateProps
       </div>
       
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.3 }}>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] mb-6">
+        <h1 className="text-3xl md:text-4xl font-semibold text-[var(--color-text-primary)] mb-6">
           Thank you for helping improve property transparency in Nigeria
         </h1>
         
@@ -49,13 +49,13 @@ export default function AreaIntelligenceSuccess({ onReset }: AISuccessStateProps
         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
           <Link
             to="/"
-            className="flex items-center justify-center bg-white text-[var(--color-text-primary)] border border-[var(--color-border)] px-8 py-4 rounded-[18px] font-bold text-lg hover:bg-stone-50 transition-colors duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+            className="flex items-center justify-center bg-white text-[var(--color-text-primary)] border border-[var(--color-border)] px-8 py-4 rounded-[18px] font-semibold text-lg hover:bg-stone-50 transition-colors duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
           >
             Return Home
           </Link>
           <button
             onClick={() => setIsShareOpen(true)}
-            className="flex items-center justify-center space-x-2 bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[18px] font-bold text-lg hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+            className="flex items-center justify-center space-x-2 bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] shadow-sm hover:-translate-y-0.5 active:translate-y-0"
           >
             <Share2 className="w-5 h-5" />
             <span>Share Area Intelligence</span>

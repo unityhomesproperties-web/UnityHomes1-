@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl lg:max-w-2xl lg:w-3/5">
             <motion.h2 
-              className="text-3xl md:text-5xl lg:text-5xl font-extrabold text-[var(--color-text-primary)] leading-tight tracking-tight mb-6"
+              className="text-3xl md:text-5xl lg:text-5xl font-semibold text-[var(--color-text-primary)] leading-tight tracking-tight mb-6"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -170,7 +170,7 @@ export default function Footer() {
             >
               <Link
                 to="/waitlist"
-                className="group inline-flex items-center justify-center bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[18px] font-bold text-lg min-h-[48px] shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-[200ms]"
+                className="group inline-flex items-center justify-center bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[18px] font-semibold text-lg min-h-[48px] shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-[200ms]"
               >
                 Join The Waitlist
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-[200ms] group-hover:translate-x-[3px]" />
@@ -205,7 +205,7 @@ export default function Footer() {
                   transition={{ duration: 0.3 }}
                 />
               </Link>
-              <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-2">
+              <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-2">
                 Unity Homes and Properties Ltd
               </h3>
               <p className="text-[var(--color-text-secondary)] leading-relaxed max-w-sm text-sm">
@@ -224,7 +224,7 @@ export default function Footer() {
                 viewport={{ once: true, margin: "-50px" }}
                 variants={navReveal}
               >
-                <span className="font-bold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Company</span>
+                <span className="font-semibold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Company</span>
                 <FooterLink to="/about">About</FooterLink>
                 <FooterLink to="/mission">Mission</FooterLink>
                 <FooterLink to="/vision">Vision</FooterLink>
@@ -240,7 +240,7 @@ export default function Footer() {
                 viewport={{ once: true, margin: "-50px" }}
                 variants={navReveal}
               >
-                <span className="font-bold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Explore</span>
+                <span className="font-semibold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Explore</span>
                 <FooterLink to="/services">Services</FooterLink>
                 <FooterLink to="/professionals">Professionals</FooterLink>
                 <FooterLink to="/area-intelligence">Area Intelligence</FooterLink>
@@ -256,7 +256,7 @@ export default function Footer() {
                 viewport={{ once: true, margin: "-50px" }}
                 variants={navReveal}
               >
-                <span className="font-bold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Legal</span>
+                <span className="font-semibold text-[var(--color-text-primary)] mb-2 text-xs md:text-sm uppercase tracking-widest">Legal</span>
                 <FooterLink to="/privacy">Privacy</FooterLink>
                 <FooterLink to="/terms">Terms</FooterLink>
               </motion.div>

@@ -43,10 +43,10 @@ export default function WaitlistSuccessPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.4, duration: 0.4 }}
           >
-            <h4 className="text-sm md:text-base font-bold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm md:text-base font-semibold tracking-widest uppercase text-white/90 mb-4">
               THANK YOU
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
               Thank you for joining the Unity Homes Waitlist.
             </h1>
             <p className="text-xl md:text-2xl font-medium text-white/90 max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ export default function WaitlistSuccessPage() {
             <div className="w-12 h-12 bg-[#F5FAF2] border border-[#6FBE45]/20 rounded-[18px] flex items-center justify-center text-[#6FBE45] mr-5 shrink-0">
               <Map className="w-6 h-6" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#132A1D]">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#132A1D]">
               Help Build Better Area Intelligence
             </h2>
           </div>
@@ -80,14 +80,14 @@ export default function WaitlistSuccessPage() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <Link
               to="/area-intelligence"
-              className="flex-1 text-center bg-[#6FBE45] text-white px-8 py-5 rounded-[18px] font-bold text-lg hover:bg-[#5CA636] transition-all duration-200 min-h-[56px] flex items-center justify-center group"
+              className="flex-1 text-center bg-[#6FBE45] text-white px-8 py-5 rounded-[18px] font-semibold text-lg hover:bg-[#5CA636] transition-all duration-200 min-h-[56px] flex items-center justify-center group"
             >
               Contribute Area Insights
               <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-1" />
             </Link>
             <Link
               to="/"
-              className="flex-1 text-center bg-white text-[#132A1D] border-2 border-gray-200 px-8 py-5 rounded-[18px] font-bold text-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 min-h-[56px] flex items-center justify-center group"
+              className="flex-1 text-center bg-white text-[#132A1D] border-2 border-gray-200 px-8 py-5 rounded-[18px] font-semibold text-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 min-h-[56px] flex items-center justify-center group"
             >
               Skip For Now
             </Link>

@@ -66,13 +66,13 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
           <div className="w-12 h-12 bg-teal-50 border border-teal-100 rounded-xl flex items-center justify-center p-2 mb-3">
             <Building className="w-full h-full text-[#1A5C50]" />
           </div>
-          <span className="font-mono text-[10px] font-black tracking-widest text-[#C9A84C] uppercase">
+          <span className="font-mono text-[10px] font-semibold tracking-widest text-[#C9A84C] uppercase">
             CORPORATE PARTNERSHIP
           </span>
-          <h1 className="text-2xl font-display font-extrabold text-[#18452E] mt-1">
+          <h1 className="text-2xl font-display font-semibold text-[#18452E] mt-1">
             Apply as Property Management Company
           </h1>
-          <p className="text-xs text-stone-500 mt-1 pr-6 pl-6 font-light">
+          <p className="text-xs text-stone-500 mt-1 pr-6 pl-6 font-normal">
             Register your firm for administrative vetting. Once approved, you gain multi-portfolio dashboard capabilities.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             <div className="w-16 h-16 bg-teal-100 text-[#1A5C50] rounded-full flex items-center justify-center mx-auto text-3xl">
               ✓
             </div>
-            <h3 className="font-display font-extrabold text-sm text-[#18452E] uppercase font-mono">
+            <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase font-mono">
               Corporate Request Form Logged
             </h3>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -90,7 +90,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             </p>
             <button
               onClick={() => navigate('/')}
-              className="mt-6 w-full py-3 bg-[#1A5C50] text-[#F0F8F4] hover:bg-teal-900 font-bold rounded-xl text-xs transition cursor-pointer shadow-sm"
+              className="mt-6 w-full py-3 bg-[#1A5C50] text-[#F0F8F4] hover:bg-teal-900 font-semibold rounded-xl text-xs transition cursor-pointer shadow-sm"
             >
               Return to Homepage
             </button>
@@ -100,7 +100,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Company Corporate Name*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Company Corporate Name*</label>
                 <input
                   type="text"
                   required
@@ -111,7 +111,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Corporate CAC Number*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Corporate CAC Number*</label>
                 <input
                   type="text"
                   required
@@ -125,7 +125,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Contact Person Full Name*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Contact Person Full Name*</label>
                 <input
                   type="text"
                   required
@@ -136,7 +136,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Contact Corporate Email*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Contact Corporate Email*</label>
                 <input
                   type="email"
                   required
@@ -150,7 +150,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Phone Line Connection*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Phone Line Connection*</label>
                 <input
                   type="text"
                   required
@@ -161,7 +161,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">WhatsApp Connecting Number</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">WhatsApp Connecting Number</label>
                 <input
                   type="text"
                   required
@@ -175,7 +175,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Years Corporate Operating</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Years Corporate Operating</label>
                 <input
                   type="number"
                   required
@@ -186,7 +186,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Active Portfolios Controlled (Units count)</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Active Portfolios Controlled (Units count)</label>
                 <input
                   type="number"
                   required
@@ -199,7 +199,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             </div>
 
             <div>
-              <label className="block text-[10px] font-bold text-[#18452E] uppercase">Physical Registered Office Address*</label>
+              <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Physical Registered Office Address*</label>
               <input
                 type="text"
                 required
@@ -211,7 +211,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             </div>
 
             <div>
-              <label className="block text-[10px] font-bold text-[#18452E] uppercase">Reference Credentials / Free Notes text (Optional)</label>
+              <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Reference Credentials / Free Notes text (Optional)</label>
               <textarea
                 value={formData.references}
                 onChange={(e) => setFormData({ ...formData, references: e.target.value })}
@@ -221,10 +221,10 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             </div>
 
             <div className="space-y-4 pt-4 border-t border-stone-200">
-              <h3 className="text-[#18452E] font-bold text-sm">Service & Compliance Setup</h3>
+              <h3 className="text-[#18452E] font-semibold text-sm">Service & Compliance Setup</h3>
               
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Receiving Authority*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Receiving Authority*</label>
                 <select
                   required
                   value={formData.receivingAuthority}
@@ -239,7 +239,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[10px] font-bold text-[#18452E] uppercase">Tenant Relationship Manager*</label>
+                  <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Tenant Relationship Manager*</label>
                   <input
                     type="text"
                     required
@@ -250,7 +250,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-[#18452E] uppercase">Maintenance Handler*</label>
+                  <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Maintenance Handler*</label>
                   <input
                     type="text"
                     required
@@ -263,7 +263,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
               </div>
               
               <div>
-                <label className="block text-[10px] font-bold text-[#18452E] uppercase">Expense Approver*</label>
+                <label className="block text-[10px] font-semibold text-[#18452E] uppercase">Expense Approver*</label>
                 <input
                   type="text"
                   required
@@ -278,7 +278,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
 
             {/* Disclaimer and Submit Conforming to STEP 5 SPEC */}
             <div className="bg-[#1A5C50]/5 rounded-xl p-4 border border-[#1A5C50]/20 text-[11px] text-[#1A5C50] leading-relaxed">
-              <span className="font-bold flex items-center space-x-1.5 font-mono text-[9px] uppercase tracking-wider mb-1">
+              <span className="font-semibold flex items-center space-x-1.5 font-mono text-[9px] uppercase tracking-wider mb-1">
                 <ShieldCheck className="w-4 h-4 text-[#1A5C50]" />
                 ADMINISTRATIVE LICENSE VET
               </span>
@@ -288,7 +288,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 bg-[#1A5C50] text-[#F0F8F4] hover:bg-teal-900 border border-[#1A5C50] rounded-xl font-bold font-sans text-xs tracking-wider uppercase transition shadow-md flex items-center justify-center space-x-1"
+              className="w-full py-4 bg-[#1A5C50] text-[#F0F8F4] hover:bg-teal-900 border border-[#1A5C50] rounded-xl font-semibold font-sans text-xs tracking-wider uppercase transition shadow-md flex items-center justify-center space-x-1"
             >
               {isSubmitting ? 'Verifying Corporate Credentials RC...' : 'Apply to Partner With Unity Homes'}
             </button>

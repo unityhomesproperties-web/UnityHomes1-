@@ -120,7 +120,7 @@ export default function SavedFilters({
     <div className="space-y-3">
       {/* Pills Container */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-[10px] font-mono font-bold text-stone-400 uppercase tracking-wider shrink-0 mr-1 flex items-center">
+        <span className="text-[10px] font-mono font-semibold text-stone-400 uppercase tracking-wider shrink-0 mr-1 flex items-center">
           <Bookmark className="w-3.5 h-3.5 mr-1 text-teal-800" />
           <span>Filters:</span>
         </span>
@@ -131,7 +131,7 @@ export default function SavedFilters({
           return (
             <div 
               key={config.id} 
-              className={`inline-flex items-center rounded-full text-[10px] font-bold uppercase transition duration-150 border cursor-pointer select-none ${
+              className={`inline-flex items-center rounded-full text-[10px] font-semibold uppercase transition duration-150 border cursor-pointer select-none ${
                 active 
                   ? 'bg-teal-800 text-white border-teal-800 hover:bg-teal-900' 
                   : 'bg-teal-50/50 border-teal-100 text-teal-900 hover:bg-teal-50'
@@ -163,7 +163,7 @@ export default function SavedFilters({
             onApplyFilter({});
             triggerSuccess('Filters cleared. Showing complete portfolio records.');
           }}
-          className="text-[10px] font-bold uppercase text-stone-400 hover:text-#6B7280 transition underline cursor-pointer"
+          className="text-[10px] font-semibold uppercase text-stone-400 hover:text-#6B7280 transition underline cursor-pointer"
         >
           Reset All
         </button>
@@ -172,7 +172,7 @@ export default function SavedFilters({
         {!showSaveForm ? (
           <button
             onClick={() => setShowSaveForm(true)}
-            className="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-full border border-teal-200 bg-white text-teal-800 hover:bg-teal-50 text-[10px] font-bold uppercase transition ml-auto cursor-pointer shadow-xs"
+            className="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-full border border-teal-200 bg-white text-teal-800 hover:bg-teal-50 text-[10px] font-semibold uppercase transition ml-auto cursor-pointer shadow-xs"
           >
             <Plus className="w-3 h-3" />
             <span>Save Current Filters</span>
@@ -185,18 +185,18 @@ export default function SavedFilters({
               placeholder="Name your filter..."
               value={newFilterName}
               onChange={(e) => setNewFilterName(e.target.value)}
-              className="bg-transparent text-[10px] text-teal-950 font-bold uppercase placeholder-teal-600 outline-none w-32 border-none"
+              className="bg-transparent text-[10px] text-teal-950 font-semibold uppercase placeholder-teal-600 outline-none w-32 border-none"
             />
             <button
               type="submit"
-              className="bg-teal-800 text-white rounded-full px-2.5 py-1 text-[9px] font-bold uppercase hover:bg-teal-950 transition cursor-pointer"
+              className="bg-teal-800 text-white rounded-full px-2.5 py-1 text-[9px] font-semibold uppercase hover:bg-teal-950 transition cursor-pointer"
             >
               Save
             </button>
             <button
               type="button"
               onClick={() => setShowSaveForm(false)}
-              className="text-#6B7280 hover:text-#132A1D text-[10px] font-bold uppercase px-1.5 cursor-pointer"
+              className="text-#6B7280 hover:text-#132A1D text-[10px] font-semibold uppercase px-1.5 cursor-pointer"
             >
               Cancel
             </button>
