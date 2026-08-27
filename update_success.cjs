@@ -1,10 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Map, ArrowRight } from 'lucide-react';
-import { motion } from 'motion/react';
+const fs = require('fs');
 
-export default function WaitlistSuccessPage() {
-  return (
+let content = fs.readFileSync('src/pages/WaitlistSuccessPage.tsx', 'utf8');
+
+// Replace the entire return with the new photo background version
+const returnIndex = content.indexOf('return (');
+const beforeReturn = content.substring(0, returnIndex);
+
+const newRender = `return (
     <div className="min-h-screen bg-black relative flex flex-col items-center justify-center font-sans overflow-hidden py-12 px-4 sm:px-6">
       
       {/* Background Image - Keys/Doorway (Bright moment) */}
@@ -84,3 +86,7 @@ export default function WaitlistSuccessPage() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/pages/WaitlistSuccessPage.tsx', beforeReturn + newRender);
+console.log("Successfully rebuilt WaitlistSuccessPage!");

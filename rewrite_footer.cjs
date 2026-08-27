@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+const fs = require('fs');
+
+const newFooter = `import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useReducedMotion } from 'motion/react';
@@ -21,7 +23,7 @@ const Footer = () => {
     visible: (custom: number) => ({
       opacity: 1, 
       y: 0,
-      transition: { delay: custom * 0.1, duration: 0.6, ease: "easeOut" as const }
+      transition: { delay: custom * 0.1, duration: 0.6, ease: "easeOut" }
     })
   };
 
@@ -36,7 +38,7 @@ const Footer = () => {
           className="absolute inset-0 z-0"
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}
-          transition={{ duration: 10, ease: "easeOut" as const }}
+          transition={{ duration: 10, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <img 
@@ -57,7 +59,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, ease: "easeOut" as const }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
             >
               The future of <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">real estate is here.</span>
@@ -68,7 +70,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" as const }}
+              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
             >
               Experience seamless property discovery, secure transactions, and premium management—all in one unified platform.
             </motion.p>
@@ -78,7 +80,7 @@ const Footer = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" as const }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
             className="shrink-0"
           >
             <Link
@@ -195,3 +197,7 @@ const Footer = () => {
 };
 
 export default Footer;
+`;
+
+fs.writeFileSync('src/components/Footer.tsx', newFooter);
+console.log("Footer rewritten successfully");

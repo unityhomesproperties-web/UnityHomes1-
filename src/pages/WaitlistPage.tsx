@@ -33,13 +33,13 @@ const INITIAL_DATA: WaitlistData = {
 };
 
 const ROLES_DISPLAY = [
-  { id: 'property_seeker', title: 'Property Seeker', desc: "I'm looking for property or property-related help." },
-  { id: 'long_term_landlord', title: 'Long-Term Landlord', desc: 'I want to list and/or manage long-term property.' },
-  { id: 'shortlet_landlord', title: 'Shortlet Landlord', desc: 'I want to list and/or manage shortlet property.' },
-  { id: 'property_management_company', title: 'Property Management Company', desc: 'I manage properties on behalf of clients.' },
-  { id: 'property_lawyer', title: 'Property Lawyer', desc: 'I provide legal services for property transactions.' },
-  { id: 'licensed_surveyor', title: 'Licensed Surveyor', desc: 'I provide professional surveying services.' },
-  { id: 'structural_engineer', title: 'Structural Engineer', desc: 'I provide structural engineering services.' }
+  { id: 'property_seeker', title: 'Property Seeker', desc: "I'm looking for property or property-related help.", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80" },
+  { id: 'long_term_landlord', title: 'Long-Term Landlord', desc: 'I want to list and/or manage long-term property.', img: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80" },
+  { id: 'shortlet_landlord', title: 'Shortlet Landlord', desc: 'I want to list and/or manage shortlet property.', img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80" },
+  { id: 'property_management_company', title: 'Property Management Company', desc: 'I manage properties on behalf of clients.', img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" },
+  { id: 'property_lawyer', title: 'Property Lawyer', desc: 'I provide legal services for property transactions.', img: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80" },
+  { id: 'licensed_surveyor', title: 'Licensed Surveyor', desc: 'I provide professional surveying services.', img: "https://images.unsplash.com/photo-1541888086925-ebcf3819e933?auto=format&fit=crop&q=80" },
+  { id: 'structural_engineer', title: 'Structural Engineer', desc: 'I provide structural engineering services.', img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" }
 ];
 
 const NIGERIAN_STATES = [
@@ -53,34 +53,11 @@ const NIGERIAN_STATES = [
 const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const isValidPhone = (phone: string) => phone.length >= 10 && /^[\d\s\+\-\(\)]+$/.test(phone);
 
-const BannerAnimation = () => (
-  <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none flex justify-center items-center">
-    <svg viewBox="0 0 1000 200" fill="none" className="w-full h-full max-w-5xl">
-      <motion.path 
-        d="M 0,140 L 250,140 L 300,60 L 700,60 L 750,140 L 1000,140" 
-        stroke="white" 
-        strokeWidth="2"
-        strokeLinejoin="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      />
-      <motion.path 
-        d="M 350,200 L 400,120 L 600,120 L 650,200" 
-        stroke="white" 
-        strokeWidth="2"
-        strokeLinejoin="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
-      />
-    </svg>
-  </div>
-);
+
 
 export default function WaitlistPage() {
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0);
   const [direction, setDirection] = useState(1);
   const [data, setData] = useState<WaitlistData>(INITIAL_DATA);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
@@ -313,166 +290,133 @@ export default function WaitlistPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--color-surface-light)] font-sans">
-      {/* Banner */}
-      <div className="relative bg-[#2F8D46] pt-12 pb-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        <BannerAnimation />
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="inline-block text-white/80 font-semibold tracking-widest text-xs uppercase mb-4">
-            Join Unity Homes
-          </span>
-          <h1 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-            Be part of what's next in Nigerian real estate.
-          </h1>
-          <p className="text-lg text-white/90">
-            Join the Unity Homes waitlist and tell us how you'd like to be part of the platform.
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen font-sans bg-black relative flex flex-col">
+      <AnimatePresence mode="wait">
+        {currentStep === 0 && (
+          <motion.div 
+            key="step0"
+            className="fixed inset-0 z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Modern home exterior" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+          </motion.div>
+        )}
+        {currentStep > 0 && currentStep < 5 && (
+          <motion.div 
+            key="form-bg"
+            className="fixed inset-0 z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img src={
+              currentStep === 1 ? "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" :
+              currentStep === 2 ? "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80" :
+              currentStep === 3 ? (data.role ? ROLES_DISPLAY.find(r => r.id === data.role)?.img : "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=80") :
+              "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+            } alt="Background" className="w-full h-full object-cover transition-all duration-700" />
+            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Application Workspace */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 pb-24 relative z-20">
-        <div className="bg-white rounded-[24px] shadow-sm border border-[var(--color-border)] flex flex-col md:flex-row overflow-hidden min-h-[600px]">
-          
-          {/* Progress Panel (Desktop) & Top Bar (Mobile) */}
-          <div className="md:w-80 bg-stone-50 border-b md:border-b-0 md:border-r border-[var(--color-border)] p-6 md:p-10 flex-shrink-0">
-            {/* Mobile Progress */}
-            <div className="md:hidden">
-              <div className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-wider mb-2">
-                Step {currentStep} of {steps.length}
-              </div>
-              <div className="w-full bg-gray-200 h-1.5 rounded-full mb-4">
-                <div 
-                  className="bg-[#6FBE45] h-1.5 rounded-full transition-all duration-300"
-                  style={{ width: `${(currentStep / steps.length) * 100}%` }}
-                />
-              </div>
-              <h2 className="text-lg font-semibold text-[var(--color-text-primary)]">
-                {steps[currentStep - 1].title}
-              </h2>
-            </div>
-
-            {/* Desktop Progress */}
-            <div className="hidden md:block">
-              <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest mb-10">
-                Your Journey
-              </h3>
-              <div className="space-y-8 relative">
-                <div className="absolute left-[11px] top-2 bottom-4 w-0.5 bg-gray-200" />
-                {steps.map((step) => {
-                  const isCompleted = currentStep > step.num;
-                  const isCurrent = currentStep === step.num;
-
-                  return (
-                    <div key={step.num} className="relative flex items-start">
-                      <div className={`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                        isCompleted ? 'bg-[#6FBE45]' : 
-                        isCurrent ? 'bg-white border-2 border-[#6FBE45]' : 
-                        'bg-white border-2 border-gray-300'
-                      }`}>
-                        {isCompleted && <Check className="w-3.5 h-3.5 text-white" />}
-                        {isCurrent && <div className="w-2 h-2 rounded-full bg-[#6FBE45]" />}
-                      </div>
-                      <div className="ml-4">
-                        <span className={`block text-xs font-semibold mb-1 ${
-                          isCompleted || isCurrent ? 'text-[#6FBE45]' : 'text-gray-400'
-                        }`}>
-                          0{step.num}
-                        </span>
-                        <span className={`block font-semibold ${
-                          isCurrent ? 'text-[var(--color-text-primary)]' : 
-                          isCompleted ? 'text-[var(--color-text-secondary)]' : 
-                          'text-gray-400'
-                        }`}>
-                          {step.title}
-                        </span>
-                        <span className="block text-xs text-gray-500 mt-0.5">
-                          {isCompleted ? 'Completed' : isCurrent ? 'Current step' : 'Upcoming'}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+      <div className="relative z-10 w-full flex-grow flex flex-col">
+        {currentStep === 0 && (
+          <div className="min-h-screen flex flex-col justify-end pb-24 px-6 md:px-12 lg:px-24">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="max-w-4xl"
+            >
+              <h1 className="text-white text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight text-balance">
+                Real Estate Should Be Easier.
+              </h1>
+              <p className="text-white/90 text-xl md:text-2xl font-normal mb-10 max-w-2xl text-balance">
+                Join the Unity Homes waitlist and tell us how you'd like to be part of the platform.
+              </p>
+              <button 
+                onClick={() => setCurrentStep(1)}
+                className="bg-[#008D24] text-white px-10 py-5 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgba(255,255,255,0.2)] hover:bg-[#007a1f] hover:shadow-[0_8px_30px_rgba(255,255,255,0.3)] transition-all transform hover:-translate-y-1"
+              >
+                Join the Waitlist
+              </button>
+            </motion.div>
           </div>
+        )}
 
-          {/* Form Content */}
-          <div className="flex-1 p-6 md:p-12 lg:p-16 relative">
-            <div className="absolute top-6 right-6 md:top-8 md:right-8 h-6 flex items-center z-50">
-              <AnimatePresence>
-                {autosaveVisible && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="flex items-center text-xs font-semibold text-[#6FBE45] bg-[#EAF5E3] px-3 py-1 rounded-full shadow-sm"
-                  >
-                    <Check className="w-3.5 h-3.5 mr-1" />
-                    Saved
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+        {currentStep > 0 && (
+          <div className="py-12 px-4 sm:px-6 lg:px-8 flex-grow flex flex-col">
+            <div className="max-w-4xl mx-auto w-full flex-grow flex flex-col">
+              
+              {currentStep > 1 && !isSubmitting && (
+                <button 
+                  onClick={handleBack}
+                  className="mb-6 self-start flex items-center text-white/90 hover:text-white transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5 mr-1" />
+                  Back
+                </button>
+              )}
+              {currentStep === 1 && !isSubmitting && (
+                <button 
+                  onClick={() => setCurrentStep(0)}
+                  className="mb-6 self-start flex items-center text-white/90 hover:text-white transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5 mr-1" />
+                  Back
+                </button>
+              )}
 
-            <form onSubmit={handleSubmit} className="h-full flex flex-col">
-              <div className="mb-8 hidden md:block">
-                <span className="text-xs font-semibold text-[#6FBE45] uppercase tracking-wider mb-2 block">
-                  Step 0{currentStep}
-                </span>
-                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-text-primary)]">
-                  {steps[currentStep - 1].title}
-                </h2>
-              </div>
-
-              <div className="flex-1 overflow-hidden">
-                <AnimatePresence custom={direction} mode="wait">
-                  <motion.div
-                    key={currentStep}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="space-y-6"
-                  >
-                    {/* STEP 1: ROLE */}
-                    {currentStep === 1 && (
-                      <div className="space-y-4">
-                        {ROLES_DISPLAY.map(r => (
-                          <label 
-                            key={r.id} 
-                            className={`flex items-start p-5 border rounded-[18px] cursor-pointer transition-all duration-200 ${
-                              data.role === r.id 
-                                ? 'border-[#6FBE45] bg-[#EAF5E3]' 
-                                : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
-                            }`}
-                          >
-                            <div className={`mt-0.5 w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${
-                              data.role === r.id ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
-                            }`}>
-                              {data.role === r.id && <Check className="w-3 h-3 text-white" />}
-                            </div>
-                            <div className="ml-4">
-                              <span className="block font-semibold text-[var(--color-text-primary)]">{r.title}</span>
-                              <span className="block text-sm text-[var(--color-text-secondary)] mt-1">{r.desc}</span>
-                            </div>
-                            <input 
-                              type="radio" 
-                              name="waitlist_role"
-                              className="sr-only"
-                              checked={data.role === r.id}
-                              onChange={() => updateData('role', r.id)}
-                            />
-                          </label>
-                        ))}
-                        {renderError('role', currentErrors)}
-                      </div>
-                    )}
-
-                    {/* STEP 2: PERSONAL DETAILS */}
-                    {currentStep === 2 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] p-6 md:p-12 w-full flex-grow"
+              >
+                
+                {currentStep === 1 && (
+                <motion.div
+                  key="role-selection"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="w-full flex-grow"
+                >
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#132A1D] mb-2 shadow-sm">Who are you?</h2>
+                  <p className="text-gray-600 mb-10 text-lg">Select the role that best describes you to continue.</p>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {ROLES_DISPLAY.map((role) => {
+                      const selected = data.role === role.id;
+                      return (
+                        <div 
+                          key={role.id}
+                          onClick={() => { updateData('role', role.id); setDirection(1); }}
+                          className={`cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${selected ? 'ring-4 ring-[#008D24]' : 'hover:shadow-xl border border-gray-100'}`}
+                        >
+                          <div className="h-40 w-full relative">
+                            <img src={role.img} alt={role.title} className="w-full h-full object-cover" />
+                            {selected && (
+                              <div className="absolute top-3 right-3 bg-[#008D24] text-white p-1 rounded-full shadow-md">
+                                <Check className="w-4 h-4" />
+                              </div>
+                            )}
+                          </div>
+                          <div className="p-5">
+                            <h3 className="font-bold text-[#132A1D] text-lg mb-1">{role.title}</h3>
+                            <p className="text-gray-500 text-sm leading-relaxed">{role.desc}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+{currentStep === 2 && (
                       <div className="space-y-6">
                         <div>
                           <label className="block text-sm font-semibold text-[var(--color-text-primary)] mb-2 uppercase">Full Name</label>
@@ -481,7 +425,7 @@ export default function WaitlistPage() {
                             value={data.full_name}
                             onChange={(e) => updateData('full_name', e.target.value)}
                             onBlur={() => handleBlur('full_name')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
                           />
                           {renderError('full_name', currentErrors)}
                         </div>
@@ -493,7 +437,7 @@ export default function WaitlistPage() {
                               value={data.email}
                               onChange={(e) => updateData('email', e.target.value)}
                               onBlur={() => handleBlur('email')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('email', currentErrors)}
                           </div>
@@ -504,7 +448,7 @@ export default function WaitlistPage() {
                               value={data.phone}
                               onChange={(e) => updateData('phone', e.target.value)}
                               onBlur={() => handleBlur('phone')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('phone', currentErrors)}
                           </div>
@@ -515,7 +459,7 @@ export default function WaitlistPage() {
                             value={data.state}
                             onChange={(e) => updateData('state', e.target.value)}
                             onBlur={() => handleBlur('state')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
                           >
                             <option value="" disabled>Select a state...</option>
                             {NIGERIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -548,11 +492,11 @@ export default function WaitlistPage() {
                                   <label 
                                     key={interest} 
                                     className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 ${
-                                      selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
+                                      selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
                                     }`}
                                   >
                                     <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 ${
-                                      selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
+                                      selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'
                                     }`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
@@ -585,8 +529,8 @@ export default function WaitlistPage() {
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
                                       <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
@@ -612,7 +556,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.properties_count || ''}
                                   onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                   onBlur={() => handleBlur('properties_count')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {renderError('properties_count', currentErrors)}
                               </div>
@@ -623,7 +567,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.property_type || ''}
                                   onChange={(e) => updateData('role_specific_data.property_type', e.target.value)}
                                   onBlur={() => handleBlur('property_type')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {renderError('property_type', currentErrors)}
                               </div>
@@ -634,7 +578,7 @@ export default function WaitlistPage() {
                                 rows={3}
                                 value={data.role_specific_data.description || ''}
                                 onChange={(e) => updateData('role_specific_data.description', e.target.value)}
-                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] resize-none font-medium"
+                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] resize-none font-medium"
                               />
                             </div>
                           </div>
@@ -651,7 +595,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.company_name || ''}
                                   onChange={(e) => updateData('role_specific_data.company_name', e.target.value)}
                                   onBlur={() => handleBlur('company_name')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {renderError('company_name', currentErrors)}
                               </div>
@@ -662,7 +606,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.contact_person || ''}
                                   onChange={(e) => updateData('role_specific_data.contact_person', e.target.value)}
                                   onBlur={() => handleBlur('contact_person')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {renderError('contact_person', currentErrors)}
                               </div>
@@ -673,8 +617,8 @@ export default function WaitlistPage() {
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
                                       <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
@@ -697,7 +641,7 @@ export default function WaitlistPage() {
                                 value={data.role_specific_data.properties_count || ''}
                                 onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                 onBlur={() => handleBlur('properties_count')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                               />
                               {renderError('properties_count', currentErrors)}
                             </div>
@@ -714,7 +658,7 @@ export default function WaitlistPage() {
                                 value={data.role_specific_data.firm_name || ''}
                                 onChange={(e) => updateData('role_specific_data.firm_name', e.target.value)}
                                 onBlur={() => handleBlur('firm_name')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                               />
                               {renderError('firm_name', currentErrors)}
                             </div>
@@ -730,14 +674,14 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.registration_number || ''}
                                   onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                                   onBlur={() => handleBlur('registration_number')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {data.role === 'licensed_surveyor' && (
                                   <div className="mt-3 space-y-2">
                                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                       Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                                     </p>
-                                    <p className="text-sm font-semibold text-[#2F8D46]">
+                                    <p className="text-sm font-semibold text-[#008D24]">
                                       Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
                                     </p>
                                   </div>
@@ -751,7 +695,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.years_of_experience || ''}
                                   onChange={(e) => updateData('role_specific_data.years_of_experience', e.target.value)}
                                   onBlur={() => handleBlur('years_of_experience')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
                                 />
                                 {renderError('years_of_experience', currentErrors)}
                               </div>
@@ -769,8 +713,8 @@ export default function WaitlistPage() {
                                   />
                                   <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                     data.role_specific_data.consent 
-                                      ? 'border-[#6FBE45] bg-[#6FBE45]' 
-                                      : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
+                                      ? 'border-[#008D24] bg-[#008D24]' 
+                                      : 'border-gray-300 bg-white group-hover:border-[#008D24]'
                                   }`}>
                                     {data.role_specific_data.consent && <Check className="w-4 h-4 text-white" />}
                                   </div>
@@ -797,7 +741,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <p className="text-lg font-semibold text-[var(--color-text-primary)]">
                             {ROLES_DISPLAY.find(r => r.id === data.role)?.title}
@@ -807,7 +751,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
@@ -832,7 +776,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {Object.entries(data.role_specific_data).map(([key, val]) => {
@@ -866,8 +810,8 @@ export default function WaitlistPage() {
                               />
                               <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                 data.information_confirmed 
-                                  ? 'border-[#6FBE45] bg-[#6FBE45]' 
-                                  : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
+                                  ? 'border-[#008D24] bg-[#008D24]' 
+                                  : 'border-gray-300 bg-white group-hover:border-[#008D24]'
                               }`}>
                                 {data.information_confirmed && <Check className="w-4 h-4 text-white" />}
                               </div>
@@ -881,54 +825,33 @@ export default function WaitlistPage() {
                         </div>
                       </div>
                     )}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+                  
 
-              {/* Navigation Controls */}
-              <div className="mt-10 pt-6 border-t border-[var(--color-border)] flex items-center justify-between">
-                {currentStep > 1 ? (
+                <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center">
+                  <div className="mb-4 sm:mb-0 text-sm font-semibold text-gray-400">
+                    Step {currentStep} of {steps.length}
+                  </div>
                   <button
-                    type="button"
-                    onClick={handleBack}
-                    className="flex items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] font-semibold transition-colors px-2 py-2 min-h-[48px]"
-                  >
-                    <ChevronLeft className="w-5 h-5 mr-1" />
-                    Back
-                  </button>
-                ) : (
-                  <div />
-                )}
-                
-                {currentStep < 4 ? (
-                  <button
-                    type="button"
-                    onClick={handleNext}
-                    className="flex items-center bg-[#6FBE45] text-white px-8 py-3 rounded-[18px] font-semibold text-lg hover:bg-[#5CA636] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm"
-                  >
-                    Next
-                    <ChevronRight className="w-5 h-5 ml-1" />
-                  </button>
-                ) : (
-                  <button
-                    type="submit"
-                    disabled={!data.information_confirmed || isSubmitting}
-                    className="flex items-center bg-[#132A1D] text-white px-8 py-3 rounded-[18px] font-semibold text-lg hover:bg-[#0E2F1F] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px] shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    onClick={currentStep === 4 ? handleSubmit : handleNext}
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto bg-[#008D24] text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-[#007a1f] transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="animate-spin w-5 h-5 mr-2" />
-                        Processing...
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" /> Processing...
                       </>
                     ) : (
-                      'JOIN THE WAITLIST'
+                      <>
+                        {currentStep === 4 ? 'Submit Application' : 'Continue'} 
+                        {currentStep !== 4 && <ChevronRight className="w-5 h-5 ml-2" />}
+                      </>
                     )}
                   </button>
-                )}
-              </div>
-            </form>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
