@@ -301,7 +301,7 @@ export default function WaitlistPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Modern home exterior" className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           </motion.div>
         )}

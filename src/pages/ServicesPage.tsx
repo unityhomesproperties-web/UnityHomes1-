@@ -125,7 +125,7 @@ export default function ServicesPage() {
       <section ref={heroRef} className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
