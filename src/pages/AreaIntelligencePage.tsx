@@ -367,22 +367,22 @@ export default function AreaIntelligencePage() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <AbstractIllustration type="hero" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
-          <h4 className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-3">
+          <h4 className="text-xs md:text-sm font-semibold tracking-widest uppercase text-white/90 mb-3">
             AREA INTELLIGENCE
           </h4>
-          <h1 className="text-3xl md:text-5xl font-semibold text-[#132A1D] leading-tight mb-4 max-w-2xl">
+          <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight mb-4 max-w-2xl">
             Help people understand what living in your area is really like.
           </h1>
-          <p className="text-lg md:text-xl text-[#132A1D]/90 max-w-xl mb-6 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 max-w-xl mb-6 leading-relaxed">
             Share real information about your neighbourhood to help people make better property decisions.
           </p>
-          <div className="inline-flex bg-[#132A1D] border-transparent text-[#132A1D] rounded-full px-4 py-2 text-sm font-semibold">
+          <div className="inline-flex bg-white border-transparent text-white rounded-full px-4 py-2 text-sm font-semibold">
             Estimated time: 3–4 minutes
           </div>
         </div>

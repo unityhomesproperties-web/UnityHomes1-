@@ -31,11 +31,11 @@ export default function MissionPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Solid Supporting Green */}
-      <section className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
@@ -44,10 +44,10 @@ export default function MissionPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               OUR MISSION
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               Making better property decisions easier.
             </h1>
           </motion.div>
@@ -59,7 +59,7 @@ export default function MissionPage() {
               {/* Central Line */}
               <motion.path 
                 d="M50,250 C100,250 100,200 150,200 C200,200 200,150 250,150 C300,150 300,100 350,100 C400,100 400,150 450,150" 
-                stroke="#132A1D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"
+                stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
@@ -88,7 +88,7 @@ export default function MissionPage() {
 
               <g>
                 <motion.circle cx="450" cy="150" r="10" fill="white" stroke="#2F8D46" strokeWidth="4" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1.3, duration: 0.4 }} />
-                <motion.circle cx="450" cy="150" r="14" stroke="#132A1D" strokeWidth="2" fill="none" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.4 }} />
+                <motion.circle cx="450" cy="150" r="14" stroke="white" strokeWidth="2" fill="none" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 1.4, duration: 0.4 }} />
                 <motion.text x="450" y="185" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>Better Decisions</motion.text>
               </g>
               
@@ -186,31 +186,7 @@ export default function MissionPage() {
       </section>
 
       {/* Closing Section - Solid Fresh Green */}
-      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
-        </div>
-        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
-          <motion.div
-             initial={{ opacity: 0, y: 12 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.4 }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-tight mb-12 max-w-3xl mx-auto">
-              A more transparent real estate experience starts with better information.
-            </h2>
-            <Link
-              to="/waitlist"
-              className="inline-flex bg-[#132A1D] text-[#132A1D] border border-white px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              Join The Waitlist
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }

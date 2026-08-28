@@ -32,11 +32,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner */}
-      <section className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
@@ -45,10 +45,10 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               ABOUT UNITY HOMES
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
               Making real estate easier to understand.
             </h1>
           </motion.div>
@@ -59,37 +59,37 @@ export default function AboutPage() {
               {/* Building 1 (Left) */}
               <motion.path 
                 d="M50,220 L50,120 L110,80 L170,120 L170,220 Z" 
-                stroke="#132A1D" strokeWidth="4" strokeLinejoin="round" fill="none"
+                stroke="white" strokeWidth="4" strokeLinejoin="round" fill="none"
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
               />
-              <motion.rect x="85" y="140" width="20" height="30" stroke="#132A1D" strokeWidth="3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.3 }} />
+              <motion.rect x="85" y="140" width="20" height="30" stroke="white" strokeWidth="3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.3 }} />
               
               {/* Building 2 (Right) */}
               <motion.path 
                 d="M330,220 L330,100 L390,60 L450,100 L450,220 Z" 
-                stroke="#132A1D" strokeWidth="4" strokeLinejoin="round" fill="none"
+                stroke="white" strokeWidth="4" strokeLinejoin="round" fill="none"
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
               />
-              <motion.rect x="365" y="120" width="20" height="30" stroke="#132A1D" strokeWidth="3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.3 }} />
+              <motion.rect x="365" y="120" width="20" height="30" stroke="white" strokeWidth="3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.3 }} />
 
               {/* Building 3 (Center - Unity Homes) */}
               <motion.path 
                 d="M190,220 L190,90 L250,40 L310,90 L310,220 Z" 
-                stroke="#132A1D" strokeWidth="5" strokeLinejoin="round" fill="none"
+                stroke="white" strokeWidth="5" strokeLinejoin="round" fill="none"
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
               />
-              <motion.rect x="235" y="110" width="30" height="40" stroke="#132A1D" strokeWidth="4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.3 }} />
+              <motion.rect x="235" y="110" width="30" height="40" stroke="white" strokeWidth="4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.3 }} />
 
               {/* Ground Line */}
               <motion.line 
                 x1="20" y1="220" x2="480" y2="220" 
-                stroke="#132A1D" strokeWidth="4" strokeLinecap="round"
+                stroke="white" strokeWidth="4" strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ duration: 0.5 }}
@@ -98,14 +98,14 @@ export default function AboutPage() {
               {/* Connection Lines */}
               <motion.path 
                 d="M170,180 L190,180" 
-                stroke="#132A1D" strokeWidth="3" strokeDasharray="4 4"
+                stroke="white" strokeWidth="3" strokeDasharray="4 4"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.8, duration: 0.3 }}
               />
               <motion.path 
                 d="M310,180 L330,180" 
-                stroke="#132A1D" strokeWidth="3" strokeDasharray="4 4"
+                stroke="white" strokeWidth="3" strokeDasharray="4 4"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.8, duration: 0.3 }}
@@ -212,63 +212,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Premium CTA Banner */}
-      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
-        </div>
-        
-        {/* Subtle Architectural Line Animation Background */}
-        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none flex justify-center items-center">
-           <svg viewBox="0 0 1000 400" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-              <motion.path 
-                d="M-100,300 L200,300 L300,200 L700,200 L800,300 L1100,300"
-                stroke="#132A1D" strokeWidth="2" fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              />
-              <motion.path 
-                d="M100,400 L100,250 L250,100 L400,250 L400,400"
-                stroke="#132A1D" strokeWidth="1" fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
-              />
-              <motion.path 
-                d="M600,400 L600,250 L750,100 L900,250 L900,400"
-                stroke="#132A1D" strokeWidth="1" fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.2, delay: 0.5, ease: "easeInOut" }}
-              />
-           </svg>
-        </div>
-        
-        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
-          <motion.div
-             initial={{ opacity: 0, y: 12 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.4 }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-tight mb-12">
-              Be part of what Unity Homes is building.
-            </h2>
-            <Link
-              to="/waitlist"
-              className="inline-flex bg-[#132A1D] text-[#2F8D46] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              Join The Waitlist
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }

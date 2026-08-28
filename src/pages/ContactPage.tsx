@@ -20,11 +20,11 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Immersive Hero Banner - Solid Supporting Green */}
-      <section className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
           
@@ -33,13 +33,13 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#132A1D]/80 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/80 mb-4">
               GET IN TOUCH
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-6">
               Let's talk about real estate.
             </h1>
-            <p className="text-xl md:text-2xl text-[#132A1D]/90 max-w-xl font-medium">
+            <p className="text-xl md:text-2xl text-white/90 max-w-xl font-medium">
               Have a question about Unity Homes, the waitlist or what we're building? Get in touch with us.
             </p>
           </motion.div>
@@ -48,13 +48,13 @@ export default function ContactPage() {
           <div className="hidden md:flex justify-center items-center h-full">
             <svg viewBox="0 0 400 120" fill="none" className="w-full max-w-sm">
               {/* Person Icon */}
-              <motion.circle cx="40" cy="40" r="16" stroke="#132A1D" strokeWidth="4" />
-              <motion.path d="M16,100 C16,70 64,70 64,100" stroke="#132A1D" strokeWidth="4" strokeLinecap="round" />
+              <motion.circle cx="40" cy="40" r="16" stroke="white" strokeWidth="4" />
+              <motion.path d="M16,100 C16,70 64,70 64,100" stroke="white" strokeWidth="4" strokeLinecap="round" />
               
               {/* Line to Message */}
               <motion.line 
                 x1="80" y1="60" x2="160" y2="60" 
-                stroke="#132A1D" strokeWidth="2" strokeDasharray="6 6"
+                stroke="white" strokeWidth="2" strokeDasharray="6 6"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ duration: 0.4, ease: "linear" }}
@@ -63,14 +63,14 @@ export default function ContactPage() {
               {/* Message Icon */}
               <motion.rect 
                 x="170" y="40" width="60" height="40" rx="8" 
-                stroke="#132A1D" strokeWidth="4"
+                stroke="white" strokeWidth="4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
               />
               <motion.path 
                 d="M170,45 L200,65 L230,45" 
-                stroke="#132A1D" strokeWidth="4" strokeLinejoin="round"
+                stroke="white" strokeWidth="4" strokeLinejoin="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.4, duration: 0.3 }}
@@ -79,7 +79,7 @@ export default function ContactPage() {
               {/* Line to Unity Homes */}
               <motion.line 
                 x1="240" y1="60" x2="320" y2="60" 
-                stroke="#132A1D" strokeWidth="2" strokeDasharray="6 6"
+                stroke="white" strokeWidth="2" strokeDasharray="6 6"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.5, duration: 0.4, ease: "linear" }}
@@ -88,7 +88,7 @@ export default function ContactPage() {
               {/* Unity Homes Icon (House) */}
               <motion.path 
                 d="M330,60 L360,35 L390,60 V90 H330 Z" 
-                stroke="#132A1D" strokeWidth="4" strokeLinejoin="round"
+                stroke="white" strokeWidth="4" strokeLinejoin="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.8, duration: 0.4 }}

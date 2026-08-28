@@ -122,11 +122,11 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Architectural Refinement */}
-      <section ref={heroRef} className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section ref={heroRef} className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         {/* Very Subtle Background Depth without harsh gradients */}
@@ -163,7 +163,7 @@ export default function ServicesPage() {
         </motion.svg>
 
         {/* Soft Lighting Behind Headline */}
-        <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#132A1D] opacity-[0.07] blur-[100px] rounded-full pointer-events-none z-0" />
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-white opacity-[0.07] blur-[100px] rounded-full pointer-events-none z-0" />
 
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
@@ -172,13 +172,13 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h4 className="text-xs md:text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-4">
+            <h4 className="text-xs md:text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
               OUR SERVICES
             </h4>
-            <h1 className="text-[36px] leading-[1.1] md:text-[42px] lg:text-[48px] font-semibold text-[#132A1D] mb-6 lg:mb-8 tracking-tight text-balance">
+            <h1 className="text-[36px] leading-[1.1] md:text-[42px] lg:text-[48px] font-semibold text-white mb-6 lg:mb-8 tracking-tight text-balance">
               Real estate services, connected around you.
             </h1>
-            <p className="text-[16px] md:text-[18px] text-[#132A1D]/90 leading-[1.6] max-w-xl font-normal">
+            <p className="text-[16px] md:text-[18px] text-white/90 leading-[1.6] max-w-xl font-normal">
               Explore the services Unity Homes is building to make property discovery, verification, professional access and property management simpler and more transparent.
             </p>
           </motion.div>
@@ -203,7 +203,7 @@ export default function ServicesPage() {
                 <g key={idx}>
                   <motion.line 
                     x1="250" y1="200" x2={pos.cx} y2={pos.cy} 
-                    stroke="#132A1D" strokeWidth="1" strokeDasharray="3 3" 
+                    stroke="white" strokeWidth="1" strokeDasharray="3 3" 
                     initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 0.8 }} transition={{ delay: pos.delay, duration: 0.6, ease: "easeOut" }} 
                   />
                   <motion.circle 
@@ -397,52 +397,7 @@ export default function ServicesPage() {
       </AnimatePresence>
 
       {/* Final CTA */}
-      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
-        </div>
-        
-        {/* Abstract Ecosystem CTA Visual */}
-        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none flex justify-center items-center overflow-hidden">
-           <svg viewBox="0 0 1000 400" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-              <motion.path 
-                d="M-100,200 L200,200 L300,100 L500,100 L600,200 L1100,200"
-                stroke="#132A1D" strokeWidth="2" fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              />
-              <motion.circle cx="500" cy="100" r="8" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }} />
-              <motion.circle cx="200" cy="200" r="8" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} />
-              <motion.circle cx="600" cy="200" r="8" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 1.0 }} />
-           </svg>
-        </div>
-
-        <div className="max-w-4xl mx-auto space-y-8 relative z-10">
-          <motion.div
-             initial={{ opacity: 0, y: 12 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.4 }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-tight mb-8">
-              Be part of the Unity Homes journey.
-            </h2>
-            <p className="text-lg md:text-xl text-[#132A1D]/90 leading-relaxed max-w-2xl mx-auto mb-12">
-              Join the waitlist and stay connected as Unity Homes continues building its real estate technology platform.
-            </p>
-            <Link
-              to="/waitlist"
-              className="inline-flex bg-[#132A1D] text-[#2F8D46] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              Join The Waitlist
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }

@@ -342,7 +342,7 @@ export default function WaitlistPage() {
               </p>
               <button 
                 onClick={() => setCurrentStep(1)}
-                className="bg-[#008D24] text-white px-10 py-5 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgba(255,255,255,0.2)] hover:bg-[#007a1f] hover:shadow-[0_8px_30px_rgba(255,255,255,0.3)] transition-all transform hover:-translate-y-1"
+                className="bg-[#C9A84C] text-white px-10 py-5 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgba(255,255,255,0.2)] hover:bg-[#B8973A] hover:shadow-[0_8px_30px_rgba(255,255,255,0.3)] transition-all transform hover:-translate-y-1"
               >
                 Join the Waitlist
               </button>
@@ -386,7 +386,7 @@ export default function WaitlistPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="w-full flex-grow"
                 >
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#132A1D] mb-2 shadow-sm">Who are you?</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 shadow-sm">Who are you?</h2>
                   <p className="text-gray-600 mb-10 text-lg">Select the role that best describes you to continue.</p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -396,18 +396,18 @@ export default function WaitlistPage() {
                         <div 
                           key={role.id}
                           onClick={() => { updateData('role', role.id); setDirection(1); }}
-                          className={`cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${selected ? 'ring-4 ring-[#008D24]' : 'hover:shadow-xl border border-gray-100'}`}
+                          className={`cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${selected ? 'ring-4 ring-[#C9A84C]' : 'hover:shadow-xl border border-gray-100'}`}
                         >
                           <div className="h-40 w-full relative">
                             <img src={role.img} alt={role.title} className="w-full h-full object-cover" />
                             {selected && (
-                              <div className="absolute top-3 right-3 bg-[#008D24] text-white p-1 rounded-full shadow-md">
+                              <div className="absolute top-3 right-3 bg-[#C9A84C] text-white p-1 rounded-full shadow-md">
                                 <Check className="w-4 h-4" />
                               </div>
                             )}
                           </div>
                           <div className="p-5">
-                            <h3 className="font-bold text-[#132A1D] text-lg mb-1">{role.title}</h3>
+                            <h3 className="font-bold text-[#111827] text-lg mb-1">{role.title}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed">{role.desc}</p>
                           </div>
                         </div>
@@ -425,7 +425,7 @@ export default function WaitlistPage() {
                             value={data.full_name}
                             onChange={(e) => updateData('full_name', e.target.value)}
                             onBlur={() => handleBlur('full_name')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
                           />
                           {renderError('full_name', currentErrors)}
                         </div>
@@ -437,7 +437,7 @@ export default function WaitlistPage() {
                               value={data.email}
                               onChange={(e) => updateData('email', e.target.value)}
                               onBlur={() => handleBlur('email')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('email', currentErrors)}
                           </div>
@@ -448,7 +448,7 @@ export default function WaitlistPage() {
                               value={data.phone}
                               onChange={(e) => updateData('phone', e.target.value)}
                               onBlur={() => handleBlur('phone')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('phone', currentErrors)}
                           </div>
@@ -459,7 +459,7 @@ export default function WaitlistPage() {
                             value={data.state}
                             onChange={(e) => updateData('state', e.target.value)}
                             onBlur={() => handleBlur('state')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
                           >
                             <option value="" disabled>Select a state...</option>
                             {NIGERIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -492,15 +492,15 @@ export default function WaitlistPage() {
                                   <label 
                                     key={interest} 
                                     className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 ${
-                                      selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
+                                      selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
                                     }`}
                                   >
                                     <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 ${
-                                      selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'
+                                      selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'
                                     }`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
-                                    <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
+                                    <span className={`ml-4 font-semibold ${selected ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{interest}</span>
                                     <input 
                                       type="checkbox"
                                       className="sr-only"
@@ -529,11 +529,11 @@ export default function WaitlistPage() {
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={`ml-4 font-semibold ${selected ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
                                       <input 
                                         type="radio"
                                         name="landlord_pref"
@@ -556,7 +556,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.properties_count || ''}
                                   onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                   onBlur={() => handleBlur('properties_count')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {renderError('properties_count', currentErrors)}
                               </div>
@@ -567,7 +567,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.property_type || ''}
                                   onChange={(e) => updateData('role_specific_data.property_type', e.target.value)}
                                   onBlur={() => handleBlur('property_type')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {renderError('property_type', currentErrors)}
                               </div>
@@ -578,7 +578,7 @@ export default function WaitlistPage() {
                                 rows={3}
                                 value={data.role_specific_data.description || ''}
                                 onChange={(e) => updateData('role_specific_data.description', e.target.value)}
-                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] resize-none font-medium"
+                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] resize-none font-medium"
                               />
                             </div>
                           </div>
@@ -595,7 +595,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.company_name || ''}
                                   onChange={(e) => updateData('role_specific_data.company_name', e.target.value)}
                                   onBlur={() => handleBlur('company_name')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {renderError('company_name', currentErrors)}
                               </div>
@@ -606,7 +606,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.contact_person || ''}
                                   onChange={(e) => updateData('role_specific_data.contact_person', e.target.value)}
                                   onBlur={() => handleBlur('contact_person')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {renderError('contact_person', currentErrors)}
                               </div>
@@ -617,11 +617,11 @@ export default function WaitlistPage() {
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#008D24] bg-[#EAF5E3]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#008D24] bg-[#008D24]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
-                                      <span className={`ml-4 font-semibold ${selected ? 'text-[#132A1D]' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
+                                      <span className={`ml-4 font-semibold ${selected ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
                                       <input 
                                         type="radio" name="pmc_pref" className="sr-only"
                                         checked={selected}
@@ -641,7 +641,7 @@ export default function WaitlistPage() {
                                 value={data.role_specific_data.properties_count || ''}
                                 onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                 onBlur={() => handleBlur('properties_count')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                               />
                               {renderError('properties_count', currentErrors)}
                             </div>
@@ -658,7 +658,7 @@ export default function WaitlistPage() {
                                 value={data.role_specific_data.firm_name || ''}
                                 onChange={(e) => updateData('role_specific_data.firm_name', e.target.value)}
                                 onBlur={() => handleBlur('firm_name')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                               />
                               {renderError('firm_name', currentErrors)}
                             </div>
@@ -674,14 +674,14 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.registration_number || ''}
                                   onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                                   onBlur={() => handleBlur('registration_number')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {data.role === 'licensed_surveyor' && (
                                   <div className="mt-3 space-y-2">
                                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                       Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                                     </p>
-                                    <p className="text-sm font-semibold text-[#008D24]">
+                                    <p className="text-sm font-semibold text-[#C9A84C]">
                                       Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
                                     </p>
                                   </div>
@@ -695,7 +695,7 @@ export default function WaitlistPage() {
                                   value={data.role_specific_data.years_of_experience || ''}
                                   onChange={(e) => updateData('role_specific_data.years_of_experience', e.target.value)}
                                   onBlur={() => handleBlur('years_of_experience')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#008D24] focus:ring-1 focus:ring-[#008D24] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
                                 />
                                 {renderError('years_of_experience', currentErrors)}
                               </div>
@@ -713,8 +713,8 @@ export default function WaitlistPage() {
                                   />
                                   <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                     data.role_specific_data.consent 
-                                      ? 'border-[#008D24] bg-[#008D24]' 
-                                      : 'border-gray-300 bg-white group-hover:border-[#008D24]'
+                                      ? 'border-[#C9A84C] bg-[#C9A84C]' 
+                                      : 'border-gray-300 bg-white group-hover:border-[#C9A84C]'
                                   }`}>
                                     {data.role_specific_data.consent && <Check className="w-4 h-4 text-white" />}
                                   </div>
@@ -741,7 +741,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <p className="text-lg font-semibold text-[var(--color-text-primary)]">
                             {ROLES_DISPLAY.find(r => r.id === data.role)?.title}
@@ -751,7 +751,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
@@ -776,7 +776,7 @@ export default function WaitlistPage() {
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#008D24] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {Object.entries(data.role_specific_data).map(([key, val]) => {
@@ -810,8 +810,8 @@ export default function WaitlistPage() {
                               />
                               <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                 data.information_confirmed 
-                                  ? 'border-[#008D24] bg-[#008D24]' 
-                                  : 'border-gray-300 bg-white group-hover:border-[#008D24]'
+                                  ? 'border-[#C9A84C] bg-[#C9A84C]' 
+                                  : 'border-gray-300 bg-white group-hover:border-[#C9A84C]'
                               }`}>
                                 {data.information_confirmed && <Check className="w-4 h-4 text-white" />}
                               </div>
@@ -834,7 +834,7 @@ export default function WaitlistPage() {
                   <button
                     onClick={currentStep === 4 ? handleSubmit : handleNext}
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto bg-[#008D24] text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-[#007a1f] transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto bg-[#C9A84C] text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-[#B8973A] transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
