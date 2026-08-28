@@ -54,7 +54,12 @@ export default function ProfessionalsPage() {
       className="min-h-screen flex flex-col bg-white overflow-hidden"
     >
       {/* Premium Hero Banner - Solid Supporting Green */}
-      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#2F8D46] overflow-hidden">
+      <section className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
           <motion.div 
@@ -62,13 +67,13 @@ export default function ProfessionalsPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-4">
               FOR REAL ESTATE PROFESSIONALS
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-[1.1] mb-8">
               The right expertise for better property decisions.
             </h1>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl font-medium">
+            <p className="text-lg md:text-xl text-[#132A1D]/90 leading-relaxed max-w-xl font-medium">
               Unity Homes is building a trusted professional network for people who need qualified help with property decisions.
             </p>
           </motion.div>
@@ -79,13 +84,13 @@ export default function ProfessionalsPage() {
               
               {/* Central Property Node */}
               <motion.rect x="230" y="180" width="40" height="40" rx="8" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.4 }} />
-              <motion.path d="M250,150 L250,180" stroke="white" strokeWidth="3" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.2, duration: 0.2 }} />
-              <motion.path d="M220,180 L250,150 L280,180" stroke="white" strokeWidth="3" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.3 }} />
+              <motion.path d="M250,150 L250,180" stroke="#132A1D" strokeWidth="3" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.2, duration: 0.2 }} />
+              <motion.path d="M220,180 L250,150 L280,180" stroke="#132A1D" strokeWidth="3" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.3 }} />
               
               {/* Connecting Lines */}
-              <motion.line x1="250" y1="200" x2="100" y2="100" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.6, duration: 0.4 }} />
-              <motion.line x1="250" y1="200" x2="400" y2="100" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.8, duration: 0.4 }} />
-              <motion.line x1="250" y1="200" x2="250" y2="320" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 1.0, duration: 0.4 }} />
+              <motion.line x1="250" y1="200" x2="100" y2="100" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.6, duration: 0.4 }} />
+              <motion.line x1="250" y1="200" x2="400" y2="100" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.8, duration: 0.4 }} />
+              <motion.line x1="250" y1="200" x2="250" y2="320" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 1.0, duration: 0.4 }} />
               
               {/* Professional Nodes */}
               <g>
@@ -180,7 +185,7 @@ export default function ProfessionalsPage() {
                   <Link
                     to="/waitlist"
                     state={{ role: prof.roleId }}
-                    className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group"
+                    className="inline-flex items-center justify-center bg-[#6FBE45] text-[#132A1D] px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group"
                   >
                     Join The Waitlist
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -205,7 +210,12 @@ export default function ProfessionalsPage() {
       </div>
 
       {/* Professional Trust Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F5FAF2] border-y border-[#6FBE45]/10">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 border-y border-[#6FBE45]/10">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+        </div>
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -247,7 +257,7 @@ export default function ProfessionalsPage() {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: idx * 0.2, duration: 0.3 }}
-                  className="w-10 h-10 rounded-full border-2 border-[#6FBE45] flex items-center justify-center text-xs font-semibold text-[#6FBE45] bg-white group-hover:bg-[#6FBE45] group-hover:text-white transition-colors duration-300"
+                  className="w-10 h-10 rounded-full border-2 border-[#6FBE45] flex items-center justify-center text-xs font-semibold text-[#6FBE45] bg-[#132A1D] group-hover:bg-[#6FBE45] group-hover:text-[#132A1D] transition-colors duration-300"
                 >
                   0{idx + 1}
                 </motion.div>
@@ -266,19 +276,24 @@ export default function ProfessionalsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center bg-[#6FBE45] overflow-hidden">
+      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+        </div>
         
         {/* Network CTA Visual */}
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none flex justify-center items-center overflow-hidden">
            <svg viewBox="0 0 1000 400" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-              <motion.line x1="300" y1="100" x2="500" y2="200" stroke="white" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
-              <motion.line x1="700" y1="100" x2="500" y2="200" stroke="white" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
-              <motion.line x1="500" y1="300" x2="500" y2="200" stroke="white" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
+              <motion.line x1="300" y1="100" x2="500" y2="200" stroke="#132A1D" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
+              <motion.line x1="700" y1="100" x2="500" y2="200" stroke="#132A1D" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
+              <motion.line x1="500" y1="300" x2="500" y2="200" stroke="#132A1D" strokeWidth="2" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.0 }} />
               
               <motion.circle cx="300" cy="100" r="10" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} />
               <motion.circle cx="700" cy="100" r="10" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} />
               <motion.circle cx="500" cy="300" r="10" fill="white" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5 }} />
-              <motion.rect x="480" y="180" width="40" height="40" rx="8" stroke="white" strokeWidth="3" fill="none" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }} />
+              <motion.rect x="480" y="180" width="40" height="40" rx="8" stroke="#132A1D" strokeWidth="3" fill="none" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }} />
            </svg>
         </div>
 
@@ -289,15 +304,15 @@ export default function ProfessionalsPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-tight mb-8">
               Build the future of real estate with Unity Homes.
             </h2>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-12">
+            <p className="text-lg md:text-xl text-[#132A1D]/90 leading-relaxed max-w-2xl mx-auto mb-12">
               Join the waitlist to stay connected with what Unity Homes is building for real estate professionals.
             </p>
             <Link
               to="/waitlist"
-              className="inline-flex bg-white text-[#6FBE45] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
+              className="inline-flex bg-[#132A1D] text-[#6FBE45] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200"
             >
               Join The Waitlist
             </Link>

@@ -15,7 +15,12 @@ export default function VisionPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Solid Fresh Green */}
-      <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-[#6FBE45] overflow-hidden">
+      <section className="relative text-[#132A1D] pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
           <motion.div 
@@ -23,10 +28,10 @@ export default function VisionPage() {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.4 }}
           >
-            <h4 className="text-sm font-semibold tracking-widest uppercase text-white/90 mb-4">
+            <h4 className="text-sm font-semibold tracking-widest uppercase text-[#132A1D]/90 mb-4">
               OUR VISION
             </h4>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-[1.1] mb-8">
               Building the infrastructure for a better property experience.
             </h1>
           </motion.div>
@@ -36,15 +41,15 @@ export default function VisionPage() {
             <svg viewBox="0 0 500 400" fill="none" className="w-full max-w-lg overflow-visible">
               
               {/* Connection Lines */}
-              <motion.line x1="250" y1="200" x2="150" y2="100" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
-              <motion.line x1="250" y1="200" x2="350" y2="100" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
-              <motion.line x1="250" y1="200" x2="100" y2="250" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
-              <motion.line x1="250" y1="200" x2="400" y2="250" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
-              <motion.line x1="250" y1="200" x2="250" y2="350" stroke="white" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
+              <motion.line x1="250" y1="200" x2="150" y2="100" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
+              <motion.line x1="250" y1="200" x2="350" y2="100" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
+              <motion.line x1="250" y1="200" x2="100" y2="250" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
+              <motion.line x1="250" y1="200" x2="400" y2="250" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
+              <motion.line x1="250" y1="200" x2="250" y2="350" stroke="#132A1D" strokeWidth="2" strokeDasharray="4 4" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.4, duration: 0.5 }} />
               
               {/* Central Node - Property */}
               <motion.circle cx="250" cy="200" r="24" fill="white" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.4 }} />
-              <motion.circle cx="250" cy="200" r="32" stroke="white" strokeWidth="2" fill="none" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.1, duration: 0.4 }} />
+              <motion.circle cx="250" cy="200" r="32" stroke="#132A1D" strokeWidth="2" fill="none" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.1, duration: 0.4 }} />
               
               {/* Surrounding Nodes */}
               <g>
@@ -175,7 +180,12 @@ export default function VisionPage() {
       </section>
 
       {/* Premium CTA Banner - Solid Supporting Green */}
-      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center bg-[#2F8D46] overflow-hidden">
+      <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+        </div>
         <div className="max-w-4xl mx-auto space-y-10 relative z-10">
           <motion.div
              initial={{ opacity: 0, y: 12 }}
@@ -183,20 +193,20 @@ export default function VisionPage() {
              viewport={{ once: true }}
              transition={{ duration: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#132A1D] leading-tight mb-12">
               Join the Unity Homes journey.
             </h2>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
               <Link
                 to="/waitlist"
-                className="w-full sm:w-auto inline-flex justify-center bg-[#6FBE45] text-white px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:bg-[#5CA636] transition-all duration-200"
+                className="w-full sm:w-auto inline-flex justify-center bg-[#6FBE45] text-[#132A1D] px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:bg-[#5CA636] transition-all duration-200"
               >
                 Join The Waitlist
               </Link>
               <Link
                 to="/area-intelligence"
-                className="w-full sm:w-auto inline-flex justify-center bg-transparent text-white border-2 border-white/80 px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 hover:bg-white hover:text-[#2F8D46] transition-all duration-200"
+                className="w-full sm:w-auto inline-flex justify-center bg-transparent text-[#132A1D] border-2 border-white/80 px-10 py-5 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 hover:bg-[#132A1D] hover:text-[#2F8D46] transition-all duration-200"
               >
                 Explore Area Intelligence
               </Link>

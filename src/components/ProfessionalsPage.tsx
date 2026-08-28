@@ -103,7 +103,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
     <div className="min-h-screen">
       
       {/* HEADER SECTION */}
-      <div className="bg-[#18452E] text-white py-12 px-4 md:px-8 text-center border-b border-stone-200">
+      <div className="bg-[#18452E] text-[#132A1D] py-12 px-4 md:px-8 text-center border-b border-stone-200">
         <div className="max-w-4xl mx-auto space-y-3">
           <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 border border-[#C9A84C]/25 px-3 py-1 rounded-full">
             FOUNDER&apos;S DIRECT VETTING
@@ -111,17 +111,17 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
           <h1 className="text-3xl md:text-4.5xl font-display font-semibold text-[#F0F8F4] tracking-tight mt-2">
             Find A Verified Professional
           </h1>
-          <p className="text-stone-200 text-xs sm:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
+          <p className="text-stone-600 text-xs sm:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
             Every professional in this catalog has had their certificates inspected, practice license integrity confirmed, and has been personally selected and verified by <strong>Olayinka Ayodele</strong> before going live.
           </p>
         </div>
       </div>
 
       {/* GOLD DISCLAIMER BAR */}
-      <div className="bg-[#C9A84C] text-[#18452E] py-3.5 px-4 md:px-8 shadow-inner">
+      <div className="bg-[#C9A84C] text-[#132A1D] py-3.5 px-4 md:px-8 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-start md:items-center space-x-2">
-          <Info className="w-5 h-5 text-[#18452E] shrink-0" />
-          <p className="text-[11px] md:text-xs font-sans font-medium text-[#18452E]">
+          <Info className="w-5 h-5 text-[#132A1D] shrink-0" />
+          <p className="text-[11px] md:text-xs font-sans font-medium text-[#132A1D]">
             <strong>Important Guardrail:</strong> Unity Homes verifies credentials and monitors professional connections but does not guarantee specific litigation or survey outcomes. Professional service fees are agreed separately between clients and professionals, and are separate from the Unity Homes connection fee.
           </p>
         </div>
@@ -133,31 +133,36 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
         {!selectedProf ? (
           <div>
             {/* PROMPT THREE FIX FIVE: Horizontal Dark Green Banner above Filter Tabs */}
-            <div className="bg-[#18452E] text-white rounded-2xl p-5 md:p-6 mb-8 shadow-md border border-[#18452E]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center space-x-3.5 text-center sm:text-left">
+            <div className="relative overflow-hidden text-[#132A1D] rounded-2xl p-5 md:p-6 mb-8 shadow-md border border-[#18452E]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              {/* Background Image & Overlay */}
+              <div className="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80" alt="Background" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-[#F5FAF2]/95" />
+              </div>
+              <div className="relative z-10 flex items-center space-x-3.5 text-center sm:text-left">
                 <div className="w-11 h-11 bg-[#18452E] text-[#C9A84C] rounded-xl flex items-center justify-center shrink-0 hidden sm:flex border border-[#C9A84C]/30">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-base md:text-lg text-white">
+                  <h3 className="font-display font-semibold text-base md:text-lg text-[#132A1D]">
                     Ready to connect with a professional?
                   </h3>
-                  <p className="text-xs text-stone-200 font-normal mt-0.5">
+                  <p className="text-xs text-stone-600 font-normal mt-0.5">
                     See our connection packages
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => navigate('/connect-with-a-professional')}
-                className="px-6 py-3 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0"
+                className="relative z-10 px-6 py-3 bg-[#C9A84C] hover:bg-[#b5953e] text-[#132A1D] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0"
               >
                 <span>View Packages</span>
-                <ArrowRight className="w-4 h-4 text-[#18452E]" />
+                <ArrowRight className="w-4 h-4 text-[#132A1D]" />
               </button>
             </div>
 
             {/* Filter controls */}
-            <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 bg-white border border-stone-200 p-4 rounded-xl shadow-xs mb-8">
+            <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 bg-[#132A1D] border border-stone-200 p-4 rounded-xl shadow-xs mb-8">
               {/* Category tabs */}
               <div className="flex flex-wrap gap-1">
                 {['All', 'Lawyer', 'Surveyor', 'Structural Engineer'].map((tag) => (
@@ -166,8 +171,8 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                     onClick={() => setCategoryFilter(tag)}
                     className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors cursor-pointer ${
                       categoryFilter === tag 
-                        ? 'bg-[#18452E] text-white' 
-                        : 'text-stone-500 hover:bg-stone-50 hover:text-[#18452E]'
+                        ? 'bg-[#18452E] text-[#132A1D]' 
+                        : 'text-stone-500 hover:bg-stone-50 hover:text-[#132A1D]'
                     }`}
                   >
                     {tag === 'All' ? 'All Professionals' : tag + 's'}
@@ -181,7 +186,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                 <select
                   value={stateFilter}
                   onChange={(e) => setStateFilter(e.target.value)}
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg p-2 text-xs text-[#18452E]"
+                  className="w-full bg-stone-50 border border-stone-200 rounded-lg p-2 text-xs text-[#132A1D]"
                 >
                   <option value="">All States Areas</option>
                   <option value="Lagos">Lagos Sector</option>
@@ -196,7 +201,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
             {/* Directory Heading */}
             <div className="border-t border-stone-200 pt-8 mb-6">
-              <h3 className="font-display font-semibold text-[#18452E] text-xl">
+              <h3 className="font-display font-semibold text-[#132A1D] text-xl">
                 Verified Individual Professionals Directory
               </h3>
               <p className="text-xs text-#6B7280 font-normal mt-0.5">
@@ -209,15 +214,15 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                                           {filteredProfs.map((prof) => (
                 <div
                   key={prof.id}
-                  className="bg-white rounded-xl border border-[#E2E8E4] p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between"
+                  className="bg-[#132A1D] rounded-xl border border-[#E2E8E4] p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between"
                 >
                   <div>
                     {/* Header Row */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex flex-col items-center shrink-0">
-                        <div className="relative w-16 h-16 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-xl border-2 border-[#C9A84C] shadow-xs shrink-0">
+                        <div className="relative w-16 h-16 rounded-full bg-[#18452E] text-[#132A1D] flex items-center justify-center font-display font-semibold text-xl border-2 border-[#C9A84C] shadow-xs shrink-0">
                           <span>{getInitials(prof.name)}</span>
-                          <div className="absolute -bottom-1 -right-1 bg-[#16A34A] text-white rounded-full p-0.5 border-2 border-white shadow-xs">
+                          <div className="absolute -bottom-1 -right-1 bg-[#16A34A] text-[#132A1D] rounded-full p-0.5 border-2 border-white shadow-xs">
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5">
                               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                             </svg>
@@ -240,7 +245,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       </div>
                     </div>
                     {/* Meta information */}
-                    <h3 className="font-display font-semibold text-[#18452E] text-base leading-tight">
+                    <h3 className="font-display font-semibold text-[#132A1D] text-base leading-tight">
                       {prof.name}
                     </h3>
                     <p className="text-[10px] font-mono tracking-wide text-stone-400 mt-1 uppercase">
@@ -248,11 +253,11 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                     </p>
                     <div className="mt-2.5 space-y-1">
                       <div className="text-xs text-stone-500">
-                        Experience: <strong className="text-[#18452E]">{prof.experienceYears} Years Active</strong>
+                        Experience: <strong className="text-[#132A1D]">{prof.experienceYears} Years Active</strong>
                       </div>
                       <div className="flex flex-wrap gap-1 pt-1.5">
                         {prof.statesCovered.map((st) => (
-                          <span key={st} className="px-2 py-0.5 border border-[#18452E]/20 rounded-full text-[9px] font-mono font-semibold text-[#18452E]">
+                          <span key={st} className="px-2 py-0.5 border border-[#18452E]/20 rounded-full text-[9px] font-mono font-semibold text-[#132A1D]">
                             📍 {st}
                           </span>
                         ))}
@@ -265,13 +270,13 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                   <div className="mt-6 grid grid-cols-2 gap-2">
                     <button
                       onClick={() => handleOpenProfile(prof)}
-                      className="py-2.5 px-3 bg-stone-100 hover:bg-stone-200 text-[#18452E] text-xs font-semibold rounded-xl transition text-center cursor-pointer border border-stone-200"
+                      className="py-2.5 px-3 bg-stone-100 hover:bg-stone-200 text-[#132A1D] text-xs font-semibold rounded-xl transition text-center cursor-pointer border border-stone-200"
                     >
                       View Profile
                     </button>
                     <button
                       onClick={() => setChoicePromptProf(prof)}
-                      className="py-2.5 px-3 bg-[#18452E] text-white hover:bg-[#18452E] text-xs font-semibold rounded-xl transition text-center cursor-pointer shadow-xs"
+                      className="py-2.5 px-3 bg-[#18452E] text-[#132A1D] hover:bg-[#18452E] text-xs font-semibold rounded-xl transition text-center cursor-pointer shadow-xs"
                     >
                       Get Connected
                     </button>
@@ -282,7 +287,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
             {/* INDIVIDUAL CHOICE PROMPT MODAL (FRONTEND STEP THREE) */}
             {choicePromptProf && (
               <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-                <div className="bg-white rounded-[var(--radius-large)] max-w-md w-full p-6 md:p-8 space-y-6 shadow-sm relative border border-stone-200 animate-fade-in">
+                <div className="bg-[#132A1D] rounded-[var(--radius-large)] max-w-md w-full p-6 md:p-8 space-y-6 shadow-sm relative border border-stone-200 animate-fade-in">
                   <button
                     onClick={() => setChoicePromptProf(null)}
                     className="absolute top-5 right-5 p-2 text-stone-400 hover:text-#132A1D rounded-full hover:bg-stone-50 cursor-pointer"
@@ -292,9 +297,9 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
                   <div className="flex items-center space-x-3">
                     <div className="flex flex-col items-center shrink-0">
-                      <div className="relative w-12 h-12 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-base border-2 border-[#C9A84C] shadow-xs shrink-0">
+                      <div className="relative w-12 h-12 rounded-full bg-[#18452E] text-[#132A1D] flex items-center justify-center font-display font-semibold text-base border-2 border-[#C9A84C] shadow-xs shrink-0">
                         <span>{getInitials(choicePromptProf.name)}</span>
-                        <div className="absolute -bottom-0.5 -right-0.5 bg-[#16A34A] text-white rounded-full p-0.5 border border-white shadow-xs">
+                        <div className="absolute -bottom-0.5 -right-0.5 bg-[#16A34A] text-[#132A1D] rounded-full p-0.5 border border-white shadow-xs">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-2 h-2">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
@@ -308,14 +313,14 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase">
                         {choicePromptProf.category}
                       </span>
-                      <h4 className="font-display font-semibold text-[#18452E] text-base">
+                      <h4 className="font-display font-semibold text-[#132A1D] text-base">
                         {choicePromptProf.name}
                       </h4>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="font-display font-semibold text-lg text-[#18452E]">
+                    <h3 className="font-display font-semibold text-lg text-[#132A1D]">
                       How Would You Like to Connect?
                     </h3>
                     <p className="text-xs text-#6B7280 leading-relaxed font-normal">
@@ -331,10 +336,10 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                         setChoicePromptProf(null);
                         handleOpenProfile(targetProf);
                       }}
-                      className="w-full py-3.5 bg-white border-2 border-[#18452E] hover:bg-emerald-50 text-[#18452E] font-semibold text-xs rounded-2xl transition flex items-center justify-between px-4 cursor-pointer"
+                      className="w-full py-3.5 bg-[#132A1D] border-2 border-[#18452E] hover:bg-emerald-50 text-[#132A1D] font-semibold text-xs rounded-2xl transition flex items-center justify-between px-4 cursor-pointer"
                     >
                       <span>Connect with {choicePromptProf.name} only</span>
-                      <span className="font-mono text-[#18452E]">NGN 55,000</span>
+                      <span className="font-mono text-[#132A1D]">NGN 55,000</span>
                     </button>
 
                     {/* Option 2: Add to a bundle */}
@@ -343,7 +348,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                         setChoicePromptProf(null);
                         window.scrollTo({ top: 320, behavior: 'smooth' });
                       }}
-                      className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs rounded-2xl transition flex items-center justify-between px-4 cursor-pointer shadow-md"
+                      className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-[#132A1D] font-semibold text-xs rounded-2xl transition flex items-center justify-between px-4 cursor-pointer shadow-md"
                     >
                       <div className="flex items-center space-x-2">
                         <PlusCircle className="w-4 h-4 text-[#C9A84C]" />
@@ -362,11 +367,11 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
         ) : (
           
           /* INDIVIDUAL DETAIL PROFILE VIEW - STEP 10 */
-          <div className="bg-white rounded-2xl border border-stone-200 shadow-md p-6 md:p-10 max-w-4xl mx-auto">
+          <div className="bg-[#132A1D] rounded-2xl border border-stone-200 shadow-md p-6 md:p-10 max-w-4xl mx-auto">
             {/* Close detail/Back button */}
             <button
               onClick={() => setSelectedProf(null)}
-              className="px-4 py-2 border border-stone-200 text-stone-500 hover:text-[#18452E] text-xs font-semibold rounded-lg mb-6 flex items-center space-x-1 cursor-pointer"
+              className="px-4 py-2 border border-stone-200 text-stone-500 hover:text-[#132A1D] text-xs font-semibold rounded-lg mb-6 flex items-center space-x-1 cursor-pointer"
             >
               <span>← Back to Vetted Directory</span>
             </button>
@@ -377,9 +382,9 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
               <div className="md:col-span-4 flex flex-col items-center text-center">
                 {/* Initial circle with verification check mark */}
                 <div className="flex flex-col items-center shrink-0 mb-3">
-                  <div className="relative w-28 h-28 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-3xl border-3 border-[#C9A84C] shadow-md shrink-0">
+                  <div className="relative w-28 h-28 rounded-full bg-[#18452E] text-[#132A1D] flex items-center justify-center font-display font-semibold text-3xl border-3 border-[#C9A84C] shadow-md shrink-0">
                     <span>{getInitials(selectedProf.name)}</span>
-                    <div className="absolute bottom-0 right-0 bg-[#16A34A] text-white rounded-full p-1.5 border-2 border-white shadow-xs">
+                    <div className="absolute bottom-0 right-0 bg-[#16A34A] text-[#132A1D] rounded-full p-1.5 border-2 border-white shadow-xs">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
@@ -390,7 +395,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                   </span>
                 </div>
 
-                <h2 className="font-display font-semibold text-xl text-[#18452E] leading-tight mt-1">
+                <h2 className="font-display font-semibold text-xl text-[#132A1D] leading-tight mt-1">
                   {selectedProf.name}
                 </h2>
                 <span className="px-3 py-1 bg-[#C9A84C]/15 text-[#C9A84C] font-mono font-semibold text-xs rounded-full uppercase tracking-wider mt-2 block">
@@ -426,27 +431,27 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                 
                 {/* Prominent Trust box including Official registry numbers */}
                 <div className="bg-[#18452E]/5 rounded-xl border border-stone-200 p-5">
-                  <span className="block text-[9px] font-mono font-semibold uppercase tracking-widest text-[#18452E] mb-2.5">
+                  <span className="block text-[9px] font-mono font-semibold uppercase tracking-widest text-[#132A1D] mb-2.5">
                     Official Regulatory Registry Box
                   </span>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <span className="block text-[10px] text-stone-400">REGISTERING AUTHORITY</span>
-                      <span className="block text-xs font-semibold text-[#18452E] mt-0.5">{selectedProf.issuingBody}</span>
+                      <span className="block text-xs font-semibold text-[#132A1D] mt-0.5">{selectedProf.issuingBody}</span>
                     </div>
                     <div>
                       <span className="block text-[10px] text-stone-400">REGISTRATION LICENSE</span>
-                      <span className="block text-xs font-mono font-semibold text-[#18452E] mt-0.5">{selectedProf.regNumber}</span>
+                      <span className="block text-xs font-mono font-semibold text-[#132A1D] mt-0.5">{selectedProf.regNumber}</span>
                     </div>
                     <div>
                       <span className="block text-[10px] text-stone-400">PRACTICING LIFESPAN</span>
-                      <span className="block text-xs font-semibold text-[#18452E] mt-0.5">{selectedProf.experienceYears} Years Verified</span>
+                      <span className="block text-xs font-semibold text-[#132A1D] mt-0.5">{selectedProf.experienceYears} Years Verified</span>
                     </div>
                     <div>
                       <span className="block text-[10px] text-stone-400">ACTIVE STATES ON PLATFORM</span>
                       <div className="flex flex-wrap gap-1 mt-1">
                         {selectedProf.statesCovered.map((s) => (
-                          <span key={s} className="bg-[#18452E] text-white font-mono text-[9px] px-1.5 py-0.5 rounded">
+                          <span key={s} className="bg-[#18452E] text-[#132A1D] font-mono text-[9px] px-1.5 py-0.5 rounded">
                             {s}
                           </span>
                         ))}
@@ -456,7 +461,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                 </div>
 
                 <div>
-                  <h4 className="font-display font-medium text-sm text-[#18452E] border-b border-stone-200 pb-2">Vetted Biography</h4>
+                  <h4 className="font-display font-medium text-sm text-[#132A1D] border-b border-stone-200 pb-2">Vetted Biography</h4>
                   <p className="text-xs text-#6B7280 mt-2.5 leading-relaxed font-normal">
                     {selectedProf.bio}
                   </p>
@@ -464,10 +469,10 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
                 {/* Direct Introduction Charter/Rules box - STEP 10 SPEC */}
                 <div className="p-4 bg-amber-50/50 border-l-[5px] border-[#18452E] rounded-r-xl">
-                  <span className="block font-mono font-semibold text-[10px] uppercase tracking-wide text-[#18452E] mb-2">
+                  <span className="block font-mono font-semibold text-[10px] uppercase tracking-wide text-[#132A1D] mb-2">
                     Direct Connection Guidelines &amp; Professional Charter
                   </span>
-                  <ol className="list-decimal list-inside space-y-2 text-xs text-[#18452E] leading-relaxed">
+                  <ol className="list-decimal list-inside space-y-2 text-xs text-[#132A1D] leading-relaxed">
                     <li>The connection fee is paid only to Unity Homes via Paystack on this website.</li>
                     <li>After payment, your introduction will be personally arranged by Olayinka Ayodele within 24 to 48 hours of payment confirmation.</li>
                     <li>Professional service fees are agreed separately between the client and the professional.</li>
@@ -482,9 +487,9 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       id="acceptTermsProf"
                       checked={termsAgreed}
                       onChange={(e) => setTermsAgreed(e.target.checked)}
-                      className="mt-0.5 h-4 w-4 text-[#18452E] focus:ring-[#18452E] border-stone-200 rounded cursor-pointer"
+                      className="mt-0.5 h-4 w-4 text-[#132A1D] focus:ring-[#18452E] border-stone-200 rounded cursor-pointer"
                     />
-                    <label htmlFor="acceptTermsProf" className="text-[11px] font-semibold text-[#18452E] select-none cursor-pointer">
+                    <label htmlFor="acceptTermsProf" className="text-[11px] font-semibold text-[#132A1D] select-none cursor-pointer">
                       I confirm I have read, understood, and accept all the connection conditions written in this official charter.
                     </label>
                   </div>
@@ -512,42 +517,42 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       <form onSubmit={triggerPaystackCheckout} className="space-y-3.5">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                           <div>
-                            <label className="block text-[9px] font-semibold text-[#18452E] uppercase">Your Legal Name</label>
+                            <label className="block text-[9px] font-semibold text-[#132A1D] uppercase">Your Legal Name</label>
                             <input
                               type="text"
                               required
                               value={billingDetails.name}
                               onChange={(e) => setBillingDetails({ ...billingDetails, name: e.target.value })}
-                              className="w-full bg-white border border-stone-200 rounded-lg p-2 text-xs text-[#18452E]"
+                              className="w-full bg-[#132A1D] border border-stone-200 rounded-lg p-2 text-xs text-[#132A1D]"
                               placeholder="Oluwaseun Adewale"
                             />
                           </div>
                           <div>
-                            <label className="block text-[9px] font-semibold text-[#18452E] uppercase">Your active Phone</label>
+                            <label className="block text-[9px] font-semibold text-[#132A1D] uppercase">Your active Phone</label>
                             <input
                               type="text"
                               required
                               value={billingDetails.phone}
                               onChange={(e) => setBillingDetails({ ...billingDetails, phone: e.target.value })}
-                              className="w-full bg-white border border-stone-200 rounded-lg p-3 py-2 text-xs text-[#18452E]"
+                              className="w-full bg-[#132A1D] border border-stone-200 rounded-lg p-3 py-2 text-xs text-[#132A1D]"
                               placeholder="+234 812 000 0000"
                             />
                           </div>
                           <div>
-                            <label className="block text-[9px] font-semibold text-[#18452E] uppercase">Your Email Address</label>
+                            <label className="block text-[9px] font-semibold text-[#132A1D] uppercase">Your Email Address</label>
                             <input
                               type="email"
                               required
                               value={billingDetails.email}
                               onChange={(e) => setBillingDetails({ ...billingDetails, email: e.target.value })}
-                              className="w-full bg-white border border-stone-200 rounded-lg p-2 text-xs text-[#18452E]"
+                              className="w-full bg-[#132A1D] border border-stone-200 rounded-lg p-2 text-xs text-[#132A1D]"
                               placeholder="seun@gmail.com"
                             />
                           </div>
                         </div>
 
                         {/* Card details simulation */}
-                        <div className="bg-white rounded-lg border border-stone-200 p-3">
+                        <div className="bg-[#132A1D] rounded-lg border border-stone-200 p-3">
                           <span className="block text-[8px] font-mono font-semibold text-stone-500 uppercase mb-2">Simulated Paystack Card Fields</span>
                           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
                             <div>
@@ -583,7 +588,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                         <button
                           type="submit"
                           disabled={isPaying}
-                          className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] disabled:bg-stone-300 text-white font-semibold rounded-xl text-xs flex items-center justify-center space-x-2 cursor-pointer shadow-md"
+                          className="w-full py-3 bg-[#18452E] hover:bg-[#18452E] disabled:bg-stone-300 text-[#132A1D] font-semibold rounded-xl text-xs flex items-center justify-center space-x-2 cursor-pointer shadow-md"
                         >
                           {isPaying ? (
                             <>
