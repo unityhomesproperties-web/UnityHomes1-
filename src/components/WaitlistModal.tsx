@@ -33,13 +33,13 @@ const INITIAL_DATA: WaitlistData = {
 };
 
 const ROLES_DISPLAY = [
-  { id: 'property_seeker', title: 'Property Seeker', desc: "I'm looking for property or property-related help.", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80" },
-  { id: 'long_term_landlord', title: 'Long-Term Landlord', desc: 'I want to list and/or manage long-term property.', img: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80" },
-  { id: 'shortlet_landlord', title: 'Shortlet Landlord', desc: 'I want to list and/or manage shortlet property.', img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80" },
-  { id: 'property_management_company', title: 'Property Management Company', desc: 'I manage properties on behalf of clients.', img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" },
-  { id: 'property_lawyer', title: 'Property Lawyer', desc: 'I provide legal services for property transactions.', img: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80" },
-  { id: 'licensed_surveyor', title: 'Licensed Surveyor', desc: 'I provide professional surveying services.', img: "https://images.unsplash.com/photo-1541888086925-ebcf3819e933?auto=format&fit=crop&q=80" },
-  { id: 'structural_engineer', title: 'Structural Engineer', desc: 'I provide structural engineering services.', img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" }
+  { id: 'property_seeker', title: 'Property Seeker', desc: "I'm looking for property or property-related help.", img: "/images/property_seeker.jpg" },
+  { id: 'long_term_landlord', title: 'Long-Term Landlord', desc: 'I want to list and/or manage long-term property.', img: "/images/long_term_landlord.jpg" },
+  { id: 'shortlet_landlord', title: 'Shortlet Landlord', desc: 'I want to list and/or manage shortlet property.', img: "/images/shortlet_landlord.jpg" },
+  { id: 'property_management_company', title: 'Property Management Company', desc: 'I manage properties on behalf of clients.', img: "/images/property_management_company.jpg" },
+  { id: 'property_lawyer', title: 'Property Lawyer', desc: 'I provide legal services for property transactions.', img: "/images/property_lawyer.jpg" },
+  { id: 'licensed_surveyor', title: 'Licensed Surveyor', desc: 'I provide professional surveying services.', img: "/images/licensed_surveyor.jpg" },
+  { id: 'structural_engineer', title: 'Structural Engineer', desc: 'I provide structural engineering services.', img: "/images/structural_engineer.jpg" }
 ];
 
 const NIGERIAN_STATES = [
@@ -55,9 +55,11 @@ const isValidPhone = (phone: string) => phone.length >= 10 && /^[\d\s\+\-\(\)]+$
 
 
 
-export default function WaitlistPage() {
+import { X } from "lucide-react";
+export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  if (!isOpen) return null;
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(1);
   const [direction, setDirection] = useState(1);
   const [data, setData] = useState<WaitlistData>(INITIAL_DATA);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
@@ -215,6 +217,7 @@ export default function WaitlistPage() {
       }
 
       clearAutosave();
+      onClose();
       navigate('/waitlist/success');
       
     } catch (err: any) {
@@ -290,68 +293,13 @@ export default function WaitlistPage() {
   }
 
   return (
-    <div className="min-h-screen font-sans bg-black relative flex flex-col">
-      <AnimatePresence mode="wait">
-        {currentStep === 0 && (
-          <motion.div 
-            key="step0"
-            className="fixed inset-0 z-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-          </motion.div>
-        )}
-        {currentStep > 0 && currentStep < 5 && (
-          <motion.div 
-            key="form-bg"
-            className="fixed inset-0 z-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img src={
-              currentStep === 1 ? "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" :
-              currentStep === 2 ? "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80" :
-              currentStep === 3 ? (data.role ? ROLES_DISPLAY.find(r => r.id === data.role)?.img : "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=80") :
-              "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
-            } alt="Background" className="w-full h-full object-cover transition-all duration-700" />
-            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-5xl bg-stone-50 rounded-3xl overflow-hidden shadow-2xl my-auto min-h-[600px] flex flex-col">
+        <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white text-stone-700 z-50 shadow-sm backdrop-blur-md transition-all hover:scale-105"><X className="w-5 h-5" /></button>
+      
 
-      <div className="relative z-10 w-full flex-grow flex flex-col">
-        {currentStep === 0 && (
-          <div className="min-h-screen flex flex-col justify-end pb-24 px-6 md:px-12 lg:px-24">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-4xl"
-            >
-              <h1 className="text-white text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight text-balance">
-                Real Estate Should Be Easier.
-              </h1>
-              <p className="text-white/90 text-xl md:text-2xl font-normal mb-10 max-w-2xl text-balance">
-                Join the Unity Homes waitlist and tell us how you'd like to be part of the platform.
-              </p>
-              <button 
-                onClick={() => setCurrentStep(1)}
-                className="bg-[#C9A84C] text-white px-10 py-5 rounded-full font-semibold text-xl shadow-[0_8px_30px_rgba(255,255,255,0.2)] hover:bg-[#B8973A] hover:shadow-[0_8px_30px_rgba(255,255,255,0.3)] transition-all transform hover:-translate-y-1"
-              >
-                Join the Waitlist
-              </button>
-            </motion.div>
-          </div>
-        )}
-
-        {currentStep > 0 && (
-          <div className="py-12 px-4 sm:px-6 lg:px-8 flex-grow flex flex-col">
+      <div className="w-full flex-grow flex flex-col">
+        <div className="py-8 px-4 sm:px-6 lg:px-8 flex-grow flex flex-col overflow-y-auto">
             <div className="max-w-4xl mx-auto w-full flex-grow flex flex-col">
               
               {currentStep > 1 && !isSubmitting && (
@@ -851,7 +799,7 @@ export default function WaitlistPage() {
               </motion.div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

@@ -1,52 +1,51 @@
-with open("src/components/WaitlistRegistration.tsx", "r") as f:
+import re
+
+with open('src/components/WaitlistModal.tsx', 'r') as f:
     content = f.read()
 
-# First, revert the inline banner from renderSuccess
-content = content.replace("""      <div className="w-full bg-[var(--theme-surface)] border border-[var(--color-border)] rounded-2xl p-6 mt-4 shadow-sm relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--theme-brand-bg)] to-[var(--color-gold)]"></div>
-        <h4 className="text-xl font-display font-bold text-[var(--color-text-primary)] mb-3">Help Build Better Area Intelligence</h4>
-        <p className="text-sm text-[var(--color-text-secondary)] mb-6 leading-relaxed">
-          Spend just a few minutes helping buyers, renters and landlords make smarter property decisions across Nigeria.
-        </p>
-        <div className="space-y-3">
-          <button onClick={() => { setShowModal(true); navigateTo('/area-intelligence'); }} className="w-full h-12 rounded-xl bg-[var(--theme-brand-bg)] text-[var(--theme-brand-fg)] text-sm font-semibold hover:scale-[1.02] transition-all flex justify-center items-center gap-2 shadow-lg shadow-[var(--theme-brand-bg)]/20">
-            Contribute Area Insights <ArrowRight className="w-4 h-4"/>
-          </button>
-          <button onClick={() => setShowModal(true)} className="w-full h-12 rounded-xl bg-[var(--color-bg)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm font-semibold hover:bg-[var(--color-surface)] transition-all">
-            Skip For Now
-          </button>
-        </div>
-      </div>""", "")
-
-# Also, update the renderSuccess old buttons
-content = content.replace("""        <p className="text-sm text-[var(--color-text-secondary)] max-w-[300px] mx-auto leading-relaxed">
-          We've sent a confirmation email.
-        </p>
-      </div>
-    </motion.div>""", """        <p className="text-sm text-[var(--color-text-secondary)] max-w-[300px] mx-auto leading-relaxed">
-          We've sent a confirmation email.
-        </p>
-      </div>
-
-      <div className="w-full space-y-3 pt-6">
-        <button onClick={() => setShowModal(true)} className="w-full h-14 rounded-xl bg-[var(--theme-surface)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-base font-semibold hover:bg-[var(--color-bg)] transition-all">
-          Continue
-        </button>
-      </div>
-    </motion.div>""")
-
-# Update the modal's navigate function
-content = content.replace(
-    "onClick={() => { setShowModal(false); window.scrollTo(0,0); }} \n                  className=\"w-full h-14 rounded-xl bg-[var(--theme-brand-bg)] text-[var(--theme-brand-fg)] font-semibold hover:scale-[1.02] transition-all\"",
-    "onClick={() => { setShowModal(false); navigateTo('/area-intelligence'); }} \n                  className=\"w-full h-14 rounded-xl bg-[var(--theme-brand-bg)] text-[var(--theme-brand-fg)] font-semibold hover:scale-[1.02] transition-all\""
+# Replace the component signature
+content = re.sub(
+    r'export default function WaitlistPage\(\) \{',
+    r'import { X } from "lucide-react";\nexport default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {',
+    content
 )
 
-# And the other button in modal
-content = content.replace(
-    "onClick={() => { setShowModal(false); window.scrollTo(0,0); }} \n                  className=\"w-full h-14 rounded-xl bg-transparent text-[var(--color-text-secondary)] font-semibold hover:text-[var(--color-text-primary)] transition-all\"",
-    "onClick={() => { setShowModal(false); window.scrollTo(0,0); }} \n                  className=\"w-full h-14 rounded-xl bg-transparent text-[var(--color-text-secondary)] font-semibold hover:text-[var(--color-text-primary)] transition-all\""
+# Insert the return early logic right after the first line of the component
+content = re.sub(
+    r'(export default function WaitlistModal\([^)]+\) \{)',
+    r'\1\n  if (!isOpen) return null;\n',
+    content
 )
 
+# When successful, close modal and navigate
+content = re.sub(
+    r"navigate\('/waitlist/success'\);",
+    r"onClose();\n      navigate('/waitlist/success');",
+    content
+)
 
-with open("src/components/WaitlistRegistration.tsx", "w") as f:
+# Convert the outer layout to a modal overlay
+# Looking for return ( <div className="min-h-screen font-sans bg-black relative flex flex-col"> ...
+content = re.sub(
+    r'(return \(\n\s*)<div className="min-h-screen font-sans bg-black relative flex flex-col">',
+    r'\1<div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm overflow-y-auto">\n      <div className="relative w-full max-w-5xl bg-stone-50 rounded-3xl overflow-hidden shadow-2xl my-auto min-h-[600px] flex flex-col">\n        <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-white text-stone-700 z-50 shadow-sm backdrop-blur-md transition-all hover:scale-105"><X className="w-5 h-5" /></button>',
+    content
+)
+
+# Remove the step0 which shows a full page background image
+content = re.sub(
+    r'\{\s*currentStep === 0 && \(\s*<motion\.div[^>]+>\s*<img[^>]+>\s*<div[^>]+>\s*</motion\.div>\s*\)\}',
+    '',
+    content
+)
+
+# Since we wrapped it in another div, we need to close it at the very end
+# We'll just replace the last </div>\n    </div>\n  ); with </div>\n    </div>\n    </div>\n  );
+content = re.sub(
+    r'(</AnimatePresence>\n\s*)</div>\n\s*\);\n\}',
+    r'\1</div>\n    </div>\n  );\n}',
+    content
+)
+
+with open('src/components/WaitlistModal.tsx', 'w') as f:
     f.write(content)

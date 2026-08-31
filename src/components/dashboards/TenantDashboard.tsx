@@ -790,7 +790,7 @@ export default function TenantDashboard({
     bank: matchedProperty ? matchedProperty.verifiedBankName : 'Guaranty Trust Bank (GTB)',
     accountNumber: matchedProperty ? matchedProperty.verifiedAccountNumber : '1022938485',
     beneficiaryName: matchedProperty ? matchedProperty.verifiedAccountName : 'Mrs Funmi Adebayo Verified Collection Account',
-    photo: 'https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?w=150&h=150&fit=crop'
+    photo: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop'
   };
 
   const pmcDetails = {

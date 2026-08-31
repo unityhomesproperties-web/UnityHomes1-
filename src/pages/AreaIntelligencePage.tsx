@@ -366,7 +366,7 @@ export default function AreaIntelligencePage() {
       <section className="relative overflow-hidden flex-shrink-0">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
+          <img src="/images/area_intelligence.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

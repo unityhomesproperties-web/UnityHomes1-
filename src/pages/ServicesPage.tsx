@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useWaitlist } from "../components/WaitlistContext";
 import { motion, AnimatePresence, useScroll, useTransform, useReducedMotion } from 'motion/react';
 import { useRef } from 'react';
 import { X } from 'lucide-react';
@@ -78,6 +79,7 @@ const SERVICES = [
 ];
 
 export default function ServicesPage() {
+  const { openWaitlist } = useWaitlist();
   const heroRef = useRef<HTMLElement>(null);
   const reducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -125,7 +127,7 @@ export default function ServicesPage() {
       <section ref={heroRef} className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
+          <img src="/images/our_services.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
@@ -141,7 +143,7 @@ export default function ServicesPage() {
           style={{ y: reducedMotion ? '0%' : yImage }}
         >
           <img 
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" 
+            src="/images/our_services.jpg" 
             alt="Architecture Texture" 
             className="w-full h-full object-cover filter blur-[2px] grayscale"
           />
@@ -385,12 +387,7 @@ export default function ServicesPage() {
                 This feature is currently in development. We are building a structured workflow that brings clarity and trust to property information before it goes live.
               </p>
               
-              <Link
-                to="/waitlist"
-                className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 shadow-sm hover:shadow-md transition-all duration-200 w-full"
-              >
-                Join The Waitlist
-              </Link>
+              <button onClick={openWaitlist} className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 shadow-sm hover:shadow-md transition-all duration-200 w-full cursor-pointer">Join The Waitlist</button>
             </motion.div>
           </motion.div>
         )}

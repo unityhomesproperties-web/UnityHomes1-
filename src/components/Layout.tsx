@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { useWaitlist } from './WaitlistContext';
 import { Menu, X } from 'lucide-react';
 
 import Footer from './Footer';
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 ];
 
 export default function Layout() {
+  const { openWaitlist } = useWaitlist();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -52,12 +54,7 @@ export default function Layout() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/waitlist"
-              className="bg-[var(--color-brand-fresh)] text-white px-6 py-2.5 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand-medium)] transition-colors min-h-[48px] flex items-center justify-center shadow-sm"
-            >
-              Join The Waitlist
-            </Link>
+            <button onClick={openWaitlist} className="bg-[var(--color-brand-fresh)] text-white px-6 py-2.5 rounded-[var(--radius-button)] font-semibold hover:bg-[var(--color-brand-medium)] transition-colors min-h-[48px] flex items-center justify-center shadow-sm cursor-pointer">Join The Waitlist</button>
           </nav>
 
           <button
@@ -97,13 +94,7 @@ export default function Layout() {
               </Link>
             ))}
             <div className="pt-8 mt-auto">
-              <Link
-                to="/waitlist"
-                onClick={closeMenu}
-                className="bg-[var(--color-brand-fresh)] text-white px-6 py-4 rounded-[var(--radius-button)] font-semibold text-lg w-full min-h-[48px] flex items-center justify-center hover:bg-[var(--color-brand-medium)] transition-colors shadow-sm"
-              >
-                Join The Waitlist
-              </Link>
+              <button onClick={() => { closeMenu(); openWaitlist(); }} className="bg-[var(--color-brand-fresh)] text-white px-6 py-4 rounded-[var(--radius-button)] font-semibold text-lg w-full min-h-[48px] flex items-center justify-center hover:bg-[var(--color-brand-medium)] transition-colors shadow-sm cursor-pointer">Join The Waitlist</button>
             </div>
           </nav>
         </div>

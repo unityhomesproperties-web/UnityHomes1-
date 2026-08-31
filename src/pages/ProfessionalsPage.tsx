@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useWaitlist } from '../components/WaitlistContext';
 import { motion } from 'motion/react';
 
 const PROFESSIONALS = [
@@ -24,6 +25,7 @@ const PROFESSIONALS = [
 ];
 
 export default function ProfessionalsPage() {
+  const { openWaitlist } = useWaitlist();
   const location = useLocation();
 
   useEffect(() => {
@@ -57,7 +59,7 @@ export default function ProfessionalsPage() {
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
+          <img src="/images/for_real_estate_professionals.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
@@ -182,14 +184,7 @@ export default function ProfessionalsPage() {
                     {prof.description}
                   </p>
                   
-                  <Link
-                    to="/waitlist"
-                    state={{ role: prof.roleId }}
-                    className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group"
-                  >
-                    Join The Waitlist
-                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </Link>
+                  <button onClick={openWaitlist} className="inline-flex items-center justify-center bg-[#6FBE45] text-white px-8 py-4 rounded-[18px] font-semibold text-lg hover:-translate-y-0.5 active:translate-y-0 shadow-sm hover:shadow-md transition-all duration-200 group cursor-pointer">Join The Waitlist<span className="ml-2 group-hover:translate-x-1 transition-transform">→</span></button>
                 </motion.div>
                 
                 {/* Visual Area */}
@@ -213,7 +208,7 @@ export default function ProfessionalsPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 border-y border-[#6FBE45]/10">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <img src="/images/for_real_estate_professionals.jpg" alt="Architecture Background" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">

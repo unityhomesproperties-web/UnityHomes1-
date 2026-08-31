@@ -448,7 +448,7 @@ export const initialProperties: Property[] = [
     bedrooms: 3,
     bathrooms: 4,
     description: 'Spectacular penthouse property featuring high ceiling clearances and private water filtration structures. Self-managed.',
-    photos: ['https://images.unsplash.com/photo-1622771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80'],
+    photos: ['https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80'],
     mapsPinLabel: 'Plot 15 Phase 2, Gbagada, Lagos',
     amenities: ['Independent Backups', 'Water Treatment Station', 'CCTV System'],
     landlordCode: 'UH-LANDLORD-CHIOMA',

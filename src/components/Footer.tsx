@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useWaitlist } from './WaitlistContext';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useReducedMotion } from 'motion/react';
@@ -14,6 +15,7 @@ const FooterLink = ({ to, children }: { to: string, children: React.ReactNode })
 );
 
 const Footer = () => {
+  const { openWaitlist } = useWaitlist();
   const reducedMotion = useReducedMotion();
 
   const navReveal = {
@@ -81,16 +83,13 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" as const }}
             className="shrink-0"
           >
-            <Link
-              to="/waitlist"
-              className="group relative inline-flex items-center justify-center overflow-hidden bg-white text-black px-10 py-5 rounded-full font-bold text-lg shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] transition-all duration-300"
-            >
+            <button onClick={openWaitlist} className="group relative inline-flex items-center justify-center overflow-hidden bg-white text-black px-10 py-5 rounded-full font-bold text-lg shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] transition-all duration-300 cursor-pointer">
               <span className="absolute inset-0 bg-gradient-to-r from-white via-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative z-10 flex items-center">
                 Join The Waitlist
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
-            </Link>
+            </button>
           </motion.div>
         </div>
       </div>
@@ -153,7 +152,7 @@ const Footer = () => {
                 <FooterLink to="/services">Services</FooterLink>
                 <FooterLink to="/professionals">Professionals</FooterLink>
                 <FooterLink to="/area-intelligence">Intelligence</FooterLink>
-                <FooterLink to="/waitlist">Waitlist</FooterLink>
+                <button onClick={openWaitlist} className="text-gray-400 hover:text-white transition-colors cursor-pointer text-left">Waitlist</button>
               </motion.div>
 
               <motion.div 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { useWaitlist } from '../components/WaitlistContext';
 import { Building, ShieldCheck, Users, Briefcase, Wrench, Map, ChevronLeft, ChevronRight, Home } from 'lucide-react';
 import FAQSection from '../components/FAQSection';
 
@@ -16,7 +17,7 @@ const HERO_SLIDES = [
     tag: "Trusted Professional Network",
     headline: "Verified Professionals at Your Fingertips.",
     description: "Connect with trusted Property Lawyers, Licensed Surveyors, and Structural Engineers to ensure secure and verified property transactions.",
-    image: "https://images.unsplash.com/photo-1541881591873-455de31cebd8?auto=format&fit=crop&q=80"
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80"
   },
   {
     id: 3,
@@ -80,6 +81,7 @@ const SERVICES_PREVIEW = [
 ];
 
 export default function HomePage() {
+  const { openWaitlist } = useWaitlist();
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const nextSlide = useCallback(() => {
@@ -152,12 +154,7 @@ export default function HomePage() {
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
-                    <Link
-                      to="/waitlist"
-                      className="w-full sm:w-auto bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm"
-                    >
-                      Join The Waitlist
-                    </Link>
+                    <button onClick={openWaitlist} className="w-full sm:w-auto bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm cursor-pointer">Join The Waitlist</button>
                     <a
                       href="#services-preview"
                       onClick={scrollToServices}
@@ -389,12 +386,7 @@ export default function HomePage() {
             Join the waitlist to get early access to a platform built for safer, more transparent property experiences.
           </p>
           <div className="pt-8">
-            <Link
-              to="/waitlist"
-              className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[var(--radius-button)] font-semibold text-lg hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
-            >
-              Join The Waitlist
-            </Link>
+            <button onClick={openWaitlist} className="inline-flex bg-white text-[#2F8D46] px-10 py-5 rounded-[var(--radius-button)] font-semibold text-lg hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer">Join The Waitlist</button>
           </div>
         </div>
       </section>
