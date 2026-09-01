@@ -30,19 +30,15 @@ const Footer = () => {
     <footer className="relative w-full overflow-hidden flex flex-col font-sans bg-black">
       
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity"
-        >
-          <source src="/videos/footer.mp4" type="video/mp4" />
-        </video>
-        {/* Subtle overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      >
+        <source src="/videos/footer.mp4" type="video/mp4" />
+      </video>
 
       {/* Structured Navigation */}
       <div className="relative z-20 pt-20 pb-10 px-6 lg:px-12">
