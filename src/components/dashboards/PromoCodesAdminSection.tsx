@@ -328,7 +328,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
       {/* SECTION HEADER */}
       <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-6 md:p-8 shadow-sm border border-[#18452E]/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
         <div className="relative z-10 space-y-2">
-          <div className="flex items-center space-x-2 text-[#C9A84C]">
+          <div className="flex items-center space-x-2 text-[#6FBE45]">
             <Tag className="w-5 h-5" />
             <span className="text-xs font-mono font-semibold tracking-widest uppercase">
               Fee Management & Promotion Engine
@@ -344,7 +344,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
 
         <button
           onClick={handleOpenAddModal}
-          className="relative z-10 px-6 py-3.5 bg-[#C9A84C] hover:bg-[#b5953e] text-[#18452E] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
+          className="relative z-10 px-6 py-3.5 bg-[#6FBE45] hover:bg-[#b5953e] text-[#18452E] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0 border border-white/20"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Add New Promo Code</span>
@@ -417,7 +417,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             <span className="text-[10px] font-mono font-semibold uppercase text-stone-400 block tracking-wider">
               Most Used Code (This Month)
             </span>
-            <span className="font-display font-semibold text-xl text-[#C9A84C] font-mono mt-1 block uppercase">
+            <span className="font-display font-semibold text-xl text-[#6FBE45] font-mono mt-1 block uppercase">
               {mostUsedCodeThisMonth}
             </span>
             <span className="text-[10px] text-#6B7280 font-normal mt-0.5 block">
@@ -756,7 +756,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div className="flex items-center space-x-2.5">
-                <div className="w-10 h-10 bg-[#18452E] text-[#C9A84C] rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#18452E] text-[#6FBE45] rounded-xl flex items-center justify-center">
                   <Tag className="w-5 h-5" />
                 </div>
                 <div>
@@ -1006,7 +1006,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
-                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">
+                <span className="text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-wider">
                   Editing Code Parameters
                 </span>
                 <h3 className="font-display font-semibold text-xl text-[#18452E]">
@@ -1234,7 +1234,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
             
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div>
-                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">
+                <span className="text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-wider">
                   Redemption History Panel
                 </span>
                 <h3 className="font-display font-semibold text-2xl text-[#18452E]">
@@ -1338,7 +1338,7 @@ export default function PromoCodesAdminSection({ triggerSuccess }: PromoCodesAdm
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <div>
-              <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-widest block">
+              <span className="text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-widest block">
                 Promo Code Successfully Generated
               </span>
               <h3 className="font-display font-semibold text-2xl text-[#18452E] mt-1">

@@ -66,7 +66,7 @@ export default function PmcApplicationPage({ navigate }: PmcApplicationPageProps
           <div className="w-12 h-12 bg-teal-50 border border-teal-100 rounded-xl flex items-center justify-center p-2 mb-3">
             <Building className="w-full h-full text-[#1A5C50]" />
           </div>
-          <span className="font-mono text-[10px] font-semibold tracking-widest text-[#C9A84C] uppercase">
+          <span className="font-mono text-[10px] font-semibold tracking-widest text-[#6FBE45] uppercase">
             CORPORATE PARTNERSHIP
           </span>
           <h1 className="text-2xl font-display font-semibold text-[#18452E] mt-1">

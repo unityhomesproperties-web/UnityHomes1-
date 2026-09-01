@@ -280,7 +280,7 @@ export function generateLandlordReportHtml(report: LandlordReport): string {
 
       <!-- Financial Metrics Grid -->
       <div style="padding: 24px;">
-        <h3 style="margin: 0 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #C9A84C; padding-left: 8px;">Financial Statement Summary</h3>
+        <h3 style="margin: 0 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #6FBE45; padding-left: 8px;">Financial Statement Summary</h3>
         
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 12px;">
           <thead>
@@ -310,7 +310,7 @@ export function generateLandlordReportHtml(report: LandlordReport): string {
         </table>
 
         <!-- Portfolio Statistics -->
-        <h3 style="margin: 24px 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #C9A84C; padding-left: 8px;">Key Operational Statistics</h3>
+        <h3 style="margin: 24px 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #6FBE45; padding-left: 8px;">Key Operational Statistics</h3>
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 12px;">
           <tr style="border-bottom: 1px solid #f1f5f9;">
             <td style="padding: 10px 0; color: #475569;">Occupancy Rate (Month End)</td>
@@ -322,7 +322,7 @@ export function generateLandlordReportHtml(report: LandlordReport): string {
           </tr>
           <tr style="border-bottom: 1px solid #f1f5f9;">
             <td style="padding: 10px 0; color: #475569;">Top Performing Property</td>
-            <td style="padding: 10px 0; text-align: right; font-weight: bold; color: #C9A84C;">${m.topPerformingProperty}</td>
+            <td style="padding: 10px 0; text-align: right; font-weight: bold; color: #6FBE45;">${m.topPerformingProperty}</td>
           </tr>
           <tr style="border-bottom: 1px solid #f1f5f9;">
             <td style="padding: 10px 0; color: #475569;">Confirmed Lease Renewals</td>
@@ -350,7 +350,7 @@ export function generateLandlordReportHtml(report: LandlordReport): string {
       <!-- Footer -->
       <div style="background-color: #f8fafc; padding: 20px; text-align: center; border-top: 1px solid #e2e8f0;">
         <p style="margin: 0; font-size: 10px; color: #64748b; line-height: 1.5;">This report was compiled and verified automatically using active ledger records from the Unity Homes database. Estimates or market forecasts are not included. All figures are based on real confirmed transactions only.</p>
-        <p style="margin: 12px 0 0 0; font-size: 12px; color: #C9A84C; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
+        <p style="margin: 12px 0 0 0; font-size: 12px; color: #6FBE45; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
       </div>
     </div>
   `;
@@ -393,7 +393,7 @@ export function generatePmcReportHtml(report: PmcReport): string {
 
       <!-- Financial Metrics Grid -->
       <div style="padding: 24px;">
-        <h3 style="margin: 0 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #C9A84C; padding-left: 8px;">Portfolio Revenue Summary</h3>
+        <h3 style="margin: 0 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #6FBE45; padding-left: 8px;">Portfolio Revenue Summary</h3>
         
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 12px;">
           <thead>
@@ -420,14 +420,14 @@ export function generatePmcReportHtml(report: PmcReport): string {
               <td style="padding: 12px; text-align: right; font-weight: 900; color: #0d2a1d; font-size: 14px;">₦${m.netPortfolioIncome.toLocaleString()}</td>
             </tr>
             <tr style="background-color: #fdfbf7; border-bottom: 2px solid #e2e8f0;">
-              <td style="padding: 12px; color: #C9A84C; font-weight: bold;">PMC Management Fees Earned</td>
-              <td style="padding: 12px; text-align: right; font-weight: 900; color: #C9A84C; font-size: 14px;">₦${m.totalManagementFeesEarned.toLocaleString()}</td>
+              <td style="padding: 12px; color: #6FBE45; font-weight: bold;">PMC Management Fees Earned</td>
+              <td style="padding: 12px; text-align: right; font-weight: 900; color: #6FBE45; font-size: 14px;">₦${m.totalManagementFeesEarned.toLocaleString()}</td>
             </tr>
           </tbody>
         </table>
 
         <!-- Portfolio Statistics -->
-        <h3 style="margin: 24px 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #C9A84C; padding-left: 8px;">Portfolio Operations</h3>
+        <h3 style="margin: 24px 0 16px 0; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #1B4332; border-left: 3px solid #6FBE45; padding-left: 8px;">Portfolio Operations</h3>
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 12px;">
           <tr style="border-bottom: 1px solid #f1f5f9;">
             <td style="padding: 10px 0; color: #475569;">Overall Occupancy Rate</td>
@@ -463,7 +463,7 @@ export function generatePmcReportHtml(report: PmcReport): string {
       <!-- Footer -->
       <div style="background-color: #f8fafc; padding: 20px; text-align: center; border-top: 1px solid #e2e8f0;">
         <p style="margin: 0; font-size: 10px; color: #64748b; line-height: 1.5;">This report was compiled and verified automatically using active ledger records from the Unity Homes database. Estimates or market forecasts are not included. All figures are based on real confirmed transactions only.</p>
-        <p style="margin: 12px 0 0 0; font-size: 12px; color: #C9A84C; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
+        <p style="margin: 12px 0 0 0; font-size: 12px; color: #6FBE45; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
       </div>
     </div>
   `;

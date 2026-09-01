@@ -71,7 +71,7 @@ export default function RulesPage({ navigate }: RulesPageProps) {
       
       {/* HEADER HERO */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/25">
+        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#6FBE45]/25">
           Ecosystem Constitution
         </span>
         <h1 className="text-3xl md:text-5xl font-display font-semibold text-[#18452E] leading-tight">
@@ -113,11 +113,11 @@ export default function RulesPage({ navigate }: RulesPageProps) {
             <div 
               key={sec.id} 
               id={sec.id}
-              className="spatial-glass border border-stone-200/50 p-6 sm:p-8 rounded-[var(--radius-large)] space-y-3 shadow-xs hover:border-[#C9A84C]/40 transition duration-200"
+              className="spatial-glass border border-stone-200/50 p-6 sm:p-8 rounded-[var(--radius-large)] space-y-3 shadow-xs hover:border-[#6FBE45]/40 transition duration-200"
             >
               <h3 className="font-display font-semibold text-sm sm:text-base text-[#18452E] border-b border-stone-200 pb-2.5 flex items-center justify-between">
                 <span>{sec.title}</span>
-                <Scale className="w-4 h-4 text-[#C9A84C]" />
+                <Scale className="w-4 h-4 text-[#6FBE45]" />
               </h3>
               <p className="text-xs sm:text-sm text-#6B7280 font-normal leading-relaxed font-sans">
                 {sec.content}
@@ -141,7 +141,7 @@ export default function RulesPage({ navigate }: RulesPageProps) {
       </div>
 
       {/* FOOTER FRAUD VOW */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono font-medium tracking-wide italic">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono font-medium tracking-wide italic">
         Don&apos;t Buy Wahala &bull; Legal Affairs Team, RC-1849120
       </p>
 

@@ -1556,7 +1556,7 @@ export default function TenantDashboard({
                   <BarChart2 className="text-[#18452E] w-5 h-5" />
                   <h3 className="font-display font-semibold text-[#18452E] uppercase text-sm">Rent Savings Tracker</h3>
                 </div>
-                <span className="text-[10px] font-mono font-semibold text-[#C9A84C] bg-[#C9A84C]/5 px-2.5 py-1 rounded border border-[#C9A84C]/20 uppercase">
+                <span className="text-[10px] font-mono font-semibold text-[#6FBE45] bg-[#6FBE45]/5 px-2.5 py-1 rounded border border-[#6FBE45]/20 uppercase">
                   {percentSaved}% Achievement
                 </span>
               </div>
@@ -1591,13 +1591,13 @@ export default function TenantDashboard({
                   <span className="text-[9px] font-mono uppercase text-teal-800 block font-semibold">Days Remaining</span>
                   <span className="text-lg font-display font-semibold text-teal-950 block mt-1">{daysRemaining} Days</span>
                 </div>
-                <div className="p-4 bg-[#C9A84C]/5 border border-[#C9A84C]/20 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-semibold">Weekly Target</span>
-                  <span className="text-base font-display font-semibold text-[#C9A84C] block mt-1">₦{suggestedWeeklySaving.toLocaleString()}</span>
+                <div className="p-4 bg-[#6FBE45]/5 border border-[#6FBE45]/20 rounded-2xl">
+                  <span className="text-[9px] font-mono uppercase text-[#6FBE45] block font-semibold">Weekly Target</span>
+                  <span className="text-base font-display font-semibold text-[#6FBE45] block mt-1">₦{suggestedWeeklySaving.toLocaleString()}</span>
                 </div>
-                <div className="p-4 bg-[#C9A84C]/5 border border-[#C9A84C]/20 rounded-2xl">
-                  <span className="text-[9px] font-mono uppercase text-[#C9A84C] block font-semibold">Monthly Target</span>
-                  <span className="text-base font-display font-semibold text-[#C9A84C] block mt-1">₦{suggestedMonthlySaving.toLocaleString()}</span>
+                <div className="p-4 bg-[#6FBE45]/5 border border-[#6FBE45]/20 rounded-2xl">
+                  <span className="text-[9px] font-mono uppercase text-[#6FBE45] block font-semibold">Monthly Target</span>
+                  <span className="text-base font-display font-semibold text-[#6FBE45] block mt-1">₦{suggestedMonthlySaving.toLocaleString()}</span>
                 </div>
               </div>
 
@@ -1912,7 +1912,7 @@ export default function TenantDashboard({
                 </div>
                 <p className="text-#6B7280">Security Levy ₦25,000 cleared successfully.</p>
               </div>
-              <div className="p-3 bg-stone-50 border-l-2 border-[#C9A84C] rounded-r-xl">
+              <div className="p-3 bg-stone-50 border-l-2 border-[#6FBE45] rounded-r-xl">
                 <div className="flex justify-between items-center mb-1">
                   <strong className="text-#132A1D">DOCUMENT_UPLOAD_VERIFIED</strong>
                   <span className="text-stone-400">2026-04-14 09:22:11 UTC</span>
@@ -1939,7 +1939,7 @@ export default function TenantDashboard({
             
             <div className="flex justify-between items-start">
               <div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
+                <span className="text-[10px] uppercase font-mono tracking-widest text-[#6FBE45] font-semibold">
                   LIFETIME TENANCY SYSTEM PORTAL
                 </span>
                 <h3 className="font-display font-semibold text-lg uppercase tracking-wide mt-1">
@@ -2370,7 +2370,7 @@ export default function TenantDashboard({
             </div>
 
             <div className="p-6  text-white text-center">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-semibold block mb-1">Unity Homes Ledger System</span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#6FBE45] font-semibold block mb-1">Unity Homes Ledger System</span>
               <h3 className="font-display font-semibold text-sm uppercase tracking-wider">Clearance Certificate</h3>
               <p className="text-[9px] text-stone-200 font-mono mt-1">Ref: {showTenantReceipt.ref}</p>
             </div>
@@ -2429,7 +2429,7 @@ export default function TenantDashboard({
       )}
 
       {/* FOOTER DISCOVERY CREED */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider pt-8">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono uppercase font-semibold tracking-wider pt-8">
         Unity Homes &bull; Secure Rent Ledger Planning Tool &bull; Don&apos;t Buy Wahala
       </p>
 

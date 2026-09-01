@@ -169,7 +169,7 @@ export function generateRentReceiptHtml(payment: RentPayment): string {
       <!-- Gold Branded Footer -->
       <div style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 1px solid #eeeeee;">
         <p style="margin: 0; font-size: 10px; color: #777777; line-height: 1.5;">You received this automated receipt because a rent verification transaction cleared for your registered account profile. This document has been permanently archived in your platform Document Vault.</p>
-        <p style="margin: 15px 0 0 0; font-size: 13px; color: #C9A84C; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
+        <p style="margin: 15px 0 0 0; font-size: 13px; color: #6FBE45; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
       </div>
     </div>
   `;
@@ -258,7 +258,7 @@ export function generateServiceChargeReceiptHtml(bill: ServiceChargeBill): strin
       <!-- Gold Branded Footer -->
       <div style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 1px solid #eeeeee;">
         <p style="margin: 0; font-size: 10px; color: #777777; line-height: 1.5;">You received this automated receipt because a service charge validation cleared for your registered account profile. This document has been permanently archived in your platform Document Vault.</p>
-        <p style="margin: 15px 0 0 0; font-size: 13px; color: #C9A84C; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
+        <p style="margin: 15px 0 0 0; font-size: 13px; color: #6FBE45; font-weight: bold; font-style: italic;">Don't Buy Wahala</p>
       </div>
     </div>
   `;

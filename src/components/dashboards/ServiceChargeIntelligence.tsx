@@ -190,7 +190,7 @@ export default function ServiceChargeIntelligence({
       {/* KPI GRID */}
       <div className="bg-teal-950 border rounded-[var(--radius-large)] p-6 shadow-sm relative overflow-hidden text-white">
         <div className="absolute top-0 right-0 p-8 opacity-10">
-          <DollarSign className="w-32 h-32 text-[#C9A84C]" />
+          <DollarSign className="w-32 h-32 text-[#6FBE45]" />
         </div>
         <div className="relative z-10">
           <h2 className="font-display font-semibold text-2xl text-white uppercase mb-1">Service Charge Intelligence</h2>
@@ -198,7 +198,7 @@ export default function ServiceChargeIntelligence({
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white/10 p-4 rounded-2xl border border-white/25">
-              <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Total Expected</span>
+              <span className="block text-[10px] font-mono text-[#6FBE45] uppercase mb-1">Total Expected</span>
               <span className="text-xl font-display font-semibold">₦{totalExpected.toLocaleString()}</span>
             </div>
             <div className="bg-emerald-500/20 p-4 rounded-2xl border border-emerald-500/30">
@@ -210,7 +210,7 @@ export default function ServiceChargeIntelligence({
               <span className="text-xl font-display font-semibold">₦{totalOutstanding.toLocaleString()}</span>
             </div>
             <div className="bg-white/10 p-4 rounded-2xl border border-white/25">
-              <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Collection Rate</span>
+              <span className="block text-[10px] font-mono text-[#6FBE45] uppercase mb-1">Collection Rate</span>
               <span className="text-xl font-display font-semibold">{collectionRate}%</span>
             </div>
           </div>

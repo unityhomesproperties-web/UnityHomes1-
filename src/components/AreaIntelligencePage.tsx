@@ -270,7 +270,7 @@ export default function AreaIntelligencePage() {
                     key={star}
                     type="button"
                     onClick={() => updateFormData('ratings', field.id, star)}
-                    className={`transition-colors p-1 ${formData.ratings[field.id] >= star ? 'text-[#C9A84C]' : 'text-[#5F6F63]/30 hover:text-[#C9A84C]/50'}`}
+                    className={`transition-colors p-1 ${formData.ratings[field.id] >= star ? 'text-[#6FBE45]' : 'text-[#5F6F63]/30 hover:text-[#6FBE45]/50'}`}
                   >
                     <Star className="w-8 h-8" fill={formData.ratings[field.id] >= star ? 'currentColor' : 'none'} />
                   </button>

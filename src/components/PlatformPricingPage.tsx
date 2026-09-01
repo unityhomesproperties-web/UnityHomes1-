@@ -217,7 +217,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
         </div>
         
         <div className="relative z-10 space-y-4 max-w-3xl mx-auto">
-          <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-widest text-[#C9A84C] bg-[#18452E]/50 px-4 py-1.5 rounded-full border border-[#C9A84C]/30 shadow-xs">
+          <span className="inline-block text-[10px] font-mono font-semibold uppercase tracking-widest text-[#6FBE45] bg-[#18452E]/50 px-4 py-1.5 rounded-full border border-[#6FBE45]/30 shadow-xs">
             UNITY HOMES SERVICES
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-white tracking-tight">
@@ -229,25 +229,25 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
 
           {/* MONTHLY / ANNUAL TOGGLE */}
           <div className="pt-4 flex items-center justify-center space-x-3">
-            <span className={`text-xs font-semibold font-mono ${!isAnnual ? 'text-[#C9A84C]' : 'text-stone-300'}`}>
+            <span className={`text-xs font-semibold font-mono ${!isAnnual ? 'text-[#6FBE45]' : 'text-stone-300'}`}>
               MONTHLY BILLING
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className="p-1 rounded-full bg-[#18452E] border border-[#C9A84C]/40 text-white transition cursor-pointer"
+              className="p-1 rounded-full bg-[#18452E] border border-[#6FBE45]/40 text-white transition cursor-pointer"
               aria-label="Toggle annual billing"
             >
               {isAnnual ? (
-                <ToggleRight className="w-9 h-9 text-[#C9A84C]" />
+                <ToggleRight className="w-9 h-9 text-[#6FBE45]" />
               ) : (
                 <ToggleLeft className="w-9 h-9 text-stone-300" />
               )}
             </button>
             <div className="flex items-center space-x-1.5">
-              <span className={`text-xs font-semibold font-mono ${isAnnual ? 'text-[#C9A84C]' : 'text-stone-300'}`}>
+              <span className={`text-xs font-semibold font-mono ${isAnnual ? 'text-[#6FBE45]' : 'text-stone-300'}`}>
                 ANNUAL BILLING
               </span>
-              <span className="bg-[#C9A84C] text-[#18452E] text-[9px] font-semibold font-mono px-2.5 py-0.5 rounded-full uppercase shadow-xs">
+              <span className="bg-[#6FBE45] text-[#18452E] text-[9px] font-semibold font-mono px-2.5 py-0.5 rounded-full uppercase shadow-xs">
                 SAVE 10%
               </span>
             </div>
@@ -324,7 +324,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                       : 'bg-[#18452E] hover:bg-[#18452E] text-white'
                   }`}
                 >
-                  <MessageSquare className="w-4 h-4 text-[#C9A84C]" />
+                  <MessageSquare className="w-4 h-4 text-[#6FBE45]" />
                   <span>Get Started via WhatsApp</span>
                 </button>
               </div>
@@ -338,7 +338,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
 
       {/* SECTION TWO: SHORTLET MANAGEMENT PLANS */}
       <section className="mb-12">
-        <div className="border-l-4 border-[#C9A84C] pl-4 mb-6">
+        <div className="border-l-4 border-[#6FBE45] pl-4 mb-6">
           <h2 className="text-xl sm:text-2xl font-display font-semibold text-[#18452E] tracking-tight">
             Shortlet Management Plans
           </h2>
@@ -355,19 +355,19 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                 key={tier.id}
                 className={`bg-white rounded-[var(--radius-large)] border-2 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
                   tier.popular
-                    ? 'border-[#C9A84C] shadow-sm ring-2 ring-[#C9A84C]/20'
+                    ? 'border-[#6FBE45] shadow-sm ring-2 ring-[#6FBE45]/20'
                     : 'border-stone-200 hover:border-stone-300 shadow-xs'
                 }`}
               >
                 {tier.popular && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-[9px] px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-[9px] px-3.5 py-1 rounded-full uppercase tracking-wider shadow-xs">
                     RECOMMENDED SHORTLET TIER
                   </span>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">
+                    <span className="text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-wider bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">
                       {tier.badge}
                     </span>
                   </div>
@@ -381,14 +381,14 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                       {price.amountDisplay}
                     </span>
                     <span className="text-xs text-#6B7280 font-mono block mt-1">
-                      {price.period} &bull; <span className="text-[#C9A84C] font-semibold">{price.subtext}</span>
+                      {price.period} &bull; <span className="text-[#6FBE45] font-semibold">{price.subtext}</span>
                     </span>
                   </div>
 
                   <ul className="space-y-3 text-xs text-#132A1D font-normal">
                     {tier.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start space-x-2.5 leading-relaxed">
-                        <Check className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#6FBE45] shrink-0 mt-0.5" />
                         <span className={feature.startsWith('Everything in') ? 'font-semibold text-[#18452E]' : ''}>
                           {feature}
                         </span>
@@ -401,7 +401,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                   onClick={() => handleOpenInquiryModal(tier)}
                   className="mt-8 w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs rounded-xl transition cursor-pointer shadow-md flex items-center justify-center space-x-2"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#C9A84C]" />
+                  <MessageSquare className="w-4 h-4 text-[#6FBE45]" />
                   <span>Get Started via WhatsApp</span>
                 </button>
               </div>
@@ -442,7 +442,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
         </div>
 
         <div className="bg-[#FDFBF7] rounded-[var(--radius-large)] border border-stone-200 p-8 md:p-12 relative shadow-xs">
-          <span className="absolute top-6 right-6 border border-[#C9A84C] text-[#C9A84C] font-mono text-[10px] font-semibold uppercase px-3.5 py-1 rounded-full tracking-wider bg-amber-50/50">
+          <span className="absolute top-6 right-6 border border-[#6FBE45] text-[#6FBE45] font-mono text-[10px] font-semibold uppercase px-3.5 py-1 rounded-full tracking-wider bg-amber-50/50">
             Coming Soon
           </span>
 
@@ -474,7 +474,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                   className="px-6 py-3 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs uppercase rounded-xl transition cursor-pointer shrink-0 shadow-sm flex items-center justify-center space-x-2"
                 >
                   <span>Register Interest</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#C9A84C]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#6FBE45]" />
                 </button>
               </form>
             )}
@@ -716,7 +716,7 @@ export default function PlatformPricingPage({ navigate }: PlatformPricingPagePro
                 type="submit"
                 className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs rounded-xl transition cursor-pointer shadow-md flex items-center justify-center space-x-2 pt-3"
               >
-                <MessageSquare className="w-4 h-4 text-[#C9A84C]" />
+                <MessageSquare className="w-4 h-4 text-[#6FBE45]" />
                 <span>Proceed to WhatsApp Onboarding</span>
               </button>
             </form>

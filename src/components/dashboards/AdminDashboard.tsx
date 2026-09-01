@@ -2176,7 +2176,7 @@ export default function AdminDashboard({
       {/* SIDEBAR TABS */}
       <div className="w-full lg:w-72 shrink-0 spatial-glass border border-stone-200/50 rounded-2xl p-4 space-y-2 overflow-y-auto max-h-[90vh]">
         <div className="border-b border-stone-200/50 pb-3 mb-3 text-center">
-          <span className="text-[10px] font-mono font-semibold tracking-widest text-[#C9A84C] block uppercase">
+          <span className="text-[10px] font-mono font-semibold tracking-widest text-[#6FBE45] block uppercase">
             ADMINISTRATOR COMMAND
           </span>
           <h2 className="font-display font-semibold text-xs text-[#18452E]">SYSTEM CONTROLLER</h2>
@@ -2202,7 +2202,7 @@ export default function AdminDashboard({
               }`}
             >
               <span>{tab}</span>
-              {isActive && <div className="w-1.5 h-1.5 bg-[#C9A84C] rounded-full"></div>}
+              {isActive && <div className="w-1.5 h-1.5 bg-[#6FBE45] rounded-full"></div>}
             </button>
           );
         })}
@@ -3197,7 +3197,7 @@ export default function AdminDashboard({
                     `${pmcApps.filter(p => p.status === 'Pending').length} PMC applications are awaiting approval.`
                   ].map((insight, i) => (
                     <li key={i} className="flex items-start space-x-3 text-xs text-#6B7280 hover:bg-amber-50/80 p-2 -mx-2 rounded-lg cursor-pointer transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#6FBE45] mt-1.5 shrink-0" />
                       <span className="leading-relaxed">{insight}</span>
                     </li>
                   ))}
@@ -3492,7 +3492,7 @@ export default function AdminDashboard({
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Landlords')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#6FBE45] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
@@ -3721,7 +3721,7 @@ export default function AdminDashboard({
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Tenants')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#6FBE45] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
@@ -3745,7 +3745,7 @@ export default function AdminDashboard({
               <div className="flex items-center justify-between border-b border-stone-200 pb-3">
                 <div>
                   <h4 className="font-display font-semibold text-[#18452E] text-xs uppercase tracking-wider flex items-center space-x-1.5">
-                    <Mail className="w-4 h-4 text-[#C9A84C]" />
+                    <Mail className="w-4 h-4 text-[#6FBE45]" />
                     <span>Payment Receipt Email Simulator</span>
                   </h4>
                   <p className="text-[10px] text-#6B7280 mt-0.5">Configure emulated Cloud Function SMTP gateway failure or successful delivery states.</p>
@@ -3944,7 +3944,7 @@ export default function AdminDashboard({
                         <span className="font-semibold text-[#18452E]">{u.tenantName} - {u.propertyName}</span>
                         <span className="block text-[10px] text-stone-400 mt-0.5">{getCollectionAccountTextForAdmin(u.propertyName)}</span>
                         {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-                        <span className="block text-[9px] font-mono font-semibold text-[#C9A84C] mt-1">Rent Period &bull; Q3 2026 Confirmation</span>
+                        <span className="block text-[9px] font-mono font-semibold text-[#6FBE45] mt-1">Rent Period &bull; Q3 2026 Confirmation</span>
                       </div>
                       <div className="flex items-center space-x-4">
                         <div className="text-right">
@@ -4009,7 +4009,7 @@ export default function AdminDashboard({
                               {email.status}
                             </span>
                           </td>
-                          <td className="py-2.5 text-right font-mono text-[10px] text-[#C9A84C] font-semibold">
+                          <td className="py-2.5 text-right font-mono text-[10px] text-[#6FBE45] font-semibold">
                             {email.attachments?.[0]?.fileName || 'None'}
                           </td>
                           <td className="py-2.5 text-right">
@@ -4042,7 +4042,7 @@ export default function AdminDashboard({
                   <img src={prof.avatarUrl} alt={prof.name} className="w-12 h-12 rounded-full object-cover border border-stone-200" />
                   <div className="text-xs">
                     <span className="block font-semibold text-[#18452E]">{prof.name}</span>
-                    <span className="block text-[10px] text-[#C9A84C] font-mono">{prof.category} &bull; Reg: {prof.regNumber}</span>
+                    <span className="block text-[10px] text-[#6FBE45] font-mono">{prof.category} &bull; Reg: {prof.regNumber}</span>
                     <span className="block text-stone-400 font-normal mt-0.5">{prof.statesCovered.join(', ')} Coverage-area</span>
                   </div>
                 </div>
@@ -4130,8 +4130,8 @@ export default function AdminDashboard({
                 </div>
 
                 <div className="bg-[#18452E] text-white p-4 rounded-2xl border border-amber-400/30 relative overflow-hidden">
-                  <span className="block text-[9px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider">Complete Bundles</span>
-                  <span className="text-xl md:text-2xl font-semibold text-[#C9A84C] font-display block mt-1">
+                  <span className="block text-[9px] font-mono font-semibold text-[#6FBE45] uppercase tracking-wider">Complete Bundles</span>
+                  <span className="text-xl md:text-2xl font-semibold text-[#6FBE45] font-display block mt-1">
                     {completeCount}
                   </span>
                   <span className="text-[10px] text-stone-300 font-mono mt-0.5 block">₦120,000 / full shield</span>
@@ -4209,7 +4209,7 @@ export default function AdminDashboard({
                               </span>
                             )}
                             {conn.packageType === 'COMPLETE_BUNDLE' && (
-                              <span className="inline-block px-2.5 py-1 rounded-full bg-[#18452E] text-[#C9A84C] border border-amber-400/40 text-[10px] font-mono font-semibold">
+                              <span className="inline-block px-2.5 py-1 rounded-full bg-[#18452E] text-[#6FBE45] border border-amber-400/40 text-[10px] font-mono font-semibold">
                                 Complete Bundle
                               </span>
                             )}
@@ -4223,7 +4223,7 @@ export default function AdminDashboard({
                             {conn.promoCode ? (
                               <div className="space-y-0.5">
                                 <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-semibold border border-amber-300">
-                                  <Tag className="w-3 h-3 text-[#C9A84C]" />
+                                  <Tag className="w-3 h-3 text-[#6FBE45]" />
                                   <span>{conn.promoCode}</span>
                                 </span>
                                 {conn.discountAmount && conn.discountAmount > 0 ? (
@@ -4529,7 +4529,7 @@ export default function AdminDashboard({
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Property Management Companies')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#6FBE45] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
@@ -4557,7 +4557,7 @@ export default function AdminDashboard({
                   <div className="text-xs space-y-1.5">
                     <div className="flex items-center space-x-2">
                       <strong className="text-sm text-[#18452E]">{app.companyName}</strong>
-                      <span className="text-[10px] bg-[#C9A84C]/10 text-[#C9A84C] font-mono px-2 py-0.5 rounded">{app.cacNumber}</span>
+                      <span className="text-[10px] bg-[#6FBE45]/10 text-[#6FBE45] font-mono px-2 py-0.5 rounded">{app.cacNumber}</span>
                     </div>
                     <span className="block text-#6B7280 font-normal">Officer: {app.contactName} ({app.phone})</span>
                     <span className="block text-#6B7280">Address: {app.address}</span>
@@ -4792,7 +4792,7 @@ export default function AdminDashboard({
                   </button>
                   <button 
                     onClick={() => executeBulkArchive('Shortlet Management')}
-                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#C9A84C] text-xs font-semibold rounded-xl transition cursor-pointer"
+                    className="px-3 py-1.5 bg-#132A1D hover:bg-#132A1D text-[#6FBE45] text-xs font-semibold rounded-xl transition cursor-pointer"
                   >
                     Archive
                   </button>
@@ -4816,7 +4816,7 @@ export default function AdminDashboard({
                 <Award className="w-48 h-48 text-emerald-200" />
               </div>
               <div className="relative z-10 max-w-3xl">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] font-semibold block mb-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#6FBE45] font-semibold block mb-1">
                   Official Administrative Board
                 </span>
                 <h3 className="font-display font-semibold text-2xl uppercase tracking-tight text-white mb-2">
@@ -5119,7 +5119,7 @@ export default function AdminDashboard({
                     {inq.promo_code && (
                       <div className="mt-1.5 flex items-center space-x-2">
                         <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded bg-amber-100 text-[#18452E] text-[10px] font-mono font-semibold border border-amber-300">
-                          <Tag className="w-3 h-3 text-[#C9A84C]" />
+                          <Tag className="w-3 h-3 text-[#6FBE45]" />
                           <span>Promo Code: {inq.promo_code}</span>
                         </span>
                         {inq.promo_discount_text && (
@@ -5165,7 +5165,7 @@ export default function AdminDashboard({
                       <span className="font-mono font-semibold text-base text-[#18452E] block">₦{plan.price.toLocaleString()}</span>
                       <button 
                         onClick={() => triggerSuccess(`Billing price updated for plan '${plan.level}'`)}
-                        className="text-[#C9A84C] hover:underline font-mono text-[10px] font-semibold cursor-pointer"
+                        className="text-[#6FBE45] hover:underline font-mono text-[10px] font-semibold cursor-pointer"
                       >
                         Configure Price
                       </button>
@@ -5179,7 +5179,7 @@ export default function AdminDashboard({
             <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-6 shadow-sm animate-fade-in">
               <div>
                 <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase flex items-center gap-1.5">
-                  <ShieldAlert className="w-5 h-5 text-[#C9A84C]" />
+                  <ShieldAlert className="w-5 h-5 text-[#6FBE45]" />
                   <span>Subscription Capacity Enforcement & Override Controller</span>
                 </h3>
                 <p className="text-xs text-#6B7280 mt-1">
@@ -5516,7 +5516,7 @@ export default function AdminDashboard({
           <div className="bg-white border border-stone-200 rounded-[var(--radius-large)] p-6 space-y-4">
             <div className="flex justify-between items-center">
               <h3 className="font-display font-semibold text-[#18452E] text-sm uppercase">Birthdays System</h3>
-              <Gift className="w-5 h-5 text-[#C9A84C]" />
+              <Gift className="w-5 h-5 text-[#6FBE45]" />
             </div>
             <p className="text-xs text-#6B7280 leading-relaxed font-normal">
               Tenant dates of birth are completely protected under compliance privacy. This dashboard alerts management to send congratulations securely.
@@ -5559,7 +5559,7 @@ export default function AdminDashboard({
               <div className="p-4 bg-amber-50 border border-amber-100 rounded-2xl space-y-1">
                 <span className="text-[10px] font-mono uppercase text-amber-800 font-semibold blocking">Affiliate Dispatch Rate</span>
                 <span className="text-2xl font-semibold text-amber-950 block">100%</span>
-                <span className="text-[9px] text-[#C9A84C] font-mono">14 business days payment cycle</span>
+                <span className="text-[9px] text-[#6FBE45] font-mono">14 business days payment cycle</span>
               </div>
             </div>
 
@@ -6612,7 +6612,7 @@ export default function AdminDashboard({
                 <div>
                   <span className="font-semibold text-#6B7280">Attachments:</span>{' '}
                   {selectedEmailPreview.attachments?.map((att: any) => (
-                    <span key={att.fileName} className="bg-amber-50 text-[#C9A84C] border border-amber-400/20 px-1.5 py-0.5 rounded font-semibold text-[10px] inline-flex items-center space-x-1">
+                    <span key={att.fileName} className="bg-amber-50 text-[#6FBE45] border border-amber-400/20 px-1.5 py-0.5 rounded font-semibold text-[10px] inline-flex items-center space-x-1">
                       <FileText className="w-3 h-3 inline" />
                       <span>{att.fileName}</span>
                     </span>
@@ -6642,7 +6642,7 @@ export default function AdminDashboard({
               {selectedEmailPreview.attachments?.[0] && (
                 <div className="border border-amber-400/30 bg-amber-50/20 rounded-xl p-4 space-y-2">
                   <div className="flex items-center space-x-1.5 text-[10px] font-semibold text-#6B7280 uppercase tracking-wider">
-                    <FileLock className="w-4 h-4 text-[#C9A84C]" />
+                    <FileLock className="w-4 h-4 text-[#6FBE45]" />
                     <span>Attached Document: {selectedEmailPreview.attachments[0].fileName}</span>
                   </div>
                   <pre className="text-[10px] font-mono text-#6B7280 whitespace-pre bg-white border border-stone-200 p-4 rounded-lg overflow-x-auto leading-relaxed">

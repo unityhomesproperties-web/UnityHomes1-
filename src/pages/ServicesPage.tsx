@@ -128,7 +128,7 @@ export default function ServicesPage() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="/images/our_services.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-transparent" />
         </div>
         
         {/* Very Subtle Background Depth without harsh gradients */}

@@ -237,7 +237,7 @@ export default function MoveInReadinessWidget({ profile, mode, onProfileUpdated 
           {mode === 'tenant' && !currentProfile.verified_badge && (
             <button
               onClick={() => setShowVerificationModal(true)}
-              className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#B8973B] text-#132A1D text-xs font-semibold rounded-xl transition cursor-pointer flex items-center gap-1 shadow-xs"
+              className="px-3 py-1.5 bg-[#6FBE45] hover:bg-[#B8973B] text-#132A1D text-xs font-semibold rounded-xl transition cursor-pointer flex items-center gap-1 shadow-xs"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>Submit Verification</span>

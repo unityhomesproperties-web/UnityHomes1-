@@ -54,7 +54,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
       
       {/* HEADER GREEN BOX */}
       <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 text-center mb-10 shadow-sm">
-        <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/30 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/20">
+        <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/30 px-3.5 py-1.5 rounded-full border border-[#6FBE45]/20">
           SYSTEM PREVIEWS
         </span>
         <h1 className="text-3xl md:text-4.5xl font-display font-semibold text-white mt-3">
@@ -66,8 +66,8 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
       </div>
 
       {/* PERSISTENT GOLD DEMO ALERT BANNER */}
-      <div className="mb-8 bg-[#C9A84C]/15 border-l-4 border-[#C9A84C] p-3 text-xs text-[#18452E] font-mono font-semibold flex items-center space-x-2 rounded-r-lg shadow-inner">
-        <ShieldAlert className="w-5 h-5 text-[#C9A84C] shrink-0" />
+      <div className="mb-8 bg-[#6FBE45]/15 border-l-4 border-[#6FBE45] p-3 text-xs text-[#18452E] font-mono font-semibold flex items-center space-x-2 rounded-r-lg shadow-inner">
+        <ShieldAlert className="w-5 h-5 text-[#6FBE45] shrink-0" />
         <span>Sample data shown inside recordings and dashboard modules is for demonstration purposes only.</span>
       </div>
 
@@ -117,7 +117,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
         <div className="lg:col-span-4 space-y-6">
           <div className="bg-[#18452E] rounded-2xl p-6 shadow-sm text-white">
             <div className="flex items-center space-x-2 mb-3">
-              <BarChart2 className="w-6 h-6 text-[#C9A84C]" />
+              <BarChart2 className="w-6 h-6 text-[#6FBE45]" />
               <h3 className="font-display font-semibold text-white text-lg">
                 Performance Center
               </h3>
@@ -127,14 +127,14 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
             </p>
             <button
               onClick={() => navigate('/performance-demo')}
-              className="w-full py-3.5 bg-[#C9A84C] text-[#18452E] hover:bg-white rounded-xl font-semibold flex items-center justify-center space-x-2 transition cursor-pointer"
+              className="w-full py-3.5 bg-[#6FBE45] text-[#18452E] hover:bg-white rounded-xl font-semibold flex items-center justify-center space-x-2 transition cursor-pointer"
             >
               <BarChart2 className="w-5 h-5" />
               <span>Enter Performance Center</span>
             </button>
           </div>
 
-          <div className="bg-white rounded-2xl border-2 border-dashed border-[#C9A84C]/40 p-6 shadow-sm">
+          <div className="bg-white rounded-2xl border-2 border-dashed border-[#6FBE45]/40 p-6 shadow-sm">
           <div className="flex items-center space-x-2 mb-4">
             <Activity className="w-5 h-5 text-[#18452E]" />
             <h3 className="font-display font-semibold text-[#18452E] text-sm">
@@ -168,7 +168,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
                     Click to load preset dashboard
                   </span>
                 </div>
-                <LayoutDashboard className="w-4 h-4 text-[#C9A84C] group-hover:text-white shrink-0" />
+                <LayoutDashboard className="w-4 h-4 text-[#6FBE45] group-hover:text-white shrink-0" />
               </button>
             ))}
             
@@ -192,7 +192,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
                   Verify registrations &amp; applications
                 </span>
               </div>
-              <Database className="w-4 h-4 text-[#C9A84C] group-hover:text-white shrink-0" />
+              <Database className="w-4 h-4 text-[#6FBE45] group-hover:text-white shrink-0" />
             </button>
           </div>
 
@@ -205,7 +205,7 @@ export default function DemoPage({ navigate, onQuickLogin }: DemoPageProps) {
       </div>
 
       {/* CALL TO ACTION BUTTON REUSING WHATSAPP */}
-      <div className="bg-[#C9A84C] text-[#18452E] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+      <div className="bg-[#6FBE45] text-[#18452E] p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
         <div className="max-w-xl text-center md:text-left">
           <h3 className="font-display font-semibold text-lg">
             Have Questions About Operating System Scoping?

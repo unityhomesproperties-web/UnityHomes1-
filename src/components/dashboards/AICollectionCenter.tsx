@@ -836,14 +836,14 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
 
             {/* Overall Collection */}
             <div className="bg-[#18452E] text-white p-5 rounded-2xl space-y-2 shadow-sm">
-              <span className="text-[10px] font-mono text-[#C9A84C] uppercase tracking-widest block font-semibold">Overall Collection Performance</span>
+              <span className="text-[10px] font-mono text-[#6FBE45] uppercase tracking-widest block font-semibold">Overall Collection Performance</span>
               <div className="flex justify-between items-end">
                 <div>
                   <span className="text-2xl font-display font-semibold text-white">{overallCollectionRate.toFixed(1)}%</span>
                   <span className="text-[10px] text-stone-300 block mt-0.5">Combined collection percentage</span>
                 </div>
                 <div className="bg-white/10 p-1.5 rounded-lg">
-                  <TrendingUp className="w-5 h-5 text-[#C9A84C]" />
+                  <TrendingUp className="w-5 h-5 text-[#6FBE45]" />
                 </div>
               </div>
               <div className="pt-2 border-t border-white/10 text-[10px] text-stone-300">
@@ -937,10 +937,10 @@ export default function AICollectionCenter({ role, userId }: { role: 'Admin' | '
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
                     <span className="font-semibold">Combined Collection Rate</span>
-                    <span className="font-mono text-[#C9A84C] font-semibold">₦{(rentCollected + scCollected).toLocaleString()} ({overallCollectionRate.toFixed(1)}%)</span>
+                    <span className="font-mono text-[#6FBE45] font-semibold">₦{(rentCollected + scCollected).toLocaleString()} ({overallCollectionRate.toFixed(1)}%)</span>
                   </div>
                   <div className="w-full bg-stone-50 h-3.5 rounded-full overflow-hidden">
-                    <div className="bg-[#C9A84C] h-full transition-all duration-550" style={{ width: `${overallCollectionRate}%` }}></div>
+                    <div className="bg-[#6FBE45] h-full transition-all duration-550" style={{ width: `${overallCollectionRate}%` }}></div>
                   </div>
                 </div>
               </div>

@@ -114,14 +114,14 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
               }`}
             >
               <div>
-                <Home className="w-5 h-5 text-[#C9A84C] mb-2" />
+                <Home className="w-5 h-5 text-[#6FBE45] mb-2" />
                 <h3 className="font-display font-semibold text-xs text-[#18452E]">I am a Landlord</h3>
                 <p className="text-[10px] text-stone-400 mt-1 leading-snug">
                   Manage properties, tenants, and rental income.
                 </p>
               </div>
               {selectedRole === 'Landlord' && (
-                <span className="absolute top-2.5 right-2.5 bg-[#C9A84C] text-white p-0.5 rounded-full">
+                <span className="absolute top-2.5 right-2.5 bg-[#6FBE45] text-white p-0.5 rounded-full">
                   <Check className="w-3 h-3" />
                 </span>
               )}
@@ -137,14 +137,14 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
               }`}
             >
               <div>
-                <Key className="w-5 h-5 text-[#C9A84C] mb-2" />
+                <Key className="w-5 h-5 text-[#6FBE45] mb-2" />
                 <h3 className="font-display font-semibold text-xs text-[#18452E]">I am a Tenant</h3>
                 <p className="text-[10px] text-stone-400 mt-1 leading-snug">
                   View tenancy, make payments, and track savings.
                 </p>
               </div>
               {selectedRole === 'Tenant' && (
-                <span className="absolute top-2.5 right-2.5 bg-[#C9A84C] text-white p-0.5 rounded-full">
+                <span className="absolute top-2.5 right-2.5 bg-[#6FBE45] text-white p-0.5 rounded-full">
                   <Check className="w-3 h-3" />
                 </span>
               )}
@@ -160,14 +160,14 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
               }`}
             >
               <div>
-                <Calendar className="w-5 h-5 text-[#C9A84C] mb-2" />
+                <Calendar className="w-5 h-5 text-[#6FBE45] mb-2" />
                 <h3 className="font-display font-semibold text-xs text-[#18452E]">I am a Shortlet Manager</h3>
                 <p className="text-[10px] text-stone-400 mt-1 leading-snug">
                   Log bookings and manage landlord rentals.
                 </p>
               </div>
               {selectedRole === 'Shortlet Manager' && (
-                <span className="absolute top-2.5 right-2.5 bg-[#C9A84C] text-white p-0.5 rounded-full">
+                <span className="absolute top-2.5 right-2.5 bg-[#6FBE45] text-white p-0.5 rounded-full">
                   <Check className="w-3 h-3" />
                 </span>
               )}
@@ -213,7 +213,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                 <span className="text-[11px] font-mono uppercase tracking-wider font-semibold">I am an Administrator</span>
               </div>
               {selectedRole === 'Admin' && (
-                <span className="absolute -top-1.5 -right-1.5 bg-[#C9A84C] text-white p-0.5 rounded-full">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#6FBE45] text-white p-0.5 rounded-full">
                   <Check className="w-2.5 h-2.5" />
                 </span>
               )}
@@ -250,7 +250,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                     <button
                       type="button"
                       onClick={() => navigate('/Pricing')} // Forgot password redirect link in gold as specified
-                      className="text-[#C9A84C] text-[10px] font-mono font-semibold hover:underline"
+                      className="text-[#6FBE45] text-[10px] font-mono font-semibold hover:underline"
                     >
                       Forgot?
                     </button>
@@ -300,7 +300,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
                 >
                   {isLoggingIn ? (
                     <>
-                      <Loader className="w-4 h-4 animate-spin text-[#C9A84C]" />
+                      <Loader className="w-4 h-4 animate-spin text-[#6FBE45]" />
                       <span>Opening Workspace Access Portal...</span>
                     </>
                   ) : (
@@ -315,7 +315,7 @@ export default function LoginPage({ navigate, onLoginSuccess }: LoginPageProps) 
           <div className="text-center pt-2">
             <p className="text-[11px] text-stone-500 leading-relaxed">
               Accounts are created by our team after a personal onboarding conversation. <br />
-              New here? <button onClick={() => navigate('/pricing-and-services')} className="text-[#C9A84C] font-semibold hover:underline">Visit unityhomes.ng to get started</button>
+              New here? <button onClick={() => navigate('/pricing-and-services')} className="text-[#6FBE45] font-semibold hover:underline">Visit unityhomes.ng to get started</button>
             </p>
           </div>
 

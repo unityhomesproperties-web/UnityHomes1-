@@ -19,7 +19,7 @@ export default function VisionPage() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="/images/our_vision.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           
@@ -115,7 +115,7 @@ export default function VisionPage() {
               transition={{ duration: 0.4 }}
               className="relative pl-12 pb-12 group cursor-default"
             >
-              <div className={`absolute left-0 top-1 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold z-10 transition-colors duration-300 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
+              <div className={`absolute left-0 top-1 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold z-10 transition-colors duration-300 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#6FBE45] text-[#132A1D]'}`}>
                 0{idx + 1}
               </div>
               
@@ -124,7 +124,7 @@ export default function VisionPage() {
                 <div className={`inline-flex px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full self-start ${
                   item.status === 'Available Now' 
                     ? 'bg-[#EAF5E3] text-[#6FBE45]' 
-                    : 'bg-stone-50 text-[#C9A84C] border border-[#C9A84C]/30'
+                    : 'bg-stone-50 text-[#6FBE45] border border-[#6FBE45]/30'
                 }`}>
                   {item.status}
                 </div>
@@ -158,7 +158,7 @@ export default function VisionPage() {
                 transition={{ duration: 0.4, delay: idx * 0.15 }}
                 className="relative group cursor-default pt-12 hover:-translate-y-1 transition-transform duration-300"
               >
-                <div className={`absolute top-[-15px] left-0 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold transition-colors duration-300 z-20 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#C9A84C] text-[#132A1D]'}`}>
+                <div className={`absolute top-[-15px] left-0 w-[30px] h-[30px] rounded-full flex items-center justify-center text-[10px] font-semibold transition-colors duration-300 z-20 ${item.status === 'Available Now' ? 'bg-[#6FBE45] text-white border-none' : 'bg-[#F5FAF2] border border-[#6FBE45] text-[#132A1D]'}`}>
                   0{idx + 1}
                 </div>
                 
@@ -166,7 +166,7 @@ export default function VisionPage() {
                 <div className={`inline-flex mb-4 px-2 py-1 text-[9px] font-semibold uppercase tracking-wider rounded-full ${
                   item.status === 'Available Now' 
                     ? 'bg-[#EAF5E3] text-[#6FBE45]' 
-                    : 'bg-stone-50 text-[#C9A84C] border border-[#C9A84C]/30'
+                    : 'bg-stone-50 text-[#6FBE45] border border-[#6FBE45]/30'
                 }`}>
                   {item.status}
                 </div>

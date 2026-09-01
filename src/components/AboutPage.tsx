@@ -13,10 +13,10 @@ export default function AboutPage({ navigate }: AboutPageProps) {
       <div className="spatial-dark-glass text-white rounded-[var(--radius-large)] p-8 md:p-14 text-center shadow-sm relative overflow-hidden glow-border">
         {/* Glow orb effect */}
         <div className="absolute -top-24 -left-20 w-72 h-72 rounded-full bg-[#18452E]/20 blur-3xl pointer-events-none"></div>
-        <div className="absolute -bottom-24 -right-20 w-72 h-72 rounded-full bg-[#C9A84C]/10 blur-3xl pointer-events-none"></div>
+        <div className="absolute -bottom-24 -right-20 w-72 h-72 rounded-full bg-[#6FBE45]/10 blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 space-y-4">
-          <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/40 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/30">
+          <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/40 px-3.5 py-1.5 rounded-full border border-[#6FBE45]/30">
             OUR FOUNDATIONAL MISSION
           </span>
           <h1 className="text-4xl md:text-5xl font-display font-semibold text-white leading-tight mt-2">
@@ -31,7 +31,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
       {/* CORE FOUNDER STORY STORY - 3 PARAGRAPHS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div className="space-y-6 text-#132A1D font-sans text-xs sm:text-sm leading-relaxed font-normal">
-          <span className="text-[10px] font-mono font-semibold text-[#C9A84C] tracking-widest uppercase block">
+          <span className="text-[10px] font-mono font-semibold text-[#6FBE45] tracking-widest uppercase block">
             HOW WE WERE FORMED
           </span>
           <h2 className="text-2xl font-display font-semibold text-[#18452E]">
@@ -47,11 +47,11 @@ export default function AboutPage({ navigate }: AboutPageProps) {
             Instead of building just another agency platform, Olayinka designed a strict, zero-trust <strong>Property Operating System</strong> (OS). Every parcel listed here maps to SURCON-certified survey coordinates, and every rental agreement incorporates structured landlord-tenant mediation protocols, establishing a secure environment for families to find and hold clear properties.
           </p>
           
-          <div className="p-5 spatial-glass border-l-4 border-[#C9A84C] rounded-r-2xl font-sans mt-6">
+          <div className="p-5 spatial-glass border-l-4 border-[#6FBE45] rounded-r-2xl font-sans mt-6">
             <p className="text-xs font-semibold text-[#18452E] italic leading-relaxed">
               &quot;We don&apos;t sell houses. We sell legal and structural clarity. In a market plagued with uncertainty, our absolute operating vow remains: Don&apos;t Buy Wahala.&quot;
             </p>
-            <span className="block text-[10px] font-mono text-[#C9A84C] mt-2 font-semibold">— OLAYINKA AYODELE, FOUNDER</span>
+            <span className="block text-[10px] font-mono text-[#6FBE45] mt-2 font-semibold">— OLAYINKA AYODELE, FOUNDER</span>
           </div>
         </div>
 
@@ -88,13 +88,13 @@ export default function AboutPage({ navigate }: AboutPageProps) {
       {/* WHAT MAKES US DIFFERENT BLOCKS - GOLD LEFT BORDERS */}
       <div className="space-y-6">
         <div className="text-center">
-          <span className="text-[9px] font-mono font-semibold text-[#C9A84C] tracking-widest uppercase block">OPERATING PILLARS</span>
+          <span className="text-[9px] font-mono font-semibold text-[#6FBE45] tracking-widest uppercase block">OPERATING PILLARS</span>
           <h2 className="text-2xl font-display font-semibold text-[#18452E] mt-1">What Makes Us Different</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Blocks with gold left border */}
-          <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
+          <div className="bg-white border-l-4 border-l-[#6FBE45] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <ShieldCheck className="w-6 h-6 text-[#18452E]" />
             <h3 className="font-display font-semibold text-sm text-[#18452E]">SURCON Standardized Listings</h3>
             <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
@@ -102,7 +102,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
+          <div className="bg-white border-l-4 border-l-[#6FBE45] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <Award className="w-6 h-6 text-emerald-800" />
             <h3 className="font-display font-semibold text-sm text-[#18452E]">Independent COREN Audits</h3>
             <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
@@ -110,7 +110,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
+          <div className="bg-white border-l-4 border-l-[#6FBE45] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
             <Compass className="w-6 h-6 text-teal-700" />
             <h3 className="font-display font-semibold text-sm text-[#18452E]">Caution Deposit Mediation</h3>
             <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
@@ -118,8 +118,8 @@ export default function AboutPage({ navigate }: AboutPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-l-4 border-l-[#C9A84C] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
-            <HeartHandshake className="w-6 h-6 text-[#C9A84C]" />
+          <div className="bg-white border-l-4 border-l-[#6FBE45] border border-stone-200 rounded-r-2xl p-6 space-y-2 shadow-xs spatial-glow-subtle">
+            <HeartHandshake className="w-6 h-6 text-[#6FBE45]" />
             <h3 className="font-display font-semibold text-sm text-[#18452E]">Certified Professional Panels</h3>
             <p className="text-[11px] text-stone-500 leading-relaxed font-normal">
               We only hook you up with verified industry experts. Real lawyers check property title validity, real surveyors chart the physical earth, and specialized property management companies oversee direct operations.
@@ -175,7 +175,7 @@ export default function AboutPage({ navigate }: AboutPageProps) {
       </div>
 
       {/* FOOTER FRAUD VOW */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono font-medium tracking-wide">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono font-medium tracking-wide">
         <em>Don&apos;t Buy Wahala</em> &bull; Authorized Unity Homes Corporate Office
       </p>
 

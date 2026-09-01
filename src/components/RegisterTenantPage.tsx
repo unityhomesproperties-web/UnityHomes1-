@@ -156,7 +156,7 @@ export default function RegisterTenantPage({ navigate, onLoginSuccess, routePara
           <div className="absolute top-0 right-0 p-8 opacity-10">
             <QrCode className="w-32 h-32 text-emerald-400" />
           </div>
-          <span className="text-[9px] uppercase font-mono font-semibold text-[#C9A84C] bg-white/10 px-3 py-1 rounded-full tracking-widest inline-block border border-[#C9A84C]/30">
+          <span className="text-[9px] uppercase font-mono font-semibold text-[#6FBE45] bg-white/10 px-3 py-1 rounded-full tracking-widest inline-block border border-[#6FBE45]/30">
             UNITY HOMES TENANT ONBOARDING
           </span>
           <h1 className="font-display font-semibold text-2xl tracking-tight text-white">

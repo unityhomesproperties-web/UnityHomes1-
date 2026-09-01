@@ -132,7 +132,7 @@ export default function GlobalAICommandCenter() {
     return (
       <button 
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-[#18452E] text-[#C9A84C] rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-all z-50 cursor-pointer border-2 border-[#C9A84C]"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#18452E] text-[#6FBE45] rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-all z-50 cursor-pointer border-2 border-[#6FBE45]"
         title="Open AI Command Center (Cmd+K)"
       >
         <Sparkles className="w-6 h-6 animate-pulse" />
@@ -182,7 +182,7 @@ export default function GlobalAICommandCenter() {
                   {/* Matching AI Interpretation Card */}
                   <div className="p-4 bg-white border border-stone-200 rounded-2xl space-y-1">
                     <div className="flex items-center space-x-2">
-                      <Sparkles className="w-4 h-4 text-[#C9A84C]" />
+                      <Sparkles className="w-4 h-4 text-[#6FBE45]" />
                       <h4 className="font-display font-semibold text-xs text-[#18452E] uppercase">{title}</h4>
                     </div>
                     <p className="text-xs text-stone-550 leading-relaxed pt-1">{explanation}</p>
@@ -257,7 +257,7 @@ export default function GlobalAICommandCenter() {
                 <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
                   <Bot className="w-32 h-32" />
                 </div>
-                <h3 className="text-[10px] font-mono uppercase text-[#C9A84C] font-semibold mb-2.5 tracking-widest flex items-center gap-2">
+                <h3 className="text-[10px] font-mono uppercase text-[#6FBE45] font-semibold mb-2.5 tracking-widest flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5" /> AI Daily Collection Briefing
                 </h3>
                 <ul className="space-y-2 text-xs text-stone-200">

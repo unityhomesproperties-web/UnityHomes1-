@@ -14,7 +14,7 @@ export default function WaitlistSuccessPage() {
           alt="Moving in success" 
           className="w-full h-full object-cover" 
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">

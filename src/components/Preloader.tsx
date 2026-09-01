@@ -67,7 +67,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
              {/* Animated Progress Ring */}
              <motion.circle 
                cx="50" cy="50" r="48" 
-               stroke="#C9A84C" strokeWidth="1.5" fill="none"
+               stroke="#6FBE45" strokeWidth="1.5" fill="none"
                strokeLinecap="round"
                initial={{ pathLength: 0 }}
                animate={{ pathLength: 1 }}
@@ -77,7 +77,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
            </motion.svg>
 
            {/* House Blueprint SVG */}
-           <svg viewBox="0 0 100 100" className="w-20 h-20 md:w-24 md:h-24 text-[#C9A84C]">
+           <svg viewBox="0 0 100 100" className="w-20 h-20 md:w-24 md:h-24 text-[#6FBE45]">
              {/* Roof */}
              <motion.path
                custom={0}
@@ -176,7 +176,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
           <h1 className="font-display font-semibold text-2xl md:text-3xl text-white tracking-[0.2em] md:tracking-[0.25em] uppercase">
             Unity Homes
           </h1>
-          <p className="font-mono text-[9px] md:text-[10px] text-[#C9A84C] tracking-[0.3em] uppercase mt-2">
+          <p className="font-mono text-[9px] md:text-[10px] text-[#6FBE45] tracking-[0.3em] uppercase mt-2">
             &amp; Properties
           </p>
         </motion.div>
@@ -189,7 +189,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <motion.div 
-            className="absolute top-0 left-0 bottom-0 bg-[#C9A84C]"
+            className="absolute top-0 left-0 bottom-0 bg-[#6FBE45]"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 3.5, ease: "easeInOut" }}
@@ -199,7 +199,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
 
         {/* Percentage Counter */}
         <motion.div 
-          className="font-mono text-[#C9A84C]/80 text-[10px] tracking-widest mt-3 flex items-center space-x-2"
+          className="font-mono text-[#6FBE45]/80 text-[10px] tracking-widest mt-3 flex items-center space-x-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}

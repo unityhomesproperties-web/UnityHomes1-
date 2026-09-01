@@ -141,20 +141,20 @@ export default function OperationsBriefingCard({
   return (
     <div className=" text-white rounded-[var(--radius-large)] p-6 shadow-md relative overflow-hidden space-y-4">
       {/* Subtle Background Glow */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#6FBE45]/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-emerald-700/50 pb-4 gap-3">
         <div className="flex items-center space-x-3">
-          <div className="w-9 h-9 rounded-2xl bg-[#C9A84C]/20 border border-[#C9A84C]/40 flex items-center justify-center shrink-0">
-            <Sun className="w-5 h-5 text-[#C9A84C]" />
+          <div className="w-9 h-9 rounded-2xl bg-[#6FBE45]/20 border border-[#6FBE45]/40 flex items-center justify-center shrink-0">
+            <Sun className="w-5 h-5 text-[#6FBE45]" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
               <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider">
                 7:00 AM Morning Briefing
               </h3>
-              <span className="text-[9px] font-mono bg-[#C9A84C] text-[#112A1F] font-semibold px-2 py-0.5 rounded-full uppercase">
+              <span className="text-[9px] font-mono bg-[#6FBE45] text-[#112A1F] font-semibold px-2 py-0.5 rounded-full uppercase">
                 Daily 07:00 WAT
               </span>
             </div>
@@ -178,7 +178,7 @@ export default function OperationsBriefingCard({
             onClick={toggleEmailDigest}
             className={`px-3 py-1.5 rounded-xl text-[10px] font-mono font-semibold flex items-center space-x-1.5 border transition cursor-pointer ${
               emailDigestEnabled 
-                ? 'bg-[#C9A84C] text-[#112A1F] border-[#C9A84C]' 
+                ? 'bg-[#6FBE45] text-[#112A1F] border-[#6FBE45]' 
                 : 'bg-emerald-900/40 text-emerald-300 border-emerald-700/50 hover:bg-emerald-800/50'
             }`}
             title="Toggle daily 7:00 AM email digest"
@@ -196,12 +196,12 @@ export default function OperationsBriefingCard({
             key={idx}
             className={`p-3.5 rounded-2xl border transition ${
               b.highlight 
-                ? 'bg-emerald-900/50 border-[#C9A84C]/40 text-white' 
+                ? 'bg-emerald-900/50 border-[#6FBE45]/40 text-white' 
                 : 'bg-emerald-950/40 border-emerald-800/40 text-emerald-100'
             }`}
           >
             <div className="flex items-center space-x-1.5 mb-1">
-              <span className="text-[9px] font-mono font-semibold text-[#C9A84C] tracking-wider uppercase">
+              <span className="text-[9px] font-mono font-semibold text-[#6FBE45] tracking-wider uppercase">
                 {b.category}
               </span>
             </div>
@@ -215,7 +215,7 @@ export default function OperationsBriefingCard({
       {/* Footer Note */}
       <div className="flex items-center justify-between text-[10px] text-emerald-300/70 font-mono pt-1">
         <div className="flex items-center space-x-1.5">
-          <Clock className="w-3 h-3 text-[#C9A84C]" />
+          <Clock className="w-3 h-3 text-[#6FBE45]" />
           <span>Next scheduled briefing dispatch: Tomorrow 07:00 AM WAT</span>
         </div>
         <span className="hidden sm:inline">Unity Homes Cloud Trigger Service</span>

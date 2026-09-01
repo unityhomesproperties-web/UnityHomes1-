@@ -105,7 +105,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
       {/* HEADER SECTION */}
       <div className="bg-[#18452E] text-white py-12 px-4 md:px-8 text-center border-b border-stone-200">
         <div className="max-w-4xl mx-auto space-y-3">
-          <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 border border-[#C9A84C]/25 px-3 py-1 rounded-full">
+          <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/20 border border-[#6FBE45]/25 px-3 py-1 rounded-full">
             FOUNDER&apos;S DIRECT VETTING
           </span>
           <h1 className="text-3xl md:text-4.5xl font-display font-semibold text-[#F0F8F4] tracking-tight mt-2">
@@ -118,7 +118,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
       </div>
 
       {/* GOLD DISCLAIMER BAR */}
-      <div className="bg-[#C9A84C] text-white py-3.5 px-4 md:px-8 shadow-inner">
+      <div className="bg-[#6FBE45] text-white py-3.5 px-4 md:px-8 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-start md:items-center space-x-2">
           <Info className="w-5 h-5 text-white shrink-0" />
           <p className="text-[11px] md:text-xs font-sans font-medium text-white">
@@ -137,10 +137,10 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
               {/* Background Image & Overlay */}
               <div className="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80" alt="Background" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-transparent" />
               </div>
               <div className="relative z-10 flex items-center space-x-3.5 text-center sm:text-left">
-                <div className="w-11 h-11 bg-[#18452E] text-[#C9A84C] rounded-xl flex items-center justify-center shrink-0 hidden sm:flex border border-[#C9A84C]/30">
+                <div className="w-11 h-11 bg-[#18452E] text-[#6FBE45] rounded-xl flex items-center justify-center shrink-0 hidden sm:flex border border-[#6FBE45]/30">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
@@ -154,7 +154,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
               </div>
               <button
                 onClick={() => navigate('/connect-with-a-professional')}
-                className="relative z-10 px-6 py-3 bg-[#C9A84C] hover:bg-[#b5953e] text-white font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0"
+                className="relative z-10 px-6 py-3 bg-[#6FBE45] hover:bg-[#b5953e] text-white font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer flex items-center space-x-2 shrink-0"
               >
                 <span>View Packages</span>
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -182,7 +182,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
               {/* State select dropdown */}
               <div className="flex items-center space-x-2 w-auto md:w-56">
-                <MapPin className="w-4 h-4 text-[#C9A84C] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#6FBE45] shrink-0" />
                 <select
                   value={stateFilter}
                   onChange={(e) => setStateFilter(e.target.value)}
@@ -220,7 +220,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                     {/* Header Row */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex flex-col items-center shrink-0">
-                        <div className="relative w-16 h-16 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-xl border-2 border-[#C9A84C] shadow-xs shrink-0">
+                        <div className="relative w-16 h-16 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-xl border-2 border-[#6FBE45] shadow-xs shrink-0">
                           <span>{getInitials(prof.name)}</span>
                           <div className="absolute -bottom-1 -right-1 bg-[#16A34A] text-white rounded-full p-0.5 border-2 border-white shadow-xs">
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5">
@@ -233,12 +233,12 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                         </span>
                       </div>
                       <div className="flex flex-col items-end">
-                        <span className="px-2 py-0.5 rounded bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-mono font-semibold uppercase tracking-wider">
+                        <span className="px-2 py-0.5 rounded bg-[#6FBE45]/10 text-[#6FBE45] text-[10px] font-mono font-semibold uppercase tracking-wider">
                           {prof.category}
                         </span>
                         {prof.isFoundingMember && (
-                          <span className="flex items-center text-[9px] font-mono font-semibold text-[#C9A84C] mt-1.5 uppercase tracking-wide">
-                            <Star className="w-3 h-3 text-[#C9A84C] fill-[#C9A84C] mr-0.5" />
+                          <span className="flex items-center text-[9px] font-mono font-semibold text-[#6FBE45] mt-1.5 uppercase tracking-wide">
+                            <Star className="w-3 h-3 text-[#6FBE45] fill-[#6FBE45] mr-0.5" />
                             Founding Member
                           </span>
                         )}
@@ -297,7 +297,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
                   <div className="flex items-center space-x-3">
                     <div className="flex flex-col items-center shrink-0">
-                      <div className="relative w-12 h-12 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-base border-2 border-[#C9A84C] shadow-xs shrink-0">
+                      <div className="relative w-12 h-12 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-base border-2 border-[#6FBE45] shadow-xs shrink-0">
                         <span>{getInitials(choicePromptProf.name)}</span>
                         <div className="absolute -bottom-0.5 -right-0.5 bg-[#16A34A] text-white rounded-full p-0.5 border border-white shadow-xs">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-2 h-2">
@@ -310,7 +310,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       </span>
                     </div>
                     <div>
-                      <span className="text-[10px] font-mono font-semibold text-[#C9A84C] uppercase">
+                      <span className="text-[10px] font-mono font-semibold text-[#6FBE45] uppercase">
                         {choicePromptProf.category}
                       </span>
                       <h4 className="font-display font-semibold text-white text-base">
@@ -351,10 +351,10 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                       className="w-full py-3.5 bg-[#18452E] hover:bg-[#18452E] text-white font-semibold text-xs rounded-2xl transition flex items-center justify-between px-4 cursor-pointer shadow-md"
                     >
                       <div className="flex items-center space-x-2">
-                        <PlusCircle className="w-4 h-4 text-[#C9A84C]" />
+                        <PlusCircle className="w-4 h-4 text-[#6FBE45]" />
                         <span>Add to a Bundle</span>
                       </div>
-                      <span className="font-mono text-[#C9A84C] text-[10px] bg-[#18452E] px-2 py-0.5 rounded">
+                      <span className="font-mono text-[#6FBE45] text-[10px] bg-[#18452E] px-2 py-0.5 rounded">
                         Save up to NGN 45,000
                       </span>
                     </button>
@@ -382,7 +382,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
               <div className="md:col-span-4 flex flex-col items-center text-center">
                 {/* Initial circle with verification check mark */}
                 <div className="flex flex-col items-center shrink-0 mb-3">
-                  <div className="relative w-28 h-28 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-3xl border-3 border-[#C9A84C] shadow-md shrink-0">
+                  <div className="relative w-28 h-28 rounded-full bg-[#18452E] text-white flex items-center justify-center font-display font-semibold text-3xl border-3 border-[#6FBE45] shadow-md shrink-0">
                     <span>{getInitials(selectedProf.name)}</span>
                     <div className="absolute bottom-0 right-0 bg-[#16A34A] text-white rounded-full p-1.5 border-2 border-white shadow-xs">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -398,13 +398,13 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                 <h2 className="font-display font-semibold text-xl text-white leading-tight mt-1">
                   {selectedProf.name}
                 </h2>
-                <span className="px-3 py-1 bg-[#C9A84C]/15 text-[#C9A84C] font-mono font-semibold text-xs rounded-full uppercase tracking-wider mt-2 block">
+                <span className="px-3 py-1 bg-[#6FBE45]/15 text-[#6FBE45] font-mono font-semibold text-xs rounded-full uppercase tracking-wider mt-2 block">
                   {selectedProf.category}
                 </span>
 
                 {selectedProf.isFoundingMember && (
-                  <span className="flex items-center text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-widest mt-3 bg-amber-50 rounded border border-amber-200 p-1.5">
-                    <Star className="w-3.5 h-3.5 text-[#C9A84C] fill-[#C9A84C] mr-1" />
+                  <span className="flex items-center text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-widest mt-3 bg-amber-50 rounded border border-amber-200 p-1.5">
+                    <Star className="w-3.5 h-3.5 text-[#6FBE45] fill-[#6FBE45] mr-1" />
                     Founding Star Counselor
                   </span>
                 )}
@@ -497,8 +497,8 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
 
                 {/* CONNECTION BILLING FORM - TRIGGERED IF TERMS AGREED */}
                 {termsAgreed && (
-                  <div className="bg-stone-50 border border-dashed border-[#C9A84C] rounded-xl p-5 mt-6">
-                    <span className="block text-[10px] font-mono font-semibold text-[#C9A84C] uppercase tracking-wider mb-3">
+                  <div className="bg-stone-50 border border-dashed border-[#6FBE45] rounded-xl p-5 mt-6">
+                    <span className="block text-[10px] font-mono font-semibold text-[#6FBE45] uppercase tracking-wider mb-3">
                       ✦ Secured Connection Checkout (Paystack Channel)
                     </span>
 
@@ -592,7 +592,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
                         >
                           {isPaying ? (
                             <>
-                              <Loader2 className="w-4 h-4 animate-spin text-[#C9A84C]" />
+                              <Loader2 className="w-4 h-4 animate-spin text-[#6FBE45]" />
                               <span>Charging Card via Paystack...</span>
                             </>
                           ) : (

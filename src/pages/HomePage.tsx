@@ -177,7 +177,7 @@ export default function HomePage() {
                 }`}
               />
               {/* Subtle tint instead of dark overlay */}
-              <div className="absolute inset-0 bg-[var(--color-brand-deep)]/5 mix-blend-multiply"></div>
+              
             </div>
           </div>
         ))}

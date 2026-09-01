@@ -1230,7 +1230,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   triggerSuccess('Demo portfolio loaded! Mrs. Adunola Fashola 2 buildings, 7 units, and tenant histories active.');
                   window.location.reload();
                 }}
-                className="px-3 py-1.5 bg-[#C9A84C] hover:bg-[#b8973b] text-white font-mono text-[11px] font-semibold rounded-xl cursor-pointer transition shadow-xs flex items-center gap-1"
+                className="px-3 py-1.5 bg-[#6FBE45] hover:bg-[#b8973b] text-white font-mono text-[11px] font-semibold rounded-xl cursor-pointer transition shadow-xs flex items-center gap-1"
                 title="Reload demo portfolio with 2 buildings and 7 units"
               >
                 <Star className="w-3.5 h-3.5" />
@@ -1257,10 +1257,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
           {/* DOMINANT PORTFOLIO BALANCE CARD */}
           <div className="bg-[#18452E] text-white p-6 md:p-8 rounded-[var(--radius-large)] space-y-4 shadow-sm border border-white/10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A84C]/5 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#6FBE45]/5 rounded-bl-full"></div>
             <div>
               {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-[#6FBE45] font-semibold">
                 PORTFOLIO BALANCE
               </span>
               <h2 className="text-3xl md:text-5xl font-display font-semibold text-white mt-1">
@@ -1275,10 +1275,10 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* METRICS GRID */}
             <div className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto pb-2 pt-4 border-t border-white/10 scrollbar-thin">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
-                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-semibold">Occupancy Rate</span>
+                <span className="text-[9px] uppercase font-mono text-[#6FBE45] block font-semibold">Occupancy Rate</span>
                 <span className="text-xl font-display font-semibold mt-1 block">{occupancyRate}% Occupied</span>
                 <div className="w-full bg-white/10 h-1.5 mt-2 rounded-full overflow-hidden">
-                  <div className="bg-[#C9A84C] h-full" style={{ width: `${occupancyRate}%` }}></div>
+                  <div className="bg-[#6FBE45] h-full" style={{ width: `${occupancyRate}%` }}></div>
                 </div>
               </div>
 
@@ -1286,7 +1286,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 <span className="text-[9px] uppercase font-mono text-stone-300 block">Total Payments Received</span>
                 <span className="text-xl font-display font-semibold mt-1 block">₦{totalBalance.toLocaleString()}</span>
                 {/* DO NOT use clearing, settlement, or escrow language here. This platform never holds or clears funds. */}
-                <span className="text-[9px] text-[#C9A84C] font-mono leading-none">&bull; Verified and Confirmed</span>
+                <span className="text-[9px] text-[#6FBE45] font-mono leading-none">&bull; Verified and Confirmed</span>
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
@@ -1361,7 +1361,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
+                    className="w-full py-3 bg-[#6FBE45] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
@@ -1637,7 +1637,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <p className="text-xs text-#6B7280 leading-relaxed font-normal">
                     {mockNotification.content}
                   </p>
-                  <div className="text-[9px] font-mono text-[#C9A84C] font-semibold bg-stone-50 p-2 rounded-xl border border-stone-200 uppercase">
+                  <div className="text-[9px] font-mono text-[#6FBE45] font-semibold bg-stone-50 p-2 rounded-xl border border-stone-200 uppercase">
                     Delivered via verified channels: {mockNotification.deliveredVia}
                   </div>
                 </div>
@@ -1825,8 +1825,8 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
       {/* PLATFORM ANNOUNCEMENTS */}
       {activeTab === 'Overview' && announcements.length > 0 && (
         <div className="bg-[#18452E] border border-[#0E2F1F]/80 rounded-[var(--radius-large)] p-6 shadow-sm relative overflow-hidden animate-fade-in mb-8">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/10 rounded-bl-full"></div>
-          <h3 className="font-display font-semibold text-sm text-[#C9A84C] uppercase mb-4 tracking-widest flex items-center">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#6FBE45]/10 rounded-bl-full"></div>
+          <h3 className="font-display font-semibold text-sm text-[#6FBE45] uppercase mb-4 tracking-widest flex items-center">
             <Bell className="w-4 h-4 mr-2" /> Platform Announcements
           </h3>
           <div className="space-y-4 relative z-10">
@@ -1840,7 +1840,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 </button>
                 <h4 className="text-white font-semibold text-sm mb-1">{ann.title}</h4>
                 <p className="text-stone-300 text-xs font-normal leading-relaxed pr-8">{ann.body}</p>
-                <span className="text-[10px] text-[#C9A84C] font-mono mt-3 block">{ann.date}</span>
+                <span className="text-[10px] text-[#6FBE45] font-mono mt-3 block">{ann.date}</span>
               </div>
             ))}
           </div>
@@ -1879,7 +1879,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <div className="flex justify-between items-center flex-wrap gap-4">
                     <div>
                       <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase flex items-center gap-2">
-                        <BuildingIcon className="w-4 h-4 text-[#C9A84C]" /> My Registered Buildings
+                        <BuildingIcon className="w-4 h-4 text-[#6FBE45]" /> My Registered Buildings
                       </h3>
                       <p className="text-xs text-#6B7280 font-normal mt-0.5">
                         Manage multi-unit property assets, track title verification, and launch tenant onboarding invitations.
@@ -1915,7 +1915,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                               className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                             />
                             <div className="absolute top-3 left-3 bg-#132A1D/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold uppercase text-white tracking-widest flex items-center gap-1">
-                              <BuildingIcon className="w-3 h-3 text-[#C9A84C]" />
+                              <BuildingIcon className="w-3 h-3 text-[#6FBE45]" />
                               {bld.blockLabel || 'Block A'}
                             </div>
 
@@ -2025,7 +2025,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                             <div className="absolute bottom-4 left-6 right-6 text-white flex justify-between items-end flex-wrap gap-4">
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="bg-[#C9A84C] text-stone-950 text-[9px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md tracking-wider">
+                                  <span className="bg-[#6FBE45] text-stone-950 text-[9px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md tracking-wider">
                                     {currentBld?.blockLabel || 'Block A'}
                                   </span>
                                   <span className="bg-amber-500/90 text-stone-950 text-[9px] font-mono font-semibold uppercase px-2 py-0.5 rounded-md tracking-wider flex items-center gap-1">
@@ -2744,9 +2744,9 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                       setReassignConfirmation(false);
                       setShowReassignModal(true);
                     }}
-                    className="px-3 py-2 border-2 border-[#C9A84C] text-[#8C6D21] hover:bg-amber-50 font-semibold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
+                    className="px-3 py-2 border-2 border-[#6FBE45] text-[#8C6D21] hover:bg-amber-50 font-semibold rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5"
                   >
-                    <ArrowLeft className="w-3.5 h-3.5 rotate-180 text-[#C9A84C]" />
+                    <ArrowLeft className="w-3.5 h-3.5 rotate-180 text-[#6FBE45]" />
                     <span>Reassign to Different Unit</span>
                   </button>
                   
@@ -2877,7 +2877,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
 
       {/* MANDATORY FOOTER CREED */}
       <div className="text-center pt-8 border-t border-stone-200/50">
-        <span className="text-[10px] text-[#C9A84C] font-mono tracking-widest uppercase font-semibold">
+        <span className="text-[10px] text-[#6FBE45] font-mono tracking-widest uppercase font-semibold">
           OUR OPERATING CREED REQUIRED ON ALL ASSETS &bull; DON&apos;T BUY WAHALA
         </span>
       </div>
@@ -3007,7 +3007,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                 PROPERTY REGISTRATION
               </span>
               <h3 className="font-display font-semibold text-#132A1D text-xl mt-2 flex items-center gap-2">
-                <BuildingIcon className="w-5 h-5 text-[#C9A84C]" /> Register New Building
+                <BuildingIcon className="w-5 h-5 text-[#6FBE45]" /> Register New Building
               </h3>
               <p className="text-#6B7280 text-xs mt-1">
                 Buildings represent first-class physical entities containing individual rentable units.
@@ -3518,7 +3518,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* Unique Code Box */}
             <div className="bg-#132A1D p-4 rounded-2xl text-center space-y-1 relative">
               <span className="text-[9px] uppercase font-mono text-stone-400 block tracking-widest">UNIQUE 8-CHAR INVITATION CODE</span>
-              <strong className="text-[#C9A84C] font-mono text-2xl tracking-widest block font-semibold">
+              <strong className="text-[#6FBE45] font-mono text-2xl tracking-widest block font-semibold">
                 {generatedInvitation.invitation_code}
               </strong>
               <p className="text-[10px] text-stone-400 font-mono pt-1">
@@ -3553,7 +3553,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             {/* QR Code Visual & Actions */}
             <div className="flex justify-center items-center p-3 bg-stone-50 rounded-2xl border border-stone-200/80 gap-4">
               <div className="w-20 h-20 bg-#132A1D rounded-xl flex items-center justify-center p-2">
-                <QrCode className="w-16 h-16 text-[#C9A84C]" />
+                <QrCode className="w-16 h-16 text-[#6FBE45]" />
               </div>
               <div className="text-left text-xs space-y-1">
                 <span className="font-semibold text-#132A1D block font-mono text-[11px]">QR CODE SCAN</span>
@@ -3626,7 +3626,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
             </button>
 
             <div className="border-b border-stone-200 pb-3">
-              <span className="text-[9px] uppercase font-mono font-semibold text-[#C9A84C] bg-amber-50 px-2 py-0.5 rounded-md tracking-widest">
+              <span className="text-[9px] uppercase font-mono font-semibold text-[#6FBE45] bg-amber-50 px-2 py-0.5 rounded-md tracking-widest">
                 UNIT REASSIGNMENT FLOW
               </span>
               <h3 className="font-display font-semibold text-#132A1D text-xl mt-2">
@@ -3646,7 +3646,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <select
                     value={reassignTargetUnitId}
                     onChange={(e) => setReassignTargetUnitId(e.target.value)}
-                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none focus:border-[#C9A84C] font-medium"
+                    className="w-full p-3 bg-stone-50 border border-stone-200 rounded-xl text-xs outline-none focus:border-[#6FBE45] font-medium"
                   >
                     <option value="">-- Select Vacant Unit --</option>
 
@@ -3685,7 +3685,7 @@ ID           PROPERTY ASSIGNED              UNIT       TENANT           AMOUNT (
                   <button
                     disabled={!reassignTargetUnitId}
                     onClick={() => setReassignConfirmation(true)}
-                    className="flex-1 py-3 bg-[#C9A84C] hover:bg-[#b8973b] disabled:opacity-50 text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
+                    className="flex-1 py-3 bg-[#6FBE45] hover:bg-[#b8973b] disabled:opacity-50 text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-md"
                   >
                     Proceed to Confirmation
                   </button>

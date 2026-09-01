@@ -35,7 +35,7 @@ export default function MissionPage() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="/images/our_mission.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           

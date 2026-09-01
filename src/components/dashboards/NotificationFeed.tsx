@@ -241,7 +241,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
             {liveNotifications.some(n => !(n as any).read) && (
               <button 
                 onClick={handleMarkAllAsRead} 
-                className="text-[9px] font-semibold uppercase bg-[#C9A84C] text-[#18452E] px-2 py-1 rounded hover:bg-[#C9A84C]/90 transition"
+                className="text-[9px] font-semibold uppercase bg-[#6FBE45] text-[#18452E] px-2 py-1 rounded hover:bg-[#6FBE45]/90 transition"
               >
                 Mark All Read
               </button>
@@ -260,7 +260,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                 key={tab}
                 onClick={() => setActiveFilter(tab)}
                 className={`px-3 py-1.5 rounded-full text-[10px] font-semibold uppercase transition-colors ${
-                  activeFilter === tab ? 'bg-[#C9A84C] text-[#18452E]' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
+                  activeFilter === tab ? 'bg-[#6FBE45] text-[#18452E]' : 'bg-stone-50 text-#6B7280 hover:bg-stone-200'
                 }`}
               >
                 {tab}
@@ -278,7 +278,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
             sortedNotifications.map((notif) => (
               <div 
                 key={notif.id} 
-                className={`bg-white border ${pinnedIds.includes(notif.id) ? 'border-[#C9A84C]' : 'border-stone-200'} p-4 rounded-2xl flex items-start space-x-3 shadow-sm relative ${notif.unread ? 'bg-amber-50/20' : ''}`}
+                className={`bg-white border ${pinnedIds.includes(notif.id) ? 'border-[#6FBE45]' : 'border-stone-200'} p-4 rounded-2xl flex items-start space-x-3 shadow-sm relative ${notif.unread ? 'bg-amber-50/20' : ''}`}
               >
                 <div className={`p-2 rounded-xl shrink-0 ${notif.bg}`}>
                   <notif.icon className={`w-5 h-5 ${notif.color}`} />
@@ -287,7 +287,7 @@ export default function NotificationFeed({ onClose, role, targetId }: Notificati
                   <div className="flex justify-between items-start">
                     <div className="flex items-center space-x-1.5">
                       <h4 className="text-xs font-semibold text-#132A1D flex items-center">
-                        {pinnedIds.includes(notif.id) && <Pin className="w-3 h-3 mr-1 text-[#C9A84C]" />}
+                        {pinnedIds.includes(notif.id) && <Pin className="w-3 h-3 mr-1 text-[#6FBE45]" />}
                         {notif.title}
                       </h4>
                       {notif.unread && (

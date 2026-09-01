@@ -76,7 +76,7 @@ export default function CollapsiblePromoCodeSection({
           onClick={() => setIsExpanded(true)}
           className={`min-h-[44px] py-2 px-3 flex items-center justify-center space-x-1.5 text-xs font-mono font-semibold cursor-pointer transition rounded-xl ${
             darkTheme
-              ? 'text-[#C9A84C] hover:text-amber-300 bg-emerald-950/40 hover:bg-emerald-900/50 border border-[#C9A84C]/30'
+              ? 'text-[#6FBE45] hover:text-amber-300 bg-emerald-950/40 hover:bg-emerald-900/50 border border-[#6FBE45]/30'
               : 'text-[#18452E] hover:text-[#18452E] bg-stone-50/80 hover:bg-stone-200/80 border border-stone-200'
           }`}
         >
@@ -92,7 +92,7 @@ export default function CollapsiblePromoCodeSection({
         }`}>
           <div className="flex items-center justify-between mb-2">
             <span className={`text-[10px] font-mono font-semibold uppercase tracking-wider flex items-center space-x-1 ${
-              darkTheme ? 'text-[#C9A84C]' : 'text-[#18452E]'
+              darkTheme ? 'text-[#6FBE45]' : 'text-[#18452E]'
             }`}>
               <Tag className="w-3 h-3" />
               <span>Have a promo code?</span>
@@ -167,7 +167,7 @@ export default function CollapsiblePromoCodeSection({
                   }}
                   className={`flex-1 h-11 px-3.5 text-xs font-mono uppercase rounded-xl border-2 transition focus:outline-none ${
                     darkTheme
-                      ? 'bg-emerald-900/40 border-emerald-600 text-white placeholder-emerald-300/50 focus:border-[#C9A84C]'
+                      ? 'bg-emerald-900/40 border-emerald-600 text-white placeholder-emerald-300/50 focus:border-[#6FBE45]'
                       : 'bg-white border-emerald-600 text-[#18452E] placeholder-stone-400 focus:border-[#0E2F1F]'
                   }`}
                 />

@@ -50,7 +50,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             className="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-[10s] ease-out hover:scale-100"
           />
           {/* Ambient Golden light overlay */}
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#6FBE45]/5 rounded-full blur-3xl pointer-events-none"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -60,7 +60,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             {/* Pill Badge */}
             <div className="self-start flex items-center space-x-2 bg-[#18452E]/20 border border-[#18452E]/40 px-4 py-2 rounded-full backdrop-blur-md shadow-xs">
               <span className="w-2 h-2 bg-[#16A34A] rounded-full animate-ping"></span>
-              <span className="text-[11px] font-mono tracking-widest font-semibold text-[#C9A84C] uppercase">
+              <span className="text-[11px] font-mono tracking-widest font-semibold text-[#6FBE45] uppercase">
                 Nigeria&apos;s Premium Property Operating System
               </span>
             </div>
@@ -68,9 +68,9 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             {/* Headline */}
             <h1 className="font-display text-4xl sm:text-5.5xl md:text-7xl font-semibold tracking-tight leading-[1.05] text-white">
               <span className="block">Acquire &amp; Lease Vetted Property</span>
-              <span className="block text-[#C9A84C] mt-2 relative inline-block">
+              <span className="block text-[#6FBE45] mt-2 relative inline-block">
                 Without Fear of Fraud.
-                <span className="absolute left-0 bottom-1 w-full h-[3px] bg-[#C9A84C]/30 rounded"></span>
+                <span className="absolute left-0 bottom-1 w-full h-[3px] bg-[#6FBE45]/30 rounded"></span>
               </span>
             </h1>
 
@@ -113,7 +113,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
               className="bg-white/95 backdrop-blur-md rounded-2xl shadow-sm border border-[#E2E8E4]/60 overflow-hidden p-6 md:p-7 text-slate-800 relative"
             >
               {/* Premium golden tag accent */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#C9A84C]"></div>
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#6FBE45]"></div>
 
               {/* Five Tabs */}
               <div className="flex space-x-1 border-b border-stone-100 pb-3.5 mb-5 mt-1 overflow-x-auto scrollbar-hide">
@@ -136,7 +136,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                   onClick={(e) => e.preventDefault()}
                 >
                   Mortgage
-                  <span className="absolute -top-2 -right-2 bg-[#C9A84C] text-[8px] text-white px-1.5 py-0.5 rounded font-semibold shadow-sm whitespace-nowrap">
+                  <span className="absolute -top-2 -right-2 bg-[#6FBE45] text-[8px] text-white px-1.5 py-0.5 rounded font-semibold shadow-sm whitespace-nowrap">
                     Soon
                   </span>
                 </button>
@@ -210,7 +210,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               18,200+
             </span>
-            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#6FBE45] mt-1">
               Nigerians Protected
             </span>
           </div>
@@ -218,7 +218,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               150+
             </span>
-            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#6FBE45] mt-1">
               Verified Professionals
             </span>
           </div>
@@ -226,7 +226,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               1,240+
             </span>
-            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#6FBE45] mt-1">
               Properties Managed
             </span>
           </div>
@@ -234,7 +234,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <span className="block text-3xl sm:text-4xl font-display font-semibold text-[#18452E]">
               8+
             </span>
-            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#C9A84C] mt-1">
+            <span className="block text-xs font-mono font-semibold uppercase tracking-widest text-[#6FBE45] mt-1">
               States Active
             </span>
           </div>
@@ -244,7 +244,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       {/* SERVICES GRID */}
       <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full">
+          <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#6FBE45]/10 px-3 py-1.5 rounded-full">
             UNITY PLATFORM UTILITIES
           </span>
           <h2 className="text-3xl md:text-4.5xl font-display font-semibold text-[#18452E] mt-4">
@@ -339,14 +339,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 4. Payment Plan Houses (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#6FBE45] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
+                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#6FBE45]/20 transition-colors">
                   <Shield className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#6FBE45]/15 text-[#6FBE45] uppercase border border-[#6FBE45]/30">
                   Coming Soon
                 </span>
               </div>
@@ -355,7 +355,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 Structured legal contracts for buying property increment-by-increment directly from vetted developers with no mid-way price changes.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#6FBE45] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -363,14 +363,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 5. Mortgage Ready Properties (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#6FBE45] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
+                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#6FBE45]/20 transition-colors">
                   <Star className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#6FBE45]/15 text-[#6FBE45] uppercase border border-[#6FBE45]/30">
                   Coming Soon
                 </span>
               </div>
@@ -379,7 +379,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 Inspected, fully perfected governor-consent assets with verified ownership guarantees waiting to slot seamlessly into primary lending banks.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#6FBE45] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -387,14 +387,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           {/* 6. Buy & Build Land (Coming Soon) */}
           <div 
             onClick={() => navigate('/coming-soon')}
-            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:shadow-sm transition-all group"
+            className="bg-stone-50/70 rounded-2xl border border-stone-200 p-7 flex flex-col justify-between relative overflow-hidden cursor-pointer hover:border-[#6FBE45] hover:shadow-sm transition-all group"
           >
             <div>
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#C9A84C]/20 transition-colors">
+                <div className="p-3 bg-stone-50 text-[#18452E] rounded-xl group-hover:bg-[#6FBE45]/20 transition-colors">
                   <Award className="w-5 h-5" />
                 </div>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#C9A84C]/15 text-[#C9A84C] uppercase border border-[#C9A84C]/30">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-mono font-semibold tracking-widest bg-[#6FBE45]/15 text-[#6FBE45] uppercase border border-[#6FBE45]/30">
                   Coming Soon
                 </span>
               </div>
@@ -403,7 +403,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 Red-line free land coordinates mapped by registered surveyors, backed by absolute security of title, and ready for swift transfer.
               </p>
             </div>
-            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#C9A84C] group-hover:translate-x-1 transition-transform">
+            <div className="mt-6 pt-2 flex items-center justify-between text-xs font-semibold text-[#6FBE45] group-hover:translate-x-1 transition-transform">
               <span className="uppercase tracking-wider">Preview Pipeline &rarr;</span>
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
         <div className="max-w-7xl mx-auto">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
+            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45]">
               HOW IT OPERATES
             </span>
             <h2 className="text-2xl sm:text-3.5xl font-display font-semibold text-[#18452E] mt-1">
@@ -446,7 +446,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 1
               </div>
               <div>
@@ -458,7 +458,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 2
               </div>
               <div>
@@ -470,7 +470,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 3
               </div>
               <div>
@@ -482,7 +482,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             </div>
 
             <div className="flex items-start space-x-3.5 bg-white p-5 rounded-xl border border-stone-200/70">
-              <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-sm flex items-center justify-center shrink-0">
                 4
               </div>
               <div>
@@ -502,7 +502,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
           <div>
-            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
+            <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45]">
               VERIFIED PORTFOLIO
             </span>
             <h2 className="text-3xl font-display font-semibold text-[#18452E] mt-1">
@@ -568,7 +568,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                     </div>
                     <h3 className="text-base font-semibold text-[#18452E] mt-2 line-clamp-1 group-hover:text-[#18452E] transition-colors duration-300">{prop.title}</h3>
                     <div className="flex items-center text-xs text-stone-500 mt-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#C9A84C] mr-1 shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-[#6FBE45] mr-1 shrink-0" />
                       <span className="line-clamp-1 font-semibold">{prop.location}</span>
                     </div>
                     <p className="text-xs text-#6B7280 mt-3 line-clamp-2 leading-relaxed font-normal">
@@ -606,7 +606,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
             <div>
-              <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C]">
+              <span className="text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45]">
                 HIRE SECURELY
               </span>
               <h2 className="text-2xl sm:text-3.5xl font-display font-semibold text-[#18452E] mt-1">
@@ -626,7 +626,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col items-start">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center p-3">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#C9A84C]" stroke="currentColor" strokeWidth="2">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#6FBE45]" stroke="currentColor" strokeWidth="2">
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M12 18V6" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M8 10C8 10 9 8 12 8C15 8 16 10 16 10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -635,7 +635,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 </div>
                 <div>
                   <h4 className="font-display font-semibold text-base text-[#18452E]">Real Estate Lawyers</h4>
-                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">Supreme Court Registry</span>
+                  <span className="font-mono text-[9px] font-semibold text-[#6FBE45] uppercase tracking-wider">Supreme Court Registry</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -649,7 +649,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col items-start">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center p-3">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#C9A84C]" stroke="currentColor" strokeWidth="2">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#6FBE45]" stroke="currentColor" strokeWidth="2">
                     <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" strokeLinecap="round" strokeLinejoin="round"/>
                     <line x1="12" y1="22" x2="12" y2="12" strokeLinecap="round" strokeLinejoin="round"/>
                     <line x1="12" y1="12" x2="22" y2="8.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -658,7 +658,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 </div>
                 <div>
                   <h4 className="font-display font-semibold text-base text-[#18452E]">Licensed Surveyors</h4>
-                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">SURCON Accredited Only</span>
+                  <span className="font-mono text-[9px] font-semibold text-[#6FBE45] uppercase tracking-wider">SURCON Accredited Only</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -672,7 +672,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
             <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col items-start">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-emerald-50 text-[#18452E] rounded-full flex items-center justify-center p-3">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#C9A84C]" stroke="currentColor" strokeWidth="2">
+                  <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#6FBE45]" stroke="currentColor" strokeWidth="2">
                     <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <line x1="9" y1="3" x2="9" y2="21" strokeLinecap="round" strokeLinejoin="round"/>
                     <line x1="15" y1="3" x2="15" y2="21" strokeLinecap="round" strokeLinejoin="round"/>
@@ -682,7 +682,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
                 </div>
                 <div>
                   <h4 className="font-display font-semibold text-base text-[#18452E]">Structural Engineers</h4>
-                  <span className="font-mono text-[9px] font-semibold text-[#C9A84C] uppercase tracking-wider">COREN Registered &amp; Insured</span>
+                  <span className="font-mono text-[9px] font-semibold text-[#6FBE45] uppercase tracking-wider">COREN Registered &amp; Insured</span>
                 </div>
               </div>
               <p className="text-xs text-#6B7280 leading-relaxed mb-4">
@@ -701,14 +701,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       {/* FOUNDER STORY STRIP */}
       <section className="py-16 bg-[#18452E] text-white px-4 md:px-8 w-full">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center space-y-6">
-          <span className="font-serif text-5xl md:text-6xl text-[#C9A84C] font-semibold select-none leading-none h-6 block">
+          <span className="font-serif text-5xl md:text-6xl text-[#6FBE45] font-semibold select-none leading-none h-6 block">
             “
           </span>
           <p className="font-serif text-base sm:text-lg md:text-xl italic font-normal leading-relaxed text-stone-100 max-w-3xl">
             Years ago, as a diasporan trying to navigate the complex real estate market in Epe, I was taken to an &apos;Eleran Igbe&apos; land location where weeds were high, and several false claims were made. I lost hard-earned savings. That agonizing moment became the seed of Unity Homes. We founded this platform to ensure that no Nigerian, at home or abroad, ever buys &apos;wahala&apos; or falls prey to fraudulent agents again.
           </p>
           <div className="pt-2">
-            <span className="block font-display font-semibold text-base text-[#C9A84C]">
+            <span className="block font-display font-semibold text-base text-[#6FBE45]">
               Olayinka Ayodele
             </span>
             <span className="block text-[11px] font-mono uppercase tracking-widest text-[#E2E8E4]/60 mt-0.5">
@@ -722,10 +722,10 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="py-16 bg-[#18452E] text-white px-4 md:px-8 w-full border-t border-stone-200/20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl">
-            <span className="text-xs font-mono font-semibold tracking-widest text-[#C9A84C] uppercase">
+            <span className="text-xs font-mono font-semibold tracking-widest text-[#6FBE45] uppercase">
               ANTI-FRAUD AWARENESS SERIES
             </span>
-            <h2 className="text-5xl md:text-6xl font-display font-semibold text-[#C9A84C] mt-1 leading-none">
+            <h2 className="text-5xl md:text-6xl font-display font-semibold text-[#6FBE45] mt-1 leading-none">
               Don&apos;t Buy Wahala
             </h2>
             <p className="text-sm text-stone-100 mt-4 leading-relaxed font-normal">
@@ -735,14 +735,14 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
           <div className="flex flex-col gap-4">
             <button 
               onClick={() => navigate('/performance-demo')}
-              className="px-6 py-4 bg-[#C9A84C] text-[#18452E] hover:bg-[#B39340] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
+              className="px-6 py-4 bg-[#6FBE45] text-[#18452E] hover:bg-[#B39340] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
             >
               <BarChart2 className="w-5 h-5 shrink-0" />
               <span>Enter Demo Performance Center</span>
             </button>
             <button 
               onClick={() => navigate('/demo')}
-              className="px-6 py-4 border-2 border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#18452E] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
+              className="px-6 py-4 border-2 border-[#6FBE45] text-[#6FBE45] hover:bg-[#6FBE45] hover:text-[#18452E] rounded-xl font-semibold flex items-center space-x-3 transition duration-200 cursor-pointer text-sm shadow-md"
             >
               <Play className="w-4 h-4 text-rose-500 fill-rose-500 shrink-0" />
               <span>Watch the Awareness Series (Free)</span>
@@ -753,7 +753,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
 
       {/* PARTNER NETWORK */}
       <section className="py-16 bg-white px-4 md:px-8 w-full">
-        <div className="max-w-6xl mx-auto bg-[#F0F8F4] rounded-2xl border-l-[6px] border-[#C9A84C] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="max-w-6xl mx-auto bg-[#F0F8F4] rounded-2xl border-l-[6px] border-[#6FBE45] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="max-w-xl">
             <span className="text-[10px] font-mono tracking-widest font-semibold text-[#18452E] uppercase">
               UNITY PARTNER REFERRALS
@@ -781,7 +781,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center space-y-6">
           <h2 className="text-3xl md:text-4.5xl font-display font-semibold tracking-tight leading-none max-w-2xl text-white">

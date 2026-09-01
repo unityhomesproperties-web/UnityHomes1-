@@ -1248,8 +1248,8 @@ export default function ShortletDashboard({
             </div>
 
             <div className="spatial-glass border p-5 rounded-2xl space-y-1 bg-white">
-              <span className="text-[10px] text-[#C9A84C] block font-mono font-semibold uppercase">MY EARNED COMMISSIONS</span>
-              <span className="text-2xl font-semibold text-[#C9A84C] block">₦{totalFees.toLocaleString()}</span>
+              <span className="text-[10px] text-[#6FBE45] block font-mono font-semibold uppercase">MY EARNED COMMISSIONS</span>
+              <span className="text-2xl font-semibold text-[#6FBE45] block">₦{totalFees.toLocaleString()}</span>
               <span className="text-[10px] text-stone-400 block">Commissions logged per agreed manager fees.</span>
             </div>
 
@@ -2478,7 +2478,7 @@ export default function ShortletDashboard({
 
                 <div className="spatial-glass border border-stone-200/80 p-5 rounded-2xl bg-stone-50/50 space-y-1">
                   <span className="text-[10px] text-stone-400 block font-mono font-semibold uppercase tracking-wider">Commission This Year</span>
-                  <span className="text-2xl font-semibold text-[#C9A84C] block">₦{totalCommissionThisYear.toLocaleString()}</span>
+                  <span className="text-2xl font-semibold text-[#6FBE45] block">₦{totalCommissionThisYear.toLocaleString()}</span>
                   <span className="text-[10px] text-#6B7280 block">Accumulated commissions for 2026.</span>
                 </div>
 
@@ -2698,7 +2698,7 @@ export default function ShortletDashboard({
             <div className="bg-white border rounded-[var(--radius-large)] p-6 space-y-5">
               <div className="flex justify-between items-center border-b pb-3">
                 <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-[#C9A84C]" />
+                  <Award className="w-5 h-5 text-[#6FBE45]" />
                   <h3 className="font-display font-semibold text-sm text-[#18452E] uppercase">Property Performance Leaderboard</h3>
                 </div>
                 <span className="text-[10px] font-mono font-semibold text-stone-400 uppercase">Current Month Statistics</span>
@@ -2720,7 +2720,7 @@ export default function ShortletDashboard({
                       <div className="flex items-center space-x-4">
                         <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-display font-semibold text-sm shrink-0 ${
                           isTop 
-                            ? 'bg-amber-100 text-[#C9A84C] border border-amber-200' 
+                            ? 'bg-amber-100 text-[#6FBE45] border border-amber-200' 
                             : 'bg-stone-200 text-#6B7280'
                         }`}>
                           #{idx + 1}
@@ -2752,7 +2752,7 @@ export default function ShortletDashboard({
 
                       <div className="lg:min-w-[130px] lg:text-right shrink-0">
                         {isTop && (
-                          <span className="inline-block bg-amber-50 text-[#C9A84C] border border-[#C9A84C]/30 px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider">
+                          <span className="inline-block bg-amber-50 text-[#6FBE45] border border-[#6FBE45]/30 px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider">
                             Most Profitable
                           </span>
                         )}
@@ -3301,7 +3301,7 @@ export default function ShortletDashboard({
       )}
 
       {/* COMPLIANT FOOTER */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono uppercase font-semibold tracking-wider">
         Unity Homes Shortlet Management Desk &bull; Don&apos;t Buy Wahala
       </p>
 

@@ -29,7 +29,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
       
       {/* HEADER HERO */}
       <div className="text-center space-y-3 max-w-3xl mx-auto">
-        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 px-3 py-1 rounded-full border border-[#C9A84C]/25">
+        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/20 px-3 py-1 rounded-full border border-[#6FBE45]/25">
           PIPELINE PROJECTS IN CUSTODY
         </span>
         <h1 className="text-3xl md:text-5xl font-display font-semibold text-[#18452E] leading-tight">
@@ -63,7 +63,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
             <div className="bg-stone-50 p-3.5 rounded-xl border border-stone-200 space-y-1.5 font-sans">
               <span className="text-[10px] font-semibold text-stone-400 block uppercase font-mono">TARGET PRICING</span>
               <span className="block font-semibold text-sm text-[#18452E]">₦18,500,000 Starting</span>
-              <span className="text-[9px] text-[#C9A84C] block font-mono">100% Litigation Verified Title</span>
+              <span className="text-[9px] text-[#6FBE45] block font-mono">100% Litigation Verified Title</span>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
             <div className="bg-stone-50 p-3.5 rounded-xl border border-stone-200 space-y-1.5 font-sans">
               <span className="text-[10px] font-semibold text-stone-400 block uppercase font-mono">TENURE DURATION</span>
               <span className="block font-semibold text-sm text-[#18452E]">Up to 15-Year Mortgages</span>
-              <span className="text-[9px] text-[#C9A84C] block font-mono">COREN Structural Sanity Cert</span>
+              <span className="text-[9px] text-[#6FBE45] block font-mono">COREN Structural Sanity Cert</span>
             </div>
           </div>
 
@@ -165,7 +165,7 @@ export default function ComingSoonPage({ navigate }: ComingSoonPageProps) {
             <div className="bg-stone-50 p-3.5 rounded-xl border border-stone-200 space-y-1.5 font-sans">
               <span className="text-[10px] font-semibold text-stone-400 block uppercase font-mono">CHARTING RECORDS</span>
               <span className="block font-semibold text-sm text-[#18452E]">100% Free From Gov Acquisition</span>
-              <span className="text-[9px] text-[#C9A84C] block font-mono">Registered SURCON Surveyors</span>
+              <span className="text-[9px] text-[#6FBE45] block font-mono">Registered SURCON Surveyors</span>
             </div>
           </div>
 

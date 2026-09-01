@@ -716,7 +716,7 @@ export default function PmcDashboard({
             onOpenSupportForm={() => setActiveTab('Support')}
           />
           <div className="bg-teal-900 border border-teal-800 px-3.5 py-1.5 rounded-xl text-[11px] font-mono">
-            Allocation Quota: <strong className="text-[#C9A84C]">{pmcActivePropertiesCount} / {pmcSubscriptionLimit} properties used</strong>
+            Allocation Quota: <strong className="text-[#6FBE45]">{pmcActivePropertiesCount} / {pmcSubscriptionLimit} properties used</strong>
           </div>
         </div>
       </div>
@@ -966,9 +966,9 @@ export default function PmcDashboard({
           
           {/* PMC PORTFOLIO OVERVIEW CARD IN TEAL (Fix Six) */}
           <div className="bg-teal-950 text-white p-6 md:p-8 rounded-[var(--radius-large)] space-y-4 shadow-sm border border-teal-900 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A84C]/5 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#6FBE45]/5 rounded-bl-full"></div>
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#C9A84C] font-semibold">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-[#6FBE45] font-semibold">
                 MANAGED PORTFOLIO VALUE
               </span>
               <h2 className="text-3xl md:text-5xl font-display font-semibold text-white mt-1">
@@ -982,10 +982,10 @@ export default function PmcDashboard({
             {/* METRICS GRID */}
             <div className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto pb-2 pt-4 border-t border-teal-900 scrollbar-thin">
               <div className="bg-teal-900/50 border border-teal-850 rounded-2xl p-4 shrink-0 w-64 md:w-auto">
-                <span className="text-[9px] uppercase font-mono text-[#C9A84C] block font-semibold">Occupancy Rate</span>
+                <span className="text-[9px] uppercase font-mono text-[#6FBE45] block font-semibold">Occupancy Rate</span>
                 <span className="text-xl font-display font-semibold mt-1 block">{pmcOccupancyRate}% Occupied</span>
                 <div className="w-full bg-teal-800 h-1.5 mt-2 rounded-full overflow-hidden">
-                  <div className="bg-[#C9A84C] h-full" style={{ width: `${pmcOccupancyRate}%` }}></div>
+                  <div className="bg-[#6FBE45] h-full" style={{ width: `${pmcOccupancyRate}%` }}></div>
                 </div>
               </div>
 
@@ -1004,8 +1004,8 @@ export default function PmcDashboard({
                       <strong className="text-xs font-display block text-rose-300 mt-0.5">₦{pmcTotalOutstanding.toLocaleString()}</strong>
                     </div>
                     <div>
-                      <span className="text-[8px] uppercase font-mono text-[#C9A84C] block font-semibold">Rate</span>
-                      <strong className="text-xs font-display block text-[#C9A84C] mt-0.5">
+                      <span className="text-[8px] uppercase font-mono text-[#6FBE45] block font-semibold">Rate</span>
+                      <strong className="text-xs font-display block text-[#6FBE45] mt-0.5">
                         {pmcTotalCollected + pmcTotalOutstanding > 0 
                           ? Math.round((pmcTotalCollected / (pmcTotalCollected + pmcTotalOutstanding)) * 100) 
                           : 100}%
@@ -1087,7 +1087,7 @@ export default function PmcDashboard({
                       setShowLimitModal(false);
                       if (navigate) navigate('/pricing-and-services');
                     }}
-                    className="w-full py-3 bg-[#C9A84C] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
+                    className="w-full py-3 bg-[#6FBE45] hover:bg-[#b8973b] text-white text-xs font-semibold rounded-xl transition cursor-pointer shadow-sm shadow-amber-950/10"
                   >
                     Upgrade Plan
                   </button>
@@ -2027,7 +2027,7 @@ export default function PmcDashboard({
                 return (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-white border border-teal-100 rounded-2xl p-5 shadow-sm">
-                      <span className="text-[9px] font-mono font-semibold uppercase tracking-wider text-[#C9A84C] block">Total Annual Rent Expected</span>
+                      <span className="text-[9px] font-mono font-semibold uppercase tracking-wider text-[#6FBE45] block">Total Annual Rent Expected</span>
                       <strong className="text-2xl font-display font-semibold text-teal-950 block mt-1">₦{totalAnnualRent.toLocaleString()}</strong>
                       <span className="text-[10px] text-stone-400 mt-1 block">Sum of all active lease values</span>
                     </div>
@@ -3451,7 +3451,7 @@ export default function PmcDashboard({
       )}
 
       {/* FOOTER */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono uppercase font-semibold tracking-wider">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono uppercase font-semibold tracking-wider">
         Unity Homes PMC Management Network &bull; Don&apos;t Buy Wahala
       </p>
 

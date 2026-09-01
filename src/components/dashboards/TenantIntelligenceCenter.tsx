@@ -195,21 +195,21 @@ export default function TenantIntelligenceCenter({
               onClick={() => triggerLocalSuccess(`Initiated direct call dialer payload to ${selectedTenant.tenantName} at 0801 234 5678.`)}
               className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
-              <Phone className="w-4 h-4 text-[#C9A84C]" />
+              <Phone className="w-4 h-4 text-[#6FBE45]" />
               <span>Call Tenant</span>
             </button>
             <button 
               onClick={() => triggerLocalSuccess(`Certified lease ledger compiled for ${selectedTenant.tenantName}`)}
               className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
-              <FileText className="w-4 h-4 text-[#C9A84C]" />
+              <FileText className="w-4 h-4 text-[#6FBE45]" />
               <span>View Ledger</span>
             </button>
             <button 
               onClick={() => triggerLocalSuccess(`Renew lease sequence queued for ${selectedTenant.tenantName}`)}
               className="p-3 bg-stone-50 hover:bg-teal-800 hover:text-white transition rounded-2xl flex flex-col items-center justify-center gap-1.5 text-#6B7280 border border-stone-200 text-xs font-semibold uppercase cursor-pointer"
             >
-              <Calendar className="w-4 h-4 text-[#C9A84C]" />
+              <Calendar className="w-4 h-4 text-[#6FBE45]" />
               <span>Renew Lease</span>
             </button>
           </div>
@@ -236,7 +236,7 @@ export default function TenantIntelligenceCenter({
       {/* HEADER & KPIs */}
       <div className="bg-teal-950 rounded-[var(--radius-large)] p-6 shadow-sm text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-10">
-          <Users className="w-48 h-48 text-[#C9A84C]" />
+          <Users className="w-48 h-48 text-[#6FBE45]" />
         </div>
         <div className="relative z-10">
           <h2 className="font-display font-semibold text-2xl uppercase tracking-tight mb-2">Universal Tenant Records</h2>
@@ -246,11 +246,11 @@ export default function TenantIntelligenceCenter({
 
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-8">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
-              <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">Total Tenants</span>
+              <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-1">Total Tenants</span>
               <span className="text-2xl font-display font-semibold">{totalTenants}</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
-              <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">Vacant Units</span>
+              <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-1">Vacant Units</span>
               <span className="text-2xl font-display font-semibold">{vacantUnits.length}</span>
             </div>
             <div className="bg-rose-500/20 backdrop-blur-sm border border-rose-500/30 p-4 rounded-2xl">
@@ -262,7 +262,7 @@ export default function TenantIntelligenceCenter({
               <span className="text-2xl font-display font-semibold">₦{(outstandingSC/1000000).toFixed(1)}m</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-2xl">
-              <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-1">High Risk</span>
+              <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-1">High Risk</span>
               <span className="text-2xl font-display font-semibold">{highRiskCount}</span>
             </div>
           </div>

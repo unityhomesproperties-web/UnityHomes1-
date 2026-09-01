@@ -1,5 +1,8 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { db } from '../lib/firebase';
+import { collection, doc, setDoc, serverTimestamp } from 'firebase/firestore';
+
 import { ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -200,27 +203,26 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
     setSubmitError(null);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const waitlistRef = doc(collection(db, 'waitlist'));
+      const payload = {
+        role: data.role,
+        full_name: data.full_name,
+        email: data.email,
+        phone: data.phone,
+        state: data.state,
+        role_specific_data: data.role_specific_data,
+        information_confirmed: data.information_confirmed,
+        createdAt: serverTimestamp()
+      };
       
-      const testEmail = data.email.toLowerCase();
-      if (testEmail.includes('network@error')) {
-        throw new Error('Network failure connecting to the server. Please check your connection and try again.');
-      }
-      if (testEmail.includes('duplicate@email')) {
-        throw new Error('This email address is already on the waitlist.');
-      }
-      if (data.phone === '0000000000') {
-        throw new Error('This phone number is already registered on the waitlist.');
-      }
-      if (testEmail.includes('service@down')) {
-        throw new Error('Our registration service is temporarily unavailable. We are working to fix this. Please try again later.');
-      }
+      await setDoc(waitlistRef, payload);
 
       clearAutosave();
       onClose();
       navigate('/waitlist/success');
       
     } catch (err: any) {
+      console.error(err);
       if (!err.message) {
          setSubmitError("We couldn't complete your registration right now. Your information has not been lost. Please try again.");
       } else {
@@ -344,12 +346,12 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                         <div 
                           key={role.id}
                           onClick={() => { updateData('role', role.id); setDirection(1); }}
-                          className={`cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${selected ? 'ring-4 ring-[#C9A84C]' : 'hover:shadow-xl border border-gray-100'}`}
+                          className={`cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${selected ? 'ring-4 ring-[#6FBE45]' : 'hover:shadow-xl border border-gray-100'}`}
                         >
                           <div className="h-40 w-full relative">
                             <img src={role.img} alt={role.title} className="w-full h-full object-cover" />
                             {selected && (
-                              <div className="absolute top-3 right-3 bg-[#C9A84C] text-white p-1 rounded-full shadow-md">
+                              <div className="absolute top-3 right-3 bg-[#6FBE45] text-white p-1 rounded-full shadow-md">
                                 <Check className="w-4 h-4" />
                               </div>
                             )}
@@ -373,7 +375,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                             value={data.full_name}
                             onChange={(e) => updateData('full_name', e.target.value)}
                             onBlur={() => handleBlur('full_name')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
                           />
                           {renderError('full_name', currentErrors)}
                         </div>
@@ -385,7 +387,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                               value={data.email}
                               onChange={(e) => updateData('email', e.target.value)}
                               onBlur={() => handleBlur('email')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('email', currentErrors)}
                           </div>
@@ -396,7 +398,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                               value={data.phone}
                               onChange={(e) => updateData('phone', e.target.value)}
                               onBlur={() => handleBlur('phone')}
-                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] font-medium"
+                              className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] font-medium"
                             />
                             {renderError('phone', currentErrors)}
                           </div>
@@ -407,7 +409,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                             value={data.state}
                             onChange={(e) => updateData('state', e.target.value)}
                             onBlur={() => handleBlur('state')}
-                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
+                            className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] transition-all text-[var(--color-text-primary)] appearance-none font-medium"
                           >
                             <option value="" disabled>Select a state...</option>
                             {NIGERIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -440,11 +442,11 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   <label 
                                     key={interest} 
                                     className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all duration-200 ${
-                                      selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
+                                      selected ? 'border-[#6FBE45] bg-[#F5FAF2]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'
                                     }`}
                                   >
                                     <div className={`w-5 h-5 rounded border flex items-center justify-center shrink-0 ${
-                                      selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'
+                                      selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'
                                     }`}>
                                       {selected && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
@@ -477,8 +479,8 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                 {['List My Property Only', 'List Plus Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#F5FAF2]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
                                       <span className={`ml-4 font-semibold ${selected ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
@@ -504,7 +506,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.properties_count || ''}
                                   onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                   onBlur={() => handleBlur('properties_count')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {renderError('properties_count', currentErrors)}
                               </div>
@@ -515,7 +517,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.property_type || ''}
                                   onChange={(e) => updateData('role_specific_data.property_type', e.target.value)}
                                   onBlur={() => handleBlur('property_type')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {renderError('property_type', currentErrors)}
                               </div>
@@ -526,7 +528,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                 rows={3}
                                 value={data.role_specific_data.description || ''}
                                 onChange={(e) => updateData('role_specific_data.description', e.target.value)}
-                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] resize-none font-medium"
+                                className="w-full p-5 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] resize-none font-medium"
                               />
                             </div>
                           </div>
@@ -543,7 +545,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.company_name || ''}
                                   onChange={(e) => updateData('role_specific_data.company_name', e.target.value)}
                                   onBlur={() => handleBlur('company_name')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {renderError('company_name', currentErrors)}
                               </div>
@@ -554,7 +556,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.contact_person || ''}
                                   onChange={(e) => updateData('role_specific_data.contact_person', e.target.value)}
                                   onBlur={() => handleBlur('contact_person')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {renderError('contact_person', currentErrors)}
                               </div>
@@ -565,8 +567,8 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                 {['List My Clients Properties', 'Use Unity Homes Manager', 'Both Services'].map(pref => {
                                   const selected = data.role_specific_data.service_preference === pref;
                                   return (
-                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#C9A84C] bg-[#FDFBF4]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
-                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#C9A84C] bg-[#C9A84C]' : 'border-gray-300 bg-white'}`}>
+                                    <label key={pref} className={`flex items-center px-5 h-14 border rounded-[18px] cursor-pointer transition-all ${selected ? 'border-[#6FBE45] bg-[#F5FAF2]' : 'border-[var(--color-border)] hover:bg-stone-50 hover:border-gray-300'}`}>
+                                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${selected ? 'border-[#6FBE45] bg-[#6FBE45]' : 'border-gray-300 bg-white'}`}>
                                         {selected && <div className="w-2 h-2 rounded-full bg-white" />}
                                       </div>
                                       <span className={`ml-4 font-semibold ${selected ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{pref}</span>
@@ -589,7 +591,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                 value={data.role_specific_data.properties_count || ''}
                                 onChange={(e) => updateData('role_specific_data.properties_count', e.target.value)}
                                 onBlur={() => handleBlur('properties_count')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                               />
                               {renderError('properties_count', currentErrors)}
                             </div>
@@ -606,7 +608,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                 value={data.role_specific_data.firm_name || ''}
                                 onChange={(e) => updateData('role_specific_data.firm_name', e.target.value)}
                                 onBlur={() => handleBlur('firm_name')}
-                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                               />
                               {renderError('firm_name', currentErrors)}
                             </div>
@@ -622,14 +624,14 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.registration_number || ''}
                                   onChange={(e) => updateData('role_specific_data.registration_number', e.target.value.trimStart())}
                                   onBlur={() => handleBlur('registration_number')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {data.role === 'licensed_surveyor' && (
                                   <div className="mt-3 space-y-2">
                                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                       Enter your valid SURCON registration or license number. This information will be used as part of our professional verification process.
                                     </p>
-                                    <p className="text-sm font-semibold text-[#C9A84C]">
+                                    <p className="text-sm font-semibold text-[#6FBE45]">
                                       Surveyors on Unity Homes will be required to undergo professional verification before being approved on the platform.
                                     </p>
                                   </div>
@@ -643,7 +645,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   value={data.role_specific_data.years_of_experience || ''}
                                   onChange={(e) => updateData('role_specific_data.years_of_experience', e.target.value)}
                                   onBlur={() => handleBlur('years_of_experience')}
-                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C] font-medium"
+                                  className="w-full px-5 h-14 rounded-[18px] border border-[var(--color-border)] bg-white focus:outline-none focus:border-[#6FBE45] focus:ring-1 focus:ring-[#6FBE45] font-medium"
                                 />
                                 {renderError('years_of_experience', currentErrors)}
                               </div>
@@ -661,8 +663,8 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                                   />
                                   <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                     data.role_specific_data.consent 
-                                      ? 'border-[#C9A84C] bg-[#C9A84C]' 
-                                      : 'border-gray-300 bg-white group-hover:border-[#C9A84C]'
+                                      ? 'border-[#6FBE45] bg-[#6FBE45]' 
+                                      : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
                                   }`}>
                                     {data.role_specific_data.consent && <Check className="w-4 h-4 text-white" />}
                                   </div>
@@ -689,7 +691,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Role</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(1); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <p className="text-lg font-semibold text-[var(--color-text-primary)]">
                             {ROLES_DISPLAY.find(r => r.id === data.role)?.title}
@@ -699,7 +701,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Your Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(2); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
@@ -724,7 +726,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                         <div className="bg-stone-50 rounded-[18px] p-6 md:p-8 border border-[var(--color-border)]">
                           <div className="flex justify-between items-start mb-6">
                             <h3 className="text-xs font-semibold text-[var(--color-text-secondary)] uppercase tracking-widest">Additional Details</h3>
-                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#C9A84C] text-sm font-semibold hover:underline">EDIT</button>
+                            <button type="button" onClick={() => { setDirection(-1); setCurrentStep(3); }} className="text-[#6FBE45] text-sm font-semibold hover:underline">EDIT</button>
                           </div>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {Object.entries(data.role_specific_data).map(([key, val]) => {
@@ -758,8 +760,8 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                               />
                               <div className={`w-6 h-6 rounded border flex items-center justify-center transition-colors ${
                                 data.information_confirmed 
-                                  ? 'border-[#C9A84C] bg-[#C9A84C]' 
-                                  : 'border-gray-300 bg-white group-hover:border-[#C9A84C]'
+                                  ? 'border-[#6FBE45] bg-[#6FBE45]' 
+                                  : 'border-gray-300 bg-white group-hover:border-[#6FBE45]'
                               }`}>
                                 {data.information_confirmed && <Check className="w-4 h-4 text-white" />}
                               </div>
@@ -782,7 +784,7 @@ export default function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; on
                   <button
                     onClick={currentStep === 4 ? handleSubmit : handleNext}
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto bg-[#C9A84C] text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-[#B8973A] transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto bg-[#6FBE45] text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-[#5ca539] transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

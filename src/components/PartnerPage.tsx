@@ -27,7 +27,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
       
       {/* HEADER SECTION */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#C9A84C]/25">
+        <span className="text-[10px] sm:text-xs uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#18452E]/20 px-3.5 py-1.5 rounded-full border border-[#6FBE45]/25">
           COLLABORATIVE GROWTH INDEX
         </span>
         <h1 className="text-3xl md:text-5xl font-display font-semibold text-[#18452E] leading-tight">
@@ -70,11 +70,11 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
           </div>
 
           <div className="spatial-glass border border-stone-200/60 rounded-[var(--radius-large)] p-6 space-y-4">
-            <div className="w-10 h-10 rounded-xl bg-[#C9A84C]/15 flex items-center justify-center text-[#C9A84C]">
+            <div className="w-10 h-10 rounded-xl bg-[#6FBE45]/15 flex items-center justify-center text-[#6FBE45]">
               <Gift className="w-5 h-5" />
             </div>
             <h3 className="font-display font-semibold text-base text-[#18452E]">Refer a Tenant</h3>
-            <div className="font-mono text-xl font-semibold text-[#C9A84C]">
+            <div className="font-mono text-xl font-semibold text-[#6FBE45]">
               ₦10,000 <span className="text-xs font-normal text-#6B7280">Reward</span>
             </div>
             <p className="text-xs text-#6B7280 font-normal leading-relaxed">
@@ -113,8 +113,8 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
             </p>
           </div>
 
-          <div className="bg-white border-2 border-[#C9A84C]/25 rounded-[var(--radius-large)] p-6 space-y-3 shadow-sm relative">
-            <span className="text-[10px] font-mono bg-[#C9A84C]/15 text-[#C9A84C] px-2.5 py-0.5 rounded font-semibold uppercase">
+          <div className="bg-white border-2 border-[#6FBE45]/25 rounded-[var(--radius-large)] p-6 space-y-3 shadow-sm relative">
+            <span className="text-[10px] font-mono bg-[#6FBE45]/15 text-[#6FBE45] px-2.5 py-0.5 rounded font-semibold uppercase">
               TIER 3 &bull; INSTITUTIONAL
             </span>
             <h3 className="text-base font-display font-semibold text-[#18452E]">Strategic Partner</h3>
@@ -260,7 +260,7 @@ export default function PartnerPage({ navigate }: PartnerPageProps) {
       </div>
 
       {/* FOOTER COVENANT */}
-      <p className="text-center text-[10px] text-[#C9A84C] font-mono leading-normal">
+      <p className="text-center text-[10px] text-[#6FBE45] font-mono leading-normal">
         <em>Don&apos;t Buy Wahala</em> &bull; Authorized Unity Homes Affiliate Desk RC-1849120
       </p>
 

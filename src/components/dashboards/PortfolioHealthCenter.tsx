@@ -236,7 +236,7 @@ export default function PortfolioHealthCenter({
       {/* LATE REMITTANCE DETECTOR */}
       <div className="bg-white border rounded-[var(--radius-large)] p-6 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
-          <Clock className="w-6 h-6 text-[#C9A84C]" />
+          <Clock className="w-6 h-6 text-[#6FBE45]" />
           <h3 className="font-display font-semibold text-[#18452E] uppercase">Late Remittance Detector (Shortlets)</h3>
         </div>
         

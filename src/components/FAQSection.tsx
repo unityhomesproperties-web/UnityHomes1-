@@ -48,7 +48,7 @@ export default function FAQSection({ limit }: { limit?: number }) {
     <div className="w-full flex flex-col gap-4">
       {displayedFaq.map((faq, idx) => {
         const isExpanded = expandedIndex === idx;
-        const statusColor = faq.status === 'Available Now' ? 'text-[#6FBE45]' : 'text-[#C9A84C]';
+        const statusColor = faq.status === 'Available Now' ? 'text-[#6FBE45]' : 'text-[#6FBE45]';
         
         return (
           <div 

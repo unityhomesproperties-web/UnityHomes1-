@@ -8,7 +8,7 @@ import {
   DollarSign, FileText, Settings, Layers, Calendar, Clock, Lock, RefreshCw
 } from 'lucide-react';
 
-const COLORS = ['#18452E', '#C9A84C', '#0E2F1F', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+const COLORS = ['#18452E', '#6FBE45', '#0E2F1F', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
 
 interface DemoPerformanceCenterProps {
   navigate: (path: string, params?: any) => void;
@@ -111,10 +111,10 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
         {/* HEADER SECTION */}
         <div className="bg-[#18452E] text-white rounded-[var(--radius-large)] p-8 md:p-12 mb-8 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 opacity-10">
-            <Activity className="w-64 h-64 text-[#C9A84C]" />
+            <Activity className="w-64 h-64 text-[#6FBE45]" />
           </div>
           <div className="relative z-10">
-            <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1.5 rounded-full border border-[#C9A84C]/20">
+            <span className="text-[10px] uppercase font-mono font-semibold tracking-widest text-[#6FBE45] bg-[#6FBE45]/10 px-3 py-1.5 rounded-full border border-[#6FBE45]/20">
               Interactive Value Sandbox
             </span>
             <h1 className="text-4xl md:text-5xl font-display font-semibold mt-4 leading-tight">
@@ -128,7 +128,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
             <div className="flex flex-wrap gap-3 mt-8">
               {['5 Landlords', '30+ Properties', '120+ Units', '60+ Tenants', '2 PMCs', '4 Shortlet Managers', '15 Shortlet Apartments', '300+ Transactions', '40+ Service Charges', '20+ Maintenance Records', '20+ Damage Reports'].map((item, idx) => (
                 <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 rounded-lg text-[10px] font-mono font-semibold tracking-wider text-white uppercase flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3 h-3 text-[#C9A84C]" />
+                  <CheckCircle2 className="w-3 h-3 text-[#6FBE45]" />
                   {item}
                 </div>
               ))}
@@ -176,7 +176,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
               ].map((metric, idx) => (
                 <div key={idx} className="bg-stone-50 p-4 rounded-2xl border border-stone-200 flex flex-col">
                   <div className="flex justify-between items-start mb-2">
-                    <metric.icon className="w-5 h-5 text-[#C9A84C]" />
+                    <metric.icon className="w-5 h-5 text-[#6FBE45]" />
                   </div>
                   <span className="text-2xl font-display font-semibold text-[#18452E]">{metric.value}</span>
                   <span className="text-[10px] font-mono font-semibold text-#6B7280 uppercase tracking-wider mt-1">{metric.label}</span>
@@ -228,7 +228,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                           <RechartsTooltip formatter={(val: number) => `₦${val.toLocaleString()}`} />
                           <Legend wrapperStyle={{ fontSize: 10 }} />
                           <Bar dataKey="revenue" fill="#18452E" radius={[4, 4, 0, 0]} name="Actual Revenue" />
-                          <Line type="monotone" dataKey="expected" stroke="#C9A84C" strokeWidth={3} name="Expected Revenue" />
+                          <Line type="monotone" dataKey="expected" stroke="#6FBE45" strokeWidth={3} name="Expected Revenue" />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>
@@ -251,7 +251,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
 
                   <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-4 gap-4">
                      <div className="bg-[#18452E] text-white p-5 rounded-2xl">
-                       <span className="block text-[10px] font-mono text-[#C9A84C] uppercase mb-1">Rent Collection Rate</span>
+                       <span className="block text-[10px] font-mono text-[#6FBE45] uppercase mb-1">Rent Collection Rate</span>
                        <span className="text-3xl font-display font-semibold">94.5%</span>
                      </div>
                      <div className="bg-white border border-stone-200 p-5 rounded-2xl">
@@ -346,21 +346,21 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Multi-Landlord Portfolio</span>
                         <span className="text-xl font-semibold text-[#18452E]">12 Active Owners</span>
                       </div>
-                      <Users className="w-8 h-8 text-[#C9A84C]" />
+                      <Users className="w-8 h-8 text-[#6FBE45]" />
                     </div>
                     <div className="p-4 border border-stone-200 rounded-xl bg-white flex items-center justify-between">
                       <div>
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Tenant Management</span>
                         <span className="text-xl font-semibold text-[#18452E]">84 Active Tenants</span>
                       </div>
-                      <Building className="w-8 h-8 text-[#C9A84C]" />
+                      <Building className="w-8 h-8 text-[#6FBE45]" />
                     </div>
                     <div className="p-4 border border-stone-200 rounded-xl bg-white flex items-center justify-between">
                       <div>
                         <span className="block text-[10px] font-mono text-#6B7280 uppercase">Report Generation</span>
                         <span className="text-xl font-semibold text-[#18452E]">Automated</span>
                       </div>
-                      <FileText className="w-8 h-8 text-[#C9A84C]" />
+                      <FileText className="w-8 h-8 text-[#6FBE45]" />
                     </div>
                   </div>
                 </div>
@@ -387,7 +387,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                           <RechartsTooltip />
                           <Legend wrapperStyle={{ fontSize: 10 }} />
                           <Bar yAxisId="left" dataKey="revenue" fill="#0E2F1F" radius={[4, 4, 0, 0]} name="Revenue (₦)" />
-                          <Line yAxisId="right" type="monotone" dataKey="bookings" stroke="#C9A84C" strokeWidth={3} name="Bookings Count" />
+                          <Line yAxisId="right" type="monotone" dataKey="bookings" stroke="#6FBE45" strokeWidth={3} name="Bookings Count" />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>
@@ -440,7 +440,7 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                     <p className="text-[11px] text-#6B7280 mt-2">Log guest stays rapidly with auto-synced calendars.</p>
                   </div>
                   <div className="bg-white border border-stone-200 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
-                    <DollarSign className="w-10 h-10 text-[#C9A84C] mb-3" />
+                    <DollarSign className="w-10 h-10 text-[#6FBE45] mb-3" />
                     <h3 className="font-semibold text-[#18452E]">Commission Calc</h3>
                     <p className="text-[11px] text-#6B7280 mt-2">Instant split calculations based on pre-agreed landlord percentages.</p>
                   </div>
@@ -468,15 +468,15 @@ export default function DemoPerformanceCenter({ navigate }: DemoPerformanceCente
                 <div className="bg-[#18452E] text-white p-8 rounded-[var(--radius-large)] relative overflow-hidden">
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                      <div>
-                       <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-2">Global Search</span>
+                       <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-2">Global Search</span>
                        <p className="text-sm text-stone-300">Instantly locate any tenant, property, or transaction across the entire unified database.</p>
                      </div>
                      <div>
-                       <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-2">Dispute Resolution</span>
+                       <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-2">Dispute Resolution</span>
                        <p className="text-sm text-stone-300">Mediate conflicts between landlords and managers with full immutable ledger history.</p>
                      </div>
                      <div>
-                       <span className="block text-[10px] font-mono text-[#C9A84C] uppercase tracking-wider mb-2">Transparency Ledger</span>
+                       <span className="block text-[10px] font-mono text-[#6FBE45] uppercase tracking-wider mb-2">Transparency Ledger</span>
                        <p className="text-sm text-stone-300">Audit trail of every login, document upload, and remittance sent across the platform.</p>
                      </div>
                    </div>

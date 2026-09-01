@@ -151,7 +151,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
       
       {/* HEADER BAR */}
       <div className="mb-8 text-center md:text-left">
-        <span className="text-xs font-mono font-semibold tracking-widest text-[#C9A84C] uppercase bg-white border border-stone-200 px-3 py-1 rounded-full shadow-sm">
+        <span className="text-xs font-mono font-semibold tracking-widest text-[#6FBE45] uppercase bg-white border border-stone-200 px-3 py-1 rounded-full shadow-sm">
           Strict Verification Framework
         </span>
         <h1 className="text-3xl md:text-4xl font-display font-semibold text-[#18452E] mt-3">
@@ -301,9 +301,9 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
 
       {/* COMMERCIAL DIRECT NOTICE BAR */}
       {(typeFilter === 'Commercial Rent' || typeFilter === 'Commercial Lease') && (
-        <div className="mb-6 bg-[#C9A84C]/15 border-l-4 border-[#C9A84C] p-4 rounded-r-xl text-xs text-[#18452E] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shadow-xs">
+        <div className="mb-6 bg-[#6FBE45]/15 border-l-4 border-[#6FBE45] p-4 rounded-r-xl text-xs text-[#18452E] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shadow-xs">
           <div className="flex items-center space-x-2">
-            <span className="p-1 px-1.5 bg-[#C9A84C] text-[#18452E] font-mono font-semibold text-[9px] rounded">
+            <span className="p-1 px-1.5 bg-[#6FBE45] text-[#18452E] font-mono font-semibold text-[9px] rounded">
               DIRECT PORTAL
             </span>
             <span className="font-semibold text-xs leading-none">
@@ -367,7 +367,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                     key={prop.id}
                     onClick={() => handleOpenDetails(prop)}
                     className={`bg-white rounded-xl border transition-all overflow-hidden flex flex-col h-full cursor-pointer hover:shadow-md ${
-                      isCurrent ? 'border-2 border-[#C9A84C] relative ring-2 ring-[#C9A84C]/10' : 'border-stone-200'
+                      isCurrent ? 'border-2 border-[#6FBE45] relative ring-2 ring-[#6FBE45]/10' : 'border-stone-200'
                     }`}
                   >
                     <div className="relative h-40 w-full overflow-hidden bg-stone-50 shrink-0">
@@ -396,7 +396,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                         </div>
                         <h3 className="text-xs font-semibold text-[#18452E] mt-1 line-clamp-1">{prop.title}</h3>
                         <div className="flex items-center text-[10px] text-stone-500 mt-1">
-                          <MapPin className="w-3 h-3 text-[#C9A84C] mr-1 shrink-0" />
+                          <MapPin className="w-3 h-3 text-[#6FBE45] mr-1 shrink-0" />
                           <span className="line-clamp-1">{prop.location}</span>
                         </div>
                       </div>
@@ -424,11 +424,11 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
         {selectedProperty && (
           <div className="md:col-span-6 lg:col-span-7 bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 md:p-8 sticky top-24 max-h-[88vh] overflow-y-auto relative">
             {/* Elegant luxury top accent */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#C9A84C]"></div>
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#6FBE45]"></div>
 
             {/* Gallery Section */}
             <div className="flex justify-between items-center mb-5 pt-2">
-              <span className="font-mono text-[9px] font-semibold text-[#C9A84C] bg-[#C9A84C]/10 px-2.5 py-1 rounded-md uppercase tracking-widest">
+              <span className="font-mono text-[9px] font-semibold text-[#6FBE45] bg-[#6FBE45]/10 px-2.5 py-1 rounded-md uppercase tracking-widest">
                 Individual Verified Portfolio File
               </span>
               <button 
@@ -444,7 +444,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
             </h2>
 
             <div className="flex items-center text-xs text-stone-500 mb-5 font-semibold">
-              <MapPin className="w-4 h-4 text-[#C9A84C] mr-1.5 shrink-0" />
+              <MapPin className="w-4 h-4 text-[#6FBE45] mr-1.5 shrink-0" />
               <span>{selectedProperty.location} (State: <strong className="text-[#18452E] font-semibold">{selectedProperty.state}</strong>)</span>
             </div>
 
@@ -468,7 +468,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                   key={idx}
                   onClick={() => setGalleryIndex(idx)}
                   className={`w-16 h-12 rounded-xl overflow-hidden border transition-all duration-300 shrink-0 ${
-                    galleryIndex === idx ? 'ring-2 ring-[#C9A84C] opacity-100 scale-102' : 'border-stone-200 opacity-60 hover:opacity-100'
+                    galleryIndex === idx ? 'ring-2 ring-[#6FBE45] opacity-100 scale-102' : 'border-stone-200 opacity-60 hover:opacity-100'
                   }`}
                 >
                   <img src={ph} alt="Thumb" className="w-full h-full object-cover" />
@@ -881,7 +881,7 @@ export default function PropertiesPage({ initialTypeFilter = 'All', selectedProp
                           
                           {/* Card Content */}
                           <div className="mt-4 bg-stone-50/60 hover:bg-white border border-stone-200 rounded-xl p-4 text-center space-y-1.5 transition-all duration-300 hover:shadow-md">
-                            <span className="block font-mono text-[9px] font-semibold tracking-widest text-[#C9A84C] uppercase">
+                            <span className="block font-mono text-[9px] font-semibold tracking-widest text-[#6FBE45] uppercase">
                               {milestone.date}
                             </span>
                             <h4 className="font-display font-semibold text-[#18452E] text-xs">

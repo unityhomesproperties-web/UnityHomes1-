@@ -1939,7 +1939,7 @@ export default function LandlordShortletDashboard({
                 <p className="text-#6B7280">Manager Adeola Johnson submitted remittance of ₦145,000 for BK-9382AB. Status: Pending.</p>
               </div>
 
-              <div className="p-3 bg-stone-50 border-l-2 border-[#C9A84C] rounded-r-xl">
+              <div className="p-3 bg-stone-50 border-l-2 border-[#6FBE45] rounded-r-xl">
                 <div className="flex justify-between items-center mb-1">
                   <strong className="text-#132A1D">BOOKING_LOGGED</strong>
                   <span className="text-stone-400">2026-06-20 09:22:11 UTC</span>
