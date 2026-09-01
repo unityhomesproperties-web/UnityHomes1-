@@ -10,7 +10,7 @@ export default function WaitlistSuccessPage() {
       {/* Background Image - Keys/Doorway (Bright moment) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80" 
+          src="/images/for_real_estate_professionals.jpg" 
           alt="Moving in success" 
           className="w-full h-full object-cover" 
         />

@@ -41,7 +41,7 @@ export default function Layout() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src="/images/logo.png" alt="Unity Homes Logo" className="h-10 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
+            <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-10 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
@@ -72,7 +72,7 @@ export default function Layout() {
         <div className="fixed inset-0 z-[60] bg-white flex flex-col animate-fade-in">
           <div className="flex items-center justify-between p-4 sm:px-6 h-20 border-b border-[var(--color-border)]">
             <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-              <img src="/images/logo.png" alt="Unity Homes Logo" className="h-8 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
+              <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-8 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
             </Link>
             <button
               className="p-2 text-[var(--color-brand-deep)] min-h-[48px] min-w-[48px] flex items-center justify-center hover:bg-[var(--color-surface-soft)] rounded-full transition-colors"

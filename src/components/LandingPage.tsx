@@ -45,7 +45,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
         {/* Real Estate Premium Aerial Overlay Background */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80" 
+            src="/images/about_us.jpg" 
             alt="Premium Aerial Real Estate Nigeria" 
             className="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-[10s] ease-out hover:scale-100"
           />
@@ -780,7 +780,7 @@ export default function LandingPage({ navigate, onSearchQuery }: LandingPageProp
       <section className="relative py-16 text-white px-4 md:px-8 w-full border-t border-stone-200 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Architecture Background" className="w-full h-full object-cover" />
+          <img src="/images/our_services.jpg" alt="Architecture Background" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center space-y-6">

@@ -10,21 +10,21 @@ const HERO_SLIDES = [
     tag: "Nigeria-focused real estate technology.",
     headline: "Building a Safer, More Transparent Real Estate Experience for Nigeria.",
     description: "Unity Homes and Properties Ltd is building technology that makes property discovery, trusted professional access, property management and real estate decision-making simpler and more transparent.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80"
+    image: "/images/our_vision.jpg"
   },
   {
     id: 2,
     tag: "Trusted Professional Network",
     headline: "Verified Professionals at Your Fingertips.",
     description: "Connect with trusted Property Lawyers, Licensed Surveyors, and Structural Engineers to ensure secure and verified property transactions.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80"
+    image: "/images/for_real_estate_professionals.jpg"
   },
   {
     id: 3,
     tag: "Data-Driven Decisions",
     headline: "Community-Powered Area Intelligence.",
     description: "Discover deep insights about neighborhoods, infrastructure, and community vibes before you make your next property move.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+    image: "/images/area_intelligence.jpg"
   }
 ];
 
@@ -369,7 +369,7 @@ export default function HomePage() {
         {/* Animated Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80" 
+            src="/images/our_services.jpg" 
             alt="Real Estate Building" 
             className="w-full h-full object-cover animate-slow-pan opacity-60"
             aria-hidden="true"

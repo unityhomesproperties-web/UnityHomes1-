@@ -23,7 +23,7 @@ export default function ContactPage() {
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80" alt="Hero Banner" className="w-full h-full object-cover" />
+          <img src="/images/about_us.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">

@@ -136,7 +136,7 @@ export default function ProfessionalsPage({ navigate }: ProfessionalsPageProps) 
             <div className="relative overflow-hidden text-white rounded-2xl p-5 md:p-6 mb-8 shadow-md border border-[#18452E]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
               {/* Background Image & Overlay */}
               <div className="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80" alt="Background" className="w-full h-full object-cover" />
+                <img src="/images/for_real_estate_professionals.jpg" alt="Background" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-transparent" />
               </div>
               <div className="relative z-10 flex items-center space-x-3.5 text-center sm:text-left">
