@@ -1,21 +1,9 @@
-import re
 with open('src/pages/HomePage.tsx', 'r') as f:
     content = f.read()
 
-content = content.replace("import { Link } from 'react-router-dom';", "import { Link } from 'react-router-dom';\nimport { useWaitlist } from '../components/WaitlistContext';")
-
-content = content.replace("export default function HomePage() {", "export default function HomePage() {\n  const { openWaitlist } = useWaitlist();")
-
-content = re.sub(
-    r'<Link\s+to="/waitlist"\s+className="([^"]+)"\s*>\s*Join The Waitlist\s*</Link>',
-    r'<button onClick={openWaitlist} className="\1 cursor-pointer">Join The Waitlist</button>',
-    content
-)
-content = re.sub(
-    r'<Link\s+to="/waitlist"\s+className="([^"]+)"\s*>\s*Join the Waitlist\s*</Link>',
-    r'<button onClick={openWaitlist} className="\1 cursor-pointer">Join the Waitlist</button>',
-    content
-)
+content = content.replace("h-[100svh] min-h-[600px] lg:h-[85vh]", "h-[100svh] min-h-[600px] lg:h-[100svh]")
+# Update h-[45vh] to something larger or maybe the user meant h-full for the hero overall.
+# I'll leave h-[45vh] alone unless they meant something else, but lg:h-[100svh] definitely makes it full height.
 
 with open('src/pages/HomePage.tsx', 'w') as f:
     f.write(content)

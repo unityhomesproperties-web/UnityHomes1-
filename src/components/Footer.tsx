@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden flex flex-col font-sans bg-black">
+    <footer className="relative w-full overflow-hidden flex flex-col font-sans bg-[#f4f7f5]">
       
       {/* Video Background */}
       <video 
@@ -35,7 +35,7 @@ const Footer = () => {
         loop 
         muted 
         playsInline 
-        className="absolute inset-0 w-full h-full object-cover -z-10"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/videos/footer.mp4" type="video/mp4" />
       </video>
@@ -56,12 +56,7 @@ const Footer = () => {
               variants={navReveal}
             >
               <Link to="/" className="inline-flex items-center gap-3 mb-8 group">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg transform group-hover:scale-105 transition-transform duration-300">
-                  <div className="w-6 h-6 bg-[#6FBE45] rounded-sm transform rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
-                </div>
-                <h3 className="text-2xl font-bold text-black tracking-tight">
-                  Unity Homes
-                </h3>
+                <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-10 w-auto object-contain transform group-hover:scale-105 transition-transform duration-300" />
               </Link>
               <p className="text-black/80 font-medium leading-relaxed max-w-sm text-sm">
                 A premium proptech ecosystem designed to connect, verify, and elevate real estate experiences globally.

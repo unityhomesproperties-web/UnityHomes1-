@@ -33,15 +33,15 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col font-sans bg-[var(--color-surface-light)] text-[var(--color-text-primary)]">
       {/* Desktop Navigation */}
       <header 
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        className={`absolute top-0 inset-x-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white border-b border-[var(--color-border)] py-2 shadow-sm' 
-            : 'bg-white border-b border-transparent py-4'
+            ? 'bg-white border-b border-[var(--color-border)] py-1 md:py-2 shadow-sm' 
+            : 'bg-white border-b border-transparent py-2 md:py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-10 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
+            <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-8 md:h-10 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
@@ -70,7 +70,7 @@ export default function Layout() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[60] bg-white flex flex-col animate-fade-in">
-          <div className="flex items-center justify-between p-4 sm:px-6 h-20 border-b border-[var(--color-border)]">
+          <div className="flex items-center justify-between p-4 sm:px-6 h-16 md:h-20 border-b border-[var(--color-border)]">
             <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
               <img src="/images/Logo.png" alt="Unity Homes Logo" className="h-8 w-auto object-contain" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 200 40"><text x="0" y="28" font-family="sans-serif" font-weight="bold" font-size="24" fill="%2318452E">UNITY HOMES</text></svg>'; }} />
             </Link>

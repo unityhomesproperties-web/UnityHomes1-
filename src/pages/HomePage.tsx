@@ -107,7 +107,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[100svh] min-h-[600px] lg:h-[85vh] overflow-hidden bg-[var(--color-surface-light)] pt-16 lg:pt-0">
+      <section className="relative w-full h-[100svh] min-h-[600px] lg:h-[100svh] overflow-hidden bg-[var(--color-surface-light)] pt-16 lg:pt-0">
         {HERO_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
