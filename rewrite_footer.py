@@ -1,4 +1,4 @@
-import React from 'react';
+content = """import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'motion/react';
 import { useWaitlist } from './WaitlistContext';
@@ -121,3 +121,7 @@ const Footer = () => {
 };
 
 export default Footer;
+"""
+
+with open("src/components/Footer.tsx", "w") as f:
+    f.write(content)
