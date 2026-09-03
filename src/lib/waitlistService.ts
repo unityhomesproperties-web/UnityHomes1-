@@ -8,7 +8,8 @@ export type WaitlistRole =
   | 'realtor'
   | 'property_lawyer'
   | 'licensed_surveyor'
-  | 'structural_engineer';
+  | 'structural_engineer'
+  | 'agent';
 
 export type WaitlistInterest =
   | 'buying_property'
@@ -67,7 +68,8 @@ const ALLOWED_ROLES: WaitlistRole[] = [
   'realtor',
   'property_lawyer',
   'licensed_surveyor',
-  'structural_engineer'
+  'structural_engineer',
+  'agent'
 ];
 
 const ALLOWED_INTERESTS: WaitlistInterest[] = [
@@ -277,6 +279,7 @@ export function getBenefitForRole(role: WaitlistRole): string {
     case 'property_lawyer':
     case 'licensed_surveyor':
     case 'structural_engineer':
+    case 'agent':
       return 'Founding Professional Badge + 6 Months FREE Verified Listing';
     case 'realtor':
       return 'Early access to verified listings, professional tools and future updates';
