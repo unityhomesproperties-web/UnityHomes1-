@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 import { Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
@@ -29,7 +30,12 @@ export default function MissionPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+    <>
+      <SEO 
+        title="Our Mission | Unity Homes"
+        description="Our mission is to foster secure property transactions and empower real estate decisions through transparent technology."
+      />
+      <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Solid Supporting Green */}
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
@@ -188,5 +194,6 @@ export default function MissionPage() {
       {/* Closing Section - Solid Fresh Green */}
       
     </div>
-  );
+  
+    </>);
 }

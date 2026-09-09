@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { useWaitlist } from '../components/WaitlistContext';
 import { Building, ShieldCheck, Users, Briefcase, Wrench, Map, ChevronLeft, ChevronRight, Home } from 'lucide-react';
@@ -105,6 +106,11 @@ export default function HomePage() {
   };
 
   return (
+    <>
+      <SEO 
+        title="Unity Homes & Properties Limited | Real Estate in Nigeria"
+        description="Discover verified properties, trusted professionals, and smarter property management in Nigeria with Unity Homes."
+      />
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full h-[100svh] min-h-[600px] lg:h-[100svh] overflow-hidden bg-[var(--color-surface-light)] pt-16 lg:pt-0">
@@ -115,12 +121,24 @@ export default function HomePage() {
               idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
+            {/* Image Side (Absolute on Mobile, Grid item on Desktop) */}
+            <div className="absolute inset-0 lg:relative lg:inset-auto w-full h-full lg:flex-1 overflow-hidden lg:rounded-bl-[var(--radius-large)] bg-[var(--color-surface-soft)] z-0">
+              <img
+                src={slide.image}
+                alt={slide.headline}
+                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${
+                  idx === currentSlide ? 'scale-105' : 'scale-100'
+                }`}
+              />
+
+            </div>
+            
             {/* Content Side */}
-            <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-16 xl:px-24 py-12 lg:py-0 relative z-20 bg-[var(--color-surface-light)] lg:bg-transparent">
-              <div className="max-w-xl mx-auto lg:mx-0 w-full">
+            <div className="flex-1 flex flex-col justify-end pb-24 pt-32 lg:justify-center px-4 sm:px-6 lg:px-16 xl:px-24 lg:py-0 relative z-20 lg:bg-transparent pointer-events-none">
+              <div className="max-w-xl mx-auto lg:mx-0 w-full pointer-events-auto">
                 <div className="overflow-hidden mb-6">
                   <div 
-                    className={`inline-flex items-center text-xs uppercase tracking-widest font-semibold text-[var(--color-brand-medium)] transition-all duration-700 delay-100 ${
+                    className={`inline-flex items-center text-xs uppercase tracking-widest font-semibold text-[var(--color-brand-fresh)] lg:text-[var(--color-brand-medium)] transition-all duration-700 delay-100 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -130,7 +148,7 @@ export default function HomePage() {
                 
                 <div className="overflow-hidden mb-6">
                   <h1 
-                    className={`text-4xl md:text-5xl lg:text-[56px] font-semibold text-[var(--color-brand-deep)] leading-[1.1] transition-all duration-700 delay-200 ${
+                    className={`text-4xl md:text-5xl lg:text-[56px] font-semibold text-white lg:text-[var(--color-brand-deep)] leading-[1.1] transition-all duration-700 delay-200 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -140,7 +158,7 @@ export default function HomePage() {
 
                 <div className="overflow-hidden mb-10">
                   <p 
-                    className={`text-lg text-[var(--color-text-secondary)] leading-relaxed transition-all duration-700 delay-300 ${
+                    className={`text-lg text-white/90 lg:text-[var(--color-text-secondary)] leading-relaxed transition-all duration-700 delay-300 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -158,26 +176,13 @@ export default function HomePage() {
                     <a
                       href="#services-preview"
                       onClick={scrollToServices}
-                      className="w-full sm:w-auto bg-transparent border border-[var(--color-border)] text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-surface-soft)] transition-colors duration-200 min-h-[48px] flex items-center justify-center"
+                      className="w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base lg:hover:bg-[var(--color-surface-soft)] transition-colors duration-200 min-h-[48px] flex items-center justify-center"
                     >
                       Explore Unity Homes
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Image Side */}
-            <div className="relative w-full h-[45vh] lg:h-full lg:flex-1 overflow-hidden lg:rounded-bl-[var(--radius-large)] bg-[var(--color-surface-soft)]">
-              <img
-                src={slide.image}
-                alt={slide.headline}
-                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${
-                  idx === currentSlide ? 'scale-105' : 'scale-100'
-                }`}
-              />
-              {/* Subtle tint instead of dark overlay */}
-              
             </div>
           </div>
         ))}
@@ -187,18 +192,18 @@ export default function HomePage() {
           <div className="max-w-xl mx-auto lg:mx-0 flex items-center justify-between pointer-events-auto">
             {/* Slide Indicator */}
             <div className="flex items-center gap-4">
-              <span className="font-semibold text-sm text-[var(--color-brand-deep)] w-5">
+              <span className="font-semibold text-sm text-white lg:text-[var(--color-brand-deep)] w-5">
                 {String(currentSlide + 1).padStart(2, '0')}
               </span>
               
-              <div className="w-24 h-[2px] bg-[var(--color-border)] rounded-full relative overflow-hidden">
+              <div className="w-24 h-[2px] bg-white/30 lg:bg-[var(--color-border)] rounded-full relative overflow-hidden">
                 <div 
                   className="absolute top-0 left-0 h-full bg-[var(--color-brand-fresh)] transition-all duration-[6000ms] ease-linear"
                   style={{ width: `${(currentSlide + 1) * (100 / HERO_SLIDES.length)}%` }}
                 />
               </div>
               
-              <span className="font-medium text-sm text-[var(--color-text-secondary)] w-5">
+              <span className="font-medium text-sm text-white/60 lg:text-[var(--color-text-secondary)] w-5">
                 {String(HERO_SLIDES.length).padStart(2, '0')}
               </span>
             </div>
@@ -207,14 +212,14 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={prevSlide}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-brand-deep)] hover:bg-[var(--color-surface-soft)] transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] lg:hover:bg-[var(--color-surface-soft)] transition-colors"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={nextSlide}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-brand-deep)] hover:bg-[var(--color-surface-soft)] transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] lg:hover:bg-[var(--color-surface-soft)] transition-colors"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -391,5 +396,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

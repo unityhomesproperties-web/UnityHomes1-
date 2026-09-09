@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
@@ -30,7 +31,12 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+    <>
+      <SEO 
+        title="About Us | Unity Homes"
+        description="Learn about Unity Homes & Properties Limited and our mission to build a safer, more transparent real estate experience in Nigeria."
+      />
+      <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner */}
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
@@ -214,5 +220,6 @@ export default function AboutPage() {
 
       
     </div>
-  );
+  
+    </>);
 }

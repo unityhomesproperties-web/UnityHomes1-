@@ -1,11 +1,17 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { Map, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function WaitlistSuccessPage() {
   return (
-    <div className="min-h-screen bg-black relative flex flex-col items-center justify-center font-sans overflow-hidden py-12 px-4 sm:px-6">
+    <>
+      <SEO 
+        title="Success | Unity Homes"
+        description="Thank you for joining the Unity Homes waitlist."
+      />
+      <div className="min-h-screen bg-black relative flex flex-col items-center justify-center font-sans overflow-hidden py-12 px-4 sm:px-6">
       
       {/* Background Image - Keys/Doorway (Bright moment) */}
       <div className="absolute inset-0 z-0">
@@ -82,5 +88,6 @@ export default function WaitlistSuccessPage() {
         </motion.div>
       </div>
     </div>
-  );
+  
+    </>);
 }

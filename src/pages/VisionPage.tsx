@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
@@ -13,7 +14,12 @@ const SEQUENCE = [
 
 export default function VisionPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+    <>
+      <SEO 
+        title="Our Vision | Unity Homes"
+        description="Our vision for the future of Nigerian real estate, built on trust, transparency, and technology."
+      />
+      <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Solid Fresh Green */}
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
@@ -181,5 +187,6 @@ export default function VisionPage() {
 
       
     </div>
-  );
+  
+    </>);
 }

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import { Link, useLocation } from 'react-router-dom';
 import { useWaitlist } from '../components/WaitlistContext';
 import { motion } from 'motion/react';

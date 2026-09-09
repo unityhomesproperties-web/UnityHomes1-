@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 import { Link, useLocation } from 'react-router-dom';
 import { useWaitlist } from "../components/WaitlistContext";
 import { motion, AnimatePresence, useScroll, useTransform, useReducedMotion } from 'motion/react';
@@ -122,7 +123,12 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+    <>
+      <SEO 
+        title="Our Services | Unity Homes"
+        description="Explore our services: Property Listings, Property Verification, and Professional Connections."
+      />
+      <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Premium Hero Banner - Architectural Refinement */}
       <section ref={heroRef} className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
@@ -396,6 +402,7 @@ export default function ServicesPage() {
       {/* Final CTA */}
       
     </div>
+    </>
   );
 }
 
@@ -529,6 +536,7 @@ function ServiceVisual({ type }: { type: string }) {
         <motion.circle cx="150" cy="160" r="16" fill="white" stroke="currentColor" strokeWidth="3" initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 1.0 }} />
         <motion.path d="M142,160 L148,166 L158,154" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ delay: 1.2 }} />
       </svg>
+    
     );
   }
 

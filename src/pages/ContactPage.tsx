@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import SEO from '../components/SEO';
 import { Mail, Phone, MapPin, CheckCircle2, Loader2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import FAQSection from '../components/FAQSection';
@@ -18,7 +19,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <>
+      <SEO 
+        title="Contact Us | Unity Homes"
+        description="Get in touch with Unity Homes & Properties Limited for inquiries about real estate and property management."
+      />
+      <div className="min-h-screen flex flex-col bg-white">
       {/* Immersive Hero Banner - Solid Supporting Green */}
       <section className="relative text-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Image & Overlay */}
@@ -229,5 +235,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  
+    </>);
 }

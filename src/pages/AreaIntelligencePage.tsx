@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect, FormEvent } from 'react';
+import SEO from '../components/SEO';
 import { ChevronLeft, ChevronRight, Loader2, Star, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import AreaIntelligenceSuccess from '../components/AreaIntelligenceSuccess';
@@ -86,7 +87,7 @@ const RadioRow = ({ label, selected, onClick, type = "default" }: { label: strin
   }
 
   return (
-    <div 
+      <div 
       onClick={onClick}
       className={`relative flex items-center p-4 border rounded-[var(--radius-button)] cursor-pointer transition-all duration-200 ${
         selected ? `${activeBorder} ${activeBg}` : 'border-[var(--color-border)] hover:bg-[var(--color-surface-light)] bg-white'
@@ -366,7 +367,7 @@ export default function AreaIntelligencePage() {
       <section className="relative overflow-hidden flex-shrink-0">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src="/images/area_intelligence.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
+          <img src="/images/community.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-transparent" />
         </div>
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -878,5 +879,6 @@ export default function AreaIntelligencePage() {
         </div>
       </div>
     </div>
-  );
+  
+      );
 }

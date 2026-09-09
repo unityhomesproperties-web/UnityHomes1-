@@ -1,8 +1,14 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-white pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO 
+        title="Terms & Conditions | Unity Homes"
+        description="Terms and Conditions for using Unity Homes & Properties Limited services."
+      />
+      <div className="min-h-screen bg-white pt-32 pb-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto space-y-12">
         <div className="space-y-4 border-b border-[var(--color-border)] pb-12">
           <h1 className="text-4xl md:text-5xl font-semibold text-[var(--color-brand-deep)] tracking-tight">
@@ -23,5 +29,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
-  );
+  
+    </>);
 }

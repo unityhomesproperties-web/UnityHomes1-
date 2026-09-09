@@ -1,0 +1,7 @@
+const fs = require('fs');
+let content = fs.readFileSync('src/pages/AreaIntelligencePage.tsx', 'utf8');
+
+// Replace the exact matching string
+content = content.replace("    </div>\n      </>\n);}", "    </div>\n    </>\n  );\n}");
+
+fs.writeFileSync('src/pages/AreaIntelligencePage.tsx', content);
