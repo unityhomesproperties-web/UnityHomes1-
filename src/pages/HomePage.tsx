@@ -25,7 +25,7 @@ const HERO_SLIDES = [
     tag: "Data-Driven Decisions",
     headline: "Community-Powered Area Intelligence.",
     description: "Discover deep insights about neighborhoods, infrastructure, and community vibes before you make your next property move.",
-    image: "/images/area_intelligence.jpg"
+    image: "/images/community.jpg"
   }
 ];
 
@@ -122,7 +122,7 @@ export default function HomePage() {
             }`}
           >
             {/* Image Side (Absolute on Mobile, Grid item on Desktop) */}
-            <div className="absolute inset-0 lg:relative lg:inset-auto w-full h-full lg:flex-1 overflow-hidden lg:rounded-bl-[var(--radius-large)] bg-[var(--color-surface-soft)] z-0">
+            <div className="absolute inset-0 w-full h-full overflow-hidden bg-[var(--color-surface-soft)] z-0">
               <img
                 src={slide.image}
                 alt={slide.headline}
@@ -134,11 +134,11 @@ export default function HomePage() {
             </div>
             
             {/* Content Side */}
-            <div className="flex-1 flex flex-col justify-end pb-24 pt-32 lg:justify-center px-4 sm:px-6 lg:px-16 xl:px-24 lg:py-0 relative z-20 lg:bg-transparent pointer-events-none">
+            <div className="absolute inset-0 flex flex-col justify-end pb-24 pt-32 lg:justify-center px-4 sm:px-6 lg:px-16 xl:px-24 relative z-20 bg-transparent pointer-events-none">
               <div className="max-w-xl mx-auto lg:mx-0 w-full pointer-events-auto">
                 <div className="overflow-hidden mb-6">
                   <div 
-                    className={`inline-flex items-center text-xs uppercase tracking-widest font-semibold text-[var(--color-brand-fresh)] lg:text-[var(--color-brand-medium)] transition-all duration-700 delay-100 ${
+                    className={`inline-flex items-center text-xs uppercase tracking-widest font-semibold text-white transition-all duration-700 delay-100 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -148,7 +148,7 @@ export default function HomePage() {
                 
                 <div className="overflow-hidden mb-6">
                   <h1 
-                    className={`text-4xl md:text-5xl lg:text-[56px] font-semibold text-white lg:text-[var(--color-brand-deep)] leading-[1.1] transition-all duration-700 delay-200 ${
+                    className={`text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] transition-all duration-700 delay-200 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -158,7 +158,7 @@ export default function HomePage() {
 
                 <div className="overflow-hidden mb-10">
                   <p 
-                    className={`text-lg text-white/90 lg:text-[var(--color-text-secondary)] leading-relaxed transition-all duration-700 delay-300 ${
+                    className={`text-lg text-white/90 leading-relaxed transition-all duration-700 delay-300 ${
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
@@ -172,11 +172,11 @@ export default function HomePage() {
                       idx === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
                     }`}
                   >
-                    <button onClick={openWaitlist} className="w-full sm:w-auto bg-[var(--color-brand-fresh)] text-white px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-[var(--color-brand-medium)] transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm cursor-pointer">Join The Waitlist</button>
+                    <button onClick={openWaitlist} className="w-full sm:w-auto bg-white text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base hover:bg-stone-50 transition-colors duration-200 min-h-[48px] flex items-center justify-center shadow-sm cursor-pointer">Join The Waitlist</button>
                     <a
                       href="#services-preview"
                       onClick={scrollToServices}
-                      className="w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base lg:hover:bg-[var(--color-surface-soft)] transition-colors duration-200 min-h-[48px] flex items-center justify-center"
+                      className="w-full sm:w-auto bg-transparent border border-white/50 text-white hover:bg-white/10 px-8 py-4 rounded-[var(--radius-button)] font-semibold text-base transition-colors duration-200 min-h-[48px] flex items-center justify-center"
                     >
                       Explore Unity Homes
                     </a>
@@ -192,18 +192,18 @@ export default function HomePage() {
           <div className="max-w-xl mx-auto lg:mx-0 flex items-center justify-between pointer-events-auto">
             {/* Slide Indicator */}
             <div className="flex items-center gap-4">
-              <span className="font-semibold text-sm text-white lg:text-[var(--color-brand-deep)] w-5">
+              <span className="font-semibold text-sm text-white font-semibold w-5">
                 {String(currentSlide + 1).padStart(2, '0')}
               </span>
               
-              <div className="w-24 h-[2px] bg-white/30 lg:bg-[var(--color-border)] rounded-full relative overflow-hidden">
+              <div className="w-24 h-[2px] bg-white/30 rounded-full relative overflow-hidden">
                 <div 
                   className="absolute top-0 left-0 h-full bg-[var(--color-brand-fresh)] transition-all duration-[6000ms] ease-linear"
                   style={{ width: `${(currentSlide + 1) * (100 / HERO_SLIDES.length)}%` }}
                 />
               </div>
               
-              <span className="font-medium text-sm text-white/60 lg:text-[var(--color-text-secondary)] w-5">
+              <span className="font-medium text-sm text-white/70 w-5">
                 {String(HERO_SLIDES.length).padStart(2, '0')}
               </span>
             </div>
@@ -212,14 +212,14 @@ export default function HomePage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={prevSlide}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] lg:hover:bg-[var(--color-surface-soft)] transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/50 text-white hover:bg-white/10 transition-colors"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={nextSlide}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:border-[var(--color-border)] lg:text-[var(--color-brand-deep)] lg:hover:bg-[var(--color-surface-soft)] transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-white/50 text-white hover:bg-white/10 transition-colors"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-4 h-4" />

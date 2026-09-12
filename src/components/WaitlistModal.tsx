@@ -44,7 +44,7 @@ const ROLES_DISPLAY = [
   { id: 'property_lawyer', title: 'Property Lawyer', desc: 'I provide legal services for property transactions.', img: "/images/property_lawyer.jpg" },
   { id: 'licensed_surveyor', title: 'Licensed Surveyor', desc: 'I provide professional surveying services.', img: "/images/licensed_surveyor.jpg" },
   { id: 'structural_engineer', title: 'Structural Engineer', desc: 'I provide structural engineering services.', img: "/images/structural_engineer.jpg" },
-  { id: 'agent', title: 'Real Estate Agent', desc: 'I actively find, show, and let properties for landlords and want to bring my listings to a verified, transparent platform.', img: "/images/agent.jpg" }
+  { id: 'agent', title: 'Real Estate Agent', desc: 'I actively find, show, and let properties for landlords and want to bring my listings to a verified, transparent platform.', img: "/images/real-estate.jpg" }
 ];
 
 const NIGERIAN_STATES = [
